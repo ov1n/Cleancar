@@ -1,8 +1,9 @@
 <?php
     class Login extends Controller{
         //base controller just for extending
-        public static function create_view(){
-            echo "viewwww";
-        }
+        //IN CASE OF OVERRIDE
+        //public static function create_view(){
+        //    echo "viewwww";
+        //}
     }
 ?>

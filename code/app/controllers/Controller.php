@@ -1,8 +1,8 @@
 <?php
     class Controller{
         //base controller just for extending
-        public static function create_view(){
-            echo "viewwww";
+        public static function create_view($view_name){
+            require_once("./views/$view_name.php");
         }
     }
 ?>
