@@ -1,2 +1,3 @@
 # Clean-Car
-repository made for 2nd year group project
+Repository made for 2nd year group project:
+All is in code folder
