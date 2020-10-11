@@ -1,0 +1,146 @@
+* {box-sizing: border-box}
+
+body  
+{  
+    font-family: 'Raleway' !important;
+}  
+
+h1{  
+    text-align: center;  
+    color: black;  
+} 
+
+/* custom hr */
+hr{
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+} 
+
+div.square{
+	width: 70%;
+	height: 500px;
+	margin: auto;
+	align-content: center;
+	text-align: center;
+  margin-bottom: 40px;
+}
+
+div.square div.square1{
+	margin-top:30px;
+	margin-right:10px;
+	width: 30%;
+	height: 250px;
+	float: left;
+	background-color:#3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square2{
+	margin-top:30px;
+	margin-right:10px;
+	width: 30%;
+	height: 250px;
+	float: left;
+	background-color: #99BBFF;
+  opacity: 0.8;
+}
+
+div.square div.square3{
+	margin-top:30px;
+	margin-right:10px;
+	width: 30%;
+	height: 250px;
+	float: left;
+	background-color: #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square4{
+	margin-top:10px;
+	margin-right:10px;
+	width: 30%;
+	height: 250px;
+	float: left;
+	background-color:  #99BBFF;
+  opacity: 0.8;
+}
+
+div.square div.square5{
+	margin-top:10px;
+	margin-right:10px;
+	width: 30%;
+	height: 250px;
+	float: left;
+	background-color: #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square6{
+	margin-top:10px;
+	margin-right:10px;
+	width: 30%;
+	float: left;
+	height: 250px;
+	background-color:  #99BBFF;
+  opacity: 0.8;
+}
+
+  /* adjast the symbols*/
+  div.square i{
+  	margin-top: 50px;
+  }
+
+/* Styling Buttons */
+/*
+button{
+    position: relative;
+    border: currentColor; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 100px;
+    width: auto;
+    height: 100px;
+    background-color: #E6E6FA;
+    font-size: 16px;
+    border-color: #708090;
+    font-family: 'Raleway' !important;
+}
+*/
+
+div.Billing button{
+    position: relative;
+  
+    margin-left: 15%;
+    padding: 10px;
+  
+    overflow: hidden;
+  
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    
+    background-color: #008CBA;
+    color: #ecf0f1;
+    
+    transition: background-color .3s;
+    font-family: 'Raleway' !important;
+    margin-top: 20px;
+}
+
+div.square button{
+  margin: auto;
+  width: 80%;
+  height: 20%;
+	transition: 0.3s;
+	background-color: #F0F8FF; 
+  font-family: 'Raleway' !important;  
+  border-color: transparent;
+}
+
+button:hover{
+	opacity: 0.6;
+}
