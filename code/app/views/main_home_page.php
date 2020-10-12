@@ -118,12 +118,12 @@
 
 <div class="container">
   <div class="content" style="height: 70px">
-     <h2>WELCOME</h2>
+     <h2>SERVICE TYPES</h2>
     </div> 
   </div>
   <div class="content_img">
     <div class="fakeimg2"  style="height:300px"></div>
-  <p>We at LAUGFS Car Care offer convenient and quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p></div>
+  <p>From interior cleaning to full service and from motor bicycles to heavy vehicles, we have all your service needs covered.</p></div>
   </div>
  </div>
 
