@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>receptionist_home</title>
-	<link rel="stylesheet" type="text/css" href="css/receptionist_home.css">    
+	<link rel="stylesheet" type="text/css" href="C:\Users\USER\Desktop\Clean_car_github\Clean-Car\code\public\css\receptionist_home.css">    
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
