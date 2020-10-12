@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-<link rel="stylesheet" type="text/css" href="home.css">
+<link rel="stylesheet" type="text/css" href="main_home.css">
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -18,18 +18,13 @@
 
 <!--navigation bar-->	
 <div id="navbar">
-
-  <a href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" style="margin-right: 20px"></i></a>
-  <a href="javascript:void(0)">Sign In</a>
-  <a href="javascript:void(0)">Contact Us</a>
-  <a href="javascript:void(0)">About Us</a>
-  <a href="javascript:void(0)">Booking</a>
-  <a  href="javascript:void(0)">Home</a>
-  <img src="imageedit_58_5294224580.png">
-  <i class="fa fa-instagram" aria-hidden="true" style="padding-left: 20px; padding-top: 10px" ></i>
-  <i class="fa fa-facebook-square" aria-hidden="true" style="padding-left: 20px; padding-top: 10px"></i>
-  <i class="fa fa-twitter-square" aria-hidden="true" style="padding-left: 20px; padding-top: 10px"></i>
-  
+   <a href="#"><i class="fa fa-user-circle-o"  aria-hidden="true" style="margin-right: 20px"></i></a>
+   <a href="javascript:void(0)">Sign In</a>
+   <a href="javascript:void(0)">Contact Us</a>
+   <a href="javascript:void(0)">About Us</a>
+   <a href="javascript:void(0)">Booking</a>
+   <a href="javascript:void(0)">Home</a>
+   <img src="C:\Users\USER\Desktop\Clean_Car\images\2222.png">  
 </div>
 
 
@@ -87,16 +82,18 @@
 <!-- 4 cards-->
 <div class="row">
   <div class="column">
-    <div class="card" ><h2>WELCOME</h2><p> We at LAUGFS Car Care offer convenient and quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p></div>
+    <div class="card" ><h2>WELCOME</h2><p> We at Clean Car offer convenient and quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p></div>
     </div>
   <div class="column">
-    <div class="card" ><h2>ABOUT US</h2><p>As a trusted solution provider in the automobile industry in Sri Lanka, LAUGFS Car Care will continue to provide premier quality automobile products and services.</p></div>
+    <div class="card" ><h2>ABOUT US</h2><p>As a trusted solution provider in the automobile industry in Sri Lanka, Clean Car  will continue to provide premier quality automobile products and services.
+    </p></div>
   </div>
   <div class="column">
-    <div class="card" ><h2>PROMOTIONS</h2><p>Check out our special promotions and offers at LAUGFS Car Care Service Centers. Stay tuned for more details.</p></div>
+    <div class="card" ><h2>SMART CALENDER</h2><p>No need of calling and inquiring ,just click on the date and timeslot you need. The availability will be viewed.
+</p></div>
   </div>
    <div class="column">
-    <div class="card" ><h2>SERVICE CATEGORIES</h2><p>Check out our special promotions and offers at LAUGFS Car Care Service Centers. Stay tuned for more details.</p></div>
+    <div class="card" ><h2>PAY ONLINE</h2><p>Pay and advance and make a reservation through the system to avoid trouble of cash transactions.</p></div>
   </div>
   
 </div>
@@ -109,12 +106,12 @@
     <div class="cards">
       <div class="container">
         <div class="content" style="height: 70px">
-     <h2>WELCOME</h2>
+     <h2>PURE PROFESSIONALISM</h2>
    </div>
  </div>
  	 <div class="content_img">
      <div class="fakeimg"  style="height:300px"></div>
-     <p> We at LAUGFS Car Care offer convenient and quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p>
+     <p> We at clean Car offer convenient and quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p>
     </div>
 	</div>
     <div class="cards">
