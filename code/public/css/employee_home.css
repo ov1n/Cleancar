@@ -5,6 +5,48 @@ body
     font-family: 'Raleway' !important;  
 }  
 
+/* add background image */
+div.cover{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/6666.jpg");
+  width: 100%;
+  height: 700px;
+}
+
+/* Style the list */
+ul.breadcrumb {
+    padding: 10px 16px;
+    list-style: none;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "|\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+  }
+
 h1{  
     text-align: center;  
     color: black;  
@@ -86,4 +128,62 @@ div.square button{
 
 button:hover{
   opacity: 0.6;
+}
+
+/* Footer stuff */
+.footer-wrapper{
+  width: 100%; 
+  margin:0 auto;
+  padding-bottom: 0px;
+
+}
+
+.single-footer{
+  width: 25%;
+  float: left;
+  text-align: left;
+  color: #fff;
+}
+
+.single-footer ul{
+  margin:0;
+  padding: 0;
+  list-style: none; 
+}
+.single-footer ul a{
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 12px;
+}
+.single-footer p, .icon{
+  width: 90%;
+  font-size: 15px;
+  text-align: center;
+  height: 20%;
+  padding-right:1%;
+}
+.single-footer h2,h4 {
+  color: #fff;
+  font-size: 25px !important;
+  font-family: 'Raleway', sans-serif !important;
+  padding-top: 10%;
+  font-weight: 200;
+  text-decoration: none;
+  text-align: center;
+}
+.single-footer h4 span{
+  color: lightseagreen;
+}
+
+.single-footer img{
+  width: 80%;
+  height: 150px;
+  padding: 10% 5px 0px 5px; 
+}
+.footer{
+  width: 100%;
+  height: 200px;
+  bottom: 0;
+  background-color:#262626; 
 }
