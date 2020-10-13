@@ -1,0 +1,243 @@
+body {
+  margin: 0;
+  font-size: 20px;
+  font-family: 'raleway' !important;
+}
+
+
+#navbar {
+  overflow: hidden;
+ background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
+   height: 60px;
+
+}
+
+#navbar a {
+  float: right;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+#navbar img{
+  width: 120px;
+  height: 60px;
+  float: left;
+  margin-left: 100px;
+  margin-top: 3px;
+}
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  height: 100%;
+}
+
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  font-family: 'raleway' !important;
+
+}
+
+.container img{
+  width: 100%;
+  height: 400px;
+}
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(0, 0, 0, 0.9)); /* 52, 230, 255 Black background with 0.5 opacity */
+  color: white;
+  padding-left: 40px;
+  padding-right: 20px;
+  width: 100%;
+  height: 70px;
+  font-size: 25px;
+ padding-bottom: 20px;
+}
+
+
+
+.column {
+  float: left;
+  width: 33%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin-left: 0px;
+margin-right: 0px}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the counter cards */
+.card {
+  
+  padding: 18px;
+  text-align: justify;
+  height: 250px;
+  margin-bottom:5px;
+  margin-top:5px;
+  background-color: rgb(240, 240, 240)
+  
+}
+.card h2{
+ font-family: 'Cantarell', sans-serif;
+ text-align:center;
+color:#008CBA;}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.headers {
+  text-align: center;
+  padding: 10px;
+  background-color:rgba(0, 79, 255, 0.3);
+  height: 90px;
+  margin-top: 2px;
+}
+
+.rows {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.columns {
+  -ms-flex: 25%; /* IE10 */
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.columns img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .columns {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .columns {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+
+  .footer-wrapper{
+      width: 1100px;
+      margin:10px 50px;
+
+    }
+
+    .single-footer{
+      width: 25%;
+      float: left;
+      text-align: center;
+      color: #fff;
+      padding-left: 70px;
+
+    }
+
+    .single-footer ul{
+      margin:0px;
+      padding: 10px;
+      list-style: none; 
+    }
+    .single-footer ul a{
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      font-size: 12px;
+    }
+    .single-footer p{
+      width: 90%;
+       font-size: 15px;
+    }
+    .single-footer h4,h5 {
+      color: #fff;
+      font-size: 30px;
+      font-family: 'Alegreya Sans', sans-serif;
+      margin:0;
+      font-weight: 200;
+    }
+    .single-footer h4 span{
+      color: lightseagreen;
+    }
+
+    .single-footer img{
+      width: 250px;
+      height: 150px;
+      padding: 30px 10px;
+      margin-left: 50px;
+    }
+    .footer{
+      width: 1517px;
+      height: 200px;
+      margin-left: -10px;
+      margin-right: -10px;
+      position: relative;
+      bottom: 0;
+     
+      background-color:#262626; 
+    }
+    /* Float four columns side by side */
+
+
+
+
+
+
+
+
