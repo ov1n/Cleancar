@@ -2,7 +2,7 @@
 <html>    
 <head>    
     <title>change_login_password</title>    
-    <link rel="stylesheet" type="text/css" href="css/changepwd.css">    
+    <link rel="stylesheet" type="text/css" href="css/change_password.css">    
 </head>    
 <body> 
       <!-- add navigation bar -->
