@@ -17,4 +17,8 @@
     Route::set('register',function(){
         Home::create_view('register');
     });
+
+    Route::set('about_us',function(){
+        Home::create_view('about_us');
+    });
 ?>
