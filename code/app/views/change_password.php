@@ -5,18 +5,7 @@
     <link rel="stylesheet" type="text/css" href="css/change_password.css">    
 </head>    
 <body> 
-      <!-- add navigation bar -->
-      <div id="navbar">
-
-        <a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" style="margin-right: 20px"></i></a>
-        <a href="javascript:void(0)">Sign In</a>
-        <a href="javascript:void(0)">Contact Us</a>
-        <a href="javascript:void(0)">About Us</a>
-        <a href="javascript:void(0)">Booking</a>
-        <a href="javascript:void(0)">Home</a>
-        <img src="C:\Users\USER\Desktop\Clean_Car\images\2222.png">
-
-      </div> <!-- navbar -->
+      <?php include("nav-bar.php"); ?> <!-- add navigation bar -->
 
       <!-- create breadcrumb-->  
         <ul class="breadcrumb">
