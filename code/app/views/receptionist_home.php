@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>receptionist_home</title>
-	<link rel="stylesheet" type="text/css" href="C:\Users\USER\Desktop\Clean_car_github\Clean-Car\code\public\css\receptionist_home.css">    
+	<link rel="stylesheet" type="text/css" href="..\..\public\css\receptionist_home.css">    
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -11,18 +11,19 @@
 		<!-- create breadcrumb -->
 
 		<ul class="breadcrumb">
-          <img src="image/car.png" width="109" height="48" style="float:right">
+          <img src="../../public/images/4444.png" width="109" height="48" style="float:right">
           </br>
           <li><a href="home">Home</a></li>
           <li>Login</li>
           
         </ul> <!-- breadcrumb -->
 
-	    <h1>Receptionist Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
+		<h1>Receptionist Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
+		
+		<hr>
+		<br>
 
 	    <div class="cover">
-
-	    <hr>
 
 	    <div class="Billing"><button>Make Billing</button></div>
 
@@ -65,6 +66,9 @@
 		</div><!--square-->
 	
 		</div><!--cover-->
+		<br>
+		<hr>
+		<br>
 	</form>
 
 	<!-- add footer -->
@@ -92,7 +96,7 @@
               </div>
           
                <div class="single-footer">
-                 <img src="C:\Users\USER\Desktop\Clean_Car\images\3333.png">
+                 <img src="../../public/images/3333.png">
                </div>
                
             </div>

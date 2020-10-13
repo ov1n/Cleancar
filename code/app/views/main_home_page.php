@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-<link rel="stylesheet" type="text/css" href="main_home.css">
+<link rel="stylesheet" type="text/css" href="../../public/css/main_home.css">
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -24,7 +24,7 @@
    <a href="javascript:void(0)">About Us</a>
    <a href="javascript:void(0)">Booking</a>
    <a href="javascript:void(0)">Home</a>
-   <img src="C:\Users\USER\Desktop\Clean_Car\images\2222.png">  
+   <img src="../../public/images/home/imageedit_58_5294224580.png">  
 </div>
 
 
@@ -38,7 +38,7 @@
             <button class="btn btn-dark btn-lg">Read More</button>
         </div>
       </div>
-  <img src="pexels-jan.png" style="width:100%">
+  <img src="../../public/images/home/pexels-jan.png" style="width:100%">
   <div class="text"></div>
 </div>
 
@@ -51,7 +51,7 @@
             <button class="btn btn-dark btn-lg">Read More</button>
         </div>
       </div>
-  <img src="pexels-jan-kopřiva-3354648.jpg" style="width:100%">
+  <img src="../../public/images/home/pexels-jan-kopřiva-3354648.jpg" style="width:100%">
   <div class="text"></div>
 </div>
 
@@ -64,7 +64,7 @@
             <button class="btn btn-dark btn-lg">Read More</button>
         </div>
       </div>
-  <img src="Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.png" style="width:100%">
+  <img src="../../public/images/home/Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.png" style="width:100%">
   <div class="text">
   	
   </div>
@@ -185,7 +185,7 @@
     </div>
 
      <div class="single-footer">
-       <img src="imageedit_67_3081496098.png">
+       <img src="../../public/images/home/imageedit_67_3081496098.png">
      </div>
      
   </div>
