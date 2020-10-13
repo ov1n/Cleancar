@@ -6,7 +6,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="C:\Users\USER\Desktop\Clean_car_github\Clean-Car\code\public\css\form.css">
+        <link rel="stylesheet" type="text/css" href="..\..\public\css\form.css">
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
