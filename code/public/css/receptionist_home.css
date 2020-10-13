@@ -7,7 +7,7 @@ body
 
 /* put background image */
 div.cover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/6666.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/6666.jpg");
   width: 100%;
   height: 700px;
 }
