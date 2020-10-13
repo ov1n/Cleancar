@@ -27,7 +27,6 @@
           <li><a href="home">Home</a></li>
           <li><a href="home">Manager</a></li>
           <li>Add Service</li>
-          
         </ul>
         <form action="./controllers/Register.php">
             <div class="container">  
