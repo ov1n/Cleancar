@@ -3,7 +3,7 @@
 
 <head>
     <title></title>
-    <link rel="stylesheet" type="text/css" href="about_us.css">
+    <link rel="stylesheet" type="text/css" href="../../public/css/about_us.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -18,12 +18,12 @@
             <a href="javascript:void(0)">About Us</a>
             <a href="javascript:void(0)">Booking</a>
             <a href="javascript:void(0)">Home</a>
-            <img src="imageedit_58_5294224580.png">
+            <img src="../../public/images/about_us/imageedit_58_5294224580.png">
             <i class="fa fa-instagram" aria-hidden="true" style="padding-left: 20px; padding-top: 10px"></i>
             <i class="fa fa-facebook-square" aria-hidden="true" style="padding-left: 20px; padding-top: 10px"></i>
             <i class="fa fa-twitter-square" aria-hidden="true" style="padding-left: 20px; padding-top: 10px"></i>
         </div>
-        <img src="NRMA Car Service Experts123.png" alt="Norway">
+        <img src="../../public/images/about_us/NRMA Car Service Experts123.png" alt="Norway">
         <div class="text-block">
             <h4>ABOUT US</h4>
         </div>
@@ -58,26 +58,26 @@
     <!-- Photo Grid -->
     <div class="rows">
         <div class="columns">
-            <img src="640x360.jpg" style="width:100%">
-            <img src="blog-head-selfwash-768x512.jpg" style="width:100%">
-            <img src="carrozzeria-alle-cave-come-lavare-auto-00.jpg" style="width:100%">
-            <img src="image.jpg" style="width:100%; height: 120px;">
+            <img src="../../public/images/about_us/640x360.jpg" style="width:100%">
+            <img src="../../public/images/about_us/blog-head-selfwash-768x512.jpg" style="width:100%">
+            <img src="../../public/images/about_us/carrozzeria-alle-cave-come-lavare-auto-00.jpg" style="width:100%">
+            <img src="../../public/images/about_us/image.jpg" style="width:100%; height: 120px;">
         </div>
         <div class="columns">
-            <img src="lavaggio-a-secco.jpg" style="width:100%">
-            <img src="pexels-negative-space-97075.jpg" style="width:100%">
-            <img src="thumb-chemia.jpg" style="width:100%">
+            <img src="../../public/images/about_us/lavaggio-a-secco.jpg" style="width:100%">
+            <img src="../../public/images/about_us/pexels-negative-space-97075.jpg" style="width:100%">
+            <img src="../../public/images/about_us/thumb-chemia.jpg" style="width:100%">
         </div>
         <div class="columns">
-            <img src="pexels-negative-space-97075.jpg" style="width:100%">
-            <img src="5-Reasons-Why-Car-Owners-Manuals-Should-Be-in-Your-Car-at-All-Times.jpg" style="width:100%">
-            <img src="NRMA-Car-Service-App.jpg" style="width:100%">
-            <img src="Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.jpg" style="width:100%; height: 180px;">
+            <img src="../../public/images/about_us/pexels-negative-space-97075.jpg" style="width:100%">
+            <img src="../../public/images/about_us/5-Reasons-Why-Car-Owners-Manuals-Should-Be-in-Your-Car-at-All-Times.jpg" style="width:100%">
+            <img src="../../public/images/about_us/NRMA-Car-Service-App.jpg" style="width:100%">
+            <img src="../../public/images/about_us/Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.jpg" style="width:100%; height: 180px;">
         </div>
         <div class="columns">
-            <img src="pexels-pixabay-372810.jpg" style="width:100%">
-            <img src="thumb-chemia.jpg" style="width:100%">
-            <img src="pexels-andrea-piacquadio-3807695.jpg" style="width:100%">
+            <img src="../../public/images/about_us/pexels-pixabay-372810.jpg" style="width:100%">
+            <img src="../../public/images/about_us/thumb-chemia.jpg" style="width:100%">
+            <img src="../../public/images/about_us/pexels-andrea-piacquadio-3807695.jpg" style="width:100%">
         </div>
     </div>
     <div class="footer">
@@ -102,7 +102,7 @@
                 <p>+94-1132158123 </p>
             </div>
             <div class="single-footer">
-                <img src="imageedit_67_3081496098.png">
+                <img src="../../public/images/about_us/imageedit_67_3081496098.png">
             </div>
         </div>
     </div>
