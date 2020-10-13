@@ -1,0 +1,89 @@
+* {box-sizing: border-box}
+
+body  
+{  
+    font-family: 'Raleway' !important;  
+}  
+
+h1{  
+    text-align: center;  
+    color: black;  
+}  
+
+/* custom hr */
+hr{
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+} 
+
+div.square{
+  left: 50%;
+  top:50%;
+	width: 60%;
+	height: 600px;
+  margin-left: 30%;
+  text-align: center;
+	margin-bottom: 80px;
+  align-items: center;
+}
+
+div.square div.square1{
+    margin-top:10px;
+    width: 60%;
+    height: 150px;
+    float: left;
+    background-color: #3377FF;
+    opacity: 0.8;
+}
+
+div.square div.square2{
+    margin-top:10px;
+    width: 60%;
+    height: 150px;
+    float: left;
+    background-color: #99BBFF;
+    opacity: 0.8;
+}
+
+div.square div.square3{
+    margin-top:10px;
+    width: 60%;
+    height: 150px;
+    float: left;
+    background-color: #3377FF;
+    opacity: 0.8;
+}
+
+div.square div.square4{
+    margin-top:10px;
+    width: 60%;
+    height: 150px;
+    float: left;
+    background-color: #99BBFF;
+    opacity: 0.8;
+
+}
+
+/* adjast the symbols*/
+  div.square i{
+    margin-top: 55px;
+    margin-left: 15%;
+    float: left;
+  }
+
+
+div.square button{
+  width: 50%;
+  height: 50%;
+  transition: 0.3s;
+  float: right;
+  margin-top: 35px;
+  margin-right: 50px;
+  background-color: #F0F8FF; 
+  font-family: 'Raleway' !important;  
+  border-color: transparent;
+}
+
+button:hover{
+  opacity: 0.6;
+}
