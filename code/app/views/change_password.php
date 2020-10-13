@@ -17,11 +17,11 @@
 
     <form action="changepwd.php" method="post"> 
 
-	    <h1>Forgotten Password</h1>
+      <h1>Forgotten Password</h1>
+      
+      <hr> <br>
 
       <div class="cover">
-
-        <hr>
 
     	   <div class="container">
 
@@ -41,6 +41,7 @@
 
     </form>
   </div> <!-- cover -->
+  <br> <hr> <br>
 
     <!-- add footer -->
 
