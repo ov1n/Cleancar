@@ -7,7 +7,7 @@ body
 
 /* add background image */
 div.cover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../image/6666.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/6666.jpg");
   width: 100%;
   height: 700px;
 }
@@ -70,7 +70,7 @@ div.square{
 }
 
 div.square div.square1{
-    margin-top:10px;
+    margin-top:40px;
     width: 60%;
     height: 150px;
     float: left;
