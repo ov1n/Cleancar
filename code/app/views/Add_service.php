@@ -19,13 +19,13 @@
         <a href="javascript:void(0)">About Us</a>
         <a href="javascript:void(0)">Booking</a>
         <a href="javascript:void(0)">Home</a>
-        <img src="C:\Users\USER\Desktop\Clean_Car\images\2222.png">        
+        <img src="../../public/images/2222.png">        
       </div>
         <ul class="breadcrumb">
-          <img src="C:\Users\USER\Desktop\Clean_Car\images\4444.png" width="109" height="48" style="float:right">
+          <img src="../../public/images/4444.png" width="109" height="48" style="float:right">
           </br>
           <li><a href="home">Home</a></li>
-          <li><a href="home">Manager Home</a></li>
+          <li><a href="home">Manager</a></li>
           <li>Add Service</li>
           
         </ul>
@@ -103,7 +103,7 @@
               </div>
           
                <div class="single-footer">
-                 <img src="C:\Users\USER\Desktop\Clean_Car\images\3333.png">
+                 <img src="../../public/images/3333.png">
                </div>
                
             </div>
