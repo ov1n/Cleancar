@@ -6,7 +6,7 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="C:\Users\USER\Desktop\Clean_Car\style_css\form.css">
+        <link rel="stylesheet" type="text/css" href="..\..\public\css\form.css">
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
@@ -19,7 +19,7 @@
         <a href="javascript:void(0)">About Us</a>
         <a href="javascript:void(0)">Booking</a>
         <a href="javascript:void(0)">Home</a>
-        <img src="C:\Users\USER\Desktop\Clean_Car\images\2222.png">        
+        <img src="..\..\public\images\2222.png">  
       </div>
 
       <ul class="breadcrumb">
