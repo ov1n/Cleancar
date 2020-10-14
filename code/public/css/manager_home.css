@@ -1,0 +1,105 @@
+* {box-sizing: border-box}
+
+body  
+{  
+    font-family: 'Raleway' !important;  
+}
+
+h1{  
+    text-align: center;  
+    color: black;  
+} 
+
+/* custom hr */
+hr{
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+div.column{
+	width: 70%;
+	height: 600px;
+	margin: auto;
+	align-content: center;
+	text-align: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+div.column div.column1{
+	margin-right:1%;
+	width: 30%;
+	height: 600px;
+	float: left;
+	background-color: #3377FF;
+  opacity : 0.8;
+}
+
+div.column div.column2{
+	margin-right:1%;
+	width: 38%;
+	height: 600px;
+	float: left;
+}
+
+div.column div.column3{
+	width: 30%;
+	height: 600px;
+	float: left;
+	background-color: #99BBFF;
+  opacity : 0.8;
+}
+
+div.column2 div.raw1{
+  width: 100%;
+  height: 295px;
+  align-content: center;
+  text-align: center;
+}
+
+div.raw1 div.subcolumn1{
+  width: 49%;
+  height: 295px;
+  float: left;
+  background-color: #99BBFF;
+  opacity : 0.8;
+  margin-right: 2%;
+}
+
+div.raw1 div.subcolumn2{
+  width: 49%;
+  height: 295px;
+  float: left;
+  background-color: #3377FF;
+  opacity : 0.8;
+}
+
+div.raw2{
+  height: 295px;
+  background-color: #99BBFF;
+  opacity : 0.8;
+  float: left;
+  width: 100%;
+  margin-top: 10px; 
+}
+
+/* Styling Buttons*/
+div.column button{
+  margin: auto;
+  width: 70%;
+  height: 9%;
+  transition: 0.3s;
+  background-color: #F0F8FF; 
+  font-family: 'Raleway' !important;  
+  border-color: transparent;
+}
+
+button:hover{
+  opacity: 0.6;
+}
+
+  /* adjast the symbols*/
+  div.square i{
+  	margin-top: 50px;
+  }
+
