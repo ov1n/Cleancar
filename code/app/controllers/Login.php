@@ -9,6 +9,7 @@
         function authenticate(){
 
                 $cust=new Customer();
+                //check if variable is set
                 //get post data
                 $uname=$_POST['user_name'];
                 $pwd=$_POST['password'];

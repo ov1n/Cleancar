@@ -33,7 +33,7 @@
                 &ensp;&ensp;&ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
               <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
 
-              <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+              <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
               <button type="submit" class="btn" class="form_btn" >Log In</button>
             </div>
               
