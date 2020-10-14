@@ -2,14 +2,14 @@
 <html>
 <head>
 	<title>employee_home</title>
-	<link rel="stylesheet" type="text/css" href="css/employee_home.css">    
+	<link rel="stylesheet" type="text/css" href="..\..\public\css\employee_home.css">    
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
       <!-- create breadcrumb-->
       <ul class="breadcrumb">
-          <img src="image/car.png" width="109" height="48" style="float:right">
+          <img src="../../public/images/4444.png" width="109" height="48" style="float:right">
           </br>
           <li><a href="home">Home</a></li>
           <li>Login</li>
@@ -17,11 +17,11 @@
       
   <form action="employeehome.php" method="post">
 
-	    <h1>Employee Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
+      <h1>Employee Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
+      
+      <hr> <br>
 
       <div class="cover">
-
-      <hr>
 
 	    <div class="square">
 			<div class="square1">
@@ -53,6 +53,8 @@
   </form>
 </div> <!-- cover -->
 
+<br> <hr> <br>
+
   <!-- add footer -->
   <div class="footer">
 
@@ -77,7 +79,7 @@
   </div>
 
    <div class="single-footer">
-     <img src="C:\Users\USER\Desktop\Clean_Car\images\3333.png">
+     <img src="../../public/images/3333.png">
    </div>
    
   </div>
