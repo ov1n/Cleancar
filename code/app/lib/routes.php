@@ -26,5 +26,5 @@
     Route::set('about_us',function(){
         Home::create_view('about_us');
     });
-
+    
 ?>
