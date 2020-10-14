@@ -235,7 +235,7 @@ body {
     text-align: center;
     height: 250px;
     margin-bottom: 5px;
-    background-image: linear-gradient(rgb(58, 118, 255, 0.2), rgb(58, 118, 255, 0.2)), url("$RNLKH41.png");
+    background-image: linear-gradient(rgb(58, 118, 255, 0.2), rgb(58, 118, 255, 0.2)), url("../../public/images/home/$RNLKH41.png");
     border-radius: 3px;
 }
 
@@ -295,19 +295,19 @@ body {
 
 /* Fake image */
 .fakeimg {
-    background-image: url("washcar.png");
+    background-image: url("../../public/images/home/washcar.png");
     width: 100%;
     padding: 20px;
 }
 
 .fakeimg1 {
-    background-image: url("70844a.png");
+    background-image: url("../../public/images/home/70844a.png");
     width: 100%;
     padding: 20px;
 }
 
 .fakeimg2 {
-    background-image: url("NRMA Car Service Experts.png");
+    background-image: url("../../public/images/home/NRMA Car Service Experts.png");
     width: 100%;
     padding: 20px;
 }
