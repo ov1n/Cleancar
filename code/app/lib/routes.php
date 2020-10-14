@@ -21,4 +21,8 @@
     Route::set('about_us',function(){
         Home::create_view('about_us');
     });
+
+    Route::set('add_service',function(){
+        Home::create_view('Add_service');
+    });
 ?>
