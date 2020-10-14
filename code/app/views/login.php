@@ -16,7 +16,7 @@
         <li>Sign In</li>
         
       </ul>
-      <form action="./controllers/Register.php">
+      <form action="auth" method="POST"><!-- TEMPORARY AUTH -->
         <div class="container">  
             <h1>Sign In</h1>
             <hr>
@@ -25,13 +25,13 @@
             <hr>
             <div class="card" >
             <div id=form_content> <!-- div to center needed elements -->
-                <img class="image" src="C:\Users\USER\Desktop\Clean_Car\images\user-icons.PNG"><br>
+                <img class="image" src="public/images/user-icons.PNG"><br>
 
                 &ensp;&ensp;&ensp;&ensp;<label for="user_name"><div class="form_label"><b>User Name</b></div></label>
                 <input type="text" placeholder="Enter Your User Name" name="user_name" id="user_name" ></br>
 
                 &ensp;&ensp;&ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
-              <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='confirm_password();' required></br>
+              <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
 
               <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
               <button type="submit" class="btn" class="form_btn" >Log In</button>
