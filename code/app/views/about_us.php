@@ -14,7 +14,7 @@
     <div class="container">
     <?php 
         //get header in seperate file
-        include("nav-bar.php");
+        include("nav_login.php");
     ?>
         <img src="public/images/about_us/NRMA Car Service Experts123.png" alt="Norway">
         <div class="text-block">
