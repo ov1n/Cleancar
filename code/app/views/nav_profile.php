@@ -10,7 +10,7 @@
 </head>
 <body>
 <div id="navbar">
-   <a href="#"><i class="fa fa-user-circle-o"  aria-hidden="true" style="margin-right: 20px"></i></a>
+<a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true"></i></a>
    <a href="javascript:void(0)">Contact Us</a>
    <a href="javascript:void(0)">About Us</a>
    <a href="javascript:void(0)">Booking</a>
