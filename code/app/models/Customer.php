@@ -33,7 +33,7 @@
             }
         }
 
-        //function to insert data into table customer
+        //function to insert data into table customer and vehicle
         function insert_record($first_name,$last_name,$vehicle_number,$address,$e_mail,$password,$mobile_tel_no,$home_tel_no){
             
             //assign connectivity to a variable
@@ -43,11 +43,12 @@
             $today=date('Y-m-d');
             //echo($today);
             
-            $query="INSERT INTO customer(first_name,last_name,address,email,password,registered_date,mobile_tel_no,home_tel_no) VALUES('$first_name','$last_name','$address','$password','$e_mail','$today','$mobile_tel_no','$home_tel_no');";
+            $query_cust="INSERT INTO customer(first_name,last_name,address,email,password,registered_date,mobile_tel_no,home_tel_no) VALUES('$first_name','$last_name','$address','$password','$e_mail','$today','$mobile_tel_no','$home_tel_no');";
             
-            echo($query);
+            //echo($query);
 
-            $result= mysqli_query($conn,$query);
+            $result= mysqli_query($conn,$query_cust);
+            
             
             //debugging
             if (!$result) {

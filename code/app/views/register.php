@@ -30,7 +30,7 @@
           <li><a href="home">Home</a></li>
           <li>Customer Registration</li>  
         </ul>
-        <form method="POST" name="reg_form" id="reg_form">
+        <form method="POST" name="reg_form" id="reg_form" onsubmit="create()">
             <div class="container">  
               <h1>Registration</h1>
               <p>Please fill in this form to register as a customer</p>
@@ -71,7 +71,7 @@
               <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required>
               </br>
               <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-              <button type="submit" class="btn" class="form_btn" style="margin-right :10px" onclick="create()">Register</button>
+              <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Register</button>
               </div>
               
             </div>
