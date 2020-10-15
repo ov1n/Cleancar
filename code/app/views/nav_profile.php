@@ -11,12 +11,11 @@
 <body>
 <div id="navbar">
    <a href="#"><i class="fa fa-user-circle-o"  aria-hidden="true" style="margin-right: 20px"></i></a>
-   <a href="javascript:void(0)">Sign In</a>
    <a href="javascript:void(0)">Contact Us</a>
    <a href="javascript:void(0)">About Us</a>
    <a href="javascript:void(0)">Booking</a>
    <a href="javascript:void(0)">Home</a>
-   <img src="C:\Users\USER\Desktop\Clean_Car\images\2222.png">  
+   <img src="public\images\2222.png">  
 </div>
 
 

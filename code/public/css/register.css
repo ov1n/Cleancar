@@ -142,13 +142,6 @@ hr{
   margin-bottom: 25px;
 }
 
-/* avatar image in login form */
-.avatar{
-  position: relative;
-  width: 80%;				/* width of image (px or % or auto) */
-  height: 80%;
-}
-
 /* Set a style for the submit/register button */
 .btn {
   position: relative;
@@ -342,4 +335,13 @@ h1 {
   height: 200px;
   bottom: 0;
   background-color:#262626; 
+}
+/* login form picture*/
+
+#form_content img{
+margin-bottom: 5%;
+margin-left: 25%;
+
+width: 50%;
+height: 50%;
 }
