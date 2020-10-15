@@ -258,20 +258,13 @@ h1 {
   top: 5px;
 }
   
-.registerbtn {
-  background-color: #008CBA;
-  color: white;
-  right: 10px;
-  top: 5px;
-    
-  border: 2px solid #008CBA;
-}
-.registerbtn:hover {
-  background-color: white; 
-  color: black;
-}
 .btn.cancelbtn {
   background-color: #e67e22;
+}
+
+.btn:disabled {
+  background-color: #696969;
+  color: #ecf0f1;
 }
 
 .btn.cancelbtn:hover, .btn.orange:focus {
