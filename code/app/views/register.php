@@ -9,6 +9,9 @@
 
         <link rel="stylesheet" type="text/css" href="public\css\register.css">
         
+        <!-- get external jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
         <!-- get external js file -->
@@ -27,7 +30,7 @@
           <li><a href="home">Home</a></li>
           <li>Customer Registration</li>  
         </ul>
-        <form action="reg_auth" method="POST">
+        <form method="POST" name="reg_form" id="reg_form">
             <div class="container">  
               <h1>Registration</h1>
               <p>Please fill in this form to register as a customer</p>
@@ -51,8 +54,8 @@
               &ensp;&ensp;&ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
               <input type="text" placeholder="Enter Your Address" name="address" id="address" required></br>
 
-              &ensp;&ensp;&ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-              <input type="email" placeholder="Enter Your Email Address" name="e-mail" id="e-mail" required></br>
+              &ensp;&ensp;&ensp;&ensp;<label for="email"><div class="form_label"><b>Email</b></div></label>
+              <input type="email" placeholder="Enter Your Email Address" name="email" id="email" required></br>
 
               &ensp;&ensp;&ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
               <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='confirm_password();' required></br>
@@ -68,7 +71,7 @@
               <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required>
               </br>
               <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-              <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Register</button>
+              <button type="submit" class="btn" class="form_btn" style="margin-right :10px" onclick="create()">Register</button>
               </div>
               
             </div>
