@@ -20,7 +20,7 @@
                 <p>+94-1132158123 </p>
             </div>
             <div class="single-footer">
-                <img src="../public/images/about_us/imageedit_67_3081496098.png">
+                <img src="public/images/3333.png">
             </div>
         </div>
     </div>
