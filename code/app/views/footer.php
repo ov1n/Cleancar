@@ -11,7 +11,6 @@
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
-                <br>
                 <p>© 2019 Copyright: CleancarWebsite.com</p>
             </div><!-- single-footer -->
             <div class="single-footer">
