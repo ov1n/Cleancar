@@ -1,3 +1,8 @@
+html *
+{  
+  font-family: 'Raleway', sans-serif;
+}
+
 #navbar {
   overflow: hidden;
   background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));

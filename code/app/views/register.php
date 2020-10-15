@@ -27,7 +27,7 @@
           <li><a href="home">Home</a></li>
           <li>Customer Registration</li>  
         </ul>
-        <form action="./controllers/Register.php">
+        <form action="reg_auth" method="POST">
             <div class="container">  
               <h1>Registration</h1>
               <p>Please fill in this form to register as a customer</p>

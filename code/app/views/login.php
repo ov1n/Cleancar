@@ -4,12 +4,16 @@
     <title>CleanCar -Login Form</title>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="public/css/form.css">
+    <!-- set favicon icon -->
+    <link rel="icon" href="public/images/favicon/favicon.png">
+
+    <!-- set CSS -->
+    <link rel="stylesheet" type="text/css" href="public/css/form.css">
         
-        <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+    <!-- include nav bar externally -->
     <?php
             include("nav-bar.php")
     ?>
@@ -38,7 +42,7 @@
               <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
 
               <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
-              <button type="submit" class="btn" class="form_btn" >Log In</button>
+              <button type="submit" class="btn" class="form_btn" >Log In</button>&ensp;
             </div>
               
         </div>

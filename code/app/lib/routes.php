@@ -51,21 +51,4 @@
     Route::set('reg_auth',function(){
         Register::register();
     });
-
-    Route::set('change_password',function(){
-        Home::create_view('change_password');
-    });
-
-    Route::set('receptionist_home',function(){
-        Home::create_view('receptionist_home');
-    });
-
-    Route::set('manager_home',function(){
-        Home::create_view('manager_home');
-    });
-
-    Route::set('employee_home',function(){
-        Home::create_view('employee_home');
-    });
-    
 ?>
