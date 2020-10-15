@@ -46,5 +46,9 @@
     Route::set('make_reservation',function(){
         Home::create_view('make_reservation');
     });
-    
+
+    //get form details from  register
+    Route::set('reg_auth',function(){
+        Register::register();
+    });
 ?>

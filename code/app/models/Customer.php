@@ -14,7 +14,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
                
-            $query="SELECT cust_id FROM customer WHERE (cust_id='$uname' OR 'e-mail'='$uname') AND password='$pwd'";
+            $query="SELECT cust_id FROM customer WHERE (cust_id='$uname' OR 'email'='$uname') AND password='$pwd'";
             $result= mysqli_query($conn,$query);
             
             //debugging
@@ -39,7 +39,21 @@
             //assign connectivity to a variable
             $conn=Database::conn();
 
-            $query="INSERT INTO customer(first_name,last_name,vehicle_number,address,e_mail,password,mobile_tel_no,home_tel_no) VALUES($first_name,$last_name,$vehicle_number,$address,$e_mail,$password,$mobile_tel_no,$home_tel_no)";
+            //get date of today for registered date
+            $today=date('Y-m-d');
+            //echo($today);
+            
+            $query="INSERT INTO customer(first_name,last_name,address,email,password,registered_date,mobile_tel_no,home_tel_no) VALUES('$first_name','$last_name','$address','$password','$e_mail','$today','$mobile_tel_no','$home_tel_no');";
+            
+            echo($query);
+
+            $result= mysqli_query($conn,$query);
+            
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
 
         }
         
