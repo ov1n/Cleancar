@@ -24,6 +24,7 @@
   text-decoration: none;
   color: #fff;
   font-size: 12px;
+  padding-left: 35%;
 }
 .single-footer p, .icon{
   width: 90%;
@@ -34,10 +35,10 @@
 }
 .single-footer h2,h4 {
   color: #fff;
-  font-size: 25px !important;
+  font-size: 20px !important;
   font-family: 'Raleway', sans-serif !important;
-  padding-top: 10%;
-  font-weight: 200;
+  padding-top: 5%;
+  font-weight: 150;
   text-decoration: none;
   text-align: center;
 }
