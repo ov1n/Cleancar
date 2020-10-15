@@ -47,6 +47,11 @@
         Home::create_view('make_reservation');
     });
 
+    //get form details from  register
+    Route::set('reg_auth',function(){
+        Register::register();
+    });
+
     Route::set('change_password',function(){
         Home::create_view('change_password');
     });
