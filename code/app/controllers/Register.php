@@ -1,8 +1,17 @@
 <?php
+
+    //include customer class
+    include './models/Customer.php';
+
     class Register extends Controller{
         //base controller just for extending
         //IN CASE OF OVERRIDE
-        function register(){
+
+        public function __construct(){
+            //
+        
+        }
+        static function register(){
 
             $cust=new Customer();
             
