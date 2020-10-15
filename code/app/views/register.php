@@ -19,9 +19,9 @@
     </head>
 
     <body>
-      <!-- include footer seperately -->
+      <!-- include footer seperately  -->
       <?php
-                include("nav-bar.php");
+                include("nav_login.php");
             ?>
 
         <ul class="breadcrumb">

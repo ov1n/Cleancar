@@ -48,10 +48,36 @@
             //echo($query);
 
             $result= mysqli_query($conn,$query_cust);
-            
-            
+
             //debugging
             if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //intermediate query to get cust id from name;
+            $query_custid="SELECT cust_id FROM customer
+                           WHERE  first_name='$first_name' AND last_name='$last_name' AND address='$address'; ";
+
+            $result2= mysqli_query($conn,$query_custid);
+
+            //debugging
+            if (!$result2) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+            
+            //get sole element of returning array which  is the unique cust_id
+            $r = mysqli_fetch_array($result2);
+            $cust_id=array_shift( $r );
+
+            //insert that into the vehicle table
+            $query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','light vehicle');";
+            
+            $result3= mysqli_query($conn,$query_veh);
+
+            //debugging
+            if (!$result3) {
                 printf("Error: %s\n", mysqli_error($conn));
                 exit();
             }
