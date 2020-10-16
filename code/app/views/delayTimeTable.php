@@ -14,9 +14,10 @@
     </head>
 
     <body>
-      <!-- include nav bar externally -->
+
       <?php 
-          include("nav_profile.php");
+        //include nav bar externally 
+        include("nav_profile.php");
       ?>
 
       <!-- add breadcrumb for find the path easily to users -->
