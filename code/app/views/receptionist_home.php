@@ -2,8 +2,11 @@
 <html>
 <head>
 	<title>receptionist_home</title>
-	<link rel="stylesheet" type="text/css" href="public\css\receptionist_home.css"> 
-	<link rel="stylesheet" type="text/css" href="public/css/footer.css">    
+
+	<link rel="stylesheet" type="text/css" href="public\css\receptionist_home.css"><!-- add style home page -->
+	<link rel="stylesheet" type="text/css" href="public\css\nav_bar.css"><!-- add style to nav bar -->
+    <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->  
+
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
