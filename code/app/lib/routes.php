@@ -67,4 +67,12 @@
     Route::set('employee_home',function(){
         Home::create_view('employee_home');
     });
+
+    Route::set('request_leave',function(){
+        Home::create_view('request_leave');
+    });
+
+    Route::set('register_emp',function(){
+        Home::create_view('register_emp');
+    });
 ?>
