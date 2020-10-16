@@ -14,8 +14,8 @@
     </head>
 
     <body>
+      <!-- include nav bar externally -->
       <?php 
-          //get header in seperate file
           include("nav_profile.php");
       ?>
 
