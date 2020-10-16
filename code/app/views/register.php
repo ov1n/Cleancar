@@ -2,13 +2,17 @@
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <title>CleanCar - Customer registration form</title>
+        <title>CleanCar - Customer Registration form</title>
 
-         <!-- get font just in case -->
+        <!-- get font just in case -->
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-
+        <!-- get css files -->
         <link rel="stylesheet" type="text/css" href="public\css\register.css">
+        <link rel="stylesheet" type="text/css" href="public\css\footer.css">
         
+        <!-- get external jquery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
         <!-- get external js file -->
@@ -16,9 +20,9 @@
     </head>
 
     <body>
-      <!-- include footer seperately -->
+      <!-- include footer seperately  -->
       <?php
-                include("nav-bar.php");
+                include("nav_login.php");
             ?>
 
         <ul class="breadcrumb">
@@ -27,7 +31,7 @@
           <li><a href="home">Home</a></li>
           <li>Customer Registration</li>  
         </ul>
-        <form action="reg_auth" method="POST">
+        <form method="POST" name="reg_form" id="reg_form" onsubmit="create()">
             <div class="container">  
               <h1>Registration</h1>
               <p>Please fill in this form to register as a customer</p>
@@ -46,20 +50,23 @@
 
               &ensp;&ensp;&ensp;&ensp;<label for="vehicle_number"><div class="form_label"><b>Vehicle Number</b></div></label>
               <input type="text" placeholder="Vehicle Number" name="vehicle_number" id="vehicle_number" required>&ensp;
+              <!-- DELETE BUTTON IF UNNECESSARY -->
               <button class="btn btn_round" id="add_vehicle_number" formnovalidate>&ensp;+&ensp;</button></br>
 
               &ensp;&ensp;&ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
               <input type="text" placeholder="Enter Your Address" name="address" id="address" required></br>
 
-              &ensp;&ensp;&ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-              <input type="email" placeholder="Enter Your Email Address" name="e-mail" id="e-mail" required></br>
+              &ensp;&ensp;&ensp;&ensp;<label for="email"><div class="form_label"><b>Email</b></div></label>
+              <input type="email" placeholder="Enter Your Email Address" name="email" id="email" required></br>
 
               &ensp;&ensp;&ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
-              <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='confirm_password();' required></br>
+              <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='confirm_password();button_enable();' required></br>
           
               &ensp;&ensp;&ensp;&ensp;<label for="psw-repeat"><div class="form_label"><b>Repeat Password</b></div></label>
-              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" onkeyup='confirm_password();' required></br>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" onkeyup='confirm_password();button_enable();' required></br>
               <div id="psw-message"><p></p></div>
+
+
               &ensp;&ensp;&ensp;&ensp;<h3>Contact Numbers</h3>
               &ensp;&ensp;&ensp;&ensp;<label for="mobile_tel_no" class="form_label"><div class="form_label"><b>Mobile</b></div></label>
               <input type="tel" placeholder="Enter Your mobile number" name="mobile_tel_no" id="mobile_tel_no" required></br>
@@ -67,8 +74,10 @@
               &ensp;&ensp;&ensp;&ensp;<label for="home_tel_no" class="form_label"><div class="form_label"><b>Home</b></div></label>
               <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required>
               </br>
-              <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-              <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Register</button>
+
+
+              <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
+              <button type="submit" class="btn" class="form_btn" style="margin-right :10px" id="register" disabled>Register</button>
               </div>
               
             </div>

@@ -180,6 +180,11 @@ hr{
   transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
+.btn:disabled {
+  background-color: #696969;
+  color: #ecf0f1;
+}
+
 /* Special round button */
 .btn_round {
   padding: 5px 5px !important;
