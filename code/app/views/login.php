@@ -17,14 +17,14 @@
 
     <?php
         //include nav bar externally 
-        include("nav-bar.php")
+        include("nav_login.php")
     ?>
-    <!-- add breadcrumb for find the path easily to users -->
+    <!-- add breadcrumb to find the path easily to users -->
     <ul class="breadcrumb">
         <img src="public/images/4444.png" width="109" height="48" style="float:right">
         </br>
-        <li><a href="home">Home</a></li>
-        <li>Sign In</li>
+        <li><a href="main_home_page">Home</a></li>
+        <li><a href="login">Sign In</li>
     </ul>
     <form action="auth" method="POST"><!-- TEMPORARY AUTH -->
         <div class="container">  
@@ -38,7 +38,7 @@
                             <img class="avatar" src="public/images/user-icons.PNG"><br>
 
                             &ensp;&ensp;&ensp;&ensp;<label for="user_name"><div class="form_label"><b>User Name</b></div></label>
-                            <input type="text" placeholder="Enter Your User Name" name="user_name" id="user_name" ></br>
+                            <input type="text" placeholder="Enter Your User Name" name="user_name" id="user_name" required></br>
 
                             &ensp;&ensp;&ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
                             <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
