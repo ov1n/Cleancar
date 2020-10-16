@@ -27,7 +27,7 @@
         Home::create_view('about_us');
     });
 
-    Route::set('add_servise',function(){
+    Route::set('add_service',function(){
         Home::create_view('Add_service');
     });
     
@@ -56,15 +56,15 @@
         Home::create_view('change_password');
     });
 
-    Route::set('receptionist_home',function(){
+    Route::set('receptionist',function(){
         Home::create_view('receptionist_home');
     });
 
-    Route::set('manager_home',function(){
+    Route::set('manager',function(){
         Home::create_view('manager_home');
     });
 
-    Route::set('employee_home',function(){
+    Route::set('employee',function(){
         Home::create_view('employee_home');
     });
 
