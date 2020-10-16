@@ -10,6 +10,10 @@
 
         //checking credentials by searching through the customer table
         function check_credentials($uname,$pwd){
+
+            //echo session var
+            //echo "uname is " . $_SESSION["uname"] . ".<br>";
+            //echo "pwd is " . $_SESSION["pwd"] . ".";
             
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -31,6 +35,12 @@
             if($count){
                 echo("go to view");
             }
+            
+            //destroy session
+            unset($_SESSION["username"]);
+            unset($_SESSION["password"]);
+   
+            echo 'You have cleaned session';
         }
 
         //function to insert data into table customer and vehicle
