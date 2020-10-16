@@ -4,18 +4,18 @@
     <head>
         <title>CleanCar - Billing form</title>
     
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css">
-        <link rel="stylesheet" type="text/css" href="public\css\nav_bar.css">
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css">
+        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\nav_bar.css"><!-- add style to nav bar -->
+        <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
       <?php 
-          //get header in seperate file
+          //include nav bar externally 
           include("nav_profile.php");
       ?>
 
@@ -62,7 +62,6 @@
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">OK</button>
               </div><!-- form_content --> 
             </div><!-- card -->
-            
             </br></br>
           </div><!-- background -->
           <hr>
