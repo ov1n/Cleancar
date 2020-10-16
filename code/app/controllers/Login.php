@@ -21,6 +21,11 @@
                 $_SESSION["pwd"] = $pwd;
 
                 $cust->check_credentials($uname,$pwd);
+
+                //destroy session
+                unset($_SESSION["username"]);
+                unset($_SESSION["password"]);
+                echo 'You have cleaned session';
         }
     }
 ?>

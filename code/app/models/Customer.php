@@ -36,11 +36,6 @@
                 echo("go to view");
             }
             
-            //destroy session
-            unset($_SESSION["username"]);
-            unset($_SESSION["password"]);
-   
-            echo 'You have cleaned session';
         }
 
         //function to insert data into table customer and vehicle
