@@ -11,10 +11,10 @@
 <body>
 <div id="navbar">
 <a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true"></i></a>
-   <a href="javascript:void(0)">Contact Us</a>
-   <a href="javascript:void(0)">About Us</a>
-   <a href="javascript:void(0)">Booking</a>
-   <a href="javascript:void(0)">Home</a>
+   <a href="contact_us">Contact Us</a>
+   <a href="about_us">About Us</a>
+   <a href="make_reservation">Booking</a>
+   <a href="home">Home</a>
    <img src="public\images\2222.png">  
 </div>
 

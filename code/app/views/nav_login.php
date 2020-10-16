@@ -10,11 +10,11 @@
 </head>
 <body>
 <div id="navbar">
-   <a href="javascript:void(0)">Sign In</a>
-   <a href="javascript:void(0)">Contact Us</a>
-   <a href="javascript:void(0)">About Us</a>
-   <a href="javascript:void(0)">Booking</a>
-   <a href="javascript:void(0)">Home</a>
+   <a href="login">Sign In</a>
+   <a href="contact_us">Contact Us</a>
+   <a href="about_us">About Us</a>
+   <a href="make_resevation">Booking</a>
+   <a href="home">Home</a>
    <img src="public\images\2222.png">  
 </div>
 
