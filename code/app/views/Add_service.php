@@ -15,7 +15,7 @@
 
     <body>
       <?php 
-          //get header in seperate file
+          //include nav bar externally 
           include("nav_profile.php");
       ?>
       <!-- add breadcrumb for find the path easily to users -->
