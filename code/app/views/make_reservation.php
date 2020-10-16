@@ -5,7 +5,9 @@
         <title>CleanCar - Make Reservation form</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="C:\Users\USER\Desktop\Clean_Car\style_css\form.css">
+        <link rel="stylesheet" type="text/css" href="public\css\form.css">
+        <link rel="stylesheet" type="text/css" href="public\css\nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="public\css\footer.css">
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
