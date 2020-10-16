@@ -124,6 +124,7 @@ div.square button{
   background-color: #F0F8FF; 
   font-family: 'Raleway' !important;  
   border-color: transparent;
+  font-size: 17px;
 }
 
 button:hover{

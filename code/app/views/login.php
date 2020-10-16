@@ -23,8 +23,8 @@
     <ul class="breadcrumb">
         <img src="public/images/4444.png" width="109" height="48" style="float:right">
         </br>
-        <li><a href="main_home_page">Home</a></li>
-        <li><a href="login">Sign In</li>
+        <li><a href="home">Home</a></li>
+        <li>Sign In</li>
     </ul>
     <form action="auth" method="POST"><!-- TEMPORARY AUTH -->
         <div class="container">  
@@ -35,7 +35,7 @@
                 <hr>
                     <div class="card" >
                         <div id=form_content> <!-- div to center needed elements -->
-                            <img class="avatar" src="public/images/user-icons.PNG"><br>
+                            <img class="avatar" id="avatar" src="public/images/user-icons.PNG"><br>
 
                             &ensp;&ensp;&ensp;&ensp;<label for="user_name"><div class="form_label"><b>User Name</b></div></label>
                             <input type="text" placeholder="Enter Your User Name" name="user_name" id="user_name" required></br>
@@ -44,7 +44,7 @@
                             <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
 
                             <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                            <button type="submit" class="btn" class="form_btn" >Log In</button>&ensp;
+                            <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Log In</button>&ensp;
                         </div><!-- form_content -->               
                     </div><!-- card -->
                     </br></br>

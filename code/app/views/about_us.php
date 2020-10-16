@@ -15,6 +15,7 @@
     <?php 
         //get header in seperate file
         include("nav_login.php");
+        
     ?>
         <img src="public/images/about_us/NRMA Car Service Experts123.png" alt="Norway">
         <div class="text-block">
@@ -31,15 +32,15 @@
         <div class="column">
             <div class="card">
                 <h2>Our Mission</h2>
-                <p>We endeavor to give the best quality car item and administrations through strategically placed Car Care Service Centre's, at reasonable costs by settling on our image a purchasers' best option for car item and administration underpins..</p>
+                <p>We endeavor to give the best quality car item and administrations through strategically placed Car Care Service Centre's, at reasonable costs.</p>
             </div>
         </div>
         <div class="column">
             <div class="card">
                 <h2>Our Values</h2>
                 <ul>
-                    <i class="fa fa-check-square-o" aria-hidden="true"></i>We act with trustworthiness and we speak the truth about our work so as to be reasonable and moral.</li><br> <br>
-                    <i class="fa fa-check-square-o" aria-hidden="true"></i>We build up a drawn out relationship with our partners by rehearsing reasonable standards.</li>
+                   <li> <i class="fa fa-check-square-o" aria-hidden="true"></i>We act with trustworthiness and we speak the truth about our work so as to be reasonable and moral.</li>
+                   
                 </ul>
             </div>
         </div>

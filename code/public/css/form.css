@@ -105,10 +105,13 @@ hr{
 }
 
 /* avatar image in login form */
-.avatar{
+#avatar{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  width: 80%;				/* width of image (px or % or auto) */
-  height: 80%;
+  width: 256px;				/* width of image (px or % or auto) */
+  height:256px;
 }
 
 /* Set a style for the submit/register button */
