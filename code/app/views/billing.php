@@ -62,7 +62,6 @@
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">OK</button>
               </div><!-- form_content --> 
             </div><!-- card -->
-            
             </br></br>
           </div><!-- background -->
           <hr>
