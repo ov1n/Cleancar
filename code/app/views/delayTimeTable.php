@@ -6,7 +6,9 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="..\..\public\css\form.css">
+        <link rel="stylesheet" type="text/css" href="public\css\form.css">
+        <link rel="stylesheet" type="text/css" href="public\css\nav_bar.css">
+        <link rel="stylesheet" type="text/css" href="public\css\footer.css">
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
@@ -26,6 +28,7 @@
         <img src="C:\Users\USER\Desktop\Clean_Car\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
+        <li><a href="home">Receptionist</a></li>
         <li>Delay Time Table</li>      
       </ul>
 
