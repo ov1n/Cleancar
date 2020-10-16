@@ -10,8 +10,9 @@
         <link rel="stylesheet" type="text/css" href="public\css\register.css">
         <link rel="stylesheet" type="text/css" href="public\css\footer.css">
         
-        <!-- get external jquery -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <!-- get imported jquery -->
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+        <script src="public/js/jquery/jquery-3.5.1.js"></script>
 
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
