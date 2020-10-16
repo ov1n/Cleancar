@@ -36,7 +36,7 @@
     });
 
     Route::set('customer_registration',function(){
-        Home::create_view('Add_service');
+        Home::create_view('add_service');
     });
 
     Route::set('delay_time_table',function(){
