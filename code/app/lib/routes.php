@@ -16,7 +16,7 @@
     });
 
     Route::set('home',function(){
-        Home::create_view('home');
+        Home::create_view('main_home_page');
     });
 
     Route::set('register',function(){
@@ -28,16 +28,13 @@
     });
 
     Route::set('add_service',function(){
-        Home::create_view('Add_service');
+        Home::create_view('add_service');
     });
     
     Route::set('billing',function(){
         Home::create_view('billing');
     });
 
-    Route::set('customer_registration',function(){
-        Home::create_view('add_service');
-    });
 
     Route::set('delay_time_table',function(){
         Home::create_view('delayTimeTable');

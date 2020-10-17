@@ -1,8 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="public/css/footer.css">
+</head>
+<body>
 <div class="footer">
         <div class="footer-wrapper">
             <div class="single-footer">
                 <h4>Clean<span>Car</span></h4>
-                <p>CLEAN Car division was initiated in the year 2000 as a fully owned CC Ltd. CLEAN Car has established itself as a high-quality brand providing motorists with a range of car was and services..</p>
+                <p>CLEAN Car division was initiated in the year 2001 as a fully owned CC Ltd. CLEAN Car has established itself as a high-quality brand providing motorists with a range of car was and services..</p>
             </div><!-- single-footer -->
             <div class="single-footer">
                 <h5>navigation</h5>
@@ -28,3 +35,5 @@
             </div><!-- single-footer -->
         </div><!-- footer-wrapper -->
     </div><!-- footer -->
+</body>
+</html>
