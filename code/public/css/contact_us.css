@@ -54,10 +54,11 @@ margin-right: 0px;
   color: white;
   padding-left: 40px;
   padding-right: 20px;
-  width: 100%;
+  width: 60%;
   height: 70px;
   font-size: 25px;
- padding-bottom: 20px;
+ padding-bottom: 25px;
+ margin-bottom: 10px;
 }
 
 @media screen and (max-width: 800px){
@@ -179,7 +180,7 @@ margin-left: 10%;
     width: 50%;
 }
 }
- 
+ /*responsive raw1*/
  @media screen and (max-width: 800px){
   .raw1{
     width: 10%;
@@ -224,4 +225,8 @@ margin-left: 10%;
   color: black;
   font-size: 35px;
   cursor: pointer;
+}
+/*background image*/
+.background{
+  background-image: linear-gradient(rgb(58, 118, 255, 0.2), rgb(58, 118, 255, 0.2)), url("../images/contact_us/33999.png");
 }
