@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
 <link rel="stylesheet" type="text/css" href="public/css/contact_us.css">
 
@@ -14,16 +14,16 @@
  
 
 
-	  <div class="container">
+    <div class="container">
 
-  <img src="public/images/contact_us/NRMA Car Service Experts123.png" alt="Norway">
+  <img src="public/images/contact_us/887751.png" alt="Norway">
   <div class="text-block">
     <h4 >CONTACT US</h4>
     
   </div>
 </div>
 
-
+<div class="background">
 
 <div class="row">
   <div class="column1">
@@ -100,29 +100,29 @@
 </div>
 
 <!-- Full-width columns: (hidden by default) -->
-<div id="b1" class="containerTab" style="display:none;background:white">
+<div id="b1" class="containerTab" style="display:none;background: rgb(0, 0, 0,.5)">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
  <div id='map1'>
          </div>
 </div>
 
-<div id="b2" class="containerTab" style="display:none;background:white">
+<div id="b2" class="containerTab" style="display:none;background:rgb(0, 0, 0,.5)">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
    <div id='map2'>
          </div></div>
 
-<div id="b3" class="containerTab" style="display:none;background:white">
+<div id="b3" class="containerTab" style="display:none;background:rgb(0, 0, 0,.5)">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
    <div id='map3'>
          </div>
 </div>
 
-<div id="b4" class="containerTab" style="display:none;background:white">
+<div id="b4" class="containerTab" style="display:none;background:rgb(0, 0, 0,.5)">
   <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
    <div id='map4'>
          </div>
 </div>
- 
+ </div>
   <?php
     include("footer.php");
     ?>
