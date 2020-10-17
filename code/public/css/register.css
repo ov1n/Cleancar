@@ -6,6 +6,44 @@ html *
   font-family: 'Raleway', sans-serif;
 }
 
+#navbar {
+  overflow: hidden;
+  background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
+  height: 60px;
+  min-width: 100%;
+  margin-right: -10px;
+  margin-left: -8px;
+}
+
+#navbar a {
+ float: right;
+ display: block;
+ color: #fff;
+ text-align: center;
+ padding: 1.35%;
+ width: 14%;
+ text-decoration: none;
+ font-size: 17px;
+}
+#navbar .profile{
+  width:6%;
+  padding: 1.4%;
+  align-content: center;
+}
+#navbar img{
+ width: 8%;
+ height: 60px;
+ float: left;
+ margin-left: 5%;
+ margin-top: 3px;
+}
+
+#navbar a:hover {
+ background-color: #ddd;
+ color: black;
+ height: 100%;
+}
+
 h1{
   color: #01447e;
 }
@@ -104,16 +142,6 @@ hr{
   margin-bottom: 25px;
 }
 
-/* avatar image in login form */
-#avatar{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  width: 256px;				/* width of image (px or % or auto) */
-  height:256px;
-}
-
 /* Set a style for the submit/register button */
 .btn {
   position: relative;
@@ -183,11 +211,6 @@ hr{
   transition: width .2s ease-out, padding-top .2s ease-out;
 }
 
-.btn:disabled {
-  background-color: #696969;
-  color: #ecf0f1;
-}
-
 /* Special round button */
 .btn_round {
   padding: 5px 5px !important;
@@ -235,22 +258,25 @@ h1 {
   top: 5px;
 }
   
-.registerbtn {
-  background-color: #008CBA;
-  color: white;
-  right: 10px;
-  top: 5px;
-    
-  border: 2px solid #008CBA;
-}
-.registerbtn:hover {
-  background-color: white; 
-  color: black;
-}
 .btn.cancelbtn {
   background-color: #e67e22;
 }
 
+.btn:disabled {
+  background-color: #696969;
+  color: #ecf0f1;
+}
+
 .btn.cancelbtn:hover, .btn.orange:focus {
   background-color: #d35400;
+}
+
+/* login form picture*/
+
+#form_content img{
+margin-bottom: 5%;
+margin-left: 25%;
+
+width: 50%;
+height: 50%;
 }

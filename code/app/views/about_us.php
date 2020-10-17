@@ -4,7 +4,7 @@
 <head>
     <title></title>
     <!-- Link primary CSS -->
-    <link rel="stylesheet" type="text/css" href="../public/css/about_us.css">
+    <link rel="stylesheet" type="text/css" href="public/css/about_us.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -12,11 +12,8 @@
 
 <body>
     <div class="container">
-    <?php 
-        //get header in seperate file
-        include("nav-bar.php");
-    ?>
-        <img src="../public/images/about_us/NRMA Car Service Experts123.png" alt="Norway">
+    
+        <img src="public/images/about_us/NRMA Car Service Experts123.png" alt="Norway">
         <div class="text-block">
             <h4>ABOUT US</h4>
         </div>
@@ -31,19 +28,27 @@
         <div class="column">
             <div class="card">
                 <h2>Our Mission</h2>
-                <p>We endeavor to give the best quality car item and administrations through strategically placed Car Care Service Centre's, at reasonable costs by settling on our image a purchasers' best option for car item and administration underpins..</p>
+                <p>We endeavor to give the best quality car item and administrations through strategically placed Car Care Service Centre's, at reasonable costs.</p>
             </div>
         </div>
         <div class="column">
             <div class="card">
                 <h2>Our Values</h2>
                 <ul>
-                    <i class="fa fa-check-square-o" aria-hidden="true"></i>We act with trustworthiness and we speak the truth about our work so as to be reasonable and moral.</li><br> <br>
-                    <i class="fa fa-check-square-o" aria-hidden="true"></i>We build up a drawn out relationship with our partners by rehearsing reasonable standards.</li>
+                   <li> <i class="fa fa-check-square-o" aria-hidden="true"></i>We act with trustworthiness and we speak the truth about our work so as to be reasonable and moral.</li>
+                   
                 </ul>
             </div>
         </div>
     </div>
+
+
+<?php 
+        //get header in seperate file
+        include("nav_login.php");
+        
+    ?>
+    
     <!-- Header -->
     <div class="headers">
         <h1>Stories</h1>
@@ -51,26 +56,26 @@
     <!-- Photo Grid -->
     <div class="rows">
         <div class="columns">
-            <img src="../public/images/about_us/640x360.jpg" style="width:100%">
-            <img src="../public/images/about_us/blog-head-selfwash-768x512.jpg" style="width:100%">
-            <img src="../public/images/about_us/carrozzeria-alle-cave-come-lavare-auto-00.jpg" style="width:100%">
-            <img src="../public/images/about_us/image.jpg" style="width:100%; height: 120px;">
+            <img src="public/images/about_us/640x360.jpg" style="width:100%">
+            <img src="public/images/about_us/blog-head-selfwash-768x512.jpg" style="width:100%">
+            <img src="public/images/about_us/carrozzeria-alle-cave-come-lavare-auto-00.jpg" style="width:100%">
+            <img src="public/images/about_us/image.jpg" style="width:100%; height: 120px;">
         </div>
         <div class="columns">
-            <img src="../public/images/about_us/lavaggio-a-secco.jpg" style="width:100%">
-            <img src="../public/images/about_us/pexels-negative-space-97075.jpg" style="width:100%">
-            <img src="../public/images/about_us/thumb-chemia.jpg" style="width:100%">
+            <img src="public/images/about_us/lavaggio-a-secco.jpg" style="width:100%">
+            <img src="public/images/about_us/pexels-negative-space-97075.jpg" style="width:100%">
+            <img src="public/images/about_us/thumb-chemia.jpg" style="width:100%">
         </div>
         <div class="columns">
-            <img src="../public/images/about_us/pexels-negative-space-97075.jpg" style="width:100%">
-            <img src="../public/images/about_us/5-Reasons-Why-Car-Owners-Manuals-Should-Be-in-Your-Car-at-All-Times.jpg" style="width:100%">
-            <img src="../public/images/about_us/NRMA-Car-Service-App.jpg" style="width:100%">
-            <img src="../public/images/about_us/Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.jpg" style="width:100%; height: 180px;">
+            <img src="public/images/about_us/pexels-negative-space-97075.jpg" style="width:100%">
+            <img src="public/images/about_us/5-Reasons-Why-Car-Owners-Manuals-Should-Be-in-Your-Car-at-All-Times.jpg" style="width:100%">
+            <img src="public/images/about_us/NRMA-Car-Service-App.jpg" style="width:100%">
+            <img src="public/images/about_us/Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.jpg" style="width:100%; height: 180px;">
         </div>
         <div class="columns">
-            <img src="../public/images/about_us/pexels-pixabay-372810.jpg" style="width:100%">
-            <img src="../public/images/about_us/thumb-chemia.jpg" style="width:100%">
-            <img src="../public/images/about_us/pexels-andrea-piacquadio-3807695.jpg" style="width:100%">
+            <img src="public/images/about_us/pexels-pixabay-372810.jpg" style="width:100%">
+            <img src="public/images/about_us/thumb-chemia.jpg" style="width:100%">
+            <img src="public/images/about_us/pexels-andrea-piacquadio-3807695.jpg" style="width:100%">
         </div>
     </div>
     <?php 
