@@ -2,7 +2,7 @@
 <html>
 <head>
   <title></title>
-  <link rel="stylesheet" type="text/css" href="..\..\public\css\nav_bar.css"> <!--style sheet-->
+  <link rel="stylesheet" type="text/css" href="public\css\nav_bar.css"> <!--style sheet-->
 
   <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>  <!--user icon-->
 
@@ -13,7 +13,7 @@
    <a href="login">Sign In</a>
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
-   <a href="make_resevation">Booking</a>
+   <a href="make_reservation">Booking</a>
    <a href="home">Home</a>
    <img src="public\images\2222.png">  
 </div>
