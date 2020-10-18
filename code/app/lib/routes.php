@@ -27,6 +27,10 @@
         Home::create_view('about_us');
     });
 
+     Route::set('contact_us',function(){
+        Home::create_view('contact_us');
+    });
+
     Route::set('add_service',function(){
         Home::create_view('add_service');
     });

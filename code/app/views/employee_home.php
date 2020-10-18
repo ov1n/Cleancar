@@ -27,32 +27,30 @@
       
       <hr> <br>
 
-      <div class="cover">
+      <div class="cover"> <br><br><br>
 
 	    <div class="square">
 			<div class="square1">
-				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i> 
+				<br><br><br>
 				<button><b>Add Leave</b></button>
 			</div>
 
-			<br>
-
 			<div class="square2">
-				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
+				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i> 
+				<br><br><br>
 				<button><b>Cancel Leave</b></button>
 			</div>
 
-			<br>
-
 			<div class="square3">
-				<i class="fa fa-calendar fa-3x" aria-hidden="true"></i>
+				<i class="fa fa-calendar fa-3x" aria-hidden="true"></i> 
+				<br><br><br>
 				<button><b>Calender</b></button>
 			</div>
 
-			<br>
-
 			<div class="square4">
-				<i class="fa fa-pie-chart fa-3x" aria-hidden="true"></i>
+				<i class="fa fa-pie-chart fa-3x" aria-hidden="true"></i> 
+				<br><br><br>
 				<button><b>Check the number of Leaves</b></button>
 			</div>
 		</div> <!--square-->
