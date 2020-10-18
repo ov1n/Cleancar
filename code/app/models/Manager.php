@@ -1,5 +1,5 @@
 <?php
-    include 'Model.php';
+    include_once 'Model.php';
 
     class Manager extends Model{
 
