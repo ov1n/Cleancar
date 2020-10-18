@@ -7,7 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
 <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
-<link rel="stylesheet" type="text/css" href="../../public/css/main_home.css">
+<link rel="stylesheet" type="text/css" href="public/css/main_home.css">
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -17,15 +17,10 @@
 <body>
 
 <!--navigation bar-->	
-<div id="navbar">
-   <a href="#"><i class="fa fa-user-circle-o"  aria-hidden="true" style="margin-right: 20px"></i></a>
-   <a href="javascript:void(0)">Sign In</a>
-   <a href="javascript:void(0)">Contact Us</a>
-   <a href="javascript:void(0)">About Us</a>
-   <a href="javascript:void(0)">Booking</a>
-   <a href="javascript:void(0)">Home</a>
-   <img src="../../public/images/home/imageedit_58_5294224580.png">  
-</div>
+<?php
+  include("nav_login.php");
+
+?>
 
 
 <div class="slideshow-container">
@@ -38,7 +33,7 @@
             <button class="btn btn-dark btn-lg">Read More</button>
         </div>
       </div>
-  <img src="../../public/images/home/pexels-jan.png" style="width:100%">
+  <img src="public/images/home/pexels-jan.png" style="width:100%">
   <div class="text"></div>
 </div>
 
@@ -51,7 +46,7 @@
             <button class="btn btn-dark btn-lg">Read More</button>
         </div>
       </div>
-  <img src="../../public/images/home/pexels-jan-kopřiva-3354648.jpg" style="width:100%">
+  <img src="public/images/home/pexels-jan-kopřiva-3354648.jpg" style="width:100%">
   <div class="text"></div>
 </div>
 
@@ -64,7 +59,7 @@
             <button class="btn btn-dark btn-lg">Read More</button>
         </div>
       </div>
-  <img src="../../public/images/home/Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.png" style="width:100%">
+  <img src="public/images/home/Car-Service-Guide-to-Find-The-Best-Automatic-Service-2.png" style="width:100%">
   <div class="text">
   	
   </div>
@@ -162,34 +157,10 @@
   </div>
 </div>
 
-<div class="footer">
-	<div class="footer-wrapper">
-    	<div class="single-footer">
-     
-           <h4>Clean<span>Car</span></h4>
-      		 <p>CLEAN Car  division was initiated in the year 2000 as a fully owned CC Ltd. CLEAN Car has established itself as a high-quality brand providing motorists with a range of car was and services..</p>
-    	</div>
-    <div class="single-footer">
-      	<h5>navigation</h5>
-      	<ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact Us</a></li>
-        </ul>
-        <br><p>© 2019 Copyright: CleancarWebsite.com</p>
-    </div>
-    <div class="single-footer">
-      <p><span> 123,cross Road,</span><div id="test"></div>Nugegoda, Srilanka </p>
-      <p>+94-1132158724 </p>
-       <p>+94-1132158123 </p>
-    </div>
+<?php
+  include("footer.php");
 
-     <div class="single-footer">
-       <img src="../../public/images/home/imageedit_67_3081496098.png">
-     </div>
-     
-  </div>
-</div>
+?>
 
 <!--javascript part-->
 <script type="text/javascript">
