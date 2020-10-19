@@ -1,5 +1,6 @@
 * {box-sizing: border-box}
 
+
 /*set default base font */
 html *
 {  
@@ -16,6 +17,7 @@ p{
 
 /* Style the list(breadcrumb) */
 ul.breadcrumb {
+  margin-top: 70px;
   padding: 10px 16px;
   list-style: none;
 }
@@ -47,6 +49,7 @@ ul.breadcrumb li a:hover {
 .background{
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg");
   }
+
   /* style the card in form */
 .card {
   justify-content:center;
@@ -55,9 +58,17 @@ ul.breadcrumb li a:hover {
   text-align: left;
   border-radius: 3%;
   height: 200%;
-  margin-left: 25%;
+  margin-left: 20%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
-  max-width: 50%;
+  width: 60%;
+}
+
+@media screen and (max-width: 1050px){
+  .card{
+    margin-left: 10%;
+    width: 80%;
+    height: 400%;
+  }
 }
 
 /* Add padding to containers */
@@ -88,15 +99,25 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
   border-width: 1px;
   background: #f1f1f1;
 }
+
+@media screen and (max-width: 1050px){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 750px){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+    width: 30%;
+  }
+}
+
+
   /* add the background color to the input field */
 input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=date]:focus, input[type=tel]:focus , select:focus {
   background-color: #ccddff;
 }
 
-/* Custom input fields to be able to add more vehicle nos*/
-#vehicle_number{
-  width: 20%;
-}
 
 /* stile the horizontal lines */
 hr{
@@ -218,10 +239,11 @@ h1 {
 }
 
 #form_content{
-  margin: auto;
-  width: 70%;
+  margin: 10%;
+  width: 80%;
   padding: 10px;
   line-height: 60%;
+  align-items: center;
 }
 
 .form_label{

@@ -76,7 +76,7 @@ body {
 </head>
 <body>
 <div id="navbar">
-<a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true"></i></a>
+   <a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true"></i></a>
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
    <a href="make_reservation">Booking</a>
