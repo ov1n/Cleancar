@@ -40,7 +40,7 @@
                     //load employee view
                     //echo("in emp view");
                 }else{
-                    echo("no such record");
+                    echo("wrong credentials");
                 }
 
                 //destroy session

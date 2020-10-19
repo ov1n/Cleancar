@@ -30,7 +30,7 @@
             //get a count of rows returning
             $count = mysqli_fetch_array($result);
             //print_r($count);
-            print_r($uname);
+            //print_r($uname);
             //if array is not empty that means credentials are correct
             if($count){
                return True;
