@@ -28,7 +28,7 @@
 
                 if($cust->check_credentials($uname,$pwd)){
                     //load customer view
-                    //echo("in cust view");
+                    echo("in cust view");
                 }else if($man->check_credentials($uname,$pwd)){
                     //load manager view
                     //echo("in man view");
@@ -40,7 +40,7 @@
                     //load employee view
                     //echo("in emp view");
                 }else{
-                    //echo("no such record");
+                    echo("no such record");
                 }
 
                 //destroy session
