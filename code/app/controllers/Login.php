@@ -1,6 +1,9 @@
 <?php
-
-    include './models/Customer.php';
+    //include the models. once is a necessary 
+    include_once './models/Customer.php';
+    include_once './models/Receptionist.php';
+    include_once './models/Manager.php';
+    include_once './models/Service_employee.php';
 
     class Login extends Controller{
         //base controller just for extending
@@ -8,8 +11,11 @@
         
         function authenticate(){
 
+                //set database objects to variables
                 $cust=new Customer();
-                //check if variable is set
+                $rec=new Receptionist();
+                $man=new Manager();
+                $emp=new Service_employee();
                 
                 //session commence
                 session_start();
@@ -20,12 +26,27 @@
                 $_SESSION["uname"] = $uname;
                 $_SESSION["pwd"] = $pwd;
 
-                $cust->check_credentials($uname,$pwd);
+                if($cust->check_credentials($uname,$pwd)){
+                    //load customer view
+                    echo("in cust view");
+                }else if($man->check_credentials($uname,$pwd)){
+                    //load manager view
+                    //echo("in man view");
+
+                }else if($rec->check_credentials($uname,$pwd)){
+                    //load receptionist view
+                    //echo("in rec view");
+                }else if($emp->check_credentials($uname,$pwd)){
+                    //load employee view
+                    //echo("in emp view");
+                }else{
+                    echo("no such record");
+                }
 
                 //destroy session
                 unset($_SESSION["username"]);
                 unset($_SESSION["password"]);
-                echo 'You have cleaned session';
+                //echo 'You have cleaned session';
         }
     }
 ?>

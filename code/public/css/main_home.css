@@ -1,63 +1,139 @@
 body {
     font-family: "Raleway" !important;
+    margin: 0;
 }
-
-.mySlides {
-    display: none;
-}
-
-img {
-    vertical-align: middle;
-    width: 2540px;
-    height: 500px;
-    margin-right: 0px;
-    margin-left: 0px;
-
-}
+* {box-sizing:border-box}
 
 /* Slideshow container */
 .slideshow-container {
-    max-width: 2800px;
-    position: relative;
-    margin-right: -10px;
-    margin-left: -8px;
+  max-width: 100%;
+  max-height: 500px;
+  position: relative;
+  margin-top: 65px;
 }
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+
+}
+
+.mySlides img {
+    width: 100%;
+    height: 500px;
+}
+
+.text1 {
+
+  position: absolute;
+    /* Position the background text */
+    top: : 0;
+    /* At the bottom. Use top:0 to append it to the top */
+
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, .95));
+    /* Black background with 0.95 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 50%;
+    padding: 10px 35px;
+    padding-top: 0px;   /* Some padding */
+    height: 70px;
+    margin-top: 30px;
+    font-size: 15px;
+}
+
+
 
 /* Caption text */
-.text {
-    color: #f2f2f2;
+.text2 {
+  position: absolute;
+    /* Position the background text */
+    bottom: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, 1));
+    /* Black background with 0.95 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 60%;
+    padding: 0px 35px;
+    padding-bottom: 25px;   /* Some padding */
+    height: 70px;
+    margin-bottom: 15%;
     font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
+.text4 {
+  position: absolute;
+    /* Position the background text */
+    bottom: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, 1));
+    /* Black background with 0.95 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 50%;
+    padding: 0px 35px;
+    padding-bottom: 25px;   /* Some padding */
+    height: 70px;
+    margin-bottom: 15%;
+    font-size: 15px;
+}
+/* Caption text */
+.text3 {
+  position: absolute;
+    /* Position the background text */
+    bottom: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, 1));
+    /* Black background with 0.95 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 50%;
+    padding: 0px 35px;
+    
+    padding-bottom: 25px;   /* Some padding */
+    height: 70px;
+    margin-bottom: 5%;
+    font-size: 15px;
+    
 }
 
-/* The dots/bullets/indicators */
-.dot {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+/*responsive text*/
+@media screen and (max-width: 800px) {
+  .text1,
+  .text2,
+  .text3,
+  .text4 {
+    width: 75%;
+  
+    height: 90px;
+    display: block;
+   
+  }
 }
 
-/*active dot*/
-.active {
-    background-color: #1ABAFA;
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
+
+@-webkit-keyframes fade {
+  from {opacity: .7}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .7}
+  to {opacity: 1}
+}
+
 
 .overlay {
     position: absolute;
@@ -65,154 +141,67 @@ img {
     min-width: 100%;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, .15);
+    background: rgba(0, 0, 0, .1);
 }
 
-/*description in the slideshow*/
+
+
+#navbar {
+  height: 65px;
+  background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
+  position: fixed; /* Make it stick/fixed */
+ top: 0;
+  width: 100%; 
+  transition: top 0.3s; 
+}
+
+
+/*description after the slideshow*/
 .description {
     left: 50%;
-    position: absolute;
-    top: 75%;
-    transform: translate(-50%, -55%);
+    position: relative;
+    height: 200px;
+    top: 10px;
+    transform: translate(-50%, 5%);
     text-align: center;
+    width: 50%;
 
 }
 
+@media screen and (max-width: 800px){
+  .description{
+    width: 90%;
+  }
+}
+
+/*responsive description header*/
+@media screen and (max-width: 800px) {
+  .description h1{
+    width: 100%;
+    margin-top: 10px;
+
+  }
+}
 .description h1 {
     color: #007bff;
     font-family: "ho"
 }
 
 .description p {
-    color: #fff;
+    color: black;
     font-size: 1rem;
     line-height: 1.3;
     font-family: 'Raleway', important;
 }
 
-.description button {
-    border: 2px solid #6ab446;
-    background: #6ab446;
-    border-radius: 10px;
-    color: #fff;
-}
-
-.description button:hover {
-    border: 1px solid #fff;
-    background: #fff;
-    color: #000;
-}
-
-.btn {
-    margin-bottom: 15px;
-    width: 100px;
-    height: 50px;
-
-}
-
-
-
-/* Fading animation */
-.fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .text {
-        font-size: 11px
-    }
-}
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#navbar {
-  overflow: hidden;
-  background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
-  height: 60px;
-  min-width: 100%;
-  margin-right: -10px;
-  margin-left: -8px;
-}
-
-#navbar a {
- float: right;
- display: block;
- color: #fff;
- text-align: center;
- padding: 1.35%;
- width: 14%;
- text-decoration: none;
- font-size: 17px;
-}
-#navbar .profile{
-  width:6%;
-  padding: 1.4%;
-  align-content: center;
-}
-#navbar img{
- width: 8%;
- height: 60px;
- float: left;
- margin-left: 5%;
- margin-top: 3px;
-}
-
-#navbar a:hover {
- background-color: #ddd;
- color: black;
- height: 100%;
-}
-
-
-.content {
-    padding: 16px;
-}
-
-.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.sticky+.content {
-    padding-top: 60px;
-}
 
 /* Float four columns side by side */
 .column {
     float: left;
     width: 25%;
-    padding: 0 10px;
+    padding: 20px 10px;
+    height: 300px;
+   
 }
 
 /* Remove extra left and right margins, due to padding in columns */
@@ -229,51 +218,152 @@ body {
 }
 
 /* Style the counter cards */
-.card {
+.card1 {
 
-    padding: 18px;
+    padding: 10px 10px;
     text-align: center;
-    height: 250px;
+    height: 240px;
     margin-bottom: 5px;
-    background-image: linear-gradient(rgb(58, 118, 255, 0.2), rgb(58, 118, 255, 0.2)), url("../../public/images/home/$RNLKH41.png");
+    margin-top: 10px;
+    /*background-image: linear-gradient(rgb(58, 118, 255, 0.2), rgb(58, 118, 255, 0.2)), url("output-onlinepngtools.png");*/
+    /*background-color: rgb(58, 118, 255, 0.2);*/
+    background-image: url("../images/home/output-onlinepngtools.png");
     border-radius: 3px;
 }
 
-.card h2 {
-    font-family: 'Cantarell', sans-serif;
+.card2 {
+
+    padding: 10px 10px;
+    text-align: center;
+    height: 240px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+    
+   /* background-color: rgb(58, 118, 255, 0.2);*/
+    background-image: url("../images/home/output-onlinepngtools (2).png");
+    border-radius: 3px;
+}
+
+.card3 {
+
+    padding: 10px 10px;
+    text-align: center;
+    height: 240px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+   
+   /* background-color: rgb(58, 118, 255, 0.2);*/
+    background-image: url("../images/home/output-onlinepngtools (3).png");
+    border-radius: 3px;
+}
+
+.card4 {
+
+    padding: 10px 10px;
+    padding-right: 10px;
+    text-align: center;
+    height: 240px;
+    margin-bottom: 5px;
+    margin-top: 10px;
+
+  /* background-color: rgb(58, 118, 255, 0.2);*/
+    background-image: url("../images/home/output-onlinepngtools (4).png");
+    border-radius: 3px;
+}
+
+
+.card1 h2 {
     color: #008CBA;
 }
 
+.card2 h2 {
+    color: #008CBA;
+}
+.card3 h2 {
+    color: #008CBA;
+}
+.card4 h2 {
+    color: #008CBA;
+}
 
-.cards h2 {
-    font-family: 'Cantarell', sans-serif;
+/*responsive card and column*/
+@media screen and (max-width: 1200px) {
+  .column {
+    width: 400px;
+ 
+    height: 250px;
+    display: block;
+    margin-bottom: 20px;
+  
+     padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .card1,
+  .card2,
+  .card3,
+  .card4 {
+    width: 400px;
+     
+    height: 250px;
+    display: block;
+    margin-bottom: 20px;
+    
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
 }
 
 
-/* Responsive columns - one column layout (vertical) on small screens */
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 10px;
-    }
+
+
+
+
+.overlay1 {
+  position: relative;
+  bottom: 0%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
 }
-
-/* Float four columns side by side */
-
-
-body {
-    font-family: Arial;
-    padding: 10px;
-    background: #fff;
+/*mouse hover overlay*/
+.card1:hover .overlay1 {
+  bottom: 0;
+  height: 70%;
 }
-
-/* Header/Blog Title */
-.header {
-    padding: 30px;
-    font-size: 40px;
-    text-align: center;
-    background: white;
+.card2:hover .overlay1 {
+  bottom: 0;
+  height: 70%;
+}
+.card3:hover .overlay1 {
+  bottom: 0;
+  height: 70%;
+}
+.card4:hover .overlay1 {
+  bottom: 0;
+  height: 70%;
+}
+.contents {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
 /* Create two unequal columns that floats next to each other */
@@ -281,6 +371,7 @@ body {
 .leftcolumn {
     float: left;
     width: 75%;
+    height: 500px;
     padding-top: : 3px;
 }
 
@@ -295,25 +386,16 @@ body {
 
 /* Fake image */
 .fakeimg {
-    background-image: url("../../public/images/home/washcar.png");
+    background-image: url("../images/home/detailer-gives-finishing-fender.png");
     width: 100%;
     padding: 20px;
 }
 
 .fakeimg1 {
-    background-image: url("../../public/images/home/70844a.png");
+    background-image: url("../images/home/NRMA Car Service Experts.png");
     width: 100%;
     padding: 20px;
 }
-
-.fakeimg2 {
-    background-image: url("../../public/images/home/NRMA Car Service Experts.png");
-    width: 100%;
-    padding: 20px;
-}
-
-
-
 
 
 .
@@ -376,87 +458,42 @@ body {
     clear: both;
 }
 
-.footer-wrapper {
-    width: 1100px;
-    margin: 10px 50px;
-
-}
-
-.single-footer {
-    width: 25%;
-    float: left;
-    text-align: center;
-    color: #fff;
-    padding-left: 70px;
-
-}
-
-.single-footer ul {
-    margin: 0px;
-    padding: 10px;
-    list-style: none;
-}
-
-/*footer links*/
-.single-footer ul a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: #fff;
-    font-size: 12px;
-}
-
-/*paragraph in the footer*/
-.single-footer p {
-    width: 90%;
-    font-size: 15px;
-}
-
-.single-footer h4,
-h5 {
-    color: #fff;
-    font-size: 30px;
-    font-family: 'Alegreya Sans', sans-serif;
-    margin: 0;
-    font-weight: 200;
-}
-
-/*grrrn color part of cleacar*/
-.single-footer h4 span {
-    color: lightseagreen;
-}
-
-/*logo in the footer*/
-.single-footer img {
-    width: 250px;
-    height: 150px;
-    padding: 30px 10px;
-    margin-left: 50px;
-}
-
-.footer {
-    width: 1517px;
-    height: 200px;
-    margin-left: -10px;
-    margin-right: -10px;
-    bottom: 0;
-    background-color: #262626;
-}
 
 .container {
     position: relative;
     max-width: 1200px;
     /* Maximum width */
-    margin: 0 auto;
+    margin: 10px auto;
     /* Center it */
+
 }
 
-.container .content {
+ .content {
     position: absolute;
     /* Position the background text */
     top: 0;
     /* At the bottom. Use top:0 to append it to the top */
 
-    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, 0.8));
+    background-image: linear-gradient(to left, rgba(255, 0, 0, 0), rgb(0, 0, 0, 0.9));
+    /* Black background with 0.5 opacity */
+    color: #f1f1f1;
+    /* Grey text */
+    width: 55%;
+    /* Full width */
+    padding: 10px;
+    /* Some padding */
+    padding-left: 20px;
+}
+
+
+/*left column content*/
+ .content1 {
+    position: absolute;
+    /* Position the background text */
+    top: 0;
+    /* At the bottom. Use top:0 to append it to the top */
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgb(0, 0, 0, 0.7)), url("../images/home/bweb.jpg");
     /* Black background with 0.5 opacity */
     color: #f1f1f1;
     /* Grey text */
@@ -464,6 +501,8 @@ h5 {
     /* Full width */
     padding: 10px;
     /* Some padding */
+    padding-left: 10px;
+    text-align: center;
 }
 
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
@@ -473,6 +512,8 @@ h5 {
     .rightcolumn {
         width: 100%;
         padding: 0;
+        height: 50%;
+        margin-bottom: 1%;
     }
 }
 
@@ -483,6 +524,14 @@ body {
 }
 
 #map {
-    width: 345px;
+    width: 340px;
     height: 255px;
 }
+
+/*map responsiveness*/
+@media screen and (max-width: 1800px) {
+  #map{
+    width: 100%;
+
+  }
+  }
