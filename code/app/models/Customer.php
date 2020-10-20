@@ -1,5 +1,5 @@
 <?php
-    include 'Model.php';
+    include_once 'Model.php';
 
     class Customer extends Model{
 
@@ -18,7 +18,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
                
-            $query="SELECT cust_id FROM customer WHERE (cust_id='$uname' OR 'email'='$uname') AND password='$pwd'";
+            $query="SELECT cust_id FROM customer WHERE (cust_id='$uname' OR email='$uname') AND password='$pwd'";
             $result= mysqli_query($conn,$query);
             
             //debugging
@@ -30,10 +30,10 @@
             //get a count of rows returning
             $count = mysqli_fetch_array($result);
             //print_r($count);
-
+            //print_r($uname);
             //if array is not empty that means credentials are correct
             if($count){
-                echo("go to view");
+               return True;
             }
             
         }

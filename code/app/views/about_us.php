@@ -12,11 +12,7 @@
 
 <body>
     <div class="container">
-    <?php 
-        //get header in seperate file
-        include("nav_login.php");
-        
-    ?>
+    
         <img src="public/images/about_us/NRMA Car Service Experts123.png" alt="Norway">
         <div class="text-block">
             <h4>ABOUT US</h4>
@@ -45,6 +41,14 @@
             </div>
         </div>
     </div>
+
+
+<?php 
+        //get header in seperate file
+        include("nav_login.php");
+        
+    ?>
+    
     <!-- Header -->
     <div class="headers">
         <h1>Stories</h1>

@@ -1,5 +1,6 @@
 * {box-sizing: border-box}
 
+
 /*set default base font */
 html *
 {  
@@ -14,8 +15,9 @@ p{
   font-size: larger;
 }
 
-/* Style the list */
+/* Style the list(breadcrumb) */
 ul.breadcrumb {
+  margin-top: 70px;
   padding: 10px 16px;
   list-style: none;
 }
@@ -43,11 +45,12 @@ ul.breadcrumb li a {
 ul.breadcrumb li a:hover {
   color: #01447e;
 }
-
+/* add the background image for form */
 .background{
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg");
   }
 
+  /* style the card in form */
 .card {
   justify-content:center;
   padding-bottom: 50px;
@@ -55,9 +58,17 @@ ul.breadcrumb li a:hover {
   text-align: left;
   border-radius: 3%;
   height: 200%;
-  margin-left: 25%;
+  margin-left: 20%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
-  max-width: 50%;
+  width: 60%;
+}
+
+@media screen and (max-width: 1050px){
+  .card{
+    margin-left: 10%;
+    width: 80%;
+    height: 400%;
+  }
 }
 
 /* Add padding to containers */
@@ -89,16 +100,26 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
   background: #f1f1f1;
 }
 
+@media screen and (max-width: 1050px){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 750px){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+    width: 30%;
+  }
+}
+
+
+  /* add the background color to the input field */
 input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=date]:focus, input[type=tel]:focus , select:focus {
   background-color: #ccddff;
 }
 
-/* Custom input fields to be able to add more vehicle nos*/
-#vehicle_number{
-  width: 20%;
-}
 
-/* custom hr */
+/* stile the horizontal lines */
 hr{
   border: 1px solid #f1f1f1;
   margin-bottom: 25px;
@@ -140,7 +161,7 @@ hr{
   
   transition: background-color .3s;
 }
-
+  /* style the button when the mouse point move on */
 .btn:hover, .btn:focus {
   background-color: #008CBA;
 }
@@ -212,15 +233,17 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
+/* style the heading */
 h1 {
   text-align:center;
 }
 
 #form_content{
-  margin: auto;
-  width: 70%;
+  margin: 10%;
+  width: 80%;
   padding: 10px;
   line-height: 60%;
+  align-items: center;
 }
 
 .form_label{
