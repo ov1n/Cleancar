@@ -27,6 +27,80 @@
 		<h1>Manager Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
 		<hr>
 
+		<div class="cover">
+
+<hr>
+
+<div class="square"> <br>
+	<div class="square1">
+		<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+		<br><br><br>
+		<button><b>Reservation</b></button>
+	</div>
+
+	<div class="square2">
+		<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+		<br><br><br>
+		<button><b>Service</b></button>
+	</div>
+
+	<div class="square3">
+		<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+		<br><br><br>
+		<button><b>Time Slot</b></button>
+	</div>
+	
+	<div class="square4">
+		<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+		<br><br><br>
+		<button><b>Reports</b></button>
+	</div>
+
+	<div class="square5">
+		<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
+		<br><br><br>
+		<button><b>Employee</b></button>
+	</div>
+
+</div><!--square-->
+</div> <!--cover-->
+
+	<br> <hr> <br>
+
+	<!-- add footer -->
+	
+	<?php include("footer.php"); ?>
+	
+</body>
+</html><!DOCTYPE html>
+<html>
+<head>
+	<title>manager_home</title>
+
+	<link rel="stylesheet" type="text/css" href="public/css/manager_home.css">
+	<link rel="stylesheet" type="text/css" href="public/css/nav_profile.css">   
+	<link rel="stylesheet" type="text/css" href="public/css/footer.css">
+	    
+	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<?php include("nav_profile.php"); ?> <!-- add navigation bar -->
+
+	<form action="managerhome.php" method="post"> 
+
+		<!-- create breadcrumb -->
+
+		<ul class="breadcrumb">
+          <img src="public/images/4444.png" width="109" height="48" style="float:right">
+          </br>
+          <li><a href="home">Home</a></li>
+          <li>Login</li>
+          
+        </ul> <!-- breadcrumb -->
+
+		<h1>Manager Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
+		<hr>
+
 	<div class="cover"> <br>
 
 	    <div class="column">
