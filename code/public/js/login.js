@@ -5,8 +5,8 @@ function login_auth () {
         type: "post",    //request type,
         dataType: 'json',
         //the data array
-        data: {first_name : document.login.user_name.value,
-          last_name : document.login.password.value}
+        data: {user_name : document.login.user_name.value,
+            password : document.login.password.value}
           ,
         //debugging
         success:function(result){
