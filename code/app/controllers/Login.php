@@ -29,18 +29,23 @@
                 if($cust->check_credentials($uname,$pwd)){
                     //load customer view
                     echo("in cust view");
+                    header("Location:home");
+
                 }else if($man->check_credentials($uname,$pwd)){
                     //load manager view
                     //echo("in man view");
+                    header("Location:manager_home");
 
                 }else if($rec->check_credentials($uname,$pwd)){
                     //load receptionist view
                     //echo("in rec view");
+                    header("Location:manager_home");
                 }else if($emp->check_credentials($uname,$pwd)){
                     //load employee view
                     //echo("in emp view");
                 }else{
                     echo("wrong credentials");
+                    
                 }
 
                 //destroy session

@@ -10,6 +10,13 @@
     <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
     <link rel="stylesheet" type="text/css" href="public\css\nav_bar.css"><!-- add style to nav bar -->
     <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+
+    <!-- get imported jquery -->
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> -->
+    <script src="public/js/jquery/jquery-3.5.1.js"></script>
+
+    <!-- get external js file -->
+    <script type="text/javascript" src="public\js\login.js"></script>
         
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
@@ -26,7 +33,7 @@
         <li><a href="home">Home</a></li>
         <li>Sign In</li>
     </ul>
-    <form action="auth" method="POST"><!-- TEMPORARY AUTH -->
+    <form action="auth" method="POST" id="login" name="login"><!-- TEMPORARY AUTH -->
         <div class="container">  
             <h1>Sign In</h1>
             <hr>

@@ -18,7 +18,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
                
-            $query="SELECT cust_id FROM customer WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
+            $query="SELECT cust_id FROM customer WHERE (cust_id='$uname' OR email='$uname') AND password='$pwd'";
             $result= mysqli_query($conn,$query);
             
             //debugging
