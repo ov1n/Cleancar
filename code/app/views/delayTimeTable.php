@@ -7,18 +7,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
         <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\nav_bar.css"><!-- add style to nav bar -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
-
-      <?php 
-        //include nav bar externally 
-        include("nav_profile.php");
-      ?>
 
       <!-- add breadcrumb for find the path easily to users -->
       <ul class="breadcrumb">
@@ -38,7 +32,7 @@
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-              &ensp;&ensp;&ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
+              &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
                 <select name="lift_no" id="lift_no">
                     <option value="L001">L001</option>
                     <option value="L002">L002</option>
@@ -46,7 +40,7 @@
                     <option value="L004">L004</option>
                 </select><br>
 
-              &ensp;&ensp;&ensp;&ensp;<label for="delay_time"><div class="form_label"><b>Delay (Minutes)</b></div></label>
+              &ensp;&ensp;<label for="delay_time"><div class="form_label"><b>Delay (Minutes)</b></div></label>
                 <select name="delay_time" id="delay_time">
                     <option value="a">10</option>
                     <option value="b">15</option>
@@ -55,7 +49,7 @@
                     <option value="d">30</option>
                 </select><br>
 
-              &ensp;&ensp;&ensp;&ensp;<label for="initial_time"><div class="form_label"><b>Initial Delay Time</b></div></label>
+              &ensp;&ensp;<label for="initial_time"><div class="form_label"><b>Initial Delay Time</b></div></label>
                 <select name="initial_time" id="initial_time">
                     <option value="a">08.00 a.m.</option>
                     <option value="b">10.00 a.m.</option>
@@ -73,6 +67,12 @@
           <hr>
         </div><!-- container -->
       </form>
+
+      <?php 
+        //include nav bar externally 
+        include("nav_profile.php");
+      ?>
+
       <?php 
         //get footer in seperate file
         include("footer.php");
