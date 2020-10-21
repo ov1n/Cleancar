@@ -28,7 +28,7 @@
         <li><a href="home">Home</a></li>
         <li>Sign In</li>
     </ul>
-    <form action="auth" method="POST" id="login" name="login"><!-- TEMPORARY AUTH -->
+    <form onsubmit="login_auth()" method="POST" id="login" name="login"><!-- TEMPORARY AUTH -->
         <div class="container">  
             <h1>Sign In</h1>
             <hr>
