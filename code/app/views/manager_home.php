@@ -12,6 +12,7 @@
 <body>
 	<?php include("nav_profile.php"); ?> <!-- add navigation bar -->
 
+	<br><br><br>
 	<form action="managerhome.php" method="post"> 
 
 		<!-- create breadcrumb -->
