@@ -12,7 +12,8 @@
 
 <body>
       <?php include("nav_profile.php"); ?> <!-- add navigation bar -->
-
+	
+	<br><br><br>
       <!-- create breadcrumb-->
       <ul class="breadcrumb">
           <img src="public/images/4444.png" width="109" height="48" style="float:right">

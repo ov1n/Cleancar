@@ -12,6 +12,7 @@
 <body>
 	<?php include("nav_profile.php"); ?> <!-- add navigation bar -->
 
+		<br><br><br>
 		<!-- create breadcrumb -->
 
 		<ul class="breadcrumb">
