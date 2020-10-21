@@ -11,20 +11,21 @@
         
         function authenticate(){
 
+                session_start();
+                echo($_SESSION["test"]);
                 //set database objects to variables
                 $cust=new Customer();
                 $rec=new Receptionist();
                 $man=new Manager();
                 $emp=new Service_employee();
                 
-                //session commence
-                session_start();
                 
                 //get post data
                 $uname=$_POST['user_name'];
                 $pwd=$_POST['password'];
                 $_SESSION["uname"] = $uname;
                 $_SESSION["pwd"] = $pwd;
+                //echo($_SESSION["pwd"]);
 
                 if($cust->check_credentials($uname,$pwd)){
                     //load customer view
@@ -43,9 +44,13 @@
                 }else if($emp->check_credentials($uname,$pwd)){
                     //load employee view
                     //echo("in emp view");
+                    header("Location:employee_home");
                 }else{
-                    echo("wrong credentials");
-                    
+                    //echo("wrong credentials");
+                    //puts a js alert box function
+                    echo "<script> window.onload = function() {
+                        alert('Invalid credentials please type again');
+                    }; </script>";
                 }
 
                 //destroy session
