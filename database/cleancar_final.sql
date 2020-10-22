@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2020 at 03:04 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Oct 22, 2020 at 03:15 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cleancar`
+-- Database: `clean_1`
 --
 
 -- --------------------------------------------------------
@@ -152,8 +151,7 @@ CREATE TABLE `receptionist` (
 CREATE TABLE `reservation` (
   `reservation_id` int(11) NOT NULL,
   `is_advance_paid` tinyint(1) NOT NULL,
-  `cust_id` int(11) NOT NULL,
-  `emp_id` int(11) NOT NULL
+  `cust_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -292,8 +290,7 @@ ALTER TABLE `receptionist`
 --
 ALTER TABLE `reservation`
   ADD PRIMARY KEY (`reservation_id`),
-  ADD KEY `t2` (`cust_id`),
-  ADD KEY `t3` (`emp_id`);
+  ADD KEY `t2` (`cust_id`);
 
 --
 -- Indexes for table `reservation_time_slot`
@@ -388,8 +385,7 @@ ALTER TABLE `employee_per_service`
 -- Constraints for table `reservation`
 --
 ALTER TABLE `reservation`
-  ADD CONSTRAINT `t2` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`),
-  ADD CONSTRAINT `t3` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`);
+  ADD CONSTRAINT `t2` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`);
 
 --
 -- Constraints for table `reservation_time_slot`

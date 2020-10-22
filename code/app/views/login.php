@@ -45,6 +45,8 @@
                             &ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
                             <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
 
+                            </br>
+                            &ensp;&ensp;<a href="change_password">Forgot Password?</a>
                             <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
                             <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Log In</button>&ensp;
                         </div><!-- form_content -->               

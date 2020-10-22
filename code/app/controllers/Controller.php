@@ -6,6 +6,7 @@
             //session commence
             session_start();
             //testing if session works
+            echo($_SESSION["test"]);
             $_SESSION["test"] = "test";
             //echo($_SESSION["test"]);
 

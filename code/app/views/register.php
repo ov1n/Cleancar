@@ -6,7 +6,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\register.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <!-- get imported jquery -->
