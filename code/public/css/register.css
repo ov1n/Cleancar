@@ -84,7 +84,7 @@ ul.breadcrumb li a:hover {
 
 .background{
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg");
-  }
+}
 
 .card {
   justify-content:center;
