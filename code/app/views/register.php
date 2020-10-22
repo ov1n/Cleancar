@@ -6,7 +6,7 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\register.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <!-- get imported jquery -->
@@ -50,7 +50,7 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>
 
                 &ensp;&ensp;&ensp;&ensp;<label for="vehicle_number"><div class="form_label"><b>Vehicle Number</b></div></label>
-                <input type="text" placeholder="Vehicle Number" name="vehicle_number" id="vehicle_number" required>&ensp;
+                <input type="text" placeholder="Vehicle Number" name="vehicle_number" id="vehicle_number" required> <br>
 
                 &ensp;&ensp;&ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
                 <input type="text" placeholder="Enter Your Address" name="address" id="address" required></br>

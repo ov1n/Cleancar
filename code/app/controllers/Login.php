@@ -12,7 +12,7 @@
         function authenticate(){
 
                 session_start();
-                echo($_SESSION["test"]);
+                //echo($_SESSION["test"]);
                 //set database objects to variables
                 $cust=new Customer();
                 $rec=new Receptionist();

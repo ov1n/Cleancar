@@ -3,12 +3,14 @@
 <head>    
     <title>change_login_password</title>     
     <link rel="stylesheet" type="text/css" href="public/css/footer.css"><!-- add style to form -->
-    <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+    <link rel="stylesheet" type="text/css" href="public\css/change_password.css"><!-- add change password -->
+    <link rel="stylesheet" type="text/css" href="public\css/form.css"><!-- add form css -->
 
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>   
 </head>    
 <body> 
-
+      </br>
+      </br>
       <!-- create breadcrumb-->  
         <ul class="breadcrumb">
           <img src="public/images/4444.png" width="109" height="48" style="float:right">
