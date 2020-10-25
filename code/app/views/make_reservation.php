@@ -7,6 +7,9 @@
 
         <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+
+        <!-- get external js file -->
+        <script type="text/javascript" src="public\js\reservation.js"></script>
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
@@ -31,7 +34,7 @@
         <li>Make Reservation</li>    
       </ul><!-- breadcrumb -->
 
-      <form action="./controllers/Register.php">
+      <form action="confirm_reservation">
         <div class="container">  
           <h1>Make Reservation</h1>
           <hr>
@@ -41,6 +44,7 @@
               <div class="card" >
                 <div id=form_content> <!-- div to center needed elements -->
                 
+                <!-- Each div has php echo function to autofill the form from user account details -->
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
                 <input type="text" placeholder="Enter Your First Name" name="first_name" id="first_name"
                  value=<?php echo(($_SESSION["details"])["first_name"]); ?> ></br>
@@ -56,7 +60,7 @@
                     <option value="cab">Cab</option>
                     <option value="jeep">Jeep</option>
                 </select><br>
-              
+                
                 &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
                 <input type="email" placeholder="Enter Your Email Address" name="e-mail" id="e-mail" required
                 value=<?php echo(($_SESSION["details"])["email"]); ?>> </br>
@@ -75,8 +79,8 @@
                 <input type="tel" placeholder="Enter Your Telephone Number" name="tp_no" id="tp_no" required
                 value=<?php echo(($_SESSION["details"])["mobile_tel_no"]); ?>></br>
 
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" >Submit</button>
+                <button type="submit" class="btn cancelbtn" class="form_btn">Cancel</button>
+                <button type="submit" class="btn" class="form_btn" onclick="confirmSubmit()">Submit</button>
               </div><!-- form_content -->              
             </div><!-- card -->
             </br></br>
