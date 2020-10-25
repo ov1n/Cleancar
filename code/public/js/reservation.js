@@ -1,11 +1,16 @@
-function confirmSubmit(){
-    
-    alert("Make reservation on the below entered details?");
+//JS function which enables button only if passwords are matched
+var button_enable = function(){
+  if(document.getElementById('psw-message').style.color=='green'){
+    console.log("green");
+    document.getElementById("register").disabled = false;
+  }else{
+    console.log("red");
+    document.getElementById("register").disabled = true;
+  }   
 }
-
-window.onload = function() {
-    document.write(
-      '<body><div id="message"><p>STOP! This website is hot-linking resources and that\'s a naughty, naughty thing to do.</p><p style="text-align: center;"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="150" height="150"><style>.a{fill:#fff;stroke-linejoin:round;stroke-width:20;}.b{fill:#212121;stroke-linejoin:round;stroke-width:5;}.c{fill:#ffb928;stroke-linejoin:round;stroke-width:5;}.d{fill:#fff;stroke-linejoin:round;stroke-width:10;stroke:#212121;}.e{fill:#212121;stroke-linejoin:round;stroke-width:20;}</style><defs><style type="text/css"/><style type="text/css"/><linearGradient><stop offset="0" stop-color="#6f0102"/><stop offset="1" style="stop-color:#6f0102;stop-opacity:0"/></linearGradient><linearGradient><stop offset="0" stop-color="#e33a4b"/><stop offset="1" style="stop-color:#d22436;stop-opacity:0.5"/></linearGradient><linearGradient gradientUnits="userSpaceOnUse" y2="870.6" x2="-192.6" y1="973.9" x1="-163.1" xlink:href="#linearGradient4161" gradientTransform="matrix(0.83330116,-0.4193308,0.37102762,0.85590167,24.29834,-452.9853)"/><linearGradient gradientUnits="userSpaceOnUse" y2="810.6" x2="119.2" y1="974.6" x1="284.7" xlink:href="#linearGradient4171" gradientTransform="matrix(0.93286074,0,0,0.93286074,29.062288,-482.75998)"/></defs><circle transform="scale(-1 1)" cy="256" cx="-256" r="256" style="fill:#212121;stroke-width:0.4"/><path d="M253.6 397.9A272.1 213.6 0 0 0 93.1 439.8 256 256 0 0 0 256 498.5 256 256 0 0 0 416.7 441.5 272.1 213.6 0 0 0 253.6 397.9Z" class="a"/><path d="m132.4 289.2c23.1 122.7 92.4 192.8 218.8 173.6-38.5-70.1-0.7-104.6 24-150.1L303.9 203.3c-39 42.6-67.6 87.4-171.5 85.9z" class="b"/><path d="m139.9 287.9c25.5 112.9 81.3 182.7 198.1 165.8-36.2-65.8 6.5-101 29.7-143.7l-58.6-29.4c-36.6 40-71.8 8.8-169.2 7.3z" class="c"/><path d="m155.7 294.5c31.7 108.3 64.2 159.6 167.8 152.6-36.2-65.8 10.5-102.3 33.7-145.1L299.7 290.5c-36.6 40-46.5 5.4-144 4z" class="b"/><path d="m163.2 295.9c33.9 105.7 54.3 147.7 152.8 146.5-36.2-65.8 11.9-100 35.1-142.7l-47.4-13.1c-36.6 40-43 10.8-140.5 9.3z" style="fill:url(#linearGradient4177);stroke-linejoin:round;stroke-width:5"/><path d="m189.8 362.8c-0.9 0-1.7 0-2.6 0.1 19.2 44.1 41.5 68.2 85.2 76.3 1.9-9.3-0.7-21.4-11.2-36.5-15.3-22-52.6-39.4-71.4-39.9z" style="fill:url(#linearGradient4167);stroke-linejoin:round;stroke-width:20"/><path d="m337 320.8c13-12.5 25.2-10.7 38.1 1.6 12.9 12.3 13.8 59.7 6.4 68.3-7.4 8.6-35.8 9.2-44.5 0-8.7-9.2-13-57.4 0-69.9z" class="d"/><path d="m337 320.8c13-12.5 25.2-10.7 38.1 1.6 12.9 12.3 13.8 59.7 6.4 68.3-7.4 8.6-35.8 9.2-44.5 0-8.7-9.2-13-57.4 0-69.9z" class="a"/><path d="m305.3 320.7c-11-10.6-21.4-9-32.3 1.3-10.9 10.4-12.7 38.4-4.9 50 7.9 11.6 30.9 20 38.2 12.2 7.4-7.8 10-52.9-1.1-63.5z" class="d"/><path d="m305.3 320.7c-11-10.6-21.4-9-32.3 1.3-10.9 10.4-12.7 38.4-4.9 50 7.9 11.6 30.9 20 38.2 12.2 7.4-7.8 10-52.9-1.1-63.5z" class="a"/><path d="m128.6 289.2c109.6 66.9 220.3 69 327.8 50.4C271.5 210.7 226.9 271.9 128.6 289.2Z" class="b"/><path d="m139.9 287.9c103.2 59.8 208.5 59.9 314.2 48.4C276.8 212.6 234.1 271.3 139.9 287.9Z" class="c"/><path d="m345.1 75.7a96.1 111 0 0 0-96.1 111 96.1 111 0 0 0 13 55.6l166.2 0A96.1 111 0 0 0 441.2 186.7 96.1 111 0 0 0 345.1 75.7Z" class="e"/><path d="m335.8 77.6a96.1 111 0 0 0-96.1 111 96.1 111 0 0 0 12.1 53.7l168.1 0a96.1 111 0 0 0 12-53.7 96.1 111 0 0 0-96.1-111z" class="a"/><path d="M184.2 75.7A96.1 111 0 0 0 88.1 186.7 96.1 111 0 0 0 101.1 242.3l166.2 0A96.1 111 0 0 0 280.4 186.7 96.1 111 0 0 0 184.2 75.7Z" class="e"/><path d="M174.9 77.6A96.1 111 0 0 0 78.8 188.6 96.1 111 0 0 0 90.9 242.3l168.1 0A96.1 111 0 0 0 271 188.6 96.1 111 0 0 0 174.9 77.6Z" class="a"/><circle cx="341.6" cy="181.6" r="36.9" class="e"/><circle r="36.9" cy="181.6" cx="180.7" class="e"/></svg></p><p>Somebody tell the person that manages this website to fix it ASAP.</p></div></body>' +
-      '<style>body { background: #FF4136; color: black; font-family: sans-serif; max-width: 45rem; margin: 4rem auto; } #message { font-size: 2rem; border: solid 2rem #800; background: #FFDC00; padding: 4rem; animation: pulse 1s infinite; } @keyframes pulse { from { transform: scale3d(1, 1, 1) rotate(-5deg); } 50% { transform: scale3d(1.05, 1.05, 1.05) rotate(-5deg); } to { transform: scale3d(1, 1, 1) rotate(-5deg); } }</style>'
-    );
-  };
+  
+  function confirmSubmit(){   
+    //alert("Make reservation on the below entered details?");  
+      $.alertable.confirm('Are you sure you want to confirm the reservation?').always(function() {
+        console.log('Alert dismissed');})
+}

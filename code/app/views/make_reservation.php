@@ -5,13 +5,14 @@
         <title>CleanCar - Make Reservation form</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
-
+        <link rel="stylesheet" type="text/css" href="public\css\form.css">                  <!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\footer.css">                <!-- add style to footer -->
+        <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
         <!-- get imported jquery -->
         <script src="public/js/jquery/jquery-3.5.1.js"></script>
         <!-- get external js file -->
         <script type="text/javascript" src="public\js\reservation.js"></script>
+        <script src="public/js/jquery/jquery.alertable.min.js"></script>
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
@@ -53,7 +54,7 @@
   
                 &ensp;&ensp;<label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name"
-                value=<?php echo(($_SESSION["details"])["last_name"]); ?> ></br>></br>
+                value=<?php echo(($_SESSION["details"])["last_name"]); ?> ></br></br>
 
                 &ensp;&ensp;<label for="vehicle_category"><div class="form_label"><b>Vehicle Category</b></div></label>
                 <select name="vehicle_category" id="vehicle_category">
