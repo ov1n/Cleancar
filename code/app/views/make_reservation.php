@@ -8,6 +8,8 @@
         <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
 
+        <!-- get imported jquery -->
+        <script src="public/js/jquery/jquery-3.5.1.js"></script>
         <!-- get external js file -->
         <script type="text/javascript" src="public\js\reservation.js"></script>
         
