@@ -92,11 +92,13 @@ ul.breadcrumb li a:hover {
   padding-top: 50px;
   text-align: left;
   border-radius: 3%;
-  height: 200%;
+  height: auto;
   margin-left: 25%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
   max-width: 50%;
 }
+
+
 
 /* Add padding to containers */
 .container {

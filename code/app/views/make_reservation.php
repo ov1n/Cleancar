@@ -12,6 +12,15 @@
     </head>
 
     <body>
+      <?php
+        echo($_SESSION["uname"]);
+        
+        //details test
+        //echo(($_SESSION["details"])["first_name"]);
+        //echo(($_SESSION["details"])["last_name"]);
+        //echo(($_SESSION["details"])["email"]);
+        //echo(($_SESSION["details"])["first_name"]);
+      ?>
 
       <!-- add breadcrumb for find the path easily to users -->
       <ul class="breadcrumb">
@@ -31,12 +40,14 @@
               <hr>
               <div class="card" >
                 <div id=form_content> <!-- div to center needed elements -->
-
+                
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="first_name" id="first_name" ></br>
+                <input type="text" placeholder="Enter Your First Name" name="first_name" id="first_name"
+                 value=<?php echo(($_SESSION["details"])["first_name"]); ?> ></br>
   
                 &ensp;&ensp;<label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
-                <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" ></br>
+                <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name"
+                value=<?php echo(($_SESSION["details"])["last_name"]); ?> ></br>></br>
 
                 &ensp;&ensp;<label for="vehicle_category"><div class="form_label"><b>Vehicle Category</b></div></label>
                 <select name="vehicle_category" id="vehicle_category">
@@ -47,7 +58,8 @@
                 </select><br>
               
                 &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-                <input type="email" placeholder="Enter Your Email Address" name="e-mail" id="e-mail" required></br>
+                <input type="email" placeholder="Enter Your Email Address" name="e-mail" id="e-mail" required
+                value=<?php echo(($_SESSION["details"])["email"]); ?>> </br>
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
                 <input type="date" placeholder="Enter the date" name="date" id="date" required></br>
@@ -60,7 +72,8 @@
                 </select><br>
 
                 &ensp;&ensp;<label for="tp_no"><div class="form_label"><b>Contact Number</b></div></label>
-                <input type="tel" placeholder="Enter Your Telephone Number" name="tp_no" id="tp_no" required></br>
+                <input type="tel" placeholder="Enter Your Telephone Number" name="tp_no" id="tp_no" required
+                value=<?php echo(($_SESSION["details"])["mobile_tel_no"]); ?>></br>
 
                 <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
                 <button type="submit" class="btn" class="form_btn" >Submit</button>

@@ -45,6 +45,10 @@
     });
 
     Route::set('make_reservation',function(){
+        
+        session_start();
+        //echo($_SESSION["uname"]);
+        $_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
         Home::create_view('make_reservation');
     });
 
