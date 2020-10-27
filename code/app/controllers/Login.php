@@ -29,8 +29,8 @@
 
             if($cust->check_credentials($uname,$pwd)){
                 //load customer view
-                echo("in cust view");
-                echo($_SESSION["uname"]);
+                //echo("in cust view");
+                //echo($_SESSION["uname"]);
                 header("Location:home");
 
             }else if($man->check_credentials($uname,$pwd)){
