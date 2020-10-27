@@ -34,49 +34,49 @@
 		<div class="square1">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>Add Employee</b></span></button>
+				<a href="add_employee"><button><b>Add Employee</b></button></a>
 			</div>
 
 			<div class="square2">
 				<i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>Employee Details</b></span></button>
+				<a href="#"><button><b>Employee Details</b></button></a>
 			</div>
 
 			<div class="square3">
 				<i class="fa fa-book fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>Make Billing</b></span></button>
+				<a href="billing"><button><b>Make Billing</b></button></a>
 			</div>
 
 			<div class="square4">
 				<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>Delay Timetable</b></span></button>
+				<a href="delay_time_table"><button><b>Delay Timetable</b></button></a>
 			</div>
 
 			<div class="square5">
 				<i class="fa fa-list-alt fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>View Reservation</b></span></button>
+				<a href="#"><button><b>View Reservation</b></button></a>
 			</div>
 
 			<div class="square6">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>Make Reservation</b></span></button>
+				<a href="make_reservation"><button><b>Make Reservation</b></button></a>
 			</div>
 
 			<div class="square7">
 				<i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>Update Reservation</b></span></button>
+				<a href="#"><button><b>Update Reservation</b></button></a>
 			</div>
 
 			<div class="square8">
 				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
 				<br><br><br><br>
-				<button><span><b>Delete Reservation</b></span></button>
+				<a href="#"><button><b>Delete Reservation</b></button></a>
 			</div>
 		</div><!--square-->
 	

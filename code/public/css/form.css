@@ -11,6 +11,13 @@ h1{
   color: #01447e;
 }
 
+/*make h2s align center */
+
+h2{
+  color: #01447e;
+  text-align: center;
+}
+
 p{
   font-size: larger;
 }
@@ -276,4 +283,9 @@ h1 {
 
 .btn.cancelbtn:hover, .btn.orange:focus {
   background-color: #d35400;
+}
+
+.vehicle_category{
+  color: #e67e22;
+  background-color: black;
 }
