@@ -36,16 +36,17 @@
             }else if($man->check_credentials($uname,$pwd)){
                 //load manager view
                 //echo("in man view");
-                header("Location:manager_home");
+                header("Location:manager");
 
             }else if($rec->check_credentials($uname,$pwd)){
                 //load receptionist view
                 //echo("in rec view");
-                header("Location:manager_home");
+                header("Location:receptionist");
+
             }else if($emp->check_credentials($uname,$pwd)){
                 //load employee view
                 //echo("in emp view");
-                header("Location:employee_home");
+                header("Location:employee");
             }else{
                 //echo("wrong credentials");
                 //puts a js alert box function

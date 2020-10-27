@@ -81,11 +81,15 @@
         Home::create_view('employee_home');
     });
 
-    Route::set('add_employee',function(){
-        Home::create_view('add_employee');
+    Route::set('request_leave',function(){
+        Home::create_view('request_leave');
     });
 
     Route::set('register_emp',function(){
         Home::create_view('register_emp');
+    });
+
+    Route::set('add_employee',function(){
+        Home::create_view('add_employee');
     });
 ?>

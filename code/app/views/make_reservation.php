@@ -37,7 +37,7 @@
         <li>Make Reservation</li>    
       </ul><!-- breadcrumb -->
 
-      <form action="confirm_reservation">
+      <form id="reservation" name="reservation">
         <div class="container">  
           <h1>Make Reservation</h1>
           <hr>
