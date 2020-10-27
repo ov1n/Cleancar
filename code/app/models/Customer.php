@@ -8,6 +8,28 @@
                 //$db=new Database();
         }
 
+        //get autofill data in reservation form
+        function getdata($cust_id){
+            
+            //assign connectivity to a variable
+            $conn=Database::conn();
+
+            $query="SELECT first_name,last_name,email,mobile_tel_no FROM customer WHERE cust_id='$cust_id'";
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            
+            return $r;
+            
+        }
+
         //checking credentials by searching through the customer table
         function check_credentials($uname,$pwd){
 

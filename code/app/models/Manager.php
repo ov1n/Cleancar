@@ -33,7 +33,8 @@
 
             //if array is not empty that means credentials are correct
             if($count){
-                echo("go to view");
+                //echo("go to view");
+                return True;
             }
             
         }

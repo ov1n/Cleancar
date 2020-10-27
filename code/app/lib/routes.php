@@ -44,8 +44,20 @@
         Home::create_view('delayTimeTable');
     });
 
+    //route to make reservation with sessions
     Route::set('make_reservation',function(){
+        
+        session_start();
+        //echo($_SESSION["uname"]);
+        $_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
         Home::create_view('make_reservation');
+    });
+
+    //route to confirm reservation with database
+    Route::set('confirm_reservation',function(){ 
+        session_start();
+        //echo($_SESSION["uname"]);
+        Reservation::insert();
     });
 
     //get form details from  register
@@ -75,5 +87,9 @@
 
     Route::set('register_emp',function(){
         Home::create_view('register_emp');
+    });
+
+    Route::set('add_employee',function(){
+        Home::create_view('add_employee');
     });
 ?>

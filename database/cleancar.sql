@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 22, 2020 at 03:04 PM
+-- Generation Time: Oct 27, 2020 at 08:15 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -52,7 +52,8 @@ INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `address`, `email`
 (1031, 'daaew', 'fags', 'fager', 'userd@gmail.com', 3457, 3457, 0, '2020-10-15', 'far'),
 (1034, 'hah', 'gah', 'farr', '2018cs145@gmail.com', 774545590, 114545590, 0, '2020-10-15', 'asd'),
 (1037, 'sherlock', 'holmes', '221b baker', 'sher@j.b', 714567890, 114567890, 0, '2020-10-16', 'sher'),
-(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', 'das');
+(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', 'das'),
+(1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', 931, 931, 0, '2020-10-27', 'rrr');
 
 -- --------------------------------------------------------
 
@@ -120,6 +121,13 @@ CREATE TABLE `manager` (
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `manager`
+--
+
+INSERT INTO `manager` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `designation`, `password`) VALUES
+('M001', 'Manager', 'Sample', 'manager 23', 'manager123@gmail.com', 115467887, 789871212, '875542103V', 5, 4, 7, '2020-09-23', 'MBA', 'manager');
+
 -- --------------------------------------------------------
 
 --
@@ -143,6 +151,13 @@ CREATE TABLE `receptionist` (
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `receptionist`
+--
+
+INSERT INTO `receptionist` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `qualification`, `password`) VALUES
+('R001', 'Receptionist', 'one', 'r 4 gh trd ef', 'receptionist@gmail.com', 112547896, 764872522, '902457414V', 5, 4, 4, '2020-10-01', 'SQL', 'receptionist');
+
 -- --------------------------------------------------------
 
 --
@@ -152,8 +167,7 @@ CREATE TABLE `receptionist` (
 CREATE TABLE `reservation` (
   `reservation_id` int(11) NOT NULL,
   `is_advance_paid` tinyint(1) NOT NULL,
-  `cust_id` int(11) NOT NULL,
-  `emp_id` int(11) NOT NULL
+  `cust_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -210,6 +224,13 @@ CREATE TABLE `service_employee` (
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `service_employee`
+--
+
+INSERT INTO `service_employee` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `special_area`, `password`) VALUES
+(2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', 114433221, 714433221, '56452102v', 10, 2, 1, '2020-09-17', 'Mechanics', 'employee');
+
 -- --------------------------------------------------------
 
 --
@@ -243,7 +264,8 @@ INSERT INTO `vehicle` (`cust_id`, `vehicle_num`, `vehicle_category`) VALUES
 (1031, '44444', 'light vehi'),
 (1034, 'g23', 'light vehi'),
 (1037, '221b', 'light vehi'),
-(1038, 'r1', 'light vehi');
+(1038, 'r1', 'light vehi'),
+(1039, '812', 'light vehi');
 
 --
 -- Indexes for dumped tables
@@ -292,8 +314,7 @@ ALTER TABLE `receptionist`
 --
 ALTER TABLE `reservation`
   ADD PRIMARY KEY (`reservation_id`),
-  ADD KEY `t2` (`cust_id`),
-  ADD KEY `t3` (`emp_id`);
+  ADD KEY `t2` (`cust_id`);
 
 --
 -- Indexes for table `reservation_time_slot`
@@ -335,7 +356,7 @@ ALTER TABLE `vehicle`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1039;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1040;
 
 --
 -- AUTO_INCREMENT for table `invoice`
@@ -359,7 +380,7 @@ ALTER TABLE `service`
 -- AUTO_INCREMENT for table `service_employee`
 --
 ALTER TABLE `service_employee`
-  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2001;
 
 --
 -- AUTO_INCREMENT for table `time_slot`
@@ -388,8 +409,7 @@ ALTER TABLE `employee_per_service`
 -- Constraints for table `reservation`
 --
 ALTER TABLE `reservation`
-  ADD CONSTRAINT `t2` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`),
-  ADD CONSTRAINT `t3` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`);
+  ADD CONSTRAINT `t2` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`);
 
 --
 -- Constraints for table `reservation_time_slot`
