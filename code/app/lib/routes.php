@@ -7,6 +7,7 @@
     
     //routing done according to base function of controller
     Route::set('login',function(){
+        //session_start();
         Login::create_view('login');
     });
 
@@ -47,22 +48,22 @@
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
         
-        session_start();
+        //session_start();
         //echo($_SESSION["uname"]);
-        $_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
+        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
         Home::create_view('make_reservation');
     });
 
     //route to confirm reservation with database
     Route::set('confirm_reservation',function(){ 
-        session_start();
+        //session_start();
         //echo($_SESSION["uname"]);
         Reservation::insert();
     });
 
     //experimental route to develop confirm reservation page
     Route::set('conres',function(){ 
-        session_start();
+        //session_start();
         //echo($_SESSION["uname"]);
         Reservation::create_view('confirm_reservation');
     });

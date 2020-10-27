@@ -11,8 +11,8 @@
         
         function authenticate(){
 
-            session_start();
-            echo($_SESSION["test"]);
+            //session_start();
+            //echo($_SESSION["test"]);
             //set database objects to variables
             $cust=new Customer();
             $rec=new Receptionist();
@@ -20,11 +20,14 @@
             $emp=new Service_employee();
             
             
-            //get post data
+            //get post data 
             $uname=$_POST['user_name'];
             $pwd=$_POST['password'];
-            $_SESSION["uname"] = $uname;
-            $_SESSION["pwd"] = $pwd;
+            //set session variables to it through 
+            Session::set("uname", $uname);
+            Session::set("pwd", $pwd);
+            //$_SESSION["uname"] = $uname;
+            //$_SESSION["pwd"] = $pwd;
             //echo($_SESSION["pwd"]);
 
             if($cust->check_credentials($uname,$pwd)){
