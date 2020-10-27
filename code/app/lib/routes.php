@@ -60,6 +60,13 @@
         Reservation::insert();
     });
 
+    //experimental route to develop confirm reservation page
+    Route::set('conres',function(){ 
+        session_start();
+        //echo($_SESSION["uname"]);
+        Reservation::create_view('confirm_reservation');
+    });
+
     //get form details from  register
     Route::set('reg_auth',function(){
         Register::register();
