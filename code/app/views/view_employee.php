@@ -59,7 +59,6 @@
                 <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = "0412222222" id="home_tel_no" required disabled>
                 </br>
                 <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Register</button>
                 </br></br>
 
               </div><!-- form_content -->   
