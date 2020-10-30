@@ -7,15 +7,19 @@
     
     //routing done according to base function of controller
     Route::set('login',function(){
+        //start session
+        Session::init();
         Login::create_view('login');
     });
 
     //function to check login controller TEMP
     Route::set('auth',function(){
+        Session::init();
         Login::authenticate();
     });
 
     Route::set('home',function(){
+        Session::init();
         Home::create_view('main_home_page');
     });
 
@@ -47,17 +51,28 @@
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
         
-        session_start();
+        Session::init();
         //echo($_SESSION["uname"]);
-        $_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
+        Session::set("details",Reservation::autofill(Session::get("uname")));
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //echo '</pre>';
+        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
         Home::create_view('make_reservation');
     });
 
     //route to confirm reservation with database
     Route::set('confirm_reservation',function(){ 
-        session_start();
+        //session_start();
         //echo($_SESSION["uname"]);
         Reservation::insert();
+    });
+
+    //experimental route to develop confirm reservation page
+    Route::set('conres',function(){ 
+        //session_start();
+        //echo($_SESSION["uname"]);
+        Reservation::create_view('confirm_reservation');
     });
 
     //get form details from  register
@@ -70,14 +85,23 @@
     });
 
     Route::set('receptionist',function(){
+
+        //start session
+        Session::init();
         Home::create_view('receptionist_home');
     });
 
     Route::set('manager',function(){
+
+        //start session
+        Session::init();
         Home::create_view('manager_home');
     });
 
     Route::set('employee',function(){
+
+        //start session
+        Session::init();
         Home::create_view('employee_home');
     });
 

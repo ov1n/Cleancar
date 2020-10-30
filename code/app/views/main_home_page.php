@@ -11,7 +11,9 @@
 </head>
 <body>
   <?php
-    echo($_SESSION["uname"]);
+    //DEBUGGING
+    echo(Session::get("test"));
+    //TESTING
     ?>
   <!-- Slideshow container -->
 <div class="slideshow-container">

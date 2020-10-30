@@ -22,10 +22,10 @@
             $mobile_tel_no=$array['mobile_tel_no'];
 
             //DELETE AFTER FIXING
-            echo($first_name);
-            echo($last_name);
-            echo($email);
-            echo($mobile_tel_no);
+            //echo($first_name);
+            //echo($last_name);
+            //echo($email);
+            //echo($mobile_tel_no);
 
             return($array);
 

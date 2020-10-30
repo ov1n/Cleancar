@@ -55,73 +55,69 @@ hr{
 } 
 
 div.square{
-	width: 70%;
-	height: 80%;
-	margin: auto;
+  width: 70%;
+  height: 80%;
+  margin: auto;
   margin-top: 30px;
-	align-content: center;
-	text-align: center;
+  align-content: center;
+  text-align: center;
   margin-bottom: 40px;
 }
 
 div.square div.square1{
-  margin-top: 1%;
-	margin-right:1%;
+  margin-right:1%;
   margin-left: 2%;
-	width: 22%;
-	height: 48%;
-	float: left;
-	background-color:#3377FF;
+  width: 22%;
+  height: 48%;
+  float: left;
+  background-color:#3377FF;
   opacity: 0.8;
 }
 
 div.square div.square2{
-  margin-top: 1%;
-	margin-right:1%;
-	width: 22%;
-	height: 48%;
-	float: left;
-	background-color: #99BBFF;
+  margin-right:1%;
+  width: 22%;
+  height: 48%;
+  float: left;
+  background-color: #99BBFF;
   opacity: 0.8;
 }
 
 div.square div.square3{
-  margin-top: 1%;
-	margin-right:1%;
-	width: 22%;
-	height: 48%;
-	float: left;
-	background-color: #3377FF;
+  margin-right:1%;
+  width: 22%;
+  height: 48%;
+  float: left;
+  background-color: #3377FF;
   opacity: 0.8;
 }
 
 div.square div.square4{
-  margin-top: 1%;
-	width: 22%;
-	height: 48%;
-	float: left;
-	background-color:  #99BBFF;
+  width: 22%;
+  height: 48%;
+  float: left;
+  background-color:  #99BBFF;
   opacity: 0.8;
 }
 
 div.square div.square5{
   margin-top:1%;
-	margin-right:1%;
+  margin-right:1%;
   margin-left: 2%;
-	width: 22%;
-	height: 48%;
-	float: left;
-	background-color: #99BBFF;
+  width: 22%;
+  height: 48%;
+  float: left;
+  background-color: #99BBFF;
   opacity: 0.8;
 }
 
 div.square div.square6{
-	margin-top:1%;
-	margin-right:1%;
-	width: 22%;
-	float: left;
-	height: 48%;
-	background-color:  #3377FF;
+  margin-top:1%;
+  margin-right:1%;
+  width: 22%;
+  float: left;
+  height: 48%;
+  background-color:  #3377FF;
   opacity: 0.8;
 }
 
@@ -146,25 +142,120 @@ div.square div.square8{
 
 /* adjast the symbols*/
 div.square i{
-  margin-top: 50px;
+  margin-top: 20%;
 }
 
 /* stylying buttons */
 
 div.square button{
-  margin: auto;
   width: 80%;
   height: 20%;
-	transition: 0.3s;
-	background-color: #F0F8FF; 
+  transition: 0.3s;
+  background-color: #F0F8FF; 
   font-family: 'Raleway' !important;  
   border-color: transparent;
   font-size: 95%;
+  margin-top: 20%;
 }
 
 button:hover{
-	opacity: 0.6;
+  opacity: 0.6;
 }
+
+/* responsive square */
+@media screen and (max-width: 800px){
+
+div.square div.square1{
+  margin-right:1%;
+  margin-left: 8%;
+  width: 40%;
+  height : 24%;
+  float: left;
+  background-color: #99BBFF;
+  opacity: 0.8;
+}
+div.square div.square2{
+  margin-right: none;
+  width: 40%;
+  height: 24%;
+  float: left;
+  background-color:  #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square3{
+  margin-top: 1%;
+  margin-right:1%;
+  margin-left: 8%;
+  width: 40%;
+  height: 24%;
+  float: left;
+  background-color: #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square4{
+  margin-top: 1%;
+  margin-right: none;
+  width: 40%;
+  height: 24%;
+  float: left;
+  background-color:  #99BBFF;
+  opacity: 0.8;
+}
+
+div.square div.square5{
+  margin-top: 1%;
+  margin-right:1%;
+  margin-left: 8%;
+  width: 40%;
+  height: 24%;
+  float: left;
+  background-color: #99BBFF;
+  opacity: 0.8;
+}
+
+div.square div.square6{
+  margin-top: 1%;
+  margin-right: none;
+  width: 40%;
+  height: 24%;
+  float: left;
+  background-color:  #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square7{
+  margin-top: 1%;
+  margin-left: 8%;
+  margin-right:1%;
+  width: 40%;
+  height: 24%;
+  float: left;
+  background-color:  #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square8{
+  margin-top: 1%;
+  margin-right: none;
+  width: 40%;
+  height: 24%;
+  float: left;
+  background-color: #99BBFF;
+  opacity: 0.8;
+}
+div.square i{
+  margin-top: 5%;
+}
+
+div.square button{
+  margin-top: 10%;
+  height: 30%;
+}
+
+}
+
 
 /* Footer stuff */
 .footer-wrapper

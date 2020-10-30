@@ -17,6 +17,7 @@
 
         <!-- get external js file -->
         <script type="text/javascript" src="public\js\register.js"></script>
+        <script src="public/js/jquery/jquery.alertable.min.js"></script>
     </head>
 
     <body>
@@ -44,7 +45,8 @@
                 <!-- &ensp characters are used to improve clarity and keep clear spacing -->
               
                 &ensp;&ensp;&ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="first_name" id="first_name" required size="50"></br>
+                <input type="text" placeholder="Enter Your First Name" name="first_name" id="first_name" required size="50">
+                </br>
 
                 &ensp;&ensp;&ensp;&ensp;<label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>
@@ -59,11 +61,12 @@
                 <input type="email" placeholder="Enter Your Email Address" name="email" id="email" required></br>
 
                 &ensp;&ensp;&ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
-                <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='confirm_password();button_enable();' required></br>
+                <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='confirm_password();password_length();button_enable();' required></br>
           
                 &ensp;&ensp;&ensp;&ensp;<label for="psw-repeat"><div class="form_label"><b>Repeat Password</b></div></label>
-                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" onkeyup='confirm_password();button_enable();' required></br>
-                <div id="psw-message"><p></p></div>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" onkeyup='confirm_password();password_length();button_enable();' required></br>
+                <div id="psw-message"><p></p></div></br>
+                <div id="psw-message2"><p></p></div>
 
 
                 &ensp;&ensp;&ensp;&ensp;<h3>Contact Numbers</h3>
