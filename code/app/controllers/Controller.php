@@ -5,9 +5,9 @@
         public static function create_view($view_name){
             //echo("errorcheck");
             //session commence
-            Session::init();
+            //Session::init();
             //testing if session works
-            Session::set("test","test");
+            //Session::set("test","test");
             //echo($_SESSION[$uname]);
             //echo($_SESSION["test"]);
 

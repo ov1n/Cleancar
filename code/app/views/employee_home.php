@@ -11,7 +11,9 @@
 </head>
 
 <body>
-      <?php include("nav_profile.php"); ?> <!-- add navigation bar -->
+	  <?php include("nav_profile.php"); 
+	  //DEBUGGING
+	  //echo(Session::get("uname"));?> <!-- add navigation bar -->
 	
 	<br><br><br>
       <!-- create breadcrumb-->
