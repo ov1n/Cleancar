@@ -11,9 +11,7 @@
 </head>
 
 <body>
-	  <?php include("nav_profile.php"); 
-	  //DEBUGGING
-	  //echo(Session::get("uname"));?> <!-- add navigation bar -->
+      <?php include("nav_profile.php"); ?> <!-- add navigation bar -->
 	
 	<br><br><br>
       <!-- create breadcrumb-->
@@ -34,26 +32,26 @@
 
 	    <div class="square">
 		<div class="square1">
-				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i> 
-				<br><br><br>
+				<i class="fa fa-plus-circle fa-4x" aria-hidden="true"></i> 
+				<br>
 				<a href="#"><button><b>Add Leave</b></button></a>
 			</div>
 
 			<div class="square2">
-				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i> 
-				<br><br><br>
+				<i class="fa fa-times-circle fa-4x" aria-hidden="true"></i> 
+				<br>
 				<a href="#"><button><b>Cancel Leave</b></button></a>
 			</div>
 
 			<div class="square3">
-				<i class="fa fa-calendar fa-3x" aria-hidden="true"></i> 
-				<br><br><br>
+				<i class="fa fa-calendar fa-4x" aria-hidden="true"></i> 
+				<br>
 				<a href="#"><button><b>Calender</b></button></a>
 			</div>
 
 			<div class="square4">
-				<i class="fa fa-pie-chart fa-3x" aria-hidden="true"></i> 
-				<br><br><br>
+				<i class="fa fa-pie-chart fa-4x" aria-hidden="true"></i> 
+				<br>
 				<a href="#"><button><b>Check the number of Leaves</b></button></a>
 			</div>
 		</div> <!--square-->
