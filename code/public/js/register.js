@@ -33,7 +33,7 @@ function password_length(){
       return false; // stops the execution.
     }else{
       console.log('more than 8');
-      document.getElementById('psw-message2').innerHTML = '';
+      document.getElementById('psw-message2').innerHTML ='';
     }
   });
 }
@@ -55,11 +55,11 @@ function create () {
         home_tel_no : document.reg_form.home_tel_no.value}
         ,
       //debugging
-      success:() => {
-        console.log("wada");
-        $.alertable.alert('Registration Successful').always(function () {
-          console.log('Registration Successful');
-        });
+      success:function(){
+        alert("Hello! I am an alert box!!");
+        setTimeout(function () {
+          alert("Hello! I am an alert box!!");
+     }, 800);
       }
   });
   console.log('Registration Successful');
