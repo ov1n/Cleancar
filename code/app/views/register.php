@@ -44,7 +44,8 @@
                 <!-- &ensp characters are used to improve clarity and keep clear spacing -->
               
                 &ensp;&ensp;&ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="first_name" id="first_name" required size="50"></br>
+                <input type="text" placeholder="Enter Your First Name" name="first_name" id="first_name" required size="50">
+                </br>
 
                 &ensp;&ensp;&ensp;&ensp;<label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>

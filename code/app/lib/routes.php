@@ -7,6 +7,7 @@
     
     //routing done according to base function of controller
     Route::set('login',function(){
+        //session_start();
         Login::create_view('login');
     });
 
@@ -44,12 +45,27 @@
         Home::create_view('delayTimeTable');
     });
 
+    //route to make reservation with sessions
     Route::set('make_reservation',function(){
         
-        session_start();
+        //session_start();
         //echo($_SESSION["uname"]);
-        $_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
+        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
         Home::create_view('make_reservation');
+    });
+
+    //route to confirm reservation with database
+    Route::set('confirm_reservation',function(){ 
+        //session_start();
+        //echo($_SESSION["uname"]);
+        Reservation::insert();
+    });
+
+    //experimental route to develop confirm reservation page
+    Route::set('conres',function(){ 
+        //session_start();
+        //echo($_SESSION["uname"]);
+        Reservation::create_view('confirm_reservation');
     });
 
     //get form details from  register
@@ -73,11 +89,15 @@
         Home::create_view('employee_home');
     });
 
-    Route::set('add_employee',function(){
-        Home::create_view('add_employee');
+    Route::set('request_leave',function(){
+        Home::create_view('request_leave');
     });
 
     Route::set('register_emp',function(){
         Home::create_view('register_emp');
+    });
+
+    Route::set('add_employee',function(){
+        Home::create_view('add_employee');
     });
 ?>

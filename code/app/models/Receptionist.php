@@ -12,8 +12,8 @@
         function check_credentials($uname,$pwd){
 
             //echo session var
-            //echo "uname is " . $_SESSION["uname"] . ".<br>";
-            //echo "pwd is " . $_SESSION["pwd"] . ".";
+            echo "uname is " . $_SESSION["uname"] . ".<br>";
+            echo "pwd is " . $_SESSION["pwd"] . ".";
             
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -33,7 +33,8 @@
 
             //if array is not empty that means credentials are correct
             if($count){
-                echo("go to view");
+                //echo("go to view");
+                return True;
             }
             
         }
