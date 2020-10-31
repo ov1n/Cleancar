@@ -11,7 +11,7 @@
 </head>
 
 <body>
-      <?php include("nav_profile.php"); ?> <!-- add navigation bar -->
+      
 	
 	<br><br><br>
       <!-- create breadcrumb-->
@@ -61,7 +61,7 @@
 <br> <hr> <br>
 
   <!-- add footer -->
-  
+  <?php include("nav_profile.php"); ?> <!-- add navigation bar -->
   <?php include("footer.php"); ?>
 
 </body>
