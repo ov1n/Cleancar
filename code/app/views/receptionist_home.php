@@ -10,7 +10,7 @@
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<?php include("nav_profile.php"); ?> <!-- add navigation bar -->
+	
 
 		<br><br><br>
 		<!-- create breadcrumb -->
@@ -83,9 +83,9 @@
 		</div><!--cover-->
 		<hr>
 
-	<!-- add footer -->
-
-	<?php include("footer.php"); ?>
+	
+<?php include("nav_profile.php"); ?> <!-- add navigation bar -->
+	<?php include("footer.php"); ?><!-- add footer -->
 
 </body>
 </html>
