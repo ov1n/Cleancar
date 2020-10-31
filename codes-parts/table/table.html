@@ -2,6 +2,28 @@
 <html>
 <head>
 <style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
 table {
   border-collapse: collapse;
   width: 100%;
@@ -18,12 +40,9 @@ tr:nth-child(even) {background-color: #f2f2f2;}
 <body>
 
 <h2>Responsive Table</h2>
-<p>A responsive table will display a horizontal scroll bar if the screen is too 
-small to display the full content. Resize the browser window to see the effect:</p>
-<p>To create a responsive table, add a container element (like div) with <strong>overflow-x:auto</strong> around the table element:</p>
 
 <div style="overflow-x:auto;">
-  <table>
+  <table id="customers">
     <tr>
       <th>First Name</th>
       <th>Last Name</th>
