@@ -26,13 +26,13 @@
       <form action="./controllers/Register.php">
         <div class="container">  
           <h1>Update Service Type</h1>
-          <p>Please fill in this form to update service type</p>
+          <p>Please select the service type to update or delete</p>
           <div class="background">
             <hr>
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-                &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
+                &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Select Service Type</b></div></label>
                   <select name="service_type" id="service_type">
                     <option value="Full_service">Full Service</option>
                     <option value="Normal_service">Normal Service</option>

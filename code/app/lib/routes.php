@@ -115,9 +115,29 @@
 
     Route::set('add_employee',function(){
         Home::create_view('add_employee');
+    }); 
+
+    Route::set('employee_update',function(){
+        Home::create_view('employee_update');
+    });
+
+    Route::set('view_employee',function(){
+        Home::create_view('view_employee');
     });
 
     Route::set('add_timeslot',function(){
         Home::create_view('add_timeslot');
+    });
+
+    Route::set('update_service',function(){
+        Home::create_view('update_service');
+    });
+
+    Route::set('update_delete_service',function(){
+        Home::create_view('update_delete_service');
+    });
+
+    Route::set('update_timeslot',function(){
+        Home::create_view('update_timeslot');
     });
 ?>
