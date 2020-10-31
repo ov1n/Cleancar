@@ -120,4 +120,14 @@
     Route::set('add_timeslot',function(){
         Home::create_view('add_timeslot');
     });
+
+    Route::set('update_service',function(){
+        Home::create_view('update_service');
+    });
+
+    Route::set('update_delete_service',function(){
+        Home::create_view('update_delete_service');
+    });
+
+
 ?>
