@@ -47,5 +47,14 @@
       <?php } ?>
     </table>
 </div><!-- responsive -->
+    <?php 
+          //include nav bar externally 
+          include("nav_profile.php");
+    ?>
+
+    <?php 
+        //get footer in seperate file
+        include("footer.html");
+    ?>
 </body>
 </html>
