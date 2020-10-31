@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2020 at 09:21 AM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Oct 31, 2020 at 09:56 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -19,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `cleancar`
+-- Database: `ccc`
 --
 
 -- --------------------------------------------------------
@@ -38,7 +37,7 @@ CREATE TABLE `customer` (
   `mobile_tel_no` int(11) NOT NULL,
   `no_of_reservations` int(11) NOT NULL,
   `registered_date` date NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -120,7 +119,7 @@ CREATE TABLE `manager` (
   `no_of_leaves_fullday` int(11) NOT NULL,
   `enrollment_date` date NOT NULL,
   `designation` varchar(10) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -150,7 +149,7 @@ CREATE TABLE `receptionist` (
   `no_of_leaves_fullday` int(11) NOT NULL,
   `enrollment_date` date NOT NULL,
   `qualification` varchar(50) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -223,7 +222,7 @@ CREATE TABLE `service_employee` (
   `no_of_leaves_fullday` int(11) NOT NULL,
   `enrollment_date` date NOT NULL,
   `special_area` varchar(10) NOT NULL,
-  `password` varchar(20) NOT NULL
+  `password` varchar(32) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
