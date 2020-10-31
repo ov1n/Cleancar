@@ -82,7 +82,7 @@
 
       <?php 
         //get footer in seperate file
-        include("footer.php");
+        include("footer.html");
       ?>
           
     </body>
