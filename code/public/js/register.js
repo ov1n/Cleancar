@@ -13,7 +13,7 @@ var confirm_password = function() {  //function which matches password values
 
 //JS function which enables button only if passwords are matched
 var button_enable = function(){
-if(document.getElementById('psw-message').style.color=='green'){
+if((document.getElementById('psw-message').style.color=='green') && (document.getElementById('psw-message2').innerHTML=='')){
   console.log("green");
   document.getElementById("register").disabled = false;
 }else{
@@ -22,12 +22,20 @@ if(document.getElementById('psw-message').style.color=='green'){
 }   
 }
 
-var password_length = function() {  //function which checks range of characters
-  if(document.getElementById('password').length <= 8) {
-    document.getElementById('psw-message').style.color = 'red';
-    document.getElementById('psw-message').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;need at least 8 characters';
-  }
-  
+//JS function which range checks password
+function password_length(){
+  $('#password').on('blur', function(){
+    if(this.value.length < 8){ // checks the password value length
+      console.log('less than 8');
+      document.getElementById('psw-message2').style.color = 'red';
+      document.getElementById('psw-message2').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;need at least 8 characters';
+      $(this).focus(); // focuses the current field.
+      return false; // stops the execution.
+    }else{
+      console.log('more than 8');
+      document.getElementById('psw-message2').innerHTML ='';
+    }
+  });
 }
 
 //ajax function to not refresh browser when  entering data
@@ -47,8 +55,12 @@ function create () {
         home_tel_no : document.reg_form.home_tel_no.value}
         ,
       //debugging
-      success:function(result){
-          console.log(result.abc);
+      success:function(){
+        alert("Hello! I am an alert box!!");
+        setTimeout(function () {
+          alert("Hello! I am an alert box!!");
+     }, 800);
       }
   });
+  console.log('Registration Successful');
 }

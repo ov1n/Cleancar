@@ -19,7 +19,7 @@
 
     <body>
       <?php
-        echo($_SESSION["uname"]);
+        //echo($_SESSION["uname"]);
         
         //details test
         //echo(($_SESSION["details"])["first_name"]);

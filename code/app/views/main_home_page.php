@@ -12,7 +12,8 @@
 <body>
   <?php
     //DEBUGGING
-    echo($_SESSION["test"]);
+    echo(Session::get("test"));
+    //TESTING
     ?>
   <!-- Slideshow container -->
 <div class="slideshow-container">

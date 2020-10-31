@@ -35,6 +35,7 @@
                 //echo("in cust view");
                 //echo($_SESSION["uname"]);
                 header("Location:home");
+                echo($_SESSION["uname"]);
 
             }else if($man->check_credentials($uname,$pwd)){
                 //load manager view
