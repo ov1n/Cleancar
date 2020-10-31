@@ -116,4 +116,8 @@
     Route::set('add_employee',function(){
         Home::create_view('add_employee');
     });
+
+    Route::set('add_timeslot',function(){
+        Home::create_view('add_timeslot');
+    });
 ?>
