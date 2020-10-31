@@ -200,19 +200,17 @@ body {
     <button class="dropbtn"><a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" ></i></a>
     </button>
     <div class="dropdown1-content">
-      <a href="#">Profile</a>
-      <a href="#">Log Out</a>
+      <a href="#"><i class="fa fa-user" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
+      <a href="#"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
     </div>
   </div> 
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
   <div class="dropdown">
-    <button class="dropbtn">Booking 
-      <i class="fa fa-caret-down"></i>
-    </button>
+    <button class="dropbtn">Booking<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-content">
-      <a href="#make_reservation">Make Reservation</a>
-      <a href="#view_reservations">View Reservation</a>
+      <a href="make_reservation">Make Reservation</a>
+      <a href="view_reservations">View Reservation</a>
     </div>
   </div> 
    <a href="home">Home</a>
