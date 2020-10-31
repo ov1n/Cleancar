@@ -55,7 +55,7 @@ function create () {
         home_tel_no : document.reg_form.home_tel_no.value}
         ,
       //debugging
-      success:function(){
+      success:function(data){
         alert("Hello! I am an alert box!!");
         setTimeout(function () {
           alert("Hello! I am an alert box!!");

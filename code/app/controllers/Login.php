@@ -52,12 +52,11 @@
                 //echo("in emp view");
                 header("Location:employee");
             }else{
+                header("Location:login");
+                //echo("where");
                 //echo("wrong credentials");
-                //puts a js alert box function
-                echo($_SESSION["uname"]);
-                echo "<script> window.onload = function() {
-                    alert('Invalid credentials please type again');
-                }; </script>";
+                //puts a js alert box function;
+                //echo "<script type='text/javascript' src='file.js'></script>";
             }
 
             //destroy session
