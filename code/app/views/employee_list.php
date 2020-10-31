@@ -54,7 +54,7 @@
 
     <?php 
         //get footer in seperate file
-        include("footer.html");
+        include("footer.php");
     ?>
 </body>
 </html>
