@@ -17,7 +17,7 @@ body {
   font-family: 'raleway' !important;
 }
 
-#navbar {
+.navbar {
   height: 65px;
   background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
   position: fixed; /* Make it stick/fixed */
@@ -26,60 +26,125 @@ body {
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
-/* Style the navbar links */
-#navbar a {
-  float: right;
+.navbar a {
+
+   float: right;
   display: block;
   color: white;
   text-align: center;
- padding: 1.3%;
+ padding: 16px 16px;
   text-decoration: none;
-   width: 12%;
- margin-left: 0px;
+   width: 13%;
+ margin-right: 5px;
  font-size: 17px;
 }
-@media screen and (max-width: 600px){
-  #navbar a{
-  width: 12%;
+@media screen and (max-width: 800px){
+  .navbar a{
+  width: 11%;
   margin-left: 1px;
   font-size: 15px;
   }
 }
-
-
-#navbar img{
+.navbar img{
  width: 100px;
  height: 60px;
  float: left;
  margin-left:50px;
  margin-top: 2px;
 }
-@media screen and (max-width: 800px){
-  #navbar img{
-  width: 97;
-  margin-left: 4px;
+@media screen and (max-width: 900px){
+  .navbar img{
+  width: 76px;
+  margin-left: 0px;
  
   }
 }
-#navbar a:hover {
-  
-  color: black;
+
+/*dropdown for booking*/
+.dropdown {
+  float: right;
+  overflow: hidden;
+
+
+}
+/*dropdown booking button*/
+.dropdown .dropbtn {
+  font-size:17px;
+    
+  border: none;
+  outline: none;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  background-color: inherit;
+  font-family: 'raleway' !important;
+  margin-left: 7px;
+  margin-right: 20px;
+  margin-bottom: 7px;
+}
+/*responsive booking button*/
+@media screen and (max-width: 800px){
+ .dropdown .dropbtn{
+ 
+  margin-left: 1px;
+  margin-right: 0px;
+  font-size: 15px;
+  }
+}
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: black;
   height: 100%;
+}
+/*contant of booking*/
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 140px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+  z-index: 1;
+  
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  width: 140px;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 
 }
 
+.dropdown-content a:hover {
+  background-color: #ddd;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
 
   </style>
 </head>
 <body>
 
-<div id="navbar">
+<div class="navbar">
    <a href="login">Sign In</a>
    <a href="register">Sign Up</a>
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
-   <a href="make_reservation">Booking</a>
+ <div class="dropdown">
+    <button class="dropbtn">Booking 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#make_reservation">Make Reservation</a>
+      <a href="#view_reservation">View Reservation</a>
+    </div>
+  </div> 
    <a href="home">Home</a>
    <img src="public/images/nav_bar_image/imageedit_58_5294224580.png">  
 </div>

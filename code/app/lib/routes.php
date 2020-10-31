@@ -20,7 +20,7 @@
 
     Route::set('home',function(){
         Session::init();
-        Home::create_view('main_home_page');
+        Controller::create_view('main_home_page');
     });
 
     Route::set('register',function(){
@@ -115,5 +115,9 @@
 
     Route::set('add_employee',function(){
         Home::create_view('add_employee');
+    });
+
+    Route::set('add_timeslot',function(){
+        Home::create_view('add_timeslot');
     });
 ?>
