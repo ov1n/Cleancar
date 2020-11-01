@@ -34,11 +34,11 @@
             $mail=new Mailer();
 
             $subject="Welcome to Cleancar Reservation System!";
-            $to='tdwithanage97@gmail.com';
-            $body="Check if email goes from view instantiated";
+            $body="<strong>Dear Mr./Mrs. $last_name,</strong></br>Thank you for
+                    registering with Cleancar reservation System.";
 
             //call function in class
-            $mail->mailto($subject,$to,$body);
+            $mail->mailto($subject,$e_mail,$body);
         }
     }
 ?>
