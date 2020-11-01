@@ -31,7 +31,7 @@ class Mailer {
             $mail->setFrom('cleancar37.0@gmail.com', 'CleanCar');
             $mail->addAddress($to);     // Add a recipient
 
-            $body="<strong>Hello</strong> delivery test";
+            //$body="<strong>Hello</strong> delivery test";
             // Content
             $mail->isHTML(true);                                  // Set email format to HTML
             $mail->Subject = $subject;
