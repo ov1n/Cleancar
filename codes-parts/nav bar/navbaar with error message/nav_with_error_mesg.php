@@ -207,9 +207,9 @@ body {
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content"  onclick="openNav()">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+      <a href="make_reservation">Make Reservation</a>
+      <a href="view_reservation">View Reservation</a>
+      
     </div>
   </div> 
    <a href="home">Home</a>
