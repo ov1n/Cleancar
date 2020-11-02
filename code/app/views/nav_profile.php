@@ -200,8 +200,8 @@ body {
     <button class="dropbtn"><a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" ></i></a>
     </button>
     <div class="dropdown1-content">
-      <a href="#"><i class="fa fa-user" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
-      <a href="#"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
+      <a href="#"><i class="fa fa-user" id="profile_avatar" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
+      <a href="#" onclick="logout(); return false;"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
     </div>
   </div> 
    <a href="contact_us">Contact Us</a>
@@ -228,6 +228,12 @@ window.onscroll = function() {
     document.getElementById("navbar").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
+}
+
+//testfunction js
+logout=function(event){
+  console.log("test function working");
+  return false;
 }
 
 </script>

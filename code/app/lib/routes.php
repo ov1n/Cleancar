@@ -137,10 +137,6 @@
         Home::create_view('update_delete_service');
     });
 
-      Route::set('leave_static',function(){
-        Home::create_view('leave_static');
-    });
-
     Route::set('update_timeslot',function(){
         Home::create_view('update_timeslot');
     });

@@ -53,6 +53,7 @@
                 header("Location:employee");
             }else{
                 header("Location:login");
+                Session::set("uname","incorrect");
                 //echo("where");
                 //echo("wrong credentials");
                 //puts a js alert box function;
@@ -63,6 +64,14 @@
             //unset($_SESSION["username"]);
             //unset($_SESSION["password"]);
             //echo 'You have cleaned session';
+        }
+
+        //function to unset variables when logging out
+        function logout(){
+
+            //reset session
+            Session::destroy();
+            header("Location:home");
         }
     }
 ?>
