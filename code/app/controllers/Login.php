@@ -70,8 +70,11 @@
         function logout(){
 
             //reset session
+            echo($_SESSION["username"]);
             Session::destroy();
-            header("Location:home");
+            //header("Location:home");
+            echo($_SESSION["username"]);
+            echo("wheres the output");
         }
     }
 ?>

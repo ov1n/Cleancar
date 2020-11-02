@@ -12,6 +12,13 @@
         Login::create_view('login');
     });
 
+    //plain logout function without loading a view
+    Route::set('logout',function(){
+        //start session
+        Session::init();
+        Login::logout();
+    });
+
     //function to check login controller TEMP
     Route::set('auth',function(){
         Session::init();

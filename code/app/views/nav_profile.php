@@ -4,6 +4,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>  <!--user icon-->
+  <!-- get external js file -->
+  <!-- get imported jquery -->
+  <script src="public/js/jquery/jquery-3.5.1.js"></script>
+  <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
 <style>
 
@@ -201,7 +205,7 @@ body {
     </button>
     <div class="dropdown1-content">
       <a href="#"><i class="fa fa-user" id="profile_avatar" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
-      <a href="#" onclick="logout(); return false;"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
+      <a href="#" onclick="logout(); return false;" class="log_icon"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
     </div>
   </div> 
    <a href="contact_us">Contact Us</a>
@@ -232,9 +236,31 @@ window.onscroll = function() {
 
 //testfunction js
 logout=function(event){
-  console.log("test function working");
-  return false;
+
+  confirm("Are you sure you want to log out?");
+  console.log('confirm box');
+  $.ajax({
+        url: "logout",
+        type: "POST",
+        success:function(){
+          console.log('going');
+        }
+    });
+  
+  //ISSUE IS HERE
+  window.location.href ="home";
+  window.location.reload();
+  console.log('gone');
 }
+
+//FIX ALERTABLE
+$('.ALERTABLE').on('click', function() {
+  $.alertable.confirm('You sure?').then(function() {
+    console.log('Confirmation submitted');
+  }, function() {
+    console.log('Confirmation canceled');
+  });
+});
 
 </script>
 
