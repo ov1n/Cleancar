@@ -26,13 +26,12 @@
 
             //hash the password
             $pwd=md5($unhashed);
-            
+
             //set session variables to it through 
             Session::set("uname", $uname);
             Session::set("pwd", $pwd);
-            //$_SESSION["uname"] = $uname;
-            //$_SESSION["pwd"] = $pwd;
-            //echo($_SESSION["pwd"]);
+            //set logged in time
+            Session::set("in_time",time());
 
             if($cust->check_credentials($uname,$pwd)){
                 //load customer view
