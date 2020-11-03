@@ -87,6 +87,12 @@
         Register::register();
     });
 
+    Route::set('emp_reg_auth',function(){
+        //start session
+        Session::init();
+        Employee::register();
+    });
+
     Route::set('change_password',function(){
         Home::create_view('change_password');
     });
