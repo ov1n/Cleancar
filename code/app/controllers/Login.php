@@ -22,7 +22,11 @@
             
             //get post data 
             $uname=$_POST['user_name'];
-            $pwd=$_POST['password'];
+            $unhashed=$_POST['password'];
+
+            //hash the password
+            $pwd=md5($unhashed);
+            
             //set session variables to it through 
             Session::set("uname", $uname);
             Session::set("pwd", $pwd);

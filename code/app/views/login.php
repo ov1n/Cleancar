@@ -51,6 +51,7 @@
                             </br>
                             &ensp;&ensp;<a href="change_password">Forgot Password?</a>
                             
+                            </br>
                             <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
                             <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Log In</button>&ensp;
                         </div><!-- form_content -->               
