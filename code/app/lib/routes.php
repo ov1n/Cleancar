@@ -61,12 +61,13 @@
     Route::set('make_reservation',function(){
         
         Session::init();
-        //echo($_SESSION["uname"]);
+        //echo(Session::get("uname"));
         Session::set("details",Reservation::autofill(Session::get("uname")));
+        
+        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
         //echo '<pre>';
         //var_dump($_SESSION);
         //echo '</pre>';
-        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
         Home::create_view('make_reservation');
     });
 

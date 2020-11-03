@@ -69,7 +69,8 @@
                 value=<?php echo(($_SESSION["details"])["email"]); ?>> </br>
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
-                <input type="date" placeholder="Enter the date" name="date" id="date" required></br>
+                <input type="date" placeholder="Enter the date" name="date" id="date" required
+                value=<?php echo(($_SESSION["details"])["date"]); ?>></br>
 
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
                 <select name="service_type" id="service_type">

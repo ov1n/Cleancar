@@ -14,7 +14,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
 
-            $query="SELECT first_name,last_name,email,mobile_tel_no FROM customer WHERE cust_id='$cust_id'";
+            $query="SELECT first_name,last_name,email,mobile_tel_no FROM customer WHERE (cust_id='$cust_id' OR email='$cust_id')";
             $result= mysqli_query($conn,$query);
 
             //debugging
@@ -26,6 +26,7 @@
             //get necessary elements in an array
             $r = mysqli_fetch_array($result);
             
+            //echo($cust_id);
             return $r;
             
         }
