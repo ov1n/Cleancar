@@ -12,6 +12,13 @@
         Login::create_view('login');
     });
 
+    //plain logout function without loading a view
+    Route::set('logout',function(){
+        //start session
+        Session::init();
+        Login::logout();
+    });
+
     //function to check login controller TEMP
     Route::set('auth',function(){
         Session::init();
@@ -78,6 +85,12 @@
     //get form details from  register
     Route::set('reg_auth',function(){
         Register::register();
+    });
+
+    Route::set('emp_reg_auth',function(){
+        //start session
+        Session::init();
+        Employee::register();
     });
 
     Route::set('change_password',function(){

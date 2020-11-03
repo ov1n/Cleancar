@@ -46,7 +46,11 @@
                             <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
 
                             </br>
+                            <!-- div which displays on invalid credentials --> 
+                            <div id="incorrect_msg">&ensp;&ensp;Construct error message here<div>
+                            </br>
                             &ensp;&ensp;<a href="change_password">Forgot Password?</a>
+                            
                             <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
                             <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Log In</button>&ensp;
                         </div><!-- form_content -->               
