@@ -128,8 +128,9 @@
     ?>
 
 <script type="text/javascript">
-  //map
-  var mapx = L.map('map1').setView([6.89, 79.87], 15);
+
+  //map1
+  var mapx = L.map('map1').setView([5.945160, 80.553494], 15);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -150,10 +151,10 @@
   
   var  redIcon = new LeafIcon({iconUrl: 'public/images/contact_us/mkr2.png'});
    
-  L.marker([6.89, 79.87], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapx);
+  L.marker([5.945160, 80.553494], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapx);
 
  //map2
-  var mapy = L.map('map2').setView([6.89, 79.87], 15);
+  var mapy = L.map('map2').setView([6.055292, 80.218177], 15);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -174,10 +175,10 @@
   
   var  redIcon = new LeafIcon({iconUrl: 'public/images/contact_us/mkr2.png'});
    
-  L.marker([6.89, 79.87], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapy);
+  L.marker([6.055292, 80.218177], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapy);
 
 //map3
-  var mapz = L.map('map3').setView([6.89, 79.87], 15);
+  var mapz = L.map('map3').setView([6.584720, 79.960780], 15);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -198,10 +199,10 @@
   
   var  redIcon = new LeafIcon({iconUrl: 'public/images/contact_us/mkr2.png'});
    
-  L.marker([6.89, 79.87], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapz);
+  L.marker([6.584720, 79.960780], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapz);
 
-//map3
-  var mapw = L.map('map4').setView([6.89, 79.87], 15);
+//map4
+  var mapw = L.map('map4').setView([6.849357, 79.924086], 15);
 
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
@@ -222,7 +223,7 @@
   
   var  redIcon = new LeafIcon({iconUrl: 'public/images/contact_us/mkr2.png'});
    
-  L.marker([6.89, 79.87], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapw);
+  L.marker([6.849357, 79.924086], {icon: redIcon}).bindPopup("I am a green leaf.").addTo(mapw);
 
 
 
