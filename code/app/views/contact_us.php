@@ -16,7 +16,7 @@
 
     <div class="container">
 
-  <img src="public/images/contact_us/887751.png" alt="Norway">
+  <img src="public/images/contact_us/Contact-Us.jpg" alt="Norway">
   <div class="text-block">
     <h4 >CONTACT US</h4>
     
