@@ -86,6 +86,14 @@ th, td {
   padding: 12px 24px;
 }
 
+.optionbtn{
+  text-align: center;
+  width: 47%;
+  margin: 1%;
+  height: 70px;
+  text-align: center;
+}
+
 .btn:before {
   content: "";
   
@@ -127,17 +135,50 @@ th, td {
   position: absolute;
   font-size: 150%;;
 }
-.optionbtn{
-  text-align: center;
-  width: 47%;
-  margin: 1%;
-  height: 70px;
-  text-align: center;
-}
 .select_buttons{
-  margin-left: 10%;
-  width: 80%;
+  text-align: center;
+
+  display: flex;
+  justify-content:center;
+  justify-content:space-around;
+  flex-direction: row;
 }
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .select_buttons {
+    flex-direction: column;
+    justify-content:center;
+  }
+}
+
+@media (max-width: 600px) {
+  .select_buttons {
+    flex-direction: column;
+  }
+}
+
+.one{
+  padding: 10px;
+  flex: 25%;
+}
+
+.two{
+  padding: 10px;
+  flex: 25%;
+}
+
+.three{
+  padding: 10px;
+  flex: 25%;
+}
+
+.four{
+  padding: 10px;
+  flex: 25%;
+}
+
+
 
 .viewbtn{
   box-shadow: 0 3px 5px rgba(60, 30, 230, 0.6);
