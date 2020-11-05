@@ -16,11 +16,18 @@
 
     <!-- get external js file -->
     <script type="text/javascript" src="public\js\login.js"></script>
+
+    <!-- set php notification to a js var in order to execute external js -->
+    <script type="text/javascript">var notification = "<?= $notification ?>";</script>
         
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <?php
+        //DEBUGGING
+        //echo($notification);
 
+    ?>
     <!-- add breadcrumb to find the path easily to users -->
     <ul class="breadcrumb">
         <img src="public/images/4444.png" width="109" height="48" style="float:right">
@@ -37,6 +44,7 @@
                 <hr>
                     <div class="card" >
                         <div id=form_content> <!-- div to center needed elements -->
+
                             <img class="avatar" id="avatar" src="public/images/user-icons.PNG"><br>
 
                             &ensp;&ensp;<label for="user_name"><div class="form_label"><b>User Name</b></div></label>
@@ -47,8 +55,9 @@
 
                             </br>
                             <!-- div which displays on invalid credentials --> 
-                            <div id="incorrect_msg">&ensp;&ensp;Construct error message here<div>
-                            </br>
+                            <div id="incorrect_msg"></div>
+                            </br></br>
+                            
                             &ensp;&ensp;<a href="change_password">Forgot Password?</a>
                             
                             </br>

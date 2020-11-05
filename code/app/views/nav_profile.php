@@ -245,18 +245,7 @@ logout=function(event){
     console.log('confirm box');
 
     //execute jquery which logs out of system
-    $.ajax({
-          url: "logout",
-          type: "POST",
-          success:function(){
-            console.log('going');
-          }
-      });
-    
-    //ISSUE IS HERE
-    window.location.href ="home";
-    window.location.reload();
-    console.log('gone');
+    window.location= "logout";
   }else{
     console.log('login cancelled');
   }
