@@ -4,18 +4,29 @@
   <title>Table</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="table.css">
+  <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
 </head>
 <body>
-<h2>List of Employee</h2>
+
 <!-- add breadcrumb for find the path easily to users -->
-<ul class="breadcrumb">
+    <ul class="breadcrumb">
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="home">Manager</a></li>
         <li>Employee</li>
-      </ul><!-- breadcrumb -->
+    </ul><!-- breadcrumb -->
+    
+    <h1>List of Employee</h1>
+
+    <div class = "card">
+        <h2>Employee Leave</h2>
+
+        <button type="submit" class="btn optionbtn" class="form_btn" >Add Leave</button>
+        <button type="submit" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
+        <button type="submit" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
+        <button type="submit" class="optionbtn btn" class="form_btn" >Leave Report</button>
+    </div>
 
 <div style="overflow-x:auto;"><!-- add responsive for table -->
     <table class="table_">
