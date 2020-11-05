@@ -20,8 +20,13 @@
             $last_name = $array['last_name'];
             $email = $array['email'];
             $mobile_tel_no=$array['mobile_tel_no'];
+            
+            //get tomorrows date and assign it
+            $tomorrow=date("Y-m-d", strtotime('+1 day'));
 
+            $array['date']=$tomorrow;
             //DELETE AFTER FIXING
+            //echo($cust_id);
             //echo($first_name);
             //echo($last_name);
             //echo($email);

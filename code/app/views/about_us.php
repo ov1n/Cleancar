@@ -13,7 +13,7 @@
 <body>
     <div class="container">
     
-        <img src="public/images/about_us/NRMA Car Service Experts123.png" alt="Norway">
+        <img src="public/images/about_us/about-us-best-website-company-in-muzaffarnagar.jpg" alt="Norway">
         <div class="text-block">
             <h4>ABOUT US</h4>
         </div>

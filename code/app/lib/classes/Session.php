@@ -3,7 +3,10 @@
 //all session settings abstracted
 class Session {
 
-    //starts function
+    //variable which stores time per session
+    public $timeout_duration = 1800;
+
+    //starts session
     public static function init() {
         @session_start();
     }
@@ -27,5 +30,7 @@ class Session {
     public static function unset($key) {
         unset($_SESSION[$key]);
     }
+
+    //function to check if session has ecpired
 }
 ?>

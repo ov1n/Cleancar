@@ -7,8 +7,17 @@
   <link rel="stylesheet" type="text/css" href="table.css">
 </head>
 <body>
-<h2>List of Employee Details</h2>
-<div style="overflow-x:auto;">
+<h2>List of Employee</h2>
+<!-- add breadcrumb for find the path easily to users -->
+<ul class="breadcrumb">
+        <img src="public\images\4444.png" width="109" height="48" style="float:right">
+        </br>
+        <li><a href="home">Home</a></li>
+        <li><a href="home">Manager</a></li>
+        <li>Employee</li>
+      </ul><!-- breadcrumb -->
+
+<div style="overflow-x:auto;"><!-- add responsive for table -->
     <table class="table_">
         <tr>
             <th>Employee ID</th>

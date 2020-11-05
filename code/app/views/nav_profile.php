@@ -4,6 +4,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>  <!--user icon-->
+  
   <!-- get external js file -->
   <!-- get imported jquery -->
   <script src="public/js/jquery/jquery-3.5.1.js"></script>
@@ -237,20 +238,18 @@ window.onscroll = function() {
 //testfunction js
 logout=function(event){
 
-  confirm("Are you sure you want to log out?");
-  console.log('confirm box');
-  $.ajax({
-        url: "logout",
-        type: "POST",
-        success:function(){
-          console.log('going');
-        }
-    });
+  var confirmBox=confirm("Are you sure you want to log out?");
+  //if ok logout, otherwise don't
+  if(confirmBox==true){
+    //debugging
+    console.log('confirm box');
+
+    //execute jquery which logs out of system
+    window.location= "logout";
+  }else{
+    console.log('login cancelled');
+  }
   
-  //ISSUE IS HERE
-  window.location.href ="home";
-  window.location.reload();
-  console.log('gone');
 }
 
 //FIX ALERTABLE

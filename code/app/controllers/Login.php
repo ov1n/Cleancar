@@ -8,6 +8,14 @@
     class Login extends Controller{
         //base controller just for extending
         //IN CASE OF OVERRIDE
+
+        //overloaded view creation to get session variables to regular variables
+        public static function create_view($view_name){
+
+            //get an object from session if incorrect_login has happened
+            $notification=Session::get("login");
+            require_once("./views/$view_name.php");
+        }
         
         function authenticate(){
 
@@ -22,42 +30,67 @@
             
             //get post data 
             $uname=$_POST['user_name'];
-            $pwd=$_POST['password'];
-            //set session variables to it through 
-            Session::set("uname", $uname);
-            Session::set("pwd", $pwd);
-            //$_SESSION["uname"] = $uname;
-            //$_SESSION["pwd"] = $pwd;
-            //echo($_SESSION["pwd"]);
+            $unhashed=$_POST['password'];
+
+            //hash the password
+            $pwd=md5($unhashed);
+
+            
+            //Session::set("pwd", $pwd);
+            //set logged in time
+            Session::set("in_time",time());
 
             if($cust->check_credentials($uname,$pwd)){
+                
+                //set session variables to it through 
+                Session::set("uname", $uname);
+
                 //load customer view
-                //echo("in cust view");
-                //echo($_SESSION["uname"]);
                 header("Location:home");
-                echo($_SESSION["uname"]);
 
             }else if($man->check_credentials($uname,$pwd)){
+
+                //set session variables to it through 
+                Session::set("uname", $uname);
+
                 //load manager view
                 //echo("in man view");
+
+                //set loggedin to session
+                Session::set("login","loggedin");
+
                 header("Location:manager");
 
             }else if($rec->check_credentials($uname,$pwd)){
+
+                //set session variables to it through 
+                Session::set("uname", $uname);
+
                 //load receptionist view
                 //echo("in rec view");
+
+                //set loggedin to session
+                Session::set("login","loggedin");
+
                 header("Location:receptionist");
 
             }else if($emp->check_credentials($uname,$pwd)){
+
+                //set session variables to it through 
+                Session::set("uname", $uname);
+
                 //load employee view
                 //echo("in emp view");
+
+                //set loggedin to session
+                Session::set("login","loggedin");
+
                 header("Location:employee");
             }else{
+                //redirect to home with message
                 header("Location:login");
-                Session::set("uname","incorrect");
-                //echo("where");
-                //echo("wrong credentials");
-                //puts a js alert box function;
-                //echo "<script type='text/javascript' src='file.js'></script>";
+                //set
+                Session::set("login","incorrect_login");
             }
 
             //destroy session
@@ -70,9 +103,12 @@
         function logout(){
 
             //reset session
-            //echo($_SESSION["username"]);
             Session::destroy();
-            //header("Location:home");
+            //set logout message maybe?
+            Session::set("notification","logout");
+            Session::set("login","");
+
+            header("Location:home");
             //echo($_SESSION["username"]);
             //echo("wheres the output");
         }

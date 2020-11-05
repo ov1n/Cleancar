@@ -27,8 +27,11 @@
             $mobile_tel_no=$_POST['mobile_tel_no'];
             $home_tel_no=$_POST['home_tel_no'];
 
+            //hash the password
+            $hashed=md5($password);
+
             //insert data
-            $cust->insert_record($first_name,$last_name,$vehicle_number,$address,$password,$e_mail,$mobile_tel_no,$home_tel_no);
+            $cust->insert_record($first_name,$last_name,$vehicle_number,$address,$hashed,$e_mail,$mobile_tel_no,$home_tel_no);
 
             //ON SUCCESS, send an email to customer address
             $mail=new Mailer();
