@@ -156,4 +156,8 @@
     Route::set('update_timeslot',function(){
         Controller::create_view('update_timeslot');
     });
+    Route::set('leave_static',function(){
+        Controller::create_view('leave_static');
+    });
+?>
 ?>
