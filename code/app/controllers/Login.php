@@ -13,7 +13,7 @@
         public static function create_view($view_name){
 
             //get an object from session if incorrect_login has happened
-            $notification=Session::get("notification");
+            $notification=Session::get("login");
             require_once("./views/$view_name.php");
         }
         
@@ -55,6 +55,10 @@
 
                 //load manager view
                 //echo("in man view");
+
+                //set loggedin to session
+                Session::set("login","loggedin");
+
                 header("Location:manager");
 
             }else if($rec->check_credentials($uname,$pwd)){
@@ -64,6 +68,10 @@
 
                 //load receptionist view
                 //echo("in rec view");
+
+                //set loggedin to session
+                Session::set("login","loggedin");
+
                 header("Location:receptionist");
 
             }else if($emp->check_credentials($uname,$pwd)){
@@ -73,12 +81,16 @@
 
                 //load employee view
                 //echo("in emp view");
+
+                //set loggedin to session
+                Session::set("login","loggedin");
+
                 header("Location:employee");
             }else{
                 //redirect to home with message
                 header("Location:login");
                 //set
-                Session::set("notification","incorrect_login");
+                Session::set("login","incorrect_login");
             }
 
             //destroy session
@@ -94,6 +106,7 @@
             Session::destroy();
             //set logout message maybe?
             Session::set("notification","logout");
+            Session::set("login","");
 
             header("Location:home");
             //echo($_SESSION["username"]);
