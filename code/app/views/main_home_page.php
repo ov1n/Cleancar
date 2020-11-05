@@ -164,9 +164,14 @@
 include("footer.php");
 ?>
 <?php 
-        //get header in seperate file
-        include("nav_login.php");
-    ?>
+        //put appropriate header according to type of user logged in
+        if(Session::get("uname")){
+          include("nav_profile.php");
+        }else{
+          include("nav_login.php");
+        }
+        
+?>
 <script type="text/javascript">
 var slideIndex = 0;
 showSlides();

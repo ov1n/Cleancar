@@ -38,6 +38,38 @@
             }
             
         }
+        function insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$password){
+            
+            //assign connectivity to a variable
+            $conn=Database::conn();
+
+            //get date of today for registered date
+            $today=date('Y-m-d');
+            // echo($today);
+            
+            $query_emp="INSERT INTO service_employee(first_name,last_name,address,email,home_tel_no,mobile_tel_no,NIC_no,password,enrollment_date) 
+            VALUES('$first_name','$last_name','$address','$e_mail','$home_tel_no','$mobile_tel_no','$nic_no','$password','$today');";
+            
+            //echo($query);
+
+            $result= mysqli_query($conn,$query_emp);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+        }
+
+        // get details for employee table
+        // function view_emp_list(){
+        //     //assign connectivity to a variable
+        //     $conn=Database::conn();
+
+        //     $query = $this->db->query("SELECT * from items");
+        //     return $query->result();
+        // }
+
 
     }
 

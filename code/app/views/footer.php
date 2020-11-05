@@ -14,9 +14,9 @@
             <div class="single-footer">
                 <h5>navigation</h5>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="main_home_page">Home</a></li>
+                    <li><a href="about_us">About Us</a></li>
+                    <li><a href="contact_us">Contact Us</a></li>
                 </ul>
                 <p>© 2019 Copyright: CleancarWebsite.com</p>
             </div><!-- single-footer -->

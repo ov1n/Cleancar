@@ -15,3 +15,17 @@ function login_auth () {
         }
     });
   }
+  //display if incorrect login credentials
+  function error_message(){
+
+    console.log(notification);
+    
+    if(notification=="incorrect_login"){
+      document.getElementById("incorrect_msg").style.color='red';
+      //document.getElementById("username").style.color=red;
+      //document.getElementById("password").style.color=red;
+      document.getElementById("incorrect_msg").innerHTML="&ensp;&ensp;&#9432;&emsp;Incorrect username or password, try again!";
+    };
+  }
+  //launch error message function when window loads
+  window.onload = error_message;

@@ -4,6 +4,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>  <!--user icon-->
+  
+  <!-- get external js file -->
+  <!-- get imported jquery -->
+  <script src="public/js/jquery/jquery-3.5.1.js"></script>
+  <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
 <style>
 
@@ -200,19 +205,17 @@ body {
     <button class="dropbtn"><a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" ></i></a>
     </button>
     <div class="dropdown1-content">
-      <a href="#">Profile</a>
-      <a href="#">Log Out</a>
+      <a href="#"><i class="fa fa-user" id="profile_avatar" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
+      <a href="#" onclick="logout(); return false;" class="log_icon"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
     </div>
   </div> 
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
   <div class="dropdown">
-    <button class="dropbtn">Booking 
-      <i class="fa fa-caret-down"></i>
-    </button>
+    <button class="dropbtn">Booking<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-content">
-      <a href="#make_reservation">Make Reservation</a>
-      <a href="#view_reservations">View Reservation</a>
+      <a href="make_reservation">Make Reservation</a>
+      <a href="view_reservations">View Reservation</a>
     </div>
   </div> 
    <a href="home">Home</a>
@@ -231,6 +234,32 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+
+//testfunction js
+logout=function(event){
+
+  var confirmBox=confirm("Are you sure you want to log out?");
+  //if ok logout, otherwise don't
+  if(confirmBox==true){
+    //debugging
+    console.log('confirm box');
+
+    //execute jquery which logs out of system
+    window.location= "logout";
+  }else{
+    console.log('login cancelled');
+  }
+  
+}
+
+//FIX ALERTABLE
+$('.ALERTABLE').on('click', function() {
+  $.alertable.confirm('You sure?').then(function() {
+    console.log('Confirmation submitted');
+  }, function() {
+    console.log('Confirmation canceled');
+  });
+});
 
 </script>
 
