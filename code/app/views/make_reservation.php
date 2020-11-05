@@ -37,7 +37,7 @@
         <li>Make Reservation</li>    
       </ul><!-- breadcrumb -->
 
-      <form id="reservation" name="reservation">
+      <form id="reservation" name="reservation" onsubmit="confirmSubmit(); return false;">
         <div class="container">  
           <h1>Make Reservation</h1>
           <hr>
@@ -83,8 +83,8 @@
                 <input type="tel" placeholder="Enter Your Telephone Number" name="tp_no" id="tp_no" required
                 value=<?php echo(($_SESSION["details"])["mobile_tel_no"]); ?>></br>
 
-                <button type="submit" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" class="btn" class="form_btn" onclick="confirmSubmit()">Submit</button>
+                <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
+                <button type="submit" class="btn" class="form_btn" >Submit</button>
               </div><!-- form_content -->              
             </div><!-- card -->
             </br></br>
