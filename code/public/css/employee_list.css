@@ -1,35 +1,64 @@
-#table_ {
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
+* {box-sizing: border-box}
+
+
+/*set default base font */
+html *
+{  
+  font-family: 'Raleway', sans-serif;
+}
+
+
+h1{
+  color: #01447e;
+  text-align: center;
+}
+/*make h2s align center */
+
+h2{
+  color: #01447e;
+  text-align: center;
+}
+/* .list_table{
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 1270px){
+  .list_table{
     width: 100%;
   }
-  
-  #table_ td, #table_ th {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  #table_ tr:nth-child(odd){background-color: #b3c6ff;} 	 
-  #table_ tr:nth-child(even){background-color: #ccccff;}
-  #table_ tr:hover {background-color: #ddd;}
-  
-  #table_ th {
-    padding-top: 12px;
-    padding-bottom: 12px;
-    text-align: left;
-    background-color: #0275d8;
-    color: white;
-  }
-  
-  th, td {
-    text-align: left;
-    padding: 8px;
-  }
-  
+} */
+#table_ {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+#table_ td, #table_ th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table_ tr:nth-child(odd){background-color: #b3c6ff;} 	 
+#table_ tr:nth-child(even){background-color: #ccccff;}
+#table_ tr:hover {background-color: #ddd;}
+
+#table_ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0275d8;
+  color: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
 /* Set a style for the submit/register button */
 .btn {
   position: relative;
-  float: right;
   display: block;
   margin: 30px auto;
   /*padding: 0; */
@@ -39,9 +68,7 @@
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-
   overflow: hidden;
-
   border-width: 0;
   outline: none;
   border-radius: 2px;
@@ -100,6 +127,18 @@
   position: absolute;
   font-size: 150%;;
 }
+.optionbtn{
+  text-align: center;
+  width: 47%;
+  margin: 1%;
+  height: 70px;
+  text-align: center;
+}
+.select_buttons{
+  margin-left: 10%;
+  width: 80%;
+}
+
 .viewbtn{
   box-shadow: 0 3px 5px rgba(60, 30, 230, 0.6);
 }
@@ -125,8 +164,7 @@
 .deletebtn:hover, .deletebtn:focus  {
   background-color: #e90d0d;
   color : #ffffff
-}
-  
+}  
 
   /* style the card in form */
   .card {
@@ -135,19 +173,14 @@
     padding-top: 50px;
     text-align: left;
     border-radius: 3%;
-    height: 200%;
-    margin-left: 20%;
+    height: 100%;
+    margin-left: 10%;
+    background-color: #0275d8;
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
-    width: 60%;
+    width: 80%;
+    margin-bottom: 50px;
   }
-  
-  @media screen and (max-width: 1050px){
-    .card{
-      margin-left: 10%;
-      width: 80%;
-      height: 400%;
-    }
-  }
+
   
 /* Style the list(breadcrumb) */
 ul.breadcrumb {
