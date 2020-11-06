@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2020 at 09:56 AM
+-- Generation Time: Nov 06, 2020 at 10:11 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.4
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ccc`
+-- Database: `car`
 --
 
 -- --------------------------------------------------------
@@ -168,7 +168,8 @@ INSERT INTO `receptionist` (`emp_id`, `first_name`, `last_name`, `address`, `ema
 CREATE TABLE `reservation` (
   `reservation_id` int(11) NOT NULL,
   `is_advance_paid` tinyint(1) NOT NULL,
-  `cust_id` int(11) NOT NULL
+  `cust_id` int(11) NOT NULL,
+  `added_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
