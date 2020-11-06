@@ -3,9 +3,6 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 05, 2020 at 05:59 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -18,8 +15,6 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
---
--- Database: `cleancar`
 --
 
 -- --------------------------------------------------------
@@ -171,7 +166,8 @@ INSERT INTO `receptionist` (`emp_id`, `first_name`, `last_name`, `address`, `ema
 CREATE TABLE `reservation` (
   `reservation_id` int(11) NOT NULL,
   `is_advance_paid` tinyint(1) NOT NULL,
-  `cust_id` int(11) NOT NULL
+  `cust_id` int(11) NOT NULL,
+  `added_date` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
