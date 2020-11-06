@@ -1,0 +1,255 @@
+* {box-sizing: border-box}
+
+
+/*set default base font */
+html *
+{  
+  font-family: 'Raleway', sans-serif;
+}
+
+
+h1{
+  color: #01447e;
+  text-align: center;
+}
+/*make h2s align center */
+
+h2{
+  color: #01447e;
+  text-align: center;
+}
+/* .list_table{
+    width: 90%;
+    margin: 5%;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 1270px){
+  .list_table{
+    width: 100%;
+  }
+} */
+#table_ {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 90%;
+}
+
+#table_ td, #table_ th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table_ tr:nth-child(odd){background-color: #b3c6ff;} 	 
+#table_ tr:nth-child(even){background-color: #ccccff;}
+#table_ tr:hover {background-color: #ddd;}
+
+#table_ th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #0275d8;
+  color: white;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+/* Set a style for the submit/register button */
+.btn {
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  /*padding: 0; */
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  transition: background-color .3s;
+}
+  /* style the button when the mouse point move on */
+
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.optionbtn{
+  text-align: center;
+  width: 47%;
+  margin: 1%;
+  height: 70px;
+  text-align: center;
+}
+
+.btn:before {
+  content: "";
+  
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.btn:disabled {
+  background-color: #696969;
+  color: #ecf0f1;
+}
+
+/* Special round button */
+.btn_round {
+  padding: 5px 5px !important;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 150%;;
+}
+.select_buttons{
+  text-align: center;
+
+  display: flex;
+  justify-content:center;
+  justify-content:space-around;
+  flex-direction: row;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .select_buttons {
+    flex-direction: column;
+    justify-content:center;
+  }
+}
+
+@media (max-width: 600px) {
+  .select_buttons {
+    flex-direction: column;
+  }
+}
+
+.one{
+  padding: 10px;
+  flex: 25%;
+}
+
+.two{
+  padding: 10px;
+  flex: 25%;
+}
+
+.three{
+  padding: 10px;
+  flex: 25%;
+}
+
+.four{
+  padding: 10px;
+  flex: 25%;
+}
+
+
+
+.viewbtn{
+  box-shadow: 0 3px 5px rgba(60, 30, 230, 0.6);
+}
+
+.updatelbtn{
+  box-shadow: 0 3px 5px rgba(228, 112, 17, 0.884);
+}
+
+.deletebtn{
+  box-shadow: 0 3px 5px rgba(236, 14, 14, 0.6);
+}
+.viewbtn:hover, .viewbtn:focus {
+  background-color: #008CBA;
+  color : #ffffff
+}
+
+
+.updatelbtn:hover, .updatelbtn:focus  {
+  background-color: #ff8c1a;
+  color : #ffffff
+}
+
+.deletebtn:hover, .deletebtn:focus  {
+  background-color: #e90d0d;
+  color : #ffffff
+}  
+
+  /* style the card in form */
+  .card {
+    justify-content:center;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    text-align: left;
+    border-radius: 3%;
+    height: 100%;
+    margin-left: 10%;
+    background-color: #0275d8;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
+    width: 80%;
+    margin-bottom: 50px;
+  }
+
+  
+/* Style the list(breadcrumb) */
+ul.breadcrumb {
+    margin-top: 70px;
+    padding: 10px 16px;
+    list-style: none;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+  }
+  
+  /* Add a slash symbol (|) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "|\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+  }

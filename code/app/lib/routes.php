@@ -156,4 +156,8 @@
     Route::set('update_timeslot',function(){
         Controller::create_view('update_timeslot');
     });
+
+    Route::set('employee_list',function(){
+        Controller::create_view('employee_list');
+    });
 ?>
