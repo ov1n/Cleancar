@@ -4,12 +4,12 @@
     <head>
         <title>CleanCar - Update Service</title>
     
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\timeslot.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
-        <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>>
     </head>
 
     <body>
@@ -29,26 +29,6 @@
           <p>Please fill in this form to add Time Slot</p>
           <div class="background">
             <hr>
-            <div class="column1">
-            <div class="card" >
-              <div id=form_content> <!-- div to center needed elements -->
-
-                &ensp;&ensp;<label for="no_of_employees"><div class="form_label"><b>Exist Start Time</b></div></label>
-                <input type="text" placeholder="Enter number of emploees" name="no_of_employees" id="no_of_employees" required size="50"></br>
-
-                &ensp;&ensp;<label for="no_of_time_slot"><div class="form_label"><b>Exist End Time</b></div></label>
-                <input type="text" placeholder="Enter number of time slot" name="no_of_time_slot" id="no_of_time_slot" required size="50"></br>
-
-                &ensp;&ensp;<label for="prize"><div class="form_label"><b>Lift No</b></div></label>
-                <input type="text" placeholder="Enter normal prize" name="prize" id="prize" required size="50"></br>
-
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Delete</button>
-              </div><!-- form_content --> 
-            </div><!-- card -->
-          </div>
-
-            <div class="row">
-            <div class="column2">
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
@@ -61,9 +41,7 @@
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
               </div><!-- form_content --> 
             </div><!-- card -->
-          </div>
-        </div>
-            
+          
             </br></br>
           </div><!-- background -->
           <hr>
