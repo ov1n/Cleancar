@@ -7,6 +7,10 @@
   <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
 </head>
 <body>
+  <?php
+      echo($array);
+      echo json_encode($array);
+  ?>
 
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">

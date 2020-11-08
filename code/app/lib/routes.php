@@ -158,6 +158,8 @@
     });
 
     Route::set('employee_list',function(){
-        Controller::create_view('employee_list');
+
+        Session::init();
+        EmployeeList::create_view('employee_list');
     });
 ?>
