@@ -7,10 +7,6 @@
   <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
 </head>
 <body>
-  <?php
-      echo($array);
-      echo json_encode($array);
-  ?>
 
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
@@ -20,6 +16,10 @@
         <li><a href="home">Manager</a></li>
         <li>Employee</li>
     </ul><!-- breadcrumb -->
+    <?php
+      //echo($array);
+      //var_dump($array);
+    ?>
     
     <h1>Employee Section</h1>
 
@@ -47,19 +47,19 @@
             <th>Delete</th>
         </tr>
         
-        <?php foreach($emp_data as $emp){ ?>
+        <?php foreach($array as $emp){ ?>
           <tr>
               <td>
-                  <?php echo "$emp->emp_id"; ?>
+                  <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
-                  <?php echo "$emp->first_name"; ?>
+                  <?php echo "$emp[first_name]"; ?>
               </td>
               <td>
-                  <?php echo "$emp->last_name"; ?>
+                  <?php echo "$emp[last_name]"; ?>
               </td>
               <td>
-                  <?php echo "$emp->NIC"; ?>
+                  <?php echo "$emp[NIC_no]"; ?>
               </td>
               <td>
                   <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn">View</a>

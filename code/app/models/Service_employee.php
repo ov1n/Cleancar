@@ -28,8 +28,8 @@
             }
 
             //get employees in an array
-            $employees = mysqli_fetch_array($result);
-            //print_r($count);
+            $employees = $result->fetch_all(MYSQLI_ASSOC);
+            //var_dump($employees);
 
             //if array is not empty that means employees are returning
             if($employees){
