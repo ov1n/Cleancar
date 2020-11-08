@@ -8,6 +8,37 @@
                 //$db=new Database();
         }
 
+        //getting all details of employees
+        function get_all(){
+
+            //echo session var
+            //echo "uname is " . $_SESSION["uname"] . ".<br>";
+            //echo "pwd is " . $_SESSION["pwd"] . ".";
+            
+            //assign connectivity to a variable
+            $conn=Database::conn();
+               
+            $query="SELECT* FROM service_employee";
+            $result= mysqli_query($conn,$query);
+            
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get employees in an array
+            $employees = mysqli_fetch_array($result);
+            //print_r($count);
+
+            //if array is not empty that means employees are returning
+            if($employees){
+                //echo("go to view");
+                return($employees);
+            }
+
+        }
+
         //checking credentials by searching through the service_employee table
         function check_credentials($uname,$pwd){
 
