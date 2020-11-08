@@ -22,7 +22,7 @@
           <li>Login</li>
       </ul>  <!-- breadcrumb-->
       
-  <form action="employeehome.php" method="post">
+  <form>
 
       <h1>Employee Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
       
@@ -34,7 +34,7 @@
 		<div class="square1">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i> 
 				<br>
-				<a href="#"><button><b>Add Leave</b></button></a>
+				<a href="request_leave"><button><b>Add Leave</b></button></a>
 			</div>
 
 			<div class="square2">
@@ -52,7 +52,7 @@
 			<div class="square4">
 				<i class="fa fa-pie-chart fa-3x" aria-hidden="true"></i> 
 				<br>
-				<a href="#"><button><b>Check the number of Leaves</b></button></a>
+				<a href="leave_static"><button><b>Check the number of Leaves</b></button></a>
 			</div>
 		</div> <!--square-->
   </form>

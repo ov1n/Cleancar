@@ -40,7 +40,7 @@
 			<div class="square2">
 				<i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="#"><button><b>Employee Details</b></button></a>
+				<a href="employee_list"><button><b>Employee Details</b></button></a>
 			</div>
 
 			<div class="square3">
