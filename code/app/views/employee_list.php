@@ -47,10 +47,10 @@
             <th>Delete</th>
         </tr>
         
-        <?php foreach($emp_data as $emp){ ?>
+        <?php foreach($array as $emp){ ?>
           <tr>
               <td>
-                  <?php echo "$emp->emp_id"; ?>
+                  <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
                   <?php echo "$emp->first_name"; ?>
@@ -62,13 +62,13 @@
                   <?php echo "$emp->NIC"; ?>
               </td>
               <td>
-                  <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn">View</a>
+                  <a href="#" name="view" class="btn viewbtn">View</a>
               </td>
               <td>
-                  <a href="update_emp?emp_id=<?php echo $item->item_id ?>" name="update" class="btn updatelbtn">Update</a>
+                  <a href="#" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td>
-                  <a href="delete_emp?emp_id=<?php echo $item->item_id ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="#" name="delete" class="btn deletebtn">Delete</a>
               </td>
           </tr>
       <?php } ?>
