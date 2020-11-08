@@ -17,19 +17,20 @@
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
-    <h1>List of Employee</h1>
+    <h1>Employee Section</h1>
 
     <div class = "card">
         <h2>Employee Leave</h2>
         <div class = "select_buttons">
-        <button type="submit" class="optionbtn btn" class="form_btn" >Add Leave</button>
+        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
         <button type="submit" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
         <button type="submit" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" >Leave Report</button>
+        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
         </div>
     </div><!-- card -->
 <div class = "list_table">
-    <div style="overflow-x:auto; width: 90%;   margin-left: 5%; ">
+<h2>Employee Details</h2>
+  <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
     <tr>

@@ -6,10 +6,10 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="style_css\form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
-        <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script> 
     </head>
 
     <body>
@@ -24,7 +24,7 @@
 
       <form action="./controllers/Register.php">
         <div class="container">  
-          <h1>Employee Registration</h1>
+          <h1>Employee Update</h1>
           <p>Please fill in this form to register a employee</p>
           <div class="background">
             <hr>

@@ -1,11 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+-- Generation Time: Nov 07, 2020 at 11:35 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -15,6 +17,8 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
+--
+-- Database: `car`
 --
 
 -- --------------------------------------------------------
@@ -50,9 +54,7 @@ INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `address`, `email`
 (1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', 'das'),
 (1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', 931, 931, 0, '2020-10-27', 'rrr'),
 (1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', 114567891, 114567891, 0, '2020-10-29', 'buwa'),
-(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', 'cd'),
-(1052, 'varangana', 'mokakhari', 'whatever', 'v@v.com', 519, 2147483647, 0, '2020-11-03', '3028879ab8d5c87dc023049fa5bb5c1a'),
-(1053, 'abc', 'abc', 'gfgf', 'a@b.c', 1, 1, 0, '2020-11-03', '3dbe00a167653a1aaee01d93e77e730e');
+(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', 'cd');
 
 -- --------------------------------------------------------
 
@@ -79,6 +81,22 @@ CREATE TABLE `employee_per_service` (
   `emp_id` int(11) NOT NULL,
   `bill_no` int(11) NOT NULL,
   `no_of_hours_worked` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `emp_leave`
+--
+
+CREATE TABLE `emp_leave` (
+  `date` date NOT NULL,
+  `emp_id` int(11) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `reason` varchar(100) NOT NULL,
+  `time` time NOT NULL,
+  `is_pending` varchar(5) NOT NULL,
+  `is_accepted` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -125,7 +143,7 @@ CREATE TABLE `manager` (
 --
 
 INSERT INTO `manager` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `designation`, `password`) VALUES
-('M001', 'Manager', 'Sample', 'manager 23', 'manager123@gmail.com', 115467887, 789871212, '875542103V', 5, 4, 7, '2020-09-23', 'MBA', '1d0258c2440a8d19e716292b231e3190');
+('M001', 'Manager', 'Sample', 'manager 23', 'manager123@gmail.com', 115467887, 789871212, '875542103V', 5, 4, 7, '2020-09-23', 'MBA', 'manager');
 
 -- --------------------------------------------------------
 
@@ -155,7 +173,7 @@ CREATE TABLE `receptionist` (
 --
 
 INSERT INTO `receptionist` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `qualification`, `password`) VALUES
-('R001', 'Receptionist', 'one', 'r 4 gh trd ef', 'receptionist@gmail.com', 112547896, 764872522, '902457414V', 5, 4, 4, '2020-10-01', 'SQL', '0a9b3767c8b9b69cea129110e8daeda2');
+('R001', 'Receptionist', 'one', 'r 4 gh trd ef', 'receptionist@gmail.com', 112547896, 764872522, '902457414V', 5, 4, 4, '2020-10-01', 'SQL', 'receptionist');
 
 -- --------------------------------------------------------
 
@@ -266,9 +284,7 @@ INSERT INTO `vehicle` (`cust_id`, `vehicle_num`, `vehicle_category`) VALUES
 (1037, '221b', 'light vehi'),
 (1038, 'r1', 'light vehi'),
 (1039, '812', 'light vehi'),
-(1040, '6969', 'light vehi'),
-(1052, '567', 'light vehi'),
-(1053, 'abc', 'light vehi');
+(1040, '6969', 'light vehi');
 
 --
 -- Indexes for dumped tables
@@ -293,6 +309,13 @@ ALTER TABLE `emergency_contact`
 ALTER TABLE `employee_per_service`
   ADD PRIMARY KEY (`emp_id`,`bill_no`) USING BTREE,
   ADD KEY `t7` (`bill_no`);
+
+--
+-- Indexes for table `emp_leave`
+--
+ALTER TABLE `emp_leave`
+  ADD PRIMARY KEY (`date`,`emp_id`) USING BTREE,
+  ADD KEY `t10` (`emp_id`);
 
 --
 -- Indexes for table `invoice`
@@ -359,7 +382,7 @@ ALTER TABLE `vehicle`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1054;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1052;
 
 --
 -- AUTO_INCREMENT for table `invoice`
@@ -407,6 +430,12 @@ ALTER TABLE `emergency_contact`
 ALTER TABLE `employee_per_service`
   ADD CONSTRAINT `t6` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`),
   ADD CONSTRAINT `t7` FOREIGN KEY (`bill_no`) REFERENCES `invoice` (`bill_no`);
+
+--
+-- Constraints for table `emp_leave`
+--
+ALTER TABLE `emp_leave`
+  ADD CONSTRAINT `t10` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`);
 
 --
 -- Constraints for table `reservation`
