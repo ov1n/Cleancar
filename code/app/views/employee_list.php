@@ -37,98 +37,41 @@
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
-    <tr>
-      <th>Employee ID</th>
-      <th>First Name</th>
-      <th>Last Name</th>
-      <th>Address</th>
-      <th>Email</th>
-      <th>Home Tp</th>
-      <th>Mobile no</th>
-      <th>NIC</th>
-      <th>View</th>
-      <th>Edit</th>
-      <th>Delete</th>
-    </tr>
-    <tr>
-      <td>EA 1000</td>
-      <td>Tharindu</td>
-      <td>Dulshan</td>
-      <td>no 29, telijjawila, Matara</td>
-      <td>tdwithanage97@gmail.com</td>
-      <td>0412241190</td>
-      <td>0711565953</td>
-      <td>971400757v</td>
-      <td>
-        <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn">View</a>
-      </td>
-      <td>
-        <a href="update_emp?emp_id=<?php echo $item->item_id ?>" name="update" class="btn updatelbtn">Update</a>
-      </td>
-      <td>
-        <a href="delete_emp?emp_id=<?php echo $item->item_id ?>" name="delete" class="btn deletebtn">Delete</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>EA 1000</td>
-      <td>Tharindu</td>
-      <td>Dulshan</td>
-      <td>no 29, telijjawila, Matara</td>
-      <td>tdwithanage97@gmail.com</td>
-      <td>0412241190</td>
-      <td>0711565953</td>
-      <td>971400757v</td>
-      <td>
-        <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn">View</a>
-      </td>
-      <td>
-        <a href="update_emp?emp_id=<?php echo $item->item_id ?>" name="update" class="btn updatelbtn">Update</a>
-      </td>
-      <td>
-        <a href="delete_emp?emp_id=<?php echo $item->item_id ?>" name="delete" class="btn deletebtn">Delete</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>EA 1000</td>
-      <td>Tharindu</td>
-      <td>Dulshan</td>
-      <td>no 29, telijjawila, Matara</td>
-      <td>tdwithanage97@gmail.com</td>
-      <td>0412241190</td>
-      <td>0711565953</td>
-      <td>971400757v</td>
-      <td>
-        <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn">View</a>
-      </td>
-      <td>
-        <a href="update_emp?emp_id=<?php echo $item->item_id ?>" name="update" class="btn updatelbtn">Update</a>
-      </td>
-      <td>
-        <a href="delete_emp?emp_id=<?php echo $item->item_id ?>" name="delete" class="btn deletebtn">Delete</a>
-      </td>
-    </tr>
-
-    <tr>
-      <td>EA 1000</td>
-      <td>Tharindu</td>
-      <td>Dulshan</td>
-      <td>no 29, telijjawila, Matara</td>
-      <td>tdwithanage97@gmail.com</td>
-      <td>0412241190</td>
-      <td>0711565953</td>
-      <td>971400757v</td>
-      <td>
-        <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn" >View</a>
-      </td>
-      <td>
-        <a href="update_emp?emp_id=<?php echo $item->item_id ?>" name="update" class="btn updatelbtn" >Update</a>
-      </td>
-      <td>
-        <a href="delete_emp?emp_id=<?php echo $item->item_id ?>" name="delete" class="btn deletebtn" >Delete</a>
-      </td>
-    </tr>
+  <tr>
+            <th>Employee ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>NIC</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        
+        <?php foreach($emp_data as $emp){ ?>
+          <tr>
+              <td>
+                  <?php echo "$emp->emp_id"; ?>
+              </td>
+              <td>
+                  <?php echo "$emp->first_name"; ?>
+              </td>
+              <td>
+                  <?php echo "$emp->last_name"; ?>
+              </td>
+              <td>
+                  <?php echo "$emp->NIC"; ?>
+              </td>
+              <td>
+                  <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn">View</a>
+              </td>
+              <td>
+                  <a href="update_emp?emp_id=<?php echo $item->item_id ?>" name="update" class="btn updatelbtn">Update</a>
+              </td>
+              <td>
+                  <a href="delete_emp?emp_id=<?php echo $item->item_id ?>" name="delete" class="btn deletebtn">Delete</a>
+              </td>
+          </tr>
+      <?php } ?>
   </table>
   </div>
 </div>
