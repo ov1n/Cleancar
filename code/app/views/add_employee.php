@@ -27,7 +27,7 @@
         <li>Add Employee</li>          
       </ul><!-- breadcrumb -->
 
-      <form name="emp_reg_form" id="emp_reg_form" onsubmit="send_data()" >
+      <form name="emp_reg_form" id="emp_reg_form" method = "post" onsubmit="send_data()" >
         <div class="container">  
           <h1>Employee Registration</h1>
           <p>Please fill in this form to register a employee</p>
