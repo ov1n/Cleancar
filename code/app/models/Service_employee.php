@@ -73,4 +73,47 @@
 
     }
 
+    //function which gets employee details on employee id parameter
+    function get_employee($employeeid){
+        
+        //assign connectivity to a variable
+        $conn=Database::conn();
+        
+        $query="SELECT* FROM service_employee WHERE (emp_id='$employeeid')";
+        $result= mysqli_query($conn,$query);
+        
+        //debugging
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($conn));
+            exit();
+        }
+
+        //get details into an associative array
+        $details = mysqli_fetch_array($result);
+        //print_r($details);
+
+        //Return array to be fetched and displayed
+        if($details){
+            //echo("go to view");
+            return($details);
+        } 
+    }
+
+    function delete_record($employeeid){
+        
+        //assign connectivity to a variable
+        $conn=Database::conn();
+        
+        $query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
+        $result= mysqli_query($conn,$query);
+        
+        //debugging
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($conn));
+            exit();
+        }else{
+            return True;
+            
+        }
+    }
 ?>

@@ -161,11 +161,16 @@ th, td {
   .select_buttons {
     justify-content:center;
   }
+
+  .optionbtn{
+    flex: 50%;
+  }
 }
 
 @media (max-width: 600px) {
   .select_buttons {
     justify-content:center;
+    flex-direction:column;
   }
 }
 

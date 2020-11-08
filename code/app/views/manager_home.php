@@ -34,7 +34,7 @@
 		<div class="square1">
 				<i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="view_employee"><button><b>Employee</b></button></a>
+				<a href="employee_list"><button><b>Employee</b></button></a>
 			</div>
 
 			<div class="square2">
@@ -46,19 +46,19 @@
 			<div class="square3">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="add_employee"><button><b>Service Type</b></button></a>
+				<a href="#"><button><b>Service Type</b></button></a>
 			</div>
 
 			<div class="square4">
 				<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="delay_time_table"><button><b>Timeslot</b></button></a>
+				<a href="#"><button><b>Timeslot</b></button></a>
 			</div>
 
 			<div class="square5">
 				<i class="fa fa-book fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="billing"><button><b>Reports</b></button></a>
+				<a href="#"><button><b>Reports</b></button></a>
 			</div>
 		</div><!--square-->
 	
