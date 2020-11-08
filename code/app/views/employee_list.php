@@ -62,13 +62,13 @@
                   <?php echo "$emp[NIC_no]"; ?>
               </td>
               <td>
-                  <a href="view_emp?emp_id=<?php echo $item->item_id ?>" name="view" class="btn viewbtn">View</a>
+                  <a href="#" name="view" class="btn viewbtn">View</a>
               </td>
               <td>
-                  <a href="update_emp?emp_id=<?php echo $item->item_id ?>" name="update" class="btn updatelbtn">Update</a>
+                  <a href="#" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td>
-                  <a href="delete_emp?emp_id=<?php echo $item->item_id ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="#" name="delete" class="btn deletebtn">Delete</a>
               </td>
           </tr>
       <?php } ?>
