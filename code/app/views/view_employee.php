@@ -2,7 +2,7 @@
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <title>CleanCar - Employee registration form</title>
+        <title>CleanCar - View Employee</title>
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
@@ -19,13 +19,12 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="home">Manager Home</a></li>
-        <li>Add Employee</li>          
+        <li>View Employee</li>          
       </ul><!-- breadcrumb -->
 
       <form action="./controllers/Register.php">
         <div class="container">  
-          <h1>Employee Registration</h1>
-          <p>Please fill in this form to register a employee</p>
+          <h1>Employee Details</h1>
           <div class="background">
             <hr>
             <div class="card" >

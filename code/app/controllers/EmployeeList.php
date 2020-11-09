@@ -11,6 +11,7 @@
             //create employee object
             $emp=new Service_employee();
             $array=$emp->get_all();
+            //var_dump($array);
 
             require_once("./views/$view_name.php");
         }

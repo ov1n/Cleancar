@@ -19,13 +19,13 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="home">Manager Home</a></li>
-        <li>Add Employee</li>          
+        <li>Update Employee</li>          
       </ul><!-- breadcrumb -->
 
       <form action="./controllers/Register.php">
         <div class="container">  
           <h1>Employee Update</h1>
-          <p>Please fill in this form to register a employee</p>
+          <p>Please edit in this form to update the employee details</p>
           <div class="background">
             <hr>
             <div class="card" >
