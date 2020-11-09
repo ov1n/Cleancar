@@ -33,11 +33,7 @@
               <div id=form_content> <!-- div to center needed elements -->
 
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
-                  <select name="service_type" id="service_type">
-                    <option value="Full_service">Full Service</option>
-                    <option value="Normal_service">Normal Service</option>
-                    <option value="body_wash">Body wash</option>
-                  </select><br>
+                <input type="text" placeholder="Enter the name of service type" name="service_type" id="service_type" required size="50"></br>  
 
                 &ensp;&ensp;<label for="vehicle_category"><div class="form_label"><b>Vehicle Category</b></div></label>
                   <select name="vehicle_category" id="vehicle_category">
