@@ -66,13 +66,13 @@
               <td>
                   <?php echo "$emp[NIC_no]"; ?>
               </td>
-              <td>
+              <td style = " text-align: center;">
                   <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
-              <td>
+              <td style = " text-align: center;">
                   <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
               </td>
-              <td>
+              <td style = " text-align: center;">
                   <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
               </td>
           </tr>
