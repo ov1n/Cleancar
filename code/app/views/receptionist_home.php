@@ -68,7 +68,7 @@
 			<div class="square6">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="make_reservation"><button><b>Make Reservation</b></button></a>
+				<a href="emergency_reservation"><button><b>Make Reservation</b></button></a>
 			</div>
 
 			<div class="square7">
