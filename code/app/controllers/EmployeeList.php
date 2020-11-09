@@ -20,5 +20,10 @@
 
             
         }
+
+        //function to delete employee
+        public function delete_employee($emp_id){
+            echo($_GET['emp_id']);
+        }
         
     }

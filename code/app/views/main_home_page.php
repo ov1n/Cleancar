@@ -12,7 +12,7 @@
 <body>
   <?php
     //DEBUGGING
-    echo(Session::get("test"));
+    //echo(Session::get("test"));
     //TESTING
     ?>
   <!-- Slideshow container -->

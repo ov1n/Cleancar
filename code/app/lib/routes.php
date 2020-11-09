@@ -162,4 +162,12 @@
         Session::init();
         EmployeeList::create_view('employee_list');
     });
+
+    //TEST
+    Route::set('employee_delete',function(){
+
+        Session::init();
+        echo("cat");
+        EmployeeList::delete_employee('register');
+    });
 ?>

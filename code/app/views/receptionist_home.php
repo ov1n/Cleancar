@@ -10,7 +10,11 @@
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	
+
+<?php
+      //echo($_SESSION["uname"]);
+      //var_dump($array);
+    ?>
 
 		<br><br><br>
 		<!-- create breadcrumb -->

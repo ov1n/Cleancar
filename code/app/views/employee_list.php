@@ -4,7 +4,12 @@
   <title>Table</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
+    <!-- get imported jquery -->
+    <script src="public/js/jquery/jquery-3.5.1.js"></script>
+    <!-- get external js file -->
+    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
 
@@ -17,7 +22,7 @@
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     <?php
-      //echo($array);
+      //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
     
@@ -62,13 +67,13 @@
                   <?php echo "$emp[NIC_no]"; ?>
               </td>
               <td>
-                  <a href="#" name="view" class="btn viewbtn">View</a>
+                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
               <td>
-                  <a href="#" name="update" class="btn updatelbtn">Update</a>
+                  <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td>
-                  <a href="#" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
               </td>
           </tr>
       <?php } ?>
