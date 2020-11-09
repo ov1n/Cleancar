@@ -156,9 +156,6 @@
     Route::set('update_timeslot',function(){
         Controller::create_view('update_timeslot');
     });
-     Route::set('service_type_list',function(){
-        Controller::create_view('service_type_list');
-    });
 
     Route::set('employee_list',function(){
 
@@ -166,11 +163,14 @@
         EmployeeList::create_view('employee_list');
     });
 
-    //TEST
-    Route::set('employee_delete',function(){
+    //Employee functions
+    //view
+    Route::set('employee_view',function(){
+        EmployeeList::view();
+    });
 
-        Session::init();
-        echo("cat");
-        EmployeeList::delete_employee('register');
+    //delete
+    Route::set('employee_delete',function(){
+        EmployeeList::delete();
     });
 ?>

@@ -67,7 +67,7 @@
                   <?php echo "$emp[NIC_no]"; ?>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
+                  <a href="employee_view?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
               <td style = " text-align: center;">
                   <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
