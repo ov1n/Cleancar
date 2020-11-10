@@ -100,7 +100,7 @@
             $cust_id=array_shift( $r );
 
             //insert that into the vehicle table
-            $query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','light vehicle');";
+            $query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','Car');";
             
             $result3= mysqli_query($conn,$query_veh);
 

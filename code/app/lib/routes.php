@@ -88,7 +88,8 @@
     Route::set('confirm_reservation',function(){ 
         //session_start();
         //echo($_SESSION["uname"]);
-        Reservation::insert();
+        //Reservation::insert();
+        Reservation::create_view('confirm_reservation');
     });
 
     //experimental route to develop confirm reservation page
