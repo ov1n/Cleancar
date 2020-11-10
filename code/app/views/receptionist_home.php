@@ -34,7 +34,7 @@
 
 	    <div class="cover"> <hr>
 
-	    <div class="square"> <br>
+	    <div class="square"> <br><br>
 		<div class="square1">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br>
@@ -44,7 +44,7 @@
 			<div class="square2">
 				<i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="employee_list"><button><b>Employee Details</b></button></a>
+				<a href="employee_list_recep"><button><b>Employee Details</b></button></a>
 			</div>
 
 			<div class="square3">
@@ -71,17 +71,6 @@
 				<a href="emergency_reservation"><button><b>Make Reservation</b></button></a>
 			</div>
 
-			<div class="square7">
-				<i class="fa fa-pencil-square-o fa-3x" aria-hidden="true"></i>
-				<br>
-				<a href="#"><button><b>Update Reservation</b></button></a>
-			</div>
-
-			<div class="square8">
-				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i>
-				<br>
-				<a href="#"><button><b>Delete Reservation</b></button></a>
-			</div>
 		</div><!--square-->
 	
 		</div><!--cover-->
