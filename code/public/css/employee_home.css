@@ -115,15 +115,23 @@ div.square button{
   width: 80%;
   height: 25%;
 	transition: 0.3s;
-	background-color: #F0F8FF; 
   font-family: 'Raleway' !important;  
-  border-color: transparent;
+  border-radius: 6px;
   font-size: 95%;
   margin-top: 14%;
 }
 
 button:hover{
 	opacity: 0.6;
+}
+
+/* button colors */
+div.square1 button,.square3 button{
+  background-color: #99BBFF; 
+}
+
+div.square2 button,.square4 button{
+  background-color: #3377FF; 
 }
 
 @media screen and (max-width: 800px){
