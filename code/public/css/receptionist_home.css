@@ -129,16 +129,23 @@ div.square i{
 div.square button{
   width: 80%;
   height: 20%;
-  transition: 0.3s;
-  background-color: #F0F8FF; 
   font-family: 'Raleway' !important;  
-  border-color: transparent;
   font-size: 95%;
   margin-top: 20%;
+  border-radius: 6px;
 }
 
 button:hover{
   opacity: 0.6;
+}
+
+/* button colors */
+div.square1 button,.square3 button,.square5 button{
+  background-color: #99BBFF; 
+}
+
+div.square2 button,.square4 button,.square6 button{
+  background-color: #3377FF; 
 }
 
 /* responsive square */
