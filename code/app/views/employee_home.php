@@ -22,15 +22,13 @@
           <li>Login</li>
       </ul>  <!-- breadcrumb-->
       
-  <form>
-
       <h1>Employee Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
       
       <hr> <br>
 
-      <div class="cover"> <br><br><br>
+      <div class="cover"> <br><br><br><br>
 
-	    <div class="square">
+	    <div class="square"><br>
 		<div class="square1">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i> 
 				<br>
@@ -55,7 +53,6 @@
 				<a href="leave_static"><button><b>Check the number of Leaves</b></button></a>
 			</div>
 		</div> <!--square-->
-  </form>
 </div> <!-- cover -->
 
 <br> <hr> <br>
