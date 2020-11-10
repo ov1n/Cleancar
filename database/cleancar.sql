@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 10, 2020 at 07:22 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: Nov 10, 2020 at 09:05 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -45,16 +46,17 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `no_of_reservations`, `registered_date`, `password`) VALUES
-(1001, 'John', 'Doe', 'No.600, Canterbury, Arizona', 'johndoe@gmail.com', 112696969, 711254730, 0, '2020-10-14', '5f4dcc3b5aa765d61d8327deb882cf99'),
-(1002, 'Jane', 'Doe', '876/5, Baker Street, London', 'janedoe@gmail.com', 112543467, 692696969, 0, '2020-10-15', 'a8c0d2a9d332574951a8e4a0af7d516f'),
-(1012, 'Maithreepala', 'White', 'UCSC Building Complex', 'user1@gmail.com', 714567890, 114567890, 0, '2020-10-15', 'd81f9c1be2e08964bf9f24b15f0e4900'),
-(1031, 'daaew', 'fags', 'fager', 'userd@gmail.com', 3457, 3457, 0, '2020-10-15', '17d965747c701d6ffb406cad0f4265dc'),
-(1034, 'hah', 'gah', 'farr', '2018cs145@gmail.com', 774545590, 114545590, 0, '2020-10-15', '7815696ecbf1c96e6894b779456d330e'),
-(1037, 'sherlock', 'holmes', '221b baker', 'sher@j.b', 714567890, 114567890, 0, '2020-10-16', '155d1a1c98b0f860a26b80ff6ab941fe'),
-(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', '2a6571da26602a67be14ea8c5ab82349'),
-(1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', 931, 931, 0, '2020-10-27', '44f437ced647ec3f40fa0841041871cd'),
-(1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', 114567891, 114567891, 0, '2020-10-29', '6227cb5c2107ccad85351676a6c8dd80'),
-(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', '6865aeb3a9ed28f9a79ec454b259e5d0');
+(1001, 'John', 'Doe', 'No.600, Canterbury, Arizona', 'johndoe@gmail.com', 112696969, 711254730, 0, '2020-10-14', 'password'),
+(1002, 'Jane', 'Doe', '876/5, Baker Street, London', 'janedoe@gmail.com', 112543467, 692696969, 0, '2020-10-15', 'janedoe'),
+(1012, 'Maithreepala', 'White', 'UCSC Building Complex', 'user1@gmail.com', 714567890, 114567890, 0, '2020-10-15', '345'),
+(1031, 'daaew', 'fags', 'fager', 'userd@gmail.com', 3457, 3457, 0, '2020-10-15', 'far'),
+(1034, 'hah', 'gah', 'farr', '2018cs145@gmail.com', 774545590, 114545590, 0, '2020-10-15', 'asd'),
+(1037, 'sherlock', 'holmes', '221b baker', 'sher@j.b', 714567890, 114567890, 0, '2020-10-16', 'sher'),
+(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', 'das'),
+(1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', 931, 931, 0, '2020-10-27', 'rrr'),
+(1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', 114567891, 114567891, 0, '2020-10-29', 'buwa'),
+(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', 'cd'),
+(1052, 'Thenuka', 'Weerasinghe', 'No.900,Zone 3 ,Millennium City ', 'thenukaovin@gmail.com', 112772511, 2147483647, 0, '2020-11-10', '7fdfcbc4a08fa01937b3680bc295904b');
 
 -- --------------------------------------------------------
 
@@ -144,7 +146,7 @@ CREATE TABLE `manager` (
 --
 
 INSERT INTO `manager` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `designation`, `password`) VALUES
-('M001', 'Manager', 'Sample', 'manager 23', 'manager123@gmail.com', 115467887, 789871212, '875542103V', 5, 4, 7, '2020-09-23', 'MBA', '1d0258c2440a8d19e716292b231e3190');
+('M001', 'Manager', 'Sample', 'manager 23', 'manager123@gmail.com', 115467887, 789871212, '875542103V', 5, 4, 7, '2020-09-23', 'MBA', 'manager');
 
 -- --------------------------------------------------------
 
@@ -186,7 +188,8 @@ CREATE TABLE `reservation` (
   `reservation_id` int(11) NOT NULL,
   `is_advance_paid` tinyint(1) NOT NULL,
   `cust_id` int(11) NOT NULL,
-  `added_date` date NOT NULL
+  `added_date` date NOT NULL,
+  `service_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -256,12 +259,12 @@ CREATE TABLE `service_type` (
 --
 
 INSERT INTO `service_type` (`type_id`, `type_name`, `vehicle_category`, `no_of_emp`, `no_of_timeslots`, `lift_no`, `price`) VALUES
-(1, 'Full Service', 'Car', 3, 4, 'L_01', 12000),
-(2, 'Normal Service', 'Car', 2, 2, 'L_01', 8000),
-(3, 'Body Wash', 'Car', 2, 2, 'L_04', 2000),
-(4, 'Full Service', 'Van', 4, 6, 'L_02', 15000),
-(5, 'Normal Service', 'Van', 3, 4, 'L_02', 8000),
-(6, 'Body Wash', 'Van', 2, 2, 'L_05', 3000);
+(1, 'Full Service', 'Car', 3, 4, '1', 12000),
+(2, 'Normal Service', 'Car', 2, 2, '1', 8000),
+(3, 'Body Wash', 'Car', 2, 2, '1', 2000),
+(4, 'Full Service', 'Van', 4, 6, '2', 15000),
+(5, 'Normal Service', 'Van', 3, 4, '2', 8000),
+(6, 'Body Wash', 'Van', 2, 2, '1', 3000);
 
 -- --------------------------------------------------------
 
@@ -298,7 +301,8 @@ INSERT INTO `vehicle` (`cust_id`, `vehicle_num`, `vehicle_category`) VALUES
 (1037, '221b', 'light vehi'),
 (1038, 'r1', 'light vehi'),
 (1039, '812', 'light vehi'),
-(1040, '6969', 'light vehi');
+(1040, '6969', 'light vehi'),
+(1052, 'KA-1024', 'Car');
 
 --
 -- Indexes for dumped tables
@@ -354,7 +358,8 @@ ALTER TABLE `receptionist`
 --
 ALTER TABLE `reservation`
   ADD PRIMARY KEY (`reservation_id`),
-  ADD KEY `t2` (`cust_id`);
+  ADD KEY `t2` (`cust_id`),
+  ADD KEY `service_type` (`service_id`);
 
 --
 -- Indexes for table `reservation_time_slot`
@@ -395,7 +400,7 @@ ALTER TABLE `vehicle`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1052;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1053;
 
 --
 -- AUTO_INCREMENT for table `invoice`
@@ -454,6 +459,7 @@ ALTER TABLE `emp_leave`
 -- Constraints for table `reservation`
 --
 ALTER TABLE `reservation`
+  ADD CONSTRAINT `service_type` FOREIGN KEY (`service_id`) REFERENCES `service_type` (`type_id`),
   ADD CONSTRAINT `t2` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`);
 
 --
