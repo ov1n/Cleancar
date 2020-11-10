@@ -10,7 +10,11 @@
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	
+
+<?php
+      //echo($_SESSION["uname"]);
+      //var_dump($array);
+    ?>
 
 		<br><br><br>
 		<!-- create breadcrumb -->
@@ -64,7 +68,7 @@
 			<div class="square6">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="make_reservation"><button><b>Make Reservation</b></button></a>
+				<a href="emergency_reservation"><button><b>Make Reservation</b></button></a>
 			</div>
 
 			<div class="square7">

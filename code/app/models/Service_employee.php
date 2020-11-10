@@ -8,6 +8,64 @@
                 //$db=new Database();
         }
 
+        //getting all details of employees
+        function get_all(){
+
+            //echo session var
+            //echo "uname is " . $_SESSION["uname"] . ".<br>";
+            //echo "pwd is " . $_SESSION["pwd"] . ".";
+            
+            //assign connectivity to a variable
+            $conn=Database::conn();
+               
+            $query="SELECT* FROM service_employee";
+            $result= mysqli_query($conn,$query);
+            
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get employees in an array
+            $employees = $result->fetch_all(MYSQLI_ASSOC);
+            //var_dump($employees);
+
+            //if array is not empty that means employees are returning
+            if($employees){
+                //echo("go to view");
+                return($employees);
+            }
+
+        }
+
+        //function which gets a selected employee from ID
+        function get_employee($employeeid){
+
+            //assign connectivity to a variable
+            $conn=Database::conn();
+            
+            $query="SELECT* FROM service_employee WHERE emp_id='$employeeid';";
+            $result= mysqli_query($conn,$query);
+            
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get details into an associative array
+            $details = mysqli_fetch_array($result);
+            //print_r($details);
+
+            //Return array to be fetched and displayed
+            if($details){
+                //echo("go to view");
+                return($details);
+            }
+
+        }
+
         //checking credentials by searching through the service_employee table
         function check_credentials($uname,$pwd){
 
@@ -73,4 +131,21 @@
 
     }
 
+    function delete_record($employeeid){
+        
+        //assign connectivity to a variable
+        $conn=Database::conn();
+        
+        $query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
+        $result= mysqli_query($conn,$query);
+        
+        //debugging
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($conn));
+            exit();
+        }else{
+            return True;
+            
+        }
+    }
 ?>

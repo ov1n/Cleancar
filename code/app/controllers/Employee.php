@@ -3,7 +3,7 @@
     //include employee class
     include './models/Service_employee.php';
     //get mailer class to send registration emails to customers
-    // require './lib/classes/Mailer.php';
+    require './lib/classes/Mailer.php';
 
     class Employee extends Controller{
         //base controller just for extending
@@ -33,15 +33,16 @@
             //insert data
             $emp->insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$password);
 
-            //ON SUCCESS, send an email to customer address
-            // $mail=new Mailer();
+            //ON SUCCESS, send an email to the employee asking him to change his password immediately
+            $mail=new Mailer();
 
-            // $subject="Welcome to Cleancar Reservation System!";
-            // $body="<strong>Dear Mr./Mrs. $last_name,</strong></br>Thank you for
-            //         registering with Cleancar reservation System.";
+            $subject="Welcome to the Cleancar Family!";
+            $body="<strong>දයාබර $last_name මහත්මයා/මහත්,</strong></br>අපි ඔබව සාදරයෙන් CleanCar පවුලට පිලිගනිමු!
+                    Please change your password as soon as you login to the System which is </br>
+                    $unhashed at the moment.";
 
             //call function in class
-            // $mail->mailto($subject,$e_mail,$body);
+            $mail->mailto($subject,$e_mail,$body);
         }
     }
 ?>
