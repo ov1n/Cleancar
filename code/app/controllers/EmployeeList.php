@@ -21,8 +21,18 @@
             
         }
 
+        //function to view employee
+        public function view(){
+
+            $empid=$_GET['emp_id'];
+            $emp=new Service_employee();
+            $array=$emp->get_employee($empid);
+            //var_dump($array);
+            require_once("./views/view_employee.php");
+        }
+
         //function to delete employee
-        public function delete_employee($emp_id){
+        public function delete(){
             echo($_GET['emp_id']);
         }
         

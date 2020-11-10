@@ -71,6 +71,19 @@
         Home::create_view('make_reservation');
     });
 
+    //route to make reservation from receptionist
+    Route::set('emergency_reservation',function(){
+        
+        Session::init();
+        //echo(Session::get("uname"));
+        
+        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //echo '</pre>';
+        Controller::create_view('emergency_reservation');
+    });
+
     //route to confirm reservation with database
     Route::set('confirm_reservation',function(){ 
         //session_start();
@@ -163,11 +176,14 @@
         EmployeeList::create_view('employee_list');
     });
 
-    //TEST
-    Route::set('employee_delete',function(){
+    //Employee functions
+    //view
+    Route::set('employee_view',function(){
+        EmployeeList::view();
+    });
 
-        Session::init();
-        echo("cat");
-        EmployeeList::delete_employee('register');
+    //delete
+    Route::set('employee_delete',function(){
+        EmployeeList::delete();
     });
 ?>

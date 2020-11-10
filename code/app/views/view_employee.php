@@ -6,7 +6,7 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\view_employee.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
         <li>View Employee</li>          
       </ul><!-- breadcrumb -->
 
-      <form action="./controllers/Register.php">
+      <form >
         <div class="container">  
           <h1>Employee Details</h1>
           <div class="background">
@@ -31,33 +31,32 @@
 
               <div id=form_content> <!-- div to center needed elements -->
 
+                <!-- each field gets details from the array -->
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee ID</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="emp_id" value = "ES1023" id="emp_id" required disabled></br>
+                <input type="text"  name="emp_id" value = <?php echo "$array[emp_id]"; ?> id="emp_id" disabled></br>
 
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="first_name" value = "Tharindu" id="first_name" required disabled></br>
+                <input type="text"  name="first_name" value = <?php echo "$array[first_name]"; ?> id="first_name" disabled></br>
 
                 &ensp;&ensp;<label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
-                <input type="text" placeholder="Enter Your Last Name" name="last_name" value = "Dulshan" id="last_name" required disabled></br>
+                <input type="text"  name="last_name" value = <?php echo "$array[last_name]"; ?> id="last_name" disabled></br>
 
                 &ensp;&ensp;<label for="nic"><div class="form_label"><b>NIC</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="nic" value = "972401737v" id="nic" required disabled></br>
+                <input type="text"  name="nic" value = <?php echo "$array[NIC_no]"; ?> id="nic" disabled></br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="address" value = "Shanika Akurugoda Telijjawila" id="address" required disabled></br>
+                <input type="text"  name="address" value = <?php echo "$array[address]"; ?> id="address" disabled></br>
 
                 &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-                <input type="email" placeholder="Enter Your Email Address" name="e-mail" value = "tdwithanage97@gmail.com" id="e-mail" required disabled></br>
-
-                &ensp;&ensp;<h2>Contact Numbers</h2>
+                <input type="email"  name="email" value = <?php echo "$array[email]"; ?> id="e-mail" disabled></br>
 
                 &ensp;&ensp;<label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no" value = "0711555555" id="mobile_tel_no" required disabled></br>
+                <input type="text"  name="mobile_tel_no" value = <?php echo "$array[mobile_tel_no]"; ?> id="mobile_tel_no" disabled></br>
               
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
-                <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = "0412222222" id="home_tel_no" required disabled>
+                <input type="text"  name="home_tel_no" value = <?php echo "$array[home_tel_no]"; ?> id="home_tel_no" disabled>
                 </br>
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <a href="employee_list"><button class="btn cancelbtn" class="form_btn" >Cancel</button></a>
                 </br></br>
 
               </div><!-- form_content -->   
