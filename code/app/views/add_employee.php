@@ -52,11 +52,11 @@
                 &ensp;&ensp;<label for="email"><div class="form_label"><b>Email</b></div></label>
                 <input type="email" placeholder="Enter Your Email Address" name="email" id="email" required></br>
 
-                &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Password</b></div></label>
+                &ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
                 <input type="password" placeholder="Enter Password" name="password" id="password" required>
                 </br>
 
-                &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Confirm Password</b></div></label>
+                &ensp;&ensp;<label for="password"><div class="form_label"><b>Confirm Password</b></div></label>
                 <input type="password" placeholder="Re Enter the Password" name="password" id="password" required>
                 </br>
 
