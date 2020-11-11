@@ -26,7 +26,12 @@
       <form action="./controllers/Register.php">
         <div class="container">  
           <h1>Billing</h1>
-          <hr></br>
+          </br>
+          <div class = "select_buttons">
+          <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
+          <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
+          </div>
+          <br><br><br><br>
           <div class="background">
             <hr>
             <div class="card" >

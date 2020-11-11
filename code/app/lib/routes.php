@@ -177,6 +177,12 @@
         EmployeeList::create_view('employee_list');
     });
 
+    Route::set('invoice_report',function(){
+
+        Session::init();
+        Invoice_bill::create_view('invoice_report');
+    });
+
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
