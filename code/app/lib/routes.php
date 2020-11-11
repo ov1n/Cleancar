@@ -88,7 +88,8 @@
     Route::set('confirm_reservation',function(){ 
         //session_start();
         //echo($_SESSION["uname"]);
-        Reservation::insert();
+        //Reservation::insert();
+        Reservation::create_view('confirm_reservation');
     });
 
     //experimental route to develop confirm reservation page
@@ -176,9 +177,15 @@
         EmployeeList::create_view('employee_list');
     });
 
+    Route::set('invoice_report',function(){
+
+        Session::init();
+        Invoice_bill::create_view('invoice_report');
+    });
+
     //Employee functions
     //view
-    Route::set('employee_view',function(){
+    Route::set('employee_view',function(){ 
         EmployeeList::view();
     });
 
