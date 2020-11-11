@@ -289,3 +289,30 @@ h1 {
   color: #e67e22;
   background-color: black;
 }
+
+.optionbtn{
+  text-align: center;
+  padding: 25px 20px 20px 20px;
+  width: 15%;
+  /* font-weight: bold; */
+  font-size: large;
+  color: #ffffff;
+  margin: 0% 0% 100px 3%;
+  float: left;
+  height: 70px;
+  text-align: center;
+  background-color: #009999;
+  box-shadow: 0px 5px 5px 0px   #004d4d;
+}
+.optionbtn:hover{
+  background-color:    #008066;
+  color: #ffffb3;
+}
+
+
+@media (max-width: 600px) {
+  .optionbtn {
+    justify-content:center;
+    width: 140px;
+  }
+}
