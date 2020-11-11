@@ -4,7 +4,7 @@
 class Session {
 
     //variable which stores time per session
-    public static $timeout_duration = 5;
+    public static $timeout_duration = 1800;
 
     //starts session
     public static function init() {

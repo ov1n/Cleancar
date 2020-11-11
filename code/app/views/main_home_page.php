@@ -8,13 +8,17 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
   <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
+  <!-- set php notification to a js var in order to execute external js -->
+  <script type="text/javascript">var notification = "<?= $notification ?>";</script>
+
 </head>
 <body>
   <?php
     //DEBUGGING
-    echo(Session::get("in_time"));
-    echo("      ");
-    echo(Session::get("curr_time"));
+    //echo(Session::get("in_time"));
+    //echo("      ");
+    //(Session::get("curr_time"));
     //TESTING
     ?>
   <!-- Slideshow container -->

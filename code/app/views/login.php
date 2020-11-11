@@ -26,7 +26,6 @@
     <?php
         //DEBUGGING
         echo($notification);
-        echo("cat");
 
     ?>
     <!-- add breadcrumb to find the path easily to users -->

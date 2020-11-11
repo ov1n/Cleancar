@@ -12,9 +12,10 @@
         //overloaded view creation to get session variables to regular variables
         public static function create_view($view_name){
 
-            //get an object from session if incorrect_login has happened
+            //echo(Session::get("login"));
             $notification=Session::get("login");
             require_once("./views/$view_name.php");
+            Session::unset("login");
         }
         
         function authenticate(){
@@ -114,20 +115,24 @@
 
             //getting times from session
             $in_time=Session::get("in_time");
+            
+            //timeout duration is declared as the maxximum time a user can stay idle
             $out_time=Session::$timeout_duration;
 
             if(($curr_time-$in_time)>$out_time){
 
                 //logout with session time out notification
 
-                Session::destroy();
-                //set logout message maybe?
-                Session::set("notification","session_expire");
-                echo("wadada");
-                echo(Session::get("notification"));
-                Session::set("login","");
-    
                 header("Location:login");
+
+                //set login message and unset other variables
+                Session::unset("uname");
+                Session::set("login","session_expire");
+                Session::unset("in_time");
+                Session::unset("uname");
+            }else{
+                //set current time as user is active
+                Session::set("in_time",$curr_time);
             }
 
         }

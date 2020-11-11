@@ -27,7 +27,9 @@
     
     //home page
     Route::set('home',function(){
+        //start session
         Session::init();
+        //logout if time is exceeded in session
         Login::timeout(Session::get("curr_time"));
         Controller::create_view('main_home_page');
     });
@@ -37,14 +39,23 @@
     });
 
     Route::set('about_us',function(){
+        //start session
+        Session::init();
+        Login::timeout(Session::get("curr_time"));
         Controller::create_view('about_us');
     });
 
      Route::set('contact_us',function(){
+        //start session
+        Session::init();
         Controller::create_view('contact_us');
     });
 
     Route::set('add_service',function(){
+        //start session
+        Session::init();
+        //logout if time is exceeded in session
+        Login::timeout(Session::get("curr_time"));
         Controller::create_view('add_service');
     });
     
