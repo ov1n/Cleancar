@@ -93,10 +93,6 @@
                 Session::set("login","incorrect_login");
             }
 
-            //destroy session
-            //unset($_SESSION["username"]);
-            //unset($_SESSION["password"]);
-            //echo 'You have cleaned session';
         }
 
         //function to unset variables when logging out
@@ -111,6 +107,29 @@
             header("Location:home");
             //echo($_SESSION["username"]);
             //echo("wheres the output");
+        }
+
+        //function to automatically logout if timeout
+        function timeout($curr_time){
+
+            //getting times from session
+            $in_time=Session::get("in_time");
+            $out_time=Session::$timeout_duration;
+
+            if(($curr_time-$in_time)>$out_time){
+
+                //logout with session time out notification
+
+                Session::destroy();
+                //set logout message maybe?
+                Session::set("notification","session_expire");
+                echo("wadada");
+                echo(Session::get("notification"));
+                Session::set("login","");
+    
+                header("Location:login");
+            }
+
         }
     }
 ?>

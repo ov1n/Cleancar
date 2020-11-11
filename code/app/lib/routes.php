@@ -28,7 +28,7 @@
     //home page
     Route::set('home',function(){
         Session::init();
-        echo(Session::get("in_time"));
+        Login::timeout(Session::get("curr_time"));
         Controller::create_view('main_home_page');
     });
 
@@ -182,7 +182,7 @@
         Session::init();
         Invoice_bill::create_view('invoice_report');
     });
-
+    
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
@@ -194,16 +194,16 @@
         EmployeeList::delete();
     });
 
-     Route::set('add_service_type',function(){
-
-         Session::init();
-        AddServiceType::register();
-    });
-    
-    Route::set('service_type_list',function(){
+    Route::set('add_service_type',function(){
 
         Session::init();
-        ServiceType::create_view('service_type_list');
-    });
+       AddServiceType::register();
+   });
+   
+   Route::set('service_type_list',function(){
 
+       Session::init();
+       ServiceType::create_view('service_type_list');
+   });
+   
 ?>

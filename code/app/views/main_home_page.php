@@ -12,7 +12,9 @@
 <body>
   <?php
     //DEBUGGING
-    //echo(Session::get("test"));
+    echo(Session::get("in_time"));
+    echo("      ");
+    echo(Session::get("curr_time"));
     //TESTING
     ?>
   <!-- Slideshow container -->

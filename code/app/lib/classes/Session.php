@@ -4,11 +4,14 @@
 class Session {
 
     //variable which stores time per session
-    public $timeout_duration = 1800;
+    public static $timeout_duration = 5;
 
     //starts session
     public static function init() {
         @session_start();
+
+        //OVERLOAD TEST
+        Session::set("curr_time", time());
     }
 
     //sets values
