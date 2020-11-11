@@ -179,7 +179,7 @@
 
     //Employee functions
     //view
-    Route::set('employee_view',function(){
+    Route::set('employee_view',function(){ 
         EmployeeList::view();
     });
 

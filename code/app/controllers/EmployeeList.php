@@ -25,6 +25,7 @@
         public function view(){
 
             $empid=$_GET['emp_id'];
+            echo($empid);
             $emp=new Service_employee();
             $array=$emp->get_employee($empid);
             //var_dump($array);
