@@ -23,7 +23,7 @@
         <li>Add Service</li>
       </ul><!-- breadcrumb -->
 
-      <form action="./controllers/Register.php">
+      <form name="add_service_type_form" id="add_service_type_form" method = "post" onsubmit="send_data()">
         <div class="container">  
           <h1>Add Service Type</h1>
           <p>Please fill in this form to create new service type</p>
@@ -58,7 +58,7 @@
                   </select><br>
 
                 &ensp;&ensp;<label for="prize"><div class="form_label"><b>Normal Prize</b></div></label>
-                <input type="text" placeholder="Enter normal prize" name="prize" id="prize" required size="50"></br>
+                <input type="text" placeholder="Enter normal prize" name="price" id="price" required size="50"></br>
 
                 <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button>
