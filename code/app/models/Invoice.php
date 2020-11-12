@@ -34,8 +34,7 @@
             }
 
         }
-
-        function insert_record($bill_no,$reservation_id,$vehicle_no,$vehicle_model,$customer_name,$contct_no,$net_amount){
+        function insert($bill_no,$reservation_id,$vehicle_no,$vehicle_model,$customer_name,$contact_no,$net_amount){
             
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -44,8 +43,8 @@
             $today=date('Y-m-d');
             // echo($today);
             
-            $query_bill="INSERT INTO invoice(bill_no,reservation_id,vehicle_no,vehicle_model,customer_name,contct_no,net_amount) 
-            VALUES('$bill_no','$reservation_id','$vehicle_no','$vehicle_model','$customer_name','$contct_no','$net_amount');";
+            $query_bill="INSERT INTO invoice(bill_no,reservation_id,vehicle_no,vehicle_model,customer_name,contact_no,net_amount,bill_date) 
+            VALUES('$bill_no','$reservation_id','$vehicle_no','$vehicle_model','$customer_name','$contact_no','$net_amount','$today');";
             
             //echo($query);
 
