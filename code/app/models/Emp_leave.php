@@ -36,7 +36,7 @@
 
         }
 
-        function insert_leave($leave_date,$emp_id,$type,$reason,$leave_time){
+        function insert_leave($leave_date,$emp_id,$type,$leave_time,$reason){
             
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -45,12 +45,12 @@
             $today=date('Y-m-d');
             // echo($today);
             
-            $query_emp="INSERT INTO emp_leave(leave_date,emp_id,type,reason,leave_time) 
-            VALUES('$leave_date','$emp_id','$type','$reason','$today')";
+            $query_leave="INSERT INTO emp_leave(leave_date,emp_id,type,leave_time,reason) 
+            VALUES('$leave_date','$emp_id','$type','$leave_time','$reason')";
             
             //echo($query);
 
-            $result= mysqli_query($conn,$query_emp);
+            $result= mysqli_query($conn,$query_leave);
 
             //debugging
             if (!$result) {
