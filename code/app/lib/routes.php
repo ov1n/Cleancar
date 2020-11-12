@@ -216,5 +216,21 @@
        Session::init();
        ServiceType::create_view('service_type_list');
    });
+
+   Route::set('employee_list_recep',function(){
+
+    Session::init();
+    EmployeeList::create_view('employee_list_recep');
+    });
+
+   Route::set('emp_leave',function(){
+
+    Session::init();
+    EmployeeLeave::create_view('emp_leave');
+    });
+
+    Route::set('emp_leave',function(){
+        Controller::create_view('emp_leave');
+    });
    
 ?>
