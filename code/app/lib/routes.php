@@ -27,8 +27,10 @@
     
     //home page
     Route::set('home',function(){
+        //start session
         Session::init();
-        echo(Session::get("in_time"));
+        //logout if time is exceeded in session
+        Login::timeout(Session::get("curr_time"));
         Controller::create_view('main_home_page');
     });
 
@@ -37,14 +39,23 @@
     });
 
     Route::set('about_us',function(){
+        //start session
+        Session::init();
+        Login::timeout(Session::get("curr_time"));
         Controller::create_view('about_us');
     });
 
      Route::set('contact_us',function(){
+        //start session
+        Session::init();
         Controller::create_view('contact_us');
     });
 
     Route::set('add_service',function(){
+        //start session
+        Session::init();
+        //logout if time is exceeded in session
+        Login::timeout(Session::get("curr_time"));
         Controller::create_view('add_service');
     });
     
@@ -182,7 +193,7 @@
         Session::init();
         Invoice_bill::create_view('invoice_report');
     });
-
+    
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
@@ -193,4 +204,33 @@
     Route::set('employee_delete',function(){
         EmployeeList::delete();
     });
+
+    Route::set('add_service_type',function(){
+
+        Session::init();
+       AddServiceType::register();
+   });
+   
+   Route::set('service_type_list',function(){
+
+       Session::init();
+       ServiceType::create_view('service_type_list');
+   });
+
+   Route::set('employee_list_recep',function(){
+
+    Session::init();
+    EmployeeList::create_view('employee_list_recep');
+    });
+
+   Route::set('emp_leave',function(){
+
+    Session::init();
+    EmployeeLeave::create_view('emp_leave');
+    });
+
+    Route::set('emp_leave',function(){
+        Controller::create_view('emp_leave');
+    });
+   
 ?>
