@@ -36,12 +36,6 @@
             $tomorrow=date("Y-m-d", strtotime('+1 day'));
 
             $array['date']=$tomorrow;
-            //DELETE AFTER FIXING
-            //echo($cust_id);
-            //echo($first_name);
-            //echo($last_name);
-            //echo($email);
-            //echo($mobile_tel_no);
 
             return($array);
 
@@ -78,8 +72,7 @@
             $cust=new Customer();       //find a way to not repeat this variable
             $timeslot=new Time_slot();
             echo($_SESSION["uname"]);
-
         }
-
         //function which gets 
     }
+?>

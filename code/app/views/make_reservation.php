@@ -19,8 +19,8 @@
 
     <body>
       <?php
-        echo($_POST['service_type']);
-        echo($_POST['date']);
+        //echo($_POST['service_type']);
+        //echo($_POST['date']);
         //echo(($_SESSION["details"])["last_name"]);
         //echo(($_SESSION["details"])["email"]);
         //echo(($_SESSION["details"])["first_name"]);

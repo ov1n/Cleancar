@@ -71,14 +71,14 @@
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
         
+        //start session
         Session::init();
-        //echo(Session::get("uname"));
+        //initialize array for autofill function
         Session::set("details",Reservation::autofill(Session::get("uname")));
         //set timeslot and date to session
-        $timeslot='1';
-        $date='2020-11-13';
-        Session::set("date",$date);
-        Session::set("timeslot",$timeslot);
+        Reservation::get_time();
+        //Session::set("date",$date);
+        //Session::set("timeslot",$timeslot);
         Reservation::create_view('make_reservation');
     });
 
@@ -233,6 +233,11 @@
         //start session
         Session::init();
         Invoice_bill::add_new();
+    });
+
+    Route::set('calendar',function(){
+        Session::init();
+        Controller::create_view('customer_calendar');
     });
    
 ?>
