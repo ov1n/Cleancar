@@ -35,6 +35,7 @@
             //insert data
             $emp->insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$password);
 
+
         }
 
     }

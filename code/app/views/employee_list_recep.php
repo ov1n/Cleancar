@@ -21,10 +21,6 @@
         <li><a href="home">Manager</a></li>
         <li>Employee</li>
     </ul><!-- breadcrumb -->
-    <?php
-      //echo($_SESSION["uname"]);
-      //var_dump($array);
-    ?>
     
 <div class = "list_table">
 <h2>Employee Details</h2>
