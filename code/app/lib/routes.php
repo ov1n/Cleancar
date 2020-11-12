@@ -162,10 +162,6 @@
         Controller::create_view('employee_update');
     });
 
-    Route::set('view_employee',function(){
-        Controller::create_view('view_employee');
-    });
-
     Route::set('add_timeslot',function(){
         Controller::create_view('add_timeslot');
     });
@@ -233,9 +229,10 @@
         Controller::create_view('emp_leave');
     });
 
-    Route::set('calendar',function(){
+    Route::set('add_bill',function(){
+        //start session
         Session::init();
-        Controller::create_view('customer_calendar');
+        Invoice_bill::add_new();
     });
    
 ?>
