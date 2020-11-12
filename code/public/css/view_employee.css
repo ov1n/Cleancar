@@ -48,7 +48,14 @@ ul.breadcrumb li a:hover {
 }
 /* add the background image for form */
 .background{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg");
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg"); */
+  background-color: rgb(185, 255, 255);
+  margin: 5%;
+  }
+  @media screen and (max-width: 800px){
+    .background{
+      margin: 0%;
+    }
   }
 
   /* style the card in form */
@@ -57,10 +64,15 @@ ul.breadcrumb li a:hover {
   padding-bottom: 30px;
   padding-top: 10px;
   text-align: left;
-  border-radius: 3%;
-  margin-left: 20%;
+  border-radius:8px;
+  margin-left: 25%;
   background-color: #94d3e7;
-  width: 60%;
+  opacity: 0.85;
+  width: 50%;
+  border-style: ridge;
+  border-color: antiquewhite;
+  border-width: 5px;
+  border-color: #0d485a;
 }
 
 @media screen and (max-width: 1050px){
@@ -104,16 +116,18 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
   width: 50%;
   display: inline-block;
   background-color: #94d3e7;
-  color: #000000;
-  font-weight: 800;
-  border-width: 0px;
+  color: #120446;
   font-size: large;
+  font-weight: 700;
+  border-width: 0px;
 }
 
 
 @media screen and (max-width: 750px){
   input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
-    width: 45%;
+    width: 190px;
+    padding: 15px 0px 15px 0px;
+    
   }
 }
 
@@ -135,97 +149,9 @@ hr{
   height:256px;
 }
 
-/* Set a style for the submit/register button */
-.btn {
-  position: relative;
-  float: right;
-  display: block;
-  margin: 30px auto;
-  /*padding: 0; */
-  padding: 12px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-
-  overflow: hidden;
-
-  border-width: 0;
-  outline: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  
-  background-color: #1ABAFA;
-  color: #ecf0f1;
-  
-  transition: background-color .3s;
-}
-  /* style the button when the mouse point move on */
-.btn:hover, .btn:focus {
-  background-color: #008CBA;
-}
-
-.btn > * {
-  position: relative;
-}
-
-.btn span {
-  display: block;
-  padding: 12px 24px;
-}
-
-.btn:before {
-  content: "";
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  display: block;
-  width: 0;
-  padding-top: 0;
-    
-  border-radius: 100%;
-  
-  background-color: rgba(236, 240, 241, .3);
-  
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-}
-
-.btn:active:before {
-  width: 120%;
-  padding-top: 120%;
-  
-  transition: width .2s ease-out, padding-top .2s ease-out;
-}
-
-.btn:disabled {
-  background-color: #696969;
-  color: #ecf0f1;
-}
-
-/* Special round button */
-.btn_round {
-  padding: 5px 5px !important;
-  border-radius: 50%;
-  position: absolute;
-  font-size: 150%;;
-}
-
 /* Styles, not important */
 *, *:before, *:after {
   box-sizing: border-box;
-}
-
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
 }
 
 /* Set a grey background color and center the text of the "sign in" section */
@@ -247,23 +173,52 @@ h1 {
 }
 
 .form_label{
-  color: #008CBA;
-  font-family: 'Segoe UI' !important;
+  color: #120446;
+  font-size: larger;
+  font-weight: bolder;
 }
 
-
-.form_btn{
-  position: absolute;
-  right: 10px;
-  top: 5px;
-}
-
-.btn.cancelbtn {
+.backbtn{
   background-color: #e67e22;
-  width: 20%;
-  height: 60px;
+  width: 100px;
+  height: 45px;
+  float: left;
+  text-align: center;
+  padding: 15px;
+  border-color: #e67e22; 
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:5px;
+  box-shadow: 0px 3px 5px 0px   #572b00;
+  transition: background-color .3s;
 }
-
-.btn.cancelbtn:hover, .btn.orange:focus {
+.backbtn:hover {
   background-color: #d35400;
+}
+.updatebtn{
+  background-color: #008CBA;
+  width: 100px;
+  height: 45px;
+  float: right;
+  text-align: center;
+  padding: 15px;
+  border-color: #008CBA;
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:5px;
+  box-shadow: 0px 3px 5px 0px   #123541;
+  transition: background-color .3s;
+}
+.updatebtn:hover {
+  background-color: #126480;
 }
