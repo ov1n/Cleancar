@@ -62,9 +62,15 @@
   
   
 </div>
-<?php
-    include("nav_login.php");
-    ?>
+<?php 
+        //put appropriate header according to type of user logged in
+        if(Session::get("uname")){
+          include("nav_profile.php");
+        }else{
+          include("nav_login.php");
+        }
+        
+?>
 
 
 <div style="text-align:center; font-size: 20px">

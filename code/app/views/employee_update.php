@@ -22,7 +22,7 @@
         <li>Update Employee</li>          
       </ul><!-- breadcrumb -->
 
-      <form action="./controllers/Register.php">
+      <form >
         <div class="container">  
           <h1>Employee Update</h1>
           <p>Please edit in this form to update the employee details</p>

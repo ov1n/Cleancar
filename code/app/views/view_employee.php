@@ -18,7 +18,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager Home</a></li>
+        <li><a href="manager">Manager Home</a></li>
         <li>View Employee</li>          
       </ul><!-- breadcrumb -->
 
@@ -56,7 +56,7 @@
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
                 <input type="text"  name="home_tel_no" value = <?php echo "$array[home_tel_no]"; ?> id="home_tel_no" disabled>
                 </br>
-                <a href="employee_list"><button class="btn cancelbtn" class="form_btn" >Cancel</button></a>
+                <a class="btn cancelbtn" class="form_btn" href="employee_list"> Back</a>
                 </br></br>
 
               </div><!-- form_content -->   

@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Table</title>
@@ -18,47 +18,57 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
-        <li>Employee</li>
+        <li><a href="receptionist">Receptionist</a></li>
+        <li><a href="Billing">Reports</a></li>
+        <li>Business Reports</li>
     </ul><!-- breadcrumb -->
+    <?php
+      //echo($_SESSION["uname"]);
+      //var_dump($array);
+    ?>
     
 <div class = "list_table">
-<h2>Employee Details</h2>
+<h2>Business Report</h2>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
   <tr>
-            <th>Employee ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>NIC</th>
-            <th>View</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Invoice no</th>
+            <th>Bill no</th>
+            <th>Reservation Id</th>
+            <th>Vehicle No</th>
+            <th>Vehicle Model</th>
+            <th>Customer Name</th>
+            <th>Contact No</th>
+            <th>Net Amount</th>
+
         </tr>
         
-        <?php foreach($array as $emp){ ?>
+        <?php foreach($array as $invoice){ ?>
           <tr>
               <td>
-                  <?php echo "$emp[emp_id]"; ?>
+                  <?php echo "$invoice[invoice_no]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[first_name]"; ?>
+                  <?php echo "$invoice[bill_no]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[last_name]"; ?>
+                  <?php echo "$invoice[reservation_id]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[NIC_no]"; ?>
+                  <?php echo "$invoice[vehicle_no]"; ?>
               </td>
-              <td style = " text-align: center;">
-                  <a href="employee_view?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
+              <td>
+                  <?php echo "$invoice[vehicle_model]"; ?>
               </td>
-              <td style = " text-align: center;">
-                  <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
+              <td>
+                  <?php echo "$invoice[customer_name]"; ?>
               </td>
-              <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+              <td>
+                  <?php echo "$invoice[contact_no]"; ?>
+              </td>
+              <td>
+                  <?php echo "$invoice[net_amount]"; ?>
               </td>
           </tr>
       <?php } ?>

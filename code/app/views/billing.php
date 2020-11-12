@@ -10,6 +10,10 @@
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="public\js\bill.js"></script>
+        <script src="public/js/jquery/jquery.alertable.min.js"></script>
+
     </head>
 
     <body>
@@ -23,10 +27,15 @@
         <li>Billing</li>   
       </ul><!-- breadcrumb -->
 
-      <form action="./controllers/Register.php">
+      <div class = "select_buttons">
+          <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
+          <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
+          </div>
+          
+      <form name="add_bill" id="add_bill" method = "post" onsubmit="send_bill_data()">
         <div class="container">  
           <h1>Billing</h1>
-          <hr></br>
+          </br>
           <div class="background">
             <hr>
             <div class="card" >
@@ -53,7 +62,7 @@
                 &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Net Amount</b></div></label>
                 <input type="text" placeholder="Enter the Net Amount" name="net_amount" id="net_amount" ></br>
 
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <button type="cancel" class="btn cancelbtn" class="form_btn" >Cancel</button>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">OK</button>
               </div><!-- form_content --> 
             </div><!-- card -->
