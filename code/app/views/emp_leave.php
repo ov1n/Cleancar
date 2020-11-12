@@ -18,42 +18,45 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
-        <li>Employee</li>
+        <li><a href="employee">Employee</a></li>
+        <li>Employee leave</li>
     </ul><!-- breadcrumb -->
+    <?php
+      //echo($_SESSION["uname"]);
+      //var_dump($array);
+    ?>
     
 <div class = "list_table">
-<h2>Employee Details</h2>
+<h2>Upcoming Accepted Leave Details</h2>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
   <tr>
-            <th>Employee ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>NIC</th>
-            <th>View</th>
+            <th>Leave Date</th>
+            <th>Leave Type</th>
+            <th>Reason</th>
+            <th>Leave Time</th>
             <th>Edit</th>
             <th>Delete</th>
+
+
         </tr>
         
-        <?php foreach($array as $emp){ ?>
+        <?php foreach($array as $emp_leave){ ?>
           <tr>
               <td>
-                  <?php echo "$emp[emp_id]"; ?>
+                  <?php echo "$emp_leave[leave_date]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[first_name]"; ?>
+                  <?php echo "$emp_leave[type]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[last_name]"; ?>
+                  <?php echo "$emp_leave[reason]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[NIC_no]"; ?>
+                  <?php echo "$emp_leave[leave_time]"; ?>
               </td>
-              <td style = " text-align: center;">
-                  <a href="employee_view?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
-              </td>
+
               <td style = " text-align: center;">
                   <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
               </td>

@@ -1,20 +1,21 @@
 <?php
     include_once 'Model.php';
 
-    class Invoice extends Model{
+    class Emp_leave extends Model{
 
         //automatically create db object
         public function __construct(){
                 //$db=new Database();
         }
 
-        //getting all details of Invoice
-        function get_bill_details(){
+        //getting all details of employees
+        function get_detail($id){
 
+            $today=date('Y-m-d');
             //assign connectivity to a variable
             $conn=Database::conn();
                
-            $query="SELECT* FROM invoice";
+            $query="SELECT leave_date,type,reason,leave_time FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > '$today'";
             $result= mysqli_query($conn,$query);
             
             //debugging
@@ -24,17 +25,18 @@
             }
 
             //get employees in an array
-            $bill_details = $result->fetch_all(MYSQLI_ASSOC);
+            $leaves = $result->fetch_all(MYSQLI_ASSOC);
             //var_dump($employees);
 
             //if array is not empty that means employees are returning
-            if($bill_details){
+            if($leaves){
                 //echo("go to view");
-                return($bill_details);
+                return($leaves);
             }
 
         }
-        function insert($bill_no,$reservation_id,$vehicle_no,$vehicle_model,$customer_name,$contact_no,$net_amount){
+
+        function insert_leave($leave_date,$emp_id,$type,$reason,$leave_time){
             
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -43,12 +45,12 @@
             $today=date('Y-m-d');
             // echo($today);
             
-            $query_bill="INSERT INTO invoice(bill_no,reservation_id,vehicle_no,vehicle_model,customer_name,contact_no,net_amount,bill_date) 
-            VALUES('$bill_no','$reservation_id','$vehicle_no','$vehicle_model','$customer_name','$contact_no','$net_amount','$today');";
+            $query_emp="INSERT INTO emp_leave(leave_date,emp_id,type,reason,leave_time) 
+            VALUES('$leave_date','$emp_id','$type','$reason','$today')";
             
             //echo($query);
 
-            $result= mysqli_query($conn,$query_bill);
+            $result= mysqli_query($conn,$query_emp);
 
             //debugging
             if (!$result) {
@@ -57,6 +59,7 @@
             }
         }
 
+        
     }
 
 ?>
