@@ -18,25 +18,23 @@
             require_once("./views/$view_name.php");
         }
 
-        static function add_le(){
+        static function add_leave(){
 
-            $emp=new Service_employee();
+            $leave=new emp_leave();
             
             //get each field from form
-            $first_name=$_POST['first_name'];
-            $last_name=$_POST['last_name'];
-            $nic_no=$_POST['nic'];
-            $address=$_POST['address'];
-            $e_mail=$_POST['email'];
-            $unhashed=$_POST['password'];
-            $mobile_tel_no=$_POST['mobile_tel_no'];
-            $home_tel_no=$_POST['home_tel_no'];
+            $leave_date=$_POST['leave_date'];
+            $emp_id=$_POST['emp_id'];
+            $type=$_POST['type'];
+            $leave_time=$_POST['leave_time'];
+            $reason=$_POST['reason'];
 
             //insert data
-            $emp->insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$password);
+            $leave->insert_record($leave_date,$emp_id,$type,$leave_time,$reason);
 
 
         }
+
 
     }
 
