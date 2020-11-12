@@ -119,7 +119,7 @@
             //timeout duration is declared as the maxximum time a user can stay idle
             $out_time=Session::$timeout_duration;
 
-            if(($curr_time-$in_time)>$out_time){
+            if((Session::get("uname")) && ($curr_time-$in_time)>$out_time){
 
                 //logout with session time out notification
 
