@@ -10,6 +10,15 @@
            
         }
 
+        //overloading create view
+        public static function create_view($view_name){
+
+            //get variables from session
+            $timeslot=Session::get("timeslot");
+            $date=Session::get("date");
+            require_once("./views/make_reservation.php");
+        }
+
         static function autofill($cust_id){
 
             $cust=new Customer();       //find a way to not repeat this variable

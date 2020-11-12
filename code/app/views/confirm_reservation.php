@@ -32,26 +32,37 @@
               <h2>&ensp;&ensp;Thank you for making your online reservation with CleanCar!</h2></br>
               <h3>&ensp;&ensp;Your reservation details are as follows: </h3></br>
               <div id=form_content> <!-- div to center needed elements -->
-
+                <?php $array=(Session::get("details")); ?>
                 <!-- each field gets details from the array -->
+                &ensp;&ensp;<label for="res_id"><div class="form_label"><b>Reservation ID</b></div></label>
+                <input type="text"  name="res_id" value = 1223 id="res_id" disabled></br>
 
-                &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
-                <input type="text"  name="first_name" value = <?php echo "$array[first_name]"; ?> id="first_name" disabled></br>
+                <!--ADD CONCAT FUNCTION -->
+                &ensp;&ensp;<label for="first_name"><div class="form_label"><b>Customer Name</b></div></label>
+                <input type="text"  name="first_name" value = <?php echo "$array[first_name]" ?> id="first_name" disabled></br>
 
-                &ensp;&ensp;<label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
-                <input type="text"  name="last_name" value = <?php echo "$array[last_name]"; ?> id="last_name" disabled></br>
+                &ensp;&ensp;<label for="vehicle_no"><div class="form_label"><b>Vehicle No</b></div></label>
+                <input type="text"  name="vehicle_no" value = KB-1024 id="vehicle_no" disabled></br>
 
-                &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
-                <input type="text"  name="address" value = <?php echo "$array[address]"; ?> id="address" disabled></br>
+                &ensp;&ensp;<label for="category"><div class="form_label"><b>Category</b></div></label>
+                <input type="text"  name="category" value = category id="category" disabled></br>
 
-                &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-                <input type="email"  name="email" value = <?php echo "$array[email]"; ?> id="e-mail" disabled></br>
+                &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
+                <input type="text"  name="service_type" value = 10 id="service_type" disabled></br>
 
-                &ensp;&ensp;<label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="text"  name="mobile_tel_no" value = <?php echo "$array[mobile_tel_no]"; ?> id="mobile_tel_no" disabled></br>
-              
-                &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
-                <input type="text"  name="home_tel_no" value = <?php echo "$array[home_tel_no]"; ?> id="home_tel_no" disabled>
+                &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
+                <input type="text"  name="time" value = "8.00AM" id="time" disabled></br>
+
+                &ensp;&ensp;<label for="approx"><div class="form_label"><b>Approximate Duration</b></div></label>
+                <input type="text"  name="approx" value = '2 hours' id="approx" disabled></br>
+
+                &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
+                <input type="text"  name="lift_no" value = "1" id="lift_no" disabled></br>
+
+                &ensp;&ensp;<label for="price"><div class="form_label"><b>Price</b></div></label>
+                <input type="text"  name="price" value = "10,000" id="price" disabled></br>
+
+                <h3> For more details please contact CleanCar at our hotline </h3>
                 </br>
                 <a href="employee_list"><button class="btn cancelbtn" class="form_btn" >Cancel</button></a>
                 </br></br>
@@ -67,6 +78,7 @@
       <?php 
           //include nav bar externally 
           include("nav_profile.php");
+          
       ?>
 
       <?php 

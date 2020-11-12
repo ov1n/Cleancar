@@ -15,7 +15,9 @@ var button_enable = function(){
       $.alertable.confirm('Do you want to make an Advance Payment?').then(function() {
           console.log('make advance Payment');
         }, function() {
-          console.log('Dont make advance Payment');
+          console.log('Dont make advance Payment what');
+          //insert code here
+          window.location = 'confirm_reservation';
         });
       console.log('Confirmation submitted');
     }, function() {

@@ -74,12 +74,12 @@
         Session::init();
         //echo(Session::get("uname"));
         Session::set("details",Reservation::autofill(Session::get("uname")));
-        
-        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
-        Home::create_view('make_reservation');
+        //set timeslot and date to session
+        $timeslot='1';
+        $date='2020-11-13';
+        Session::set("date",$date);
+        Session::set("timeslot",$timeslot);
+        Reservation::create_view('make_reservation');
     });
 
     //route to make reservation from receptionist
@@ -97,17 +97,17 @@
 
     //route to confirm reservation with database
     Route::set('confirm_reservation',function(){ 
-        //session_start();
+        session_start();
         //echo($_SESSION["uname"]);
         //Reservation::insert();
-        Reservation::create_view('confirm_reservation');
+        Controller::create_view('confirm_reservation');
     });
 
     //experimental route to develop confirm reservation page
     Route::set('conres',function(){ 
         //session_start();
         //echo($_SESSION["uname"]);
-        Reservation::create_view('confirm_reservation');
+        Controller::create_view('confirm_reservation');
     });
 
     //get form details from  register
@@ -231,6 +231,11 @@
 
     Route::set('emp_leave',function(){
         Controller::create_view('emp_leave');
+    });
+
+    Route::set('calendar',function(){
+        Session::init();
+        Controller::create_view('customer_calendar');
     });
    
 ?>
