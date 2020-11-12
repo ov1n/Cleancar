@@ -37,7 +37,7 @@
         <li>Select Date</li>    
       </ul><!-- breadcrumb -->
 
-      <form id="reservation" name="reservation" >
+      <form id="reservation_time" name="reservation_time" method="POST" action="make_reservation">
         <div class="container">  
           <h1>Select Date</h1>
           <hr>
@@ -48,6 +48,14 @@
                 <div id=form_content> <!-- div to center needed elements -->
                 
                 <!-- Each div has php echo function to autofill the form from user account details -->
+                <select name="service_type" id="service_type">
+                    <option value="Full Service">Full Service</option>
+                    <option value="Normal Service">Normal Service</option>
+                    <option value="Body Wash">Body wash</option>
+                </select><br>
+
+                &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
+                <input type="text" placeholder="Enter date" name="date" id="date"></br>
                 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
                 <button type="submit" class="btn" class="form_btn" >Submit</button>
