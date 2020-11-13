@@ -25,7 +25,9 @@
         //include nav bar externally
         include("nav_login.php");
       ?>
-
+      </br>
+      </br>
+      </br>
       <ul class="breadcrumb">
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
@@ -33,14 +35,14 @@
         <li>Customer Registration</li>  
       </ul>
 
-      <form method="POST" name="reg_form" id="reg_form" onsubmit="create()">
+      <form method="POST" name="reg_form" id="reg_form" action="reg_auth">
         <div class="container">  
           <h1>Registration</h1>
           <p>Please fill in this form to register as a customer</p>
           <div class="background">
             <hr>
             <div class="card" >
-              <div id=form_content> <!-- div to center needed elements -->
+              <div id=form_content> <!--onsubmit="create()" div to center needed elements -->
 
                 <!-- &ensp characters are used to improve clarity and keep clear spacing -->
               
