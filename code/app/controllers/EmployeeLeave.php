@@ -25,7 +25,7 @@
             //get each field from form
             $leave_date=$_POST['leave_date'];
             $emp_id=$_POST['emp_id'];
-            $type=$_POST['type'];
+            $type=$_POST['leave_type'];
             $leave_time=$_POST['leave_time'];
             $reason=$_POST['reason'];
 

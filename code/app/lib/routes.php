@@ -239,5 +239,13 @@
         Session::init();
         Controller::create_view('customer_calendar');
     });
+
+    Route::set('add_leave_',function(){
+        //start session
+        Session::init();
+        //logout if time is exceeded in session
+       // Login::timeout(Session::get("curr_time"));
+        EmployeeLeave::add_leave();
+    });
    
 ?>

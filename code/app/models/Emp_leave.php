@@ -42,9 +42,6 @@
             //assign connectivity to a variable
             $conn=Database::conn();
 
-            //get date of today for registered date
-            $today=date('Y-m-d');
-            // echo($today);
             
             $query_leave="INSERT INTO emp_leave(leave_date,emp_id,type,leave_time,reason) 
             VALUES('$leave_date','$emp_id','$type','$leave_time','$reason')";
