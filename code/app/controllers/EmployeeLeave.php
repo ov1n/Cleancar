@@ -20,7 +20,7 @@
 
         static function add_leave(){
 
-            $leave=new emp_leave();
+            $leave=new Emp_Leave();
             
             //get each field from form
             $leave_date=$_POST['leave_date'];
@@ -30,7 +30,7 @@
             $reason=$_POST['reason'];
 
             //insert data
-            $leave->insert_record($leave_date,$emp_id,$type,$leave_time,$reason);
+            $leave->insert_leave($leave_date,$emp_id,$type,$leave_time,$reason);
 
 
         }
