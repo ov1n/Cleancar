@@ -25,7 +25,7 @@ body {
 
 .navbar {
   height: 65px;
-  background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
+  background-image: linear-gradient(to right, rgb(250, 0, 0,0.85), rgb(0, 118, 255));
   position: fixed; /* Make it stick/fixed */
   top: 0; /* Stay on top */
   width: 100%; /* Full width */
@@ -196,10 +196,21 @@ body {
   display: block;
 }
 
+
+@media screen and (max-width: 900px){
+  .navbar{
+    display: none;
+  }
+}
+
 </style>
 </head>
 <body>
-
+ <?php 
+        //get header in seperate file(side nav bar)
+        include("sidenav_profile.php");
+        
+    ?>
 <div class="navbar">
    <div class="dropdown1">
     <button class="dropbtn"><a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" ></i></a>
@@ -214,13 +225,15 @@ body {
   <div class="dropdown">
     <button class="dropbtn">Booking<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-content">
-      <a href="calendar">Make Reservation</a>
+      <a href="make_reservation">Make Reservation</a>
       <a href="view_reservations">View Reservation</a>
     </div>
   </div> 
    <a href="home">Home</a>
    <img src="public\images\2222.png">  
 </div>
+
+
 
 <script type="text/javascript">
   /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
