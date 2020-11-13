@@ -19,7 +19,8 @@ body {
 
 .navbar {
   height: 65px;
-  background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
+  display: block;
+  background-image: linear-gradient(to right, rgb(250, 0, 0,0.85), rgb(0, 118, 255));
   position: fixed; /* Make it stick/fixed */
   top: 0; /* Stay on top */
   width: 100%; /* Full width */
@@ -126,11 +127,19 @@ body {
   display: block;
 }
 
-
+@media screen and (max-width: 900px){
+  .navbar{
+    display: none;
+  }
+}
   </style>
 </head>
 <body>
-
+ <?php 
+        //get header in seperate file(side nav bar)
+        include("sidenav_login.php");
+        
+    ?>
 <div class="navbar">
    <a href="login">Sign In</a>
    <a href="register">Sign Up</a>
