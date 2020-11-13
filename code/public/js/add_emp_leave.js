@@ -6,9 +6,9 @@ function send_leave_data() {
     dataType: 'json',
     //the data array
     data: {
-      leave_date: document.add_leave_form.date.value,
+      leave_date: document.add_leave_form.leave_date.value,
       emp_id: document.add_leave_form.emp_id.value,
-      type: document.add_leave_form.leave_type.value,
+      leave_type: document.add_leave_form.leave_type.value,
       leave_time: document.add_leave_form.leave_time.value,
       reason: document.add_leave_form.reason.value
       
