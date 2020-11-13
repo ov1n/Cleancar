@@ -10,6 +10,9 @@
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="public\js\add_service_type.js"></script>
+      <script src="public/js/jquery/jquery.alertable.min.js"></script>
     </head>
 
     <body>
