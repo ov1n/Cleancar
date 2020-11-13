@@ -71,15 +71,15 @@
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
         
+        //start session
         Session::init();
-        //echo(Session::get("uname"));
+        //initialize array for autofill function
         Session::set("details",Reservation::autofill(Session::get("uname")));
-        
-        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
-        Home::create_view('make_reservation');
+        //set timeslot and date to session
+        Reservation::get_time();
+        //Session::set("date",$date);
+        //Session::set("timeslot",$timeslot);
+        Reservation::create_view('make_reservation');
     });
 
     //route to make reservation from receptionist
@@ -97,17 +97,17 @@
 
     //route to confirm reservation with database
     Route::set('confirm_reservation',function(){ 
-        //session_start();
+        session_start();
         //echo($_SESSION["uname"]);
         //Reservation::insert();
-        Reservation::create_view('confirm_reservation');
+        Controller::create_view('confirm_reservation');
     });
 
     //experimental route to develop confirm reservation page
     Route::set('conres',function(){ 
         //session_start();
         //echo($_SESSION["uname"]);
-        Reservation::create_view('confirm_reservation');
+        Controller::create_view('confirm_reservation');
     });
 
     //get form details from  register
@@ -233,6 +233,19 @@
         //start session
         Session::init();
         Invoice_bill::add_new();
+    });
+
+    Route::set('calendar',function(){
+        Session::init();
+        Controller::create_view('customer_calendar');
+    });
+
+    Route::set('add_leave_',function(){
+        //start session
+        Session::init();
+        //logout if time is exceeded in session
+       // Login::timeout(Session::get("curr_time"));
+        EmployeeLeave::add_leave();
     });
    
 ?>

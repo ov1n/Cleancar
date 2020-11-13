@@ -8,6 +8,30 @@
                 //$db=new Database();
         }
 
+        //get id of the service name
+        function get_details($type_name){
+                
+            //assign connectivity to a variable
+            $conn=Database::conn();
+
+            //FIX BY ADDING DURATION
+            $query="SELECT type_id FROM service_type WHERE type_name='$type_name'";
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            
+            var_dump($r);
+            return $r;
+            
+        }
+
         //getting all details of employees
         function get_all(){
 
@@ -90,5 +114,32 @@
             return True;
             
         }
+    }
+
+    //get types of services corresponding to category
+    function get_types($category){
+
+        //assign connectivity to a variable
+        $conn=Database::conn();
+           
+        $query="SELECT type_name FROM service_type WHERE vehicle_category='$category'";
+        $result= mysqli_query($conn,$query);
+        
+        //debugging
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($conn));
+            exit();
+        }
+
+        //get employees in an array
+        $types = $result->fetch_all(MYSQLI_ASSOC);
+        //var_dump($employees);
+
+        //if array is not empty that means employees are returning
+        if($types){
+            //echo("go to view");
+            return($types);
+        }
+
     }
 ?>

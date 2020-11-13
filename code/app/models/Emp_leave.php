@@ -15,7 +15,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
                
-            $query="SELECT leave_date,type,reason,leave_time FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > '$today'";
+            $query="SELECT leave_date,type,leave_time,reason FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > '$today'";
             $result= mysqli_query($conn,$query);
             
             //debugging
@@ -36,21 +36,19 @@
 
         }
 
-        function insert_leave($leave_date,$emp_id,$type,$reason,$leave_time){
+
+        function insert_leave($leave_date,$emp_id,$type,$leave_time,$reason){
             
             //assign connectivity to a variable
             $conn=Database::conn();
 
-            //get date of today for registered date
-            $today=date('Y-m-d');
-            // echo($today);
             
-            $query_emp="INSERT INTO emp_leave(leave_date,emp_id,type,reason,leave_time) 
-            VALUES('$leave_date','$emp_id','$type','$reason','$today')";
+            $query_leave="INSERT INTO emp_leave(leave_date,emp_id,type,leave_time,reason) 
+            VALUES('$leave_date','$emp_id','$type','$leave_time','$reason')";
             
             //echo($query);
 
-            $result= mysqli_query($conn,$query_emp);
+            $result= mysqli_query($conn,$query_leave);
 
             //debugging
             if (!$result) {
