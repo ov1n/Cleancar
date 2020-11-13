@@ -74,12 +74,12 @@
         //start session
         Session::init();
         //initialize array for autofill function
-        Session::set("details",Reservation::autofill(Session::get("uname")));
+        Session::set("details",Make_reservation::autofill(Session::get("uname")));
         //set timeslot and date to session
-        Reservation::get_time();
+        Make_reservation::get_time();
         //Session::set("date",$date);
         //Session::set("timeslot",$timeslot);
-        Reservation::create_view('make_reservation');
+        Make_reservation::create_view('make_reservation');
     });
 
     //route to make reservation from receptionist
@@ -88,7 +88,7 @@
         Session::init();
         //echo(Session::get("uname"));
         
-        //$_SESSION["details"]=Reservation::autofill($_SESSION["uname"]);
+        //$_SESSION["details"]=Make_reservation::autofill($_SESSION["uname"]);
         //echo '<pre>';
         //var_dump($_SESSION);
         //echo '</pre>';
@@ -98,8 +98,10 @@
     //route to confirm reservation with database
     Route::set('confirm_reservation',function(){ 
         session_start();
-        //echo($_SESSION["uname"]);
-        //Reservation::insert();
+        echo '<pre>';
+        var_dump($_SESSION);
+        echo '</pre>';
+        Make_reservation::insert();
         Controller::create_view('confirm_reservation');
     });
 
