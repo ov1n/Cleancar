@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 12, 2020 at 11:12 AM
+-- Generation Time: Nov 13, 2020 at 02:36 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -102,11 +102,17 @@ CREATE TABLE `emp_leave` (
 --
 
 INSERT INTO `emp_leave` (`leave_date`, `emp_id`, `type`, `reason`, `leave_time`, `is_accepted`) VALUES
+('2020-11-09', 2002, 'Full_leave', 'test2', '08:00:00', ''),
+('2020-11-18', 2001, 'Full_leave', 'nidi matai ', '08:00:00', ''),
+('2020-11-18', 2002, 'half_day', 'wec', '12:00:00', ''),
+('2020-11-20', 2002, 'short_leave', 'nnn', '08:00:00', ''),
+('2020-11-21', 2002, 'half_day', 'test', '08:00:00', ''),
 ('2020-11-27', 2002, 'Full Leave', ' medical channeling', '08:00:00', 'accepted'),
 ('2020-11-28', 2002, 'Short Leave', 'hjbjhgcvjbnlnlkbvh ', '00:00:15', 'accepted'),
 ('2020-11-30', 2002, 'Short Leave', 'tgjbnl', '00:00:08', 'accepted'),
 ('2020-12-02', 2003, 'Half Day', 'wedding', '00:00:12', 'accepted'),
-('2020-12-04', 2002, 'Half Day', 'gihbkjnu', '00:00:12', 'accepted');
+('2020-12-04', 2002, 'Half Day', 'gihbkjnu', '00:00:12', 'accepted'),
+('2020-12-16', 2001, 'short_leave', 'nidi matai ', '08:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -255,12 +261,12 @@ CREATE TABLE `service_employee` (
 --
 
 INSERT INTO `service_employee` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `special_area`, `password`) VALUES
-(2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', 114433221, 714433221, '56452102v', 10, 2, 1, '2020-09-17', 'Mechanics', 'employee'),
-(2001, 'Tharindu', 'Dulshan', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', 412241190, 711565953, '971400757v', 0, 0, 0, '2020-11-10', '', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2002, 'Minuri', 'Yasara', 'shanika, Akurugoda, Tellijjawila.', 'yasarawickramanayaka@gmail.com', 342287472, 711208660, '986180056v', 0, 0, 0, '2020-11-10', '', '8a62b7c940f895985dc66836150cce72'),
-(2003, 'Buthsara', 'Madushanka', '"nisala", akuressa, Matara', 'buthsara@gmail.com', 412259876, 756982646, '972564844v', 0, 0, 0, '2020-11-10', '', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2004, 'Thenuka', 'Ovin', 'Millennium city, Athurugiriya, Malabe.', 'thenukaovin@gmail.com', 114875695, 789564213, '2000764902', 0, 0, 0, '2020-11-10', '', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2005, 'asindu', 'chamika', 'hbfweiyfhwei', 'tdwithanage97@gmail.com', 412259874, 711565984, '5621265456', 0, 0, 0, '2020-11-11', '', 'd41d8cd98f00b204e9800998ecf8427e');
+(2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', 114433221, 714433221, '56452102v', 4, 2, 10, '2020-09-17', 'Mechanics', 'employee'),
+(2001, 'Tharindu', 'Dulshan', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', 412241190, 711565953, '971400757v', 3, 5, 6, '2020-11-10', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2002, 'Minuri', 'Yasara', 'shanika, Akurugoda, Tellijjawila.', 'yasarawickramanayaka@gmail.com', 342287472, 711208660, '986180056v', 2, 6, 4, '2020-11-10', 'L_002', '8a62b7c940f895985dc66836150cce72'),
+(2003, 'Buthsara', 'Madushanka', '"nisala", akuressa, Matara', 'buthsara@gmail.com', 412259876, 756982646, '972564844v', 5, 6, 8, '2020-11-10', 'L_003 ', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2004, 'Thenuka', 'Ovin', 'Millennium city, Athurugiriya, Malabe.', 'thenukaovin@gmail.com', 114875695, 789564213, '2000764902', 4, 6, 4, '2020-11-10', 'L_004', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2005, 'asindu', 'chamika', 'hbfweiyfhwei', 'tdwithanage97@gmail.com', 412259874, 711565984, '5621265456', 6, 8, 12, '2020-11-11', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e');
 
 -- --------------------------------------------------------
 
@@ -273,7 +279,7 @@ CREATE TABLE `service_type` (
   `type_name` varchar(100) NOT NULL,
   `vehicle_category` varchar(50) NOT NULL,
   `no_of_emp` int(11) NOT NULL,
-  `no_of_timeslots` int(11) NOT NULL,
+  `duration` float NOT NULL,
   `lift_no` varchar(50) NOT NULL,
   `price` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -282,13 +288,13 @@ CREATE TABLE `service_type` (
 -- Dumping data for table `service_type`
 --
 
-INSERT INTO `service_type` (`type_id`, `type_name`, `vehicle_category`, `no_of_emp`, `no_of_timeslots`, `lift_no`, `price`) VALUES
-(1, 'Full Service', 'Car', 3, 4, 'L_01', 12000),
-(2, 'Normal Service', 'Car', 2, 2, 'L_01', 8000),
-(3, 'Body Wash', 'Car', 2, 2, 'L_04', 2000),
-(4, 'Full Service', 'Van', 4, 6, 'L_02', 15000),
-(5, 'Normal Service', 'Van', 3, 4, 'L_02', 8000),
-(6, 'Body Wash', 'Van', 2, 2, 'L_05', 3000);
+INSERT INTO `service_type` (`type_id`, `type_name`, `vehicle_category`, `no_of_emp`, `duration`, `lift_no`, `price`) VALUES
+(1, 'Full Service', 'Car', 3, 2, 'L_01', 12000),
+(2, 'Normal Service', 'Car', 2, 1.5, 'L_01', 8000),
+(3, 'Body Wash', 'Car', 2, 1.5, 'L_04', 2000),
+(4, 'Full Service', 'Van', 4, 2.5, 'L_02', 15000),
+(5, 'Normal Service', 'Van', 3, 2, 'L_02', 8000),
+(6, 'Body Wash', 'Van', 2, 1.5, 'L_05', 3000);
 
 -- --------------------------------------------------------
 
