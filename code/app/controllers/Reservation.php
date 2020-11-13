@@ -52,7 +52,8 @@
             //get necessary data from the view through POST
             $date=$_POST["date"];
             $service_name=$_POST["service_type"];
-            echo($service_name);
+            $time=$_POST["time"];
+            echo($time);
 
             //get the service typeid,no of timeslots to a single array
             $service_details=$service_type->get_details($service_name);

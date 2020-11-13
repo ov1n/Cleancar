@@ -19,7 +19,7 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="home">Customer</a></li>
-        <li><a href="make_reservation">Make Reservation</a></li>
+        <li>Make Reservation</a></li>
         <li>Confirm</a></li>          
       </ul><!-- breadcrumb -->
 

@@ -48,6 +48,7 @@
                 <div id=form_content> <!-- div to center needed elements -->
                 
                 <!-- Each div has php echo function to autofill the form from user account details -->
+                &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type:</b></div></label>
                 <select name="service_type" id="service_type">
                     <option value="Full Service">Full Service</option>
                     <option value="Normal Service">Normal Service</option>
@@ -55,7 +56,14 @@
                 </select><br>
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
-                <input type="text" placeholder="Enter date" name="date" id="date"></br>
+                <input type="date" placeholder="Enter the date" name="date" id="date" required></br>
+
+                &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
+                <select name="time" id="time">
+                    <option value="08.00">08.00</option>
+                    <option value="10.00">10.00</option>
+                    <option value="12.00">12.00</option>
+                </select><br>
                 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
                 <button type="submit" class="btn" class="form_btn" >Submit</button>

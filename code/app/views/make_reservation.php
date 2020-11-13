@@ -39,7 +39,7 @@
         <div class="container">  
           <h1>Make Reservation</h1>
           <hr>
-          <p>Please fill in this form to make reservation</p>
+          <p style="text-align:center">Please fill in this form to make reservation</p>
             <div class="background">
               <hr>
               <div class="card" >
