@@ -225,9 +225,6 @@
     EmployeeLeave::create_view('emp_leave');
     });
 
-    Route::set('emp_leave',function(){
-        Controller::create_view('emp_leave');
-    });
 
     Route::set('add_bill',function(){
         //start session
