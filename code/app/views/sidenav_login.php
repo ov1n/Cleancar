@@ -4,7 +4,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>  <!--user icon-->
     <link rel="stylesheet" type="text/css" href="public/css/sidenav.css"><!--side nav bar css-->
-
+     <script src="public/js/sidenav_login.js"></script><!--side nav bar js-->
 </head>
 <body>
 <!--side nav bar-->
@@ -31,16 +31,6 @@
 </div>
 
 <script>
-function openSideNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-}
-
-function closeSideNav() {
-  document.getElementById("mySidenav").style.width = "0";
-}
-
-
-
 
 var dropdown = document.getElementsByClassName("dropdown-btn");
 var i;
