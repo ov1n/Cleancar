@@ -23,5 +23,22 @@
                 printf("Error: %s\n", mysqli_error($conn));
                 exit();
             }
+
+            //if no error get the reservation id from that table
+            $query2="SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'cleancar' AND TABLE_NAME = 'reservation'";
+
+            $result2= mysqli_query($conn,$query2);
+
+            //debugging
+            if (!$result2) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get the sole element reservation id and return it 
+            $r = mysqli_fetch_array($result2);
+            $res_id=array_shift( $r );
+
+            return $res_id;
         }
     }
