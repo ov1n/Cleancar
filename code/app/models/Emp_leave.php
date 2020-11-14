@@ -15,7 +15,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
                
-            $query="SELECT leave_date,type,leave_time,reason FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > '$today'";
+            $query="SELECT leave_date,type,leave_time,reason FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'yes' AND leave_date > '$today'";
             $result= mysqli_query($conn,$query);
             
             //debugging
@@ -57,6 +57,34 @@
             }
         }
 
+        
+        //getting all details of employee leaves have to accept
+        function get_pending(){
+
+            $today=date('Y-m-d');
+            //assign connectivity to a variable
+            $conn=Database::conn();
+               
+            $query="SELECT first_name,last_name,leave_date,type,leave_time,reason FROM emp_leave LEFT JOIN service_employee ON emp_leave.emp_id = emp_leave.emp_id WHERE NOT is_accepted = 'yes' AND leave_date > '$today'";
+            $result= mysqli_query($conn,$query);
+            
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get employees in an array
+            $leaves = $result->fetch_all(MYSQLI_ASSOC);
+            //var_dump($employees);
+
+            //if array is not empty that means employees are returning
+            if($leaves){
+                //echo("go to view");
+                return($leaves);
+            }
+
+        }
         
     }
 
