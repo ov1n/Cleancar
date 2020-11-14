@@ -51,7 +51,7 @@
         Controller::create_view('contact_us');
     });
 
-    Route::set('add_service',function(){
+    Route::set('Add_service',function(){
         //start session
         Session::init();
         //logout if time is exceeded in session
