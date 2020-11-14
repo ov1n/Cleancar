@@ -254,5 +254,9 @@
        // Login::timeout(Session::get("curr_time"));
         EmployeeLeave::add_leave();
     });
+
+    Route::set('leave_static',function(){
+        Controller::create_view('leave_static');
+    });
    
 ?>
