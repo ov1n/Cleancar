@@ -35,7 +35,7 @@
         <li>Customer Registration</li>  
       </ul>
 
-      <form method="POST" name="reg_form" id="reg_form" action="reg_auth">
+      <form method="POST" name="reg_form" id="reg_form" onsubmit="create()">
         <div class="container">  
           <h1>Registration</h1>
           <p>Please fill in this form to register as a customer</p>
@@ -78,6 +78,7 @@
                 &ensp;&ensp;&ensp;&ensp;<label for="home_tel_no" class="form_label"><div class="form_label"><b>Home</b></div></label>
                 <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required>
                 </br>
+                <div class="result"></div>
 
 
                 <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
