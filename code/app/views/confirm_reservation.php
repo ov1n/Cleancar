@@ -64,7 +64,7 @@
 
                 <h3> For more details please contact CleanCar at our hotline </h3>
                 </br>
-                <a href="employee_list"><button class="btn cancelbtn" class="form_btn" >Cancel</button></a>
+                <a class="backbtn" href="home">Back</a>
                 </br></br>
 
               </div><!-- form_content -->   

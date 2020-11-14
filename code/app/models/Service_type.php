@@ -15,7 +15,7 @@
             $conn=Database::conn();
 
             //FIX BY ADDING DURATION
-            $query="SELECT type_id FROM service_type WHERE type_name='$type_name'";
+            $query="SELECT type_id,duration FROM service_type WHERE type_name='$type_name'";
             $result= mysqli_query($conn,$query);
 
             //debugging
