@@ -34,7 +34,23 @@
  <img src="public/images/nav_bar_image/imageedit_58_5294224580.png"> 
 </div>
 
+<script type="text/javascript">
+  var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
 
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+</script>
    
 </body>
 </html> 
