@@ -83,9 +83,14 @@
             //echo($curr_date);
             
             //insert into reservation table , 0 for adv_paid because function hasnt been implemented yet
-            //get other necessary arguments from sessions
-            $res->insert('0',$cid,$curr_date,Session::get("service_id"));
-            //$res_timeslot->insert($res_id,$timeslot_no,$date);
+            //get other necessary arguments from sessions and get reservation id returned for next query
+            $next_res_id=$res->insert('0',$cid,$curr_date,Session::get("service_id"));
+
+            //above function returns next res_id but we need the current one, so decrement
+            $curr_res_id=$next_res_id-1;
+
+            echo($curr_res_id);
+            //$res_timeslot->insert($curr_res_id,$timeslot_no,$date);
         }
         //function which gets 
     }
