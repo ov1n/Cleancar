@@ -8,7 +8,7 @@
                 //$db=new Database();
         }
 
-        //getting all details of employees
+        //getting all details of leaves
         function get_detail($id){
 
             $today=date('Y-m-d');
@@ -24,14 +24,13 @@
                 exit();
             }
 
-            //get employees in an array
+            //get leaves in an array
             $leaves = $result->fetch_all(MYSQLI_ASSOC);
-            //var_dump($employees);
+            //var_dump($leaves);
 
-            //if array is not empty that means employees are returning
+            //if array is not empty that means leave details are returning
             if($leaves){
-                //echo("go to view");
-                return($leaves);
+                return($leaves); 
             }
 
         }
