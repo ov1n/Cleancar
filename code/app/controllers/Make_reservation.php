@@ -63,6 +63,7 @@
             //set the values so that the session can continue
             Session::set("service_id",$service_details["type_id"]);
             Session::set("duration",$service_details["duration"]);
+            Session::set("time",$time);
 
         }
 
@@ -89,7 +90,11 @@
             //above function returns next res_id but we need the current one, so decrement
             $curr_res_id=$next_res_id-1;
 
-            echo($curr_res_id);
+            //get timeslots
+            $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
+
+            echo('  ');
+            var_dump($timeslots);
             //$res_timeslot->insert($curr_res_id,$timeslot_no,$date);
         }
         //function which gets 

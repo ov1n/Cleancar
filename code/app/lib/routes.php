@@ -101,6 +101,12 @@
         echo '<pre>';
         var_dump($_SESSION);
         echo '</pre>';
+        $tempdate=Session::get("duration");
+        $tdate = strtotime($tempdate);
+        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
+        echo '-------';
+        echo($tdate);
+        echo '--------';
         Make_reservation::insert();
         Controller::create_view('confirm_reservation');
     });
