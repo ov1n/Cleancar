@@ -6,7 +6,7 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -20,7 +20,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Employee</a></li>
+        <li><a href="employee">Employee</a></li>
         <li>Leave Statistic</li>
       </ul><!-- breadcrumb -->
 
