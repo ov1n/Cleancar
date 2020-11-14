@@ -51,7 +51,7 @@
         Controller::create_view('contact_us');
     });
 
-    Route::set('Add_service',function(){
+    Route::set('add_service',function(){
         //start session
         Session::init();
         //logout if time is exceeded in session
@@ -237,9 +237,9 @@
         Controller::create_view('emp_leave');
     });
 
-    Route::set('emp_leave_list',function(){
+    Route::set('employee_leave_list',function(){
         Session::init();
-        EmployeeLeaveList::create_view('emp_leave_list');
+        EmployeeLeaveList::create_view('employee_leave_list');
     });
 
     Route::set('add_bill',function(){
