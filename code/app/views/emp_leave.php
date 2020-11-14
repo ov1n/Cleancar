@@ -18,7 +18,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="employee">Employee</a></li>
+        <li><a href="employee">Employee Home</a></li>
         <li>Employee leave</li>
     </ul><!-- breadcrumb -->
     <?php
