@@ -93,9 +93,11 @@
             //get timeslots
             $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
 
-            echo('  ');
-            var_dump($timeslots);
-            //$res_timeslot->insert($curr_res_id,$timeslot_no,$date);
+            //get each timeslot and insert into reservation-timeslot table
+            foreach ($timeslots as $key ) {
+                //echo "$key[timeslot_no]";
+                //$res_timeslot->insert($curr_res_id,$timeslot_no,$date);
+            }
         }
         //function which gets 
     }

@@ -262,6 +262,8 @@
     });
 
     Route::set('leave_static',function(){
+        //start session
+        Session::init();
         Controller::create_view('leave_static');
     });
    
