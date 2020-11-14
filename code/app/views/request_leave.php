@@ -20,7 +20,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Employee</a></li>
+        <li><a href="employee">Employee</a></li>
         <li>Add Leave</li>    
       </ul>
       <!-- onsubmit="send_leave_data()" -->
