@@ -101,6 +101,10 @@
 
             $result= mysqli_query($conn,$query_cust);
 
+            if (mysqli_errno($conn) == 1062) {
+                print 'no way!';
+                exit();
+            }
             //debugging
             if (!$result) {
                 printf("Error: %s\n", mysqli_error($conn));
@@ -131,6 +135,7 @@
             //debugging
             if (!$result3) {
                 printf("Error: %s\n", mysqli_error($conn));
+
                 exit();
             }
 

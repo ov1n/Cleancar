@@ -57,11 +57,9 @@ function create() {
     }
     ,
     //debugging
-    success: function (data) {
-      alert("Hello! I am an alert box!!");
-      setTimeout(function () {
-        alert("Hello! I am an alert box!!");
-      }, 800);
+    success: function () {
+      $("#result").html(data); 
+      console.log("");
     }
   });
   //console.log('Registration Successful');

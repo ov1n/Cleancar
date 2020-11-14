@@ -5,6 +5,7 @@
     include_once './models/Time_slot.php';
     include_once './models/Service_type.php';
     include_once './models/Reservation.php';
+    include_once './models/Reservation_time_slot.php';
 
     class Make_reservation extends Controller{
 
@@ -61,7 +62,7 @@
 
             //set the values so that the session can continue
             Session::set("service_id",$service_details["type_id"]);
-            //Session::set("duration",$service_details["duration"]);
+            Session::set("duration",$service_details["duration"]);
 
         }
 
@@ -72,6 +73,7 @@
             $cust=new Customer();       //find a way to not repeat this variable
             $timeslot=new Time_slot();
             $res=new Reservation();
+            $res_timeslot=new Reservation_time_slot();
 
             //get the customer id to create tables
             $cid=$cust->get_custid(Session::get("uname"));
@@ -83,6 +85,7 @@
             //insert into reservation table , 0 for adv_paid because function hasnt been implemented yet
             //get other necessary arguments from sessions
             $res->insert('0',$cid,$curr_date,Session::get("service_id"));
+            //$res_timeslot->insert($res_id,$timeslot_no,$date);
         }
         //function which gets 
     }
