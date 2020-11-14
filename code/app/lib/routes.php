@@ -231,6 +231,11 @@
         Controller::create_view('emp_leave');
     });
 
+    Route::set('emp_leave_list',function(){
+        Session::init();
+        EmployeeLeaveList::create_view('emp_leave_list');
+    });
+
     Route::set('add_bill',function(){
         //start session
         Session::init();
