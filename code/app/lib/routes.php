@@ -51,7 +51,7 @@
         Controller::create_view('contact_us');
     });
 
-    Route::set('add_service',function(){
+    Route::set('Add_service',function(){
         //start session
         Session::init();
         //logout if time is exceeded in session
@@ -65,7 +65,7 @@
 
 
     Route::set('delay_time_table',function(){
-        Controller::create_view('delayTimeTable');
+        Controller::create_view('delay_time_table');
     });
 
     //route to make reservation with sessions
@@ -266,5 +266,13 @@
         Session::init();
         Controller::create_view('leave_static');
     });
+
+    Route::set('update_service',function(){
+        Controller::create_view('update_service');
+    });
    
+    Route::set('time_table',function(){
+        Controller::create_view('time_table');
+    });
+
 ?>

@@ -23,14 +23,14 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Receptionist</a></li>
+        <li><a href="receptionist">Receptionist Home</a></li>
         <li>Billing</li>   
       </ul><!-- breadcrumb -->
 
       <div class = "select_buttons">
           <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
           <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
-          </div>
+      </div>
           
       <form name="add_bill" id="add_bill" method = "post" onsubmit="send_bill_data()">
         <div class="container">  
