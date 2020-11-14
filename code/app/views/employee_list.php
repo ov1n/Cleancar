@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Table</title>
+  <title>Employee List</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->

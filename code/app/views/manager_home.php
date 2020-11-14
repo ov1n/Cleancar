@@ -40,7 +40,7 @@
 			<div class="square2">
 				<i class="fa fa-list-alt fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="#"><button><b>Reservation</b></button></a>
+				<a href="time_table"><button><b>Reservation</b></button></a>
 			</div>
 
 			<div class="square3">

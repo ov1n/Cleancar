@@ -65,7 +65,7 @@
 
 
     Route::set('delay_time_table',function(){
-        Controller::create_view('delayTimeTable');
+        Controller::create_view('delay_time_table');
     });
 
     //route to make reservation with sessions
@@ -258,5 +258,13 @@
     Route::set('leave_static',function(){
         Controller::create_view('leave_static');
     });
+
+    Route::set('update_service',function(){
+        Controller::create_view('update_service');
+    });
    
+    Route::set('time_table',function(){
+        Controller::create_view('time_table');
+    });
+
 ?>
