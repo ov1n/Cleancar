@@ -8,14 +8,16 @@
                 //$db=new Database();
         }
 
-        //get id of the service name
+        //get id,duration,price of the service name
         function get_details($type_name){
                 
             //assign connectivity to a variable
             $conn=Database::conn();
 
-            //FIX BY ADDING DURATION
-            $query="SELECT type_id,duration FROM service_type WHERE type_name='$type_name'";
+            //ONLY GETS CAR FOR NOW
+            $query="SELECT type_id,duration,price FROM service_type 
+                    WHERE type_name='$type_name'
+                    AND vehicle_category='car';";
             $result= mysqli_query($conn,$query);
 
             //debugging

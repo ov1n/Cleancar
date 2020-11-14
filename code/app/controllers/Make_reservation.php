@@ -60,9 +60,12 @@
             //get the service typeid,duration to a single array
             $service_details=$service_type->get_details($service_name);
 
-            //set the values so that the session can continue
+            //set the values so that the session can continue and data can be grabbed for the invoice
+            Session::set("service_name",$service_name);
             Session::set("service_id",$service_details["type_id"]);
             Session::set("duration",$service_details["duration"]);
+            Session::set("price",$service_details["price"]);
+
             Session::set("time",$time);
             Session::set("res_date",$date);
 
@@ -90,6 +93,7 @@
 
             //above function returns next res_id but we need the current one, so decrement
             $curr_res_id=$next_res_id-1;
+            Session::set("res_id",$curr_res_id);
 
             //get timeslots
             $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
@@ -99,6 +103,10 @@
                 //echo(Session::get("res_date"));
                 $res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
             }
+
+            //once confirmed increment the current customer reservation count by 1
+            $cust->increment_count($cid);
+
         }
         //function which gets 
     }

@@ -35,7 +35,8 @@
                 <?php $array=(Session::get("details")); ?>
                 <!-- each field gets details from the array -->
                 &ensp;&ensp;<label for="res_id"><div class="form_label"><b>Reservation ID</b></div></label>
-                <input type="text"  name="res_id" value = 1223 id="res_id" disabled></br>
+                <input type="text"  name="res_id" value =
+                <?php echo(Session::get("res_id")); ?> 1223 id="res_id" disabled></br>
 
                 <!--ADD CONCAT FUNCTION -->
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>Customer Name</b></div></label>
@@ -48,7 +49,8 @@
                 <input type="text"  name="category" value = category id="category" disabled></br>
 
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
-                <input type="text"  name="service_type" value = 10 id="service_type" disabled></br>
+                <input type="text"  name="service_type" value = 
+                "<?php echo(Session::get("service_name")); ?>" id="service_type" disabled></br>
 
                 &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
                 <input type="text"  name="time" value = "8.00AM" id="time" disabled></br>
@@ -60,7 +62,8 @@
                 <input type="text"  name="lift_no" value = "1" id="lift_no" disabled></br>
 
                 &ensp;&ensp;<label for="price"><div class="form_label"><b>Price</b></div></label>
-                <input type="text"  name="price" value = "10,000" id="price" disabled></br>
+                <input type="text"  name="price" value = "<?php echo(Session::get("price")); ?>"
+                 id="price" disabled></br>
 
                 <h3> For more details please contact CleanCar at our hotline </h3>
                 </br>
