@@ -29,7 +29,7 @@
         <div class = "select_buttons">
         <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
         <button type="submit" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
+        <button onclick= "button()" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
         <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
         </div>
     </div><!-- card -->
