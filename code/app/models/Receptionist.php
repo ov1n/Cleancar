@@ -12,8 +12,8 @@
         function check_credentials($uname,$pwd){
 
             //echo session var
-            echo "uname is " . $_SESSION["uname"] . ".<br>";
-            echo "pwd is " . $_SESSION["pwd"] . ".";
+            //echo "uname is " . $_SESSION["uname"] . ".<br>";
+            //echo "pwd is " . $_SESSION["pwd"] . ".";
             
             //assign connectivity to a variable
             $conn=Database::conn();

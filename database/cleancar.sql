@@ -1,13 +1,15 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 4.9.1
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 13, 2020 at 02:36 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Nov 13, 2020 at 04:14 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -53,7 +55,8 @@ INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `address`, `email`
 (1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', '2a6571da26602a67be14ea8c5ab82349'),
 (1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', 931, 931, 0, '2020-10-27', '44f437ced647ec3f40fa0841041871cd'),
 (1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', 114567891, 114567891, 0, '2020-10-29', '6227cb5c2107ccad85351676a6c8dd80'),
-(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', '6865aeb3a9ed28f9a79ec454b259e5d0');
+(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', '6865aeb3a9ed28f9a79ec454b259e5d0'),
+(1043, 'Thenuka', 'Weerasinghe', '900 Zone 3', 'thenukaovin@gmail.com', 112334511, 711755793, 0, '2020-11-13', '7fdfcbc4a08fa01937b3680bc295904b');
 
 -- --------------------------------------------------------
 
@@ -218,8 +221,16 @@ CREATE TABLE `reservation` (
   `reservation_id` int(11) NOT NULL,
   `is_advance_paid` tinyint(1) NOT NULL,
   `cust_id` int(11) NOT NULL,
-  `added_date` date NOT NULL
+  `added_date` date NOT NULL,
+  `service_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `reservation`
+--
+
+INSERT INTO `reservation` (`reservation_id`, `is_advance_paid`, `cust_id`, `added_date`, `service_id`) VALUES
+(10001, 0, 1043, '2020-11-13', 1);
 
 -- --------------------------------------------------------
 
@@ -264,7 +275,7 @@ INSERT INTO `service_employee` (`emp_id`, `first_name`, `last_name`, `address`, 
 (2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', 114433221, 714433221, '56452102v', 4, 2, 10, '2020-09-17', 'Mechanics', 'employee'),
 (2001, 'Tharindu', 'Dulshan', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', 412241190, 711565953, '971400757v', 3, 5, 6, '2020-11-10', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e'),
 (2002, 'Minuri', 'Yasara', 'shanika, Akurugoda, Tellijjawila.', 'yasarawickramanayaka@gmail.com', 342287472, 711208660, '986180056v', 2, 6, 4, '2020-11-10', 'L_002', '8a62b7c940f895985dc66836150cce72'),
-(2003, 'Buthsara', 'Madushanka', '"nisala", akuressa, Matara', 'buthsara@gmail.com', 412259876, 756982646, '972564844v', 5, 6, 8, '2020-11-10', 'L_003 ', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2003, 'Buthsara', 'Madushanka', '\"nisala\", akuressa, Matara', 'buthsara@gmail.com', 412259876, 756982646, '972564844v', 5, 6, 8, '2020-11-10', 'L_003 ', 'd41d8cd98f00b204e9800998ecf8427e'),
 (2004, 'Thenuka', 'Ovin', 'Millennium city, Athurugiriya, Malabe.', 'thenukaovin@gmail.com', 114875695, 789564213, '2000764902', 4, 6, 4, '2020-11-10', 'L_004', 'd41d8cd98f00b204e9800998ecf8427e'),
 (2005, 'asindu', 'chamika', 'hbfweiyfhwei', 'tdwithanage97@gmail.com', 412259874, 711565984, '5621265456', 6, 8, 12, '2020-11-11', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e');
 
@@ -331,7 +342,8 @@ INSERT INTO `vehicle` (`cust_id`, `vehicle_num`, `vehicle_category`) VALUES
 (1037, '221b', 'light vehi'),
 (1038, 'r1', 'light vehi'),
 (1039, '812', 'light vehi'),
-(1040, '6969', 'light vehi');
+(1040, '6969', 'light vehi'),
+(1043, 'KB-1024', 'Car');
 
 --
 -- Indexes for dumped tables
@@ -387,7 +399,8 @@ ALTER TABLE `receptionist`
 --
 ALTER TABLE `reservation`
   ADD PRIMARY KEY (`reservation_id`),
-  ADD KEY `t2` (`cust_id`);
+  ADD KEY `t2` (`cust_id`),
+  ADD KEY `service_id` (`service_id`);
 
 --
 -- Indexes for table `reservation_time_slot`
@@ -428,32 +441,38 @@ ALTER TABLE `vehicle`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1043;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
+
 --
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
   MODIFY `invoice_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
-  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+
 --
 -- AUTO_INCREMENT for table `service_employee`
 --
 ALTER TABLE `service_employee`
   MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2006;
+
 --
 -- AUTO_INCREMENT for table `service_type`
 --
 ALTER TABLE `service_type`
   MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `time_slot`
 --
 ALTER TABLE `time_slot`
   MODIFY `timeslot_no` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Constraints for dumped tables
 --
@@ -481,6 +500,7 @@ ALTER TABLE `emp_leave`
 -- Constraints for table `reservation`
 --
 ALTER TABLE `reservation`
+  ADD CONSTRAINT `reservation_ibfk_1` FOREIGN KEY (`service_id`) REFERENCES `service_type` (`type_id`),
   ADD CONSTRAINT `t2` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`);
 
 --
@@ -495,6 +515,7 @@ ALTER TABLE `reservation_time_slot`
 --
 ALTER TABLE `vehicle`
   ADD CONSTRAINT `t5` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
