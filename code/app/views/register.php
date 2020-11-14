@@ -25,7 +25,9 @@
         //include nav bar externally
         include("nav_login.php");
       ?>
-
+      </br>
+      </br>
+      </br>
       <ul class="breadcrumb">
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
@@ -40,7 +42,7 @@
           <div class="background">
             <hr>
             <div class="card" >
-              <div id=form_content> <!-- div to center needed elements -->
+              <div id=form_content> <!--onsubmit="create()" div to center needed elements -->
 
                 <!-- &ensp characters are used to improve clarity and keep clear spacing -->
               
@@ -76,6 +78,7 @@
                 &ensp;&ensp;&ensp;&ensp;<label for="home_tel_no" class="form_label"><div class="form_label"><b>Home</b></div></label>
                 <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required>
                 </br>
+                <div class="result"></div>
 
 
                 <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>

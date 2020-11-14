@@ -80,25 +80,25 @@
 <!-- Three columns -->
 <div class="row1">
  
-  <div class="column" onclick="openTab('b1');" style="background:blue;">
+  <div class="column" onclick="openTab('b1');" style="background:rgb(03, 168, 130,.9);">
     <h3>MATARA</h3>
     NO2, Nupe, Matara<br><br>
-    <button class="btn info">View Map</button>
+    <button class="btn info" style="border-color: black;border-style: solid;border-width: 2px;">View Map</button>
   </div>
-  <div class="column" onclick="openTab('b2');" style="background:blue;">
+  <div class="column" onclick="openTab('b2');" style="background:rgb(03, 168, 130,.9);">
     <h3>GALLE</h3>
     NO34, Galle<br><br>
-    <button class="btn info">View Map</button>
+    <button class="btn info" style="border-color: black;border-style: solid;border-width: 2px;">View Map</button>
   </div>
-  <div class="column" onclick="openTab('b3');" style="background:blue;">
+  <div class="column" onclick="openTab('b3');"style="background:rgb(03, 168, 130,.9);">
    <h3>KALUTHARA</h3> 
     NO6,Kaluthara<br><br>
-    <button class="btn info">View Map</button>
+    <button class="btn info" style="border-color: black;border-style: solid;border-width: 2px;">View Map</button>
   </div>
-  <div class="column" onclick="openTab('b4');" style="background:blue;">
+  <div class="column" onclick="openTab('b4');" style="background:rgb(03, 168, 130,.9);">
        <h3>MAHARAGAMA</h3>
     NO7,Cross Road<br><br>
-    <button class="btn info">View Map</button>
+    <button class="btn info" style="border-color: black;border-style: solid;border-width: 2px;">View Map</button>
   </div>
 </div>
 

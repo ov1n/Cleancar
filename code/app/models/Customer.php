@@ -31,6 +31,30 @@
             
         }
 
+        //get autofill data in reservation form
+        function get_custid($email){
+            
+            //assign connectivity to a variable
+            $conn=Database::conn();
+
+            $query="SELECT cust_id FROM customer WHERE (email='$email')";
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            $cust_id=array_shift( $r );
+            
+            //echo($cust_id);
+            return $cust_id;
+            
+        }
+
         //checking credentials by searching through the customer table
         function check_credentials($uname,$pwd){
 
@@ -77,6 +101,10 @@
 
             $result= mysqli_query($conn,$query_cust);
 
+            if (mysqli_errno($conn) == 1062) {
+                print 'no way!';
+                exit();
+            }
             //debugging
             if (!$result) {
                 printf("Error: %s\n", mysqli_error($conn));
@@ -107,6 +135,7 @@
             //debugging
             if (!$result3) {
                 printf("Error: %s\n", mysqli_error($conn));
+
                 exit();
             }
 

@@ -4,8 +4,10 @@
     include_once './models/Customer.php';
     include_once './models/Time_slot.php';
     include_once './models/Service_type.php';
+    include_once './models/Reservation.php';
+    include_once './models/Reservation_time_slot.php';
 
-    class Reservation extends Controller{
+    class Make_reservation extends Controller{
 
         public function __construct(){
             //
@@ -55,14 +57,12 @@
             $time=$_POST["time"];
             echo($time);
 
-            //get the service typeid,no of timeslots to a single array
+            //get the service typeid,duration to a single array
             $service_details=$service_type->get_details($service_name);
 
-            //PASS THIS TO OTHER VIEW USING REQUIRE ONCE
-            //Session::set("details",Reservation::$this->autofill(Session::get("uname")));
-
-            //Reservation::create_view('make_reservation');
-            //echo($_SESSION["uname"]);
+            //set the values so that the session can continue
+            Session::set("service_id",$service_details["type_id"]);
+            Session::set("duration",$service_details["duration"]);
 
         }
 
@@ -72,7 +72,25 @@
             //create seperate db objects
             $cust=new Customer();       //find a way to not repeat this variable
             $timeslot=new Time_slot();
-            echo($_SESSION["uname"]);
+            $res=new Reservation();
+            $res_timeslot=new Reservation_time_slot();
+
+            //get the customer id to create tables
+            $cid=$cust->get_custid(Session::get("uname"));
+
+            //get current date in db format
+            $curr_date=date("Y-m-d");
+            //echo($curr_date);
+            
+            //insert into reservation table , 0 for adv_paid because function hasnt been implemented yet
+            //get other necessary arguments from sessions and get reservation id returned for next query
+            $next_res_id=$res->insert('0',$cid,$curr_date,Session::get("service_id"));
+
+            //above function returns next res_id but we need the current one, so decrement
+            $curr_res_id=$next_res_id-1;
+
+            echo($curr_res_id);
+            //$res_timeslot->insert($curr_res_id,$timeslot_no,$date);
         }
         //function which gets 
     }

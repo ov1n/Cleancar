@@ -23,7 +23,7 @@
         <li><a href="home">Employee</a></li>
         <li>Add Leave</li>    
       </ul>
-      
+      <!-- onsubmit="send_leave_data()" -->
       <form name="add_leave_form" id="add_leave_form" method = "post" onsubmit="send_leave_data()">        
       <div class="container">  
           <h1>Add Leave</h1>
@@ -34,7 +34,7 @@
               <div id=form_content> <!-- div to center needed elements -->
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Select Date</b></div></label>
-                <input type="date" placeholder="Enter the date" name="date" id="date" required></br>
+                <input type="date" placeholder="Enter the date" name="leave_date" id="leave_date" required></br>
 
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee Id</b></div></label>
                 <input type="text" placeholder="Enter employee id" name="emp_id" id="emp_id" required></br>
@@ -58,7 +58,7 @@
                 &ensp;&ensp;<label for="reason"><div class="form_label"><b>Reason</b></div></label>
                <input type="text" placeholder="Enter your reason here" name="reason" id="reason" required></br>
 
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <button type="cancel" class="btn cancelbtn" class="form_btn" >Cancel</button>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button>
               
               </div><!-- form_content -->   
