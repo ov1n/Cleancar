@@ -28,126 +28,126 @@
 
   <table id="table_">
     <tr>
-      <th>Time</th>
+      <th class='time_col'>Time</th>
       <th>L_001</th>
       <th>L_002</th>
       <th>L_003</th>
       <th>L_004</th>
     </tr>
     <tr>
-      <td>8.00 - 8.30</td>
+      <td class='time_col'>8.00 - 8.30</td>
       <td>58-3987</td>
       <td>CAB-4675</td>
       <td> </td>
       <td>PA-4782</td>
     </tr>
     <tr>
-      <td>8.30 - 9.00</td>
+      <td class='time_col'>8.30 - 9.00</td>
       <td>58-3987</td>
       <td>CAB-4675</td>
       <td> </td>
       <td>PA-4782</td>
     </tr>
     <tr>
-      <td>9.00 - 9.30</td>
+      <td class='time_col'>9.00 - 9.30</td>
       <td>58-3987</td>
       <td>CAB-4675</td>
       <td>CAS-2354</td>
       <td>PA-4782</td>
     </tr>
     <tr>
-      <td>9.30 - 10.00</td>
+      <td class='time_col'>9.30 - 10.00</td>
       <td> </td>
       <td>CAB-4675</td>
       <td>CAS-2354</td>
       <td>PA-4782</td>
     </tr>
     <tr>
-      <td>10.00 - 10.30 </td>
+      <td class='time_col'>10.00 - 10.30 </td>
       <td>16-8937</td>
       <td>CAB-4675</td>
       <td>CAS-2354</td>
       <td>255-4782</td>
     </tr>
     <tr>
-      <td>10.30 - 11.00</td>
-      <td>16-8937</td>
-      <td>CAR-3875</td>
-      <td>CAS-2354</td>
-      <td>255-4782</td>
-    </tr>
-    <tr>
-      <td>11.00 - 11.30</td>
+      <td class='time_col'>10.30 - 11.00</td>
       <td>16-8937</td>
       <td>CAR-3875</td>
-      <td>CAD-2984</td>
+      <td>CAS-2354</td>
       <td>255-4782</td>
     </tr>
     <tr>
-      <td>11.30 - 12.00</td>
+      <td class='time_col'>11.00 - 11.30</td>
       <td>16-8937</td>
       <td>CAR-3875</td>
       <td>CAD-2984</td>
       <td>255-4782</td>
     </tr>
     <tr>
-      <td>12.00 - 12.30</td>
+      <td class='time_col'>11.30 - 12.00</td>
+      <td>16-8937</td>
+      <td>CAR-3875</td>
+      <td>CAD-2984</td>
+      <td>255-4782</td>
+    </tr>
+    <tr>
+      <td class='time_col'>12.00 - 12.30</td>
       <td>300-0977</td>
       <td>CBB-3891</td>
       <td>CBA-0000</td>
       <td>PA-9202</td>
     </tr>
     <tr>
-      <td>12.30 - 13.00</td>
+      <td class='time_col'>12.30 - 13.00</td>
       <td>300-0977</td>
       <td>CBB-3891</td>
       <td>CBA-0000</td>
       <td>PA-9202</td>
     </tr>
     <tr>
-      <td>13.00 - 13.30</td>
+      <td class='time_col'>13.00 - 13.30</td>
       <td> </td>
       <td> </td>
       <td>CBA-0000</td>
       <td>PA-9202</td>
     </tr>
     <tr>
-      <td>13.30 - 14.00</td>
+      <td class='time_col'>13.30 - 14.00</td>
       <td> </td>
       <td> </td>
       <td>CBA-0000</td>
       <td> </td>
     </tr>
     <tr>
-      <td>14.00 - 14.30</td>
+      <td class='time_col'>14.00 - 14.30</td>
       <td></td>
       <td> </td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>14.30 - 15.00</td>
+      <td class='time_col'>14.30 - 15.00</td>
       <td>19-8937</td>
       <td>CAB-9815</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>15.00 - 15.30</td>
+      <td class='time_col'>15.00 - 15.30</td>
       <td>19-8937</td>
       <td>CAB-9815</td>
       <td> </td>
       <td> </td>
     </tr>
     <tr>
-      <td>15.30 - 16.00</td>
+      <td class='time_col'>15.30 - 16.00</td>
       <td>19-8937</td>
       <td>CAB-9815</td>
       <td>CAA-1025</td>
       <td>253-4891</td>
     </tr>
     <tr>
-      <td>16.00 - 16.30</td>
+      <td class='time_col'>16.00 - 16.30</td>
       <td>19-8937</td>
       <td>CAB-9815</td>
       <td>CAA-1025</td>
@@ -156,8 +156,8 @@
     </table>
   </div>
   <div class = "select_buttons">
-        <a class="optionbtn btn" class="form_btn" href="delay_time_table">Delay Timetable</a>
-        <a class="optionbtn btn" class="form_btn" href="manager">Exit</a>
+        <a class="delaybtn btn" class="form_btn" href="delay_time_table">Delay Timetable</a>
+        <a class="exitbtn btn" class="form_btn" href="manager">Exit</a>
   </div>
 </div>
 

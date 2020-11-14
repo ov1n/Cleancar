@@ -101,6 +101,12 @@
         echo '<pre>';
         var_dump($_SESSION);
         echo '</pre>';
+        $tempdate=Session::get("duration");
+        $tdate = strtotime($tempdate);
+        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
+        echo '-------';
+        echo($tdate);
+        echo '--------';
         Make_reservation::insert();
         Controller::create_view('confirm_reservation');
     });
@@ -231,9 +237,9 @@
         Controller::create_view('emp_leave');
     });
 
-    Route::set('emp_leave_list',function(){
+    Route::set('employee_leave_list',function(){
         Session::init();
-        EmployeeLeaveList::create_view('emp_leave_list');
+        EmployeeLeaveList::create_view('employee_leave_list');
     });
 
     Route::set('add_bill',function(){
@@ -256,6 +262,8 @@
     });
 
     Route::set('leave_static',function(){
+        //start session
+        Session::init();
         Controller::create_view('leave_static');
     });
 

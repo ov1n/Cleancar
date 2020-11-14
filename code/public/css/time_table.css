@@ -69,7 +69,6 @@ th, td {
 .btn {
   position: relative;
   display: block;
-  margin: 30px auto;
   /*padding: 0; */
   padding: 12px 12px;
   text-align: center;
@@ -114,17 +113,6 @@ th, td {
   transform: translate(-50%, -50%);
 }
 
-.btn:active:before {
-  width: 120%;
-  padding-top: 120%;
-  
-  transition: width .2s ease-out, padding-top .2s ease-out;
-}
-
-.btn:disabled {
-  background-color: #696969;
-  color: #ecf0f1;
-}
 
 /* Special round button */
 .btn_round {
@@ -133,44 +121,55 @@ th, td {
   position: absolute;
   font-size: 150%;;
 }
-.optionbtn{
+.delaybtn{
   text-align: center;
-  width: 20%;
+  margin-top: 40px;
+  margin: 10px;
+  width: 180px;
+  float: left;
   /* font-weight: bold; */
   font-size: large;
-  color: #000080;
-  margin: 40px;
-  height: 70px;
+  color: #ffffff;
+  height: 50px;
+  padding-top: 15px;
   text-align: center;
   background-color: #4db8ff;
   box-shadow: 0 5px 5px rgba(60, 30, 230, 0.6);
 }
-.optionbtn:hover{
+.delaybtn:hover{
   background-color: #008CBA;
+  color: #ffffff;
+}
+
+.exitbtn{
+  text-align: center;
+  margin-top: 40px;
+  margin: 10px;
+  width: 100px;
+  float: right;
+  /* font-weight: bold; */
+  font-size: large;
+  color: #ffffff;
+  padding-top: 15px;
+  height: 50px;
+  text-align: center;
+  background-color: #dd6127;
+  box-shadow: 0 5px 5px rgba(240, 56, 10, 0.6);
+}
+.exitbtn:hover{
+  background-color: #f33201;
   color: #ffffff;
 }
 
 .select_buttons{
   display: flex;
-  justify-content:center;
   justify-content:space-around;
 }
 
-/* Responsive layout - makes a one column-layout instead of two-column layout */
-@media (max-width: 800px) {
-  .select_buttons {
-    justify-content:center;
-  }
-  .optionbtn{
-    flex: 50%;
-  }
+.time_col{
+  background-color: rgb(101, 230, 180);
 }
 
-@media (max-width: 600px) {
-  .select_buttons {
-    justify-content:center;
-  }
-}
 
   
 /* Style the list(breadcrumb) */

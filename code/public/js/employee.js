@@ -10,3 +10,8 @@ function confirmDelete(){
         event.preventDefault();
         console.log("Its working");
     });
+
+    function button(){
+      window.location.href = "employee_leave_list";
+      console.log("Thenukata pissu");
+    }

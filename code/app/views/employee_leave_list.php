@@ -4,7 +4,7 @@
   <title>Table</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="public\css\employee_leave_list.css"><!-- add style to employee_list -->
+  <link rel="stylesheet" type="text/css" href="public/css/employee_leave_list.css"><!-- add style to employee_leave_list -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
@@ -18,13 +18,13 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
+        <li><a href="manager">Manager List</a></li>
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
 <div class = "list_table">
-<h2>Employee Details</h2>
-  <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
+<h2>Pending Leaves</h2>
+  <div style="overflow-x:auto; width:94%;  margin-left:3%; border-radius:6px;">
 
   <table id="table_">
   <tr>
@@ -47,7 +47,7 @@
                   <?php echo "$emp[first_name]"." "."$emp[last_name]"; ?>
               </td>
               <td>
-                  <?php echo ; "$emp[leave_date]"?>
+                  <?php echo "$emp[leave_date]"; ?>
               </td>
               <td>
                   <?php echo "$emp[type]"; ?>

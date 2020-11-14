@@ -8,7 +8,7 @@
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script type="text/javascript" src="public\js\add_service_type.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
+        <li><a href="manager">Manager Home</a></li>
         <li>Service Type</li>
     </ul><!-- breadcrumb -->
     <?php
@@ -31,7 +31,7 @@
    
        <!-- <h2>Add Service Type</h2>-->
         <div class = "select_buttons">
-        <button type="submit" class="optionbtn btn" class="form_btn">Add Service Type</button>
+        <a href="Add_service"><button type="submit" class="optionbtn btn" class="form_btn">Add Service Type</button></a>
         </div>
     
 <div class = "list_table">

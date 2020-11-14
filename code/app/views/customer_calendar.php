@@ -60,9 +60,9 @@
 
                 &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
                 <select name="time" id="time">
-                    <option value="08.00">08.00</option>
-                    <option value="10.00">10.00</option>
-                    <option value="12.00">12.00</option>
+                    <option value="08:00:00">08.00</option>
+                    <option value="10:00:00">10.00</option>
+                    <option value="12:00:00">12.00</option>
                 </select><br>
                 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>

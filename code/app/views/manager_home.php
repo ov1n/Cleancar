@@ -46,7 +46,7 @@
 			<div class="square3">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="#"><button><b>Service Type</b></button></a>
+				<a href="service_type_list"><button><b>Service Type</b></button></a>
 			</div>
 
 			<div class="square4">

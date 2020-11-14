@@ -18,7 +18,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
+        <li><a href="manager">Manager Home</a></li>
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
@@ -29,7 +29,7 @@
         <div class = "select_buttons">
         <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
         <button type="submit" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
+        <button onclick= "button()" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
         <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
         </div>
     </div><!-- card -->
