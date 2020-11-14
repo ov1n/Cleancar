@@ -64,6 +64,7 @@
             Session::set("service_id",$service_details["type_id"]);
             Session::set("duration",$service_details["duration"]);
             Session::set("time",$time);
+            Session::set("res_date",$date);
 
         }
 
@@ -95,8 +96,8 @@
 
             //get each timeslot and insert into reservation-timeslot table
             foreach ($timeslots as $key ) {
-                //echo "$key[timeslot_no]";
-                //$res_timeslot->insert($curr_res_id,$timeslot_no,$date);
+                //echo(Session::get("res_date"));
+                $res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
             }
         }
         //function which gets 
