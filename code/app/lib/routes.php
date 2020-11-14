@@ -237,6 +237,11 @@
         Controller::create_view('emp_leave');
     });
 
+    Route::set('emp_leave_list',function(){
+        Session::init();
+        EmployeeLeaveList::create_view('emp_leave_list');
+    });
+
     Route::set('add_bill',function(){
         //start session
         Session::init();
@@ -254,6 +259,10 @@
         //logout if time is exceeded in session
        // Login::timeout(Session::get("curr_time"));
         EmployeeLeave::add_leave();
+    });
+
+    Route::set('leave_static',function(){
+        Controller::create_view('leave_static');
     });
    
 ?>
