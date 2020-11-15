@@ -96,18 +96,24 @@
     });
 
     //route to confirm reservation with database
+    Route::set('set_reservation',function(){ 
+        session_start();
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //echo '</pre>';
+        $tempdate=Session::get("duration");
+        $tdate = strtotime($tempdate);
+        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
+        Make_reservation::insert();
+        header("Location:confirm_reservation");
+    });
+
+    //final view of reservation
     Route::set('confirm_reservation',function(){ 
         session_start();
         echo '<pre>';
         var_dump($_SESSION);
         echo '</pre>';
-        $tempdate=Session::get("duration");
-        $tdate = strtotime($tempdate);
-        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
-        echo '-------';
-        echo($tdate);
-        echo '--------';
-        Make_reservation::insert();
         Controller::create_view('confirm_reservation');
     });
 

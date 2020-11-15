@@ -13,7 +13,7 @@
 
             //assign connectivity to a variable
             $conn=Database::conn();
-            echo($added_date);
+            //echo($added_date);
             //FIX BY ADDING DURATION
             $query="INSERT INTO reservation (`is_advance_paid`, `cust_id`, `added_date`, `service_id`) VALUES ('0', $cust_id,'$added_date',$service_id);";
             $result= mysqli_query($conn,$query);

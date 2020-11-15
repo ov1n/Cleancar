@@ -10,6 +10,12 @@
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+        <!-- assign necessary elements to array for JS functions -->
+        <?php $array=(Session::get("details"));
+          $str=(Session::get("time"));
+          $duration=(Session::get("duration"));
+          //echo($str);
+        ?>
         <!-- get external js -->
         <script type="text/javascript" src="public\js\confirm_reservation.js"></script>
 
@@ -36,18 +42,9 @@
               <h3>&ensp;&ensp;Your reservation details are as follows: </h3>
               <div id=form_content> <!-- div to center needed elements -->
 
-                <!-- assign necessary elements to array for JS functions -->
-                <?php $array=(Session::get("details"));
-                      $str=(Session::get("time"));
-                      //echo($str);?>
-
-                <script type="text/javascript" >
-                  var str = "<?php Print($str); ?>";
-                </script>
-
                 <!-- each field gets details from the array -->
 
-               <label for="res_id"><div class="form_label"><b> &ensp;&ensp;Reservation ID</b></div></label>
+                <label for="res_id"><div class="form_label"><b> &ensp;&ensp;Reservation ID</b></div></label>
                 <input type="text"  name="res_id" value =
                 <?php echo(Session::get("res_id")); ?> 1223 id="res_id" disabled></br>
 
@@ -107,6 +104,28 @@
         //get footer in seperate file
         include("footer.php");
       ?>
+
+        <script type="text/javascript"> 
+          //js function to present data in amore favorable manner in the view
+          var str = "<?php Print($str); ?>";
+          var duration="<?php Print($duration); ?>"; 
+          
+          //var str = str.slice(0, 5);
+          //logic to derive AM or PM
+          if(str.slice(0,2)<12){
+
+            //console.log(str.slice(0,5)+"AM");
+            document.getElementById("time").value = str.slice(0,5)+" AM";
+
+          }else{
+            
+            pmval=str.slice(0,2)
+            document.getElementById("time").value = (pmval-12)+":00 AM";
+          }
+          
+          //set duration
+          document.getElementById("approx").value = duration.slice(0,2)+" hours";
+        </script>
                 
     </body>
 </html>
