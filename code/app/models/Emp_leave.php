@@ -15,7 +15,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
                
-            $query="SELECT leave_date,type,leave_time,reason FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'yes' AND leave_date > '$today'";
+            $query="SELECT leave_date,type,leave_time,reason FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > '$today'";
             $result= mysqli_query($conn,$query);
             
             //debugging
@@ -23,7 +23,8 @@
                 printf("Error: %s\n", mysqli_error($conn));
                 exit();
             }
-
+            
+            
             //get leaves in an array
             $leaves = $result->fetch_all(MYSQLI_ASSOC);
             //var_dump($leaves);

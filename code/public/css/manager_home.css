@@ -7,14 +7,18 @@ body
 
 /* put background image */
 div.cover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/6666.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/honda-malaysia-service-centre.jpg");
   width: 100%;
-  height: 630px;
+  
+  margin-top: 65px; 
+  padding-top: 0px; 
+  height: 750px;
+  margin-bottom: 1px;
 }
 
 /* Style the list */
 ul.breadcrumb {
-    padding: 10px 16px;
+    padding: 15px 25px;
     list-style: none;
   }
   
@@ -22,12 +26,13 @@ ul.breadcrumb {
   ul.breadcrumb li {
     display: inline;
     font-size: 18px;
+    color: white;
   }
   
   /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
     padding: 8px;
-    color: black;
+    color: white;
     content: "|\00a0";
   }
   
@@ -44,7 +49,8 @@ ul.breadcrumb {
 
 h1{  
     text-align: center;  
-    color: black;  
+    color: black;
+    margin-top: -15px;  
 } 
 
 
@@ -55,61 +61,73 @@ hr{
 } 
 
 div.square{
-  width: 50%;
-  height: 80%;
-  margin: auto;
+  width: 100%;
+  height: 550px;
+  padding-left: 10px;
   margin-top: 30px;
   align-content: center;
   text-align: center;
   margin-bottom: 40px;
+
 }
 
 div.square div.square1{
-  margin-right:1%;
-  width: 30%;
-  height: 48%;
+  margin-right:.5%;
+box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  width: 16%;
+  height: 220px;
   float: left;
-  background-color:#3377FF;
-  opacity: 0.8;
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+ 
 }
 
 div.square div.square2{
-  margin-right:1%;
-  width: 30%;
-  height: 48%;
+  margin-right:.5%;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+ width: 16%;
+  height: 220px;
   float: left;
-  background-color: #99BBFF;
-  opacity: 0.8;
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+
 }
 
 div.square div.square3{
-  width: 30%;
-  height: 48%;
+ width: 16%;
+ box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  height: 220px;
   float: left;
-  background-color: #3377FF;
-  opacity: 0.8;
+  margin-right:.5%;
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+  
 }
 
 div.square div.square4{
-  margin-left: 15%;
-  margin-right: 1%;
-  margin-top:1%;
-  width: 30%;
-  height: 48%;
+box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  width: 16%;
+  height: 220px;
   float: left;
-  background-color:  #99BBFF;
-  opacity: 0.8;
+  margin-right:.5%;
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
 }
 
 div.square div.square5{
-  margin-top:1%;
-  width: 30%;
-  height: 48%;
+box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  width: 16%;
+  height: 220px;
   float: left;
-  background-color: #99BBFF;
-  opacity: 0.8;
+  margin-right:.5%;
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+  
 }
-
+div.square div.square6{
+ box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  width: 16%;
+  height: 220px;
+  float: left;
+  margin-right:.5%;
+  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+  
+}
 
 /* adjast the symbols*/
 div.square i{
@@ -119,13 +137,14 @@ div.square i{
 /* stylying buttons */
 
 div.square button{
-  width: 80%;
-  height: 20%;
+  width: 100px;
+  height: 40px;
   transition: 0.3s;
   font-family: 'Raleway' !important;  
   font-size: 95%;
   margin-top: 20%;
   border-radius: 6px;
+  cursor: pointer;
 }
 
 button:hover{
@@ -133,68 +152,76 @@ button:hover{
 }
 
 /* button colors */
-div.square1 button,.square3 button{
-  background-color: #99BBFF; 
-}
-
-div.square2 button,.square4 button,.square5 button{
+div.square1 button,.square3 button,.square2 button,.square4 button,.square5 button,.square6 button{
   background-color: #3377FF; 
 }
 
+
+
 /* responsive square */
-@media screen and (max-width: 800px){
+@media screen and (max-width: 1200px){
   div.square{
-  width: 60%;
+  width: 100%;
 }
 
 div.square div.square1{
   margin-right:1%;
-  width: 48%;
-  height : 30%;
+  margin-left: 13%;
+  width: 35%;
+  height : 35%;
   float: left;
   background-color: #99BBFF;
   opacity: 0.8;
 }
 div.square div.square2{
   margin-right: none;
-  width: 48%;
-  height: 30%;
+  width: 35%;
+  height: 35%;
   float: left;
   background-color:  #3377FF;
   opacity: 0.8;
 }
 
 div.square div.square3{
-  margin-top: 1%;
+   margin-top:1%;
   margin-right:1%;
-  width: 48%;
-  height: 30%;
-  float: left;
-  background-color: #3377FF;
-  opacity: 0.8;
-}
-
-div.square div.square4{
-  margin-left: 0%;
-  margin-top:1%;
-  width: 48%;
-  height: 30%;
-  float: left;
-  background-color:  #99BBFF;
-  opacity: 0.8;
-}
-
-div.square div.square5{
-  margin-top: 1%;
-  margin-right:1%;
-  margin-left: 24%;
-  width: 48%;
-  height: 30%;
+  margin-left: 13%;
+  width: 35%;
+  height : 35%;
   float: left;
   background-color: #99BBFF;
   opacity: 0.8;
 }
 
+div.square div.square4{
+  margin-right: none;
+    margin-top:1%;
+  width: 35%;
+  height: 35%;
+  float: left;
+  background-color:  #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square5{
+  margin-top:1%;
+  margin-right:1%;
+  margin-left: 13%;
+  width: 35%;
+  height : 35%;
+  float: left;
+  background-color: #99BBFF;
+  opacity: 0.8;
+}
+div.square div.square6{
+  margin-right: none;
+    margin-top:1%;
+  width: 35%;
+  height: 35%;
+  float: left;
+  background-color:  #3377FF;
+  opacity: 0.8;
+}
 div.square i{
   margin-top: 5%;
 }
@@ -206,3 +233,57 @@ div.square button{
 
 }
 
+.map-container{
+  width: 100%;
+  height: 200px;
+  margin-bottom: 5px;
+}
+ @media screen and (max-width: 800px){
+  .map-container{
+    width: 100%;
+    display: block;
+    margin-bottom: 200px;
+  }
+ }
+.row1 {
+    margin-left: 0%;
+    margin-bottom: -10px;
+}
+  /* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 15px 0px;
+  padding-right: 20px;
+  height: 200px;
+  text-align: center;
+  font-size: 20px;
+
+ 
+}
+.btn {
+   /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  margin-bottom: 2px;
+
+}
+
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+@media screen and (max-width: 800px){
+   .column{
+
+    width: 50%;
+}
+}
+ /*responsive raw1*/
+ @media screen and (max-width: 800px){
+  .raw1{
+    width: 10%;
+    display: block;
+  }
+ }

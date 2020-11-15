@@ -7,7 +7,7 @@
     <!-- set favicon icon -->
     <link rel="icon" href="public/images/favicon/favicon.png">
 
-    <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
+    <link rel="stylesheet" type="text/css" href="public\css\login.css"><!-- add style to form -->
     <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
 
     <!-- get imported jquery -->
@@ -28,46 +28,44 @@
         echo($notification);
 
     ?>
-    <!-- add breadcrumb to find the path easily to users -->
-    <ul class="breadcrumb">
-        <img src="public/images/4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li>Sign In</li>
-    </ul>
+   
     <form action="auth" method="POST" id="login" name="login"><!-- TEMPORARY AUTH -->
         <div class="container">  
-            <h1>Sign In</h1>
-            <hr>
-            <br>
+     
                 <div class="background">
-                <hr>
-                    <div class="card" >
+                        <!-- add breadcrumb to find the path easily to users -->
+                        <ul class="breadcrumb">
+                            <li><a href="home">Home</a></li>
+                            <li>Sign In</li>
+                        </ul>
+                         <div class="card">
                         <div id=form_content> <!-- div to center needed elements -->
-
+                                <h1 style="margin-top: -110px;">Sign In</h1>
                             <img class="avatar" id="avatar" src="public/images/user-icons.PNG"><br>
 
-                            &ensp;&ensp;<label for="user_name"><div class="form_label"><b>User Name</b></div></label>
-                            <input type="text" placeholder="Enter Your User Name" name="user_name" id="user_name" required></br>
+                           
+                            <input type="text" placeholder="Enter User Name" name="user_name" id="user_name" required></br>
 
-                            &ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
-                            <input type="password" placeholder="Enter Password" name="password" id="password" required></br>
+                           
+                            <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
-                            </br>
+                            
+                             <button type="submit" class="btn" class="form_btn" >Log In</button></br></br>
+                            
                             <!-- div which displays on invalid credentials --> 
-                            <div id="incorrect_msg"></div>
-                            </br></br>
+                            <div id="incorrect_msg" style="margin-top: 50px;"></div>
+                            </br></br></br></br>
                             
-                            &ensp;&ensp;<a href="change_password">Forgot Password?</a>
+                            <a href="change_password" style="margin-left: 35%;"><b>Forgot Password?</b></a>
                             
-                            </br>
-                            <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                            <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Log In</button>&ensp;
+                            
+                            
+                           
                         </div><!-- form_content -->               
                     </div><!-- card -->
                     </br></br>
                 </div><!-- background -->
-                <hr>
+         
             </div><!-- container -->
         </form>
 

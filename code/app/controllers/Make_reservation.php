@@ -5,6 +5,7 @@
     include_once './models/Time_slot.php';
     include_once './models/Service_type.php';
     include_once './models/Reservation.php';
+    include_once './models/Vehicle.php';
     include_once './models/Reservation_time_slot.php';
 
     class Make_reservation extends Controller{
@@ -55,15 +56,19 @@
             $date=$_POST["date"];
             $service_name=$_POST["service_type"];
             $time=$_POST["time"];
-            echo($time);
+            //echo($time);
 
             //get the service typeid,duration to a single array
             $service_details=$service_type->get_details($service_name);
 
-            //set the values so that the session can continue
+            //set the values so that the session can continue and data can be grabbed for the invoice
+            Session::set("service_name",$service_name);
             Session::set("service_id",$service_details["type_id"]);
             Session::set("duration",$service_details["duration"]);
+            Session::set("price",$service_details["price"]);
+
             Session::set("time",$time);
+            Session::set("res_date",$date);
 
         }
 
@@ -75,6 +80,7 @@
             $timeslot=new Time_slot();
             $res=new Reservation();
             $res_timeslot=new Reservation_time_slot();
+            $vehicle=new Vehicle();
 
             //get the customer id to create tables
             $cid=$cust->get_custid(Session::get("uname"));
@@ -89,15 +95,29 @@
 
             //above function returns next res_id but we need the current one, so decrement
             $curr_res_id=$next_res_id-1;
+            echo($curr_res_id);
+            Session::set("res_id",$curr_res_id);
 
             //get timeslots
             $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
 
             //get each timeslot and insert into reservation-timeslot table
             foreach ($timeslots as $key ) {
-                //echo "$key[timeslot_no]";
-                //$res_timeslot->insert($curr_res_id,$timeslot_no,$date);
+                //echo(Session::get("res_date"));
+                $res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
             }
+
+            //once confirmed increment the current customer reservation count by 1
+            $cust->increment_count($cid);
+
+            //get vehicle number and vehicle category
+            $vehicle_array=$vehicle->get_details($cid);
+            //set them for session variables
+            Session::set("vehicle_num",$vehicle_array["vehicle_num"]);
+            Session::set("vehicle_category",$vehicle_array["vehicle_category"]);
+
+            //optional function which converts the date into a more human friendly nature
+
         }
         //function which gets 
     }

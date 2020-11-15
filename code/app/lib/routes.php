@@ -96,18 +96,24 @@
     });
 
     //route to confirm reservation with database
+    Route::set('set_reservation',function(){ 
+        session_start();
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //echo '</pre>';
+        $tempdate=Session::get("duration");
+        $tdate = strtotime($tempdate);
+        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
+        Make_reservation::insert();
+        header("Location:confirm_reservation");
+    });
+
+    //final view of reservation
     Route::set('confirm_reservation',function(){ 
         session_start();
         echo '<pre>';
         var_dump($_SESSION);
         echo '</pre>';
-        $tempdate=Session::get("duration");
-        $tdate = strtotime($tempdate);
-        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
-        echo '-------';
-        echo($tdate);
-        echo '--------';
-        Make_reservation::insert();
         Controller::create_view('confirm_reservation');
     });
 
@@ -233,9 +239,6 @@
     EmployeeLeave::create_view('emp_leave');
     });
 
-    Route::set('emp_leave',function(){
-        Controller::create_view('emp_leave');
-    });
 
     Route::set('employee_leave_list',function(){
         Session::init();

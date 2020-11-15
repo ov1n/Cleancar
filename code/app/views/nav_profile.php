@@ -225,7 +225,7 @@ body {
   <div class="dropdown">
     <button class="dropbtn">Booking<i class="fa fa-caret-down"></i></button>
     <div class="dropdown-content">
-      <a href="make_reservation">Make Reservation</a>
+      <a href="calendar">Make Reservation</a>
       <a href="view_reservations">View Reservation</a>
     </div>
   </div> 

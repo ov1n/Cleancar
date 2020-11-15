@@ -12,8 +12,9 @@
 
             //assign connectivity to a variable
             $conn=Database::conn();
-               
-            $query="INSERT INTO reservation_time_slot('reservation_id','timeslot_no','date') VALUES('$res_id','$timeslot_no','$date')";
+                        
+            //query 
+            $query="INSERT INTO `reservation_time_slot` (`reservation_id`, `timeslot_no`, `date`) VALUES ('$res_id', '$timeslot_no', '$date')";
             $result= mysqli_query($conn,$query);
             
             //debugging
