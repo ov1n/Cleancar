@@ -115,6 +115,14 @@
             Session::set("vehicle_num",$vehicle_array["vehicle_num"]);
             Session::set("vehicle_category",$vehicle_array["vehicle_category"]);
 
+            //calling function which converts time to AMPM
+            echo("AMPM");
+            $str=Session::get("time");//
+            //get 1st 5 characters
+            $hourmins=substr($str, 0, 5);
+            //echo($hourmins);
+            echo("AMPM");
+
             //optional function which converts the date into a more human friendly nature
             $changeDate = date("D M j Y", strtotime(Session::get("res_date")));
             echo "Changed date format is: ". $changeDate. " (MM-DD-YYYY)";

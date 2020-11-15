@@ -10,6 +10,9 @@
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+        <!-- get external js -->
+        <script type="text/javascript" src="public\js\confirm_reservation.js"></script>
+
     </head>
 
     <body>
@@ -30,19 +33,27 @@
             <hr>
             <div class="card" >
               <h2>&ensp;&ensp;Thank you for making your online reservation with CleanCar!</h2></br>
-              <h3>&ensp;&ensp;Your reservation details are as follows: </h3></br>
+              <h3>&ensp;&ensp;Your reservation details are as follows: </h3>
               <div id=form_content> <!-- div to center needed elements -->
-                <?php $array=(Session::get("details")); ?>
+
+                <!-- assign necessary elements to array for JS functions -->
+                <?php $array=(Session::get("details"));
+                      $str=(Session::get("time"));
+                      //echo($str);?>
+
+                <script type="text/javascript" >
+                  var str = "<?php Print($str); ?>";
+                </script>
 
                 <!-- each field gets details from the array -->
 
-                &ensp;&ensp;<label for="res_id"><div class="form_label"><b>Reservation ID</b></div></label>
+               <label for="res_id"><div class="form_label"><b> &ensp;&ensp;Reservation ID</b></div></label>
                 <input type="text"  name="res_id" value =
                 <?php echo(Session::get("res_id")); ?> 1223 id="res_id" disabled></br>
 
                 <!--ADD CONCAT FUNCTION -->
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>Customer Name</b></div></label>
-                <input type="text"  name="first_name" value = <?php echo "$array[first_name]" ?> id="first_name" disabled></br>
+                <input type="text"  name="first_name" value = <?php echo ($array["last_name"] . " " . $array["last_name"]) ?> id="first_name" disabled></br>
 
                 &ensp;&ensp;<label for="vehicle_no"><div class="form_label"><b>Vehicle No</b></div></label>
                 <input type="text"  name="vehicle_no" value = 
