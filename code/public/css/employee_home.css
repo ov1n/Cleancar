@@ -7,14 +7,16 @@ body
 
 /* add background image */
 div.cover{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/6666.jpg");
+  margin-top: 65px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/team-1.jpg");
   width: 100%;
-  height: 500px;
+  height: 750px;
 }
+
 
 /* Style the list */
 ul.breadcrumb {
-    padding: 10px 16px;
+    padding: 15px 25px;
     list-style: none;
   }
   
@@ -22,12 +24,13 @@ ul.breadcrumb {
   ul.breadcrumb li {
     display: inline;
     font-size: 18px;
+    color: white;
   }
   
   /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
     padding: 8px;
-    color: black;
+    color: white;
     content: "|\00a0";
   }
   
@@ -41,65 +44,67 @@ ul.breadcrumb {
   ul.breadcrumb li a:hover {
     color: #01447e;
   }
-  
-  /* Add a color on mouse-over */
-  ul.breadcrumb li a:hover {
-    color: #01447e;
-  }
+
 
 h1{  
     text-align: center;  
-    color: black;  
+    color: white;  
 }  
 
-/* custom hr */
-hr{
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-} 
-
 div.square{
-  width: 65%;
-  height: 70%;
-  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding-left: 10px;
+  margin-top: 20px;
+  align-content: center;
   text-align: center;
-	margin-bottom: 80px;
+  margin-bottom: 40px;
+
 }
+
 
 div.square div.square1{
     margin-right: 1%;
-    width: 24%;
-    height: 80%;
+    width: 17%;
+    height: 30%;
     float: left;
     background-color: #3377FF;
     opacity: 0.8;
+    margin-left: 15%;
+    margin-top: 70px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 div.square div.square2{
     margin-right: 1%;
-    width: 24%;
-    height: 80%;
+    width: 17%;
+    height: 30%;
     float: left;
     background-color: #99BBFF;
     opacity: 0.8;
+     margin-top: 70px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 div.square div.square3{
     margin-right: 1%;
-    width: 24%;
-    height: 80%;
+    width: 17%;
+    height: 30%;
     float: left;
     background-color: #3377FF;
     opacity: 0.8;
+     margin-top: 70px;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 div.square div.square4{
-    width: 24%;
-    height: 80%;
+    width: 17%;
+    height: 30%;
     float: left;
     background-color: #99BBFF;
     opacity: 0.8;
-
+    margin-top: 70px;
+   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* adjast the symbols*/
@@ -112,17 +117,18 @@ div.square div.square4{
 
 div.square button{
   margin: auto;
-  width: 80%;
-  height: 25%;
-	transition: 0.3s;
+  width: 70%;
+  height: 20%;
+  transition: 0.3s;
   font-family: 'Raleway' !important;  
   border-radius: 6px;
   font-size: 95%;
-  margin-top: 14%;
+  margin-top: 25%;
+  cursor: pointer;
 }
 
 button:hover{
-	opacity: 0.6;
+  opacity: 0.6;
 }
 
 /* button colors */
@@ -137,10 +143,12 @@ div.square2 button,.square4 button{
 @media screen and (max-width: 800px){
   div.square{
   width: 85%;
-  height: 400px;
+  height: 850px;
   margin: auto;
   text-align: center;
   margin-bottom: 80px;
+     
+
 }
 
 div.square div.square1{
@@ -150,6 +158,8 @@ div.square div.square1{
     float: left;
     background-color: #3377FF;
     opacity: 0.8;
+    margin-top: 1px;
+
 }
 
 div.square div.square2{
@@ -159,6 +169,8 @@ div.square div.square2{
     float: left;
     background-color: #99BBFF;
     opacity: 0.8;
+    margin-top: 1px;
+
 }
 
 div.square div.square3{
@@ -169,6 +181,8 @@ div.square div.square3{
     float: left;
     background-color: #99BBFF;
     opacity: 0.8;
+    margin-top: 3px;
+
 }
 
 div.square div.square4{
@@ -179,6 +193,7 @@ div.square div.square4{
     float: left;
     background-color: #3377FF;
     opacity: 0.8;
+    margin-top: 3px;
 
 }
 
@@ -191,7 +206,7 @@ div.square i{
 }
 
 div.cover{
-  height: 550px;
+  height: 600px;
 }
 
 div.square div.square1{
