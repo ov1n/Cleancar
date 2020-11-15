@@ -5,6 +5,7 @@
     include_once './models/Time_slot.php';
     include_once './models/Service_type.php';
     include_once './models/Reservation.php';
+    include_once './models/Vehicle.php';
     include_once './models/Reservation_time_slot.php';
 
     class Make_reservation extends Controller{
@@ -79,6 +80,7 @@
             $timeslot=new Time_slot();
             $res=new Reservation();
             $res_timeslot=new Reservation_time_slot();
+            $vehicle=new Vehicle();
 
             //get the customer id to create tables
             $cid=$cust->get_custid(Session::get("uname"));
@@ -106,6 +108,16 @@
 
             //once confirmed increment the current customer reservation count by 1
             $cust->increment_count($cid);
+
+            //get vehicle number and vehicle category
+            $vehicle_array=$vehicle->get_details($cid);
+            //set them for session variables
+            Session::set("vehicle_num",$vehicle_array["vehicle_num"]);
+            Session::set("vehicle_category",$vehicle_array["vehicle_category"]);
+
+            //optional function which converts the date into a more human friendly nature
+            $changeDate = date("D M j Y", strtotime(Session::get("res_date")));
+            echo "Changed date format is: ". $changeDate. " (MM-DD-YYYY)";
 
         }
         //function which gets 

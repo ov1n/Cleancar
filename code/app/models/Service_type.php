@@ -29,7 +29,7 @@
             //get necessary elements in an array
             $r = mysqli_fetch_array($result);
             
-            var_dump($r);
+            //var_dump($r);
             return $r;
             
         }
