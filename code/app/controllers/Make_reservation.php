@@ -56,7 +56,7 @@
             $date=$_POST["date"];
             $service_name=$_POST["service_type"];
             $time=$_POST["time"];
-            echo($time);
+            //echo($time);
 
             //get the service typeid,duration to a single array
             $service_details=$service_type->get_details($service_name);
@@ -95,6 +95,7 @@
 
             //above function returns next res_id but we need the current one, so decrement
             $curr_res_id=$next_res_id-1;
+            echo($curr_res_id);
             Session::set("res_id",$curr_res_id);
 
             //get timeslots
@@ -116,8 +117,6 @@
             Session::set("vehicle_category",$vehicle_array["vehicle_category"]);
 
             //optional function which converts the date into a more human friendly nature
-            $changeDate = date("D M j Y", strtotime(Session::get("res_date")));
-            echo "Changed date format is: ". $changeDate. " (MM-DD-YYYY)";
 
         }
         //function which gets 
