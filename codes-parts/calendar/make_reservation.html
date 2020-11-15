@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>CleanCar - Make Reservation form</title>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" type="text/css" href="form.css">
+        
+        <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="aicon/style.css">
+        <link rel="stylesheet" href="css/4grid.css">
+        <link rel="stylesheet" href="css/jquery-pseudo-ripple.css">
+        <link rel="stylesheet" href="css/jquery-nao-calendar.css">
+
+        <style>
+          .con {
+            background: #eaeaea;
+            text-align: justify;
+            max-width: 1200px;
+            margin: 0 auto;
+          }
+          h2.con {
+            box-sizing: border-box;
+            background: none;
+            text-align: left;
+            padding: 20px;
+            color: #0af;
+          }
+          .calendar-2.nao-month td {
+            padding: 20px;
+          }
+          .calendar-2 .month-head>div,
+          .calendar-2 .month-head>button {
+            padding: 20px;
+          }
+          .calendar-3.nao-month td {
+            padding: 15px;
+          }
+          .calendar-3 .month-head>div,
+          .calendar-3 .month-head>button {
+            padding: 15px;
+          }
+          </style>
+
+    </head>
+
+    <body>
+
+      <div id="navbar">
+        <a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" style="margin-right: 20px"></i></a>
+        <a href="javascript:void(0)">Contact Us</a>
+        <a href="javascript:void(0)">About Us</a>
+        <a href="javascript:void(0)">Booking</a>
+        <a href="javascript:void(0)">Home</a>
+        <img src="C:\Users\USER\Desktop\Clean_Car\images\2222.png">        
+      </div>
+
+        <ul class="breadcrumb">
+          <img src="C:\Users\USER\Desktop\Clean_Car\images\4444.png" width="109" height="48" style="float:right">
+          </br>
+          <li><a href="home">Home</a></li>
+          <li><a href="home">Customer</a></li>
+          <li>Select Reservation</li>
+          
+        </ul>
+        <form action="./controllers/Register.php">
+            <div class="container">  
+              <h1>Select Reservation</h1>
+                
+                <div class="form_label" style="color:black"><label for="service_type"><b>Select Service Type</b></label></div>
+                <select name="service_type" id="service_type">
+                    <option value="Full_service">Full Service</option>
+                    <option value="Normal_service">Normal Service</option>
+                    <option value="body_wash">Body wash</option>
+                </select><br>
+              
+                <div class="col sml-1 mid-1 lrg-2">
+                  <h3>Result</h3>
+                  <div class="calendar-3"></div>
+                </div>
+              </div>
+              <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+              <script src="jquery-pseudo-ripple.js"></script>
+              <script src="jquery-nao-calendar.js"></script>
+              <script>
+              $('.calendar-1').calendar()
+              $('.calendar-2').calendar()
+              $('.calendar-3').calendar({
+                date: new Date(),
+                autoSelect: true,
+                select: function(date) {
+                  console.log('SELECT', date)
+                },
+                toggle: function(y, m) {
+                  console.log('TOGGLE', y, m)
+                },
+              })
+              </script>      
+
+
+
+            </form>
+            <div class="footer">
+
+              <div class="footer-wrapper">
+              <div class="single-footer">
+               
+                <h4><a href="/home.php" style="text-decoration: none; color: inherit;">Clean<span>Car</span></a></h4>
+              </div>
+              <div class="single-footer">
+                <h4>navigation</h4>
+                <br><p>© 2019 CS group 37</p>
+              </div>
+              <div class="single-footer">
+                <p><span> 123,cross Road,</span>Nugegoda, Srilanka </p>
+                <p>+94-1132158724 </p>
+                <p>+94-1132158123 </p>
+                <div class="icon">
+                <i class="fa fa-instagram" aria-hidden="true"></i>
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <i class="fa fa-twitter-square" aria-hidden="true"></i>
+                </div>
+              </div>
+          
+               <div class="single-footer">
+                 <img src="C:\Users\USER\Desktop\Clean_Car\images\3333.png">
+               </div>
+               
+            </div>
+          </div>
+          
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>jQuery Nao Calendar Example</title>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="aicon/style.css">
+<link rel="stylesheet" href="css/jquery-pseudo-ripple.css">
+  <link rel="stylesheet" href="css/jquery-nao-calendar.css">
+  <style>
+    body { font-family: 'Roboto'; background-color: #fafafa;}
+    .container { margin: 150px auto; max-width: 480px; }
+    .myCalendar.nao-month td {
+  padding: 15px;
+}
+.myCalendar .month-head>div,
+.myCalendar .month-head>button {
+  padding: 15px;
+}
+  </style>
+</head>
+
+<body><div id="jquery-script-menu">
+
+  <div class="container">
+    <h1>jQuery Nao Calendar Example</h1>
+    <div class="myCalendar"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+  <script src="jquery-pseudo-ripple.js"></script>
+  <script src="jquery-nao-calendar.js"></script>
+  <script>
+    $('.myCalendar').calendar({
+  date: new Date(),
+  autoSelect: false, // false by default
+  select: function(date) {
+    console.log(date)
+  },
+})
+</script>
+
+</body>
+</html>
