@@ -8,6 +8,15 @@
         <link rel="stylesheet" type="text/css" href="public\css\form.css">                  <!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css">                <!-- add style to footer -->
         <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
+
+        <!-- style needed for calendar -->
+        <link rel="stylesheet" href="public/css/calendar/aicon/style.css">
+        <link rel="stylesheet" href="public/css/calendar/4grid.css">
+        <link rel="stylesheet" href="public/css/calendar/jquery-pseudo-ripple.css">
+        <link rel="stylesheet" href="public/css/calendar/jquery-nao-calendar.css">
+
+
+
         <!-- get imported jquery -->
         <script src="public/js/jquery/jquery-3.5.1.js"></script>
         <!-- get external js file -->
@@ -64,6 +73,33 @@
                     <option value="10:00:00">10.00</option>
                     <option value="12:00:00">12.00</option>
                 </select><br>
+
+                <!-- CALENDAR COMES HERE --> 
+                <script src="public/js/jquery/calendar/jquery-pseudo-ripple.js"></script>
+                <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
+
+                <div >
+                  <h3>Date</h3>
+                  <div class="calendar-3"></div>
+                </div>
+
+                </br>
+                
+                <script>
+                  $('.calendar-1').calendar()
+                  $('.calendar-2').calendar()
+                  $('.calendar-3').calendar({
+                    date: new Date(),
+                    autoSelect: true,
+                    select: function(date) {
+                      console.log('SELECT', date)
+                    },
+                    toggle: function(y, m) {
+                      console.log('TOGGLE', y, m)
+                    },
+                  })
+                </script>
+
                 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
                 <button type="submit" class="btn" class="form_btn" >Submit</button>
