@@ -31,7 +31,7 @@
    
        <!-- <h2>Add Service Type</h2>-->
         <div class = "select_buttons">
-        <button type="submit" class="optionbtn btn" class="form_btn">Add Service Type</button>
+        <a href="add_service"><button type="submit" class="optionbtn btn" class="form_btn">Add Service Type</button></a>
         </div>
     
 <div class = "list_table">
