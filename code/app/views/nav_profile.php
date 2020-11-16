@@ -23,7 +23,7 @@ body {
   font-family: 'raleway' !important;
 }
 
-#navbar {
+ .navbar {
   height: 65px;
   background-image: linear-gradient(to right, rgb(250, 0, 0,0.85), rgb(0, 118, 255));
   position: fixed; /* Make it stick/fixed */
@@ -32,7 +32,7 @@ body {
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
-#navbar a {
+ .navbar a {
 
    float: right;
   display: block;
@@ -45,13 +45,13 @@ body {
  font-size: 17px;
 }
 @media screen and (max-width: 650px){
-  #navbar a{
+   .navbar a{
   width: 12%;
   margin-left: 1px;
   font-size: 15px;
   }
 }
-#navbar img{
+ .navbar img{
  width: 100px;
  height: 60px;
  float: left;
@@ -59,7 +59,7 @@ body {
  margin-top: 2px;
 }
 @media screen and (max-width: 800px){
-  #navbar img{
+   .navbar img{
   width: 97px;
   margin-left: 4px;
  
@@ -97,7 +97,7 @@ body {
   font-size: 15px;
   }
 }
-#navbar a:hover, .dropdown:hover .dropbtn {
+ .navbar a:hover, .dropdown:hover .dropbtn {
     color: black;
   height: 100%;
 }
@@ -162,7 +162,7 @@ body {
   font-size: 15px;
   }
 }
-#navbar a:hover, .dropdown1:hover .dropbtn {
+ .navbar a:hover, .dropdown1:hover .dropbtn {
     color: black;
   height: 100%;
 }
@@ -198,7 +198,7 @@ body {
 
 
 @media screen and (max-width: 900px){
-  #navbar{
+   .navbar{
     display: none;
   }
 }
@@ -211,7 +211,7 @@ body {
         include("sidenav_profile.php");
         
     ?>
-<div id="navbar">
+<div class="navbar">
    <div class="dropdown1">
     <button class="dropbtn"><a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" ></i></a>
     </button>
