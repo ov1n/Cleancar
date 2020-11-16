@@ -51,7 +51,7 @@
         Controller::create_view('contact_us');
     });
 
-    Route::set('Add_service',function(){
+    Route::set('add_service',function(){
         //start session
         Session::init();
         //logout if time is exceeded in session
@@ -65,7 +65,7 @@
 
 
     Route::set('delay_time_table',function(){
-        Controller::create_view('delayTimeTable');
+        Controller::create_view('delay_time_table');
     });
 
     //route to make reservation with sessions
@@ -101,6 +101,12 @@
         echo '<pre>';
         var_dump($_SESSION);
         echo '</pre>';
+        $tempdate=Session::get("duration");
+        $tdate = strtotime($tempdate);
+        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
+        echo '-------';
+        echo($tdate);
+        echo '--------';
         Make_reservation::insert();
         Controller::create_view('confirm_reservation');
     });
@@ -231,6 +237,11 @@
         Controller::create_view('emp_leave');
     });
 
+    Route::set('emp_leave_list',function(){
+        Session::init();
+        EmployeeLeaveList::create_view('emp_leave_list');
+    });
+
     Route::set('add_bill',function(){
         //start session
         Session::init();
@@ -251,7 +262,17 @@
     });
 
     Route::set('leave_static',function(){
+        //start session
+        Session::init();
         Controller::create_view('leave_static');
     });
+
+    Route::set('update_service',function(){
+        Controller::create_view('update_service');
+    });
    
+    Route::set('time_table',function(){
+        Controller::create_view('time_table');
+    });
+
 ?>

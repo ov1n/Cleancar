@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Table</title>
+  <title>Service type list</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\service_type_list.css"><!-- add style to service type_list -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script type="text/javascript" src="public\js\add_service_type.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
@@ -18,7 +18,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager Home</a></li>
+        <li><a href="home">Manager</a></li>
         <li>Service Type</li>
     </ul><!-- breadcrumb -->
     <?php
@@ -31,7 +31,7 @@
    
        <!-- <h2>Add Service Type</h2>-->
         <div class = "select_buttons">
-        <a href="Add_service"><button type="submit" class="optionbtn btn" class="form_btn">Add Service Type</button></a>
+        <a href="add_service"><button type="submit" class="optionbtn btn" class="form_btn">Add Service Type</button></a>
         </div>
     
 <div class = "list_table">
@@ -51,26 +51,36 @@
             <th>Delete</th>
         </tr>
         
-        <?php foreach($array as $emp){ ?>
+        <?php foreach($array as $s_type){ ?>
           <tr>
               <td>
-                  <?php echo "$emp[emp_id]"; ?>
+                  <?php echo "$s_type[type_id]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[first_name]"; ?>
+                  <?php echo "$s_type[type_name]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[last_name]"; ?>
+                  <?php echo "$s_type[vehicle_category]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[NIC_no]"; ?>
+                  <?php echo "$s_type[no_of_emp]"; ?>
+              </td>
+              <td>
+                  <?php echo "$s_type[no_of_timeslots]"; ?>
+              </td>
+              <td>
+                  <?php echo "$s_type[lift_no]"; ?>
+              </td>
+              <td>
+                  <?php echo "$s_type[price]"; ?>
               </td>
              
+
               <td style = " text-align: center;">
-                  <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
+                  <a href="#" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="#" name="delete" class="btn deletebtn">Delete</a>
               </td>
           </tr>
       <?php } ?>

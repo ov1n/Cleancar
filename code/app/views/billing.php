@@ -30,7 +30,7 @@
       <div class = "select_buttons">
           <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
           <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
-          </div>
+      </div>
           
       <form name="add_bill" id="add_bill" method = "post" onsubmit="send_bill_data()">
         <div class="container">  
