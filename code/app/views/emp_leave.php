@@ -25,7 +25,7 @@
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
-<?php if($array){ ?>
+
 
     <div class = "list_table">
 
