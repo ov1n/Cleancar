@@ -15,7 +15,9 @@
             //assign connectivity to a variable
             $conn=Database::conn();
                
+
             $query="SELECT leave_date,type,leave_time,reason FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > '$today'";
+
             $result= mysqli_query($conn,$query);
             
             //debugging

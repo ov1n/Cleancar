@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>jQuery Nao Calendar</title>
+	<link rel="stylesheet" href="aicon/style.css">
+	<link rel="stylesheet" href="css/4grid.css">
+	<link rel="stylesheet" href="css/jquery-pseudo-ripple.css">
+	<link rel="stylesheet" href="css/jquery-nao-calendar.css">
+	<!-- <link rel="stylesheet" href="css/"> -->
+	<style>
+	.con {
+		background: #eaeaea;
+		text-align: justify;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	h2.con {
+		box-sizing: border-box;
+		background: none;
+		text-align: left;
+		padding: 20px;
+		color: #0af;
+	}
+	.calendar-2.nao-month td {
+		padding: 20px;
+	}
+	.calendar-2 .month-head>div,
+	.calendar-2 .month-head>button {
+		padding: 20px;
+	}
+	.calendar-3.nao-month td {
+		padding: 15px;
+	}
+	.calendar-3 .month-head>div,
+	.calendar-3 .month-head>button {
+		padding: 15px;
+	}
+	</style>
+</head>
+<body style="background-color:#eee;padding:50px 0px;font:16px sans-serif;">
+	<h1 style="text-align:center;">jQuery Nao Calendar</h1>
+	<div style="text-align:justify;" class="con row sml-1 mid-1 lrg-4">
+		<div class="col sml-1 mid-1 lrg-2">
+			<h3>Intro</h3>
+			<p>Responsive calendar plugin for jQuery web applications.</p>
+			<p>This plugin has a few dependencies, so it is recommended to use if you are already using those dependencies in your project.</p>
+			<p>Examples are given below with code snippets.</p>
+		</div>
+		<div class="col sml-1 mid-1 lrg-2">
+			<h3>Dependencies</h3>
+			<ul>
+				<li>jQuery</li>
+				<li>jQuery Pseudo Ripple (by me)</li>
+				<li>Aicon icon set (by me)</li>
+			</ul>
+		</div>
+	</div>
+	<div class="con row sml-1 mid-1 lrg-4">
+		<div class="col sml-1 mid-1 lrg-2">
+			<h2>Simple use</h2>
+			<pre><code>
+// HTML
+&lt;div class="calendar-1"&gt;&lt;/div&gt;
+// JS
+$('.calendar-1').calendar()
+			</code></pre>
+		</div>
+		<div class="col sml-1 mid-1 lrg-2">
+			<h3>Result</h3>
+			<div class="calendar-1"></div>
+		</div>
+	</div>
+	<div class="con row sml-1 mid-1 lrg-4">
+		<div class="col sml-1 mid-1 lrg-2">
+			<h2>Styling with CSS</h2>
+			<pre><code>
+// HTML
+&lt;div class="calendar-2"&gt;&lt;/div&gt;
+// css
+.calendar-2.nao-month td {
+  padding: 20px;
+}
+.calendar-2 .month-head&gt;div,
+.calendar-2 .month-head&gt;button {
+  padding: 20px;
+}
+// JS
+$('.calendar-2').calendar()
+			</code></pre>
+		</div>
+		<div class="col sml-1 mid-1 lrg-2">
+			<h3>Result</h3>
+			<div class="calendar-2"></div>
+		</div>
+	</div>
+	<div class="con row sml-1 mid-1 lrg-4">
+		<div class="col sml-1 mid-1 lrg-2">
+			<h2>API usage</h2>
+			<pre><code>
+// HTML
+&lt;div class="calendar-3"&gt;&lt;/div&gt;
+// css
+.calendar-3.nao-month td {
+  padding: 15px;
+}
+.calendar-3 .month-head&gt;div,
+.calendar-3 .month-head&gt;button {
+  padding: 15px;
+}
+// JS
+$('.calendar-3').calendar({
+  date: new Date(),
+  autoSelect: true, // false by default
+  select: function(date) {
+    console.log('SELECT', date)
+  },
+  toggle: function(y, m) {
+    console.log('TOGGLE', y, m)
+  }
+})
+			</code></pre>
+		</div>
+		<div class="col sml-1 mid-1 lrg-2">
+			<h3>Result</h3>
+			<div class="calendar-2"></div><p>fasffds</p>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>
+	<script src="jquery-pseudo-ripple.js"></script>
+	<script src="jquery-nao-calendar.js"></script>
+	<script>
+	$('.calendar-1').calendar()
+	$('.calendar-2').calendar()
+	$('.calendar-3').calendar({
+		date: new Date(),
+		autoSelect: true,
+		select: function(date) {
+			console.log('SELECT', date)
+		},
+		toggle: function(y, m) {
+			console.log('TOGGLE', y, m)
+		},
+	})
+	</script>
+</body>
+</html>
