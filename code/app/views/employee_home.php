@@ -34,7 +34,7 @@
 			<div class="square2">
 				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i> 
 				<br>
-				<a href="emp_leave"><button><b>Cancel Leave</b></button></a>
+				<a href="emp_leave"><button><b>View Leaves</b></button></a>
 			</div>
 
 			<div class="square3">
