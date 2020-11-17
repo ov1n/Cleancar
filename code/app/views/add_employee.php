@@ -56,8 +56,8 @@
                 <input type="password" placeholder="Enter Password" name="password" id="password" required>
                 </br>
 
-                &ensp;&ensp;<label for="password"><div class="form_label"><b>Confirm Password</b></div></label>
-                <input type="password" placeholder="Re Enter the Password" name="password" id="password" required>
+                &ensp;&ensp;<label for="confirm_password"><div class="form_label"><b>Confirm Password</b></div></label>
+                <input type="password" placeholder="Re Enter the Password" name="confirm_password" id="confirm_password" required>
                 </br>
 
                 &ensp;&ensp;<h2>Contact Numbers</h2>

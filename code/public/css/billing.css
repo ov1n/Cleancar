@@ -115,10 +115,15 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
 
 @media screen and (max-width: 750px){
   input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
-    width: 30%;
+    width: 40%;
   }
 }
-
+@media screen and (max-width: 600){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+    width: 200px;
+    margin-left: 5%;
+  }
+}
 
   /* add the background color to the input field */
 input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=date]:focus, input[type=tel]:focus , select:focus {
@@ -147,7 +152,7 @@ hr{
   position: relative;
   float: right;
   display: block;
-  margin: 30px auto;
+  margin: 5%;
   /*padding: 0; */
   padding: 12px 12px;
   text-align: center;
@@ -155,23 +160,18 @@ hr{
   display: inline-block;
   font-size: 16px;
   margin: 4px 2px;
-
+  width: 70px;
   overflow: hidden;
 
   border-width: 0;
   outline: none;
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  
-  background-color: #1ABAFA;
   color: #ecf0f1;
   
   transition: background-color .3s;
 }
-  /* style the button when the mouse point move on */
-.btn:hover, .btn:focus {
-  background-color: #008CBA;
-}
+
 
 .btn > * {
   position: relative;
@@ -257,58 +257,43 @@ h1 {
   color: #008CBA;
   font-family: 'Segoe UI' !important;
 }
-
-
-.form_btn{
-  position: absolute;
-  right: 10px;
-  top: 5px;
- 
+.okbtn {
+  background-color: #1ABAFA;
 }
-  
-.registerbtn {
+
+.okbtn:hover, .btn.orange:focus {
   background-color: #008CBA;
-  color: white;
-  right: 10px;
-  top: 5px;
-    
-  border: 2px solid #008CBA;
 }
-.registerbtn:hover {
-  background-color: white; 
-  color: black;
-}
-.btn.cancelbtn {
+
+.cancelbtn {
   background-color: #e67e22;
 }
 
-.btn.cancelbtn:hover, .btn.orange:focus {
+.cancelbtn:hover, .btn.orange:focus {
   background-color: #d35400;
 }
 
-.vehicle_category{
-  color: #e67e22;
-  background-color: black;
-}
 
-.optionbtn{
-  text-align: center;
-  padding: 25px 20px 20px 20px;
-  width: 15%;
-  /* font-weight: bold; */
-  font-size: large;
-  color: #ffffff;
-  margin: 0% 0% 100px 3%;
-  float: left;
-  height: 70px;
-  text-align: center;
-  background-color: #009999;
-  box-shadow: 0px 5px 5px 0px   #004d4d;
-}
-.optionbtn:hover{
-  background-color:    #008066;
-  color: #ffffb3;
-}
+
+  .optionbtn{
+    text-align: center;
+    margin-top: 40px;
+    margin: 10px;
+    width: 180px;
+    float: none;
+    /* font-weight: bold; */
+    font-size: large;
+    color: #ffffff;
+    height: 50px;
+    padding-top: 15px;
+    text-align: center;
+    background-color: #0b9b94;
+    box-shadow: 0 5px 5px rgba(0, 75, 50, 0.6);
+  }
+  .optionbtn:hover{
+    background-color: #045a56;
+    color: #ffffff;
+  }
 
 
 @media (max-width: 600px) {
