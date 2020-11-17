@@ -17,7 +17,7 @@ body {
   font-family: 'raleway' !important;
 }
 
-.navbar {
+ .navbar {
   height: 65px;
   display: block;
   background-image: linear-gradient(to right, rgb(250, 0, 0,0.85), rgb(0, 118, 255));
@@ -27,7 +27,7 @@ body {
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
-.navbar a {
+ .navbar a {
 
    float: right;
   display: block;
@@ -46,7 +46,7 @@ body {
   font-size: 15px;
   }
 }
-.navbar img{
+ .navbar img{
  width: 100px;
  height: 60px;
  float: left;
@@ -54,7 +54,7 @@ body {
  margin-top: 2px;
 }
 @media screen and (max-width: 900px){
-  .navbar img{
+   .navbar img{
   width: 76px;
   margin-left: 0px;
  
@@ -92,7 +92,7 @@ body {
   font-size: 15px;
   }
 }
-.navbar a:hover, .dropdown:hover .dropbtn {
+ .navbar a:hover, .dropdown:hover .dropbtn {
     color: black;
   height: 100%;
 }
@@ -128,7 +128,7 @@ body {
 }
 
 @media screen and (max-width: 900px){
-  .navbar{
+   .navbar{
     display: none;
   }
 }

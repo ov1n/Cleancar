@@ -35,7 +35,7 @@
   </div>
 
   <div class="mySlides fade">
- <img src="public/images/home/detailer-gives-finishing-fender.png">
+ <img src="public/images/home/car-detailing-shop.jpg">
  <div class="overlay">
     <div class="text2">
       <h1>Professionally Trained Staff !!</h1>
@@ -45,7 +45,7 @@
    </div>
 
   <div class="mySlides fade">
-    <img src="public/images/home/NRMA Car Service Experts.png">
+    <img src="public/images/home/honda-malaysia-service-centre.jpg">
     <div class="overlay">
     <div class="text3">
       <h1> No Queue, No Waiting!!</h1>

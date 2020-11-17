@@ -140,6 +140,26 @@
             }
 
         }
+
+        //function to increment the customer reservation count when new reservation is placed
+        function increment_count($cust_id){
+
+            //assign connectivity to a variable
+            $conn=Database::conn();
+               
+            $query="UPDATE customer 
+                    SET no_of_reservations = no_of_reservations + 1
+                    WHERE cust_id ='$cust_id';"; 
+            
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+        }
         
     }
 ?>

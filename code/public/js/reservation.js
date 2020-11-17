@@ -17,7 +17,7 @@ var button_enable = function(){
         }, function() {
           console.log('Dont make advance Payment what');
           //insert code here
-          window.location = 'confirm_reservation';
+          window.location = 'set_reservation';
         });
       console.log('Confirmation submitted');
     }, function() {
