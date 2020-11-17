@@ -27,10 +27,10 @@
     <div class = "card">
         <h2>Employee Leave</h2>
         <div class = "select_buttons">
-        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
-        <button onclick= "button()" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
+        <button onclick= "button1()" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
+        <button onclick= "button2()" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
+        <button onclick= "button3()" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
+        <button onclick= "button4()" type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
         </div>
     </div><!-- card -->
 <div class = "list_table">
