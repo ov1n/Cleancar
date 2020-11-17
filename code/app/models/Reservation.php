@@ -41,4 +41,32 @@
 
             return $res_id;
         }
+
+        //function to get reservations for given customer ID
+        function select($cust_id){
+            //assign connectivity to a variable
+            $conn=Database::conn();
+            //echo($added_date);
+            //FIX BY ADDING DURATION
+            $query="SELECT* FROM reservation WHERE cust_id='$cust_id' ";
+
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+            
+            
+            //get leaves in an array
+            $reservations = $result->fetch_all(MYSQLI_ASSOC);
+            //var_dump($leaves);
+
+            //if array is not empty that means leave details are returning
+            if($reservations){
+                return($reservations); 
+            }
+        }
+
     }
