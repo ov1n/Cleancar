@@ -59,7 +59,6 @@ div.square{
   align-content: center;
   text-align: center;
   margin-bottom: 40px;
-
 }
 
 
@@ -69,10 +68,11 @@ div.square div.square1{
     height: 30%;
     float: left;
     background-color: #3377FF;
-    opacity: 0.8;
     margin-left: 15%;
     margin-top: 70px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+
 }
 
 div.square div.square2{
@@ -82,8 +82,9 @@ div.square div.square2{
     float: left;
     background-color: #99BBFF;
     opacity: 0.8;
-     margin-top: 70px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 70px;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+
 }
 
 div.square div.square3{
@@ -93,8 +94,9 @@ div.square div.square3{
     float: left;
     background-color: #3377FF;
     opacity: 0.8;
-     margin-top: 70px;
-   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 70px;
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+
 }
 
 div.square div.square4{
@@ -104,7 +106,8 @@ div.square div.square4{
     background-color: #99BBFF;
     opacity: 0.8;
     margin-top: 70px;
-   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+
 }
 
 /* adjast the symbols*/
@@ -116,15 +119,16 @@ div.square div.square4{
 /* stylying buttons */
 
 div.square button{
-  margin: auto;
+  
   width: 70%;
   height: 20%;
-  transition: 0.3s;
   font-family: 'Raleway' !important;  
-  border-radius: 6px;
   font-size: 95%;
-  margin-top: 25%;
+  margin-top: 20%;
+  border-radius: 6px;
   cursor: pointer;
+  margin-top: 15%;
+
 }
 
 button:hover{
@@ -202,7 +206,7 @@ div.square i{
   }
 
   div.square button{
-  margin-top: 12%;
+  margin-top: 18%;
 }
 
 div.cover{
