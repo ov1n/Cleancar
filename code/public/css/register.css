@@ -3,106 +3,104 @@
 /*set default base font */
 html *
 {  
+
   font-family: 'Raleway', sans-serif;
 }
-
-#navbar {
-  overflow: hidden;
-  background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
-  height: 60px;
-  min-width: 100%;
-  margin-right: -10px;
-  margin-left: -8px;
+body {
+  margin: 0;
+  
+  font-family: 'raleway' !important;
 }
-
-#navbar a {
- float: right;
- display: block;
- color: #fff;
- text-align: center;
- padding: 1.35%;
- width: 14%;
- text-decoration: none;
- font-size: 17px;
+body, html {
+  height: 100%;
 }
-#navbar .profile{
-  width:6%;
-  padding: 1.4%;
-  align-content: center;
-}
-#navbar img{
- width: 8%;
- height: 60px;
- float: left;
- margin-left: 5%;
- margin-top: 3px;
-}
-
-#navbar a:hover {
- background-color: #ddd;
- color: black;
- height: 100%;
-}
-
 h1{
-  color: #01447e;
+  color: black;
+  text-align: center;
+  margin-top: -15px;
 }
 
 p{
-  font-size: larger;
+  font-size: smaller;
+  
+ text-align: center;
 }
+
 
 /* Style the list */
 ul.breadcrumb {
-  padding: 10px 16px;
-  list-style: none;
-}
+    padding: 15px 25px;
+    list-style: none;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: white;
+    content: "|\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+  }
 
-/* Display list items side by side */
-ul.breadcrumb li {
-  display: inline;
-  font-size: 18px;
-}
+.container{
+  margin-top: 65px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/pexels-oleg-magni-2058128.jpg");
+/* Full height */
+  height: 70%; 
 
-/* Add a slash symbol (|) before/behind each list item */
-ul.breadcrumb li+li:before {
-  padding: 8px;
-  color: black;
-  content: "|\00a0";
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-/* Add a color to all links inside the list */
-ul.breadcrumb li a {
-  color: #0275d8;
-  text-decoration: none;
+@media only screen and (max-device-width: 1366px) {
+  .container {
+    background-attachment: scroll;
+  }
 }
-
-/* Add a color on mouse-over */
-ul.breadcrumb li a:hover {
-  color: #01447e;
-}
-
-.background{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg");
-}
-
 .card {
   justify-content:center;
   padding-bottom: 50px;
-  padding-top: 50px;
+  padding-top: 40px;
   text-align: left;
-  border-radius: 3%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.6);
   height: auto;
-  margin-left: 25%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
-  max-width: 50%;
+  margin-left: 31%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  max-width: 600px;
+  padding-left: 1px;
+  margin-right: 25%;
 }
 
-
+@media screen and (max-width: 900px){
+  .card{
+    margin-left: 10%;
+    width:80%;
+  }
+}
 
 /* Add padding to containers */
 .container {
-  padding: 16px;
+  height: 100%;
 }
 
 /* align label */
@@ -110,17 +108,15 @@ ul.breadcrumb li a:hover {
 label {
   display: inline-block;
   clear: left;
-  width: 150px;
+  width: 140px;
+  margin-left: 5%;
 }
 
-/* align label specifically for telephone numbers*/
-label.tel{
-  width: 120px;
-}
+
 
 /* Full-width input fields */
 input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select {
-  width: 50%;
+  width: 230px;
   padding: 15px;
   margin: 5px 10px 22px 0px;
   display: inline-block;
@@ -133,16 +129,22 @@ input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input
   background-color: #ccddff;
 }
 
-/* Custom input fields to be able to add more vehicle nos*/
-#vehicle_number{
-  width: 20%;
+@media screen and (max-width: 800px){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+    margin-left: 2%;
+
+  }
 }
 
-/* custom hr */
-hr{
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
+@media screen and (max-width: 750px){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+   width: 200px;
+    margin-left: 10px;
+  }
 }
+
+
+/* custom hr */
 
 /* Set a style for the submit/register button */
 .btn {
@@ -237,20 +239,19 @@ a {
   background-color: #f1f1f1;
   text-align: center;
 }
-h1 {
-  text-align:center;
-}
+
 
 #form_content{
   margin: auto;
-  width: 70%;
+  width: 90%;
   padding: 10px;
   line-height: 60%;
 }
 
 .form_label{
   color: #008CBA;
-  font-family: 'Segoe UI' !important;
+  
+  margin-left: 1%;
 }
 
 
@@ -258,6 +259,7 @@ h1 {
   position: absolute;
   right: 10px;
   top: 5px;
+
 }
   
 .btn.cancelbtn {
