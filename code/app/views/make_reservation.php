@@ -67,11 +67,11 @@
                 value=<?php echo(($_SESSION["details"])["email"]); ?>> </br>
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
-                <input type="date" placeholder="Enter the date" name="date" id="date" required
-                value=<?php echo(($_SESSION["details"])["date"]); ?>></br>
+                <input type="text" placeholder="Enter the date" name="date" id="date" required
+                value=<?php echo($_POST['date'])?> disabled></br>
 
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
-                <select name="service_type" id="service_type">
+                <select name="service_type" id="service_type" value=<?php echo($_POST['service_name'])?>>
                     <option value="Full_service">Full Service</option>
                     <option value="Normal_service">Normal Service</option>
                     <option value="body_wash">Body wash</option>

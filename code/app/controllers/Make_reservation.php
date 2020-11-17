@@ -95,7 +95,7 @@
 
             //above function returns next res_id but we need the current one, so decrement
             $curr_res_id=$next_res_id-1;
-            echo($curr_res_id);
+            //echo($curr_res_id);
             Session::set("res_id",$curr_res_id);
 
             //get timeslots

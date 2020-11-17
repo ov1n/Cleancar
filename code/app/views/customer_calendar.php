@@ -73,6 +73,9 @@
                     <option value="12:00:00">12.00</option>
                 </select><br>
 
+                <!--set DATE to  hidden field -->
+                <input type="hidden" id="date" name="date" value="2020-11-26">
+
                 <!-- get external components -->
                 <script src="public/js/jquery/calendar/jquery-pseudo-ripple.js"></script>
                 <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
@@ -99,7 +102,7 @@
         </div><!-- container -->
       </form>
 
-      <button >asdasd</button>
+      <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
 
       <?php 
           //get header in seperate file
