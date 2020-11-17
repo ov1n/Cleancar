@@ -11,7 +11,18 @@ function confirmDelete(){
         console.log("Its working");
     });
 
-    function button(){
+     function button1(){
+      window.location.href = "request_leave";
+    }
+
+    function button2(){
+      window.location.href = "#";
+    }
+
+    function button3(){
       window.location.href = "employee_leave_list";
-      console.log("Thenukata pissu");
+    }
+
+    function button4(){
+      window.location.href = "#";
     }
