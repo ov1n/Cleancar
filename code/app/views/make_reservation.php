@@ -36,7 +36,7 @@
 
       <form id="reservation" name="reservation" onsubmit="confirmSubmit(); return false;">
         <div class="container">  
-          <h1>Make Reservation</h1>
+          <h1><i class="fa fa-book" aria-hidden="true"></i> Make Reservation</h1>
           <hr>
           <p style="text-align:center">Please fill in this form to make reservation</p>
             <div class="background">
@@ -70,11 +70,8 @@
                 value=<?php echo($_POST['date'])?> disabled></br>
 
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
-                <select name="service_type" id="service_type" value=<?php echo($_POST['service_name'])?>>
-                    <option value="Full_service">Full Service</option>
-                    <option value="Normal_service">Normal Service</option>
-                    <option value="body_wash">Body wash</option>
-                </select><br>
+                <input type="text" name="service_type" id="service_type" 
+                value=<?php echo($_POST['service_type'])?> disabled><br>
 
                 &ensp;&ensp;<label for="tp_no"><div class="form_label"><b>Contact Number</b></div></label>
                 <input type="tel" placeholder="Enter Your Telephone Number" name="tp_no" id="tp_no" required
