@@ -26,7 +26,6 @@
       //var_dump($array);
     ?>
 
-
     <div class = "list_table">
 
     <h2>Upcoming Accepted Leave Details</h2>
