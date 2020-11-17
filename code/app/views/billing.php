@@ -62,8 +62,8 @@
                 &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Net Amount</b></div></label>
                 <input type="text" placeholder="Enter the Net Amount" name="net_amount" id="net_amount" ></br>
 
-                <button type="cancel" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">OK</button>
+                <button type="cancel" class="cancelbtn btn" >Cancel</button>
+                <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button>
               </div><!-- form_content --> 
             </div><!-- card -->
             </br></br>

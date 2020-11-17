@@ -239,9 +239,6 @@
     EmployeeLeave::create_view('emp_leave');
     });
 
-    Route::set('emp_leave',function(){
-        Controller::create_view('emp_leave');
-    });
 
     Route::set('employee_leave_list',function(){
         Session::init();
