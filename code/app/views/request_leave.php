@@ -37,7 +37,8 @@
                 <input type="date" placeholder="Enter the date" name="leave_date" id="leave_date" required></br>
 
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee Id</b></div></label>
-                <input type="text" placeholder="Enter employee id" name="emp_id" id="emp_id" required></br>
+                <input type="text" placeholder="Enter employee id" name="emp_id" id="emp_id" value=
+                "<?php echo($_SESSION['uname']); ?>" required></br>
 
                 &ensp;&ensp;<label for="leave_type"><div class="form_label"><b>Leave Type</b></div></label>
                 <select name="leave_type" id="leave_type">

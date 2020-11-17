@@ -19,6 +19,7 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="manager">Manager Home</a></li>
+        <li><a href="employee_list">Employee section</a></li>
         <li>View Employee</li>          
       </ul><!-- breadcrumb -->
 

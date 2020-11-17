@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Table</title>
@@ -25,26 +25,25 @@
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
-<?php if($array){ ?>
+    
+<div class = "list_table">
+<h2>Upcoming Accepted Leave Details</h2>
+<?php if($array) {  ?>
+  <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
-    <div class = "list_table">
-
-    <h2>Upcoming Accepted Leave Details</h2>
-    <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
-  
-    <table id="table_">
-  
-    <tr>
+  <table id="table_">
+  <tr>
             <th>Leave Date</th>
             <th>Leave Type</th>
             <th>Reason</th>
             <th>Leave Time</th>
             <th>Edit</th>
             <th>Delete</th>
+
+
         </tr>
         
-        
-            <?php foreach($array as $emp_leave){ ?>
+        <?php foreach($array as $emp_leave){ ?>
           <tr>
               <td>
                   <?php echo "$emp_leave[leave_date]"; ?>
@@ -66,18 +65,15 @@
                   <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
               </td>
           </tr>
-        
-        
       <?php } ?>
   </table>
   </div>
-</div>
-<?php } else{ ?>
-<!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
-    <div class="minuri meka hadanna">
-        <h2>No Upcoming Leaves</h2>
+<?php } else {?>
+    <div class="empty"> 
+      <br><h2> No upcoming accepted leaves </h2>
     </div>
-<?php } ?>
+  <?php } ?>
+</div>
     <?php 
           //include nav bar externally 
           include("nav_profile.php");
