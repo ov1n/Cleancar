@@ -18,7 +18,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
+        <li><a href="manager">Manager Home</a></li>
         <li>Service Type</li>
     </ul><!-- breadcrumb -->
     <?php
@@ -44,7 +44,7 @@
             <th>Name</th>
             <th>Vehicle Category</th>
             <th>No Of Employee</th>
-            <th>No Of Time slot</th>
+            <th>Duration</th>
             <th>Lift No</th>
             <th>Normal Price</th>
             <th>Edit</th>
@@ -66,7 +66,7 @@
                   <?php echo "$s_type[no_of_emp]"; ?>
               </td>
               <td>
-                  <?php echo "$s_type[no_of_timeslots]"; ?>
+                  <?php echo "$s_type[duration]"; ?>
               </td>
               <td>
                   <?php echo "$s_type[lift_no]"; ?>
