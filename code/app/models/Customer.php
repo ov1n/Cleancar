@@ -37,7 +37,7 @@
             //assign connectivity to a variable
             $conn=Database::conn();
 
-            $query="SELECT cust_id FROM customer WHERE (email='$email')";
+            $query="SELECT cust_id FROM customer WHERE (email='$email' OR cust_id='$email')";
             $result= mysqli_query($conn,$query);
 
             //debugging

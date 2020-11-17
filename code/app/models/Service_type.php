@@ -34,6 +34,32 @@
             
         }
 
+        //get details from service_id
+        function get_details_id($type_id){
+                
+            //assign connectivity to a variable
+            $conn=Database::conn();
+
+            //ONLY GETS CAR FOR NOW
+            $query="SELECT type_name,duration,price FROM service_type 
+                    WHERE type_id='$type_id'
+                    AND vehicle_category='car';";
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            
+            //var_dump($r);
+            return $r;
+            
+        }
+
         //getting all details of employees
         function get_all(){
 

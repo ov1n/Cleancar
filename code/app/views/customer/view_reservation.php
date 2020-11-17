@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Employee List</title>
+  <title>View Reservations</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
@@ -18,11 +18,10 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager Home</a></li>
-        <li>Employee</li>
+        <li>View Reservations</a></li>
     </ul><!-- breadcrumb -->
     
-    <h1>Employee Section</h1>
+    <h1>View Reservations</h1>
 
     <div class = "card">
         <h2>Employee Leave</h2>
@@ -34,16 +33,16 @@
         </div>
     </div><!-- card -->
 <div class = "list_table">
-<h2>Employee Details</h2>
+<h2>Current reservations by Mr.</h2>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
   <tr>
-            <th>Employee ID</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>NIC</th>
-            <th>View</th>
+            <th>Reservation ID</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Service Type</th>
+            <th>Paid?</th>
             <th>Edit</th>
             <th>Delete</th>
         </tr>
