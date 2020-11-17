@@ -4,7 +4,7 @@
   <title>Table</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\emp_leave.css"><!-- add style to employee_list -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
@@ -18,17 +18,17 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="employee">Employee Home</a></li>
+        <li><a href="employee">Employee</a></li>
         <li>Employee leave</li>
     </ul><!-- breadcrumb -->
     <?php
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
-    
+<?php if($array) {  ?>
 <div class = "list_table">
 <h2>Upcoming Accepted Leave Details</h2>
-<?php if($array) {  ?>
+
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
@@ -68,12 +68,12 @@
       <?php } ?>
   </table>
   </div>
+</div>
 <?php } else {?>
-    <div class="empty"> 
+    <div class="card_"> 
       <br><h2> No upcoming accepted leaves </h2>
     </div>
   <?php } ?>
-</div>
     <?php 
           //include nav bar externally 
           include("nav_profile.php");

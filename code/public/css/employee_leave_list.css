@@ -19,6 +19,19 @@ h2{
   color: #01447e;
   text-align: center;
 }
+
+.card_{
+  background-color: rgb(148, 168, 255);
+  padding: 70px 20px 40px 20px;
+  height: 260px;
+  margin: 40px 5% 62px 5%;
+  font-size: larger;
+  border-radius: 10px;
+  border-color: rgb(5, 0, 70);
+  border-width: 5px;
+  border-style: double;
+}
+
 .list_table{
     justify-content:center;
     padding-bottom: 50px;
