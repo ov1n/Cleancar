@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
 
         <!-- style needed for calendar -->
+        <link rel="stylesheet" href="public/css/calendar_card.css">
         <link rel="stylesheet" href="public/css/calendar/aicon/style.css">
         <link rel="stylesheet" href="public/css/calendar/4grid.css">
         <link rel="stylesheet" href="public/css/calendar/jquery-pseudo-ripple.css">
@@ -64,9 +65,7 @@
                     <option value="Body Wash">Body wash</option>
                 </select><br>
 
-                &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
-                <input type="date" placeholder="Enter the date" name="date" id="date" required></br>
-
+                <!--ADD DATE SELECTOR IF CALENDAR DOESNT WORK -->
                 &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
                 <select name="time" id="time">
                     <option value="08:00:00">08.00</option>
@@ -74,33 +73,25 @@
                     <option value="12:00:00">12.00</option>
                 </select><br>
 
-                <!-- CALENDAR COMES HERE --> 
+                <!--set DATE to  hidden field -->
+                <input type="hidden" id="date" name="date" value="2020-11-26">
+
+                <!-- get external components -->
                 <script src="public/js/jquery/calendar/jquery-pseudo-ripple.js"></script>
                 <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
 
                 <div >
                   <h3>Date</h3>
-                  <div class="calendar-3"></div>
+                  <div class="calendar-3 calendar_card" onclick="date_display()"></div>
                 </div>
 
                 </br>
+                <div id="date_display"></div>
+                <!-- link local js file -->
+                <script src="public/js/customer_calendar.js"></script>
                 
-                <script>
-                  $('.calendar-1').calendar()
-                  $('.calendar-2').calendar()
-                  $('.calendar-3').calendar({
-                    date: new Date(),
-                    autoSelect: true,
-                    select: function(date) {
-                      console.log('SELECT', date)
-                    },
-                    toggle: function(y, m) {
-                      console.log('TOGGLE', y, m)
-                    },
-                  })
-                </script>
+                
 
-                
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
                 <button type="submit" class="btn" class="form_btn" >Submit</button>
               </div><!-- form_content -->              
@@ -110,6 +101,8 @@
           <hr>
         </div><!-- container -->
       </form>
+
+      <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
 
       <?php 
           //get header in seperate file
