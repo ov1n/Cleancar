@@ -22,6 +22,8 @@
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
+<?php if($array){ ?>
+
 <div class = "list_table">
 <h2>Pending Leaves</h2>
   <div style="overflow-x:auto; width:94%;  margin-left:3%; border-radius:6px;">
@@ -69,6 +71,12 @@
   </table>
   </div>
 </div>
+<?php } else{ ?>
+<!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
+    <div class="New_card">
+        <h2>No Upcoming Leaves</h2>
+    </div>
+<?php } ?>
     <?php 
           //include nav bar externally 
           include("nav_profile.php");

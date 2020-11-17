@@ -25,14 +25,6 @@
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
-<<<<<<< HEAD
-
-<div class = "list_table">
-<h2>Upcoming Accepted Leave Details</h2>
-  <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
-=======
-<?php if($array){ ?>
->>>>>>> 702b15512986272a853fac9c65c09efcf6903ab8
 
     <div class = "list_table">
 
