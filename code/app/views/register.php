@@ -26,8 +26,8 @@
     
 
       <form method="POST" name="reg_form" id="reg_form" onsubmit="create()">
-        <div class="container">  
-         
+        <div>  
+            <div class="background">
          
              <ul class="breadcrumb">
            
@@ -82,7 +82,7 @@
             </div>
             </br></br></br>
           </div>
-            
+           </div> 
         
       </form>
   
