@@ -82,6 +82,14 @@
         Make_reservation::create_view('make_reservation');
     });
 
+    //route set to view reservation
+    Route::set('view_reservation',function(){
+        
+        //start session
+        Session::init();
+        View_reservation::create_view('view_reservation');
+    });
+
     //route to make reservation from receptionist
     Route::set('emergency_reservation',function(){
         
@@ -161,34 +169,50 @@
     });
 
     Route::set('request_leave',function(){
+        //start session
+        Session::init();
         Controller::create_view('request_leave');
     });
 
     Route::set('register_emp',function(){
+        //start session
+        Session::init();
         Controller::create_view('register_emp');
     });
 
     Route::set('add_employee',function(){
+        //start session
+        Session::init();
         Controller::create_view('add_employee');
     }); 
 
     Route::set('employee_update',function(){
+        //start session
+        Session::init();
         Controller::create_view('employee_update');
     });
 
     Route::set('add_timeslot',function(){
+        //start session
+        Session::init();
         Controller::create_view('add_timeslot');
     });
 
     Route::set('update_service',function(){
+        //start session
+        Session::init();
         Controller::create_view('update_service');
     });
 
     Route::set('update_delete_service',function(){
+        //start session
+        Session::init();
         Controller::create_view('update_delete_service');
     });
 
     Route::set('update_timeslot',function(){
+        //start session
+        Session::init();
         Controller::create_view('update_timeslot');
     });
 
