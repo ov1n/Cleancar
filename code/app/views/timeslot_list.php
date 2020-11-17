@@ -4,11 +4,10 @@
   <title>Table</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="public\css\emp_leave.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\service_type_list.css"><!-- add style to employee_list -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
@@ -18,44 +17,49 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="employee">Employee</a></li>
-        <li>Employee leave</li>
+        <li><a href="manager">Manager Home</a></li>
+        <li>Timeslot list</li>
     </ul><!-- breadcrumb -->
     <?php
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
-<?php if($array) {  ?>
-<div class = "list_table">
-<h2>Upcoming Accepted Leave Details</h2>
+<h1>Timeslot list</h1>
 
+    <div class = "select_buttons">
+        <a href="add_timeslot"><button type="submit" class="optionbtn btn" class="form_btn">Add Time Slot</button></a>
+    </div>
+    
+<div class = "list_table">
+<h2>Timeslot Deatails</h2>
+<?php if($array) {  ?>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
   <tr>
-            <th>Leave Date</th>
-            <th>Leave Type</th>
-            <th>Reason</th>
-            <th>Leave Time</th>
+            <th>timeslot_no</th>
+            <th>lift_no</th>
+            <th>start_timen</th>
+            <th>end_time</th>
             <th>Edit</th>
             <th>Delete</th>
 
 
         </tr>
         
-        <?php foreach($array as $emp_leave){ ?>
+        <?php foreach($array as $timeslot){ ?>
           <tr>
               <td>
-                  <?php echo "$emp_leave[leave_date]"; ?>
+                  <?php echo "$timeslot[timeslot_no]"; ?>
               </td>
               <td>
-                  <?php echo "$emp_leave[type]"; ?>
+                  <?php echo "$timeslot[lift_no]"; ?>
               </td>
               <td>
-                  <?php echo "$emp_leave[reason]"; ?>
+                  <?php echo "$timeslot[start_time]"; ?>
               </td>
               <td>
-                  <?php echo "$emp_leave[leave_time]"; ?>
+                  <?php echo "$timeslot[end_time]"; ?>
               </td>
 
               <td style = " text-align: center;">
@@ -68,12 +72,12 @@
       <?php } ?>
   </table>
   </div>
-</div>
 <?php } else {?>
-    <div class="card_"> 
+    <div class="empty"> 
       <br><h2> No upcoming accepted leaves </h2>
     </div>
   <?php } ?>
+</div>
     <?php 
           //include nav bar externally 
           include("nav_profile.php");

@@ -303,4 +303,10 @@
         Controller::create_view('time_table');
     });
 
+    Route::set('timeslot_list',function(){
+
+    Session::init();
+    Timeslot::create_view('timeslot_list');
+    });
+
 ?>

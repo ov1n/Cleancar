@@ -18,7 +18,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="receptionist">Manager Home</a></li>
+        <li><a href="manager">Manager Home</a></li>
         <li><a href="employee_list">Employee Section</a></li>
         <li>Employee</li>
     </ul><!-- breadcrumb -->
@@ -73,8 +73,7 @@
   </div>
 </div>
 <?php } else{ ?>
-<!-- 1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111 -->
-    <div class="New_card">
+    <div class="card_">
         <h2>No Upcoming Leaves</h2>
     </div>
 <?php } ?>

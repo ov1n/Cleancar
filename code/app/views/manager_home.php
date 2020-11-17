@@ -41,7 +41,7 @@
 			<div class="square4">
 				<i class="fa fa-clock-o fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="#"><button><b>Timeslot</b></button></a>
+				<a href="timeslot_list"><button><b>Timeslot</b></button></a>
 			</div>
 
 			<div class="square5">
