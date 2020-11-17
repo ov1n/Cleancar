@@ -6,7 +6,7 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\add_employee.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -19,20 +19,20 @@
 
     <body>
 
-      <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="receptionist">Receptionist Home</a></li>
-        <li>Add Employee</li>          
-      </ul><!-- breadcrumb -->
+     
 
       <form name="emp_reg_form" id="emp_reg_form" method = "post" onsubmit="send_data()" >
         <div class="container">  
-          <h1>Employee Registration</h1>
-          <p>Please fill in this form to register a employee</p>
+          
           <div class="background">
-            <hr>
+            <ul class="breadcrumb">
+                
+                  <li><a href="home">Home</a></li>
+                  <li><a href="receptionist">Receptionist Home</a></li>
+                  <li>Add Employee</li>          
+                </ul><!-- breadcrumb -->
+                <h1>Employee Registration</h1>
+                  
             <div class="card" >
 
               <div id=form_content> <!-- div to center needed elements -->
@@ -70,20 +70,22 @@
 
                 <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Register</button>
-                </br></br>
+                </br></br></br></br>
 
               </div><!-- form_content -->   
             </div><!-- card -->
-            </br></br>
+             </br></br></br></br>
           </div><!-- background -->
-          <hr>
+          
         </div><!-- container -->
       </form>
 
-      <?php 
+       <?php 
           //include nav bar externally 
           include("nav_profile.php");
       ?>
+
+     
 
       <?php 
         //get footer in seperate file
