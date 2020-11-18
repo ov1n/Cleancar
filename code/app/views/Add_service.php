@@ -6,8 +6,8 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+        <link rel="stylesheet" type="text/css" href="public\css\add_service.css"><!-- add style to form -->
+        
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
@@ -17,22 +17,21 @@
 
     <body>
       
-      <!-- add breadcrumb for find the path easily to users -->
+      
+      <form name="add_service_type_form" id="add_service_type_form" method = "post" onsubmit="send_data()">
+        <div class="container">  
+          
+          <div class="background">
+            <!-- add breadcrumb for find the path easily to users -->
       <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+        
         <li><a href="home">Home</a></li>
         <li><a href="manager">Manager Home</a></li>
         <li><a href="service_type_list">Service Type</a></li>
         <li>Add Service</li>
       </ul><!-- breadcrumb -->
-
-      <form name="add_service_type_form" id="add_service_type_form" method = "post" onsubmit="send_data()">
-        <div class="container">  
-          <h1>Add Service Type</h1>
-          <p>Please fill in this form to create new service type</p>
-          <div class="background">
-            <hr>
+        <h1>Add Service Type</h1>
+          
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
@@ -65,13 +64,13 @@
                 <input type="text" placeholder="Enter normal prize" name="price" id="price" required size="50"></br>
 
                 <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button>
+                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button> </br></br></br></br>
               </div><!-- form_content --> 
             </div><!-- card -->
             
-            </br></br>
+            </br></br></br></br>
           </div><!-- background -->
-          <hr>
+        
         </div><!-- container -->
       </form>
 
