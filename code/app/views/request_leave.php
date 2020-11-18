@@ -5,8 +5,7 @@
       <title>CleanCar - Add Leave</title>
       <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-      <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
-      <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+      <link rel="stylesheet" type="text/css" href="public\css\request_leave.css"><!-- add style to form -->
       
       <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
@@ -16,20 +15,21 @@
 
     <body>
 
-      <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="employee">Employee</a></li>
-        <li>Add Leave</li>    
-      </ul>
+      
       <!-- onsubmit="send_leave_data()" -->
       <form name="add_leave_form" id="add_leave_form" method = "post" onsubmit="send_leave_data()">        
       <div class="container">  
-          <h1>Add Leave</h1>
-          <hr></br>
+         
           <div class="background">
-            <hr>
+             <!-- breadcrumb-->
+              <ul class="breadcrumb">
+             
+              <li><a href="home">Home</a></li>
+              <li><a href="employee">Employee</a></li>
+              <li>Add Leave</li>    
+            </ul>
+               <h1>Add Leave</h1>
+                <hr style="width: 60%;"></br>
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
@@ -60,13 +60,13 @@
                <input type="text" placeholder="Enter your reason here" name="reason" id="reason" required></br>
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button>
+                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button> </br></br> </br></br>
               
               </div><!-- form_content -->   
             </div><!-- card -->
-            </br></br>
+            </br></br> 
           </div><!-- background -->
-          <hr>
+         
         </div><!-- container -->
       </form>
 
