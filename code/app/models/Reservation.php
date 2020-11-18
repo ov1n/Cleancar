@@ -50,7 +50,7 @@
 
             //get each record
             //ADD TIME
-            $query="SELECT DISTINCT(reservation.reservation_id),date,type_name,price,is_advance_paid
+            $query="SELECT DISTINCT(reservation.reservation_id),date,type_name,start_time,price,is_advance_paid
                     FROM reservation
                     INNER JOIN reservation_time_slot
                     ON reservation.reservation_id=reservation_time_slot.reservation_id
@@ -58,7 +58,8 @@
                     ON reservation_time_slot.timeslot_no=time_slot.timeslot_no
                     INNER JOIN service_type
                     ON reservation.service_id=service_type.type_id
-                    WHERE reservation.cust_id='$cust_id' ";
+                    WHERE reservation.cust_id='$cust_id' 
+                    AND start_time='08:00:00'";
 
             $result= mysqli_query($conn,$query);
 

@@ -13,7 +13,9 @@ var confirm_password = function () {  //function which matches password values
 
 //JS function which enables button only if passwords are matched
 var button_enable = function () {
-  if ((document.getElementById('psw-message').style.color == 'green') && (document.getElementById('psw-message2').innerHTML == '')) {
+  //password related
+  if ((document.getElementById('psw-message').style.color == 'green') && (document.getElementById('psw-message2').innerHTML == '')
+  &&(document.getElementById('other-message').style.color == 'green')) {
     console.log("green");
     document.getElementById("register").disabled = false;
   } else {
@@ -34,8 +36,27 @@ function password_length() {
     } else {
       console.log('more than 8');
       document.getElementById('psw-message2').innerHTML = '';
+      document.getElementById('psw-message2').style.color = 'green';
     }
   });
+}
+
+//JS function which checks if contact number is valid
+function phone_validate() {  
+  console.log(document.getElementById("mobile_tel_no").value.length);
+  if (document.getElementById("mobile_tel_no").value.length<10 ||document.getElementById("home_tel_no").value.length<10){
+    document.getElementById('other-message').style.color = 'red';
+    document.getElementById('other-message').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
+    if (document.getElementById("mobile_tel_no").value.length<10){
+      document.getElementById("mobile_tel_no").focus(); // focuses the current field.
+    }else{
+      document.getElementById("home_tel_no").focus(); // focuses the current field.
+    }
+  }else if (document.getElementById("mobile_tel_no").value.length==10 && document.getElementById("home_tel_no").value.length==10){
+    //console.log("not working");
+    document.getElementById('other-message').innerHTML = '';
+    document.getElementById('other-message').style.color = 'green';
+  }
 }
 
 //ajax function to not refresh browser when  entering data

@@ -24,7 +24,8 @@
     <h1><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  View Reservations</h1>
 
 <div class = "list_table">
-<h3 style="text-align:left;">Current reservations by Mr .<?php echo "$last_name"; ?></h3>
+<h3 style="text-align:left;">Current reservations by Mr. <b style="color:red;"><?php echo "$last_name"; ?></b>
+</h3>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
     
   <form >
@@ -48,7 +49,7 @@
 
                 <label for="time"><div class="form_label"><b>Time</b></div></label>
                 <input type="text"  name="time" value = 
-                 "<?php echo "$row[time]"; ?>" id="time" disabled></br>
+                 "<?php echo "$row[start_time]"; ?>" id="time" disabled></br>
 
                 <label for="service_type"><div class="form_label"><b>Category</b></div></label>
                 <input type="text"  name="service_type" value = 
@@ -62,6 +63,10 @@
                 <input type="text"  name="advance_paid" class="is_paid" value =
                  "<?php echo($row["is_advance_paid"])?>" disabled></br>
 
+                <label for="countdown"><div class="form_label"><b>Time left</b></div></label>
+                <input type="text"  name="countdown" class="countdown" value =
+                 "" disabled ></br>
+                
                  <?php if(!($row["is_advance_paid"])){
                             echo("<a href='update_emp?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
                  } ?>
