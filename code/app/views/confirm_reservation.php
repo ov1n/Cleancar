@@ -6,7 +6,7 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\view_employee.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\confirm_reservation.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -38,52 +38,52 @@
           <div class="background">
             <hr>
             <div class="card" >
-              <h2>&ensp;&ensp;Thank you for making your online reservation with CleanCar!</h2></br>
-              <h3>&ensp;&ensp;Your reservation details are as follows: </h3>
+              <h2>Thank you for making your online reservation with CleanCar!</h2>
               <div id=form_content> <!-- div to center needed elements -->
 
                 <!-- each field gets details from the array -->
 
-                <label for="res_id"><div class="form_label"><b> &ensp;&ensp;Reservation ID</b></div></label>
+                <label for="res_id"><div class="form_label"><b>Reservation ID</b></div></label>
                 <input type="text"  name="res_id" value =
                 <?php echo(Session::get("res_id")); ?> 1223 id="res_id" disabled></br>
 
                 <!--ADD CONCAT FUNCTION -->
-                &ensp;&ensp;<label for="first_name"><div class="form_label"><b>Customer Name</b></div></label>
+                <label for="first_name"><div class="form_label"><b>Customer Name</b></div></label>
                 <input type="text"  name="first_name" value = <?php echo ($array["last_name"] . " " . $array["last_name"]) ?> id="first_name" disabled></br>
 
-                &ensp;&ensp;<label for="vehicle_no"><div class="form_label"><b>Vehicle No</b></div></label>
+                <label for="vehicle_no"><div class="form_label"><b>Vehicle No</b></div></label>
                 <input type="text"  name="vehicle_no" value = 
                  "<?php echo(Session::get("vehicle_num")); ?>" id="vehicle_no" disabled></br>
 
-                &ensp;&ensp;<label for="category"><div class="form_label"><b>Category</b></div></label>
+                <label for="category"><div class="form_label"><b>Category</b></div></label>
                 <input type="text"  name="category" value = 
                  "<?php echo(Session::get("vehicle_category")); ?>" id="category" disabled></br>
 
-                &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
+                <label for="service_type"><div class="form_label"><b>Service Type</b></div></label>
                 <input type="text"  name="service_type" value = 
                 "<?php echo(Session::get("service_name")); ?>" id="service_type" disabled></br>
 
-                &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
+                <label for="date"><div class="form_label"><b>Date</b></div></label>
                 <input type="text"  name="date" value =
                  "<?php echo(Session::get("res_date")); ?>" id="date" disabled></br>
 
-                &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
+                <label for="time"><div class="form_label"><b>Time</b></div></label>
                 <input type="text"  name="time" value = "8.00AM" id="time" disabled></br>
 
-                &ensp;&ensp;<label for="approx"><div class="form_label"><b>Approximate Duration</b></div></label>
-                <input type="text"  name="approx" value = '2 hours' id="approx" disabled></br>
+                <label for="approx"><div class="form_label"><b>Approximate Duration</b></div></label>
+                <input type="text"  name="approx" value = '2 hours' id="approx" disabled> <br>
 
-                &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
+                <label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
                 <input type="text"  name="lift_no" value = "1" id="lift_no" disabled></br>
 
-                &ensp;&ensp;<label for="price"><div class="form_label"><b>Price</b></div></label>
+                <label for="price"><div class="form_label"><b>Price</b></div></label>
                 <input type="text"  name="price" value = "<?php echo(Session::get("price")); ?>"
                  id="price" disabled></br>
 
-                <h3> For more details please contact CleanCar at our hotline </h3>
+                <h3>For more details please contact CleanCar at our hotline </h3>
                 </br>
                 <a class="backbtn" href="home">Back</a>
+                <a class="advbtn" href="home">Pay Advanced</a>
                 </br></br>
 
               </div><!-- form_content -->   
