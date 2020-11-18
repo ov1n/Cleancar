@@ -8,7 +8,7 @@
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script type="text/javascript" src="public\js\view_reservation.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
@@ -54,18 +54,12 @@
               <td>
                   Rs. <?php echo "$row[price]"; ?>
               </td>
-              <td id="is_paid">
-                <b>
-                  <?php if($row["is_advance_paid"]){
-                            echo "Yes";
-                        }else{
-                            echo "No";
-                        }; ?>
-                </b>
-              </td>
+              <td class="is_paid"><?php echo($row["is_advance_paid"])?></td>
 
               <td style = " text-align: center;">
-                  <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Pay Online</a>
+                <?php if(!($row["is_advance_paid"])){
+                            echo("<a href='update_emp?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
+                        } ?>
               </td>
 
           </tr>
