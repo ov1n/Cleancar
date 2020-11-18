@@ -168,6 +168,74 @@ hr{
   height:256px;
 }
 
+/* button css */
+
+.btn {
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  /*padding: 0; */
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 5px;
+  transition: background-color .3s;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.btn:disabled {
+  background-color: #696969;
+  color: #ecf0f1;
+}
+
+/* button for advance payment */
+.updatelbtn{
+  width: 80px;
+  color: #01447e;
+  background-color:#fca147 ;
+  box-shadow: 0 3px 5px rgba(228, 112, 17, 0.884);
+}
+
 /* Styles, not important */
 *, *:before, *:after {
   box-sizing: border-box;

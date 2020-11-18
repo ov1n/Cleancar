@@ -30,14 +30,15 @@
             //get uname from session
             $email=Session::get("uname");
 
-            //get the cust id
+            //get the cust id and last name
             $cust_id=$cust->get_custid($email);
+            $last_name=$cust->get_lastname($email);
 
             //get the customers reservation details
             $reservation_details=$res->select($cust_id);
-            echo '<pre>';
+            //echo '<pre>';
             //var_dump($reservation_details);
-            echo '</pre>';
+            //echo '</pre>';
 
             //set reservation details to session
             //set the values so that the session can continue and data can be grabbed for the invoice

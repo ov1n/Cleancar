@@ -7,14 +7,14 @@ function advance_paid(){
     var x = document.getElementsByClassName("is_paid");
     var i;
     for (i = 0; i < x.length; i++) {
-        console.log(x[i].innerHTML);
+        console.log(x[i].value);
 
-        if(x[i].innerHTML=="1"){
-            x[i].innerHTML="Yes";
+        if(x[i].value=="1"){
+            x[i].value="Yes";
             x[i].style.color="green";
         }else{
             x[i].style.color="red";
-            x[i].innerHTML="No"
+            x[i].value="No"
         }
         x[i].style.fontWeight = "900";  
     }
