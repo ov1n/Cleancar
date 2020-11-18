@@ -54,4 +54,34 @@
             //echo($cust_id);
             return $r;
         }
+
+        //getting all details of leaves
+        function get_detail(){
+
+            
+            //assign connectivity to a variable
+            $conn=Database::conn();
+               
+
+            $query="SELECT * FROM time_slot";
+
+            $result= mysqli_query($conn,$query);
+            
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+            
+            
+            //get leaves in an array
+            $timeslot = $result->fetch_all(MYSQLI_ASSOC);
+            //var_dump($leaves);
+
+            //if array is not empty that means leave details are returning
+            if($timeslot){
+                return($timeslot); 
+            }
+
+        }
     }

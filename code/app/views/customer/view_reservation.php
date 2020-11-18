@@ -23,15 +23,6 @@
     
     <h1>View Reservations</h1>
 
-    <div class = "card">
-        <h2>Employee Leave</h2>
-        <div class = "select_buttons">
-        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
-        <button onclick= "button()" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
-        </div>
-    </div><!-- card -->
 <div class = "list_table">
 <h2>Current reservations by Mr.</h2>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
@@ -42,34 +33,41 @@
             <th>Date</th>
             <th>Time</th>
             <th>Service Type</th>
+            <th>Price</th>
             <th>Paid?</th>
-            <th>Edit</th>
-            <th>Delete</th>
         </tr>
         
-        <?php foreach($array as $emp){ ?>
+        <?php foreach($reservation_details as $row){ ?>
           <tr>
               <td>
-                  <?php echo "$emp[emp_id]"; ?>
+                  <?php echo "$row[reservation_id]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[first_name]"; ?>
+                  <?php echo "$row[date]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[last_name]"; ?>
+                  <?php echo "$row[time]"; ?>
               </td>
               <td>
-                  <?php echo "$emp[NIC_no]"; ?>
+                  <?php echo "$row[type_name]"; ?>
               </td>
+              <td>
+                  Rs. <?php echo "$row[price]"; ?>
+              </td>
+              <td id="is_paid">
+                <b>
+                  <?php if($row["is_advance_paid"]){
+                            echo "Yes";
+                        }else{
+                            echo "No";
+                        }; ?>
+                </b>
+              </td>
+
               <td style = " text-align: center;">
-                  <a href="employee_view?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
+                  <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Pay Online</a>
               </td>
-              <td style = " text-align: center;">
-                  <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
-              </td>
-              <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
-              </td>
+
           </tr>
       <?php } ?>
   </table>

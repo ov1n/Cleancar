@@ -87,6 +87,7 @@
         
         //start session
         Session::init();
+        View_reservation::get_reservations();
         View_reservation::create_view('view_reservation');
     });
 
@@ -300,6 +301,12 @@
    
     Route::set('time_table',function(){
         Controller::create_view('time_table');
+    });
+
+    Route::set('timeslot_list',function(){
+
+    Session::init();
+    Timeslot::create_view('timeslot_list');
     });
 
 ?>

@@ -58,7 +58,7 @@
                 </select><br>
 
                 <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Confirm</button>
+                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Send notification</button>
 
               </div><!-- form_content -->               
             </div><!-- card -->

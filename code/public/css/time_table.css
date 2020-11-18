@@ -48,14 +48,25 @@ h2{
   padding: 8px;
 }
 
-#table_ tr:nth-child(odd){background-color: #ccffff;} 	 
+#table_ tr:nth-child(odd){background-color: #ffffff;} 	 
 #table_ tr:nth-child(even){background-color: #ffffff;}
 #table_ tr:hover {background-color: #e6ffff;}
+
+/* CSS for specila types of timeslots */
+.present{
+  background-color: #f4ff8c;
+  font-weight: bold;
+  text-align: center;
+}
+
+.unavailable{
+  background-color: #ff8c8c;
+}
 
 #table_ th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: #0275d8;
   color: white;
 }
@@ -168,6 +179,7 @@ th, td {
 
 .time_col{
   background-color: rgb(101, 230, 180);
+  text-align: center;
 }
 
 
