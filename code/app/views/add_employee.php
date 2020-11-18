@@ -28,10 +28,13 @@
             <ul class="breadcrumb">
                 
                   <li><a href="home">Home</a></li>
-                  <li><a href="receptionist">Receptionist Home</a></li>
+                  <li><a href="receptionist">Receptionist</a></li>
                   <li>Add Employee</li>          
                 </ul><!-- breadcrumb -->
                 <h1>Employee Registration</h1>
+                <hr style = "width:60%">
+                <br>
+
                   
             <div class="card" >
 
@@ -53,12 +56,13 @@
                 <input type="email" placeholder="Enter Your Email Address" name="email" id="email" required></br>
 
                 &ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
-                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='chech_match_psw();password_length();button_enable();' required>
                 </br>
 
                 &ensp;&ensp;<label for="confirm_password"><div class="form_label"><b>Confirm Password</b></div></label>
-                <input type="password" placeholder="Re Enter the Password" name="confirm_password" id="confirm_password" required>
-                </br>
+                <input type="password" placeholder="Re Enter the Password" name="confirm_password" id="confirm_password" onkeyup='chech_match_psw();password_length();button_enable();' required>
+                <br><div id="psw_length"><p></p></div><br>
+                <div id="psw_validation"><p></p></div></br>
 
                 &ensp;&ensp;<h2>Contact Numbers</h2>
 
@@ -67,9 +71,10 @@
               
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
                 <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required><br>
+                
 
                 <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Register</button>
+                <button type="submit" id="register" class="btn" class="form_btn" style="margin-right :10px">Register</button>
                 </br></br></br></br>
 
               </div><!-- form_content -->   
