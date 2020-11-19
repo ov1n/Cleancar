@@ -44,7 +44,7 @@ function chech_match_psw() {  //function which matches password values
 
 //JS function which enables button only if passwords are matched
 var button_enable = function () {
-  if ((document.getElementById('psw_validation').style.color == 'green') && (document.getElementById('psw_length').innerHTML == '')) {
+  if ((document.getElementById('psw_validation').style.color == 'green') && (document.getElementById('psw_length').innerHTML == '') && (document.getElementById('nic_msg').style.color == 'green') && (document.getElementById('phone_validation').style.color = 'green') ) {
     console.log("green");
     document.getElementById("register").disabled = false;
   } else {
@@ -59,7 +59,7 @@ function password_length() {
     if (this.value.length < 8) { // checks the password value length
       console.log('less than 8');
       document.getElementById('psw_length').style.color = 'red';
-      document.getElementById('psw_length').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;need at least 8 characters';
+      document.getElementById('psw_length').innerHTML = '&ensp;&ensp;&#9432;&emsp;need at least 8 characters';
       $(this).focus(); // focuses the current field.
       return false; // stops the execution.
     } else {
@@ -77,12 +77,30 @@ function chech_nic(){
     console.log(usernic);
     console.log('Valid NIC number');
     document.getElementById('nic_msg').style.color = 'green';
-    document.getElementById('nic_msg').innerHTML = 'Valid NIC';
+    document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&#9432;&emsp;Valid NIC';
   }
   else{
     console.log('Invalid NIC number');
     document.getElementById('nic_msg').style.color = 'red';
-    document.getElementById('nic_msg').innerHTML = 'Invalid NIC';
+    document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Invalid NIC';
     console.log(usernic);
+  }
+}
+
+//JS function which checks if contact number is valid
+function check_phone_no() {  
+  console.log(document.getElementById("mobile_tel_no").value.length);
+  if (document.getElementById("mobile_tel_no").value.length != 10 ||document.getElementById("home_tel_no").value.length != 10){
+    document.getElementById('phone_validation').style.color = 'red';
+    document.getElementById('phone_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
+    if (document.getElementById("mobile_tel_no").value.length<10){
+      document.getElementById("mobile_tel_no").focus(); // focuses the current field.
+    }else{
+      document.getElementById("home_tel_no").focus(); // focuses the current field.
+    }
+  }else if (document.getElementById("mobile_tel_no").value.length==10 && document.getElementById("home_tel_no").value.length==10){
+    //console.log("not working");
+    document.getElementById('phone_validation').innerHTML = '';
+    document.getElementById('phone_validation').style.color = 'green';
   }
 }

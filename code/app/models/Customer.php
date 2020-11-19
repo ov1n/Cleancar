@@ -31,7 +31,7 @@
             
         }
 
-        //get autofill data in reservation form
+        //get cust_id from email
         function get_custid($email){
             
             //assign connectivity to a variable
@@ -52,6 +52,30 @@
             
             //echo($cust_id);
             return $cust_id;
+            
+        }
+
+        //get cust_name from email
+        function get_lastname($email){
+            
+            //assign connectivity to a variable
+            $conn=Database::conn();
+
+            $query="SELECT last_name FROM customer WHERE (email='$email' OR cust_id='$email')";
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            $last_name=array_shift( $r );
+            
+            //echo($last_name);
+            return $last_name;
             
         }
 
