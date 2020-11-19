@@ -26,7 +26,7 @@
       <ul class="breadcrumb">
         
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager Home</a></li>
+        <li><a href="manager">Manager</a></li>
         <li><a href="service_type_list">Service Type</a></li>
         <li>Add Service</li>
       </ul><!-- breadcrumb -->
