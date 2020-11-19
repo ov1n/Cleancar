@@ -67,10 +67,10 @@
 
                 &ensp;&ensp;&ensp;&ensp;<h3>Contact Numbers</h3>
                 &ensp;&ensp;&ensp;&ensp;<label for="mobile_tel_no" class="form_label"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="tel" placeholder="Enter Your mobile number" name="mobile_tel_no" id="mobile_tel_no" onkeyup='phone_validate();' required></br>
+                <input type="tel" placeholder="Enter Your mobile number" name="mobile_tel_no" id="mobile_tel_no" onkeyup='phone_validate();button_enable();' required></br>
               
                 &ensp;&ensp;&ensp;&ensp;<label for="home_tel_no" class="form_label"><div class="form_label"><b>Home</b></div></label>
-                <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" onkeyup='phone_validate();' required>
+                <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" onkeyup='phone_validate();button_enable();' required>
                 </br>
                 <div id="other-message"><p></p></div>
 
