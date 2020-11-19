@@ -27,10 +27,7 @@ function send_data() {
     //console.log('Registration Successful');
   }
 
-//NIC Validation
-function nic_valid(){
 
-}
 
 //function which takes confirm password
 function chech_match_psw() {  //function which matches password values
@@ -70,4 +67,22 @@ function password_length() {
       document.getElementById('psw_length').innerHTML = '';
     }
   });
+}
+
+//NIC Validation
+function chech_nic(){
+  var usernic = document.getElementById('nic').value;
+
+  if( (usernic.length == 10 && usernic.charAt(usernic.length - 1) == 'v' || usernic.charAt(usernic.length - 1) == 'V') || (usernic.length == 12 && usernic.charAt(usernic.length - 1) != 'V' &&  usernic.charAt(usernic.length - 1) != 'v' )){
+    console.log(usernic);
+    console.log('Valid NIC number');
+    document.getElementById('nic_msg').style.color = 'green';
+    document.getElementById('nic_msg').innerHTML = 'Valid NIC';
+  }
+  else{
+    console.log('Invalid NIC number');
+    document.getElementById('nic_msg').style.color = 'red';
+    document.getElementById('nic_msg').innerHTML = 'Invalid NIC';
+    console.log(usernic);
+  }
 }
