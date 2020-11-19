@@ -47,7 +47,8 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>
 
                 &ensp;&ensp;<label for="nic"><div class="form_label"><b>NIC</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" required></br>
+                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" onkeyup='chech_nic();' required></br>
+                <div id="nic_msg"><p></p></div><br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
                 <input type="text" placeholder="Enter Your Address" name="address" id="address" required></br>
