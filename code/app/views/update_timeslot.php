@@ -6,45 +6,45 @@
     
          <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+        <link rel="stylesheet" type="text/css" href="public\css\update_timeslot.css"><!-- add style to form -->
+       
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>>
     </head>
 
     <body>
-      
+     
+
+      <form action="./controllers/Register.php">
+        <div class="container">  
+          
+          
+          <div class="background">
+
       <!-- add breadcrumb for find the path easily to users -->
       <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+      
         <li><a href="home">Home</a></li>
         <li><a href="home">Manager</a></li>
         <li>Update Timeslot</li>
       </ul><!-- breadcrumb -->
-
-      <form action="./controllers/Register.php">
-        <div class="container">  
-          <h1>Update Time Slots <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></h1> <hr>
-          <p>Please fill in this form to add Time Slot</p>
-          <div class="background">
-            <hr>
+           <h1>Update Time Slots <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></h1> <hr style="width: 60%;"></br> </br>
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-                &ensp;&ensp;<label for="no_of_employees"><div class="form_label"><b>New Start Time</b></div></label>
-                <input type="text" placeholder="Enter number of emploees" name="no_of_employees" id="no_of_employees" required size="50"></br>
+                &ensp;&ensp;<label for="new_start_time"><div class="form_label"><b>New Start Time</b></div></label>
+                <input type="text" placeholder="Enter new start time" name="new_start_time" id="new_start_time" required size="50"></br>
 
-                &ensp;&ensp;<label for="no_of_time_slot"><div class="form_label"><b>New End Time</b></div></label>
-                <input type="text" placeholder="Enter number of time slot" name="no_of_time_slot" id="no_of_time_slot" required size="50"></br>
+                &ensp;&ensp;<label for="new_end_time"><div class="form_label"><b>New End Time</b></div></label>
+                <input type="text" placeholder="Enter new end time" name="new_end_time" id="new_end_time" required size="50"></br>
 
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
+                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button></br></br></br></br></br></br></br></br>
               </div><!-- form_content --> 
             </div><!-- card -->
           
-            </br></br>
+            </br> </br> </br> </br> </br> </br>
           </div><!-- background -->
-          <hr>
+         
         </div><!-- container -->
       </form>
 
