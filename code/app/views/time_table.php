@@ -128,7 +128,7 @@
     </table>
   </div>
   <div class = "select_buttons">
-        <a class="delaybtn btn" class="form_btn" href="delay_time_table">Delay Timetable</a>
+        <a class="delaybtn btn" class="form_btn" href="delay_timetable_manager">Delay Timetable</a>
         <a class="exitbtn btn" class="form_btn" href="manager">Exit</a>
   </div>
 </div>
