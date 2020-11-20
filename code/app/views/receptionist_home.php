@@ -26,7 +26,7 @@
 	    			<ul class="breadcrumb">
          
           <li><a href="home">Home</a></li>
-          <li>Receptionist</li>
+          <li>Login</li>
           
         </ul> <!-- breadcrumb -->
 
