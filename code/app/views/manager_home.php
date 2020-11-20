@@ -32,7 +32,7 @@
 				<div class="dropdown">
   					<button class="dropbtn">Reservation</button>
   					<div class="dropdown-content">
-    					<a href="emergency_reservation">make rservation</a>
+    					<a href="add_reserve_manager">make rservation</a>
     					<a href="#">view reservation</a>
   					</div>
 				</div>
