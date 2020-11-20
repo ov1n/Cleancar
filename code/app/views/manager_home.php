@@ -58,7 +58,7 @@
 			<div class="square6">
 				<i class="fa fa-list fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="#"><button><b>Time Table</b></button></a>
+				<a href="time_table"><button><b>Time Table</b></button></a>
 			</div>
 		</div><!--square-->
 	
