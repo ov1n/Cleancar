@@ -11,16 +11,11 @@
 </head>
 
 <body>
-      
-     
-      
-     
-
-      <div class="cover"> 
-      	 <!-- create breadcrumb-->
+<div class="cover"> 
+     <!-- create breadcrumb-->
       <ul class="breadcrumb">
           <li><a href="home">Home</a></li>
-          <li>Login</li>
+          <li>Employee</li>
       </ul>  <!-- breadcrumb-->
       
       <h1>Employee Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
@@ -40,7 +35,7 @@
 			<div class="square3">
 				<i class="fa fa-calendar fa-3x" aria-hidden="true"></i> 
 				<br>
-				<a href="#"><button><b>Calender</b></button></a>
+				<a href="#"><button><b>Calendar</b></button></a>
 			</div>
 
 			<div class="square4">

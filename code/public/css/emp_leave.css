@@ -77,6 +77,12 @@ th, td {
   padding: 8px;
 }
 
+.dateclmn{
+  background-color: rgb(231, 110, 116);
+  text-align: center;
+  color: #080808;
+}
+
 /* Set a style for the submit/register button */
 .btn {
   position: relative;
