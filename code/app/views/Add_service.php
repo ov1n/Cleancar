@@ -18,7 +18,7 @@
     <body>
       
       
-      <form name="add_service_type_form" id="add_service_type_form" method = "post" onsubmit="send_data()">
+      <form name="add_service_type_form" id="add_service_type_form" method = "post" action="add_service_type">
         <div class="container">  
           
           <div class="background">
@@ -26,7 +26,7 @@
       <ul class="breadcrumb">
         
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager Home</a></li>
+        <li><a href="manager">Manager</a></li>
         <li><a href="service_type_list">Service Type</a></li>
         <li>Add Service</li>
       </ul><!-- breadcrumb -->
@@ -49,15 +49,15 @@
                 &ensp;&ensp;<label for="no_of_employees"><div class="form_label"><b>No of Employees</b></div></label>
                 <input type="text" placeholder="Enter number of emploees" name="no_of_employees" id="no_of_employees" required size="50"></br>
 
-                &ensp;&ensp;<label for="no_of_time_slot"><div class="form_label"><b>No of time slots</b></div></label>
-                <input type="text" placeholder="Enter number of time slot" name="no_of_time_slot" id="no_of_time_slot" required size="50"></br>
+                &ensp;&ensp;<label for="duration"><div class="form_label"><b>Duration</b></div></label>
+                <input type="time" step="1" placeholder="Enter duration" name="duration" id="duration" required size="50"></br>
 
                 &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift Number</b></div></label>
                   <select name="lift_no" id="lift_no">
-                    <option value="L001">L001</option>
-                    <option value="L002">L002</option>
-                    <option value="L003">L003</option>
-                    <option value="L004">L004</option>
+                    <option value="1">L001</option>
+                    <option value="2">L002</option>
+                    <option value="3">L003</option>
+                    <option value="4">L004</option>
                   </select><br>
 
                 &ensp;&ensp;<label for="prize"><div class="form_label"><b>Normal Prize</b></div></label>

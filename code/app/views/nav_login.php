@@ -146,12 +146,12 @@ body {
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
  <div class="dropdown">
-    <button class="dropbtn">Booking 
+    <button class="dropbtn" onclick=" reservation_click();">Booking 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#make_reservation">Make Reservation</a>
-      <a href="#view_reservation">View Reservation</a>
+      <a href="#make_reservation" >Make Reservation</a>
+      <a href="#view_reservation" onclick=" reservation_click();">View Reservation</a>
     </div>
   </div> 
    <a href="home">Home</a>

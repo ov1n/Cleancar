@@ -12,13 +12,15 @@
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
-
+ <div class="container">  
+          
+          
+          <div class="background">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+      
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager Home</a></li>
+        <li><a href="manager">Manager</a></li>
         <li>Service Type</li>
     </ul><!-- breadcrumb -->
     <?php
@@ -26,13 +28,13 @@
       //var_dump($array);
     ?>
     
-    <h1>Service Type</h1>
+    <h1>Service Type</h1><br><hr style="width: 60%; font-style: solid;margin-left: 20%;">
 
-   
+        <br>
        <!-- <h2>Add Service Type</h2>-->
         <div class = "select_buttons">
         <a href="add_service"><button type="submit" class="optionbtn btn" class="form_btn">Add Service Type</button></a>
-        </div>
+        </div><br>
     
 <div class = "list_table">
 <h2>Service Details</h2>
@@ -86,6 +88,8 @@
       <?php } ?>
   </table>
   </div>
+</div><br><br>
+ </div>
 </div>
     <?php 
           //include nav bar externally 
