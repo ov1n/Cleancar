@@ -121,10 +121,6 @@ h2{
     line-height: 20px;
 }
 
-.output_detail{
-  color: black;
-}
-
 @media screen and (max-width: 1050px){
   .form_label{
     width: 40%;

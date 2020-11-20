@@ -56,7 +56,7 @@ ul.breadcrumb {
 /* add the background image for form */
 .background{
   /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg"); */
-  background-color: rgb(185, 255, 255);
+  
   margin: 5%;
   }
   @media screen and (max-width: 800px){

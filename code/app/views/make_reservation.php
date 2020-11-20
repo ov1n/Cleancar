@@ -18,7 +18,7 @@
     </head>
 
     <body>
-      <?php
+     <?php
         //echo($_SESSION["uname"]);
         
         //details test
@@ -27,9 +27,6 @@
         //echo(($_SESSION["details"])["email"]);
         //echo(($_SESSION["details"])["first_name"]);
       ?>
-
-     
-
       <form id="reservation" name="reservation" onsubmit="confirmSubmit(); return false;">
         <div class="container">  
           
