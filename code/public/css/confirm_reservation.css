@@ -1,0 +1,303 @@
+* {box-sizing: border-box}
+
+
+/*set default base font */
+html *
+{  
+  font-family: 'Raleway', sans-serif;
+}
+
+h1{
+  color: #01447e;
+}
+
+p{
+  font-size: larger;
+}
+
+/* Style the list(breadcrumb) */
+ul.breadcrumb {
+  margin-top: 70px;
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (|) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "|\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+}
+/* add the background image for form */
+.background{
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/1111.jpg"); */
+  background-color: rgb(185, 255, 255);
+  margin: 5%;
+  }
+  @media screen and (max-width: 800px){
+    .background{
+      margin: 0%;
+    }
+  }
+
+  /* style the card in form */
+.card {
+  justify-content:center;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  text-align: left;
+  border-radius:8px;
+  margin-left: 25%;
+  background-color: #94d3e7;
+  opacity: 0.85;
+  width: 50%;
+  border-style: ridge;
+  border-color: antiquewhite;
+  border-width: 5px;
+  border-color: #0d485a;
+}
+
+h3{
+    line-height: 20px;
+    text-align: center;
+}
+
+h2{
+    text-align: center;
+    margin: 2%;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1050px){
+  .card{
+    margin-left: 10%;
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 800px){
+    .card{
+      margin-left: 5%;
+      width: 90%;
+    }
+  }
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+
+#form_content{
+    margin: 10%;
+    width: 80%;
+    align-items: center;
+  }
+  
+.form_label{
+    display: inline-block;
+    clear: left;
+    width: 30%;
+    color: #120446;
+    font-size: larger;
+    font-weight: bolder;
+    line-height: 20px;
+}
+
+@media screen and (max-width: 1050px){
+  .form_label{
+    width: 40%;
+  }
+}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select {
+  padding: 15px 0px 15px 10px;
+  margin: 5px 0px 22px 0px;
+  width: 50%;
+  display: inline-block;
+  background-color: #94d3e7;
+  color: #120446;
+  font-size: large;
+  font-weight: 700;
+  border-width: 0px;
+}
+
+
+@media screen and (max-width: 750px){
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+    width: 190px;
+    padding: 15px 0px 15px 0px;
+    
+  }
+}
+
+
+
+/* stile the horizontal lines */
+hr{
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* avatar image in login form */
+#avatar{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 256px;				/* width of image (px or % or auto) */
+  height:256px;
+}
+
+/* button css */
+
+.btn {
+  position: relative;
+  display: block;
+  margin: 30px auto;
+  /*padding: 0; */
+  padding: 12px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  overflow: hidden;
+  border-width: 0;
+  outline: none;
+  border-radius: 5px;
+  transition: background-color .3s;
+}
+
+.btn > * {
+  position: relative;
+}
+
+.btn span {
+  display: block;
+  padding: 12px 24px;
+}
+
+.btn:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: block;
+  width: 0;
+  padding-top: 0;
+    
+  border-radius: 100%;
+  
+  background-color: rgba(236, 240, 241, .3);
+  
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+  width: 120%;
+  padding-top: 120%;
+  
+  transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.btn:disabled {
+  background-color: #696969;
+  color: #ecf0f1;
+}
+
+/* button for advance payment */
+.updatelbtn{
+  width: 80px;
+  color: #01447e;
+  background-color:#fca147 ;
+  box-shadow: 0 3px 5px rgba(228, 112, 17, 0.884);
+}
+
+/* Styles, not important */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+/* style the heading */
+h1 {
+  text-align:center;
+}
+
+.backbtn{
+  background-color: #e67e22;
+  width: 100px;
+  height: 60px;
+  float: left;
+  text-align: center;
+  padding: 15px;
+  border-color: #e67e22; 
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:5px;
+  box-shadow: 0px 3px 5px 0px   #572b00;
+  transition: background-color .3s;
+}
+
+.backbtn:hover {
+  background-color: #d35400;
+  border-color: #d35400;
+}
+
+.advbtn{
+  background-color: #1ABAFA;
+  width: 120px;
+  height: 60px;
+  line-height: 20px;
+  float: right;
+  text-align: center;
+  padding: 10px;
+  border-color: #1ABAFA; 
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  text-decoration: none;
+  display: inline-block;
+  border-radius:5px;
+  box-shadow: 0px 3px 5px 0px   #012736;
+  transition: background-color .3s;
+}
+
+.advbtn:hover {
+    background-color: #008CBA;
+    border-color: #008CBA;
+  }

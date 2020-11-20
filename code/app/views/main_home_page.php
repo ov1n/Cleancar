@@ -2,12 +2,23 @@
 <html>
 <head>
   <title>home</title>
+
+  <!-- link internal css -->
   <link rel="stylesheet" type="text/css" href="public/css/main_home.css">
+
+  <link rel="stylesheet" type="text/css" href="public/css/components/snackbar.css">
+  <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
   
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 
   <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
+  <!-- get imported jquery -->
+  <script src="public/js/jquery/jquery-3.5.1.js"></script>
+  <!-- link external js -->
+  <script type="text/javascript" src="public\js\home.js"></script>
+  <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
   <!-- set php notification to a js var in order to execute external js -->
   <script type="text/javascript">var notification = "<?= $notification ?>";</script>
@@ -22,6 +33,8 @@
     //TESTING
     ?>
   <!-- Slideshow container -->
+  <!-- The actual snackbar -->
+<div id="snackbar">Some text some message..</div>
 <div class="slideshow-container">
   <!-- Full-width images with number and caption text -->
   <div class="mySlides fade">

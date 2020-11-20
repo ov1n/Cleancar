@@ -6,28 +6,30 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+        <link rel="stylesheet" type="text/css" href="public\css\employee_update.css"><!-- add style to form -->
+        
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script> 
     </head>
 
     <body>
 
-      <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="home">Manager Home</a></li>
-        <li>Update Employee</li>          
-      </ul><!-- breadcrumb -->
+
 
       <form >
         <div class="container">  
-          <h1>Employee Update</h1>
-          <p>Please edit in this form to update the employee details</p>
-          <div class="background">
-            <hr>
+         
+                <div class="background">
+                   <ul class="breadcrumb">
+             
+             
+              <li><a href="home">Home</a></li>
+              <li><a href="home">Manager Home</a></li>
+              <li>Update Employee</li>          
+            </ul><!-- breadcrumb -->
+             <h1>Employee Update</h1>   <hr style="width: 60%;">
+           
+          </br>
             <div class="card" >
 
               <div id=form_content> <!-- div to center needed elements -->
@@ -60,13 +62,13 @@
                 </br>
                 <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
-                </br></br>
+                </br></br></br></br>
 
               </div><!-- form_content -->   
             </div><!-- card -->
             </br></br>
           </div><!-- background -->
-          <hr>
+          
         </div><!-- container -->
       </form>
 

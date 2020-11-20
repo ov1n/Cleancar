@@ -15,7 +15,7 @@
         //overloading create view
         public static function create_view($view_name){
 
-            require_once("./views/customer/view_reservation.php");
+            //require_once("./views/customer/view_reservation.php");
         }
 
         //function to get reservation details of the current employee
@@ -30,24 +30,26 @@
             //get uname from session
             $email=Session::get("uname");
 
-            //get the cust id
+            //get the cust id and last name
             $cust_id=$cust->get_custid($email);
+            $last_name=$cust->get_lastname($email);
 
             //get the customers reservation details
             $reservation_details=$res->select($cust_id);
-
-            //get service details from relevant service id
-            $service_details=$service_type->get_details_id($reservation_details["service_id"]);
+            //echo '<pre>';
+            //var_dump($reservation_details);
+            //echo '</pre>';
 
             //set reservation details to session
             //set the values so that the session can continue and data can be grabbed for the invoice
-            Session::set("reservation_details",$reservation_details["reservation_id"]);
-            Session::set("added_date",$reservation_details["added_date"]); 
-            Session::set("advance_paid",$reservation_details["is_advance_paid"]);
+            //Session::set("reservation_details",$reservation_details["reservation_id"]);
+            //Session::set("added_date",$reservation_details["added_date"]); 
+            //Session::set("advance_paid",$reservation_details["is_advance_paid"]);
 
             //data from service
-            Session::set("service_price",$service_details["price"]);
-            Session::set("service_name",$service_details["type_name"]);
+            //Session::set("service_price",$service_details["price"]);
+            //Session::set("service_name",$service_details["type_name"]);
+            require_once("./views/customer/view_reservation.php");
 
     
         }

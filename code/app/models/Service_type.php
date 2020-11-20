@@ -53,7 +53,7 @@
             }
 
             //get necessary elements in an array
-            $r = mysqli_fetch_array($result);
+            $r =$result->fetch_all(MYSQLI_ASSOC);
             
             //var_dump($r);
             return $r;
@@ -93,7 +93,7 @@
 
 
 
-        function insert_record($type_name,$vehicle_category,$no_of_emp,$no_of_timeslots,$lift_no,$price){
+        function insert_record($type_name,$vehicle_category,$no_of_emp,$duration,$lift_no,$price){
             
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -101,7 +101,7 @@
             
             $query_service_type="INSERT INTO service_type(type_name,vehicle_category,no_of_emp,duration,lift_no,price)
 
-            VALUES('$type_name','$vehicle_category','$no_of_emp','$no_of_timeslots','$lift_no','$price');";
+            VALUES('$type_name','$vehicle_category','$no_of_emp','$duration','$lift_no','$price');";
             
             //echo($query);
 

@@ -13,16 +13,19 @@
 </head>
 <body>
 
+
+ <div class="container">  
+          
+          <div class="background">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+        
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager Home</a></li>
+        <li><a href="manager">Manager</a></li>
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
-    <h1>Employee Section</h1>
+    <h1>Employee Section</h1><hr style="width: 60%;font-style: solid;margin-left: 20%;"><br>
 
     <div class = "card">
         <h2>Employee Leave</h2>
@@ -69,11 +72,13 @@
                   <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a><br>
               </td>
           </tr>
       <?php } ?>
   </table>
+  </div>
+</div><br><br>
   </div>
 </div>
     <?php 

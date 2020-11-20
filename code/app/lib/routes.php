@@ -87,6 +87,7 @@
         
         //start session
         Session::init();
+        View_reservation::get_reservations();
         View_reservation::create_view('view_reservation');
     });
 

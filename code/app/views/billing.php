@@ -7,7 +7,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
         <link rel="stylesheet" type="text/css" href="public\css\billing.css"><!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+        
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
@@ -18,26 +18,30 @@
 
     <body>
   
-      <!-- add breadcrumb for find the path easily to users -->
-      <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="receptionist">Receptionist Home</a></li>
-        <li>Billing</li>   
-      </ul><!-- breadcrumb -->
 
-      <div class = "select_buttons">
-          <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
-          <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
-      </div>
+      
           
       <form name="add_bill" id="add_bill" method = "post" onsubmit="send_bill_data()">
-        <div class="container">  
-          <h1>Billing</h1>
-          </br>
+        
+        
           <div class="background">
-            <hr>
+           
+              <!-- add breadcrumb for find the path easily to users -->
+              <ul class="breadcrumb">
+               
+                <li><a href="home">Home</a></li>
+                <li><a href="receptionist">Receptionist Home</a></li>
+                <li>Billing</li>   
+              </ul><!-- breadcrumb -->
+
+               
+              <div class="container">  
+              <h1 style="text-align:center;"><i class="fa fa-money" aria-hidden="true"></i> Billing</h1><hr style="width: 60%;">
+               <div class = "select_buttons" style="margin-right: 46%;">
+                    <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
+                    <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
+                </div>
+                  </br></br></br></br>
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
@@ -63,12 +67,12 @@
                 <input type="text" placeholder="Enter the Net Amount" name="net_amount" id="net_amount" ></br>
 
                 <button type="cancel" class="cancelbtn btn" >Cancel</button>
-                <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button>
+                <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button> </br></br></br></br>
               </div><!-- form_content --> 
             </div><!-- card -->
-            </br></br>
+            </br></br></br></br>
           </div><!-- background -->
-          <hr>
+      
         </div><!-- container -->
 
       </form>
