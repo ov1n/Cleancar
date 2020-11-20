@@ -12,26 +12,25 @@
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
-
+<div class="cover">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+      
         <li><a href="home">Home</a></li>
         <li>View Reservations</a></li>
     </ul><!-- breadcrumb -->
     
-    <h1><i class="fa fa-calendar-check-o" aria-hidden="true"></i>  View Reservations</h1>
+    <h1> View Reservations &ensp;<i class="fa fa-calendar-check-o fa-lg" aria-hidden="true"></i></h1><hr style="width: 60%; color: white">
 
 <div class = "list_table">
-<h3 style="text-align:left;">Current reservations by Mr. <b style="color:red;"><?php echo "$last_name"; ?></b>
+<h3 style="text-align:left;color: white;">Current reservations by Mr. <b style="color:red;"><?php echo "$last_name"; ?></b>
 </h3>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
     
   <form >
         <div class="container">  
         <div class="background">
-            <hr>
+            
     <?php foreach($reservation_details as $row){ ?>
         <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
@@ -76,16 +75,20 @@
             </br></br>
             <?php } ?>
           </div><!-- background -->
-          <hr>
+       
         </div><!-- container -->
       </form>
-    
-  </div>
+    </div>
+  </div> </br></br> </br></br> </br></br>
 </div>
     <?php 
           //include nav bar externally 
           include("nav_profile.php");
     ?>
-
+ <?php 
+        //get footer in seperate file
+        include("footer.php");
+      ?>
+         
 </body>
 </html>
