@@ -36,7 +36,6 @@
     <br><br><br>
 <div class = "list_table">
 <h2>Timeslot Deatails</h2>
-<?php if($array) {  ?>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
@@ -76,6 +75,7 @@
       <?php } ?>
   </table>
   </div>
+<<<<<<< HEAD
 </div><br><br><br><br><br><br>
 </div><br><br><br><br><br><br>
 <?php } else {?>
@@ -83,6 +83,9 @@
       <br><h2> No upcoming accepted leaves </h2>
     </div>
   <?php } ?>
+=======
+
+>>>>>>> 4543dcc4ca3f6f0e2b7aee227155797b1118f1b1
 </div>
     <?php 
           //include nav bar externally 
