@@ -30,7 +30,8 @@
                   <li><a href="home">Home</a></li>
                   <li><a href="receptionist">Receptionist</a></li>
                   <li>Add Employee</li>          
-                </ul><!-- breadcrumb -->
+            </ul><!-- breadcrumb -->
+            
                 <h1>Employee Registration</h1>
                 <hr style = "width:60%">
                 <br>
@@ -47,7 +48,7 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>
 
                 &ensp;&ensp;<label for="nic"><div class="form_label"><b>NIC</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" onkeyup='chech_nic();' required></br>
+                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" onkeyup='chech_nic();button_enable();' required>
                 <div id="nic_msg"><p></p></div><br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
@@ -68,11 +69,12 @@
                 &ensp;&ensp;<h2>Contact Numbers</h2>
 
                 &ensp;&ensp;<label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="tel" placeholder="Enter Your mobile number" name="mobile_tel_no" id="mobile_tel_no" required></br>
+                <input type="tel" placeholder="Enter Your mobile number" name="mobile_tel_no" id="mobile_tel_no" onkeyup = 'check_phone_no();button_enable();' required></br>
               
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
-                <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required><br>
-                
+                <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" onkeyup = 'check_phone_no();button_enable();' required><br>
+                <div id="phone_validation"><p></p></div><br>
+
 
                 <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
                 <button type="submit" id="register" class="btn" class="form_btn" style="margin-right :10px">Register</button>
