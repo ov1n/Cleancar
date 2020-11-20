@@ -1,6 +1,6 @@
 //launch error message function when window loads
 //window.onload = advance_paid;
-window.onload = set_time;
+window.onload = advance_paid;
 
 function advance_paid(){
 

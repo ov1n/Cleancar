@@ -65,7 +65,7 @@ ul.breadcrumb li a:hover {
   text-align: left;
   border-radius:8px;
   margin-left: 25%;
-  background-color: #94d3e7;
+  background-color: #ffffff;
   opacity: 0.85;
   width: 50%;
   border-style: ridge;
@@ -138,11 +138,11 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
   margin: 5px 0px 22px 0px;
   width: 50%;
   display: inline-block;
-  background-color: #94d3e7;
-  color: #120446;
-  font-size: large;
-  font-weight: 700;
-  border-width: 0px;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: x-large;
+  font-weight: 900;
+  border-width: 3px;
 }
 
 

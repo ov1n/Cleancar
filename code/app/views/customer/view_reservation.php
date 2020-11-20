@@ -4,7 +4,7 @@
   <title>View Reservations</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="public\css\confirm_reservation.css"><!-- add style to form -->
+    <link rel="stylesheet" type="text/css" href="public\css\view_reservation.css"><!-- add style to form -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
@@ -39,12 +39,12 @@
                 <!-- each field gets details from the array -->
 
                 <label for="res_id"><div class="form_label"><b>Reservation ID</b></div></label>
-                <input type="text"  name="res_id" value =
+                <input type="text" class="output_detail"  name="res_id" value =
                 <?php echo "$row[reservation_id]"; ?> id="res_id" disabled></br>
 
                 <!--ADD CONCAT FUNCTION -->
                 <label for="date"><div class="form_label"><b>Date</b></div></label>
-                <input type="date"  name="date" value = <?php echo "$row[date]"; ?>
+                <input type="date"  name="date" class="output_detail" value = <?php echo "$row[date]"; ?>
                  id="date" disabled></br>
 
                 <label for="time"><div class="form_label"><b>Time</b></div></label>
@@ -68,7 +68,7 @@
                  "" disabled ></br>
                 
                  <?php if(!($row["is_advance_paid"])){
-                            echo("<a href='update_emp?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
+                            echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
                  } ?>
 
               </div><!-- form_content -->   
