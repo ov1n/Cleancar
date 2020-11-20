@@ -314,4 +314,9 @@
         Controller::create_view('employee_calendar');
     });
 
+    Route::set('add_reserve_manager',function(){
+        Session::init();
+        Controller::create_view('add_reserve_manager');
+    });
+
 ?>
