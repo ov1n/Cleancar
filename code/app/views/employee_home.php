@@ -1,61 +1,73 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>employee_home</title>
+	<title>manager_home</title>
 
-	<link rel="stylesheet" type="text/css" href="public/css/employee_home.css">
-	 
-
+	<link rel="stylesheet" type="text/css" href="public\css\manager_home.css"><!-- add style home page -->
+    <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->  
 
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
-
 <body>
-      
-     
-      
-     
-
-      <div class="cover"> 
-      	 <!-- create breadcrumb-->
-      <ul class="breadcrumb">
+	
+	    <div class="cover"> 
+	    	<!-- create breadcrumb -->
+	    	<ul class="breadcrumb">
           <li><a href="home">Home</a></li>
-          <li>Login</li>
-      </ul>  <!-- breadcrumb-->
+          <li>Manager</li>
+          
+        </ul> <!-- breadcrumb -->
       
-      <h1>Employee Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
-	    <div class="square"><br>
-		<div class="square1">
-				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i> 
+	    		<h1 style="color: white;">Manager Home <i class="fa fa-home fa-lg" aria-hidden="true" style="color: white;"></i></h1>
+	    <div class="square"> <br>
+		<div class="square1" style="float: left;">
+				<i class="fa fa-address-card-o fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="request_leave"><button><b>Add Leave</b></button></a>
+				<a href="employee_list"><button><b>Employee</b></button></a>
 			</div>
 
 			<div class="square2">
-				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i> 
+				<i class="fa fa-list-alt fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="emp_leave"><button><b>View Leaves</b></button></a>
+				<div class="dropdown">
+  					<button class="dropbtn">Reservation</button>
+  					<div class="dropdown-content">
+    					<a href="#">make rservation</a>
+    					<a href="#">view reservation</a>
+  					</div>
+				</div>
 			</div>
 
 			<div class="square3">
-				<i class="fa fa-calendar fa-3x" aria-hidden="true"></i> 
+				<i class="fa fa-plus-circle fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="#"><button><b>Calender</b></button></a>
+				<a href="service_type_list"><button><b>Service Type</b></button></a>
 			</div>
 
 			<div class="square4">
-				<i class="fa fa-pie-chart fa-3x" aria-hidden="true"></i> 
+				<i class="fa fa-clock-o fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="leave_static"><button><b>Leave Statics</b></button></a>
+				<a href="timeslot_list"><button><b>Timeslot</b></button></a>
 			</div>
-		</div> <!--square-->
-</div> <!-- cover -->
 
+			<div class="square5">
+				<i class="fa fa-file-text fa-3x" aria-hidden="true" style="color: white;"></i>
+				<br>
+				<a href="#"><button><b>Reports</b></button></a>
+			</div>
+			<div class="square6">
+				<i class="fa fa-list fa-3x" aria-hidden="true" style="color: white;"></i>
+				<br>
+				<a href="#"><button><b>Time Table</b></button></a>
+			</div>
+		</div><!--square-->
+	
+		</div><!--cover-->
+		
 
-
-  <!-- add footer -->
-  <?php include("nav_profile.php"); ?> <!-- add navigation bar -->
-  <?php include("footer.php"); ?>
+	
+<?php include("nav_profile.php"); ?> <!-- add navigation bar -->
+	<?php include("footer.php"); ?><!-- add footer -->
 
 </body>
 </html>
