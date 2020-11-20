@@ -29,13 +29,13 @@
 			<div class="square2">
 				<i class="fa fa-times-circle fa-3x" aria-hidden="true"></i> 
 				<br>
-				<a href="emp_leave"><button><b>View Leaves</b></button></a>
+				<a href="emp_leave"><button><b>Upcoming Leaves</b></button></a>
 			</div>
 
 			<div class="square3">
 				<i class="fa fa-calendar fa-3x" aria-hidden="true"></i> 
 				<br>
-				<a href="#"><button><b>Calendar</b></button></a>
+				<a href="employee_calendar"><button><b>Leave Calendar</b></button></a>
 			</div>
 
 			<div class="square4">
