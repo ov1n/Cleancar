@@ -9,27 +9,31 @@
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
+            <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-
+<div class="container">  
+          
+          
+          <div class="background">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+       
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager Home</a></li>
+        <li><a href="manager">Manager</a></li>
         <li>Timeslot list</li>
     </ul><!-- breadcrumb -->
     <?php
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
-<h1>Timeslot list</h1>
+<h1>Timeslot list &ensp;<i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></h1><br><hr style="width: 60%;margin-left: 20%"><br> <br>
 
     <div class = "select_buttons">
         <a href="add_timeslot"><button type="submit" class="optionbtn btn" class="form_btn">Add Time Slot</button></a>
     </div>
-    
+    <br><br><br>
 <div class = "list_table">
 <h2>Timeslot Deatails</h2>
 <?php if($array) {  ?>
@@ -72,6 +76,8 @@
       <?php } ?>
   </table>
   </div>
+</div><br><br><br><br><br><br>
+</div><br><br><br><br><br><br>
 <?php } else {?>
     <div class="empty"> 
       <br><h2> No upcoming accepted leaves </h2>
