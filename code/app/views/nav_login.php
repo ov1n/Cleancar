@@ -17,16 +17,17 @@ body {
   font-family: 'raleway' !important;
 }
 
-.navbar {
+ .navbar {
   height: 65px;
-  background-image: linear-gradient(to right, rgb(250, 0, 0,0.7), rgb(0, 118, 255));
+  display: block;
+  background-image: linear-gradient(to right, rgb(250, 0, 0,0.85), rgb(0, 118, 255));
   position: fixed; /* Make it stick/fixed */
   top: 0; /* Stay on top */
   width: 100%; /* Full width */
   transition: top 0.3s; /* Transition effect when sliding down (and up) */
 }
 
-.navbar a {
+ .navbar a {
 
    float: right;
   display: block;
@@ -45,7 +46,7 @@ body {
   font-size: 15px;
   }
 }
-.navbar img{
+ .navbar img{
  width: 100px;
  height: 60px;
  float: left;
@@ -53,7 +54,7 @@ body {
  margin-top: 2px;
 }
 @media screen and (max-width: 900px){
-  .navbar img{
+   .navbar img{
   width: 76px;
   margin-left: 0px;
  
@@ -91,7 +92,7 @@ body {
   font-size: 15px;
   }
 }
-.navbar a:hover, .dropdown:hover .dropbtn {
+ .navbar a:hover, .dropdown:hover .dropbtn {
     color: black;
   height: 100%;
 }
@@ -126,23 +127,31 @@ body {
   display: block;
 }
 
-
+@media screen and (max-width: 900px){
+   .navbar{
+    display: none;
+  }
+}
   </style>
 </head>
 <body>
-
+ <?php 
+        //get header in seperate file(side nav bar)
+        include("sidenav_login.php");
+        
+    ?>
 <div class="navbar">
    <a href="login">Sign In</a>
    <a href="register">Sign Up</a>
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
  <div class="dropdown">
-    <button class="dropbtn">Booking 
+    <button class="dropbtn" onclick=" reservation_click();">Booking 
       <i class="fa fa-caret-down"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#make_reservation">Make Reservation</a>
-      <a href="#view_reservation">View Reservation</a>
+      <a href="#make_reservation" >Make Reservation</a>
+      <a href="#view_reservation" onclick=" reservation_click();">View Reservation</a>
     </div>
   </div> 
    <a href="home">Home</a>

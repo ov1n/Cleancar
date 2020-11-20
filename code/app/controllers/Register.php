@@ -31,8 +31,10 @@
             $hashed=md5($password);
 
             //insert data
-            $cust->insert_record($first_name,$last_name,$vehicle_number,$address,$hashed,$e_mail,$mobile_tel_no,$home_tel_no);
-
+            $result=$cust->insert_record($first_name,$last_name,$vehicle_number,$address,$hashed,$e_mail,$mobile_tel_no,$home_tel_no);
+            echo("resultstart");
+            echo($result);
+            echo("resultend");
             //ON SUCCESS, send an email to customer address
             $mail=new Mailer();
 
@@ -41,7 +43,7 @@
                     registering with Cleancar reservation System.";
 
             //call function in class
-            $mail->mailto($subject,$e_mail,$body);
+            //$mail->mailto($subject,$e_mail,$body);
         }
     }
 ?>

@@ -6,7 +6,7 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\add_employee.css"><!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -19,20 +19,24 @@
 
     <body>
 
-      <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="home">Manager Home</a></li>
-        <li>Add Employee</li>          
-      </ul><!-- breadcrumb -->
+     
 
       <form name="emp_reg_form" id="emp_reg_form" method = "post" onsubmit="send_data()" >
         <div class="container">  
-          <h1>Employee Registration</h1>
-          <p>Please fill in this form to register a employee</p>
+          
           <div class="background">
-            <hr>
+            <ul class="breadcrumb">
+                
+                  <li><a href="home">Home</a></li>
+                  <li><a href="receptionist">Receptionist</a></li>
+                  <li>Add Employee</li>          
+            </ul><!-- breadcrumb -->
+            
+                <h1>Employee Registration</h1>
+                <hr style = "width:60%">
+                <br>
+
+                  
             <div class="card" >
 
               <div id=form_content> <!-- div to center needed elements -->
@@ -44,7 +48,8 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>
 
                 &ensp;&ensp;<label for="nic"><div class="form_label"><b>NIC</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" required></br>
+                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" onkeyup='chech_nic();button_enable();' required>
+                <div id="nic_msg"><p></p></div><br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
                 <input type="text" placeholder="Enter Your Address" name="address" id="address" required></br>
@@ -53,37 +58,42 @@
                 <input type="email" placeholder="Enter Your Email Address" name="email" id="email" required></br>
 
                 &ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
-                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+                <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='chech_match_psw();password_length();button_enable();' required>
                 </br>
 
-                &ensp;&ensp;<label for="password"><div class="form_label"><b>Confirm Password</b></div></label>
-                <input type="password" placeholder="Re Enter the Password" name="password" id="password" required>
-                </br>
+                &ensp;&ensp;<label for="confirm_password"><div class="form_label"><b>Confirm Password</b></div></label>
+                <input type="password" placeholder="Re Enter the Password" name="confirm_password" id="confirm_password" onkeyup='chech_match_psw();password_length();button_enable();' required>
+                <br><div id="psw_length"><p></p></div><br>
+                <div id="psw_validation"><p></p></div></br>
 
                 &ensp;&ensp;<h2>Contact Numbers</h2>
 
                 &ensp;&ensp;<label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="tel" placeholder="Enter Your mobile number" name="mobile_tel_no" id="mobile_tel_no" required></br>
+                <input type="tel" placeholder="Enter Your mobile number" name="mobile_tel_no" id="mobile_tel_no" onkeyup = 'check_phone_no();button_enable();' required></br>
               
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
-                <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" required><br>
+                <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" onkeyup = 'check_phone_no();button_enable();' required><br>
+                <div id="phone_validation"><p></p></div><br>
+
 
                 <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Register</button>
-                </br></br>
+                <button type="submit" id="register" class="btn" class="form_btn" style="margin-right :10px">Register</button>
+                </br></br></br></br>
 
               </div><!-- form_content -->   
             </div><!-- card -->
-            </br></br>
+             </br></br></br></br>
           </div><!-- background -->
-          <hr>
+          
         </div><!-- container -->
       </form>
 
-      <?php 
+       <?php 
           //include nav bar externally 
           include("nav_profile.php");
       ?>
+
+     
 
       <?php 
         //get footer in seperate file

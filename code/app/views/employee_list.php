@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Table</title>
+  <title>Employee List</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
@@ -13,24 +13,27 @@
 </head>
 <body>
 
+
+ <div class="container">  
+          
+          <div class="background">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+        
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
+        <li><a href="manager">Manager</a></li>
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
-    <h1>Employee Section</h1>
+    <h1>Employee Section</h1><hr style="width: 60%;font-style: solid;margin-left: 20%;"><br>
 
     <div class = "card">
         <h2>Employee Leave</h2>
         <div class = "select_buttons">
-        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
-        <button type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
+        <button onclick= "button1()" class="optionbtn btn" class="form_btn" style = "margin-left:5%;">Add Leave</button>
+        <button onclick= "button2()" class="optionbtn btn" class="form_btn" >Cancel Leave</button>
+        <button onclick= "button3()" class="optionbtn btn" class="form_btn" >Pending Leaves</button>
+        <button onclick= "button4()" type="submit" class="optionbtn btn" class="form_btn" style = "margin-right:5%;">Leave Report</button>
         </div>
     </div><!-- card -->
 <div class = "list_table">
@@ -69,11 +72,13 @@
                   <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a><br>
               </td>
           </tr>
       <?php } ?>
   </table>
+  </div>
+</div><br><br>
   </div>
 </div>
     <?php 

@@ -4,7 +4,7 @@
 	<title>receptionist_home</title>
 
 	<link rel="stylesheet" type="text/css" href="public\css\receptionist_home.css"><!-- add style home page -->
-	<link rel="stylesheet" type="text/css" href="public\css\nav_bar.css"><!-- add style to nav bar -->
+	
     <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->  
 
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
@@ -16,25 +16,23 @@
       //var_dump($array);
     ?>
 
-		<br><br><br>
+		
 		<!-- create breadcrumb -->
 
-		<ul class="breadcrumb">
-          <img src="public/images/4444.png" width="109" height="48" style="float:right">
-          </br>
+
+		
+
+	    <div class="cover"> 
+	    			<ul class="breadcrumb">
+         
           <li><a href="home">Home</a></li>
           <li>Login</li>
           
         </ul> <!-- breadcrumb -->
 
-		<h1>Receptionist Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
+		<h1 style="color: white;">Receptionist Home <i class="fa fa-home fa-lg" aria-hidden="true"></i></h1>
 		
-		<hr>
-		<br>
-
-	    <div class="cover"> <hr>
-
-	    <div class="square"> <br><br>
+	    <div class="square"> <br>
 		<div class="square1">
 				<i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>
 				<br>
@@ -48,7 +46,7 @@
 			</div>
 
 			<div class="square3">
-				<i class="fa fa-book fa-3x" aria-hidden="true"></i>
+				<i class="fa fa-calculator fa-3x" aria-hidden="true"></i>
 				<br>
 				<a href="billing"><button><b>Make Billing</b></button></a>
 			</div>
@@ -74,7 +72,7 @@
 		</div><!--square-->
 	
 		</div><!--cover-->
-		<hr>
+		
 
 	
 <?php include("nav_profile.php"); ?> <!-- add navigation bar -->

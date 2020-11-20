@@ -10,3 +10,19 @@ function confirmDelete(){
         event.preventDefault();
         console.log("Its working");
     });
+
+     function button1(){
+      window.location.href = "request_leave";
+    }
+
+    function button2(){
+      window.location.href = "#";
+    }
+
+    function button3(){
+      window.location.href = "employee_leave_list";
+    }
+
+    function button4(){
+      window.location.href = "#";
+    }

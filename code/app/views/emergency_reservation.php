@@ -5,8 +5,8 @@
         <title>CleanCar - Make Reservation form</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css">                  <!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css">                <!-- add style to footer -->
+        <link rel="stylesheet" type="text/css" href="public\css\emergency_reservation.css">                  <!-- add style to form -->
+       
         <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
         <!-- get imported jquery -->
         <script src="public/js/jquery/jquery-3.5.1.js"></script>
@@ -28,22 +28,23 @@
         //echo(($_SESSION["details"])["first_name"]);
       ?>
 
-      <!-- add breadcrumb for find the path easily to users -->
-      <ul class="breadcrumb">
-         <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="home">Customer</a></li>
-        <li>Make Reservation</li>    
-      </ul><!-- breadcrumb -->
+     
 
       <form id="reservation" name="reservation" onsubmit="confirmSubmit(); return false;">
         <div class="container">  
-          <h1>Make Reservation</h1>
-          <hr>
-          <p>Please fill in this form to make reservation</p>
+          
             <div class="background">
-              <hr>
+                       <!-- add breadcrumb for find the path easily to users -->
+              <ul class="breadcrumb">
+                
+                <li><a href="home">Home</a></li>
+                <li><a href="receptionist">Customer</a></li>
+                <li>Make Reservation</li>    
+              </ul><!-- breadcrumb -->
+              <h1>Make Reservation</h1><hr style="width: 60%;">
+             
+               
+             
               <div class="card" >
                 <div id=form_content> <!-- div to center needed elements -->
                 
@@ -79,12 +80,12 @@
                 <input type="tel" placeholder="Enter Your Telephone Number" name="tp_no" id="tp_no" required></br>
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" class="btn" class="form_btn" >Submit</button>
+                <button type="submit" class="btn" class="form_btn" >Submit</button> </br></br> </br></br>
               </div><!-- form_content -->              
             </div><!-- card -->
             </br></br>
           </div><!-- background -->
-          <hr>
+        
         </div><!-- container -->
       </form>
 

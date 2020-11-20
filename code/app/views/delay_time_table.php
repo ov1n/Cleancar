@@ -19,7 +19,7 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="home">Receptionist</a></li>
+        <li><a href="receptionist">Receptionist</a></li>
         <li>Delay Time Table</li>      
       </ul><!-- breadcrumb -->
 
@@ -58,7 +58,7 @@
                 </select><br>
 
                 <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Confirm</button>
+                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Send notification</button>
 
               </div><!-- form_content -->               
             </div><!-- card -->

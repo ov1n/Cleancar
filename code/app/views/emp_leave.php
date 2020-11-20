@@ -1,10 +1,10 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Table</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\emp_leave.css"><!-- add style to employee_list -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
@@ -25,14 +25,15 @@
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
-    
+<?php if($array) {  ?>
 <div class = "list_table">
 <h2>Upcoming Accepted Leave Details</h2>
+
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
   <tr>
-            <th>Leave Date</th>
+            <th class="dateclmn">Leave Date</th>
             <th>Leave Type</th>
             <th>Reason</th>
             <th>Leave Time</th>
@@ -44,7 +45,7 @@
         
         <?php foreach($array as $emp_leave){ ?>
           <tr>
-              <td>
+              <td class="dateclmn">
                   <?php echo "$emp_leave[leave_date]"; ?>
               </td>
               <td>
@@ -68,6 +69,11 @@
   </table>
   </div>
 </div>
+<?php } else {?>
+    <div class="card_"> 
+      <br><h2> No upcoming accepted leaves </h2>
+    </div>
+  <?php } ?>
     <?php 
           //include nav bar externally 
           include("nav_profile.php");

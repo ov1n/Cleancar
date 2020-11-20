@@ -21,14 +21,14 @@
             $service_type=$_POST['service_type'];
             $vehicle_category=$_POST['vehicle_category'];
             $no_of_employees=$_POST['no_of_employees'];
-            $no_of_time_slot=$_POST['no_of_time_slot'];
+            $duration=$_POST['duration'];
             $lift_no=$_POST['lift_no'];
             $price=$_POST['price'];
             
            
             
             //insert data
-            $s_type->insert_record($service_type,$vehicle_category,$no_of_employees,$no_of_time_slot,$lift_no,$price);
+            $s_type->insert_record($service_type,$vehicle_category,$no_of_employees,$duration,$lift_no,$price);
 
             //ON SUCCESS, send an email to the employee asking him to change his password immediately
            

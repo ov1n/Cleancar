@@ -1,0 +1,191 @@
+.nao-month {
+	position: relative;
+	min-width: 280px;
+	overflow: hidden;
+}
+
+.nao-month.no-overflow {
+	overflow: hidden !important;
+	transform: translateZ(0)
+}
+
+.nao-month>div+div {
+	transition: opacity .5s ease;
+	filter: none;
+	opacity: 1
+}
+
+.nao-month .month-head {
+	position: relative;
+	display: block;
+}
+
+.nao-month .month-head button,
+.nao-month .month-head div,
+.nao-month .month-head span {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	border-radius: 0;
+	outline: none;
+	box-shadow: none;
+	text-decoration: none;
+	position: relative;
+	display: block;
+	top: 0;
+	padding: 8px;
+	cursor: pointer;
+	background: transparent;
+	font-size: 16px;
+	line-height: 16px
+}
+
+.nao-month .month-head div {
+	text-align: center;
+	height: 16px;
+	line-height: 16px
+}
+
+.nao-month .month-head button {
+	float: left;
+	z-index: 1
+}
+
+.nao-month .month-head .ic-arrow-angle-right,
+.nao-month .month-head .ic-arrow-angle-right+button {
+	float: right
+}
+
+.nao-month table {
+	width: 100%;
+	transform: none;
+	filter: none;
+	opacity: 1;
+	transition: transform .5s ease, opacity .5s ease;
+}
+
+.nao-month table thead,
+.nao-month table tbody {
+	width: 100%
+}
+
+.nao-month table.prev,
+.nao-month table.next,
+.nao-month table.come {
+	position: absolute
+}
+
+.nao-month table.prev {
+	transform: translateX(-110%);
+}
+
+.nao-month table.prev+table {
+	transform: translateX(110%)
+}
+
+.nao-month table.next {
+	transform: translateX(110%);
+}
+
+.nao-month table.next+table {
+	transform: translateX(-110%)
+}
+
+.nao-month table.come {
+	transform: none
+}
+
+.nao-month th,
+.nao-month td {
+	text-align: center;
+	padding: 4px 1px;
+	width: 40px;
+	text-transform: uppercase
+}
+
+.nao-month td {
+	cursor: pointer;
+	border-radius: 3px;
+	box-shadow: 0 0 0 2px transparent inset;
+}
+
+.nao-month td.ripple {
+	z-index: 99
+}
+
+.nao-month td.today {
+	box-shadow: 0 0 0 2px #fa0 inset;
+	overflow: hidden
+}
+
+.nao-month td.active {
+	transition: box-shadow .3s ease .5s;
+	box-shadow: 0 0 0 2px #0af inset
+}
+
+.nao-month td:empty {
+	cursor: auto
+}
+
+.nao-month td:empty::before {
+	content: '•';
+	opacity: .3;
+	display: inline-block
+}
+
+.nao-month .year-month {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: 0;
+	z-index: 3;
+	overflow: hidden;
+	transition: height 5ms linear .5s, background .5s ease;
+	pointer-events: none;
+}
+
+.nao-month .year-month.visible {
+	display: block;
+	transition: height 5ms linear 0s;
+	height: 100%;
+	pointer-events: auto
+}
+
+.nao-month .year-month.visible~div,
+.nao-month .year-month.visible~table {
+	filter: blur(5px);
+	filter: none;
+	opacity: .05
+}
+
+.nao-month .year-month>div:first-child {
+	margin-top: -100%;
+	transition: margin .5s ease
+}
+
+.nao-month .year-month.visible>table,
+.nao-month .year-month.visible>div {
+	margin-top: 0%;
+	transform: none
+}
+
+.nao-month .year-month table {
+	height: 70%
+}
+
+.nao-month .year-month td {
+	overflow: hidden;
+	width: 33.333%
+}
+
+.nao-month .year-month>.ic {
+	position: absolute;
+	display: block;
+	bottom: 0;
+	right: 0;
+	box-sizing: border-box;
+	padding: 10px;
+	text-align: center;
+	width: 100%;
+	cursor: pointer
+}
