@@ -309,4 +309,9 @@
     Timeslot::create_view('timeslot_list');
     });
 
+    Route::set('employee_calendar',function(){
+        Session::init();
+        Controller::create_view('employee_calendar');
+    });
+
 ?>
