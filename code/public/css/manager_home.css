@@ -156,7 +156,7 @@ div.square1 button,.square3 button,.square4 button,.square5 button,.square6 butt
   background-color: #3377FF; 
 }
 
-.square2 .dropbtn {
+.square2 button.dropbtn {
   background-color: #3377FF;
   width: 100px;
   height: 40px;
@@ -167,6 +167,7 @@ div.square1 button,.square3 button,.square4 button,.square5 button,.square6 butt
   border-radius: 6px;
   cursor: pointer;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -187,7 +188,7 @@ div.square1 button,.square3 button,.square4 button,.square5 button,.square6 butt
 
 .dropdown:hover .dropdown-content {display: block;}
 
-.dropdown:hover .dropbtn {background-color:#3377FF;}
+.dropdown:hover .dropbtn {background-color: #3377FF;}
 
 
 
