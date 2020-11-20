@@ -163,9 +163,12 @@ div.square1 button,.square3 button,.square4 button,.square5 button,.square6 butt
   transition: 0.3s;
   font-family: 'Raleway' !important;  
   font-size: 95%;
-  margin-top: 20%;
+  margin-top: 45px;
+  margin-right: 70px;
   border-radius: 6px;
   cursor: pointer;
+  color: black;
+  font-weight: bold;
 }
 
 .dropdown-content {
@@ -183,13 +186,6 @@ div.square1 button,.square3 button,.square4 button,.square5 button,.square6 butt
   text-decoration: none;
   display: block;
 }
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3377FF;}
-
 
 
 /* responsive square */

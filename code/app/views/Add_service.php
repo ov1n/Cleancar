@@ -50,7 +50,12 @@
                 <input type="text" placeholder="Enter number of emploees" name="no_of_employees" id="no_of_employees" required size="50"></br>
 
                 &ensp;&ensp;<label for="duration"><div class="form_label"><b>Duration</b></div></label>
-                <input type="time" step="1" placeholder="Enter duration" name="duration" id="duration" required size="50"></br>
+                <select name="duration" id="duration">
+                    <option value="01:00">01:00</option>
+                    <option value="01:30">01:30</option>
+                    <option value="02:00">02:00</option>
+                    <option value="02:30">02:30</option>
+                  </select><br>
 
                 &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift Number</b></div></label>
                   <select name="lift_no" id="lift_no">
