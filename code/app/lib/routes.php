@@ -232,7 +232,11 @@
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
-        EmployeeList::view();
+        EmployeeList::view('view_employee');
+    });
+
+    Route::set('employee_view_recep',function(){ 
+        EmployeeList::view('view_employee_recep');
     });
 
     //delete
@@ -327,6 +331,11 @@
     Route::set('add_leave_manager',function(){
         Session::init();
         Controller::create_view('add_leave_manager');
+    });
+
+    Route::set('employee_update_recep',function(){
+        Session::init();
+        Controller::create_view('employee_update_recep');
     });
 
 ?>

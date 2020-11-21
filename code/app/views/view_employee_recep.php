@@ -18,10 +18,11 @@
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager</a></li>
-        <li><a href="employee_list">Employee section</a></li>
+        <li><a href="receptionist">Receptionist</a></li>
+        <li><a href="employee_list_recep">Employee section</a></li>
         <li>View Employee</li>          
       </ul><!-- breadcrumb -->
+
       <form >
         <div class="container">  
           <h1>Employee Details</h1>
@@ -45,10 +46,10 @@
                 <input type="text"  name="nic" value = <?php echo ":-"."$array[NIC_no]"; ?> id="nic" disabled></br>
 
                 <label for="address"><div class="form_label"><b>Address</b></div></label>
-                <input type="text"  name="address" maxlength="15" value = '<?php echo ":-"."$array[address]"; ?>' id="address" disabled></br>
+                <input type="text"  name="address" value = <?php echo ":-"."$array[address]"; ?> id="address" disabled></br>
 
                 <label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-                <input type="email"  name="email" size="35" value = <?php echo ":-"."$array[email]"; ?> id="e-mail" disabled></br>
+                <input type="email"  name="email" value = <?php echo ":-"."$array[email]"; ?> id="e-mail" disabled></br>
 
                 <label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
                 <input type="text"  name="mobile_tel_no" value = <?php echo ":-"."$array[mobile_tel_no]"; ?> id="mobile_tel_no" disabled></br>
@@ -56,7 +57,7 @@
                 <label for="home_tel_no"><div class="form_label" ><b>Home</b></div></label>
                 <input type="text"  name="home_tel_no" value = <?php echo ":-"."$array[home_tel_no]"; ?> id="home_tel_no" disabled>
                 </br>
-                <a class="updatebtn" href="employee_update">Update</a>
+                <a class="updatebtn" href="employee_update_recep">Update</a>
                 <a class="backbtn" href="employee_list">Back</a>
                 </br></br>
 

@@ -1,4 +1,3 @@
-
 * {box-sizing: border-box}
 
 
@@ -8,6 +7,66 @@ html *
   font-family: 'Raleway', sans-serif;
 }
 
+h1{
+  color: #01447e;
+}
+
+
+p{
+  font-size: larger;
+}
+
+/* Style the list(breadcrumb) */
+ul.breadcrumb {
+  margin-top: 70px;
+  padding: 10px 16px;
+  list-style: none;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (|) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "|\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+}
+
+/* add the background image for form */
+.background{
+  margin-top: 65px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/employee-office-desk-work-career-growth.jpg");
+
+ }
+
+ .background_2{
+  margin-top: 65px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/report.jpg");
+
+ }
+ /* Add padding to containers */
+.container {
+  height: 100%;
+}
 
 h1{
   color: #01447e;
@@ -32,6 +91,7 @@ h2{
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
     width: 94%;
     margin-bottom: 50px;
+    opacity: 0.9;
 }
 /* @media screen and (max-width: 1270px){
   .list_table{
@@ -226,52 +286,4 @@ th, td {
     margin-bottom: 50px;
   }
 
- /* Style the list */
-ul.breadcrumb {
-    padding: 15px 25px;
-    list-style: none;
-  }
-  
-  /* Display list items side by side */
-  ul.breadcrumb li {
-    display: inline;
-    font-size: 18px;
-    color: white;
-  }
-  @media screen and (max-width: 500px){
-    ul.breadcrumb li {
-   
-    font-size: 14px;
-    
-  }
-}
-  
-  /* Add a slash symbol (/) before/behind each list item */
-  ul.breadcrumb li+li:before {
-    padding: 8px;
-    color: white;
-    content: "|\00a0";
-  }
-  
-  /* Add a color to all links inside the list */
-  ul.breadcrumb li a {
-    color: #0275d8;
-    text-decoration: none;
-  }
-  
-  /* Add a color on mouse-over */
-  ul.breadcrumb li a:hover {
-    color: #01447e;
-  }
-/* add the background image for form */
-.background{
-  margin-top: 65px;
-width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/employee-office-desk-work-career-growth.jpg");
 
- }
- /* Add padding to containers */
-.container {
-  height: 100%;
-}

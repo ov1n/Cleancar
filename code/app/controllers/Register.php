@@ -43,7 +43,7 @@
                     registering with Cleancar reservation System.";
 
             //call function in class
-            //$mail->mailto($subject,$e_mail,$body);
+            $mail->mailto($subject,$e_mail,$body);
         }
     }
 ?>

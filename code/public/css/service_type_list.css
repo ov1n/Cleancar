@@ -48,6 +48,7 @@ h2{
 #table_ td, #table_ th {
   border: 1px solid #ddd;
   padding: 8px;
+  text-align: center;
 }
 
 #table_ tr:nth-child(odd){background-color: #ccffff;}    
