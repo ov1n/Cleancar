@@ -75,17 +75,6 @@
       <?php } ?>
   </table>
   </div>
-<<<<<<< HEAD
-</div><br><br><br><br><br><br>
-</div><br><br><br><br><br><br>
-<?php } else {?>
-    <div class="empty"> 
-      <br><h2> No upcoming accepted leaves </h2>
-    </div>
-  <?php } ?>
-=======
-
->>>>>>> 4543dcc4ca3f6f0e2b7aee227155797b1118f1b1
 </div>
     <?php 
           //include nav bar externally 
