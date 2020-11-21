@@ -338,4 +338,9 @@
         Controller::create_view('employee_update_recep');
     });
 
+    Route::set('update_leave',function(){
+        Session::init();
+        Controller::create_view('update_leave');
+    });
+
 ?>
