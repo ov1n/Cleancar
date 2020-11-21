@@ -8,6 +8,13 @@
 
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
 <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
+<!-- get imported jquery -->
+<script src="public/js/jquery/jquery-3.5.1.js"></script>
+<!-- link external js -->
+<script src="public/js/jquery/jquery.alertable.min.js"></script>
+<script type="text/javascript" src="public\js\no_reservation.js"></script>
+
 </head>
 <body>
 

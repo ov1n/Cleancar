@@ -38,7 +38,7 @@
               <ul class="breadcrumb">
                 
                 <li><a href="home">Home</a></li>
-                <li><a href="receptionist">Customer</a></li>
+                <li><a href="receptionist">Receptionist</a></li>
                 <li>Make Reservation</li>    
               </ul><!-- breadcrumb -->
               <h1>Make Reservation</h1><hr style="width: 60%;">
