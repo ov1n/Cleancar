@@ -106,8 +106,9 @@
             // print_r($dd);
 
             $bday = $yy . '-' . $mm . '-' . $dd;
-            print_r($bday);
+            // print_r($bday);
             
+            //pass the birthday of employee
             return $bday;
 
         }
@@ -115,30 +116,41 @@
 
         //this function is use to find the gender by usig NIC no
         static function find_gend($nic_no){
+            //for old type of id number
             if(strlen($nic_no)==10){
                 $gender = substr($nic_no, 2,3);
                 if($gender>500){
+                    //return gender
                     return 'Female';
                 }
                 else{
+                    //return gender
                     return 'Male';
                 }
             }
+
+            //for new type of id number
             else{
+                
                 $gender = substr($nic_no, 4,3);
                 if($gender>500){
+                    //return gender
                     return 'Female';
                 }
                 else{
+                    //return gender
                     return 'Male';
                 }
             }
           }
 
+        //get details from form and return to the Model to insert data
         static function register(){
 
+            //create new Service_employee object
             $emp=new Service_employee();
             $test = new Employee();
+
             //get each field from form
             $first_name=$_POST['first_name'];
             $last_name=$_POST['last_name'];
@@ -153,12 +165,11 @@
             $dob = $test->calculatedob($nic_no);
             //to get the gender from nic number
             $gender = $test->find_gend($nic_no);
-            // echo $dob;
-            // echo $gender;
+
             //hash password
             $password=md5($unhashed);
             
-            //insert data
+            //Call the insert_record function to insert the data to database
             $emp->insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob,$password);
 
             //ON SUCCESS, send an email to the employee asking him to change his password immediately
