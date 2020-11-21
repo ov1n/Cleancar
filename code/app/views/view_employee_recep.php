@@ -25,7 +25,7 @@
 
       <form >
         <div class="container">  
-          <h1>Employee Details</h1>
+          <h1><i class="fas fa-id-card-alt"></i> Employee Details</h1>
           <div class="background">
             <hr>
             <div class="card" >
@@ -46,7 +46,7 @@
                 <input type="text"  name="nic" value = <?php echo ":-"."$array[NIC_no]"; ?> id="nic" disabled></br>
 
                 <label for="address"><div class="form_label"><b>Address</b></div></label>
-                <input type="text"  name="address" value = <?php echo ":-"."$array[address]"; ?> id="address" disabled></br>
+                <input type="text"  name="address" value = '<?php echo ":-"."$array[address]"; ?>' id="address" disabled></br>
 
                 <label for="e-mail"><div class="form_label"><b>Email</b></div></label>
                 <input type="email"  name="email" value = <?php echo ":-"."$array[email]"; ?> id="e-mail" disabled></br>
