@@ -20,7 +20,7 @@
     <body>
 
      
-
+    
       <form name="emp_reg_form" id="emp_reg_form" method = "post" onsubmit="send_data()" >
         <div class="container">  
           
