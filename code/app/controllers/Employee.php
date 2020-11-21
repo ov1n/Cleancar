@@ -13,10 +13,33 @@
             //
         
         }
+
+        //this function is use to find the gender by usig NIC no
+        static function find_gend($nic_no){
+            if(strlen($nic_no)==10){
+                $gender = substr($nic_no, 2,3);
+                if($gender>500){
+                    return 'Female';
+                }
+                else{
+                    return 'Male';
+                }
+            }
+            else{
+                $gender = substr($nic_no, 4,3);
+                if($gender>500){
+                    return 'Female';
+                }
+                else{
+                    return 'Male';
+                }
+            }
+          }
+
         static function register(){
 
             $emp=new Service_employee();
-            
+            $test = new Employee();
             //get each field from form
             $first_name=$_POST['first_name'];
             $last_name=$_POST['last_name'];
@@ -27,15 +50,19 @@
             $mobile_tel_no=$_POST['mobile_tel_no'];
             $home_tel_no=$_POST['home_tel_no'];
 
+            //to get the date of birth from NIC number
             // $dob = calculatedob($nic_no);
-            // $gender = find_gend($nic_no);
+            //to get the gender from nic number
+            $gender = $test->find_gend($nic_no);
+
+            print_r($gender);
             // echo $dob;
             // echo $gender;
             //hash password
             $password=md5($unhashed);
             
             //insert data
-            $emp->insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$password);
+            $emp->insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$password);
 
             //ON SUCCESS, send an email to the employee asking him to change his password immediately
             $mail=new Mailer();
@@ -51,36 +78,15 @@
 
 
         //tis function for use to calculate a date of birth by using NIC no
-        // static function calculatedob($nic_no){
-        //     $date = substr($nic_no, 0, 6);
+        function calculatedob($nic_no){
+            $date = substr($nic_no, 0, 5);
 
             
         
-        //     return $date;
+            return $date;
 
-        // }
+        }
 
-        //this function is use to find the gender by usig NIC no
-        // static function find_gend($nic_no){
-        //     if(strlen($nic_no)=10){
-        //         $gender = substr($nic_no, 2, 5);
-        //         if($gender>500){
-        //             return 'Female'
-        //         }
-        //         else{
-        //             return 'Male'
-        //         }
-        //     }
-        //     else{
-        //         $gender = substr($nic_no, 4, 7);
-        //         if($gender>500){
-        //             return 'Female'
-        //         }
-        //         else{
-        //             return 'Male'
-        //         }
-        //     }
-
-        // }
+        
     }
 ?>
