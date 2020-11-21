@@ -88,19 +88,44 @@ function chech_nic(){
 }
 
 //JS function which checks if contact number is valid
-function check_phone_no() {  
-  console.log(document.getElementById("mobile_tel_no").value.length);
-  if (document.getElementById("mobile_tel_no").value.length != 10 ||document.getElementById("home_tel_no").value.length != 10){
-    document.getElementById('phone_validation').style.color = 'red';
-    document.getElementById('phone_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
-    if (document.getElementById("mobile_tel_no").value.length<10){
-      document.getElementById("mobile_tel_no").focus(); // focuses the current field.
-    }else{
-      document.getElementById("home_tel_no").focus(); // focuses the current field.
-    }
-  }else if (document.getElementById("mobile_tel_no").value.length==10 && document.getElementById("home_tel_no").value.length==10){
-    //console.log("not working");
+// function check_phone_no() {  
+//   console.log(document.getElementById("mobile_tel_no").value.length);
+//   if (document.getElementById("mobile_tel_no").value.length==10 && document.getElementById("home_tel_no").value.length==10){
+//     //console.log("not working");
+//     document.getElementById('phone_validation').innerHTML = '';
+//     document.getElementById('phone_validation').style.color = 'green';
+//   }
+//   else{
+//     document.getElementById('phone_validation').style.color = 'red';
+//     document.getElementById('phone_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
+//     if (document.getElementById("mobile_tel_no").value.length!=10){
+//       document.getElementById("mobile_tel_no").focus(); // focuses the current field.
+//     }else{
+//       document.getElementById("home_tel_no").focus(); // focuses the current field.
+//     }
+//   }
+// }
+
+//JS REGEX function which checks if contact number is valid
+function check_phone_no() {
+
+  var mobile_tel=document.getElementById("mobile_tel_no").value;
+  var home_tel=document.getElementById("home_tel_no").value;
+
+  console.log(mobile_tel);
+
+  var phoneno = /^\d{10}$/;
+  if((mobile_tel.match(phoneno))&&(home_tel.match(phoneno))){
+    mobile_tel_valid= true;
+    home_tel_valid= true;
     document.getElementById('phone_validation').innerHTML = '';
     document.getElementById('phone_validation').style.color = 'green';
+  }
+  else{
+    mobile_tel_valid= false;
+    home_tel_valid= false;
+    document.getElementById('phone_validation').style.color = 'red';
+    document.getElementById('phone_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
+    //return false;
   }
 }

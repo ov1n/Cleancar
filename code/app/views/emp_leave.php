@@ -12,22 +12,25 @@
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
+ <div class="container">  
+          
+          <div class="background">
 
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+        
         <li><a href="home">Home</a></li>
         <li><a href="employee">Employee</a></li>
         <li>Employee leave</li>
     </ul><!-- breadcrumb -->
+    <h1>Upcoming Accepted Leave Details</h1><br><hr style="width: 60%;"><br>
+
     <?php
       //echo($_SESSION["uname"]);
       //var_dump($array);
     ?>
 <?php if($array) {  ?>
 <div class = "list_table">
-<h2>Upcoming Accepted Leave Details</h2>
 
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
@@ -67,6 +70,8 @@
           </tr>
       <?php } ?>
   </table>
+  </div>
+</div><br><br><br>
   </div>
 </div>
 <?php } else {?>

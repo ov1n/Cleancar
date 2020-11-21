@@ -58,8 +58,8 @@
                     ON reservation_time_slot.timeslot_no=time_slot.timeslot_no
                     INNER JOIN service_type
                     ON reservation.service_id=service_type.type_id
-                    WHERE reservation.cust_id='$cust_id' 
-                    AND start_time='08:00:00'";
+                    WHERE reservation.cust_id='$cust_id'
+                    GROUP BY reservation.reservation_id";
 
             $result= mysqli_query($conn,$query);
 

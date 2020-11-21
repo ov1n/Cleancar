@@ -17,7 +17,7 @@
   <!-- get imported jquery -->
   <script src="public/js/jquery/jquery-3.5.1.js"></script>
   <!-- link external js -->
-  <script type="text/javascript" src="public\js\home.js"></script>
+  <script type="text/javascript" src="public\js\no_reservation.js"></script>
   <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
   <!-- set php notification to a js var in order to execute external js -->

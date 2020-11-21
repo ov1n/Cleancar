@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+
+    <!-- get imported jquery -->
+  <script src="public/js/jquery/jquery-3.5.1.js"></script>
+    <!-- link external js -->
+  <script type="text/javascript" src="public\js\no_reservation.js"></script>
+  <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 
 <body>
