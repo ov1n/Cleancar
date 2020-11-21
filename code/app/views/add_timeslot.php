@@ -33,13 +33,18 @@
               <div id=form_content> <!-- div to center needed elements -->
 
                 &ensp;&ensp;<label for="no_of_employees"><div class="form_label"><b>Start Time</b></div></label>
-                <input type="text" placeholder="Enter number of emploees" name="no_of_employees" id="no_of_employees" required size="50"></br>
+                <input type="text" placeholder="Enter number of employees" name="no_of_employees" id="no_of_employees" required size="50"></br>
 
-                &ensp;&ensp;<label for="no_of_time_slot"><div class="form_label"><b>End Time</b></div></label>
-                <input type="text" placeholder="Enter number of time slot" name="no_of_time_slot" id="no_of_time_slot" required size="50"></br>
+                &ensp;&ensp;<label for="end_time"><div class="form_label"><b>End Time</b></div></label>
+                <input type="text" placeholder="Enter ending time" name="end_time" id="end_time" required size="50"></br>
 
-                &ensp;&ensp;<label for="no_of_time_slot"><div class="form_label"><b>Lift No</b></div></label>
-                <input type="text" placeholder="Enter number of time slot" name="no_of_time_slot" id="no_of_time_slot" required size="50"></br>
+                &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
+                <select name="lift_no" id="lift_no">
+                  <option value="" selected disabled hidden style="color:gray">Select Lift</option>
+                  <option value="1">L-01</option>
+                  <option value="2">L-02</option>
+                  <option value="3">L-03</option>
+                </select><br>
 
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Add</button></br></br> </br></br>
               </div><!-- form_content --> 

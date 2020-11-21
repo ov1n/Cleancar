@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Invoice Report</title>
+  <title>Table</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
@@ -13,15 +13,12 @@
 </head>
 <body>
 
-<div class="container">  
-          
-          <div class="background_2">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
         <img src="public\images\4444.png" width="109" height="48" style="float:right">
         </br>
         <li><a href="home">Home</a></li>
-        <li><a href="receptionist">Receptionist</a></li>
+        <li><a href="receptionist">Receptionist Home</a></li>
         <li><a href="billing">Reports</a></li>
         <li>Business Reports</li>
     </ul><!-- breadcrumb -->
@@ -77,10 +74,7 @@
       <?php } ?>
   </table>
   </div>
-</div><br><br>
 </div>
-</div>
-
     <?php 
           //include nav bar externally 
           include("nav_profile.php");
