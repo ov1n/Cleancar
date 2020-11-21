@@ -26,9 +26,9 @@
     </ul><!-- breadcrumb -->
     
 <?php if($array){ ?>
-
+<h1>Pending Leaves</h1><hr style="width: 60%;"><br>
 <div class = "list_table">
-<h2>Pending Leaves</h2>
+
   <div style="overflow-x:auto; width:94%;  margin-left:3%; border-radius:6px;">
 
   <table id="table_">
