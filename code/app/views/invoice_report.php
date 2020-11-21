@@ -13,29 +13,31 @@
 </head>
 <body>
 
-<div class="container">  
+ 
           
           <div class="background_2">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
+        <!-- <img src="public\images\4444.png" width="109" height="48" style="float:right"> -->
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="receptionist">Receptionist</a></li>
         <li><a href="billing">Reports</a></li>
-        <li>Business Reports</li>
+        <li style="color: #6db8fa;">Business Reports</li>
     </ul><!-- breadcrumb -->
     <?php
-      //echo($_SESSION["uname"]);
-      //var_dump($array);
-    ?>
-    
-<div class = "list_table">
-<h2>Business Report</h2>
-  <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
+    //   echo($_SESSION["uname"]);
+    //   var_dump($array);
+     ?>
+    <div class="container"> 
+    <h1 style="text-align:center;"><i class="fas fa-file-invoice"></i> Business Report</h1>
+    <hr style="width: 60%;">
+    <br><br>
+    <div class = "list_table">
+    <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
-  <table id="table_">
-  <tr>
+    <table id="table_">
+    <tr>
             <th>Invoice no</th>
             <th>Bill no</th>
             <th>Reservation Id</th>
