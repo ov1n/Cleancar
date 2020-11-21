@@ -324,4 +324,9 @@
         Controller::create_view('delay_timetable_manager');
     });
 
+    Route::set('add_leave_manager',function(){
+        Session::init();
+        Controller::create_view('add_leave_manager');
+    });
+
 ?>
