@@ -15,6 +15,14 @@ h1{
   padding-bottom: 10px;
 }
 
+hr{
+  width: 60%;
+}
+
+p{
+  color: white;
+  text-align: center;
+}
 
 a {
   color: black;
@@ -60,9 +68,10 @@ ul.breadcrumb {
 /* add the background image for form */
 .background{
   margin-top: 65px;
+  margin-bottom: 0px;
   width: 100%;
-  height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/2017-09-14-Interviews-ThinkstockPhotos-621579258.jpg");
+  height: 640px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("../images/delay_time.jpg");
 
  }
   /* style the card in form */
@@ -72,8 +81,8 @@ ul.breadcrumb {
   padding-top: 25px;
   text-align: left;
   margin-top: 10px;
-  height: 100%;
-  margin-left: 28%;
+  height: 370px;
+  margin-left: 30%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
   width: 580px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
@@ -82,6 +91,12 @@ ul.breadcrumb {
   margin-bottom: 30px;
  
 }
+@media screen and (max-width: 1400px){
+    .card{
+      margin-left: 20%;
+      width:60%;
+    }
+  }
 
 @media screen and (max-width: 900px){
   .card{
@@ -248,7 +263,7 @@ h1 {
 }
 
 .form_label{
-  color: #008CBA;
+  color: #194886;
  ;
 }
 
