@@ -8,9 +8,10 @@
                 //$db=new Database();
         }
 
-        //getting all details of leaves
+        //getting wanted details of leaves from database
         function get_detail($id){
 
+            //assign today date to a variable
             $today=date('Y-m-d');
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -31,7 +32,7 @@
             $leaves = $result->fetch_all(MYSQLI_ASSOC);
             //var_dump($leaves);
 
-            //if array is not empty that means leave details are returning
+            //if array is not empty, leave details are returning
             if($leaves){
                 return($leaves); 
             }
