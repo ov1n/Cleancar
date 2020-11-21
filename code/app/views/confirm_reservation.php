@@ -49,7 +49,7 @@
 
                 <!--ADD CONCAT FUNCTION -->
                 <label for="first_name"><div class="form_label"><b>Customer Name</b></div></label>
-                <input type="text"  name="first_name" value = <?php echo ($array["last_name"] . " " . $array["last_name"]) ?> id="first_name" disabled></br>
+                <input type="text"  name="first_name" value = '<?php echo ($array["first_name"] . " " . $array["last_name"]) ?>' id="first_name" disabled></br>
 
                 <label for="vehicle_no"><div class="form_label"><b>Vehicle No</b></div></label>
                 <input type="text"  name="vehicle_no" value = 
@@ -80,10 +80,11 @@
                 <input type="text"  name="price" value = "<?php echo(Session::get("price")); ?>"
                  id="price" disabled></br>
 
-                <h3>For more details please contact CleanCar at our hotline </h3>
+                <h3>For any clarifications please contact CleanCar at our hotline </h3>
+                <h3><i class="fas fa-phone-alt"></i> 011-2773411 </h3>
                 </br>
                 <a class="backbtn" href="home">Back</a>
-                <a class="advbtn" href="home">Pay Advanced</a>
+                <a class="advbtn" href="pay_advanced">Pay Advanced</a>
                 </br></br>
 
               </div><!-- form_content -->   
