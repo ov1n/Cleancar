@@ -333,4 +333,9 @@
         Controller::create_view('add_leave_manager');
     });
 
+    Route::set('employee_update_recep',function(){
+        Session::init();
+        Controller::create_view('employee_update_recep');
+    });
+
 ?>

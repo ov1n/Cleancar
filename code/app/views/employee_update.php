@@ -24,7 +24,8 @@
              
              
               <li><a href="home">Home</a></li>
-              <li><a href="home">Manager Home</a></li>
+              <li><a href="manager">Manager</a></li>
+              <li><a href="employee_list">Employee List</a></li>
               <li>Update Employee</li>          
             </ul><!-- breadcrumb -->
              <h1>Employee Update</h1>   <hr style="width: 60%;">
