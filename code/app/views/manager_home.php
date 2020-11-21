@@ -29,7 +29,13 @@
 			<div class="square2">
 				<i class="fa fa-list-alt fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="time_table"><button><b>Reservation</b></button></a>
+				<div class="dropdown">
+  					<button class="dropbtn">Reservation</button>
+  					<div class="dropdown-content">
+    					<a href="add_reserve_manager">make rservation</a>
+    					<a href="#">view reservation</a>
+  					</div>
+				</div>
 			</div>
 
 			<div class="square3">
@@ -52,7 +58,7 @@
 			<div class="square6">
 				<i class="fa fa-list fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="#"><button><b>Time Table</b></button></a>
+				<a href="time_table"><button><b>Time Table</b></button></a>
 			</div>
 		</div><!--square-->
 	

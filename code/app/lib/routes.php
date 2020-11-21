@@ -309,4 +309,19 @@
     Timeslot::create_view('timeslot_list');
     });
 
+    Route::set('employee_calendar',function(){
+        Session::init();
+        Controller::create_view('employee_calendar');
+    });
+
+    Route::set('add_reserve_manager',function(){
+        Session::init();
+        Controller::create_view('add_reserve_manager');
+    });
+
+    Route::set('delay_timetable_manager',function(){
+        Session::init();
+        Controller::create_view('delay_timetable_manager');
+    });
+
 ?>

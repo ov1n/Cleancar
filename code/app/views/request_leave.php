@@ -9,7 +9,7 @@
       
       <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
-      <script type="text/javascript" src="public\js\add_emp_leave.js"></script>
+      <script type="text/javascript" src="public/js/add_emp_leave.js"></script>
       <script src="public/js/jquery/jquery.alertable.min.js"></script>
     </head>
 
@@ -34,7 +34,7 @@
               <div id=form_content> <!-- div to center needed elements -->
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Select Date</b></div></label>
-                <input type="date" placeholder="Enter the date" name="leave_date" id="leave_date" required></br>
+                <input type="date" placeholder="Enter the date" name="leave_date" id="leave_date" onkeyup='check_date();button_enable();' required></br>
 
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee Id</b></div></label>
                 <input type="text" placeholder="Enter employee id" name="emp_id" id="emp_id" value=
