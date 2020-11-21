@@ -12,24 +12,19 @@
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
- <div class="container">  
+<div class="container">  
           
-          <div class="background">
+<div class="background">
 
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        
         <li><a href="home">Home</a></li>
         <li><a href="employee">Employee</a></li>
         <li>Employee leave</li>
     </ul><!-- breadcrumb -->
     <h1>Upcoming Accepted Leave Details</h1><br><hr style="width: 60%;"><br>
 
-    <?php
-      //echo($_SESSION["uname"]);
-      //var_dump($array);
-    ?>
-<?php if($array) {  ?>
+<?php if($array) {  ?> <!-- check condition are there upcoming accepted leaves in the array which loaded from database -->
 <div class = "list_table">
 
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
@@ -74,7 +69,7 @@
 </div><br><br><br>
   </div>
 </div>
-<?php } else {?>
+<?php } else {?> <!-- if there are no upcoming leaves, display message -->
     <div class="card_"> 
       <br><h2> No upcoming accepted leaves </h2>
     </div>
