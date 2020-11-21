@@ -38,8 +38,10 @@ function date_display(){
     selected_date=formatted_month+( parseInt(formatted_day)+1)
 
     //get data accurately
-    console.log(selected_date);
+    //console.log(selected_date);
     document.getElementById("date_display").innerHTML=(selected_date);
+    document.getElementById("date").value=selected_date;
+    console.log(document.getElementById("date").value);
     //console.log(day);
 
 }
