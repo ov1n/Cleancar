@@ -12,10 +12,12 @@
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
-
+<div class="container">  
+          
+          <div class="background">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
+        <!-- <img src="public\images\4444.png" width="109" height="48" style="float:right"> -->
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="receptionist">Receptionist</a></li>
@@ -52,7 +54,7 @@
                   <?php echo "$emp[NIC_no]"; ?>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_view?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
+                  <a href="employee_view_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
               <td style = " text-align: center;">
                   <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
@@ -64,6 +66,8 @@
       <?php } ?>
   </table>
   </div>
+</div><br><br>
+</div>
 </div>
     <?php 
           //include nav bar externally 
