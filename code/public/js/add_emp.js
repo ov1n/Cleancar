@@ -73,17 +73,18 @@ function password_length() {
 function chech_nic(){
   var usernic = document.getElementById('nic').value;
 
-  if( (usernic.length == 10 && usernic.charAt(usernic.length - 1) == 'v' || usernic.charAt(usernic.length - 1) == 'V') || (usernic.length == 12 && usernic.charAt(usernic.length - 1) != 'V' &&  usernic.charAt(usernic.length - 1) != 'v' )){
-    console.log(usernic);
-    console.log('Valid NIC number');
-    document.getElementById('nic_msg').style.color = 'green';
-    document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&#9432;&emsp;Valid NIC';
-  }
-  else{
+  if( (usernic.length != 10 || usernic.charAt(usernic.length - 1) != 'v' && usernic.charAt(usernic.length - 1) != 'V') && (usernic.length != 12 || usernic.charAt(usernic.length - 1) == 'V' ||  usernic.charAt(usernic.length - 1) == 'v' )){
     console.log('Invalid NIC number');
     document.getElementById('nic_msg').style.color = 'red';
     document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Invalid NIC';
     console.log(usernic);
+    
+  }
+  else{
+    console.log(usernic);
+    console.log('Valid NIC number');
+    document.getElementById('nic_msg').style.color = 'green';
+    document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&#9432;&emsp;Valid NIC';
   }
 }
 
@@ -115,17 +116,17 @@ function check_phone_no() {
   console.log(mobile_tel);
 
   var phoneno = /^\d{10}$/;
-  if((mobile_tel.match(phoneno))&&(home_tel.match(phoneno))){
-    mobile_tel_valid= true;
-    home_tel_valid= true;
-    document.getElementById('phone_validation').innerHTML = '';
-    document.getElementById('phone_validation').style.color = 'green';
-  }
-  else{
+  if(!((mobile_tel.match(phoneno))&&(home_tel.match(phoneno)))){
     mobile_tel_valid= false;
     home_tel_valid= false;
     document.getElementById('phone_validation').style.color = 'red';
     document.getElementById('phone_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
     //return false;
+  }
+  else{
+    mobile_tel_valid= true;
+    home_tel_valid= true;
+    document.getElementById('phone_validation').innerHTML = '';
+    document.getElementById('phone_validation').style.color = 'green';
   }
 }
