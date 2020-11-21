@@ -232,7 +232,11 @@
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
-        EmployeeList::view();
+        EmployeeList::view('view_employee');
+    });
+
+    Route::set('employee_view_recep',function(){ 
+        EmployeeList::view('view_employee_recep');
     });
 
     //delete
