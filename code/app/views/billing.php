@@ -30,13 +30,14 @@
               <ul class="breadcrumb">
                
                 <li><a href="home">Home</a></li>
-                <li><a href="receptionist">Receptionist</a></li>
+                <li><a href="receptionist">Receptionist Home</a></li>
                 <li>Billing</li>   
               </ul><!-- breadcrumb -->
 
                
               <div class="container">  
-              <h1 style="text-align:center;"><i class="fa fa-money" aria-hidden="true"></i> Billing</h1><hr style="width: 60%;">
+              <h1 style="text-align:center;"><i class="fa fa-money" aria-hidden="true"></i> Billing</h1>
+              <hr style="width: 60%;">
                <div class = "select_buttons" style="margin-right: 46%;">
                     <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
                     <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->

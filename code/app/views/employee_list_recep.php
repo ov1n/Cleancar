@@ -24,6 +24,8 @@
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
+    <h1 style="text-align:center;"><i class="fas fa-users"></i> Employee</h1>
+              <hr style="width: 60%;">
 <div class = "list_table">
 <h2>Employee Details</h2>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
@@ -41,7 +43,7 @@
         
         <?php foreach($array as $emp){ ?>
           <tr>
-              <td>
+              <td style="font-weight: 700;">
                   <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
@@ -57,7 +59,7 @@
                   <a href="employee_view_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
+                  <a href="employee_list_recep" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
                   <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>

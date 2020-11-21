@@ -16,10 +16,9 @@ p{
   font-size: larger;
 }
 
-/* Style the list(breadcrumb) */
+/* Style the list */
 ul.breadcrumb {
-  margin-top: 70px;
-  padding: 10px 16px;
+  padding: 15px 25px;
   list-style: none;
 }
 
@@ -27,12 +26,20 @@ ul.breadcrumb {
 ul.breadcrumb li {
   display: inline;
   font-size: 18px;
+  color: white;
+}
+@media screen and (max-width: 500px){
+  ul.breadcrumb li {
+ 
+  font-size: 14px;
+  
+}
 }
 
-/* Add a slash symbol (|) before/behind each list item */
+/* Add a slash symbol (/) before/behind each list item */
 ul.breadcrumb li+li:before {
   padding: 8px;
-  color: black;
+  color: white;
   content: "|\00a0";
 }
 

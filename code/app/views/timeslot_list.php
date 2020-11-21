@@ -35,15 +35,15 @@
     </div>
     <br><br><br>
 <div class = "list_table">
-<h2>Timeslot Deatails</h2>
+<h2>Timeslot Details</h2>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
   <tr>
-            <th>timeslot_no</th>
-            <th>lift_no</th>
-            <th>start_timen</th>
-            <th>end_time</th>
+            <th style="width: 10%;">Timeslot No</th>
+            <th style="width: 10%;">Lift No</th>
+            <th>Start time</th>
+            <th>End time</th>
             <th>Edit</th>
             <th>Delete</th>
 
@@ -53,7 +53,7 @@
         <?php foreach($array as $timeslot){ ?>
           <tr>
               <td>
-                  <?php echo "$timeslot[timeslot_no]"; ?>
+                  <b>TS-<?php echo "$timeslot[timeslot_no]"; ?></b>
               </td>
               <td>
                   <?php echo "$timeslot[lift_no]"; ?>
