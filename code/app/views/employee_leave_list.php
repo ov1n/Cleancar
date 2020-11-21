@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Table</title>
+  <title>Leave List</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="public/css/employee_leave_list.css"><!-- add style to employee_leave_list -->
@@ -12,10 +12,12 @@
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
-
+<div class="container">  
+          
+          <div class="background">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
+        <!-- <img src="public\images\4444.png" width="109" height="48" style="float:right"> -->
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="manager">Manager</a></li>
@@ -77,6 +79,9 @@
         <h2>No Upcoming Leaves</h2>
     </div>
 <?php } ?>
+<br><br>
+</div>
+</div>
     <?php 
           //include nav bar externally 
           include("nav_profile.php");
