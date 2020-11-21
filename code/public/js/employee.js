@@ -12,7 +12,7 @@ function confirmDelete(){
     });
 
      function button1(){
-      window.location.href = "request_leave";
+      window.location.href = "add_leave_manager";
     }
 
     function button2(){
