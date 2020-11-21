@@ -41,7 +41,7 @@
             $mail=new Mailer();
 
             $subject="Welcome to the Cleancar Family!";
-            $body="<strong>දයාබර $last_name මහත්මයා/මහත්මිය,</strong></br>අපි ඔබව සාදරයෙන් CleanCar පවුලට පිලිගනිමු!
+            $body="<strong>Dear Mr./Mrs./Ms. $last_name,</strong></br>අපි ඔබව සාදරයෙන් CleanCar පවුලට පිලිගනිමු!
                     Please change your password as soon as you login to the System which is </br>
                     $unhashed at the moment.";
 
