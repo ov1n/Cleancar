@@ -20,8 +20,8 @@
     <body>
 
      
-    <!-- onsubmit="send_data()" -->
-      <form name="emp_reg_form" id="emp_reg_form" method = "post" action = "emp_reg_auth" >
+    
+      <form name="emp_reg_form" id="emp_reg_form" method = "post" onsubmit="send_data()" >
         <div class="container">  
           
           <div class="background">
