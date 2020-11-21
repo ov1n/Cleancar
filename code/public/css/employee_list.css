@@ -55,6 +55,14 @@ ul.breadcrumb li a:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/employee-office-desk-work-career-growth.jpg");
 
  }
+
+ .background_2{
+  margin-top: 65px;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/report.jpg");
+
+ }
  /* Add padding to containers */
 .container {
   height: 100%;
@@ -83,6 +91,7 @@ h2{
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
     width: 94%;
     margin-bottom: 50px;
+    opacity: 0.9;
 }
 /* @media screen and (max-width: 1270px){
   .list_table{

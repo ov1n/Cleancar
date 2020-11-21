@@ -22,33 +22,43 @@ function send_leave_data() {
   //console.log('Registration Successful');
 }
 
+//enable button only if request date is grater than today's date
+var button_enable = function () {
+  if (document.getElementById('date_validate_msg').style.color == 'red')  {
+    console.log("enable");
+    document.getElementById("submit").disabled = true;
+  } 
+  else {
+    console.log("red");
+    document.getElementById("submit").disabled = false;
+    }
+}
+
 //Date Validation
 function check_date(){
+
   var req_date = document.getElementById('leave_date').value;
+
   var today = new Date();
-  var y = today.getFullYear();
-  var m = today.getMonth();
-  var d = today.getDay();
+  var dd = String(today.getDate()).padStart(2, '0');
+  var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+  var yyyy = today.getFullYear();
 
-  var date = new Date(m,d,y);
+  today = yyyy + '-' + mm + '-' + dd;
 
-  if(date < req_date){
-    console.log(req_date);
+  console.log(req_date);
+  console.log(today);
+
+
+  if(today > req_date){
+    //console.log(req_date);
+    document.getElementById('date_validate_msg').style.color = 'red';
+    document.getElementById('date_validate_msg').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Date is not valid';
   }
   else{
-    console.log('cannot request leave');
+    document.getElementById('date_validate_msg').style.color = 'green';
+    document.getElementById('date_validate_msg').innerHTML = '';
+    //console.log('cannot request leave');
   }
-/*
-  if( (usernic.length == 10 && usernic.charAt(usernic.length - 1) == 'v' || usernic.charAt(usernic.length - 1) == 'V') || (usernic.length == 12 && usernic.charAt(usernic.length - 1) != 'V' &&  usernic.charAt(usernic.length - 1) != 'v' )){
-    console.log(usernic);
-    console.log('Valid NIC number');
-    document.getElementById('nic_msg').style.color = 'green';
-    document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&#9432;&emsp;Valid NIC';
-  }
-  else{
-    console.log('Invalid NIC number');
-    document.getElementById('nic_msg').style.color = 'red';
-    document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Invalid NIC';
-    console.log(usernic);
-  }*/
 }
+
