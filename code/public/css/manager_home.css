@@ -9,6 +9,7 @@ body
 div.cover{
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/honda-malaysia-service-centre.jpg");
   width: 100%;
+  height: 100%;
   
   margin-top: 65px; 
   padding-top: 0px; 
@@ -62,7 +63,7 @@ hr{
 
 div.square{
   width: 100%;
-  height: 550px;
+  height: 480px;
   padding-left: 10px;
   margin-top: 30px;
   align-content: center;
@@ -73,60 +74,74 @@ div.square{
 
 div.square div.square1{
   margin-right:.5%;
-box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   width: 16%;
   height: 220px;
   float: left;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+ /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));*/
+ background-color: #3377FF;
+ opacity: 0.8;
  
 }
 
 div.square div.square2{
   margin-right:.5%;
-  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
  width: 16%;
   height: 220px;
   float: left;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+ /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));*/
+ background-color: #99BBFF;
+ opacity: 0.8;
 
 }
 
 div.square div.square3{
  width: 16%;
- box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   height: 220px;
   float: left;
   margin-right:.5%;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
-  
+ /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));*/
+ background-color: #3377FF;
+  opacity: 0.8;
+ 
 }
 
 div.square div.square4{
-box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   width: 16%;
   height: 220px;
   float: left;
   margin-right:.5%;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+  /*background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));*/
+  background-color: #99BBFF;
+   opacity: 0.8;
+
 }
 
 div.square div.square5{
-box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   width: 16%;
   height: 220px;
   float: left;
   margin-right:.5%;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
+  /*background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));*/
+  background-color: #3377FF;
+   opacity: 0.8;
+
   
 }
 div.square div.square6{
- box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
   width: 16%;
   height: 220px;
   float: left;
   margin-right:.5%;
-  background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));
-  
+ /* background-image: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7));*/
+ background-color: #99BBFF;
+   opacity: 0.8;
+
 }
 
 /* adjast the symbols*/
@@ -152,24 +167,25 @@ button:hover{
 }
 
 /* button colors */
-div.square1 button,.square3 button,.square4 button,.square5 button,.square6 button{
+div.square4 button,.square6 button,.square2 button{
   background-color: #3377FF; 
 }
-
-.square2 button.dropbtn {
+ 
+div .square1 button,.square3 button,.square5 button{
+  background-color: #99BBFF; 
+}
+/* 
+.dropbtn {
   background-color: #3377FF;
   width: 100px;
   height: 40px;
   transition: 0.3s;
   font-family: 'Raleway' !important;  
   font-size: 95%;
-  margin-top: 45px;
-  margin-right: 70px;
+  margin-top: 20%;
   border-radius: 6px;
   cursor: pointer;
-  color: black;
-  font-weight: bold;
-}
+}*/
 
 .dropdown-content {
   display: none;
@@ -186,6 +202,13 @@ div.square1 button,.square3 button,.square4 button,.square5 button,.square6 butt
   text-decoration: none;
   display: block;
 }
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #3377FF;}
+
 
 
 /* responsive square */
