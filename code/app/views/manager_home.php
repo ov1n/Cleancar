@@ -53,7 +53,7 @@
 			<div class="square5">
 				<i class="fa fa-file-text fa-3x" aria-hidden="true" style="color: white;"></i>
 				<br>
-				<a href="#"><button><b>Reports</b></button></a>
+				<a href="invoice_report"><button><b>Reports</b></button></a>
 			</div>
 			<div class="square6">
 				<i class="fa fa-list fa-3x" aria-hidden="true" style="color: white;"></i>

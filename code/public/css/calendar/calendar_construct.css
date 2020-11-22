@@ -18,6 +18,8 @@
 .nao-month .month-head {
 	position: relative;
 	display: block;
+	color: #008CBA;
+	font-weight: 900;
 }
 
 .nao-month .month-head button,
