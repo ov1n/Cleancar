@@ -229,6 +229,12 @@
         Invoice_bill::create_view('invoice_report');
     });
     
+     Route::set('invoice_report_manager',function(){
+
+        Session::init();
+        Invoice_bill::create_view('invoice_report_manager');
+    });
+    
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
