@@ -98,7 +98,7 @@ h2{
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
     width: 94%;
     margin-bottom: 50px;
-    opacity: 0.9;
+    opacity: 0.75;
 }
 /* @media screen and (max-width: 1270px){
   .list_table{
@@ -291,6 +291,7 @@ th, td {
     background-image: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
     width: 80%;
     margin-bottom: 50px;
+    opacity: 0.8;
   }
 
 
