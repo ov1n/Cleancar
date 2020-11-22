@@ -5,8 +5,8 @@
         <title>CleanCar - Make Reservation form</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css">                  <!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css">                <!-- add style to footer -->
+        <link rel="stylesheet" type="text/css" href="public\css\customer_caledar.css">                  <!-- add style to form -->
+       
         <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
 
         <!-- style needed for calendar -->
@@ -38,22 +38,22 @@
         //echo(($_SESSION["details"])["first_name"]);
       ?>
 
-      <!-- add breadcrumb for find the path easily to users -->
+     
+
+      <form id="reservation_time" name="reservation_time" method="POST" action="make_reservation">
+        <div class="container">  
+          
+            <div class="background">
+               <!-- add breadcrumb for find the path easily to users -->
       <ul class="breadcrumb">
-         <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+        
         <li><a href="home">Home</a></li>
         <li><a href="home">Customer</a></li>
         <li>Select Date</li>    
       </ul><!-- breadcrumb -->
-
-      <form id="reservation_time" name="reservation_time" method="POST" action="make_reservation">
-        <div class="container">  
-          <h1>Select Date</h1>
-          <hr>
-          <p>Please select a date and a time slot for the reservation</p>
-            <div class="background">
-              <hr>
+      <h1>Select Date &ensp;<i class="fas fa-calendar-alt fa-lg"></i></h1><hr style="width: 60%;">
+         
+          <p style="text-align: center;color: white">Please select a date and a time slot for the reservation</p>
               <div class="card" >
                 <div id=form_content> <!-- div to center needed elements -->
                 
@@ -93,12 +93,14 @@
                 
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" class="btn" class="form_btn" >Submit</button>
+                <button type="submit" class="btn" class="form_btn" >Submit</button></br></br>
+            </br></br>
+
               </div><!-- form_content -->              
             </div><!-- card -->
             </br></br>
           </div><!-- background -->
-          <hr>
+      
         </div><!-- container -->
       </form>
 
