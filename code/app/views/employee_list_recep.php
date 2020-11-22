@@ -26,8 +26,9 @@
     
     <h1 style="text-align:center;"><i class="fas fa-users"></i> Employee</h1>
               <hr style="width: 60%;">
+              <br><br>
 <div class = "list_table">
-<h2>Employee Details</h2>
+<!-- <h2>Employee Details</h2> -->
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
@@ -59,7 +60,7 @@
                   <a href="employee_view_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_list_recep" name="update" class="btn updatelbtn">Update</a>
+                  <a href="employee_update_recep" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
                   <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>

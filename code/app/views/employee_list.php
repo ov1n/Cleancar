@@ -25,7 +25,8 @@
         <li>Employee</li>
     </ul><!-- breadcrumb -->
     
-    <h1>Employee Section</h1><hr style="width: 60%;font-style: solid;margin-left: 20%;"><br>
+    <h1 style="text-align:center;"><i class="fas fa-users"></i> Employee Section</h1>
+    <hr style="width: 60%;font-style: solid;margin-left: 20%;"><br>
 
     <div class = "card">
         <h2>Employee Leave</h2>
