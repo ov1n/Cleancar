@@ -68,6 +68,10 @@
         Controller::create_view('delay_time_table');
     });
 
+    Route::set('delay_timetable_manager',function(){
+        Controller::create_view('delay_timetable_manager');
+    });
+
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
         
