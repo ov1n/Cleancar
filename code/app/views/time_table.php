@@ -15,16 +15,17 @@
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
+ <div class="container">  
+          
+            <div class="background">
 <!-- add breadcrumb for find the path easily to users -->
 <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
+       
         <li><a href="home">Home</a></li>
         <li><a href="manager">Manager</a></li>
         <li>Timetable</li>
     </ul><!-- breadcrumb -->
-<h2><i class="fa fa-table" aria-hidden="true"></i>  Time Table</h2>
+<h1>Time Table&ensp;<i class="fa fa-table" aria-hidden="true"></i></h1><hr style="width: 60%;"><br>
 
 <div class = "list_table">
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
@@ -129,10 +130,11 @@
   </div>
   <div class = "select_buttons">
         <a class="delaybtn btn" class="form_btn" href="delay_timetable_manager">Delay Timetable</a>
-        <a class="exitbtn btn" class="form_btn" href="manager">Exit</a>
+        <a class="exitbtn btn" class="form_btn" href="manager">Exit</a><br>
   </div>
+</div><br><br><br>
+ </div>
 </div>
-
 </div>
 
     <?php 
