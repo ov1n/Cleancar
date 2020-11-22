@@ -13,9 +13,11 @@
     </head>
 
     <body>
-
+    <div class="background">
+    <div class="container"> 
+    
       <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
+        <!-- <img src="public\images\4444.png" width="109" height="48" style="float:right"> -->
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="receptionist">Receptionist</a></li>
@@ -24,38 +26,41 @@
       </ul><!-- breadcrumb -->
 
       <form >
-        <div class="container">  
+         
           <h1><i class="fas fa-id-card-alt"></i> Employee Details</h1>
-          <div class="background">
-            <hr>
+          
+          <hr style="width: 60%;"><br>
             <div class="card" >
 
               <div id=form_content> <!-- div to center needed elements -->
 
                 <!-- each field gets details from the array -->
                 <label for="emp_id"><div class="form_label">Employee ID </div></label>
-                <input type="text"  name="emp_id" value = <?php echo ":-"."$array[emp_id]"; ?> id="emp_id" disabled></br>
+                <input type="text"  name="emp_id" value = '<?php echo ":- "."$array[emp_id]"; ?>' id="emp_id" disabled></br>
 
                 <label for="first_name"><div class="form_label"><b>First Name</b></div></label>
-                <input type="text"  name="first_name" value = <?php echo ":-"."$array[first_name]"; ?> id="first_name" disabled></br>
+                <input type="text"  name="first_name" value = '<?php echo ":- "."$array[first_name]"; ?>' id="first_name" disabled></br>
 
                 <label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
-                <input type="text"  name="last_name" value = <?php echo ":-"."$array[last_name]"; ?> id="last_name" disabled></br>
+                <input type="text"  name="last_name" value = '<?php echo ":- "."$array[last_name]"; ?>' id="last_name" disabled></br>
 
-                <label for="nic"><div class="form_label"><b>NIC No</b></div></label>
-                <input type="text"  name="nic" value = <?php echo ":-"."$array[NIC_no]"; ?> id="nic" disabled></br>
+                <label for="gender"><div class="form_label"><b>Gender</b></div></label>
+                <input type="text"  name="gender" value = '<?php echo ":- "."$array[gender]"; ?>' id="gender" disabled></br>
+
+                <label for="dob"><div class="form_label"><b>Date of Birth</b></div></label>
+                <input type="text"  name="dob" value = '<?php echo ":- "."$array[dob]"; ?>' id="dob" disabled></br>
 
                 <label for="address"><div class="form_label"><b>Address</b></div></label>
-                <input type="text"  name="address" value = '<?php echo ":-"."$array[address]"; ?>' id="address" disabled></br>
+                <input type="text"  name="address" value = '<?php echo ":- "."$array[address]"; ?>' id="address" disabled></br>
 
                 <label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-                <input type="email"  name="email" value = <?php echo ":-"."$array[email]"; ?> id="e-mail" disabled></br>
+                <input type="email"  name="email" value = '<?php echo ":- "."$array[email]"; ?>' id="e-mail" disabled></br>
 
                 <label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="text"  name="mobile_tel_no" value = <?php echo ":-"."$array[mobile_tel_no]"; ?> id="mobile_tel_no" disabled></br>
+                <input type="text"  name="mobile_tel_no" value = '<?php echo ":- "."$array[mobile_tel_no]"; ?>' id="mobile_tel_no" disabled></br>
               
                 <label for="home_tel_no"><div class="form_label" ><b>Home</b></div></label>
-                <input type="text"  name="home_tel_no" value = <?php echo ":-"."$array[home_tel_no]"; ?> id="home_tel_no" disabled>
+                <input type="text"  name="home_tel_no" value = '<?php echo ":- "."$array[home_tel_no]"; ?>' id="home_tel_no" disabled>
                 </br>
                 <a class="updatebtn" href="employee_update_recep">Update</a>
                 <a class="backbtn" href="employee_list">Back</a>
@@ -64,10 +69,11 @@
               </div><!-- form_content -->   
             </div><!-- card -->
             </br></br>
-          </div><!-- background -->
-          <hr>
-        </div><!-- container -->
+          
       </form>
+      </div><!-- container -->
+      <hr>
+    </div><!-- background -->
 
       <?php 
           //include nav bar externally 
