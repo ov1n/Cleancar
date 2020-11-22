@@ -82,18 +82,19 @@
 
                 <div >
                   <h3>Date</h3>
-                  <div class="calendar-3 calendar_card" onclick="date_display()"></div>
+                  <div class="calendar-3 calendar_card" onclick="date_display();date_validate();"></div>
                 </div>
 
                 </br>
                 <div id="date_display"></div>
+
                 <!-- link local js file -->
                 <script src="public/js/customer_calendar.js"></script>
-                
+                <div id="calendar_message"><p></p></div>
                 
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" class="btn" class="form_btn" >Submit</button></br></br>
+                <button type="submit" class="btn" class="form_btn" id="reserve" disabled>Submit</button></br></br>
             </br></br>
 
               </div><!-- form_content -->              

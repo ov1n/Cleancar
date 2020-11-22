@@ -16,11 +16,8 @@ $('.calendar-3').calendar({
     },
     
 })
-var selector = document.getElementsByTagName('td');
-selector.onclick = function() {
-    //console.log('CAT');
-    //document.getElementById(date_display).innerHTML=date;
-}
+
+//function to display date in needed format
 function date_display(){
 
     //console.log(datee);
@@ -39,9 +36,28 @@ function date_display(){
 
     //get data accurately
     //console.log(selected_date);
-    document.getElementById("date_display").innerHTML=(selected_date);
+    //document.getElementById("date_display").innerHTML=(selected_date);
     document.getElementById("date").value=selected_date;
     console.log(document.getElementById("date").value);
-    //console.log(day);
 
+}
+
+//function which validates if the date is not a past date
+function date_validate(){
+
+    var today = new Date();
+    //console.log(datee);
+    //console.log(today);
+    if(datee>today){
+        console.log("date greater");
+        document.getElementById('calendar_message').style.color = 'green';
+        document.getElementById('calendar_message').innerHTML = "";
+        document.getElementById("reserve").disabled = false;
+    }else{
+        console.log("date lower");
+        document.getElementById("calendar_message").innerHTML = '&#9432;&emsp;Please enter a future date';
+        document.getElementById("calendar_message").style.color = 'red';
+        
+        document.getElementById("reserve").disabled = true;
+    }
 }
