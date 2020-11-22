@@ -60,17 +60,17 @@
                 <!-- Each div has php echo function to autofill the form from user account details -->
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type:</b></div></label>
                 <select name="service_type" id="service_type">
-                    <option value="Full Service">Full Service</option>
-                    <option value="Normal Service">Normal Service</option>
-                    <option value="Body Wash">Body wash</option>
+                  <option value="Normal Service">Normal Service</option>
+                  <option value="Full Service">Full Service</option>
+                  <option value="Body Wash">Body wash</option>
                 </select><br>
 
                 <!--ADD DATE SELECTOR IF CALENDAR DOESNT WORK -->
                 &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
                 <select name="time" id="time">
-                    <option value="08:00:00">08.00</option>
-                    <option value="10:00:00">10.00</option>
-                    <option value="12:00:00">12.00</option>
+                    <option value="08:00:00">08.00 a.m</option>
+                    <option value="10:00:00">10.00 a.m</option>
+                    <option value="12:00:00">12.00 p.m</option>
                 </select><br>
 
                 <!--set DATE to  hidden field -->

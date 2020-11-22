@@ -25,7 +25,7 @@
 <body>
     <?php
         //DEBUGGING
-        echo($notification);
+        //echo($notification);
 
     ?>
    

@@ -52,6 +52,16 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name"
                 value=<?php echo(($_SESSION["details"])["last_name"]); ?> ></br></br>
 
+                <h3> You have Selected: </h3>
+
+                &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
+                <input type="text" name="date" id="date"
+                 value=<?php echo($_SESSION["res_date"]); ?> disabled></br>
+  
+                &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
+                <input type="text" placeholder="Enter time" name="time" id="time"
+                value=<?php echo($_SESSION["time"]); ?> disabled ></br></br>
+
                 &ensp;&ensp;<label for="vehicle_category"><div class="form_label"><b>Vehicle Category</b></div></label>
                 <select name="vehicle_category" id="vehicle_category">
                     <option value="car">Car</option>
