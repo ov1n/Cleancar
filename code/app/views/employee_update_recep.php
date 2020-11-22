@@ -61,7 +61,7 @@
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
                 <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = "0412222222" id="home_tel_no" required >
                 </br>
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <a href="employee_list_recep"><button type="submit" class="btn cancelbtn" class="form_btn" > Cancel</button> </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
                 </br></br></br></br>
 
