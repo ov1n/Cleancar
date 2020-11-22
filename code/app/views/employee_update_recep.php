@@ -19,8 +19,8 @@
       <form >
         <div class="container">  
          
-                <div class="background">
-                   <ul class="breadcrumb">
+          <div class="background">
+            <ul class="breadcrumb">
              
              
               <li><a href="home">Home</a></li>
@@ -28,7 +28,8 @@
               <li><a href="employee_list_recep">Employee List</a></li>
               <li>Update Employee</li>          
              </ul><!-- breadcrumb -->
-             <h1>Employee Update</h1>   <hr style="width: 60%;">
+             
+             <h1><i class="fas fa-user-edit"></i> Employee Update</h1>   <hr style="width: 60%;">
            
           </br>
             <div class="card" >
