@@ -22,7 +22,6 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="manager">Manager</a></li>
-        <li><a href="billing">Reports</a></li>
         <li >Business Reports</li>
     </ul><!-- breadcrumb -->
     <?php
