@@ -89,7 +89,7 @@ function vehicle_no_validate() {
     vehicle_no_valid=false;
     console.log("invalid vehi no");
     document.getElementById('vehicle-message').style.color = 'red';
-    document.getElementById('vehicle-message').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
+    document.getElementById('vehicle-message').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid vehicle number';
   }
   
 }

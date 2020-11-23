@@ -55,12 +55,12 @@
                 <h3> You have Selected: </h3>
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Date</b></div></label>
-                <input type="text" name="date" id="date"
+                <input type="text" name="date" id="date" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"
                  value=<?php echo($_SESSION["res_date"]); ?> disabled></br>
   
                 &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
-                <input type="text" placeholder="Enter time" name="time" id="time"
-                value=<?php echo($_SESSION["time"]); ?> disabled ></br></br>
+                <input type="text" name="time" id="time" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"
+                value=<?php echo(substr($_SESSION["time"], 0, -3)."a.m"); ?> disabled ></br></br>
 
                 &ensp;&ensp;<label for="vehicle_category"><div class="form_label"><b>Vehicle Category</b></div></label>
                 <select name="vehicle_category" id="vehicle_category">
