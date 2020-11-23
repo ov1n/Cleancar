@@ -122,7 +122,6 @@
 
             //ON SUCCESS, send an email to customer address
             $mail=new Mailer();
-            echo($_SESSION[details][last_name]);
             $subject="Successful reservation Placement";
             //FIX DURATION
             $body="<strong>Dear Mr./Mrs.".$_SESSION["details"]["last_name"].",</strong></br>

@@ -53,7 +53,7 @@ function phone_validate() {
   var mobile_tel=document.getElementById("mobile_tel_no").value;
   var home_tel=document.getElementById("home_tel_no").value;
 
-  console.log(mobile_tel);
+  //console.log(mobile_tel);
 
   var phoneno = /^\d{10}$/;
   if((mobile_tel.match(phoneno))&&(home_tel.match(phoneno))){
@@ -69,6 +69,21 @@ function phone_validate() {
     document.getElementById('other-message').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
     //return false;
   }
+}
+
+//JS REGEX function which checks if vehicle number is valid
+function vehicle_no_validate() {
+  var vehicle_number=document.getElementById("vehicle_number").value;
+  console.log(vehicle_number);
+
+  var valid_vehicle_no = /([a-zA-Z\d]{2,3}[-][\d]{4})/;
+
+  if(vehicle_number.match(valid_vehicle_no)){
+    console.log("valid vehi no");
+  }else{
+    console.log("invalid vehi no");
+  }
+  
 }
 
 //ajax function to not refresh browser when  entering data

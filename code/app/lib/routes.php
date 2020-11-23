@@ -127,9 +127,9 @@
     //final view of reservation
     Route::set('confirm_reservation',function(){ 
         session_start();
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
+        echo '<pre>';
+        var_dump($_SESSION);
+        echo '</pre>';
         Controller::create_view('confirm_reservation');
     });
 

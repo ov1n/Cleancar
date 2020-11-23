@@ -49,7 +49,7 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>
 
                 &ensp;&ensp;<label for="vehicle_number"><div class="form_label"><b>Vehicle Number</b></div></label>
-                <input type="text" placeholder="Vehicle Number" name="vehicle_number" id="vehicle_number" required> <br>
+                <input type="text" placeholder="Vehicle Number" name="vehicle_number" id="vehicle_number" onkeyup='vehicle_no_validate();'required> <br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
                 <input type="text" placeholder="Enter Your Address" name="address" id="address" required></br>
