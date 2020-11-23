@@ -8,6 +8,10 @@
     include_once './models/Vehicle.php';
     include_once './models/Reservation_time_slot.php';
 
+    //get mailer class to send registration emails to customers
+    require './lib/classes/Mailer.php';
+
+
     class Make_reservation extends Controller{
 
         public function __construct(){
@@ -116,7 +120,27 @@
             Session::set("vehicle_num",$vehicle_array["vehicle_num"]);
             Session::set("vehicle_category",$vehicle_array["vehicle_category"]);
 
-            //optional function which converts the date into a more human friendly nature
+            //ON SUCCESS, send an email to customer address
+            $mail=new Mailer();
+            echo($_SESSION[details][last_name]);
+            $subject="Successful reservation Placement";
+            //FIX DURATION
+            $body="<strong>Dear Mr./Mrs.".$_SESSION["details"]["last_name"].",</strong></br>
+                    Thank you for placing your reservation with CleanCar.</br>
+                    The reservation details are as follows: </br>
+                    Reservation ID:".$_SESSION["details"]["last_name"]."</br>
+                    Vehicle No    :".$_SESSION["vehicle_num"]."</br>
+                    Category      :".$_SESSION["vehicle_category"]."</br>
+                    Service Type  :".$_SESSION["service_name"]."</br>
+                    Date          :".$_SESSION["res_date"]."</br>
+                    Time          :".$_SESSION["time"]."</br>
+                    Duration      :"."2 hours"."</br>
+                    Price         :".$_SESSION["price"]."</br>
+                    </br>
+                    For any clarifications please contact CleanCar at our hotline :011-2773411";
+
+            //call function in class
+            $mail->mailto($subject,$_SESSION['details']['email'],$body);
 
         }
         //function which gets 
