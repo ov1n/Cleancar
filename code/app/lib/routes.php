@@ -62,6 +62,9 @@
     Route::set('billing',function(){
         Controller::create_view('billing');
     });
+      Route::set('profile',function(){
+        Controller::create_view('profile');
+    });
 
 
     Route::set('delay_time_table',function(){
