@@ -47,7 +47,7 @@
 			<div class="square5">
 				<i class="fa fa-file-text fa-3x" aria-hidden="true" ></i>
 				<br>
-				<a href="invoice_report"><button><b>Reports</b></button></a>
+				<a href="invoice_report_manager"><button><b>Reports</b></button></a>
 			</div>
 			<div class="square6">
 				<i class="fa fa-list fa-3x" aria-hidden="true" ></i>
