@@ -370,4 +370,9 @@
         Controller::create_view('update_leave');
     });
 
+    Route::set('time_table_recep',function(){
+        Session::init();
+        Controller::create_view('time_table_recep');
+    });
+
 ?>
