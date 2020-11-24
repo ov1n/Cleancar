@@ -35,8 +35,7 @@
             <th>Leave Type</th>
             <th>Reason</th>
             <th>Leave Time</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Cancel</th>
 
 
         </tr>
@@ -57,10 +56,7 @@
               </td>
 
               <td style = " text-align: center;">
-                  <a href="update_leave" name="update" class="btn updatelbtn">Update</a>
-              </td>
-              <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Cancel</a>
               </td>
           </tr>
       <?php } ?>

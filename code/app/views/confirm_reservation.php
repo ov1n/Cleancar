@@ -68,7 +68,8 @@
                  "<?php echo(Session::get("res_date")); ?>" id="date" disabled></br>
 
                 <label for="time"><div class="form_label"><b>Time</b></div></label>
-                <input type="text"  name="time" value = "8.00AM" id="time" disabled></br>
+                <input type="text"  name="time" value =
+                 "<?php echo(Session::get("time")); ?>" id="time" disabled></br>
 
                 <label for="approx"><div class="form_label"><b>Approximate Duration</b></div></label>
                 <input type="text"  name="approx" value = '2 hours' id="approx" disabled> <br>
