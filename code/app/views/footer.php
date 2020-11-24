@@ -12,7 +12,7 @@
                 <p>CLEAN Car division was initiated in the year 2001 as a fully owned CC Ltd. CLEAN Car has established itself as a high-quality brand providing motorists with a range of car was and services..</p>
             </div><!-- single-footer -->
             <div class="single-footer">
-                <h5>navigation</h5>
+                <h5>Navigation</h5>
                 <ul>
                     <li><a href="main_home_page">Home</a></li>
                     <li><a href="about_us">About Us</a></li>
