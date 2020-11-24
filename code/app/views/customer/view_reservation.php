@@ -61,10 +61,6 @@
                 <label for="advance_paid"><div class="form_label"><b>Payment</b></div></label>
                 <input type="text"  name="advance_paid" class="is_paid" value =
                  "<?php echo($row["is_advance_paid"])?>" disabled></br>
-
-                <label for="countdown"><div class="form_label"><b>Time left</b></div></label>
-                <input type="text"  name="countdown" class="countdown" value =
-                 "" disabled ></br>
                 
                  <?php if(!($row["is_advance_paid"])){
                             echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
