@@ -47,7 +47,7 @@
                     <option value="short_leave">Short Leave</option>
                 </select><br>
 
-                &ensp;&ensp;<label for="leave_time"><div class="form_label"><b>Seect Time</b></div></label>
+                &ensp;&ensp;<label for="leave_time"><div class="form_label"><b>Select Time</b></div></label>
                 <select name="leave_time" id="leave_time">
                   <option value="08:00:00">full day</option>
                   <option value="08:00:00">08:00 am - 12:00am</option>
