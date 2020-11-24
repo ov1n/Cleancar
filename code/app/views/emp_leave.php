@@ -31,7 +31,7 @@
 
   <table id="table_">
   <tr>
-            <th class="dateclmn">Leave Date</th>
+            <th>Leave Date</th>
             <th>Leave Type</th>
             <th>Reason</th>
             <th>Leave Time</th>
@@ -43,7 +43,7 @@
         
         <?php foreach($array as $emp_leave){ ?>
           <tr>
-              <td class="dateclmn">
+              <td class = "dateclmn">
                   <?php echo "$emp_leave[leave_date]"; ?>
               </td>
               <td>
