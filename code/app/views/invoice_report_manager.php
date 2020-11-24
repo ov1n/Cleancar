@@ -22,14 +22,14 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="manager">Manager</a></li>
-        <li >Business Reports</li>
+        <li >Business Report</li>
     </ul><!-- breadcrumb -->
     <?php
     //   echo($_SESSION["uname"]);
     //   var_dump($array);
      ?>
     <div class="container"> 
-    <h1 style="text-align:center;"> Business Report&ensp;<i class="fas fa-file-invoice"></i></h1>
+    <h1 style="text-align:center;"><i class="fas fa-file-invoice"></i> Business Report</h1>
     <hr style="width: 60%;">
     <br><br>
     <div class = "list_table">
