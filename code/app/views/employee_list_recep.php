@@ -44,8 +44,8 @@
         
         <?php foreach($array as $emp){ ?>
           <tr>
-              <td style="font-weight: 700;">
-                  <?php echo "$emp[emp_id]"; ?>
+              <td style="font-weight: 700; background-color: rgb(30, 209, 164);">
+                  E <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
                   <?php echo "$emp[first_name]"; ?>

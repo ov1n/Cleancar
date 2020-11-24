@@ -54,7 +54,7 @@
         
         <?php foreach($array as $emp){ ?>
           <tr>
-              <td>
+              <td style="font-weight: 700; background-color: rgb(30, 209, 164);">
                   <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
