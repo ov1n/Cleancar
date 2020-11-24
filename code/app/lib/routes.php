@@ -111,6 +111,20 @@
         Controller::create_view('emergency_reservation');
     });
 
+      //route to make reservation from receptionist
+    Route::set('emergency_reservation_manager',function(){
+        
+        Session::init();
+        //echo(Session::get("uname"));
+        
+        //$_SESSION["details"]=Make_reservation::autofill($_SESSION["uname"]);
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //echo '</pre>';
+        Controller::create_view('emergency_reservation_manager');
+    });
+
+
     //route to confirm reservation with database
     Route::set('set_reservation',function(){ 
         session_start();
@@ -354,6 +368,11 @@
     Route::set('update_leave',function(){
         Session::init();
         Controller::create_view('update_leave');
+    });
+
+    Route::set('time_table_recep',function(){
+        Session::init();
+        Controller::create_view('time_table_recep');
     });
 
 ?>

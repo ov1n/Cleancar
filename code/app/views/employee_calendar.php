@@ -48,9 +48,12 @@
                   <li><a href="employee">Employee</a></li>
                   <li>Calendar</li>    
                 </ul><!-- breadcrumb --></br></br></br>
+
+                <h1>Leave Calendar</h1>
+
+
               <div class="card" >
                 <div id=form_content> <!-- div to center needed elements -->
-
                 <!--set DATE to  hidden field -->
                 <input type="hidden" id="date" name="date" value="2020-11-26">
 
