@@ -90,11 +90,11 @@
 <!-- 4 cards-->
 <div class="row">
   <div class="column">
-    <div class="card1"><h2>WELCOME</h2> <div class="overlay1"><div class="contents"><p> We offer convenient and quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p></div></div></div>
+    <div class="card1"><h2>WELCOME</h2> <div class="overlay1"><div class="contents"><p> We offer quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p></div></div></div>
     </div>
 
  <div class="column">
-    <div class="card2" ><h2>ABOUT US</h2> <div class="overlay1"><div class="contents"><p>As a trusted solution provider in the automobile industry in Sri Lanka, Clean Car  will continue to provide quality automobile products and services.</p></div></div></div>
+    <div class="card2" ><h2>ABOUT US</h2> <div class="overlay1"><div class="contents"><p>As a trusted solution provider in the automobile industry, Clean Car  will continue to provide quality automobile products and services.</p></div></div></div>
     </div>
 
      <div class="column">
