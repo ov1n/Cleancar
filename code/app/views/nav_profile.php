@@ -216,7 +216,7 @@ body {
     <button class="dropbtn"><a class="profile"  href="javascript:void(0)"><i class="fa fa-user-circle-o"  aria-hidden="true" ></i></a>
     </button>
     <div class="dropdown1-content">
-      <a href="#"><i class="fa fa-user" id="profile_avatar" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
+      <a href="profile"><i class="fa fa-user" id="profile_avatar" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
       <a href="#" onclick="logout(); return false;" class="log_icon"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
     </div>
   </div> 

@@ -6,30 +6,31 @@
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css"><!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css"><!-- add style to footer -->
+        <link rel="stylesheet" type="text/css" href="public\css\delay_time.css"><!-- add style to form -->
+        
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
 
-      <!-- add breadcrumb for find the path easily to users -->
-      <ul class="breadcrumb">
-        <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager</a></li>
-        <li><a href="time_table">Time Table</a></li>
-        <li>Delay Time Table</li>      
-      </ul><!-- breadcrumb -->
+     
 
       <form action="./controllers/Register.php">
         <div class="container">  
-          <h1>Delay Timetable</h1>
-          <hr><br>
+         
           <div class="background">
-            <hr>
+                   <!-- add breadcrumb for find the path easily to users -->
+            <ul class="breadcrumb">
+              
+              <li><a href="home">Home</a></li>
+              <li><a href="manager">Manager</a></li>
+              <li><a href="time_table">Time Table</a></li>
+              <li>Delay Time Table</li>      
+            </ul><!-- breadcrumb -->
+             <h1>Delay Timetable&ensp;<i class="fa fa-table" aria-hidden="true"></i></h1>
+          <hr style="width: 60%"><br>
+            
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
@@ -65,7 +66,7 @@
             </div><!-- card -->
             </br></br>
           </div><!-- background -->
-          <hr>
+         
         </div><!-- container -->
       </form>
 

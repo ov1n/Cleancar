@@ -22,10 +22,10 @@
 <ul class="breadcrumb">
        
         <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager</a></li>
-        <li>Timetable</li>
+        <li><a href="receptionist">Receptionist</a></li>
+        <li>View Reservation</li>
     </ul><!-- breadcrumb -->
-<h1>Time Table&ensp;<i class="fa fa-table" aria-hidden="true"></i></h1><hr style="width: 60%;"><br>
+<h1>View Reservation&ensp;<i class="fa fa-table" aria-hidden="true"></i></h1><hr style="width: 60%;"><br>
 
 <div class = "list_table">
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
@@ -129,7 +129,7 @@
     </table>
   </div>
   <div class = "select_buttons">
-        <a class="delaybtn btn" class="form_btn" href="delay_timetable_manager">Delay Timetable</a>
+        <a class="delaybtn btn" class="form_btn" href="delay_time_table">Delay Timetable</a>
         <a class="exitbtn btn" class="form_btn" href="manager">Exit</a><br>
   </div>
 </div><br><br><br>
