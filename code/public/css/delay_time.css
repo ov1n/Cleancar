@@ -83,9 +83,9 @@ ul.breadcrumb {
   margin-top: 10px;
   height: 370px;
   margin-left: 30%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
   width: 580px;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
    padding-left: 1px;
   margin-right: 27%;
   margin-bottom: 30px;

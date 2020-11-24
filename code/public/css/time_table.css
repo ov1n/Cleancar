@@ -10,7 +10,7 @@ html *
 
 
 h1{
-  color: #01447e;
+  color:white;
   text-align: center;
 }
 /*make h2s align center */
@@ -48,7 +48,7 @@ h2{
   padding: 8px;
 }
 
-#table_ tr:nth-child(odd){background-color: #ffffff;} 	 
+#table_ tr:nth-child(odd){background-color: #ffffff;}    
 #table_ tr:nth-child(even){background-color: #ffffff;}
 #table_ tr:hover {background-color: #e6ffff;}
 
@@ -183,11 +183,9 @@ th, td {
 }
 
 
-  
-/* Style the list(breadcrumb) */
+/* Style the list */
 ul.breadcrumb {
-    margin-top: 70px;
-    padding: 10px 16px;
+    padding: 15px 25px;
     list-style: none;
   }
   
@@ -195,12 +193,20 @@ ul.breadcrumb {
   ul.breadcrumb li {
     display: inline;
     font-size: 18px;
+    color: white;
   }
+  @media screen and (max-width: 500px){
+    ul.breadcrumb li {
+   
+    font-size: 14px;
+    
+  }
+}
   
-  /* Add a slash symbol (|) before/behind each list item */
+  /* Add a slash symbol (/) before/behind each list item */
   ul.breadcrumb li+li:before {
     padding: 8px;
-    color: black;
+    color: white;
     content: "|\00a0";
   }
   
@@ -214,3 +220,15 @@ ul.breadcrumb {
   ul.breadcrumb li a:hover {
     color: #01447e;
   }
+/* add the background image for form */
+.background{
+  margin-top: 65px;
+width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Time_SM.jpg");
+
+ }
+ /* Add padding to containers */
+.container {
+  height: 100%;
+}

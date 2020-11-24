@@ -62,10 +62,17 @@
     Route::set('billing',function(){
         Controller::create_view('billing');
     });
+      Route::set('profile',function(){
+        Controller::create_view('profile');
+    });
 
 
     Route::set('delay_time_table',function(){
         Controller::create_view('delay_time_table');
+    });
+
+    Route::set('delay_timetable_manager',function(){
+        Controller::create_view('delay_timetable_manager');
     });
 
     //route to make reservation with sessions
@@ -120,9 +127,9 @@
     //final view of reservation
     Route::set('confirm_reservation',function(){ 
         session_start();
-        echo '<pre>';
-        var_dump($_SESSION);
-        echo '</pre>';
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //echo '</pre>';
         Controller::create_view('confirm_reservation');
     });
 

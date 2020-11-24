@@ -15,14 +15,6 @@ h1{
   padding-bottom: 10px;
 }
 
-hr{
-  width: 60%;
-}
-
-p{
-  color: white;
-  text-align: center;
-}
 
 a {
   color: black;
@@ -67,22 +59,22 @@ ul.breadcrumb {
   }
 /* add the background image for form */
 .background{
-  margin-top: 45px;
+  margin-top: 65px;
 width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/Time_SM.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/calander.png");
 
  }
   /* style the card in form */
 .card {
   justify-content:center;
   padding-bottom: 20px;
-  padding-top: 45px;
+  padding-top: 25px;
   text-align: left;
   margin-top: 10px;
   height: 100%;
   margin-left: 32%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
   width: 580px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
    padding-left: 1px;
@@ -92,14 +84,13 @@ width: 100%;
 
 @media screen and (max-width: 900px){
   .card{
-    margin-left: 10%;
-    width:80%;
+    margin-left: 7%;
+    width:86%;
   }
 }
 
 /* Add padding to containers */
 .container {
-
   height: 100%;
 }
 
@@ -114,7 +105,7 @@ label {
 
 
 /* Full-width input fields */
-input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select {
+input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,input[type=time],select {
    width: 210px;
   padding: 15px;
   margin: 5px 10px 22px 0px;
@@ -125,13 +116,13 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
 }
 
 @media screen and (max-width: 800px){
-  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,input[type=time],select{
     margin-left: 2%;
   }
 }
 
 @media screen and (max-width: 750px){
-  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,select{
+  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,input[type=time],select{
     width: 200px;
     
   }
@@ -139,7 +130,7 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
 
 
   /* add the background color to the input field */
-input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=date]:focus, input[type=tel]:focus , select:focus {
+input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=date]:focus, input[type=tel]:focus ,input[type=time]:focus, select:focus {
   background-color: #ccddff;
 }
 
