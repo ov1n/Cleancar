@@ -49,7 +49,7 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" id="last_name" required></br>
 
                 &ensp;&ensp;<label for="nic"><div class="form_label"><b>NIC</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" onkeyup='chech_nic();button_enable();' required>
+                <input type="text" placeholder="Enter Your Address" name="nic" id="nic" onkeyup='check_nic();button_enable();' required>
                 <div id="nic_msg"><p></p></div><br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
@@ -59,11 +59,11 @@
                 <input type="email" placeholder="Enter Your Email Address" name="email" id="email" required></br>
 
                 &ensp;&ensp;<label for="password"><div class="form_label"><b>Password</b></div></label>
-                <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='chech_match_psw();password_length();button_enable();' required>
+                <input type="password" placeholder="Enter Password" name="password" id="password" onkeyup='check_match_psw();password_length();button_enable();' required>
                 </br>
 
                 &ensp;&ensp;<label for="confirm_password"><div class="form_label"><b>Confirm Password</b></div></label>
-                <input type="password" placeholder="Re Enter the Password" name="confirm_password" id="confirm_password" onkeyup='chech_match_psw();password_length();button_enable();' required>
+                <input type="password" placeholder="Re Enter the Password" name="confirm_password" id="confirm_password" onkeyup='check_match_psw();password_length();button_enable();' required>
                 <br><div id="psw_length"><p></p></div><br>
                 <div id="psw_validation"><p></p></div></br>
 
