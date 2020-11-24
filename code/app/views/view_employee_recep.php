@@ -63,7 +63,7 @@
                 <input type="text"  name="home_tel_no" value = '<?php echo ":- "."$array[home_tel_no]"; ?>' id="home_tel_no" disabled>
                 </br>
                 <a class="updatebtn" href="employee_update_recep">Update</a>
-                <a class="backbtn" href="employee_list">Back</a>
+                <a class="backbtn" href="employee_list_recep">Back</a>
                 </br></br>
 
               </div><!-- form_content -->   
