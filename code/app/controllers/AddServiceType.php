@@ -29,6 +29,12 @@
             
             //insert data
             $s_type->insert_record($service_type,$vehicle_category,$no_of_employees,$duration,$lift_no,$price);
+            
+            $service_notif=TRUE;
+
+            header("Location: add_service");
+            
+            
 
             //ON SUCCESS, send an email to the employee asking him to change his password immediately
            
