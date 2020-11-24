@@ -54,7 +54,7 @@
         
         <?php foreach($array as $emp){ ?>
           <tr>
-          <td style="text-align: center; font-weight: 700; background:linear-gradient(to right,#318091,#398c9e,#52a8ba,#6dc5d6,#85d9ed,#9eecff);">
+          <td style="text-align: center; font-weight: 700;">
                   <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
