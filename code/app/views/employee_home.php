@@ -41,7 +41,7 @@
 			<div class="square4">
 				<i class="fa fa-pie-chart fa-3x" aria-hidden="true"></i> 
 				<br>
-				<a href="leave_static"><button><b>Leave Statics</b></button></a>
+				<a href="leave_static"><button><b>Leave Statistics</b></button></a>
 			</div>
 		</div> <!--square-->
 </div> <!-- cover -->
