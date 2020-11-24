@@ -23,11 +23,11 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="receptionist">Receptionist</a></li>
-        <li>Delay Time Table</li>      
+        <li>Delay Timetable</li>      
       </ul><!-- breadcrumb -->
 
       
-      <h1 style="text-align:center;"><i class="fas fa-hourglass-half"></i>Delay Timetable</h1>
+      <h1 style="text-align:center;"><i class="fas fa-hourglass-half"></i> Delay Timetable</h1>
       <hr style="width: 60%;">
         <div class="card" >
           <div id=form_content> <!-- div to center needed elements -->
@@ -57,7 +57,7 @@
                     <option value="d">03.00 p.m.</option>
                 </select><br>
 
-                <button type="submit" class="cancelbtn btn" class="form_btn" >Cancel</button>
+                <button type="submit" class="cancelbtn btn" class="form_btn">Cancel</button>
                 <button type="submit" class="okbtn btn" class="form_btn" style="margin-right :10px">Send notification</button>
                 </br></br></br>
           </div><!-- form_content -->  
