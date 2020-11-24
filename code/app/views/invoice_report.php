@@ -1,10 +1,10 @@
-ll<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
   <title>Invoice Report</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\invoice_report.css"><!-- add style to employee_list -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
@@ -15,7 +15,7 @@ ll<!DOCTYPE html>
 
  
           
-          <div class="background_2">
+<div class="background_2">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
         <!-- <img src="public\images\4444.png" width="109" height="48" style="float:right"> -->
@@ -23,12 +23,8 @@ ll<!DOCTYPE html>
         <li><a href="home">Home</a></li>
         <li><a href="receptionist">Receptionist</a></li>
         <li><a href="billing">Billing</a></li>
-        <li>Business Report</li>
+        <li >Business Report</li>
     </ul><!-- breadcrumb -->
-    <?php
-    //   echo($_SESSION["uname"]);
-    //   var_dump($array);
-     ?>
     <div class="container"> 
     <h1 style="text-align:center;"><i class="fas fa-file-invoice"></i> Business Report</h1>
     <hr style="width: 60%;">
@@ -49,31 +45,31 @@ ll<!DOCTYPE html>
 
         </tr>
         
-        <?php foreach($array as $invoice){ ?>
+        <?php foreach($array as $invoice1){ ?>
           <tr>
               <td>
-                  <?php echo "$invoice[invoice_no]"; ?>
+                  <?php echo "$invoice1[invoice_no]"; ?>
               </td>
               <td>
-                  <?php echo "$invoice[bill_no]"; ?>
+                  <?php echo "$invoice1[bill_no]"; ?>
               </td>
               <td>
-                  <?php echo "$invoice[reservation_id]"; ?>
+                  <?php echo "$invoice1[reservation_id]"; ?>
               </td>
               <td>
-                  <?php echo "$invoice[vehicle_no]"; ?>
+                  <?php echo "$invoice1[vehicle_no]"; ?>
               </td>
               <td>
-                  <?php echo "$invoice[vehicle_model]"; ?>
+                  <?php echo "$invoice1[vehicle_model]"; ?>
               </td>
               <td>
-                  <?php echo "$invoice[customer_name]"; ?>
+                  <?php echo "$invoice1[customer_name]"; ?>
               </td>
               <td>
-                  <?php echo "$invoice[contact_no]"; ?>
+                  <?php echo "$invoice1[contact_no]"; ?>
               </td>
               <td>
-                  <?php echo "$invoice[net_amount]"; ?>
+                  <?php echo "$invoice1[net_amount]"; ?>
               </td>
           </tr>
       <?php } ?>
