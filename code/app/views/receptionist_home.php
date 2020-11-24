@@ -60,7 +60,7 @@
 			<div class="square5">
 				<i class="fa fa-list-alt fa-3x" aria-hidden="true"></i>
 				<br>
-				<a href="#"><button><b>View Reservation</b></button></a>
+				<a href="time_table_recep"><button><b>View Reservation</b></button></a>
 			</div>
 
 			<div class="square6">
