@@ -35,11 +35,11 @@
               <div id=form_content> <!-- div to center needed elements -->
                
 
-                <label for="Number Of Leave You Got" style="width: 250px" ><div class="form_label"><b>Number Of Leave You Got</b></div></label>
-                 <div class="form_label" style="margin:50px;color: black">Full Day&ensp;&ensp;&ensp;5 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;&ensp;4</div>
+                <label for="Number Of Leave You Got" style="width: 280px" ><div class="form_label"><b>Number Of Leave You Got upto Today</b></div></label>
+                 <div class="form_label" style="margin:50px;color: black">Full Day&ensp;&ensp;5 &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp;2 &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;4 </div>
 
-                  <label for="Number Of Leave Available" style="width: 250px"><div class="form_label"><b>Number Of Leave Available</b></div></label>
-                 <div class="form_label"style="margin:50px;color: black">Full Day&ensp;&ensp;&ensp;5 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;&ensp;4</div>
+                  <label for="Number Of Leave Available" style="width: 300px"><div class="form_label"><b>Number Of Leave Available upto Today</b></div></label>
+                 <div class="form_label"style="margin:50px;color: black">Full Day&ensp;&ensp;5 &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp;2 &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;4 </div>
               </div><!-- form_content -->
              
 
