@@ -32,8 +32,8 @@
                   <li><a href="receptionist">Receptionist</a></li>
                   <li>Add Employee</li>          
             </ul><!-- breadcrumb -->
-            
-                <h1>Employee Registration</h1>
+            <h1 style="text-align:center;"><i class="fas fa-id-card-alt"></i> Employee Registration</h1>
+                
                 <hr style = "width:60%">
                 <br>
 
