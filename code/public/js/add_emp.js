@@ -30,9 +30,9 @@ function send_data() {
 
 
 //function which takes confirm password
-function chech_match_psw() {  //function which matches password values
+function check_match_psw() {  //function which matches password values
   // console.log("It's working");
-  if (document.getElementById('password').value == document.getElementById('confirm_password').value) {
+  if (document.getElementById('password').value == document.getElementById('confirm_password').value && document.getElementById('confirm_password')) {
     document.getElementById('psw_validation').style.color = 'green';
     document.getElementById('psw_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;matching';
   } else {
@@ -44,7 +44,7 @@ function chech_match_psw() {  //function which matches password values
 
 //JS function which enables button only if passwords are matched
 var button_enable = function () {
-  if ((document.getElementById('psw_validation').style.color == 'green') && (document.getElementById('psw_length').innerHTML == '') && (document.getElementById('nic_msg').style.color == 'green') && (document.getElementById('phone_validation').style.color = 'green') ) {
+  if ((document.getElementById('psw_validation').style.color == 'green') && (document.getElementById('psw_length').innerHTML == '') && (document.getElementById('nic_msg').style.color == 'green') && (document.getElementById('phone_validation').style.color == 'blue') ) {
     console.log("green");
     document.getElementById("register").disabled = false;
   } else {
@@ -70,7 +70,7 @@ function password_length() {
 }
 
 //NIC Validation
-function chech_nic(){
+function check_nic(){
   var usernic = document.getElementById('nic').value;
 
   if( (usernic.length != 10 || usernic.charAt(usernic.length - 1) != 'v' && usernic.charAt(usernic.length - 1) != 'V') && (usernic.length != 12 || usernic.charAt(usernic.length - 1) == 'V' ||  usernic.charAt(usernic.length - 1) == 'v' )){
@@ -127,6 +127,6 @@ function check_phone_no() {
     mobile_tel_valid= true;
     home_tel_valid= true;
     document.getElementById('phone_validation').innerHTML = '';
-    document.getElementById('phone_validation').style.color = 'green';
+    document.getElementById('phone_validation').style.color = 'blue';
   }
 }
