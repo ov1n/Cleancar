@@ -72,8 +72,9 @@ function password_length() {
 //NIC Validation
 function check_nic(){
   var usernic = document.getElementById('nic').value;
+  
 
-  if( (usernic.length != 10 || usernic.charAt(usernic.length - 1) != 'v' && usernic.charAt(usernic.length - 1) != 'V') && (usernic.length != 12 || usernic.charAt(usernic.length - 1) == 'V' ||  usernic.charAt(usernic.length - 1) == 'v' )){
+  if( (usernic.length != 10 || usernic.charAt(usernic.length - 1) != 'v' && usernic.charAt(usernic.length - 1) != 'V') && (usernic.length != 12 || usernic.charAt(usernic.length - 1) == 'V' ||  usernic.charAt(usernic.length - 1) == 'v' || usernic.substr(0, 1)>2 )){
     console.log('Invalid NIC number');
     document.getElementById('nic_msg').style.color = 'red';
     document.getElementById('nic_msg').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Invalid NIC';
