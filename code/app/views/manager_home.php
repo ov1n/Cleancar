@@ -18,45 +18,39 @@
           
         </ul> <!-- breadcrumb -->
       
-	    		<h1 style="color: white;">Manager Home <i class="fa fa-home fa-lg" aria-hidden="true" style="color: white;"></i></h1>
+	    		<h1 style="color: white;">Manager Home <i class="fa fa-home fa-lg" aria-hidden="true" style="color: white;"></i></h1><hr style="width: 60%;"><br>
 	    <div class="square"> <br>
 		<div class="square1" style="float: left;">
-				<i class="fa fa-address-card-o fa-3x" aria-hidden="true" style="color: white;"></i>
+				<i class="fa fa-address-card-o fa-3x" aria-hidden="true" ></i>
 				<br>
 				<a href="employee_list"><button><b>Employee</b></button></a>
 			</div>
 
 			<div class="square2">
-				<i class="fa fa-list-alt fa-3x" aria-hidden="true" style="color: white;"></i>
+				<i class="fa fa-list-alt fa-3x" aria-hidden="true" ></i>
 				<br>
-				<div class="dropdown">
-  					<button class="dropbtn">Reservation</button>
-  					<div class="dropdown-content">
-    					<a href="add_reserve_manager">make rservation</a>
-    					<a href="#">view reservation</a>
-  					</div>
-				</div>
+				<a href="emergency_reservation_manager"><button><b>Reservation</b></button></a>
 			</div>
 
 			<div class="square3">
-				<i class="fa fa-plus-circle fa-3x" aria-hidden="true" style="color: white;"></i>
+				<i class="fa fa-plus-circle fa-3x" aria-hidden="true" ></i>
 				<br>
 				<a href="service_type_list"><button><b>Service Type</b></button></a>
 			</div>
 
 			<div class="square4">
-				<i class="fa fa-clock-o fa-3x" aria-hidden="true" style="color: white;"></i>
+				<i class="fa fa-clock-o fa-3x" aria-hidden="true" ></i>
 				<br>
 				<a href="timeslot_list"><button><b>Timeslot</b></button></a>
 			</div>
 
 			<div class="square5">
-				<i class="fa fa-file-text fa-3x" aria-hidden="true" style="color: white;"></i>
+				<i class="fa fa-file-text fa-3x" aria-hidden="true" ></i>
 				<br>
-				<a href="#"><button><b>Reports</b></button></a>
+				<a href="invoice_report_manager"><button><b>Reports</b></button></a>
 			</div>
 			<div class="square6">
-				<i class="fa fa-list fa-3x" aria-hidden="true" style="color: white;"></i>
+				<i class="fa fa-list fa-3x" aria-hidden="true" ></i>
 				<br>
 				<a href="time_table"><button><b>Time Table</b></button></a>
 			</div>

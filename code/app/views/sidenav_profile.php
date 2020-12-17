@@ -25,7 +25,7 @@
   </div>
   <a href="about_us">About Us</a>
   <a href="contact_us">Contact Us</a>
-   <a href="#"><i class="fa fa-user" id="profile_avatar" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
+   <a href="profile"><i class="fa fa-user" id="profile_avatar" aria-hidden="true" style="padding-right: 4px"></i>Profile</a>
   <a href="#" onclick="logout(); return false;" class="log_icon"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
 </div>
 

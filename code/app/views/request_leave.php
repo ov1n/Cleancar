@@ -7,17 +7,15 @@
 
       <link rel="stylesheet" type="text/css" href="public\css\request_leave.css"><!-- add style to form -->
       
-      <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+      <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script> <!-- get icons -->
 
-      <script type="text/javascript" src="public\js\add_emp_leave.js"></script>
+      <script type="text/javascript" src="public/js/add_emp_leave.js"></script> <!-- link to js file -->
       <script src="public/js/jquery/jquery.alertable.min.js"></script>
     </head>
 
     <body>
 
-      
-      <!-- onsubmit="send_leave_data()" -->
-      <form name="add_leave_form" id="add_leave_form" method = "post" onsubmit="send_leave_data()">        
+      <form name="add_leave_form" id="add_leave_form" method = "post" onsubmit="send_leave_data()">   <!-- call function in js file -->  
       <div class="container">  
          
           <div class="background">
@@ -27,18 +25,20 @@
               <li><a href="home">Home</a></li>
               <li><a href="employee">Employee</a></li>
               <li>Add Leave</li>    
-            </ul>
-               <h1>Add Leave</h1>
-                <hr style="width: 60%;"></br>
+            </ul> <!-- end breadcrumb -->
+
+            <h1>Add Leave</h1>
+            <hr style="width: 60%;"></br> <!-- style horizontal line -->
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
                 &ensp;&ensp;<label for="date"><div class="form_label"><b>Select Date</b></div></label>
-                <input type="date" placeholder="Enter the date" name="leave_date" id="leave_date" required></br>
+                <input type="date" placeholder="Enter the date" name="leave_date" id="leave_date" onchange = "check_date(); button_enable();" required></br>
+                <div id="date_validate_msg"><p></p></div><br> <!-- functions for date validity -->
 
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee Id</b></div></label>
                 <input type="text" placeholder="Enter employee id" name="emp_id" id="emp_id" value=
-                "<?php echo($_SESSION['uname']); ?>" required></br>
+                "<?php echo($_SESSION['uname']); ?>" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550" disabled></br> <!-- auto fill employee id when employee logged -->
 
                 &ensp;&ensp;<label for="leave_type"><div class="form_label"><b>Leave Type</b></div></label>
                 <select name="leave_type" id="leave_type">
@@ -47,7 +47,7 @@
                     <option value="short_leave">Short Leave</option>
                 </select><br>
 
-                &ensp;&ensp;<label for="leave_time"><div class="form_label"><b>Seect Time</b></div></label>
+                &ensp;&ensp;<label for="leave_time"><div class="form_label"><b>Select Time</b></div></label>
                 <select name="leave_time" id="leave_time">
                   <option value="08:00:00">full day</option>
                   <option value="08:00:00">08:00 am - 12:00am</option>
@@ -60,7 +60,7 @@
                <input type="text" placeholder="Enter your reason here" name="reason" id="reason" required></br>
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn" >Cancel</button>
-                <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button> </br></br> </br></br>
+                <button type="submit" id="submit" class="btn" class="form_btn" style="margin-right :10px">Submit</button> </br></br> </br></br>
               
               </div><!-- form_content -->   
             </div><!-- card -->

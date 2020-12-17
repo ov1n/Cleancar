@@ -17,7 +17,7 @@
   <!-- get imported jquery -->
   <script src="public/js/jquery/jquery-3.5.1.js"></script>
   <!-- link external js -->
-  <script type="text/javascript" src="public\js\home.js"></script>
+  <script type="text/javascript" src="public\js\no_reservation.js"></script>
   <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
   <!-- set php notification to a js var in order to execute external js -->
@@ -90,11 +90,11 @@
 <!-- 4 cards-->
 <div class="row">
   <div class="column">
-    <div class="card1"><h2>WELCOME</h2> <div class="overlay1"><div class="contents"><p> We offer convenient and quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p></div></div></div>
+    <div class="card1"><h2>WELCOME</h2> <div class="overlay1"><div class="contents"><p> We offer quality driven services for your vehicle. our professionally trained staff delivers exceptional results on all types of vehicles.</p></div></div></div>
     </div>
 
  <div class="column">
-    <div class="card2" ><h2>ABOUT US</h2> <div class="overlay1"><div class="contents"><p>As a trusted solution provider in the automobile industry in Sri Lanka, Clean Car  will continue to provide quality automobile products and services.</p></div></div></div>
+    <div class="card2" ><h2>ABOUT US</h2> <div class="overlay1"><div class="contents"><p>As a trusted solution provider in the automobile industry, Clean Car  will continue to provide quality automobile products and services.</p></div></div></div>
     </div>
 
      <div class="column">
@@ -204,7 +204,7 @@ function showSlides() {
   slideIndex++;
   if (slideIndex > slides.length) {slideIndex = 1}
   slides[slideIndex-1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+  setTimeout(showSlides, 3000); // Change image every 3 seconds
 }
 
 //map

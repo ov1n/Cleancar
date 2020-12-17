@@ -2,7 +2,7 @@
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <title>CleanCar - Add Service</title>
+        <title>CleanCar - Assign Service</title>
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
@@ -28,9 +28,9 @@
         <li><a href="home">Home</a></li>
         <li><a href="manager">Manager</a></li>
         <li><a href="service_type_list">Service Type</a></li>
-        <li>Add Service</li>
+        <li>Assign Service</li>
       </ul><!-- breadcrumb -->
-        <h1>Add Service Type</h1>
+        <h1>Assign Service Type</h1>
           
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->

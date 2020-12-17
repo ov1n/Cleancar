@@ -17,7 +17,7 @@
             //calculate the end time
             $query="SELECT vehicle_num,vehicle_category 
                     FROM vehicle
-                    WHERE cust_id='1043';";
+                    WHERE cust_id='$cust_id';";
             
             $result= mysqli_query($conn,$query);
 

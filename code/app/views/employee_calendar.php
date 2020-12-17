@@ -5,7 +5,7 @@
         <title>CleanCar - Make Reservation form</title>
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
-        <link rel="stylesheet" type="text/css" href="public\css\form.css">                  <!-- add style to form -->
+        <link rel="stylesheet" type="text/css" href="public\css\employee_calendar.css">                  <!-- add style to form -->
         <link rel="stylesheet" type="text/css" href="public\css\footer.css">                <!-- add style to footer -->
         <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
 
@@ -38,20 +38,22 @@
         //echo(($_SESSION["details"])["first_name"]);
       ?>
 
-      <!-- add breadcrumb for find the path easily to users -->
-      <ul class="breadcrumb">
-         <img src="public\images\4444.png" width="109" height="48" style="float:right">
-        </br>
-        <li><a href="home">Home</a></li>
-        <li><a href="employee">Employee</a></li>
-        <li>Calendar</li>    
-      </ul><!-- breadcrumb -->
+      
         <div class="container">  
             <div class="background">
-              <hr>
+                        <!-- add breadcrumb for find the path easily to users -->
+                <ul class="breadcrumb">
+                  
+                  <li><a href="home">Home</a></li>
+                  <li><a href="employee">Employee</a></li>
+                  <li>Calendar</li>    
+                </ul><!-- breadcrumb --></br></br></br>
+
+                <h1>Leave Calendar</h1>
+
+
               <div class="card" >
                 <div id=form_content> <!-- div to center needed elements -->
-
                 <!--set DATE to  hidden field -->
                 <input type="hidden" id="date" name="date" value="2020-11-26">
 
@@ -69,9 +71,9 @@
                 
               </div><!-- form_content -->              
             </div><!-- card -->
-            </br></br>
+            </br></br></br></br></br></br>
           </div><!-- background -->
-          <hr>
+          
         </div><!-- container -->
       
 
