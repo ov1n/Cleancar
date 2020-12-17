@@ -228,5 +228,5 @@ margin-left: 10%;
 }
 /*background image*/
 .background{
-  background-image: linear-gradient(rgb(58, 118, 255, 0.2), rgb(58, 118, 255, 0.2)), url("../images/contact_us/33999.png");
+  background-image: linear-gradient(rgb(58, 118, 255, 0.4), rgb(58, 118, 255, 0.4)), url("../images/contact_us/33999.png");
 }

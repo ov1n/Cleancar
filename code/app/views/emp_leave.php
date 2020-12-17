@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Table</title>
+  <title>Employee Leaves</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\emp_leave.css"><!-- add style to employee_list -->
@@ -31,19 +31,18 @@
 
   <table id="table_">
   <tr>
-            <th class="dateclmn">Leave Date</th>
+            <th>Leave Date</th>
             <th>Leave Type</th>
             <th>Reason</th>
             <th>Leave Time</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Cancel</th>
 
 
         </tr>
         
         <?php foreach($array as $emp_leave){ ?>
           <tr>
-              <td class="dateclmn">
+              <td class = "dateclmn">
                   <?php echo "$emp_leave[leave_date]"; ?>
               </td>
               <td>
@@ -57,10 +56,7 @@
               </td>
 
               <td style = " text-align: center;">
-                  <a href="update_leave" name="update" class="btn updatelbtn">Update</a>
-              </td>
-              <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Cancel</a>
               </td>
           </tr>
       <?php } ?>

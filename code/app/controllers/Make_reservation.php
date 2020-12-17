@@ -123,7 +123,7 @@
             //ON SUCCESS, send an email to customer address
             $mail=new Mailer();
             $subject="Successful reservation Placement";
-            //FIX DURATION
+            //Email body
             $body="<strong>Dear Mr./Mrs.".$_SESSION["details"]["last_name"].",</strong></br>
                     Thank you for placing your reservation with CleanCar.</br>
                     The reservation details are as follows: </br>
@@ -133,8 +133,8 @@
                     Service Type  :".$_SESSION["service_name"]."</br>
                     Date          :".$_SESSION["res_date"]."</br>
                     Time          :".$_SESSION["time"]."</br>
-                    Duration      :"."2 hours"."</br>
-                    Price         :".$_SESSION["price"]."</br>
+                    Duration      :".substr($_SESSION["duration"],1,1)." hours </br>
+                    Price         : Rs.".$_SESSION["price"]."</br>
                     </br>
                     For any clarifications please contact CleanCar at our hotline :011-2773411";
 

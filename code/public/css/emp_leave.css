@@ -77,11 +77,13 @@ th, td {
   padding: 8px;
 }
 
+
 .dateclmn{
-  background-color: rgb(138, 231, 120);
+  /*background-color: rgb(138, 231, 120);*/
   text-align: center;
   color: #080808;
-}
+  font-weight: bold;
+} 
 
 /* Set a style for the submit/register button */
 .btn {
