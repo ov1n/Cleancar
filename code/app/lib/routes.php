@@ -267,8 +267,12 @@
     });
 
     //delete
+    Route::set('employee_delete_recep',function(){
+        EmployeeList::delete('employee_list_recep');
+    });
+
     Route::set('employee_delete',function(){
-        EmployeeList::delete();
+        EmployeeList::delete('employee_list');
     });
 
     Route::set('add_service_type',function(){
