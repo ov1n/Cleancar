@@ -36,7 +36,7 @@
             //hash the password
             $pwd=md5($unhashed);
 
-            
+            //var_dump($man);
             //Session::set("pwd", $pwd);
             //set logged in time
             Session::set("in_time",time());

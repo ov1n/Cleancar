@@ -1,12 +1,6 @@
 <?php
-    include_once 'Model.php';
 
     class Service_employee extends Model{
-
-        //automatically create db object
-        public function __construct(){
-                //$db=new Database();
-        }
 
         //getting all details of employees
         function get_all(){
@@ -14,16 +8,13 @@
             //echo session var
             //echo "uname is " . $_SESSION["uname"] . ".<br>";
             //echo "pwd is " . $_SESSION["pwd"] . ".";
-            
-            //assign connectivity to a variable
-            $conn=Database::conn();
                
             $query="SELECT* FROM service_employee";
-            $result= mysqli_query($conn,$query);
+            $result= mysqli_query($this->conn,$query);
             
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }
 
@@ -41,16 +32,13 @@
 
         //function which gets a selected employee from ID
         function get_employee($employeeid){
-
-            //assign connectivity to a variable
-            $conn=Database::conn();
             
             $query="SELECT* FROM service_employee WHERE emp_id='$employeeid';";
-            $result= mysqli_query($conn,$query);
+            $result= mysqli_query($this->conn,$query);
             
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }
 
@@ -72,16 +60,13 @@
             //echo session var
             //echo "uname is " . $_SESSION["uname"] . ".<br>";
             //echo "pwd is " . $_SESSION["pwd"] . ".";
-            
-            //assign connectivity to a variable
-            $conn=Database::conn();
                
             $query="SELECT emp_id FROM service_employee WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
-            $result= mysqli_query($conn,$query);
+            $result= mysqli_query($this->conn,$query);
             
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }
 
@@ -97,9 +82,6 @@
             
         }
         function insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob,$password){
-            
-            //assign connectivity to a variable
-            $conn=Database::conn();
 
             //get date of today for registered date
             $today=date('Y-m-d');
@@ -110,11 +92,11 @@
             
             //echo($query);
 
-            $result= mysqli_query($conn,$query_emp);
+            $result= mysqli_query($this->conn,$query_emp);
 
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }
         }
@@ -133,15 +115,12 @@
 
     function delete_record($employeeid){
         
-        //assign connectivity to a variable
-        $conn=Database::conn();
-        
         $query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
-        $result= mysqli_query($conn,$query);
+        $result= mysqli_query($this->conn,$query);
         
         //debugging
         if (!$result) {
-            printf("Error: %s\n", mysqli_error($conn));
+            printf("Error: %s\n", mysqli_error($this->conn));
             exit();
         }else{
             return True;
