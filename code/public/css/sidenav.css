@@ -97,7 +97,7 @@ body {
  margin-right:50px;
  margin-top: -5px;
 }
-@media screen and (max-width:900px) {
+@media screen and (max-width:1100px) {
   .side_nav_bar {display: block;}
  
 }
