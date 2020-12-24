@@ -208,12 +208,6 @@
         Controller::create_view('add_employee');
     }); 
 
-    Route::set('employee_update',function(){
-        //start session
-        Session::init();
-        Controller::create_view('employee_update');
-    });
-
     Route::set('add_timeslot',function(){
         //start session
         Session::init();
@@ -373,10 +367,6 @@
         Controller::create_view('add_leave_manager');
     });
 
-    Route::set('employee_update_recep',function(){
-        Session::init();
-        Controller::create_view('employee_update_recep');
-    });
 
     Route::set('update_leave',function(){
         Session::init();
