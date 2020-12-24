@@ -266,6 +266,15 @@
         EmployeeList::view('view_employee_recep');
     });
 
+    Route::set('employee_update',function(){ 
+        EmployeeList::view('employee_update');
+    });
+
+    Route::set('employee_update_recep',function(){ 
+        EmployeeList::view('employee_update_recep');
+    });
+
+
     //delete
     Route::set('employee_delete_recep',function(){
         EmployeeList::delete('employee_list_recep');
