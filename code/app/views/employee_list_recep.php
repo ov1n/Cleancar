@@ -60,7 +60,7 @@
                   <a href="employee_view_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_update_recep" name="update" class="btn updatelbtn">Update</a>
+                  <a href="employee_update_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
                   <a href="employee_delete_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
