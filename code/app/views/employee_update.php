@@ -61,7 +61,7 @@
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
                 <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = '<?php echo "$array[home_tel_no]"; ?>' id="home_tel_no" required >
                 </br>
-                <a href="employee_list"><button type="submit" class="btn cancelbtn" class="form_btn" > Cancel</button> </a>
+                <a href="employee_list" class="btn cancelbtn" class="form_btn" > Cancel </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
                 </br></br></br></br>
 
