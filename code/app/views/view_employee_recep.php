@@ -62,7 +62,7 @@
                 <label for="home_tel_no"><div class="form_label" ><b>Home</b></div></label>
                 <input type="text"  name="home_tel_no" value = '<?php echo ":- "."$array[home_tel_no]"; ?>' id="home_tel_no" disabled>
                 </br>
-                <a class="updatebtn" href="employee_update_recep">Update</a>
+                <a class="updatebtn" href="employee_update_recep?emp_id=<?php echo "$array[emp_id]"; ?>">Update</a>
                 <a class="backbtn" href="employee_list_recep">Back</a>
                 </br></br>
 
