@@ -13,9 +13,7 @@
             //assign connectivity to a variable
             //$db=New Model();
             //var_dump($conn);
-            //$conn=Database::conn();
-            var_dump($this->conn);
-            
+            //$conn=Database::conn();         
                
             $query="SELECT emp_id FROM manager WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
             $result= mysqli_query($this->conn,$query);
