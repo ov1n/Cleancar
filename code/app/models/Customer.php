@@ -30,14 +30,8 @@
         //get cust_id from email
         function get_custid($email){
 
-            $query="SELECT cust_id FROM customer WHERE (email='$email' OR cust_id='$email')";
-            $result= mysqli_query($this->conn,$query);
-
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
+            $condition="WHERE (email='$email' OR cust_id='$email')";
+            $result= $this->select("cust_id",'customer',$condition);
 
             //get necessary elements in an array
             $r = mysqli_fetch_array($result);

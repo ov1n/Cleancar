@@ -24,17 +24,19 @@
         // SELECT $arr <or> $arr[0],$arr[1],...$arr[n-1] 
         // FROM $tableName
         // WHERE $field=$value
-        public function select($arr,$value,$field,$tableName){
- 
+
+        public function select($arr,$tableName,$condition){
+            //$condition= "WHERE custid=.......INNER JOIN...."
+
             //if array is empty select all from the table
             if(!count($arr)){
-                $sql = "SELECT* FROM ".$tableName." WHERE ".$field."="."\"$value\"";
+                $sql = "SELECT* FROM ".$tableName.$condition;
             
             //otherwise string concat the fields to select
             }else{
 
                 $sql = "SELECT";
-
+                //WHERE e='p' group by ................
                 //if an array is the input get the fields
                 if(gettype($arr)=='array'){
 
@@ -59,11 +61,17 @@
                 }
 
                 
-                $sql.=" FROM ".$tableName." WHERE ".$field."="."\"$value\"";
+                $sql.=" FROM ".$tableName." ".$condition;
             }
 
             echo($sql);
-            $result= mysqli_query($this->conn,$query);
+            $result= mysqli_query($this->conn,$sql);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
 
             return $result;
 
