@@ -54,7 +54,7 @@
         
         <?php foreach($array as $emp){ ?>
           <tr>
-          <td style="text-align: center; font-weight: 700; background:linear-gradient(to right,#318091,#398c9e,#52a8ba,#6dc5d6,#85d9ed,#9eecff);">
+          <td style="text-align: center; font-weight: 700;">
                   <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
@@ -70,7 +70,7 @@
                   <a href="employee_view?emp_id=<?php echo "$emp[emp_id]"; ?>" name="view" class="btn viewbtn">View</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_update" name="update" class="btn updatelbtn">Update</a>
+                  <a href="employee_update?emp_id=<?php echo "$emp[emp_id]"; ?>" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
                   <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a><br>

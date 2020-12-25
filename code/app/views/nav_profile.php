@@ -171,10 +171,11 @@ body {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 140px;
+  min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
   z-index: 1;
   margin-top: 1px;
+  margin-left: -40px;
 }
 
 .dropdown1-content a {
@@ -197,7 +198,7 @@ body {
 }
 
 
-@media screen and (max-width: 900px){
+@media screen and (max-width: 1100px){
    .navbar{
     display: none;
   }
@@ -220,6 +221,10 @@ body {
       <a href="#" onclick="logout(); return false;" class="log_icon"><i class="fa fa-sign-out" aria-hidden="true" style="padding-right: 4px"></i>Log Out</a>
     </div>
   </div> 
+
+  <!--loged user name display-->
+  <p style="width: 150px;float: right;"><?php    echo($_SESSION['uname']);         ?></p>
+  
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
   <div class="dropdown">

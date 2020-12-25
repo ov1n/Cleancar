@@ -35,33 +35,33 @@
 
               <div id=form_content> <!-- div to center needed elements -->
 
-                &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee ID</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="emp_id" value = "ES1023" id="emp_id" required></br>
+              &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee ID</b></div></label>
+                <input type="text" placeholder="Enter Your First Name" name="emp_id" value = '<?php echo "$array[emp_id]"; ?>' id="emp_id" required disabled></br>
 
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="first_name" value = "Tharindu" id="first_name" required></br>
+                <input type="text" placeholder="Enter Your First Name" name="first_name" value = '<?php echo "$array[first_name]"; ?>' id="first_name" required></br>
 
                 &ensp;&ensp;<label for="last_name"><div class="form_label"><b>Last Name</b></div></label>
-                <input type="text" placeholder="Enter Your Last Name" name="last_name" value = "Dulshan" id="last_name" required></br>
+                <input type="text" placeholder="Enter Your Last Name" name="last_name" value = '<?php echo "$array[last_name]"; ?>' id="last_name" required></br>
 
                 &ensp;&ensp;<label for="nic"><div class="form_label"><b>NIC</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="nic" value = "972401737v" id="nic" required></br>
+                <input type="text" placeholder="Enter Your Address" name="nic" value = '<?php echo "$array[NIC_no]"; ?>' id="nic" required></br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="address" value = "Shanika Akurugoda Telijjawila" id="address" required ></br>
+                <input type="text" placeholder="Enter Your Address" name="address" value = '<?php echo "$array[address]"; ?>' id="address" required ></br>
 
                 &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-                <input type="email" placeholder="Enter Your Email Address" name="e-mail" value = "tdwithanage97@gmail.com" id="e-mail" required ></br>
+                <input type="email" placeholder="Enter Your Email Address" name="e-mail" value = '<?php echo "$array[email]"; ?>' id="e-mail" required ></br>
 
                 &ensp;&ensp;<h2>Contact Numbers</h2>
 
                 &ensp;&ensp;<label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no" value = "0711555555" id="mobile_tel_no" required ></br>
+                <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no" value = '<?php echo "$array[mobile_tel_no]"; ?>' id="mobile_tel_no" required ></br>
               
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
-                <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = "0412222222" id="home_tel_no" required >
+                <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = '<?php echo "$array[home_tel_no]"; ?>' id="home_tel_no" required >
                 </br>
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <a href="employee_list" class="btn cancelbtn" class="form_btn" > Cancel </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
                 </br></br></br></br>
 

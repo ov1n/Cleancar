@@ -208,12 +208,6 @@
         Controller::create_view('add_employee');
     }); 
 
-    Route::set('employee_update',function(){
-        //start session
-        Session::init();
-        Controller::create_view('employee_update');
-    });
-
     Route::set('add_timeslot',function(){
         //start session
         Session::init();
@@ -266,9 +260,22 @@
         EmployeeList::view('view_employee_recep');
     });
 
+    Route::set('employee_update',function(){ 
+        EmployeeList::view('employee_update');
+    });
+
+    Route::set('employee_update_recep',function(){ 
+        EmployeeList::view('employee_update_recep');
+    });
+
+
     //delete
+    Route::set('employee_delete_recep',function(){
+        EmployeeList::delete('employee_list_recep');
+    });
+
     Route::set('employee_delete',function(){
-        EmployeeList::delete();
+        EmployeeList::delete('employee_list');
     });
 
     Route::set('add_service_type',function(){
@@ -360,10 +367,6 @@
         Controller::create_view('add_leave_manager');
     });
 
-    Route::set('employee_update_recep',function(){
-        Session::init();
-        Controller::create_view('employee_update_recep');
-    });
 
     Route::set('update_leave',function(){
         Session::init();

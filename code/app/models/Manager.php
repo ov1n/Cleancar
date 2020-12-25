@@ -4,28 +4,21 @@
     class Manager extends Model{
 
         //automatically create db object
-        public function __construct(){
-                //$db=new Database();
-        }
+        
 
         //checking credentials by searching through the manager table
         function check_credentials($uname,$pwd){
 
-            //echo session var
-            //echo "uname is " . $_SESSION["uname"] . ".<br>";
-            //echo "pwd is " . $_SESSION["pwd"] . ".";
-            
+            //$this->__construct();
             //assign connectivity to a variable
-            $conn=Database::conn();
-               
-            $query="SELECT emp_id FROM manager WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
-            $result= mysqli_query($conn,$query);
+            //$db=New Model();
+            //var_dump($conn);
+            //$conn=Database::conn();         
             
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
-                exit();
-            }
+            //condition passed for WHERE in query
+            $condition="WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd';";
+            
+            $result= $this->select("emp_id",'manager',$condition);
 
             //get a count of rows returning
             $count = mysqli_fetch_array($result);
