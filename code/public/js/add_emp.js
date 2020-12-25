@@ -27,6 +27,34 @@ function send_data() {
     //console.log('Registration Successful');
   }
 
+  function send_update_data() {
+    $.ajax({
+      url: "emp_update_auth",    //the page containing php script
+      type: "post",    //request type,
+      dataType: 'json',
+      //the data array
+      data: {
+        emp_id: document.emp_update_form.emp_id.value,
+        first_name: document.emp_update_form.first_name.value,
+        last_name: document.emp_update_form.last_name.value,
+        nic: document.emp_update_form.nic.value,
+        address: document.emp_update_form.address.value,
+        email: document.emp_update_form.email.value,
+        mobile_tel_no: document.emp_update_form.mobile_tel_no.value,
+        home_tel_no: document.emp_update_form.home_tel_no.value
+        
+        
+
+      }
+      ,
+      //debugging
+      success: function () {
+        console.log("succesfully sent data;");
+      }
+    });
+    //console.log('Registration Successful');
+  }
+
 
 
 //function which takes confirm password
