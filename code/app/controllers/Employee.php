@@ -183,6 +183,45 @@
             //call function in class
             $mail->mailto($subject,$e_mail,$body);
         }
+
+        //get details from form and return to the Model to update data
+        static function update(){
+
+            //create new Service_employee object
+            $emp=new Service_employee();
+            $test = new Employee();
+
+            //get each field from form
+            $emp_id=$_POST['emp_id'];
+            $first_name=$_POST['first_name'];
+            $last_name=$_POST['last_name'];
+            $nic_no=$_POST['nic'];
+            $address=$_POST['address'];
+            $email=$_POST['email'];
+            $mobile_tel_no=$_POST['mobile_tel_no'];
+            $home_tel_no=$_POST['home_tel_no'];
+
+            //to get the date of birth from NIC number
+            $dob = $test->calculatedob($nic_no);
+            //to get the gender from nic number
+            $gender = $test->find_gend($nic_no);
+
+            
+            
+            //Call the update_record function to insert the data to database
+            $emp->update_record($emp_id,$first_name,$last_name,$address,$email,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob);
+
+            //ON SUCCESS, send an email to the employee asking him to change his password immediately
+            // $mail=new Mailer();
+
+            // $subject="Welcome to the Cleancar Family!";
+            // $body="<strong>Dear Mr./Mrs./Ms. $last_name,</strong></br>අපි ඔබව සාදරයෙන් CleanCar පවුලට පිලිගනිමු!
+            //         Please change your password as soon as you login to the System which is </br>
+            //         $unhashed at the moment.";
+
+            // //call function in class
+            // $mail->mailto($subject,$e_mail,$body);
+        }
         
     }
 ?>
