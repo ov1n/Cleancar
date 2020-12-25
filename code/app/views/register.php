@@ -25,7 +25,7 @@
 
     
 
-      <form method="POST" name="reg_form" id="reg_form" action="create">
+      <form method="POST" name="reg_form" id="reg_form" onsubmit="create()">
         <div>  
             <div class="background">
          

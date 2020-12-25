@@ -108,12 +108,13 @@
 
                     //if it's the last field comma is omitted
                     if($elem==$values[count($values)-1]){
-                        $sql.=$elem;
+                        $sql.="\""."$elem"."\"";
                     
                     //if not get all fields necessary for select
                     }else{
-
-                    $sql.=$elem.",";
+                    
+                        echo($elem);
+                        $sql.="\""."$elem"."\"".",";  
                     }
                     
                 }
@@ -121,7 +122,9 @@
                 $sql.=");";
             }
 
-            $result= mysqli_query($this->conn,$query_cust);
+            echo($sql."\n");
+
+            $result= mysqli_query($this->conn,$sql);
 
             if (mysqli_errno($this->conn) == 1062) {
                 print 'no way!';
