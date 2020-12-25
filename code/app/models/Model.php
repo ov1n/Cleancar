@@ -64,7 +64,7 @@
                 $sql.=" FROM ".$tableName." ".$condition;
             }
 
-            echo($sql);
+            //echo($sql);
             $result= mysqli_query($this->conn,$sql);
 
             //debugging
@@ -77,9 +77,63 @@
 
         }
         
-        public function delete($id , $tableName){
-            $sql = "DELETE FROM" + $tableName +" WHERE id="+"$id";
-            //rest of the code goes here 
+        //INSERT INTO $table VALUES($columns[0],$columns[1].........$columns[n-1]) VALUES($values[0],$values[1].........$values[n-1]);
+        public function insert($table,$columns,$values){
+
+            $sql = "INSERT INTO ". $table."(";
+            
+            if(gettype($columns)=='string' && gettype($values)=='string'){
+
+                $sql.="$columns) VALUES($values);";
+
+            }else {
+
+                foreach ($columns as $elem) {
+
+                    //if it's the last field comma is omitted
+                    if($elem==$columns[count($columns)-1]){
+                        $sql.=$elem;
+                    
+                    //if not get all fields necessary for select
+                    }else{
+
+                    $sql.=$elem.",";
+                    }
+                    
+                }
+
+                $sql.=") VALUES(";
+
+                foreach ($values as $elem) {
+
+                    //if it's the last field comma is omitted
+                    if($elem==$values[count($values)-1]){
+                        $sql.=$elem;
+                    
+                    //if not get all fields necessary for select
+                    }else{
+
+                    $sql.=$elem.",";
+                    }
+                    
+                }
+
+                $sql.=");";
+            }
+
+            $result= mysqli_query($this->conn,$query_cust);
+
+            if (mysqli_errno($this->conn) == 1062) {
+                print 'no way!';
+                exit();
+            }
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+
+            return $result;
         }
     }
 ?>
