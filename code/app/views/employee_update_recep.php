@@ -7,7 +7,8 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
         <link rel="stylesheet" type="text/css" href="public\css\employee_update.css"><!-- add style to form -->
-        
+        <!-- get external js file -->
+        <script type="text/javascript" src="public\js\add_emp.js"></script>
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script> 
     </head>
@@ -15,8 +16,8 @@
     <body>
 
 
-
-      <form >
+    <!-- action="emp_update_auth" -->
+      <form name="emp_update_form" id="emp_update_form" method="post" onsubmit="send_update_data()">
         <div class="container">  
          
           <div class="background">
@@ -37,7 +38,7 @@
               <div id=form_content> <!-- div to center needed elements -->
 
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee ID</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="emp_id" value = '<?php echo "$array[emp_id]"; ?>' id="emp_id" required disabled></br>
+                <input type="text" placeholder="Enter Your First Name" name="emp_id" value = '<?php echo "$array[emp_id]"; ?>' id="emp_id" required></br>
 
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
                 <input type="text" placeholder="Enter Your First Name" name="first_name" value = '<?php echo "$array[first_name]"; ?>' id="first_name" required></br>
@@ -51,16 +52,16 @@
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
                 <input type="text" placeholder="Enter Your Address" name="address" value = '<?php echo "$array[address]"; ?>' id="address" required ></br>
 
-                &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email</b></div></label>
-                <input type="email" placeholder="Enter Your Email Address" name="e-mail" value = '<?php echo "$array[email]"; ?>' id="e-mail" required ></br>
+                &ensp;&ensp;<label for="email"><div class="form_label"><b>Email</b></div></label>
+                <input type="email" placeholder="Enter Your Email Address" name="email" value = '<?php echo "$array[email]"; ?>' id="email" required ></br>
 
                 &ensp;&ensp;<h2>Contact Numbers</h2>
 
                 &ensp;&ensp;<label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no" value = '<?php echo "$array[mobile_tel_no]"; ?>' id="mobile_tel_no" required ></br>
+                <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no" value = '<?php echo "0"."$array[mobile_tel_no]"; ?>' id="mobile_tel_no" pattern="^[0]{1}[0-9]{9}$" required ></br>
               
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
-                <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = '<?php echo "$array[home_tel_no]"; ?>' id="home_tel_no" required >
+                <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = '<?php echo "0"."$array[home_tel_no]"; ?>' id="home_tel_no" pattern="^[0]{1}[0-9]{9}$" required >
                 </br>
                 <a href="employee_list_recep" class="btn cancelbtn" class="form_btn" > Cancel </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
