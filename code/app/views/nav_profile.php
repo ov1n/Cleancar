@@ -223,7 +223,7 @@ body {
   </div> 
 
   <!--loged user name display-->
-  <p style="width: 150px;float: right;"><?php    echo($_SESSION['uname']);         ?></p>
+  <p style="width: 150px;float: right;text-align: center;color: white"><b><?php  echo $_SESSION['uname']?></b></p>
   
    <a href="contact_us">Contact Us</a>
    <a href="about_us">About Us</a>
