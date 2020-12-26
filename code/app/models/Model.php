@@ -16,7 +16,7 @@
             $this->conn=$db->conn();
             //var_dump($db);
 
-            //echo("model constructed");
+            echo("model constructed");
         }
 
         //DML functions
@@ -43,6 +43,7 @@
                     foreach ($arr as $elem) {
 
                         //if it's the last field comma is omitted
+                        //SQL HAS ERROR IF LAST ELEMENT IS RECURRING BEFORE ITLL BE TAKEN AS FINAL ELEMENT
                         if($elem==$arr[count($arr)-1]){
                             $sql.=" ".$elem;
                         
@@ -122,7 +123,8 @@
                 $sql.=");";
             }
 
-            //echo($sql."\n");
+            echo($sql."\n");
+            var_dump($this->conn);
 
             $result= mysqli_query($this->conn,$sql);
 

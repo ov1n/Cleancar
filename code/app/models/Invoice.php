@@ -3,11 +3,6 @@
 
     class Invoice extends Model{
 
-        //automatically create db object
-        public function __construct(){
-                //$db=new Database();
-        }
-
         //getting all details of Invoice
         function get_bill_details(){
 
@@ -34,28 +29,28 @@
             }
 
         }
-        function insert($bill_no,$reservation_id,$vehicle_no,$vehicle_model,$customer_name,$contact_no,$net_amount){
+        // function insert($bill_no,$reservation_id,$vehicle_no,$vehicle_model,$customer_name,$contact_no,$net_amount){
             
-            //assign connectivity to a variable
-            $conn=Database::conn();
+        //     //assign connectivity to a variable
+        //     $conn=Database::conn();
 
-            //get date of today for registered date
-            $today=date('Y-m-d');
-            // echo($today);
+        //     //get date of today for registered date
+        //     $today=date('Y-m-d');
+        //     // echo($today);
             
-            $query_bill="INSERT INTO invoice(bill_no,reservation_id,vehicle_no,vehicle_model,customer_name,contact_no,net_amount,bill_date) 
-            VALUES('$bill_no','$reservation_id','$vehicle_no','$vehicle_model','$customer_name','$contact_no','$net_amount','$today');";
+        //     $query_bill="INSERT INTO invoice(bill_no,reservation_id,vehicle_no,vehicle_model,customer_name,contact_no,net_amount,bill_date) 
+        //     VALUES('$bill_no','$reservation_id','$vehicle_no','$vehicle_model','$customer_name','$contact_no','$net_amount','$today');";
             
-            //echo($query);
+        //     //echo($query);
 
-            $result= mysqli_query($conn,$query_bill);
+        //     $result= mysqli_query($conn,$query_bill);
 
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
-                exit();
-            }
-        }
+        //     //debugging
+        //     if (!$result) {
+        //         printf("Error: %s\n", mysqli_error($conn));
+        //         exit();
+        //     }
+        // }
 
     }
 
