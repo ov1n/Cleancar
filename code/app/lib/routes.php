@@ -165,6 +165,12 @@
         Employee::register();
     });
 
+    Route::set('emp_update_auth',function(){
+        //start session
+        Session::init();
+        Employee::update();
+    });
+
     Route::set('change_password',function(){
         Controller::create_view('change_password');
     });

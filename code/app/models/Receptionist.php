@@ -11,15 +11,9 @@
             //echo "pwd is " . $_SESSION["pwd"] . ".";
             
                
-            $query="SELECT emp_id FROM receptionist WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
-            $result= mysqli_query($this->conn,$query);
+            //$query="SELECT emp_id FROM receptionist WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
+            $result= $this->select('emp_id','receptionist',"WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd';");
             
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
-
             //get a count of rows returning
             $count = mysqli_fetch_array($result);
             //print_r($count);

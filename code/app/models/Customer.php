@@ -85,11 +85,11 @@
             //echo($today);
             
             //$query_cust="INSERT INTO customer(first_name,last_name,address,email,password,registered_date,mobile_tel_no,home_tel_no) VALUES('$first_name','$last_name','$address','$password','$e_mail','$today','$mobile_tel_no','$home_tel_no');";
-            $columns=array('first_name','last_name','address','email','password','registered_date','mobile_tel_no','home_tel_no');
+            $columns=array("first_name","last_name","address","email","password","registered_date","mobile_tel_no","home_tel_no");
             $values=array("$first_name","$last_name","$address","$password","$e_mail","$today","$mobile_tel_no","$home_tel_no");
             //echo($query);
 
-            $result=$this->insert('customer',$columns,$values);
+            $this->insert('customer',$columns,$values);
 
             //intermediate query to get cust id from name;
             //$query_custid="SELECT cust_id FROM customer WHERE  first_name='$first_name' AND last_name='$last_name' AND address='$address'; ";
@@ -102,16 +102,23 @@
             $cust_id=array_shift( $r );
 
             //insert that into the vehicle table
-            $query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','Car');";
+            //$query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','Car');";
+            $columns2=array("cust_id","vehicle_num","vehicle_category");
+            $values2=array("$cust_id","$vehicle_number","Car");
+
+            if($this->insert('vehicle',$columns2,$values2)){
+                echo("vehicle inserted");
+            }
+
             
-            $result3= mysqli_query($this->conn,$query_veh);
+            //$result3= mysqli_query($this->conn,$query_veh);
 
             //debugging
-            if (!$result3) {
-                printf("Error: %s\n", mysqli_error($this->conn));
+            // (!$result3) {
+            //    printf("Error: %s\n", mysqli_error($this->conn));
 
-                exit();
-            }
+            //    exit();
+            //}
 
         }
 
