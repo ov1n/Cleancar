@@ -28,9 +28,9 @@
         public function select($arr,$tableName,$condition){
             //$condition= "WHERE custid=.......INNER JOIN...."
 
-            //if array is empty select all from the table
-            if(!count($arr)){
-                $sql = "SELECT* FROM ".$tableName.$condition;
+            //if arr is * select all from the table
+            if($arr=="*"){
+                $sql = "SELECT* FROM ".$tableName." ".$condition;
             
             //otherwise string concat the fields to select
             }else{

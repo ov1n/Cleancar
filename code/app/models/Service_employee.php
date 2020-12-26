@@ -35,8 +35,10 @@
         //function which gets a selected employee from ID
         function get_employee($employeeid){
             
-            $query="SELECT* FROM service_employee WHERE emp_id='$employeeid';";
-            $result= mysqli_query($this->conn,$query);
+            //$query="SELECT* FROM service_employee WHERE emp_id='$employeeid';";
+            //$result= mysqli_query($this->conn,$query);
+            $condition = "WHERE emp_id='$employeeid';";
+            $result = $this->select("*" ,'service_employee',$condition);
             
             //debugging
             if (!$result) {
