@@ -122,7 +122,7 @@
                 $sql.=");";
             }
 
-            echo($sql."\n");
+            //echo($sql."\n");
 
             $result= mysqli_query($this->conn,$sql);
 
