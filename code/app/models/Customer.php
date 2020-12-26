@@ -10,14 +10,10 @@
             
             //assign connectivity to a variable
 
-            $query="SELECT first_name,last_name,email,mobile_tel_no FROM customer WHERE (cust_id='$cust_id' OR email='$cust_id')";
-            $result= mysqli_query($this->conn,$query);
-
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
+            //$query="SELECT first_name,last_name,email,mobile_tel_no FROM customer WHERE (cust_id='$cust_id' OR email='$cust_id')";
+            $fields=array('first_name','last_name','email','mobile_tel_no');
+            $condition="WHERE (cust_id='$cust_id' OR email='$cust_id')";
+            $result= $this->select($fields,'customer',$condition);
 
             //get necessary elements in an array
             $r = mysqli_fetch_array($result);
@@ -30,14 +26,8 @@
         //get cust_id from email
         function get_custid($email){
 
-            $query="SELECT cust_id FROM customer WHERE (email='$email' OR cust_id='$email')";
-            $result= mysqli_query($this->conn,$query);
-
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
+            $condition="WHERE (email='$email' OR cust_id='$email')";
+            $result= $this->select("cust_id",'customer',$condition);
 
             //get necessary elements in an array
             $r = mysqli_fetch_array($result);
@@ -52,14 +42,9 @@
         function get_lastname($email){
             
 
-            $query="SELECT last_name FROM customer WHERE (email='$email' OR cust_id='$email')";
-            $result= mysqli_query($this->conn,$query);
-
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
+            //$query="SELECT last_name FROM customer WHERE (email='$email' OR cust_id='$email')";
+            $condition="WHERE (email='$email' OR cust_id='$email');";
+            $result= $this->select('last_name','customer',$condition);
 
             //get necessary elements in an array
             $r = mysqli_fetch_array($result);
@@ -77,14 +62,9 @@
             //echo "uname is " . $_SESSION["uname"] . ".<br>";
             //echo "pwd is " . $_SESSION["pwd"] . ".";
                
-            $query="SELECT cust_id FROM customer WHERE (cust_id='$uname' OR email='$uname') AND password='$pwd'";
-            $result= mysqli_query($this->conn,$query);
-            
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
+            //$query="SELECT cust_id FROM customer WHERE (cust_id='$uname' OR email='$uname') AND password='$pwd'";
+            $condition="WHERE (cust_id='$uname' OR email='$uname') AND password='$pwd';";
+            $result= $this->select('cust_id','customer',$condition);
 
             //get a count of rows returning
             $count = mysqli_fetch_array($result);
@@ -104,49 +84,41 @@
             $today=date('Y-m-d');
             //echo($today);
             
-            $query_cust="INSERT INTO customer(first_name,last_name,address,email,password,registered_date,mobile_tel_no,home_tel_no) VALUES('$first_name','$last_name','$address','$password','$e_mail','$today','$mobile_tel_no','$home_tel_no');";
-            
+            //$query_cust="INSERT INTO customer(first_name,last_name,address,email,password,registered_date,mobile_tel_no,home_tel_no) VALUES('$first_name','$last_name','$address','$password','$e_mail','$today','$mobile_tel_no','$home_tel_no');";
+            $columns=array("first_name","last_name","address","email","password","registered_date","mobile_tel_no","home_tel_no");
+            $values=array("$first_name","$last_name","$address","$password","$e_mail","$today","$mobile_tel_no","$home_tel_no");
             //echo($query);
 
-            $result= mysqli_query($this->conn,$query_cust);
-
-            if (mysqli_errno($this->conn) == 1062) {
-                print 'no way!';
-                exit();
-            }
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
+            $this->insert('customer',$columns,$values);
 
             //intermediate query to get cust id from name;
-            $query_custid="SELECT cust_id FROM customer
-                           WHERE  first_name='$first_name' AND last_name='$last_name' AND address='$address'; ";
-
-            $result2= mysqli_query($this->conn,$query_custid);
-
-            //debugging
-            if (!$result2) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
+            //$query_custid="SELECT cust_id FROM customer WHERE  first_name='$first_name' AND last_name='$last_name' AND address='$address'; ";
+            
+            $condition="WHERE  first_name='$first_name' AND last_name='$last_name' AND address='$address';";
+            $result2= $this->select('cust_id','customer',$condition);
             
             //get sole element of returning array which  is the unique cust_id
             $r = mysqli_fetch_array($result2);
             $cust_id=array_shift( $r );
 
             //insert that into the vehicle table
-            $query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','Car');";
+            //$query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','Car');";
+            $columns2=array("cust_id","vehicle_num","vehicle_category");
+            $values2=array("$cust_id","$vehicle_number","Car");
+
+            if($this->insert('vehicle',$columns2,$values2)){
+                echo("vehicle inserted");
+            }
+
             
-            $result3= mysqli_query($this->conn,$query_veh);
+            //$result3= mysqli_query($this->conn,$query_veh);
 
             //debugging
-            if (!$result3) {
-                printf("Error: %s\n", mysqli_error($this->conn));
+            // (!$result3) {
+            //    printf("Error: %s\n", mysqli_error($this->conn));
 
-                exit();
-            }
+            //    exit();
+            //}
 
         }
 
