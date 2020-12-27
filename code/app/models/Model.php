@@ -16,7 +16,7 @@
             $this->conn=$db->conn();
             //var_dump($db);
 
-            echo("model constructed");
+            //echo("model constructed");
         }
 
         //DML functions
@@ -28,8 +28,8 @@
         public function select($arr,$tableName,$condition){
             //$condition= "WHERE custid=.......INNER JOIN...."
 
-            //if arr is * select all from the table
-            if($arr=="*"){
+             //if arr is * select all from the table
+             if($arr=="*"){
                 $sql = "SELECT* FROM ".$tableName." ".$condition;
             
             //otherwise string concat the fields to select
@@ -139,6 +139,55 @@
             }
 
             return $result;
+        }
+
+
+        public function delete($table,$condition){
+            
+            //
+            $sql = "DELETE FROM ". $table." ".$condition;
+
+            //echo($sql);
+
+            $result= mysqli_query($this->conn,$sql);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+
+            return($result);
+        }
+
+        //TEST
+        public function update($table,$column,$values,$condition){
+
+            //
+            $sql="UPDATE ".$table." "."SET ";
+
+            if(gettype($column)=="string"){
+
+                $sql.=$column."=".$values;
+
+            }else if(gettype($column)=="array"){
+                //do something
+
+            }
+
+            $sql.=$condition;
+
+            //echo($sql);
+
+            $result= mysqli_query($this->conn,$sql);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+
+            return($sql);
         }
     }
 ?>

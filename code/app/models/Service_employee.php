@@ -111,20 +111,15 @@
         // }
 
 
-    }
 
-    function delete_record($employeeid){
-        
-        $query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
-        $result= mysqli_query($this->conn,$query);
-        
-        //debugging
-        if (!$result) {
-            printf("Error: %s\n", mysqli_error($this->conn));
-            exit();
-        }else{
-            return True;
+        function delete_record($employeeid){
             
+            //$query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
+            
+            $condition="WHERE (emp_id='$employeeid')";
+
+            $this->delete('service_employee',$condition);
         }
+
     }
 ?>
