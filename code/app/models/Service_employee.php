@@ -11,8 +11,10 @@
             //echo "uname is " . $_SESSION["uname"] . ".<br>";
             //echo "pwd is " . $_SESSION["pwd"] . ".";
                
-            $query="SELECT* FROM service_employee";
-            $result= mysqli_query($this->conn,$query);
+            //$query="SELECT* FROM service_employee";
+            //$result= mysqli_query($this->conn,$query);
+            $condition = ";";
+            $result = $this->select("*" ,'service_employee',$condition);
             
             //debugging
             if (!$result) {
@@ -40,12 +42,6 @@
             $condition = "WHERE emp_id='$employeeid';";
             $result = $this->select("*" ,'service_employee',$condition);
             
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
-
             //get details into an associative array
             $details = mysqli_fetch_array($result);
             //print_r($details);
