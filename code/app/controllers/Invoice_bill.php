@@ -29,8 +29,16 @@
             $contact_no=$_POST['contact_number'];
             $net_amount=$_POST['net_amount'];
 
-            //insert data
-            $bill->insert($bill_no,$reservation_id,$vehicle_no,$vehicle_model,$customer_name,$contact_no,$net_amount);
+            //get date of today for registered date
+            $today=date('Y-m-d');
+
+
+            //the built in insert function of model is called here
+            $key_array=array("bill_no","reservation_id","vehicle_no","vehicle_model","customer_name","contact_no","net_amount","bill_date");
+            $values_array=array("$bill_no","$reservation_id","$vehicle_no","$vehicle_model","$customer_name","$contact_no","$net_amount",$today);
+
+            //insert data using the base model function
+            $bill->insert('invoice',$key_array,$values_array);
 
         }
 

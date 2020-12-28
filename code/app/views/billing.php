@@ -21,7 +21,7 @@
 
       
           
-      <form name="add_bill" id="add_bill" method = "post" onsubmit="send_bill_data()">
+      <form name="add_bill" id="add_bill" method = "post" action="add_bill">
         
         
           <div class="background">
