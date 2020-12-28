@@ -211,16 +211,7 @@
             //Call the update_record function to insert the data to database
             $emp->update_record($emp_id,$first_name,$last_name,$address,$email,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob);
 
-            //ON SUCCESS, send an email to the employee asking him to change his password immediately
-            // $mail=new Mailer();
-
-            // $subject="Welcome to the Cleancar Family!";
-            // $body="<strong>Dear Mr./Mrs./Ms. $last_name,</strong></br>අපි ඔබව සාදරයෙන් CleanCar පවුලට පිලිගනිමු!
-            //         Please change your password as soon as you login to the System which is </br>
-            //         $unhashed at the moment.";
-
-            // //call function in class
-            // $mail->mailto($subject,$e_mail,$body);
+            
         }
         
     }

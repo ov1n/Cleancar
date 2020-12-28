@@ -35,8 +35,9 @@
         public static function delete($view_name){
             // echo($_GET['emp_id']);
             $employeeid = $_GET['emp_id'];
-            delete_record($employeeid);
+            
             $emp=new Service_employee();
+            $emp->delete_record($employeeid);
             $array=$emp->get_all();
             //var_dump($array);
             require_once("./views/$view_name.php");

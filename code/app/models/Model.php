@@ -28,8 +28,8 @@
         public function select($arr,$tableName,$condition){
             //$condition= "WHERE custid=.......INNER JOIN...."
 
-            //if arr is * select all from the table
-            if($arr=="*"){
+             //if arr is * select all from the table
+             if($arr=="*"){
                 $sql = "SELECT* FROM ".$tableName." ".$condition;
             
             //otherwise string concat the fields to select
@@ -43,6 +43,7 @@
                     foreach ($arr as $elem) {
 
                         //if it's the last field comma is omitted
+                        //SQL HAS ERROR IF LAST ELEMENT IS RECURRING BEFORE ITLL BE TAKEN AS FINAL ELEMENT
                         if($elem==$arr[count($arr)-1]){
                             $sql.=" ".$elem;
                         
@@ -122,7 +123,8 @@
                 $sql.=");";
             }
 
-            //echo($sql."\n");
+            echo($sql."\n");
+            var_dump($this->conn);
 
             $result= mysqli_query($this->conn,$sql);
 
@@ -137,6 +139,55 @@
             }
 
             return $result;
+        }
+
+
+        public function delete($table,$condition){
+            
+            //
+            $sql = "DELETE FROM ". $table." ".$condition;
+
+            //echo($sql);
+
+            $result= mysqli_query($this->conn,$sql);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+
+            return($result);
+        }
+
+        //TEST
+        public function update($table,$column,$values,$condition){
+
+            //
+            $sql="UPDATE ".$table." "."SET ";
+
+            if((gettype($column)=="string") && (gettype($values)=="string")){
+
+                $sql.=$column."=".$values;
+
+            }else if(gettype($column)=="array" && (gettype($values)=="array")){
+                //do something
+
+            }
+
+            $sql.=" ".$condition;
+
+            //echo($sql);
+
+            $result= mysqli_query($this->conn,$sql);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+
+            return($result);
         }
     }
 ?>
