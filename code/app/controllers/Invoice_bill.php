@@ -9,7 +9,7 @@
         public static function create_view($view_name){
 
             //create employee object
-            //$bill=new Invoice();
+            $bill=new Invoice();
             $array=$bill->get_bill_details();
             //var_dump($array);
 
