@@ -106,38 +106,18 @@
             $columns2=array("cust_id","vehicle_num","vehicle_category");
             $values2=array("$cust_id","$vehicle_number","Car");
 
-            if($this->insert('vehicle',$columns2,$values2)){
-                echo("vehicle inserted");
-            }
-
-            
-            //$result3= mysqli_query($this->conn,$query_veh);
-
-            //debugging
-            // (!$result3) {
-            //    printf("Error: %s\n", mysqli_error($this->conn));
-
-            //    exit();
-            //}
-
         }
 
         //function to increment the customer reservation count when new reservation is placed
         function increment_count($cust_id){
 
                
-            $query="UPDATE customer 
-                    SET no_of_reservations = no_of_reservations + 1
-                    WHERE cust_id ='$cust_id';"; 
+            // $query="UPDATE customer 
+            //         SET no_of_reservations = no_of_reservations + 1
+            //         WHERE cust_id ='$cust_id';";
             
-            $result= mysqli_query($this->conn,$query);
-
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
-
+            $this->update('customer','no_of_reservations',"no_of_reservations+1", 
+                           "WHERE cust_id ='$cust_id';");
         }
         
     }
