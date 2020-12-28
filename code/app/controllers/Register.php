@@ -28,21 +28,9 @@
             $home_tel_no=$_POST['home_tel_no'];
 
             //hash the password
-            //$hashed=md5($password);
-            //hash the password
-            // Blowfish encryption
-            function better_crypt($input, $rounds = 7)
-            {
-                $salt = "";
-                $salt_chars = array_merge(range('A','Z'), range('a','z'), range(0,9));
-                for($i=0; $i < 22; $i++) {
-                $salt .= $salt_chars[array_rand($salt_chars)];
-                }
-                return crypt($input, sprintf('$2a$%02d$', $rounds) . $salt);
-            }
-           
-            //$hashed = password_hash(better_crypt($password), PASSWORD_DEFAULT);
-            $hashed = better_crypt($password);
+            $hashed=md5($password);
+
+            //$hashed = password_hash($password,PASSWORD_BCRYPT);
 
             //insert data
             $result=$cust->insert_record($first_name,$last_name,$vehicle_number,$address,$hashed,$e_mail,$mobile_tel_no,$home_tel_no);
