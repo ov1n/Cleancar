@@ -61,8 +61,10 @@
             //echo "uname is " . $_SESSION["uname"] . ".<br>";
             //echo "pwd is " . $_SESSION["pwd"] . ".";
                
-            $query="SELECT emp_id FROM service_employee WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
-            $result= mysqli_query($this->conn,$query);
+            // $query="SELECT emp_id FROM service_employee WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
+            // $result= mysqli_query($this->conn,$query);
+            $condition = "WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd';";
+            $result = $this->select("emp_id" ,'service_employee',$condition);
             
             //debugging
             if (!$result) {
