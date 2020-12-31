@@ -114,7 +114,7 @@
                     //if not get all fields necessary for select
                     }else{
                     
-                        echo($elem);
+                        //echo($elem);
                         $sql.="\""."$elem"."\"".",";  
                     }
                     
@@ -123,8 +123,8 @@
                 $sql.=");";
             }
 
-            echo($sql."\n");
-            var_dump($this->conn);
+            //echo($sql."\n");
+            //var_dump($this->conn);
 
             $result= mysqli_query($this->conn,$sql);
 

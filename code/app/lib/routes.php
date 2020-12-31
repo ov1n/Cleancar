@@ -156,7 +156,8 @@
 
     //get form details from  register
     Route::set('reg_auth',function(){
-        Register::register();
+        $reg=New Register();
+        $reg->register();
     });
 
     Route::set('emp_reg_auth',function(){
