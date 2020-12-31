@@ -5,15 +5,14 @@
     //get mailer class to send registration emails to customers
     require './lib/classes/Mailer.php';
 
+    //get vehicle validation class
+    require './lib/classes/Vehicle_regex.php';
+
     class Register extends Controller{
         //base controller just for extending
         //IN CASE OF OVERRIDE
 
-        public function __construct(){
-            //
-        
-        }
-        static function register(){
+        function register(){
 
             $cust=new Customer();
             
@@ -31,9 +30,9 @@
             $hashed=md5($password);
 
             //$hashed = password_hash($password,PASSWORD_BCRYPT);
-
+            $vehicle_type=Vehicle_regex::validate($vehicle_number);
             //insert data
-            $result=$cust->insert_record($first_name,$last_name,$vehicle_number,$address,$hashed,$e_mail,$mobile_tel_no,$home_tel_no);
+            $result=$cust->insert_record($first_name,$last_name,$vehicle_number,$address,$hashed,$e_mail,$mobile_tel_no,$home_tel_no,$vehicle_type);
             echo("resultstart");
             echo($result);
             echo("resultend");

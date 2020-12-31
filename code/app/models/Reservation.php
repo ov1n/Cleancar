@@ -9,7 +9,7 @@
         }
 
         //insert into table
-        function insert($is_advance_paid,$cust_id,$added_date,$service_id){
+        function insert_reservation($is_advance_paid,$cust_id,$added_date,$service_id){
 
             //assign connectivity to a variable
             $conn=Database::conn();
@@ -43,7 +43,7 @@
         }
 
         //function to get reservations for given customer id WITH JOINING RESERVATION TIME_SLOT FOR DATE
-        function select($cust_id){
+        function select_reservation($cust_id){
             //assign connectivity to a variable
             $conn=Database::conn();
             //echo($added_date);
