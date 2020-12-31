@@ -35,7 +35,7 @@
             $last_name=$cust->get_lastname($email);
 
             //get the customers reservation details
-            $reservation_details=$res->select($cust_id);
+            $reservation_details=$res->select_reservation($cust_id);
             //echo '<pre>';
             //var_dump($reservation_details);
             //echo '</pre>';
