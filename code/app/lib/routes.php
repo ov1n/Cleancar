@@ -65,7 +65,12 @@
       Route::set('profile',function(){
         Controller::create_view('profile');
     });
-
+      Route::set('error-403',function(){
+        Controller::create_view('error-403');
+    });
+       Route::set('error_404',function(){
+        Controller::create_view('error_404');
+    });
 
     Route::set('delay_time_table',function(){
         Controller::create_view('delay_time_table');
