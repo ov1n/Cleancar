@@ -34,7 +34,7 @@
         function insert_leave($leave_date,$emp_id,$type,$leave_time,$reason){            
         
             $columns=array('leave_date','emp_id','type','leave_time','reason');
-            $values=array("'$leave_date","$emp_id","$type","$leave_time","$reason");
+            $values=array("$leave_date","$emp_id","$type","$leave_time","$reason");
 
             $this->insert('emp_leave',$columns,$values);
             
