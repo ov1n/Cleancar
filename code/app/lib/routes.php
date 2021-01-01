@@ -390,4 +390,11 @@
         Controller::create_view('time_table_recep');
     });
 
+     //delete
+     Route::set('leave_delete',function(){
+        EmployeeLeave::cancel_leave('emp_leave');
+    });
+
+    
+
 ?>
