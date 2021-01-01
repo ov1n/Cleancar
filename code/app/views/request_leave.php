@@ -39,7 +39,7 @@
 
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee Id</b></div></label>
                 <input type="text" placeholder="Enter employee id" name="emp_id" id="emp_id" value=
-                "<?php echo($_SESSION['uname']); ?>" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550" disabled></br> <!-- auto fill employee id when employee logged -->
+                "<?php echo($_SESSION['uname']); ?>" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"></br> <!-- auto fill employee id when employee logged -->
 
                 &ensp;&ensp;<label for="leave_type"><div class="form_label"><b>Leave Type</b></div></label>
                 <select name="leave_type" id="leave_type">
