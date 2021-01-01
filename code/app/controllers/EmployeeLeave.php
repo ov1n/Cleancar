@@ -38,10 +38,13 @@
         static function cancel_leave($view_name){
 
             $leave=new Emp_Leave();
+
+            $employeeid = $_SESSION["uname"];
             
              // echo($_GET['emp_id']);
-             $employeeid = $_GET['emp_id'];
+             //echo ($employeeid);
              $leave_date = $_GET['leave_date'];
+             //echo ($leave_date);
 
              $leave->delete_leave($employeeid,$leave_date);
              $array=$leave->get_detail($employeeid);
