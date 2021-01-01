@@ -15,7 +15,7 @@
             require_once("./views/$view_name.php");
         }
 
-
+        
     }
 
 ?>

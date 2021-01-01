@@ -65,7 +65,12 @@
       Route::set('profile',function(){
         Controller::create_view('profile');
     });
-
+      Route::set('error-403',function(){
+        Controller::create_view('error-403');
+    });
+       Route::set('error_404',function(){
+        Controller::create_view('error_404');
+    });
 
     Route::set('delay_time_table',function(){
         Controller::create_view('delay_time_table');
@@ -156,7 +161,8 @@
 
     //get form details from  register
     Route::set('reg_auth',function(){
-        Register::register();
+        $reg=New Register();
+        $reg->register();
     });
 
     Route::set('emp_reg_auth',function(){
@@ -383,5 +389,13 @@
         Session::init();
         Controller::create_view('time_table_recep');
     });
+
+     //delete
+     Route::set('leave_delete',function(){
+        Session::init();
+        EmployeeLeave::cancel_leave('emp_leave');
+    });
+
+    
 
 ?>

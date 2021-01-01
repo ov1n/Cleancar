@@ -114,7 +114,7 @@
                     //if not get all fields necessary for select
                     }else{
                     
-                        echo($elem);
+                        //echo($elem);
                         $sql.="\""."$elem"."\"".",";  
                     }
                     
@@ -124,7 +124,7 @@
             }
 
             echo($sql."\n");
-            var_dump($this->conn);
+            //var_dump($this->conn);
 
             $result= mysqli_query($this->conn,$sql);
 
@@ -166,16 +166,16 @@
             //
             $sql="UPDATE ".$table." "."SET ";
 
-            if(gettype($column)=="string"){
+            if((gettype($column)=="string") && (gettype($values)=="string")){
 
                 $sql.=$column."=".$values;
 
-            }else if(gettype($column)=="array"){
+            }else if(gettype($column)=="array" && (gettype($values)=="array")){
                 //do something
 
             }
 
-            $sql.=$condition;
+            $sql.=" ".$condition;
 
             //echo($sql);
 
@@ -187,7 +187,7 @@
                 exit();
             }
 
-            return($sql);
+            return($result);
         }
     }
 ?>

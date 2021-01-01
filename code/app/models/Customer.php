@@ -78,7 +78,7 @@
         }
 
         //function to insert data into table customer and vehicle
-        function insert_record($first_name,$last_name,$vehicle_number,$address,$e_mail,$password,$mobile_tel_no,$home_tel_no){
+        function insert_record($first_name,$last_name,$vehicle_number,$address,$e_mail,$password,$mobile_tel_no,$home_tel_no,$vehicle_type){
             
             //get date of today for registered date
             $today=date('Y-m-d');
@@ -104,21 +104,8 @@
             //insert that into the vehicle table
             //$query_veh="INSERT INTO vehicle(cust_id,vehicle_num,vehicle_category) VALUES('$cust_id','$vehicle_number','Car');";
             $columns2=array("cust_id","vehicle_num","vehicle_category");
-            $values2=array("$cust_id","$vehicle_number","Car");
-
-            if($this->insert('vehicle',$columns2,$values2)){
-                echo("vehicle inserted");
-            }
-
-            
-            //$result3= mysqli_query($this->conn,$query_veh);
-
-            //debugging
-            // (!$result3) {
-            //    printf("Error: %s\n", mysqli_error($this->conn));
-
-            //    exit();
-            //}
+            $values2=array("$cust_id","$vehicle_number","$vehicle_type");
+            $this->insert('vehicle',$columns2,$values2);
 
         }
 
@@ -126,18 +113,12 @@
         function increment_count($cust_id){
 
                
-            $query="UPDATE customer 
-                    SET no_of_reservations = no_of_reservations + 1
-                    WHERE cust_id ='$cust_id';"; 
+            // $query="UPDATE customer 
+            //         SET no_of_reservations = no_of_reservations + 1
+            //         WHERE cust_id ='$cust_id';";
             
-            $result= mysqli_query($this->conn,$query);
-
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
-                exit();
-            }
-
+            $this->update('customer','no_of_reservations',"no_of_reservations+1", 
+                           "WHERE cust_id ='$cust_id';");
         }
         
     }
