@@ -35,6 +35,24 @@
 
         }
 
+        static function cancel_leave($view_name){
+
+            $leave=new Emp_Leave();
+            
+             // echo($_GET['emp_id']);
+             $employeeid = $_GET['emp_id'];
+             $leave_date = $_GET['leave_date'];
+
+             $leave->delete_leave($employeeid,$leave_date);
+             $array=$leave->get_detail($employeeid);
+             //var_dump($array);
+             require_once("./views/$view_name.php");
+
+        }
+
+
+
+
 
     }
 
