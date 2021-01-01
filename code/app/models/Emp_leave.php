@@ -4,28 +4,19 @@
     class Emp_leave extends Model{
 
         //automatically create db object
-        public function __construct(){
+       // public function __construct(){
                 //$db=new Database();
-        }
+        //}
 
         //getting wanted details of leaves from database
         function get_detail($id){
 
             //assign today date to a variable
             $today=date('Y-m-d');
-            //assign connectivity to a variable
-            $conn=Database::conn();
                
-
-            $query="SELECT leave_date,type,leave_time,reason FROM emp_leave WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > '$today'";
-
-            $result= mysqli_query($conn,$query);
+            $condition = "WHERE emp_id = $id AND is_accepted = 'accepted' AND leave_date > $today;";
             
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
-                exit();
-            }
+            $result= $this->select("*",'emp_leave',$condition);
             
             
             //get leaves in an array
@@ -40,24 +31,16 @@
         }
 
 
-        function insert_leave($leave_date,$emp_id,$type,$leave_time,$reason){
-            
-            //assign connectivity to a variable
-            $conn=Database::conn();
+        function insert_leave($leave_date,$emp_id,$type,$leave_time,$reason){            
+        
+            $columns=array('leave_date','emp_id','type','leave_time','reason');
+            $values=array("'$leave_date","$emp_id","$type","$leave_time","$reason");
 
-            
-            $query_leave="INSERT INTO emp_leave(leave_date,emp_id,type,leave_time,reason) 
-            VALUES('$leave_date','$emp_id','$type','$leave_time','$reason')";
+            $this->insert('emp_leave',$columns,$values);
             
             //echo($query);
 
-            $result= mysqli_query($conn,$query_leave);
-
-            //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
-                exit();
-            }
+            
         }
 
         
@@ -66,7 +49,6 @@
 
             $today=date('Y-m-d');
             //assign connectivity to a variable
-            $conn=Database::conn();
                
             $query="SELECT emp_leave.emp_id,first_name,last_name,leave_date,type,leave_time,reason, is_accepted FROM emp_leave INNER JOIN service_employee ON emp_leave.emp_id = service_employee.emp_id WHERE NOT emp_leave.is_accepted ='accepted'";
             $result= mysqli_query($conn,$query);
@@ -88,6 +70,17 @@
             }
 
         }
+
+        function delete_leave($employeeid,$leave_date){
+            
+            //$query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
+            
+            $condition="WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
+
+            $this->delete('emp_leave',$condition);
+        }
+
+        
         
     }
 

@@ -56,7 +56,7 @@
               </td>
 
               <td style = " text-align: center;">
-                  <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Cancel</a>
+                  <a href="leave_delete?leave_date=<?php echo "$emp_leave[leave_date]"; ?>" name="delete" class="btn deletebtn">Cancel</a>
               </td>
           </tr>
       <?php } ?>
