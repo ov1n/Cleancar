@@ -392,6 +392,7 @@
 
      //delete
      Route::set('leave_delete',function(){
+        Session::init();
         EmployeeLeave::cancel_leave('emp_leave');
     });
 
