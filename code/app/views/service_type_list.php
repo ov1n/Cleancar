@@ -79,7 +79,7 @@
              
 
               <td style = " text-align: center;">
-                  <a href="#" name="update" class="btn updatelbtn">Update</a>
+                  <a href="update_service?type_id=<?php echo "$s_type[type_id]"; ?> " name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
                   <a href="#" name="delete" class="btn deletebtn">Delete</a>

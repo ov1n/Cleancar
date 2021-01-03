@@ -14,7 +14,20 @@
             //var_dump($array);
 
             require_once("./views/$view_name.php");
-        }      
+        }
+
+           //function to view employee
+        public function view($view_name){
+
+            $typeid=$_GET['type_id'];
+           
+            $Service_type=new Service_type();
+            $array=$Service_type->get_servicetype($typeid);
+            //var_dump($array);
+            require_once("./views/$view_name.php");
+        }
+
+
     }
     
     ?>
