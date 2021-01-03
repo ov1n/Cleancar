@@ -36,9 +36,11 @@
             <div class="card" >
 
               <div id=form_content> <!-- div to center needed elements -->
+              
+                <input type="hidden" name="emp_id" value = '<?php echo "$array[emp_id]"; ?>' id="emp_id"></br>
 
-                &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee ID</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="emp_id" value = '<?php echo "$array[emp_id]"; ?>' id="emp_id" required></br>
+                &ensp;&ensp;<label for="emp_id_no"><div class="form_label"><b>Employee ID</b></div></label>
+                <input type="text" placeholder="Enter Your First Name"  value = '<?php echo "$array[emp_id]"; ?>' disabled></br>
 
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
                 <input type="text" placeholder="Enter Your First Name" name="first_name" value = '<?php echo "$array[first_name]"; ?>' id="first_name" required></br>

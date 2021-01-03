@@ -123,7 +123,7 @@
                 $sql.=");";
             }
 
-            echo($sql."\n");
+            //echo($sql."\n");
             //var_dump($this->conn);
 
             $result= mysqli_query($this->conn,$sql);
@@ -177,7 +177,7 @@
 
             $sql.=" ".$condition;
 
-            //echo($sql);
+            echo($sql);
 
             $result= mysqli_query($this->conn,$sql);
 
