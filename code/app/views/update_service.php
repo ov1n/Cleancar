@@ -72,7 +72,7 @@
                 &ensp;&ensp;<label for="prize"><div class="form_label"><b>Normal Prize</b></div></label>
                 <input type="text" placeholder="Enter normal prize" name="prize" id="prize"  value = '<?php echo "$array[price]"; ?>' required size="50"></br>
 
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <a href="service_type_list" class="btn cancelbtn" class="form_btn" > Cancel </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button> </br></br> </br></br>
               </div><!-- form_content --> 
             </div><!-- card -->
