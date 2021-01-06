@@ -177,6 +177,13 @@
         Employee::update();
     });
 
+    //sevice update
+     Route::set('update_service_auth',function(){
+        //start session
+        Session::init();
+        AddServiceType::update();
+    });
+
     Route::set('change_password',function(){
         Controller::create_view('change_password');
     });
@@ -226,11 +233,7 @@
         Controller::create_view('add_timeslot');
     });
 
-    Route::set('update_service',function(){
-        //start session
-        Session::init();
-        Controller::create_view('update_service');
-    });
+   
 
     Route::set('update_delete_service',function(){
         //start session
@@ -302,6 +305,13 @@
        ServiceType::create_view('service_type_list');
    });
 
+     Route::set('update_service',function(){
+
+       Session::init();
+       ServiceType::view('update_service');
+   });
+
+
    Route::set('employee_list_recep',function(){
 
     Session::init();
@@ -345,10 +355,7 @@
         Controller::create_view('leave_static');
     });
 
-    Route::set('update_service',function(){
-        Controller::create_view('update_service');
-    });
-   
+    
     Route::set('time_table',function(){
         Controller::create_view('time_table');
     });

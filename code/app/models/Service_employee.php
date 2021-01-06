@@ -99,14 +99,27 @@
             $this->insert('service_employee',$columns,$values);
         }
 
-        // get details for employee table
-        // function view_emp_list(){
-        //     //assign connectivity to a variable
-        //     $conn=Database::conn();
+        function update_record($emp_id,$first_name,$last_name,$address,$email,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob){
 
-        //     $query = $this->db->query("SELECT * from items");
-        //     return $query->result();
-        // }
+            //get date of today for registered date
+            
+            $query_emp="UPDATE service_employee SET first_name='$first_name',last_name='$last_name',address='$address',email='$email',home_tel_no='$home_tel_no',mobile_tel_no='$mobile_tel_no',NIC_no='$nic_no',gender='$gender',dob='$dob'
+            WHERE emp_id='$emp_id';";
+            $result= mysqli_query($this->conn,$query_emp);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+            
+            //$condition = 'WHERE emp_id= $emp_id;';
+            //$columns=array("first_name","last_name","address","email","home_tel_no","mobile_tel_no","NIC_no","gender","dob");
+            //$values=array("$first_name","$last_name","$address","$email","$home_tel_no","$mobile_tel_no","$nic_no","$gender","$dob");
+            //$result= $this->update('service_employee',$columns,$values,$condition);
+
+            
+        }
 
 
 

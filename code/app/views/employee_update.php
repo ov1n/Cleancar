@@ -26,7 +26,7 @@
              
               <li><a href="home">Home</a></li>
               <li><a href="manager">Manager</a></li>
-              <li><a href="employee_list">Employee List</a></li>
+              <li><a href="employee_list">Employee</a></li>
               <li>Update Employee</li>          
             </ul><!-- breadcrumb -->
              <h1>Employee Update</h1>   <hr style="width: 60%;">
@@ -36,8 +36,10 @@
 
               <div id=form_content> <!-- div to center needed elements -->
 
-                &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Employee ID</b></div></label>
-                <input type="text" placeholder="Enter Your First Name" name="emp_id" value = '<?php echo "$array[emp_id]"; ?>' id="emp_id" required></br>
+                <input type="hidden" name="emp_id" value = '<?php echo "$array[emp_id]"; ?>' id="emp_id"></br>
+
+                &ensp;&ensp;<label for="emp_id_no"><div class="form_label"><b>Employee ID</b></div></label>
+                <input type="text" placeholder="Enter Your First Name"  value = '<?php echo "$array[emp_id]"; ?>' disabled></br>
 
                 &ensp;&ensp;<label for="first_name"><div class="form_label"><b>First Name</b></div></label>
                 <input type="text" placeholder="Enter Your First Name" name="first_name" value = '<?php echo "$array[first_name]"; ?>' id="first_name" required></br>
@@ -62,7 +64,7 @@
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
                 <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" value = '<?php echo "0"."$array[home_tel_no]"; ?>' id="home_tel_no" pattern="^[0]{1}[0-9]{9}$" required >
                 </br>
-                <a href="employee_list_recep" class="btn cancelbtn" class="form_btn" > Cancel </a>
+                <a href="employee_list" class="btn cancelbtn" class="form_btn" > Cancel </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
                 </br></br></br></br>
 
