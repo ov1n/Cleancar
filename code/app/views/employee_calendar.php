@@ -62,7 +62,7 @@
                 <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
 
                 <div >
-                  <div class="calendar-3 calendar_card" onclick="date_display()"></div>
+                  <div class="cust_calendar calendar_card" onclick="date_display()"></div>
                 </div>
 
                 </br>
