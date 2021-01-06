@@ -167,7 +167,8 @@
             $gender = $test->find_gend($nic_no);
 
             //hash password
-            $password=md5($unhashed);
+            //$password=md5($unhashed);
+            $password = sha1($unhashed);
 
             //$password = password_hash($unhashed,PASSWORD_BCRYPT);
 
