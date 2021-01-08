@@ -31,7 +31,8 @@
         <div class="container">  
         <div class="background">
             
-    <?php foreach($reservation_details as $row){ ?>
+    <?php if ($reservation_details){
+      foreach($reservation_details as $row){ ?>
         <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
@@ -64,12 +65,15 @@
                 
                  <?php if(!($row["is_advance_paid"])){
                             echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
-                 } ?>
+                 }
+                }
+              }else{
+              echo( " <h2 style='text-align:center;color: white;'> No reservations </h2>");
+            } ?>
 
               </div><!-- form_content -->   
             </div><!-- card -->
             </br></br>
-            <?php } ?>
           </div><!-- background -->
        
         </div><!-- container -->

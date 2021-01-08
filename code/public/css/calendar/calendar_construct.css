@@ -121,6 +121,7 @@
 }
 
 .nao-month td.active {
+	/* MEKA ADESHAYATA GANNA */
 	transition: box-shadow .3s ease .5s;
 	box-shadow: 0 0 0 2px #0af inset
 }

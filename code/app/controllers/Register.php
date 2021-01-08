@@ -27,7 +27,8 @@
             $home_tel_no=$_POST['home_tel_no'];
 
             //hash the password
-            $hashed=md5($password);
+            //$hashed=md5($password);
+            $hashed = sha1($password);
 
             //$hashed = password_hash($password,PASSWORD_BCRYPT);
             $vehicle_type=Vehicle_regex::validate($vehicle_number);

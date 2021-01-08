@@ -1,7 +1,7 @@
+//dummy variable
 datee='09'
-$('.calendar-1').calendar()
-$('.calendar-2').calendar()
-$('.calendar-3').calendar({
+
+$('.cust_calendar').calendar({
     date: new Date(),
     autoSelect: true,
     select: function(date) {
@@ -38,7 +38,7 @@ function date_display(){
     //console.log(selected_date);
     //document.getElementById("date_display").innerHTML=(selected_date);
     document.getElementById("date").value=selected_date;
-    console.log(document.getElementById("date").value);
+    //console.log(document.getElementById("date").value);
 
 }
 

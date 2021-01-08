@@ -4,9 +4,9 @@
     class Service_type extends Model{
 
         //automatically create db object
-        public function __construct(){
+       // public function __construct(){
                 //$db=new Database();
-        }
+       // }
 
         //get id,duration,price of the service name
         function get_details($type_name){
@@ -60,6 +60,29 @@
             
         }
 
+
+           //function which gets a selected employee from ID
+        function get_servicetype($typeid){
+            
+            //$query="SELECT* FROM service_employee WHERE emp_id='$employeeid';";
+            //$result= mysqli_query($this->conn,$query);
+            $condition = "WHERE type_id='$typeid';";
+            $result = $this->select("*" ,'service_type',$condition);
+            
+            //get details into an associative array
+            $details = mysqli_fetch_array($result);
+            //print_r($details);
+
+            //Return array to be fetched and displayed
+            if($details){
+                //echo("go to view");
+                return($details);
+            }
+
+        }
+
+
+
         //getting all details of employees
         function get_all(){
 
@@ -112,6 +135,28 @@
                 printf("Error: %s\n", mysqli_error($conn));
                 exit();
             }
+        }
+
+        function update_record($type_id,$service_type,$vehicle_category,$no_of_employees,$no_of_time_slot,$lift_no,$prize){
+
+            //get date of today for registered date
+            
+            $ser_type="UPDATE service_type SET type_name='$service_type',vehicle_category='$vehicle_category',no_of_emp='$no_of_employees',duration='$no_of_time_slot',lift_no='$lift_no',price='$prize'
+            WHERE type_id='$type_id';";
+            $result= mysqli_query($this->conn,$ser_type);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+            
+            //$condition = 'WHERE emp_id= $emp_id;';
+            //$columns=array("first_name","last_name","address","email","home_tel_no","mobile_tel_no","NIC_no","gender","dob");
+            //$values=array("$first_name","$last_name","$address","$email","$home_tel_no","$mobile_tel_no","$nic_no","$gender","$dob");
+            //$result= $this->update('service_employee',$columns,$values,$condition);
+
+            
         }
 
         // get details for employee table

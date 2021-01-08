@@ -39,7 +39,9 @@
 
             //hash the password
             
-            $pwd=md5($unhashed);
+            //$pwd=md5($unhashed);
+            $pwd = sha1($unhashed);
+            echo($pwd);
 
             //$pwd = password_hash($unhashed,PASSWORD_BCRYPT);
 
