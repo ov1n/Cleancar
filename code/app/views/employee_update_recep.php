@@ -60,10 +60,10 @@
                 &ensp;&ensp;<h2>Contact Numbers</h2>
 
                 &ensp;&ensp;<label for="mobile_tel_no"><div class="form_label"><b>Mobile</b></div></label>
-                <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no" value = '<?php echo "0"."$array[mobile_tel_no]"; ?>' id="mobile_tel_no" pattern="^[0]{1}[0-9]{9}$" required ></br>
+                <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no" value = '<?php echo "$array[mobile_tel_no]"; ?>' id="mobile_tel_no" pattern="^[0]{1}[0-9]{9}$" required ></br>
               
                 &ensp;&ensp;<label for="home_tel_no"><div class="form_label"><b>Home</b></div></label>
-                <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = '<?php echo "0"."$array[home_tel_no]"; ?>' id="home_tel_no" pattern="^[0]{1}[0-9]{9}$" required >
+                <input type="text" placeholder="Enter Your Home number" name="home_tel_no" value = '<?php echo "$array[home_tel_no]"; ?>' id="home_tel_no" pattern="^[0]{1}[0-9]{9}$" required >
                 </br>
                 <a href="employee_list_recep" class="btn cancelbtn" class="form_btn" > Cancel </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
