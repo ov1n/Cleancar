@@ -59,7 +59,7 @@
                     <option value="d">03.00 p.m.</option>
                 </select><br>
 
-                <button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <a href="time_table" class="cancelbtn btn" class="form_btn" > Cancel </a>
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Send notification</button>
 
               </div><!-- form_content -->               

@@ -259,27 +259,22 @@ h1 {
   top: 5px;
 }
   
-.registerbtn {
-  background-color: #008CBA;
-  color: white;
-  right: 10px;
-  top: 5px;
-    
-  border: 2px solid #008CBA;
+.okbtn {
+  background-color: #0ea3d4;
+  height: 42px;
+  padding-top: 13px;
+  width: 80px;
+
 }
-.registerbtn:hover {
-  background-color: white; 
-  color: black;
+.okbtn:hover {
+  background-color: #047ea7; 
 }
 .btn.cancelbtn {
   background-color: #e67e22;
+  height: 42px;
+  padding-top: 16px;
 }
 
 .btn.cancelbtn:hover, .btn.orange:focus {
   background-color: #d35400;
-}
-
-.vehicle_category{
-  color: #e67e22;
-  background-color: black;
 }
