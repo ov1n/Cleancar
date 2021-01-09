@@ -49,7 +49,8 @@
                 <input type="text" placeholder="Enter Your Last Name" name="last_name" value = '<?php echo "$array[last_name]"; ?>' id="last_name" required></br>
 
                 &ensp;&ensp;<label for="nic"><div class="form_label"><b>NIC</b></div></label>
-                <input type="text" placeholder="Enter Your Address" name="nic" value = '<?php echo "$array[NIC_no]"; ?>' id="nic" required></br>
+                <input type="text" placeholder="Enter Your Address" name="nic" value = '<?php echo "$array[NIC_no]"; ?>' id="nic" onkeyup='check_nic();button_enable();' required>
+                <div id="nic_msg"><p></p></div><br>
 
                 &ensp;&ensp;<label for="address"><div class="form_label"><b>Address</b></div></label>
                 <input type="text" placeholder="Enter Your Address" name="address" value = '<?php echo "$array[address]"; ?>' id="address" required ></br>
