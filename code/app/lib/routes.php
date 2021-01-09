@@ -60,9 +60,11 @@
     });
     
     Route::set('billing',function(){
+        Session::init();
         Controller::create_view('billing');
     });
       Route::set('profile',function(){
+        Session::init();
         Controller::create_view('profile');
     });
       Route::set('error-403',function(){
@@ -73,10 +75,12 @@
     });
 
     Route::set('delay_time_table',function(){
+        Session::init();
         Controller::create_view('delay_time_table');
     });
 
     Route::set('delay_timetable_manager',function(){
+        Session::init();
         Controller::create_view('delay_timetable_manager');
     });
 
@@ -268,28 +272,34 @@
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
+        Session::init();
         EmployeeList::view('view_employee');
     });
 
     Route::set('employee_view_recep',function(){ 
+        Session::init();
         EmployeeList::view('view_employee_recep');
     });
 
     Route::set('employee_update',function(){ 
+        Session::init();
         EmployeeList::view('employee_update');
     });
 
     Route::set('employee_update_recep',function(){ 
+        Session::init();
         EmployeeList::view('employee_update_recep');
     });
 
 
     //delete
     Route::set('employee_delete_recep',function(){
+        Session::init();
         EmployeeList::delete('employee_list_recep');
     });
 
     Route::set('employee_delete',function(){
+        Session::init();
         EmployeeList::delete('employee_list');
     });
 
@@ -357,6 +367,7 @@
 
     
     Route::set('time_table',function(){
+        Session::init();
         Controller::create_view('time_table');
     });
 
