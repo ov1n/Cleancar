@@ -12,7 +12,11 @@
             //echo($_SESSION["login"]);
 
             //require_once("./views/$view_name.php");
-            if($role=="loggedin"){
+            if($role==""){
+                //no permission needed
+                require_once("./views/$view_name.php");
+            }
+            else if($role=="loggedin"){
 
                 if(Session::get("role")){
                     require_once("./views/$view_name.php");

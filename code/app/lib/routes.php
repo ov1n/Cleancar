@@ -9,7 +9,7 @@
     Route::set('login',function(){
         //start session
         Session::init();
-        Login::create_view('login',' ');
+        Login::create_view('login','');
     });
 
     //plain logout function without loading a view
@@ -36,7 +36,7 @@
     });
 
     Route::set('register',function(){
-        Controller::create_view('register');
+        Controller::create_view('register','');
     });
 
     Route::set('about_us',function(){
@@ -70,7 +70,7 @@
     });
       Route::set('error_403',function(){
         Session::init();
-        Controller::create_view('error_403');
+        Controller::create_view('error_403','');
     });
        Route::set('error_404',function(){
         Session::init();
