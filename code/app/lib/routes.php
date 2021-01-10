@@ -232,7 +232,7 @@
     Route::set('add_employee',function(){
         //start session
         Session::init();
-        Controller::create_view('add_employee','manager');
+        Controller::create_view('add_employee','receptionist');
     }); 
 
     Route::set('add_timeslot',function(){

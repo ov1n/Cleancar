@@ -23,14 +23,20 @@
         }
 
            //function to view employee
-        public function view($view_name){
+        public function view($view_name,$role){
 
             $typeid=$_GET['type_id'];
            
             $Service_type=new Service_type();
             $array=$Service_type->get_servicetype($typeid);
             //var_dump($array);
-            require_once("./views/$view_name.php");
+            if(Session::get("role")==$role){
+                require_once("./views/$view_name.php");
+            }
+
+            else{
+                require_once("./views/error_403.php");
+            }
         }
 
 
