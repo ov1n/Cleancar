@@ -51,7 +51,7 @@
             //assign connectivity to a variable
                
             $query="SELECT emp_leave.emp_id,first_name,last_name,leave_date,type,leave_time,reason, is_accepted FROM emp_leave INNER JOIN service_employee ON emp_leave.emp_id = service_employee.emp_id WHERE NOT emp_leave.is_accepted ='accepted'";
-            $result= mysqli_query($conn,$query);
+            $result= mysqli_query($this->conn,$query);
             
             //debugging
             if (!$result) {

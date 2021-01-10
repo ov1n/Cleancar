@@ -7,12 +7,7 @@
 
     class AddServiceType extends Controller{
         //base controller just for extending
-        //IN CASE OF OVERRIDE
-
-        public function __construct(){
-            //
         
-        }
         static function register(){
 
             $s_type=new Service_type();

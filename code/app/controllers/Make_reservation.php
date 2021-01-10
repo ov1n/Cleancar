@@ -20,12 +20,19 @@
         }
 
         //overloading create view
-        public static function create_view($view_name){
+        public static function create_view($view_name,$role){
 
             //get variables from session
             $timeslot=Session::get("timeslot");
             $date=Session::get("date");
-            require_once("./views/make_reservation.php");
+
+            if(Session::get("role")==$role){
+                require_once("./views/make_reservation.php");
+            }
+
+            else{
+                require_once("./views/error_403.php");
+            }
         }
 
         static function autofill($cust_id){
