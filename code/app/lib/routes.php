@@ -325,6 +325,12 @@
        ServiceType::view('update_service','manager');
    });
 
+  Route::set('delete_service',function(){
+
+       Session::init();
+       ServiceType::delete('service_type_list','manager');
+   });
+
 
    Route::set('employee_list_recep',function(){
 
