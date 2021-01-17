@@ -51,7 +51,7 @@
             //assign connectivity to a variable
                
             $query="SELECT emp_leave.emp_id,first_name,last_name,leave_date,type,leave_time,reason, is_accepted FROM emp_leave INNER JOIN service_employee ON emp_leave.emp_id = service_employee.emp_id WHERE NOT emp_leave.is_accepted ='accepted'";
-            $result= mysqli_query($this->conn,$query);
+            $result= mysqli_query($conn,$query);
             
             //debugging
             if (!$result) {
@@ -78,6 +78,25 @@
             $condition="WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
 
             $this->delete('emp_leave',$condition);
+        }
+
+        function view_no_of_leave($id){
+           
+            $condition = "WHERE emp_id = $id;";
+            
+            $result= $this->select("*",'service_employee',$condition);
+            
+            
+            //get leaves in an array
+            $leaves = $result->fetch_all(MYSQLI_ASSOC);
+            var_dump($leaves);
+
+            //if array is not empty, leave details are returning
+            if($leaves){
+                return($leaves); 
+            }
+
+
         }
 
         

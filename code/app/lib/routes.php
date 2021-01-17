@@ -9,7 +9,7 @@
     Route::set('login',function(){
         //start session
         Session::init();
-        Login::create_view('login','');
+        Login::create_view('login');
     });
 
     //plain logout function without loading a view
@@ -31,25 +31,24 @@
         Session::init();
         //logout if time is exceeded in session
         Login::timeout(Session::get("curr_time"));
-        //TEMP SOLUTION BY ADDING SPACE 
-        Home::create_view('main_home_page','');
+        Controller::create_view('main_home_page');
     });
 
     Route::set('register',function(){
-        Controller::create_view('register','');
+        Controller::create_view('register');
     });
 
     Route::set('about_us',function(){
         //start session
         Session::init();
         Login::timeout(Session::get("curr_time"));
-        Controller::create_view('about_us','');
+        Controller::create_view('about_us');
     });
 
      Route::set('contact_us',function(){
         //start session
         Session::init();
-        Controller::create_view('contact_us','');
+        Controller::create_view('contact_us');
     });
 
     Route::set('add_service',function(){
@@ -57,34 +56,32 @@
         Session::init();
         //logout if time is exceeded in session
         Login::timeout(Session::get("curr_time"));
-        Controller::create_view('add_service','manager');
+        Controller::create_view('add_service');
     });
     
     Route::set('billing',function(){
         Session::init();
-        Controller::create_view('billing','receptionist');
+        Controller::create_view('billing');
     });
       Route::set('profile',function(){
         Session::init();
-        Controller::create_view('profile','loggedin');
+        Controller::create_view('profile');
     });
-      Route::set('error_403',function(){
-        Session::init();
-        Controller::create_view('error_403','');
+      Route::set('error-403',function(){
+        Controller::create_view('error-403');
     });
        Route::set('error_404',function(){
-        Session::init();
-        Controller::create_view('error_404','');
+        Controller::create_view('error_404');
     });
 
     Route::set('delay_time_table',function(){
         Session::init();
-        Controller::create_view('delay_time_table','receptionist');
+        Controller::create_view('delay_time_table');
     });
 
     Route::set('delay_timetable_manager',function(){
         Session::init();
-        Controller::create_view('delay_time_table','manager');
+        Controller::create_view('delay_timetable_manager');
     });
 
     //route to make reservation with sessions
@@ -98,7 +95,7 @@
         Make_reservation::get_time();
         //Session::set("date",$date);
         //Session::set("timeslot",$timeslot);
-        Make_reservation::create_view('make_reservation','customer');
+        Make_reservation::create_view('make_reservation');
     });
 
     //route set to view reservation
@@ -107,7 +104,7 @@
         //start session
         Session::init();
         View_reservation::get_reservations();
-        View_reservation::create_view('view_reservation','customer');
+        View_reservation::create_view('view_reservation');
     });
 
     //route to make reservation from receptionist
@@ -120,7 +117,7 @@
         //echo '<pre>';
         //var_dump($_SESSION);
         //echo '</pre>';
-        Controller::create_view('emergency_reservation','receptionist');
+        Controller::create_view('emergency_reservation');
     });
 
       //route to make reservation from receptionist
@@ -133,7 +130,7 @@
         //echo '<pre>';
         //var_dump($_SESSION);
         //echo '</pre>';
-        Controller::create_view('emergency_reservation_manager','manager');
+        Controller::create_view('emergency_reservation_manager');
     });
 
 
@@ -156,14 +153,14 @@
         //echo '<pre>';
         //var_dump($_SESSION);
         //echo '</pre>';
-        Controller::create_view('confirm_reservation','customer');
+        Controller::create_view('confirm_reservation');
     });
 
     //experimental route to develop confirm reservation page
     Route::set('conres',function(){ 
         //session_start();
         //echo($_SESSION["uname"]);
-        Controller::create_view('confirm_reservation','loggedin');
+        Controller::create_view('confirm_reservation');
     });
 
     //get form details from  register
@@ -192,53 +189,52 @@
     });
 
     Route::set('change_password',function(){
-        Session::init();
-        Controller::create_view('change_password','loggedin');
+        Controller::create_view('change_password');
     });
 
     Route::set('receptionist',function(){
 
         //start session
         Session::init();
-        Controller::create_view('receptionist_home','receptionist');
+        Controller::create_view('receptionist_home');
     });
 
     Route::set('manager',function(){
 
         //start session
         Session::init();
-        Controller::create_view('manager_home','manager');
+        Controller::create_view('manager_home');
     });
 
     Route::set('employee',function(){
 
         //start session
         Session::init();
-        Controller::create_view('employee_home','employee');
+        Controller::create_view('employee_home');
     });
 
     Route::set('request_leave',function(){
         //start session
         Session::init();
-        Controller::create_view('request_leave','employee');
+        Controller::create_view('request_leave');
     });
 
     Route::set('register_emp',function(){
         //start session
         Session::init();
-        Controller::create_view('register_emp','manager');
+        Controller::create_view('register_emp');
     });
 
     Route::set('add_employee',function(){
         //start session
         Session::init();
-        Controller::create_view('add_employee','receptionist');
+        Controller::create_view('add_employee');
     }); 
 
     Route::set('add_timeslot',function(){
         //start session
         Session::init();
-        Controller::create_view('add_timeslot','manager');
+        Controller::create_view('add_timeslot');
     });
 
    
@@ -246,65 +242,65 @@
     Route::set('update_delete_service',function(){
         //start session
         Session::init();
-        Controller::create_view('update_delete_service','manager');
+        Controller::create_view('update_delete_service');
     });
 
     Route::set('update_timeslot',function(){
         //start session
         Session::init();
-        Controller::create_view('update_timeslot','manager');
+        Controller::create_view('update_timeslot');
     });
 
     Route::set('employee_list',function(){
 
         Session::init();
-        EmployeeList::create_view('employee_list','manager');
+        EmployeeList::create_view('employee_list');
     });
 
     Route::set('invoice_report',function(){
 
         Session::init();
-        Invoice_bill::create_view('invoice_report','receptionist');
+        Invoice_bill::create_view('invoice_report');
     });
     
      Route::set('invoice_report_manager',function(){
 
         Session::init();
-        Invoice_bill::create_view('invoice_report_manager','manager');
+        Invoice_bill::create_view('invoice_report_manager');
     });
     
     //Employee functions
     //view
     Route::set('employee_view',function(){ 
         Session::init();
-        EmployeeList::view('view_employee','manager');
+        EmployeeList::view('view_employee');
     });
 
     Route::set('employee_view_recep',function(){ 
         Session::init();
-        EmployeeList::view('view_employee_recep','receptionist');
+        EmployeeList::view('view_employee_recep');
     });
 
     Route::set('employee_update',function(){ 
         Session::init();
-        EmployeeList::view('employee_update','manager');
+        EmployeeList::view('employee_update');
     });
 
     Route::set('employee_update_recep',function(){ 
         Session::init();
-        EmployeeList::view('employee_update_recep','receptionist');
+        EmployeeList::view('employee_update_recep');
     });
 
 
     //delete
     Route::set('employee_delete_recep',function(){
         Session::init();
-        EmployeeList::delete('employee_list_recep','receptionist');
+        EmployeeList::delete('employee_list_recep');
     });
 
     Route::set('employee_delete',function(){
         Session::init();
-        EmployeeList::delete('employee_list','manager');
+        EmployeeList::delete('employee_list');
     });
 
     Route::set('add_service_type',function(){
@@ -316,38 +312,32 @@
    Route::set('service_type_list',function(){
 
        Session::init();
-       ServiceType::create_view('service_type_list','manager');
+       ServiceType::create_view('service_type_list');
    });
 
      Route::set('update_service',function(){
 
        Session::init();
-       ServiceType::view('update_service','manager');
-   });
-
-  Route::set('delete_service',function(){
-
-       Session::init();
-       ServiceType::delete('service_type_list','manager');
+       ServiceType::view('update_service');
    });
 
 
    Route::set('employee_list_recep',function(){
 
     Session::init();
-    EmployeeList::create_view('employee_list_recep','receptionist');
+    EmployeeList::create_view('employee_list_recep');
     });
 
    Route::set('emp_leave',function(){
 
     Session::init();
-    EmployeeLeave::create_view('emp_leave','receptionist');
+    EmployeeLeave::create_view('emp_leave');
     });
 
 
     Route::set('employee_leave_list',function(){
         Session::init();
-        EmployeeLeaveList::create_view('employee_leave_list','manager');
+        EmployeeLeaveList::create_view('employee_leave_list');
     });
 
     Route::set('add_bill',function(){
@@ -358,7 +348,7 @@
 
     Route::set('calendar',function(){
         Session::init();
-        Controller::create_view('customer_calendar','customer');
+        Controller::create_view('customer_calendar');
     });
 
     Route::set('add_leave_',function(){
@@ -369,53 +359,59 @@
         EmployeeLeave::add_leave();
     });
 
-    Route::set('leave_static',function(){
+    //Route::set('leave_static',function(){
         //start session
+        //Session::init();
+        //Controller::create_view('leave_static');
+    //});
+
+    //*******************************************
+    Route::set('leave_static',function(){ 
         Session::init();
-        Controller::create_view('leave_static','employee');
+        EmployeeLeave::no_of_leave('leave_static');
     });
 
     
     Route::set('time_table',function(){
         Session::init();
-        Controller::create_view('time_table','manager');
+        Controller::create_view('time_table');
     });
 
     Route::set('timeslot_list',function(){
 
     Session::init();
-    Timeslot::create_view('timeslot_list','manager');
+    Timeslot::create_view('timeslot_list');
     });
 
     Route::set('employee_calendar',function(){
         Session::init();
-        Controller::create_view('employee_calendar','employee');
+        Controller::create_view('employee_calendar');
     });
 
     Route::set('add_reserve_manager',function(){
         Session::init();
-        Controller::create_view('add_reserve_manager','manager');
+        Controller::create_view('add_reserve_manager');
     });
 
     Route::set('delay_timetable_manager',function(){
         Session::init();
-        Controller::create_view('delay_timetable_manager','manager');
+        Controller::create_view('delay_timetable_manager');
     });
 
     Route::set('add_leave_manager',function(){
         Session::init();
-        Controller::create_view('add_leave_manager','manager');
+        Controller::create_view('add_leave_manager');
     });
 
 
     Route::set('update_leave',function(){
         Session::init();
-        Controller::create_view('update_leave','employee');
+        Controller::create_view('update_leave');
     });
 
     Route::set('time_table_recep',function(){
         Session::init();
-        Controller::create_view('time_table_recep','receptionist');
+        Controller::create_view('time_table_recep');
     });
 
      //delete

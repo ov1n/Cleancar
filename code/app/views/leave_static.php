@@ -15,9 +15,7 @@
 
     <body>
       
-      
-
-      <form action="./controllers/Leave Statistic.php">
+      <form>
         <div class="container">  
          
           <div class="background">
@@ -34,12 +32,14 @@
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
                
-
+              <?php //var_dump($array); ?>
                 <label for="Number Of Leave You Got" style="width: 280px" ><div class="form_label"><b>Number Of Leave You Got upto Today</b></div></label>
-                 <div class="form_label" style="margin:50px;color: black">Full Day&ensp;&ensp;5 &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp;2 &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;4 </div>
+                 <div class="form_label" style="margin:50px;color: black">Full Day&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp; <?php echo "$array[no_of_leaves_halfday]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp; <?php echo "$array[no_of_leaves_fullday]"; ?> </div>
+
+                
 
                   <label for="Number Of Leave Available" style="width: 300px"><div class="form_label"><b>Number Of Leave Available upto Today</b></div></label>
-                 <div class="form_label"style="margin:50px;color: black">Full Day&ensp;&ensp;5 &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp;2 &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;4 </div>
+                 <div class="form_label"style="margin:50px;color: black">Full Day&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> </div>
               </div><!-- form_content -->
              
 
