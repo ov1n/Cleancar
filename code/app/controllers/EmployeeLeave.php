@@ -6,7 +6,7 @@
     class EmployeeLeave extends Controller{
 
         //overloading create view
-        public static function create_view($view_name,$role){
+        public static function create_view($view_name){
 
             $id = $_SESSION["uname"];
 
@@ -15,13 +15,7 @@
             $array=$leave->get_detail($id);
             //var_dump($array);
 
-            if(Session::get("role")==$role){
-                require_once("./views/$view_name.php");
-            }
-
-            else{
-                require_once("./views/error_403.php");
-            }
+            require_once("./views/$view_name.php");
         }
 
         static function add_leave(){
@@ -56,6 +50,19 @@
              $array=$leave->get_detail($employeeid);
              //var_dump($array);
              require_once("./views/$view_name.php");
+
+        }
+
+        //function to view no of employee leave
+        public function no_of_leave($view_name){
+            $id = $_SESSION["uname"];
+
+            //create employee object
+            $no_of_leave=new Emp_Leave();
+            $array=$no_of_leave->view_no_of_leave($id);
+            //var_dump($array);
+
+            require_once("./views/$view_name.php");
 
         }
 
