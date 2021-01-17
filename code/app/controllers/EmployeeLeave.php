@@ -6,7 +6,7 @@
     class EmployeeLeave extends Controller{
 
         //overloading create view
-        public static function create_view($view_name){
+        public static function create_view($view_name,$role='employee'){
 
             $id = $_SESSION["uname"];
 
