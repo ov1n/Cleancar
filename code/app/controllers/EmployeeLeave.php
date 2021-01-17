@@ -53,6 +53,19 @@
 
         }
 
+        //function to view no of employee leave
+        public function no_of_leave($view_name){
+            $id = $_SESSION["uname"];
+
+            //create employee object
+            $no_of_leave=new Emp_Leave();
+            $array=$no_of_leave->view_no_of_leave($id);
+            //var_dump($array);
+
+            require_once("./views/$view_name.php");
+
+        }
+
 
 
 

@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
--- https://www.phpmyadmin.net/
+-- version 4.5.1
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 06, 2021 at 04:10 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.4
+-- Generation Time: Jan 09, 2021 at 08:54 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -33,8 +32,8 @@ CREATE TABLE `customer` (
   `last_name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `home_tel_no` int(11) NOT NULL,
-  `mobile_tel_no` int(11) NOT NULL,
+  `home_tel_no` varchar(12) NOT NULL,
+  `mobile_tel_no` varchar(12) NOT NULL,
   `no_of_reservations` int(11) NOT NULL,
   `registered_date` date NOT NULL,
   `password` varchar(255) NOT NULL
@@ -45,23 +44,23 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `no_of_reservations`, `registered_date`, `password`) VALUES
-(1001, 'John', 'Doe', 'No.600, Canterbury, Arizona', 'johndoe@gmail.com', 112696969, 711254730, 0, '2020-10-14', '5f4dcc3b5aa765d61d8327deb882cf99'),
-(1002, 'Jane', 'Doe', '876/5, Baker Street, London', 'janedoe@gmail.com', 112543467, 692696969, 0, '2020-10-15', 'a8c0d2a9d332574951a8e4a0af7d516f'),
-(1012, 'Maithreepala', 'White', 'UCSC Building Complex', 'user1@gmail.com', 714567890, 114567890, 0, '2020-10-15', 'd81f9c1be2e08964bf9f24b15f0e4900'),
-(1031, 'daaew', 'fags', 'fager', 'userd@gmail.com', 3457, 3457, 0, '2020-10-15', '17d965747c701d6ffb406cad0f4265dc'),
-(1034, 'hah', 'gah', 'farr', '2018cs145@gmail.com', 774545590, 114545590, 0, '2020-10-15', '7815696ecbf1c96e6894b779456d330e'),
-(1037, 'sherlock', 'holmes', '221b baker', 'sher@j.b', 714567890, 114567890, 0, '2020-10-16', '155d1a1c98b0f860a26b80ff6ab941fe'),
-(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', '2a6571da26602a67be14ea8c5ab82349'),
-(1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', 931, 931, 0, '2020-10-27', '44f437ced647ec3f40fa0841041871cd'),
-(1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', 114567891, 114567891, 0, '2020-10-29', '6227cb5c2107ccad85351676a6c8dd80'),
-(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', '6865aeb3a9ed28f9a79ec454b259e5d0'),
-(1043, 'Thenuka', 'Weerasinghe', '900 Zone 3', 'thenukaovin@gmail.com', 112334511, 711755793, 0, '2020-11-13', 'a8f68a7d03245c5e7f4d090abb01853e43dbfac5'),
-(1076, 'Minuri', 'Wickramanayaka', 'Kegalle', 'minuri@gmail.com', 342287472, 769226787, 0, '2020-12-27', '8a62b7c940f895985dc66836150cce72'),
-(1077, 'Tharindu', 'Withanage', 'Matara', 't@gmail.com', 342287472, 771122334, 0, '2020-12-27', '$2y$11$iEpQVb1365W9jtaQfIa1Y.9he'),
-(1078, 'Yasara', 'Wickramanayaka', 'Kegalle', 'yasara@gmail.com', 342287472, 765443232, 0, '2020-12-27', '$2y$10$iUjrDr1gZTFDQ3p2mRs4t.u42BkRrAt24rxFhawogRXstXGbJSAuO\r\n'),
-(1079, 'Sachini', 'Amanda', 'Kalutara', 'sa@gmail.com', 342267876, 769226787, 0, '2020-12-27', '$2y$10$7Iew2nQNWqckeUK0QK7kOuGZfKiL9UMxoA4mTlGyjyHcIIjYYycxi'),
-(1080, 'Thamoda', 'Dilhari', 'Mathugama', 'thamo@gmail.com', 342287472, 771122334, 0, '2021-01-06', '614e00a6cf5e0a27838ec055ff89e945f681054f'),
-(1082, 'Taniya ', 'Sonali', 'Kegalle', 'tani@gmail.com', 342267876, 765443232, 0, '2021-01-06', 'cd19ee9e3fe04fdc3fcc0449a832e8bbd89c022f');
+(1001, 'John', 'Doe', 'No.600, Canterbury, Arizona', 'johndoe@gmail.com', '112696969', '711254730', 0, '2020-10-14', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(1002, 'Jane', 'Doe', '876/5, Baker Street, London', 'janedoe@gmail.com', '112543467', '692696969', 0, '2020-10-15', 'a8c0d2a9d332574951a8e4a0af7d516f'),
+(1012, 'Maithreepala', 'White', 'UCSC Building Complex', 'user1@gmail.com', '714567890', '114567890', 0, '2020-10-15', 'd81f9c1be2e08964bf9f24b15f0e4900'),
+(1031, 'daaew', 'fags', 'fager', 'userd@gmail.com', '3457', '3457', 0, '2020-10-15', '17d965747c701d6ffb406cad0f4265dc'),
+(1034, 'hah', 'gah', 'farr', '2018cs145@gmail.com', '774545590', '114545590', 0, '2020-10-15', '7815696ecbf1c96e6894b779456d330e'),
+(1037, 'sherlock', 'holmes', '221b baker', 'sher@j.b', '714567890', '114567890', 0, '2020-10-16', '155d1a1c98b0f860a26b80ff6ab941fe'),
+(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', '654', '654', 0, '2020-10-18', '2a6571da26602a67be14ea8c5ab82349'),
+(1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', '931', '931', 0, '2020-10-27', '44f437ced647ec3f40fa0841041871cd'),
+(1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', '114567891', '114567891', 0, '2020-10-29', '6227cb5c2107ccad85351676a6c8dd80'),
+(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', '4', '4', 0, '2020-10-30', '6865aeb3a9ed28f9a79ec454b259e5d0'),
+(1043, 'Thenuka', 'Weerasinghe', '900 Zone 3', 'thenukaovin@gmail.com', '112334511', '711755793', 0, '2020-11-13', 'a8f68a7d03245c5e7f4d090abb01853e43dbfac5'),
+(1076, 'Minuri', 'Wickramanayaka', 'Kegalle', 'minuri@gmail.com', '342287472', '769226787', 0, '2020-12-27', '8a62b7c940f895985dc66836150cce72'),
+(1077, 'Tharindu', 'Withanage', 'Matara', 't@gmail.com', '342287472', '771122334', 0, '2020-12-27', '$2y$11$iEpQVb1365W9jtaQfIa1Y.9he'),
+(1078, 'Yasara', 'Wickramanayaka', 'Kegalle', 'yasara@gmail.com', '342287472', '765443232', 0, '2020-12-27', '$2y$10$iUjrDr1gZTFDQ3p2mRs4t.u42BkRrAt24rxFhawogRXstXGbJSAuO\r\n'),
+(1079, 'Sachini', 'Amanda', 'Kalutara', 'sa@gmail.com', '342267876', '769226787', 0, '2020-12-27', '$2y$10$7Iew2nQNWqckeUK0QK7kOuGZfKiL9UMxoA4mTlGyjyHcIIjYYycxi'),
+(1080, 'Thamoda', 'Dilhari', 'Mathugama', 'thamo@gmail.com', '342287472', '771122334', 0, '2021-01-06', '614e00a6cf5e0a27838ec055ff89e945f681054f'),
+(1082, 'Taniya ', 'Sonali', 'Kegalle', 'tani@gmail.com', '342267876', '765443232', 0, '2021-01-06', 'cd19ee9e3fe04fdc3fcc0449a832e8bbd89c022f');
 
 -- --------------------------------------------------------
 
@@ -253,8 +252,8 @@ CREATE TABLE `service_employee` (
   `last_name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `home_tel_no` int(11) NOT NULL,
-  `mobile_tel_no` int(11) NOT NULL,
+  `home_tel_no` varchar(12) NOT NULL,
+  `mobile_tel_no` varchar(12) NOT NULL,
   `NIC_no` varchar(10) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `dob` date NOT NULL,
@@ -271,13 +270,13 @@ CREATE TABLE `service_employee` (
 --
 
 INSERT INTO `service_employee` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `gender`, `dob`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `special_area`, `password`) VALUES
-(2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', 114433221, 714433221, '56452102v', '', '0000-00-00', 4, 2, 10, '2020-09-17', 'Mechanics', 'employee'),
-(2001, 'Tharindu', 'Dulshan', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', 412241190, 711565953, '971400757v', '', '0000-00-00', 3, 5, 6, '2020-11-10', 'L_001', '6368ad93c9fa22ab35bf311477f74bd3'),
-(2003, 'Buthsara', 'Madushanka', '\"nisala\", akuressa, Matara', 'buthsara@gmail.com', 412259876, 756982646, '972564844v', '', '0000-00-00', 5, 6, 8, '2020-11-10', 'L_003 ', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2004, 'Thenuka', 'Ovin', 'Millennium city, Athurugiriya, Malabe.', 'thenukaovin@gmail.com', 114875695, 789564213, '2000764902', '', '0000-00-00', 4, 6, 4, '2020-11-10', 'L_004', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2005, 'asindu', 'chamika', 'hbfweiyfhwei', 'tdwithanage97@gmail.com', 412259874, 711565984, '5621265456', '', '0000-00-00', 6, 8, 12, '2020-11-11', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2006, 'Tharindu', 'Madushanka', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', 412241190, 711565953, '971400757v', 'Male', '2020-11-21', 0, 0, 0, '2020-11-21', '', '25d55ad283aa400af464c76d713c07ad'),
-(2011, 'Minuri', 'Wickramanayaka', 'Kalutara', 'yasarawickramanayaka@gmail.com', 342287472, 769226787, '966180056v', 'Female', '1996-04-27', 0, 0, 0, '2021-01-06', '', 'b480c074d6b75947c02681f31c90c668c46bf6b8');
+(2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', '0114433221', '0714433221', '564520102v', 'Male', '0000-00-00', 4, 2, 10, '2020-09-17', 'Mechanics', 'employee'),
+(2001, 'Tharindu', 'Dulshan', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', '0412241190', '0711565953', '971400757v', 'Male', '1997-05-19', 3, 5, 6, '2020-11-10', 'L_001', '6368ad93c9fa22ab35bf311477f74bd3'),
+(2003, 'Buthsara', 'Madushanka', '"nisala", akuressa, Matara', 'buthsara@gmail.com', '0412259876', '0756982646', '972564844v', 'Male', '1997-09-12', 5, 6, 8, '2020-11-10', 'L_003 ', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2004, 'Thenuka', 'Ovin', 'Millennium city, Athurugiriya, Malabe.', 'thenukaovin@gmail.com', '0114875695', '0789564213', '2000764902', 'Male', '1920-01-07', 4, 6, 4, '2020-11-10', 'L_004', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2005, 'asindu', 'chamika', 'hbfweiyfhwei', 'tdwithanage97@gmail.com', '0412259874', '0711565984', '5621265456', 'Male', '1956-07-30', 6, 8, 12, '2020-11-11', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2006, 'Tharindu', 'Madushanka', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', '0412241190', '0711565953', '971400757v', 'Male', '1997-05-19', 0, 0, 0, '2020-11-21', '', '25d55ad283aa400af464c76d713c07ad'),
+(2011, 'Minuri', 'Wickramanayaka', 'Kalutara', 'yasarawickramanayaka@gmail.com', '0342287472', '0769226787', '966180056v', 'Female', '1996-04-27', 0, 0, 0, '2021-01-06', '', 'b480c074d6b75947c02681f31c90c668c46bf6b8');
 
 -- --------------------------------------------------------
 
@@ -448,37 +447,31 @@ ALTER TABLE `vehicle`
 --
 ALTER TABLE `customer`
   MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1086;
-
 --
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
   MODIFY `invoice_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
   MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
-
 --
 -- AUTO_INCREMENT for table `service_employee`
 --
 ALTER TABLE `service_employee`
   MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2012;
-
 --
 -- AUTO_INCREMENT for table `service_type`
 --
 ALTER TABLE `service_type`
   MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `time_slot`
 --
 ALTER TABLE `time_slot`
   MODIFY `timeslot_no` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- Constraints for dumped tables
 --
@@ -521,7 +514,6 @@ ALTER TABLE `reservation_time_slot`
 --
 ALTER TABLE `vehicle`
   ADD CONSTRAINT `t5` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

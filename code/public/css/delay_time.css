@@ -288,13 +288,10 @@ h1 {
 }
 .btn.cancelbtn {
   background-color: #e67e22;
+  height: 42px;
+  padding-top: 16px;
 }
 
 .btn.cancelbtn:hover, .btn.orange:focus {
   background-color: #d35400;
-}
-
-.vehicle_category{
-  color: #e67e22;
-  background-color: black;
 }

@@ -80,6 +80,25 @@
             $this->delete('emp_leave',$condition);
         }
 
+        function view_no_of_leave($id){
+           
+            $condition = "WHERE emp_id = $id;";
+            
+            $result= $this->select("*",'service_employee',$condition);
+            
+            
+            //get leaves in an array
+            $leaves = $result->fetch_all(MYSQLI_ASSOC);
+            var_dump($leaves);
+
+            //if array is not empty, leave details are returning
+            if($leaves){
+                return($leaves); 
+            }
+
+
+        }
+
         
         
     }
