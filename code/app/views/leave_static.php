@@ -31,15 +31,13 @@
           <p>This data valid only for this year</p>
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
-               
-              <?php //var_dump($array); ?>
                 <label for="Number Of Leave You Got" style="width: 280px" ><div class="form_label"><b>Number Of Leave You Got upto Today</b></div></label>
-                 <div class="form_label" style="margin:50px;color: black">Full Day&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp; <?php echo "$array[no_of_leaves_halfday]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp; <?php echo "$array[no_of_leaves_fullday]"; ?> </div>
+                 <div class="form_label" style="margin:35px;color: black">Full Day&ensp;&ensp; <?php echo($array[0]['no_of_leaves_fullday']); ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp; <?php echo($array[0]['no_of_leaves_halfday']); ?> &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp; <?php echo($array[0]['no_of_leaves_short']); ?> </div>
 
                 
 
                   <label for="Number Of Leave Available" style="width: 300px"><div class="form_label"><b>Number Of Leave Available upto Today</b></div></label>
-                 <div class="form_label"style="margin:50px;color: black">Full Day&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp; <?php echo "$array[no_of_leaves_short]"; ?> </div>
+                 <div class="form_label"style="margin:35px;color: black">Full Day&ensp;&ensp; <?php echo(20-$array[0]['no_of_leaves_fullday']); ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half Day&ensp;&ensp; <?php echo(20-$array[0]['no_of_leaves_halfday']); ?> &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp; <?php echo(20-$array[0]['no_of_leaves_short']); ?> </div>
               </div><!-- form_content -->
              
 

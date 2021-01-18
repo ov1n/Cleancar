@@ -89,7 +89,7 @@
             
             //get leaves in an array
             $leaves = $result->fetch_all(MYSQLI_ASSOC);
-            var_dump($leaves);
+            //var_dump($leaves);
 
             //if array is not empty, leave details are returning
             if($leaves){
