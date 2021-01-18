@@ -190,7 +190,7 @@
     });
 
     Route::set('change_password',function(){
-        Controller::create_view('change_password','loggedin');
+        Controller::test('change_password');
     });
 
     Route::set('receptionist',function(){
