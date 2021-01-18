@@ -6,14 +6,20 @@
     class EmployeeList extends Controller{
 
         //overloading create view
-        public static function create_view($view_name){
+        public static function create_view($view_name,$role){
 
             //create employee object
             $emp=new Service_employee();
             $array=$emp->get_all();
             //var_dump($array);
+            
+            if(Session::get("role")=='manager'){
+                require_once("./views/$view_name.php");
+            }
 
-            require_once("./views/$view_name.php");
+            else{
+                require_once("./views/error_403.php");
+            }
         }
 
         function load_employees(){

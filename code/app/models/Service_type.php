@@ -167,27 +167,20 @@
         //     $query = $this->db->query("SELECT * from items");
         //     return $query->result();
         // }
-
-
-    }
-
-    function delete_record($employeeid){
-        
-        //assign connectivity to a variable
-        $conn=Database::conn();
-        
-        $query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
-        $result= mysqli_query($conn,$query);
-        
-        //debugging
-        if (!$result) {
-            printf("Error: %s\n", mysqli_error($conn));
-            exit();
-        }else{
-            return True;
+         function delete_record($type_id){
             
+            //$query="DELETE FROM service_type WHERE (type_id='$type_id')";
+            
+            $condition="WHERE (type_id='$type_id')";
+
+            $this->delete('service_type',$condition);
         }
+
+
     }
+    
+      
+
 
     //get types of services corresponding to category
     function get_types($category){

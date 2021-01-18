@@ -10,7 +10,7 @@
         //IN CASE OF OVERRIDE
 
         //overloaded view creation to get session variables to regular variables
-        public static function create_view($view_name){
+        public static function create_view($view_name,$role){
 
             //echo(Session::get("login"));
             $notification=Session::get("login");
@@ -56,6 +56,12 @@
                 //set session variables to it through 
                 Session::set("uname", $uname);
 
+                //set loggedin to session
+                Session::set("login","loggedin");
+
+                //set role which is logged in
+                Session::set("role","customer");
+
                 //load customer view
                 header("Location:home");
 
@@ -70,6 +76,9 @@
                 //set loggedin to session
                 Session::set("login","loggedin");
 
+                //set role which is logged in
+                Session::set("role","manager");
+
                 header("Location:manager");
 
             }else if($rec->check_credentials($uname,$pwd)){
@@ -83,6 +92,9 @@
                 //set loggedin to session
                 Session::set("login","loggedin");
 
+                //set role which is logged in
+                Session::set("role","receptionist");
+
                 header("Location:receptionist");
 
             }else if($emp->check_credentials($uname,$pwd)){
@@ -95,6 +107,9 @@
 
                 //set loggedin to session
                 Session::set("login","loggedin");
+
+                //set role which is logged in
+                Session::set("role","employee");
 
                 header("Location:employee");
             }else{
@@ -113,7 +128,9 @@
             Session::destroy();
             //set logout message maybe?
             Session::set("notification","logout");
-            Session::set("login","");
+            //CHANGE
+            Session::unset("login");
+            Session::unset("role");
 
             header("Location:home");
             //echo($_SESSION["username"]);
@@ -140,6 +157,8 @@
                 Session::set("login","session_expire");
                 Session::unset("in_time");
                 Session::unset("uname");
+                Session::unset("role");
+
             }else{
                 //set current time as user is active
                 Session::set("in_time",$curr_time);

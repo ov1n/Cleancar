@@ -12,12 +12,6 @@
             //
         }
 
-        //overloading create view
-        public static function create_view($view_name){
-
-            //require_once("./views/customer/view_reservation.php");
-        }
-
         //function to get reservation details of the current employee
         function get_reservations(){
 
