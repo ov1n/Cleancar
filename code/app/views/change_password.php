@@ -29,10 +29,14 @@
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-          &ensp;&ensp;<label for="user_name"><div class="form_label"><b>User Name</b></div></label>   
+          &ensp;&ensp;<label for="user_name"><div class="form_label"><b>Current Password</b></div></label>   
           <input type="text" placeholder="Enter username" name="user_name" id="user_name" required><br> 
              
-          &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Email Address</b></div></label>   
+          &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>New Password</b></div></label>   
+          <input type="text" placeholder="Enter email address" name="e-mail" id="e-mail" required>
+          <br><br>
+
+          &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Confirm Password</b></div></label>   
           <input type="text" placeholder="Enter email address" name="e-mail" id="e-mail" required>
           <br><br>
 

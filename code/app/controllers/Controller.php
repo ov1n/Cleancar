@@ -30,5 +30,11 @@
                 require_once("./views/error_403.php");
             }
         }
+
+        public static function test($view_name){
+            
+            require_once("./views/$view_name.php");
+            
+        }
     }
 ?>
