@@ -77,6 +77,21 @@
             
         }
 
+        //checking if email exists
+        function check_email($email){
+
+            $condition="WHERE (email='$email');";
+            $result= $this->select('email','customer',$condition);
+
+            $count = mysqli_fetch_array($result);
+            //print_r($count);
+            //print_r($uname);
+            //if array is not empty that means credentials are correct
+            if($count){
+               return True;
+            }
+        }
+
         //function to insert data into table customer and vehicle
         function insert_record($first_name,$last_name,$vehicle_number,$address,$e_mail,$password,$mobile_tel_no,$home_tel_no,$vehicle_type){
             

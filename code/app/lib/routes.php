@@ -190,6 +190,7 @@
     });
 
     Route::set('change_password',function(){
+        Session::init();
         Controller::create_view('change_password','loggedin');
     });
 
