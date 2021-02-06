@@ -13,8 +13,8 @@
       </br>
       </br>
      
-
-        <form action="./controllers/ForgotPassword.php">
+        <!-- Security vulnerability -->
+        <form action="xJhgU_1" method="POST">
         <div class="container">  
          
           <div class="background">

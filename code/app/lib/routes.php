@@ -198,6 +198,10 @@
         Controller::create_view('forgot_password','');
     });
 
+    Route::set('xJhgU_1',function(){
+        ForgotPassword::authenticate_email();
+    });
+
     Route::set('receptionist',function(){
 
         //start session
