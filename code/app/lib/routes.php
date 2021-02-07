@@ -80,6 +80,11 @@
         Controller::create_view('delay_time_table','receptionist');
     });
 
+     Route::set('update_profile',function(){
+        Session::init();
+        Controller::create_view('update_profile','loggedin');
+    });
+
     Route::set('delay_timetable_manager',function(){
         Session::init();
         Controller::create_view('delay_time_table','manager');
