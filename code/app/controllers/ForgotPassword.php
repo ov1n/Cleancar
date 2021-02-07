@@ -6,6 +6,7 @@
 
     //get mailer class to send registration emails to customers
     require './lib/classes/Mailer.php';
+    require './lib/classes/RandomStringGenerator.php';
 
     class ForgotPassword extends Controller{
 
@@ -34,9 +35,14 @@
 
             if($cust->check_email($email)){ 
                 echo "customer exists";
+                //db function to change password
+                //send pw to email
+
                 
             }else if($emp->check_email($email)){ 
                 echo "employee exists";
+                //db function to change password
+                //send pw to email
             }else{
                 echo "email doesnt exist";
             }
