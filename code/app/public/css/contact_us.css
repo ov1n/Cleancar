@@ -1,0 +1,232 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  font-size: 28px;
+  font-family: 'raleway' !important;
+}
+
+
+
+/* Container holding the image and the text */
+.container {
+  position: relative;
+  font-family: 'raleway' !important;
+  width: 100%;
+  margin-top: 65px;
+}
+
+.container img{
+  width: 100%;
+  height: 400px;
+
+}
+
+@media screen and (max-width: 800px){
+   .container img{
+margin-right: 0px;
+    width: 100%;
+}
+}
+@media screen and (max-width: 800px){
+   .container
+   {
+margin-right: 0px;
+    width: 100%;
+}
+}
+
+
+
+/* Bottom right text */
+.text-block {
+  position: absolute;
+  bottom: 10px;
+  right: 0px;
+  left: 0px;
+ 
+ background-image: linear-gradient(to left, rgba(255,0,0,0), rgb(0, 0, 0, 0.9)); /* 52, 230, 255 Black background with 0.5 opacity rgb(0, 118, 255) */
+  color: white;
+  padding-left: 40px;
+  padding-right: 20px;
+  width: 60%;
+  height: 70px;
+  font-size: 25px;
+ padding-bottom: 25px;
+ margin-bottom: 10px;
+}
+
+@media screen and (max-width: 800px){
+   .text-block{
+margin-right: 0px;
+    width: 100%;
+}
+}
+
+
+/* Float four columns side by side */
+.column1 {
+  float: left;
+  width: 50%;
+  padding: 5px 0px;
+  padding-right: 20px;
+
+ 
+}
+
+@media screen and (max-width: 900px){
+   .column1{
+margin-left: 10%;
+    width: 97%;
+}
+}
+
+.row {
+    margin-left: 15%;
+    margin-right: 15%
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display:block;
+  clear: both;
+}
+
+
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0);
+  padding: 16px;
+  text-align: center;
+  font-size: 20px;
+  
+  margin-bottom: 30px;
+  width:97%;
+  padding-right: 20px;
+
+}
+@media screen and (max-width: 900px){
+  .card{
+    width: 95%;
+  }
+}
+
+
+#map1 {
+    width: 100%;
+    height: 255px;
+}
+#map2 {
+    width: 100%;
+    height: 255px;
+}
+#map3 {
+    width: 100%;
+    height: 255px;
+}
+#map4 {
+    width: 100%;
+    height: 255px;
+}
+/*map responsiveness*/
+@media screen and (max-width: 1800px) {
+  #map1,
+  #map2,
+  #map3,
+  #map4
+  {
+    width: 100%;
+
+  }
+  }
+.row1 {
+    margin-left: 0%;
+    margin-bottom: -10px;
+}
+  /* The grid: Three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 15px 0px;
+  padding-right: 20px;
+  height: 200px;
+  text-align: center;
+  font-size: 20px;
+
+ 
+}
+.btn {
+  border: none; /* Remove borders */
+  color: white; /* Add a text color */
+  padding: 14px 28px; /* Add some padding */
+  cursor: pointer; /* Add a pointer cursor on mouse-over */
+  margin-bottom: 2px;
+}
+
+
+.info {background-color: #2196F3;} /* Blue */
+.info:hover {background: #0b7dda;}
+
+@media screen and (max-width: 800px){
+   .column{
+
+    width: 50%;
+}
+}
+ /*responsive raw1*/
+ @media screen and (max-width: 800px){
+  .raw1{
+    width: 10%;
+    display: block;
+  }
+ }
+
+
+.map-container{
+  width: 100%;
+  height: 200px;
+  margin-bottom: 5px;
+}
+ @media screen and (max-width: 800px){
+  .map-container{
+    width: 100%;
+    display: block;
+    margin-bottom: 200px;
+  }
+ }
+.containerTab {
+  padding: 20px;
+  color: white;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 8px;
+  margin-top: 5px;
+
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* Closable button inside the container tab */
+.closebtn {
+  float: right;
+  color: black;
+  font-size: 35px;
+  cursor: pointer;
+}
+/*background image*/
+.background{
+  background-image: linear-gradient(rgb(58, 118, 255, 0.4), rgb(58, 118, 255, 0.4)), url("../images/contact_us/33999.png");
+}
