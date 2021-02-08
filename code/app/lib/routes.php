@@ -190,7 +190,16 @@
     });
 
     Route::set('change_password',function(){
+        Session::init();
         Controller::create_view('change_password','loggedin');
+    });
+
+    Route::set('forgot_password',function(){
+        Controller::create_view('forgot_password','');
+    });
+
+    Route::set('xJhgU_1',function(){
+        ForgotPassword::authenticate_email();
     });
 
     Route::set('receptionist',function(){

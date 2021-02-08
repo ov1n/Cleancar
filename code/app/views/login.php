@@ -56,7 +56,7 @@
                             <div id="incorrect_msg" style="margin-top: 50px;"></div>
                             </br></br></br></br>
                             
-                            <a href="change_password" style="margin-left: 35%;"><b>Forgot Password?</b></a>
+                            <a href="forgot_password" style="margin-left: 35%;"><b>Forgot Password?</b></a>
                             
                             
                             

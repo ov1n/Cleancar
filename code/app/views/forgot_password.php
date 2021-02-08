@@ -1,7 +1,7 @@
 <!DOCTYPE html>    
 <html>    
 <head>    
-    <title>change_login_password</title>     
+    <title>Forgot password?</title>     
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet"><!-- get font just in case -->
 
         <link rel="stylesheet" type="text/css" href="public\css\change_password.css"><!-- add style to form -->
@@ -13,8 +13,8 @@
       </br>
       </br>
      
-
-        <form action="./controllers/Register.php">
+        <!-- Security vulnerability -->
+        <form action="xJhgU_1" method="POST">
         <div class="container">  
          
           <div class="background">
@@ -22,23 +22,16 @@
         <ul class="breadcrumb">
         
           <li><a href="home">Home</a></li>
-          <li>Change Login Password</li>
+          <li>Forgot Password</li>
         </ul> <!--breadcrumb--></br></br>
-         <h1>Change Password&ensp;<i class="far fa-lock-alt fa-lg"></i></h1> <hr style="width: 60%;">
+         <h1>Forgot Password&ensp;<i class="far fa-lock-alt fa-lg"></i></h1> <hr style="width: 60%;">
           </br>
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-          &ensp;&ensp;<label for="user_name"><div class="form_label"><b>Current Password</b></div></label>   
-          <input type="text" placeholder="Enter username" name="user_name" id="user_name" required><br> 
-             
-          &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>New Password</b></div></label>   
-          <input type="text" placeholder="Enter email address" name="e-mail" id="e-mail" required>
-          <br><br>
-
-          &ensp;&ensp;<label for="e-mail"><div class="form_label"><b>Confirm Password</b></div></label>   
-          <input type="text" placeholder="Enter email address" name="e-mail" id="e-mail" required>
-          <br><br>
+          &ensp;&ensp;<p> Please enter your email and a recovery password will be sent.  </p>
+          &ensp;&ensp;<label for="email"><div class="form_label"><b>Email</b></div></label>   
+          <input type="text" placeholder="Enter email" name="email" id="email" required><br> 
 
           &ensp;&ensp;<button type="submit" class="btn cancelbtn" class="form_btn" >Cancel</button>
           <button type="submit" class="btn" class="form_btn" style="margin-right :10px">OK</button> 
