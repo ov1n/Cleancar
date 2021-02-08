@@ -1,0 +1,249 @@
+* {box-sizing: border-box}
+
+body  
+{  
+    font-family: 'Raleway' !important;
+}  
+
+/* put background image */
+div.cover{
+ background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../images/honda-malaysia-service-centre.jpg");
+  width: 100%;
+  
+  margin-top: 65px; 
+  padding-top: 0px; 
+  height: 750px;
+  margin-bottom: 1px;
+}
+
+/* Style the list */
+ul.breadcrumb {
+     padding: 15px 25px;
+    list-style: none;
+  }
+  
+  /* Display list items side by side */
+  ul.breadcrumb li {
+    display: inline;
+    font-size: 18px;
+    color: white;
+  }
+  
+  /* Add a slash symbol (/) before/behind each list item */
+  ul.breadcrumb li+li:before {
+    padding: 8px;
+    color: white;
+    content: "|\00a0";
+  }
+  
+  /* Add a color to all links inside the list */
+  ul.breadcrumb li a {
+    color: #0275d8;
+    text-decoration: none;
+  }
+  
+  /* Add a color on mouse-over */
+  ul.breadcrumb li a:hover {
+    color: #01447e;
+  }
+
+h1{  
+    text-align: center;  
+    color: black;  
+} 
+
+
+/* custom hr */
+hr{
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+} 
+
+div.square{
+  width: 100%;
+  height: 550px;
+  margin: auto;
+  margin-top: 30px;
+  align-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+div.square div.square1{
+  margin-right:1%;
+  width: 18%;
+  height: 250px;
+  float: left;
+  background-color:#3377FF;
+  opacity: 0.8;
+  margin-left: 20%;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+}
+
+div.square div.square2{
+  margin-right:1%;
+  width: 18%;
+  height: 250px;
+  float: left;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  background-color: #99BBFF;
+  opacity: 0.8;
+}
+
+div.square div.square3{
+  width: 18%;
+  height: 250px;
+  float: left;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  background-color: #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square4{
+  margin-top: 1%;
+  margin-right:1%;
+  width: 18%;
+  height: 250px;
+  float: left;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  background-color: #99BBFF;
+  opacity: 0.8;
+    margin-left: 20%;
+
+}
+
+div.square div.square5{
+  margin-top:1%;
+  margin-right:1%;
+  width: 18%;
+  height: 250px;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  float: left;
+  background-color: #3377FF;
+  opacity: 0.8;
+}
+
+div.square div.square6{
+  margin-top:1%;
+  width: 18%;
+  box-shadow: 5px 5px 5px rgba(255, 255, 255, 0.3);
+  float: left;
+  height: 250px;
+  background-color: #99BBFF;
+  opacity: 0.8;
+}
+
+/* adjast the symbols*/
+div.square i{
+  margin-top: 20%;
+}
+
+/* stylying buttons */
+
+div.square button{
+  width: 70%;
+  height: 20%;
+  font-family: 'Raleway' !important;  
+  font-size: 95%;
+  margin-top: 20%;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover{
+  opacity: 0.6;
+}
+
+/* button colors */
+div.square1 button,.square3 button,.square5 button{
+  background-color: #99BBFF; 
+}
+
+div.square2 button,.square4 button,.square6 button{
+  background-color: #3377FF; 
+}
+
+/* responsive square */
+@media screen and (max-width: 1000px){
+
+  div.square{
+  width: 100%;
+}
+
+div.square div.square1{
+  margin-right:1%;
+  width: 30%;
+  height : 32%;
+  float: left;
+  
+  opacity: 0.8;
+  padding-top: 2%;
+}
+div.square div.square2{
+  margin-right: none;
+  width: 30%;
+  height: 32%;
+  float: left;
+  
+  opacity: 0.8;
+  padding-top: 2%;
+}
+
+div.square div.square3{
+  margin-top: 1%;
+  margin-right:1%;
+  width: 30%;
+  height: 32%;
+  float: left;
+  
+  opacity: 0.8;
+  margin-left: 20%;
+  padding-top: 2%;
+}
+
+div.square div.square4{
+  margin-top: 1%;
+  margin-right: none;
+  width: 30%;
+  height: 32%;
+  float: left;
+  
+  opacity: 0.8;
+   margin-left: 0%;
+   padding-top: 2%;
+}
+
+div.square div.square5{
+  margin-top: 1%;
+  margin-right:1%;
+  width: 30%;
+  height: 32%;
+  float: left;
+  
+  opacity: 0.8;
+  margin-left: 20%;
+  padding-top: 2%;
+}
+
+div.square div.square6{
+  margin-top: 1%;
+  margin-right: none;
+  width: 30%;
+  height: 32%;
+  float: left;
+  
+  opacity: 0.8;
+  padding-top: 2%;
+}
+
+div.square i{
+  margin-top: 5%;
+}
+
+div.square button{
+  margin-top: 15%;
+  height: 30%;
+}
+
+}
+
