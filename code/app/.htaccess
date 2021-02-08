@@ -1,0 +1,8 @@
+RewriteEngine On
+
+#redirect address of all js,img,css files
+RewriteCond %{REQUEST_URI} "public"
+RewriteRule (.*) $1 [L]
+
+#all other views load normally (php)
+RewriteRule ^([^/]+)/? app/index.php?url=$1 [L,QSA]
