@@ -1,0 +1,422 @@
+﻿.row {
+	display: block;
+	position: relative;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	float: none;
+	clear: both;
+	box-sizing: border-box;
+	zoom: 1;
+}
+
+.row::before,
+.row::after {
+	content: "";
+	display: table
+}
+
+.row::after {
+	clear: both
+}
+
+.row>.col {
+	position: relative;
+	box-sizing: border-box;
+	padding: 20px;
+	float: left;
+	clear: none;
+	width: 100%
+}
+
+.row .push-up {
+	margin-bottom: 350px
+}
+
+.row .push-down {
+	margin-top: 350px
+}
+
+.row .pull-up {
+	margin-bottom: 350px;
+	margin-top: -100px
+}
+
+.row .pull-down {
+	margin-top: 350px;
+	margin-bottom: -100px
+}
+
+.row.has-pull-up {
+	margin-top: 160px
+}
+
+.row.has-pull-down {
+	margin-bottom: 160px
+}
+
+.row.rev>.col {
+	float: right
+}
+
+.nice-gap {
+	display: block;
+	margin: 20px
+}
+
+.nice-height {
+	height: 400px
+}
+
+.gap-up {
+	margin-top: 40px
+}
+
+.gap-down {
+	margin-bottom: 40px
+}
+
+.gap-up-down {
+	margin-top: 40px;
+	margin-bottom: 40px
+}
+
+.gap-up-big {
+	margin-top: 100px
+}
+
+.gap-down-big {
+	margin-bottom: 100px
+}
+
+.gap-up-down-big {
+	margin-top: 100px;
+	margin-bottom: 100px
+}
+
+.pad-up {
+	padding-top: 40px
+}
+
+.pad-down {
+	padding-bottom: 40px
+}
+
+.pad-up-down {
+	padding-top: 40px;
+	padding-bottom: 40px
+}
+
+.pad-up-down-big {
+	padding-top: 100px;
+	padding-bottom: 100px
+}
+
+.spaced {
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 150px;
+	margin-bottom: 150px
+}
+
+.padded {
+	padding-left: 20px !important;
+	padding-right: 20px !important
+}
+
+.boxed {
+	box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.2);
+	background: #efefef;
+	padding: 40px;
+	margin-left: 0;
+	margin-right: 0
+}
+
+.faded {
+	background: linear-gradient(180deg, #efefef 30%, rgba(239, 239, 239, 0.1) 100%)
+}
+
+.opaque {
+	background-color: rgba(239, 239, 239, 0.8)
+}
+
+@media screen and (min-width:0) and (max-width:720px) {
+	.row.sml-1>.col,
+	.row.sml-1>.col.sml-1 {
+		width: 100%
+	}
+	.row.sml-2>.col,
+	.row.sml-2>.col.sml-1 {
+		width: 50%
+	}
+	.row.sml-2>.col.sml-2 {
+		width: 100%
+	}
+	.row.sml-3>.col,
+	.row.sml-3>.col.sml-1 {
+		width: 33.333%
+	}
+	.row.sml-3>.col.sml-2 {
+		width: 66.666%
+	}
+	.row.sml-3>.col.sml-3 {
+		width: 100%
+	}
+	.row.sml-4>.col,
+	.row.sml-4>.col.sml-1 {
+		width: 25%
+	}
+	.row.sml-4>.col.sml-2 {
+		width: 50%
+	}
+	.row.sml-4>.col.sml-3 {
+		width: 75%
+	}
+	.row.sml-4>.col.sml-4 {
+		width: 100%
+	}
+	.row>.col.sml-full {
+		width: 100%
+	}
+	.row .spaced {
+		margin-left: 20px;
+		margin-right: 20px
+	}
+	.row .boxed {
+		padding: 20px;
+		margin-left: 0;
+		margin-right: 0
+	}
+	.row .push-up {
+		margin-bottom: 200px
+	}
+	.row .push-down {
+		margin-top: 200px
+	}
+	.row .pull-up {
+		margin-bottom: 200px;
+		margin-top: -100px
+	}
+	.row .pull-down {
+		margin-top: 200px;
+		margin-bottom: -100px
+	}
+	.row .hide-sml {
+		display: none
+	}
+	.nice-gap {
+		display: block;
+		margin: 20px
+	}
+	.nice-height {
+		height: 400px
+	}
+	.bg-fil-sml {
+		background-size: cover
+	}
+	.bg-fit-sml {
+		background-size: contain
+	}
+	.spaced-sml {
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-top: 150px;
+		margin-bottom: 150px
+	}
+	.padded-sml {
+		padding-left: 20px !important;
+		padding-right: 20px !important
+	}
+	.boxed-sml {
+		box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.2);
+		background: #efefef;
+		padding: 40px;
+		margin-left: 0;
+		margin-right: 0
+	}
+	.faded-sml {
+		background: linear-gradient(180deg, #efefef 30%, rgba(239, 239, 239, 0.1) 100%)
+	}
+	.opaque-sml {
+		background-color: rgba(239, 239, 239, 0.8)
+	}
+	.ratio-6-1 {
+		padding-bottom: 33.333% !important
+	}
+	.ratio-8-1 {
+		padding-bottom: 25% !important
+	}
+	.ratio-8-3 {
+		padding-bottom: 75% !important
+	}
+	.ratio-32-9 {
+		padding-bottom: 56.25% !important
+	}
+}
+
+@media screen and (min-width:721px) and (max-width:1024px) {
+	.row.mid-1>.col,
+	.row.mid-1>.col.mid-1 {
+		width: 100%
+	}
+	.row.mid-2>.col,
+	.row.mid-2>.col.mid-1 {
+		width: 50%
+	}
+	.row.mid-2>.col.mid-2 {
+		width: 100%
+	}
+	.row.mid-3>.col,
+	.row.mid-3>.col.mid-1 {
+		width: 33.333%
+	}
+	.row.mid-3>.col.mid-2 {
+		width: 66.666%
+	}
+	.row.mid-3>.col.mid-3 {
+		width: 100%
+	}
+	.row.mid-4>.col,
+	.row.mid-4>.col.mid-1 {
+		width: 25%
+	}
+	.row.mid-4>.col.mid-2 {
+		width: 50%
+	}
+	.row.mid-4>.col.mid-3 {
+		width: 75%
+	}
+	.row.mid-4>.col.mid-4 {
+		width: 100%
+	}
+	.row>.col.mid-full {
+		width: 100%
+	}
+	.row .hide-mid {
+		display: none
+	}
+	.nice-gap {
+		display: inline-block;
+		margin: 20px
+	}
+	.nice-height {
+		height: 500px
+	}
+	.bg-fil-mid {
+		background-size: cover
+	}
+	.bg-fit-mid {
+		background-size: contain
+	}
+	.spaced-mid {
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-top: 150px;
+		margin-bottom: 150px
+	}
+	.padded-mid {
+		padding-left: 20px !important;
+		padding-right: 20px !important
+	}
+	.boxed-mid {
+		box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.2);
+		background: #efefef;
+		padding: 40px;
+		margin-left: 0;
+		margin-right: 0
+	}
+	.faded-mid {
+		background: linear-gradient(180deg, #efefef 30%, rgba(239, 239, 239, 0.1) 100%)
+	}
+	.opaque-mid {
+		background-color: rgba(239, 239, 239, 0.8)
+	}
+}
+
+@media screen and (min-width:1025px) {
+	.row.lrg-1>.col,
+	.row.lrg-1>.col.lrg-1 {
+		width: 100%
+	}
+	.row.lrg-2>.col,
+	.row.lrg-2>.col.lrg-1 {
+		width: 50%
+	}
+	.row.lrg-2>.col.lrg-2 {
+		width: 100%
+	}
+	.row.lrg-3>.col,
+	.row.lrg-3>.col.lrg-1 {
+		width: 33.333%
+	}
+	.row.lrg-3>.col.lrg-2 {
+		width: 66.666%
+	}
+	.row.lrg-3>.col.lrg-3 {
+		width: 100%
+	}
+	.row.lrg-4>.col,
+	.row.lrg-4>.col.lrg-1 {
+		width: 25%
+	}
+	.row.lrg-4>.col.lrg-2 {
+		width: 50%
+	}
+	.row.lrg-4>.col.lrg-3 {
+		width: 75%
+	}
+	.row.lrg-4>.col.lrg-4 {
+		width: 100%
+	}
+	.row>.col.lrg-full {
+		width: 100%
+	}
+	.row .hide-lrg {
+		display: none
+	}
+	.nice-gap {
+		display: inline-block;
+		margin: 20px
+	}
+	.nice-height {
+		height: 600px
+	}
+	.bg-fil-lrg {
+		background-size: cover
+	}
+	.bg-fit-lrg {
+		background-size: contain
+	}
+	.spaced-lrg {
+		margin-left: 40px;
+		margin-right: 40px;
+		margin-top: 150px;
+		margin-bottom: 150px
+	}
+	.padded-lrg {
+		padding-left: 20px !important;
+		padding-right: 20px !important
+	}
+	.boxed-lrg {
+		box-shadow: 20px 20px 60px rgba(0, 0, 0, 0.2);
+		background: #efefef;
+		padding: 40px;
+		margin-left: 0;
+		margin-right: 0
+	}
+	.faded-lrg {
+		background: linear-gradient(180deg, #efefef 30%, rgba(239, 239, 239, 0.1) 100%)
+	}
+	.opaque-lrg {
+		background-color: rgba(239, 239, 239, 0.8)
+	}
+}
+
+.row>.col.all-full {
+	width: 100%
+}
+
+.row>.col.fills {
+	width: 100%;
+	height: 100%
+}
