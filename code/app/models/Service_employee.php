@@ -83,6 +83,22 @@
             }
             
         }
+
+        //checking if email exists
+        function check_email($email){
+
+            $condition="WHERE (email='$email');";
+            $result= $this->select('email','service_employee',$condition);
+
+            $count = mysqli_fetch_array($result);
+            //print_r($count);
+            //print_r($uname);
+            //if array is not empty that means credentials are correct
+            if($count){
+               return True;
+            }
+        }
+
         function insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob,$password){
 
             //get date of today for registered date

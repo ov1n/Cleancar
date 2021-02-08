@@ -13,7 +13,7 @@
             $array=$emp->get_all();
             //var_dump($array);
             
-            if(Session::get("role")=='manager'){
+            if(Session::get("role")==$role){
                 require_once("./views/$view_name.php");
             }
 
