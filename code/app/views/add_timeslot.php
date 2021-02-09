@@ -2,7 +2,7 @@
 <html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <title>CleanCar - Add Service</title>
+        <title>CleanCar - Add Timeslot</title>
     
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
@@ -10,13 +10,14 @@
         
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="public\js\add_timeslot.js"></script>
+      <script src="public/js/jquery/jquery.alertable.min.js"></script>
     </head>
 
     <body>
       
-    
 
-      <form action="./controllers/Register.php">
+    <form name="add_timeslot_form" id="add_timeslot_form" method = "post" action="add_timeslot">
         <div class="container">  
          
           <div class="background">
@@ -32,8 +33,8 @@
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-                &ensp;&ensp;<label for="no_of_employees"><div class="form_label"><b>Start Time</b></div></label>
-                <input type="text" placeholder="Enter number of employees" name="no_of_employees" id="no_of_employees" required size="50"></br>
+                &ensp;&ensp;<label for="start_time"><div class="form_label"><b>Start Time</b></div></label>
+                <input type="text" placeholder="Enter starting time" name="start_time" id="end_time" required size="50"></br>
 
                 &ensp;&ensp;<label for="end_time"><div class="form_label"><b>End Time</b></div></label>
                 <input type="text" placeholder="Enter ending time" name="end_time" id="end_time" required size="50"></br>
