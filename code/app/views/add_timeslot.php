@@ -16,8 +16,9 @@
 
     <body>
       
+    <!-- onsubmit="send_timeslot_data() -->
 
-    <form name="add_timeslot_form" id="add_timeslot_form" method = "post" action="add_timeslot">
+    <form name="add_timeslot_form" id="add_timeslot_form" method = "post" onsubmit="send_timeslot_data()">
         <div class="container">  
          
           <div class="background">
@@ -42,9 +43,9 @@
                 &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
                 <select name="lift_no" id="lift_no">
                   <option value="" selected disabled hidden style="color:gray">Select Lift</option>
-                  <option value="1">L-01</option>
-                  <option value="2">L-02</option>
-                  <option value="3">L-03</option>
+                  <option value="L_01">L_01</option>
+                  <option value="L_02">L_02</option>
+                  <option value="L_03">L_03</option>
                 </select><br>
 
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Add</button></br></br> </br></br>

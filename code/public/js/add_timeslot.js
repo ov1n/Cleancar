@@ -1,4 +1,4 @@
-function send_data() {
+function send_timeslot_data() {
     $.ajax({
       url: "add_timeslot_",    //the page containing php script
       type: "post",    //request type,
