@@ -64,9 +64,11 @@
         Session::init();
         Controller::create_view('billing','receptionist');
     });
-      Route::set('profile',function(){
+  
+
+    Route::set('profile',function(){
         Session::init();
-        Controller::create_view('profile','loggedin');
+        UserProfile::create_view('profile','');
     });
       Route::set('error-403',function(){
         Controller::create_view('error-403','');
