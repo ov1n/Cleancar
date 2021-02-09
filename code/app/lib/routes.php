@@ -252,7 +252,12 @@
         Controller::create_view('add_timeslot','manager');
     });
 
-   
+    Route::set('add_timeslot_',function(){
+
+        Session::init();
+        Timeslot::add_timeslot();
+    });
+
 
     Route::set('update_delete_service',function(){
         //start session
