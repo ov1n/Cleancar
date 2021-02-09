@@ -2,12 +2,7 @@
     include_once 'Model.php';
 
     class Time_slot extends Model{
-        
-        //automatically create db object
-        public function __construct(){
-            //$db=new Database();
-        }
-
+                
         //get timeslots for required time slot
         function get_range($start_time,$duration){
 
@@ -83,5 +78,17 @@
                 return($timeslot); 
             }
 
+        }
+
+        function insert_timeslot($start_time,$end_time,$lift_no){            
+        
+            $columns=array('start_time','end_time','lift_no');
+            $values=array("$start_time","$end_time","$lift_no");
+
+            $this->insert('time_slot',$columns,$values);
+            
+            //echo($query);
+
+            
         }
     }
