@@ -23,6 +23,24 @@
             
         }
 
+              //get autofill data in reservation form
+        function get_cust_data($cust_id){
+            
+            //assign connectivity to a variable
+
+            //$query="SELECT * FROM customer WHERE (cust_id='$cust_id' OR email='$cust_id')";
+            //$fields=array(';');
+            $condition="WHERE (cust_id='$cust_id' OR email='$cust_id')";
+            $result= $this->select('*','customer',$condition);
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            
+            //echo($cust_id);
+            return $r;
+            
+        }
+
         //get cust_id from email
         function get_custid($email){
 

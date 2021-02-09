@@ -32,6 +32,24 @@
             
         }
 
+         //get autofill data in reservation form
+        function get_man_data(){
+            
+            //assign connectivity to a variable
+
+            //$query="SELECT * FROM manager;
+            //$fields=array(';');
+            $condition=';';
+            $result= $this->select('*','manager',$condition);
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            
+            //echo($cust_id);
+            return $r;
+            
+        }
+
     }
 
 ?>
