@@ -188,6 +188,11 @@
         Session::init();
         Employee::update();
     });
+    Route::set('update_user_auth', function () {
+    //start session
+    Session::init();
+    UserProfile::update();
+	});
 
     //sevice update
      Route::set('update_service_auth',function(){

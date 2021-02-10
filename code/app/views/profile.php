@@ -49,9 +49,15 @@
                             value='<?php echo "$array[last_name]"; ?>' id="last_name" required></br>
 
                         &ensp;&ensp;<label for="nic">
-                            <div class="form_label"><b>NIC</b></div>
+                            <div class="form_label"><b><?php if (session::get("role") != 'customer') {
+                                                            echo "NIC";
+                                                        } ?></b></div>
                         </label>
-                        <input type="text" placeholder="Enter Your Nic" name="nic"
+                        <input type="<?php if (Session::get("role") == 'customer') {
+                                            echo "hidden";
+                                        } else {
+                                            echo "text";
+                                        } ?>" placeholder="Enter Your Nic" name="nic"
                             value='<?php echo "$array[NIC_no]"; ?>' id="nic" required></br>
 
                         &ensp;&ensp;<label for="address">
