@@ -23,7 +23,7 @@
             
         }
 
-              //get autofill data in reservation form
+         //get autofill data in reservation form
         function get_cust_data($cust_id){
             
             //assign connectivity to a variable
@@ -142,6 +142,15 @@
 
         }
 
+        function update_record($userid, $first_name, $last_name, $address, $email, $mobile_tel_no, $home_tel_no){
+            $query="UPDATE customer SET first_name='$first_name',last_name='$last_name',address='$address',email='$email',home_tel_no='$home_tel_no',mobile_tel_no='$mobile_tel_no' WHERE cust_id='$userid';" ;
+            $result = mysqli_query($this->conn, $query);
+            if(!$result){
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+            }
+        }
+
         //function to increment the customer reservation count when new reservation is placed
         function increment_count($cust_id){
 
@@ -155,4 +164,3 @@
         }
         
     }
-?>

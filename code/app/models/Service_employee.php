@@ -47,6 +47,20 @@
 
         }
 
+         function get_empid($email){
+
+            $condition="WHERE (email='$email' OR cust_id='$email')";
+            $result= $this->select("emp_id",'service_employee',$condition);
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            $cust_id=array_shift( $r );
+            
+            //echo($cust_id);
+            return $cust_id;
+            
+        }
+
         //function which gets a selected employee from ID
         function get_employee($employeeid){
             
@@ -162,4 +176,3 @@
         }
 
     }
-?>
