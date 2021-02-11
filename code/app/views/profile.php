@@ -78,16 +78,25 @@
                             <div class="form_label"><b>Mobile</b></div>
                         </label>
                         <input type="text" placeholder="Enter Your mobile number" name="mobile_tel_no"
-                            value='<?php echo "$array[mobile_tel_no]"; ?>' id="mobile_tel_no" required></br>
+                            value='<?php echo "$array[mobile_tel_no]"; ?>' id="mobile_tel_no" pattern="[0-9]{10}"
+                            required></br>
 
                         &ensp;&ensp;<label for="home_tel_no">
                             <div class="form_label"><b>Home</b></div>
                         </label>
                         <input type="text" placeholder="Enter Your Home number" name="home_tel_no"
-                            value='<?php echo "$array[home_tel_no]"; ?>' id="home_tel_no" required>
+                            value='<?php echo "$array[home_tel_no]"; ?>' id="home_tel_no" pattern="[0-9]{10}" required>
                         </br>
                         &ensp;&ensp;<a href="change_password"> Change Password?</a>
-                        <button type="submit" class="btn cancelbtn" class="form_btn">Cancel</button>
+                        <a href="<?php if (session::get("role") == 'customer') {
+                                        echo "home";
+                                    } elseif (session::get("role") == 'manager') {
+                                        echo "manager";
+                                    } elseif (session::get("role") == 'receptionist') {
+                                        echo "receptionist";
+                                    } else {
+                                        echo "employee";
+                                    } ?>" class="btn cancelbtn" class="form_btn"> Cancel </a>
                         <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Update</button>
                         </br></br></br></br>
 
