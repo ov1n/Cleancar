@@ -83,7 +83,21 @@
             $this->insert('time_slot',$columns,$values);
             
             //echo($query);
-
             
         }
+
+        function update_timeslot($start_time,$end_time){
+
+            //get date of today for registered date
+
+            $columns=array('start_time','end_time');
+            $values=array("$start_time","$end_time");
+
+            $this->update('time_slot',$columns,$values);
+            
+            
+            
+        }
+
+
     }

@@ -195,7 +195,7 @@
 	});
 
     //sevice update
-     Route::set('update_service_auth',function(){
+    Route::set('update_service_auth',function(){
         //start session
         Session::init();
         AddServiceType::update();
@@ -263,6 +263,12 @@
 
         Session::init();
         Timeslot::add_timeslot();
+    });
+
+    Route::set('update_timeslot_',function(){
+        //start session
+        Session::init();
+        Timeslot::update();
     });
 
 
