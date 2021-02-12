@@ -111,10 +111,13 @@
 
             //get timeslots
             $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
+            print_r($timeslots);
+            
+            echo('before timeslot');//get each timeslot and insert into reservation-timeslot table
 
-            //get each timeslot and insert into reservation-timeslot table
             foreach ($timeslots as $key ) {
-                //echo(Session::get("res_date"));
+                
+                echo("1\n");
                 $res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
             }
 

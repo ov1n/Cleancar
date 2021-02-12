@@ -177,7 +177,7 @@
 
             $sql.=" ".$condition;
 
-            echo($sql);
+            //echo($sql);
 
             $result= mysqli_query($this->conn,$sql);
 
