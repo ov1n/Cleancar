@@ -37,6 +37,20 @@
 
         }
 
+        static function update(){
+
+            $updated_timeslot=new time_slot();
+            
+            //get each field from form
+            $start_time=$_POST['start_time'];
+            $end_time=$_POST['end_time'];
+           
+            //update data
+            $updated_timeslot->update_timeslot($start_time,$end_time);
+
+
+        }
+
     }
 
 ?>
