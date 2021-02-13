@@ -46,9 +46,6 @@
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-                &ensp;&ensp;</i><label for="bill_no"><div class="form_label"><b>Bill Number</b></div></label>
-                <input type="text" placeholder="Enter the Bill Number" name="bill_no" id="bill_no" required ></br>
-  
                 &ensp;&ensp;<label for="reservation_id"><div class="form_label"><b>Reservation Id</b></div></label>
                 <input type="text" placeholder="Enter the Reservation Id" name="reservation_id" id="reservation_id" required ></br>
 

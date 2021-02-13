@@ -27,7 +27,6 @@
             $bill=new Invoice();
             
             //get each field from form
-            $bill_no=$_POST['bill_no'];
             $reservation_id=$_POST['reservation_id'];
             $vehicle_no=$_POST['veh_Number'];
             $vehicle_model=$_POST['veh_Model'];
@@ -40,24 +39,30 @@
 
 
             //the built in insert function of model is called here
-            $key_array=array("bill_no","reservation_id","vehicle_no","vehicle_model","customer_name","contact_no","net_amount","bill_date");
-            $values_array=array("$bill_no","$reservation_id","$vehicle_no","$vehicle_model","$customer_name","$contact_no","$net_amount",$today);
+            $key_array=array("reservation_id","vehicle_no","vehicle_model","customer_name","contact_no","net_amount","bill_date");
+            $values_array=array("$reservation_id","$vehicle_no","$vehicle_model","$customer_name","$contact_no","$net_amount",$today);
 
             //insert data using the base model function
             $bill->insert('invoice',$key_array,$values_array);
+
+            $invoice_no = $bill->get_invoice_number();
 
             require("Library/fpdf.php");
 
             $pdf = new FPDF('p', 'mm', 'A5');
             $pdf -> AddPage();
 
-            //$pdf->Image('2222.png',10,10,-300);
-            $pdf -> SetFont('Times','BU','18');
-            $pdf -> cell(120, 30, "CleanCar", 0 ,1,'C');
+            $pdf->Image('public/images/4444.png',10,10,40,20,'png');
+            $pdf -> SetFont('Times','BU','24');
+            $pdf -> cell(120, 10, "CleanCar", 0 ,1,'R');
+            $pdf -> SetFont('Helvetica','UI','14');
+            $pdf -> cell(115, 8, "Sales Invoice", 0 ,1,'R');
+
+            $pdf ->Ln(6);
 
             $pdf -> SetFont('Times','','14');
-            $pdf -> cell(20, 10, "Bill No :-", 0 ,0,'L');
-            $pdf -> cell(60, 10, $bill_no , 0 ,0,'L');
+            $pdf -> cell(28, 10, "Invoice No :-", 0 ,0,'L');
+            $pdf -> cell(60, 10, $invoice_no , 0 ,0,'L');
             $pdf -> cell(20, 10, "Date :-", 0 ,0,'R');
             $pdf -> cell(30, 10, $today , 0 ,1,'L');
 
