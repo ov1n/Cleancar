@@ -21,7 +21,7 @@
 
       
           
-      <form name="add_bill" id="add_bill" method = "post" onsubmit="send_bill_data()">
+      <form name="add_bill" id="add_bill" method = "post" action="add_bill">
         
         
           <div class="background">
@@ -58,7 +58,7 @@
                 &ensp;&ensp;<label for="veh_Model"><div class="form_label"><b>Vehicle Model</b></div></label>
                 <input type="text" placeholder="Enter the Vehicle Model" name="veh_Model" id="veh_Model" required ></br>
 
-                &ensp;&ensp;<label for="name"><div class="form_label"><b>customer Name</b></div></label>
+                &ensp;&ensp;<label for="name"><div class="form_label"><b>Customer Name</b></div></label>
                 <input type="text" placeholder="Enter the Customer Name" name="name" id="name" required ></br>
 
                 &ensp;&ensp;<label for="contact_number"><div class="form_label"><b>Contact Number</b></div></label>
