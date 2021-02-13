@@ -51,9 +51,13 @@
             $pdf = new FPDF('p', 'mm', 'A5');
             $pdf -> AddPage();
 
-            //$pdf->Image('2222.png',10,10,-300);
-            $pdf -> SetFont('Times','BU','18');
-            $pdf -> cell(120, 30, "CleanCar", 0 ,1,'C');
+            $pdf->Image('public/images/4444.png',10,10,40,20,'png');
+            $pdf -> SetFont('Times','BU','24');
+            $pdf -> cell(120, 10, "CleanCar", 0 ,1,'R');
+            $pdf -> SetFont('Helvetica','UI','14');
+            $pdf -> cell(115, 8, "Sales Invoice", 0 ,1,'R');
+
+            $pdf ->Ln(6);
 
             $pdf -> SetFont('Times','','14');
             $pdf -> cell(20, 10, "Bill No :-", 0 ,0,'L');
