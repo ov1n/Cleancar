@@ -14,6 +14,7 @@ function confirmSubmit(){
   $.alertable.confirm('Confirm making reservation?').then(function() {
     $.alertable.confirm('Do you want to make an Advance Payment?').then(function() {
         console.log('make advance Payment');
+        window.location = 'advance_payment';
       }, function() {
         console.log('Dont make advance Payment what');
         //insert code here

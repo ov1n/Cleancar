@@ -30,10 +30,10 @@
   <form >
         <div class="container">  
         <div class="background">
-            
+        <div class="card" > 
     <?php if ($reservation_details){
       foreach($reservation_details as $row){ ?>
-        <div class="card" >
+        
               <div id=form_content> <!-- div to center needed elements -->
 
                 <!-- each field gets details from the array -->
@@ -72,8 +72,9 @@
             } ?>
 
               </div><!-- form_content -->   
-            </div><!-- card -->
+            
             </br></br>
+          </div><!-- card -->
           </div><!-- background -->
        
         </div><!-- container -->

@@ -17,7 +17,7 @@
             //FIX BY ADDING DURATION
             $query="INSERT INTO reservation (`is_advance_paid`, `cust_id`, `added_date`, `service_id`) VALUES ('0', $cust_id,'$added_date',$service_id);";
             $result= mysqli_query($conn,$query);
-
+            //echo($query);
             //debugging
             if (!$result) {
                 printf("Error: %s\n", mysqli_error($conn));

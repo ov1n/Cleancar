@@ -24,6 +24,11 @@
         Session::init();
         Login::authenticate();
     });
+
+    Route::set('change_password_auth', function () {
+    Session::init();
+    ChangePassword::authenticate();
+});
     
     //home page
     Route::set('home',function(){
@@ -64,9 +69,11 @@
         Session::init();
         Controller::create_view('billing','receptionist');
     });
-      Route::set('profile',function(){
+  
+
+    Route::set('profile',function(){
         Session::init();
-        Controller::create_view('profile','loggedin');
+        UserProfile::create_view('profile','');
     });
       Route::set('error-403',function(){
         Controller::create_view('error-403','');
@@ -150,7 +157,7 @@
         $tdate = strtotime($tempdate);
         //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
         Make_reservation::insert();
-        header("Location:confirm_reservation");
+        //header("Location:confirm_reservation");
     });
 
     //final view of reservation
@@ -186,9 +193,14 @@
         Session::init();
         Employee::update();
     });
+    Route::set('update_user_auth', function () {
+    //start session
+    Session::init();
+    UserProfile::update();
+	});
 
     //sevice update
-     Route::set('update_service_auth',function(){
+    Route::set('update_service_auth',function(){
         //start session
         Session::init();
         AddServiceType::update();
@@ -252,7 +264,18 @@
         Controller::create_view('add_timeslot','manager');
     });
 
-   
+    Route::set('add_timeslot_',function(){
+
+        Session::init();
+        Timeslot::add_timeslot();
+    });
+
+    Route::set('update_timeslot_',function(){
+        //start session
+        Session::init();
+        Timeslot::update();
+    });
+
 
     Route::set('update_delete_service',function(){
         //start session

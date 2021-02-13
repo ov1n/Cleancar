@@ -3,25 +3,20 @@
 
     class Reservation_time_slot extends Model{
 
-        //automatically create db object
-        public function __construct(){
-                //$db=new Database();
-        }
 
         function  insert($res_id,$timeslot_no,$date){
-
-            //assign connectivity to a variable
-            $conn=Database::conn();
                         
             //query 
             $query="INSERT INTO `reservation_time_slot` (`reservation_id`, `timeslot_no`, `date`) VALUES ('$res_id', '$timeslot_no', '$date')";
-            $result= mysqli_query($conn,$query);
+            $result= mysqli_query($this->conn,$query);
+            //echo($query);
             
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }else{
+                //echo("result returns");
                 return $result;
             }
         }

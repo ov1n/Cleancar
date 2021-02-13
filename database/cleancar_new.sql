@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
--- http://www.phpmyadmin.net
+-- version 5.0.2
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 21, 2020 at 07:59 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 7.0.9
+-- Generation Time: Feb 12, 2021 at 09:14 AM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -32,11 +33,11 @@ CREATE TABLE `customer` (
   `last_name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `home_tel_no` int(11) NOT NULL,
-  `mobile_tel_no` int(11) NOT NULL,
+  `home_tel_no` varchar(10) NOT NULL,
+  `mobile_tel_no` varchar(10) NOT NULL,
   `no_of_reservations` int(11) NOT NULL,
   `registered_date` date NOT NULL,
-  `password` varchar(32) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -44,17 +45,23 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`cust_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `no_of_reservations`, `registered_date`, `password`) VALUES
-(1001, 'John', 'Doe', 'No.600, Canterbury, Arizona', 'johndoe@gmail.com', 112696969, 711254730, 0, '2020-10-14', '5f4dcc3b5aa765d61d8327deb882cf99'),
-(1002, 'Jane', 'Doe', '876/5, Baker Street, London', 'janedoe@gmail.com', 112543467, 692696969, 0, '2020-10-15', 'a8c0d2a9d332574951a8e4a0af7d516f'),
-(1012, 'Maithreepala', 'White', 'UCSC Building Complex', 'user1@gmail.com', 714567890, 114567890, 0, '2020-10-15', 'd81f9c1be2e08964bf9f24b15f0e4900'),
-(1031, 'daaew', 'fags', 'fager', 'userd@gmail.com', 3457, 3457, 0, '2020-10-15', '17d965747c701d6ffb406cad0f4265dc'),
-(1034, 'hah', 'gah', 'farr', '2018cs145@gmail.com', 774545590, 114545590, 0, '2020-10-15', '7815696ecbf1c96e6894b779456d330e'),
-(1037, 'sherlock', 'holmes', '221b baker', 'sher@j.b', 714567890, 114567890, 0, '2020-10-16', '155d1a1c98b0f860a26b80ff6ab941fe'),
-(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', 654, 654, 0, '2020-10-18', '2a6571da26602a67be14ea8c5ab82349'),
-(1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', 931, 931, 0, '2020-10-27', '44f437ced647ec3f40fa0841041871cd'),
-(1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', 114567891, 114567891, 0, '2020-10-29', '6227cb5c2107ccad85351676a6c8dd80'),
-(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', 4, 4, 0, '2020-10-30', '6865aeb3a9ed28f9a79ec454b259e5d0'),
-(1043, 'Thenuka', 'Weerasinghe', '900 Zone 3', 'thenukaovin@gmail.com', 112334511, 711755793, 0, '2020-11-13', '7fdfcbc4a08fa01937b3680bc295904b');
+(1001, 'John', 'Doe', 'No.600, Canterbury, Arizona', 'johndoe@gmail.com', '112696969', '711254730', 0, '2020-10-14', '5f4dcc3b5aa765d61d8327deb882cf99'),
+(1002, 'Jane', 'Doe', '876/5, Baker Street, London', 'janedoe@gmail.com', '112543467', '692696969', 0, '2020-10-15', 'a8c0d2a9d332574951a8e4a0af7d516f'),
+(1012, 'Maithreepala', 'White', 'UCSC Building Complex', 'user1@gmail.com', '714567890', '114567890', 0, '2020-10-15', 'd81f9c1be2e08964bf9f24b15f0e4900'),
+(1031, 'daaew', 'fags', 'fager', 'userd@gmail.com', '3457', '3457', 0, '2020-10-15', '17d965747c701d6ffb406cad0f4265dc'),
+(1034, 'hah', 'gah', 'farr', '2018cs145@gmail.com', '774545590', '114545590', 0, '2020-10-15', '7815696ecbf1c96e6894b779456d330e'),
+(1037, 'sherlock', 'holmes', '221b baker', 'sher@j.b', '714567890', '114567890', 0, '2020-10-16', '155d1a1c98b0f860a26b80ff6ab941fe'),
+(1038, 'amara', 'bandu', 'rupa', 'rupa@g.c', '654', '654', 0, '2020-10-18', '2a6571da26602a67be14ea8c5ab82349'),
+(1039, 'Dada', 'Far', 'qwerty', 'rat@g.c', '931', '931', 0, '2020-10-27', '44f437ced647ec3f40fa0841041871cd'),
+(1040, 'Buwa', 'R', 'Gampaha', 'buwa@g.c', '114567891', '114567891', 0, '2020-10-29', '6227cb5c2107ccad85351676a6c8dd80'),
+(1042, 'asdad', 'asdas', 'asdgt', 'gt@f.c', '4', '4', 0, '2020-10-30', '6865aeb3a9ed28f9a79ec454b259e5d0'),
+(1043, 'Thenuka', 'Weerasinghe', '900 Zone 3', 'thenukaovin@gmail.com', '112334511', '711755793', 0, '2020-11-13', 'a8f68a7d03245c5e7f4d090abb01853e43dbfac5'),
+(1076, 'Minuri', 'Wickramanayaka', 'Kegalle', 'minuri@gmail.com', '342287472', '769226787', 0, '2020-12-27', '8a62b7c940f895985dc66836150cce72'),
+(1077, 'Tharindu', 'Withanage', 'Matara', 't@gmail.com', '342287472', '771122334', 0, '2020-12-27', '$2y$11$iEpQVb1365W9jtaQfIa1Y.9he'),
+(1078, 'Yasara', 'Wickramanayaka', 'Kegalle', 'yasara@gmail.com', '342287472', '765443232', 0, '2020-12-27', '$2y$10$iUjrDr1gZTFDQ3p2mRs4t.u42BkRrAt24rxFhawogRXstXGbJSAuO\r\n'),
+(1079, 'Sachini', 'Amanda', 'Kalutara', 'sa@gmail.com', '342267876', '769226787', 0, '2020-12-27', '$2y$10$7Iew2nQNWqckeUK0QK7kOuGZfKiL9UMxoA4mTlGyjyHcIIjYYycxi'),
+(1080, 'Thamoda', 'Dilhari', 'Mathugama', 'thamo@gmail.com', '342287472', '771122334', 0, '2021-01-06', '614e00a6cf5e0a27838ec055ff89e945f681054f'),
+(1082, 'Taniya ', 'Sonali', 'Kegalle', 'tani@gmail.com', '342267876', '765443232', 0, '2021-01-06', 'cd19ee9e3fe04fdc3fcc0449a832e8bbd89c022f');
 
 -- --------------------------------------------------------
 
@@ -68,7 +75,7 @@ CREATE TABLE `emergency_contact` (
   `first_name` varchar(50) NOT NULL,
   `last_name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
-  `tel_no` int(11) NOT NULL
+  `tel_no` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -103,17 +110,12 @@ CREATE TABLE `emp_leave` (
 --
 
 INSERT INTO `emp_leave` (`leave_date`, `emp_id`, `type`, `reason`, `leave_time`, `is_accepted`) VALUES
-('2020-11-09', 2002, 'Full_leave', 'test2', '08:00:00', ''),
-('2020-11-18', 2001, 'Full_leave', 'nidi matai ', '08:00:00', ''),
-('2020-11-18', 2002, 'half_day', 'wec', '12:00:00', ''),
-('2020-11-20', 2002, 'short_leave', 'nnn', '08:00:00', ''),
-('2020-11-21', 2002, 'half_day', 'test', '08:00:00', ''),
-('2020-11-27', 2002, 'Full Leave', ' medical channeling', '08:00:00', 'accepted'),
-('2020-11-28', 2002, 'Short Leave', 'hjbjhgcvjbnlnlkbvh ', '00:00:15', 'accepted'),
-('2020-11-30', 2002, 'Short Leave', 'tgjbnl', '00:00:08', 'accepted'),
-('2020-12-02', 2003, 'Half Day', 'wedding', '00:00:12', 'accepted'),
-('2020-12-04', 2002, 'Half Day', 'gihbkjnu', '00:00:12', 'accepted'),
-('2020-12-16', 2001, 'short_leave', 'nidi matai ', '08:00:00', '');
+('2021-01-16', 2011, 'Full_leave', 'pirith ceremony', '08:00:00', 'accepted'),
+('2021-01-26', 2003, 'Half Day', 'wedding', '00:00:12', 'accepted'),
+('2021-02-02', 2001, 'Full_leave', 'party', '08:00:00', ''),
+('2021-02-05', 2001, 'Full_leave', 'nnnnnnn', '08:00:00', 'accepted'),
+('2021-02-27', 2011, 'Full_leave', 'medical', '08:00:00', ''),
+('2021-03-04', 2011, 'Full_leave', 'party', '08:00:00', '');
 
 -- --------------------------------------------------------
 
@@ -161,15 +163,15 @@ CREATE TABLE `manager` (
   `last_name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `home_tel_no` int(11) NOT NULL,
-  `mobile_tel_no` int(11) NOT NULL,
+  `home_tel_no` varchar(10) NOT NULL,
+  `mobile_tel_no` varchar(10) NOT NULL,
   `NIC_no` varchar(10) NOT NULL,
   `no_of_leaves_short` int(11) NOT NULL,
   `no_of_leaves_halfday` int(11) NOT NULL,
   `no_of_leaves_fullday` int(11) NOT NULL,
   `enrollment_date` date NOT NULL,
   `designation` varchar(10) NOT NULL,
-  `password` varchar(32) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -177,7 +179,7 @@ CREATE TABLE `manager` (
 --
 
 INSERT INTO `manager` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `designation`, `password`) VALUES
-('M001', 'Manager', 'Sample', 'manager 23', 'manager123@gmail.com', 115467887, 789871212, '875542103V', 5, 4, 7, '2020-09-23', 'MBA', '1d0258c2440a8d19e716292b231e3190');
+('M001', 'Manager', 'Sample', 'manager 23', 'manager123@gmail.com', '115467887', '789871212', '875542103V', 5, 4, 7, '2020-09-23', 'MBA', '1a8565a9dc72048ba03b4156be3e569f22771f23');
 
 -- --------------------------------------------------------
 
@@ -191,15 +193,15 @@ CREATE TABLE `receptionist` (
   `last_name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `home_tel_no` int(11) NOT NULL,
-  `mobile_tel_no` int(11) NOT NULL,
+  `home_tel_no` varchar(11) NOT NULL,
+  `mobile_tel_no` varchar(11) NOT NULL,
   `NIC_no` varchar(10) NOT NULL,
   `no_of_leaves_short` int(11) NOT NULL,
   `no_of_leaves_halfday` int(11) NOT NULL,
   `no_of_leaves_fullday` int(11) NOT NULL,
   `enrollment_date` date NOT NULL,
   `qualification` varchar(50) NOT NULL,
-  `password` varchar(32) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -207,7 +209,7 @@ CREATE TABLE `receptionist` (
 --
 
 INSERT INTO `receptionist` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `qualification`, `password`) VALUES
-('R001', 'Receptionist', 'one', 'r 4 gh trd ef', 'receptionist@gmail.com', 112547896, 764872522, '902457414V', 5, 4, 4, '2020-10-01', 'SQL', '0a9b3767c8b9b69cea129110e8daeda2');
+('R001', 'Receptionist', 'one', 'r 4 gh trd ef', 'receptionist@gmail.com', '112547896', '764872522', '902457414V', 5, 4, 4, '2020-10-01', 'SQL', '3b6f5b1c6ffdf5e9d335132d6b6ae9dbca0fd269');
 
 -- --------------------------------------------------------
 
@@ -254,8 +256,8 @@ CREATE TABLE `service_employee` (
   `last_name` varchar(50) NOT NULL,
   `address` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `home_tel_no` int(11) NOT NULL,
-  `mobile_tel_no` int(11) NOT NULL,
+  `home_tel_no` varchar(11) NOT NULL,
+  `mobile_tel_no` varchar(11) NOT NULL,
   `NIC_no` varchar(10) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `dob` date NOT NULL,
@@ -264,7 +266,7 @@ CREATE TABLE `service_employee` (
   `no_of_leaves_fullday` int(11) NOT NULL,
   `enrollment_date` date NOT NULL,
   `special_area` varchar(10) NOT NULL,
-  `password` varchar(32) NOT NULL
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -272,13 +274,13 @@ CREATE TABLE `service_employee` (
 --
 
 INSERT INTO `service_employee` (`emp_id`, `first_name`, `last_name`, `address`, `email`, `home_tel_no`, `mobile_tel_no`, `NIC_no`, `gender`, `dob`, `no_of_leaves_short`, `no_of_leaves_halfday`, `no_of_leaves_fullday`, `enrollment_date`, `special_area`, `password`) VALUES
-(2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', 114433221, 714433221, '56452102v', '', '0000-00-00', 4, 2, 10, '2020-09-17', 'Mechanics', 'employee'),
-(2001, 'Tharindu', 'Dulshan', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', 412241190, 711565953, '971400757v', '', '0000-00-00', 3, 5, 6, '2020-11-10', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2002, 'Minuri', 'Yasara', 'shanika, Akurugoda, Tellijjawila.', 'yasarawickramanayaka@gmail.com', 342287472, 711208660, '986180056v', '', '0000-00-00', 2, 6, 4, '2020-11-10', 'L_002', '8a62b7c940f895985dc66836150cce72'),
-(2003, 'Buthsara', 'Madushanka', '"nisala", akuressa, Matara', 'buthsara@gmail.com', 412259876, 756982646, '972564844v', '', '0000-00-00', 5, 6, 8, '2020-11-10', 'L_003 ', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2004, 'Thenuka', 'Ovin', 'Millennium city, Athurugiriya, Malabe.', 'thenukaovin@gmail.com', 114875695, 789564213, '2000764902', '', '0000-00-00', 4, 6, 4, '2020-11-10', 'L_004', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2005, 'asindu', 'chamika', 'hbfweiyfhwei', 'tdwithanage97@gmail.com', 412259874, 711565984, '5621265456', '', '0000-00-00', 6, 8, 12, '2020-11-11', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e'),
-(2006, 'Tharindu', 'Madushanka', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', 412241190, 711565953, '971400757v', 'Male', '2020-11-21', 0, 0, 0, '2020-11-21', '', '25d55ad283aa400af464c76d713c07ad');
+(2000, 'Employee', 'One', 'Kandakadu', 'employee1@gmail.com', '342287472', '765443232', '56452102v', 'Male', '5645-07-28', 4, 2, 10, '2020-09-17', 'Mechanics', 'employee'),
+(2001, 'Tharindu', 'Dulshan', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', '412241190', '711565953', '971400757v', '', '0000-00-00', 3, 5, 6, '2020-11-10', 'L_001', '6368ad93c9fa22ab35bf311477f74bd3'),
+(2003, 'Buthsara', 'Madushanka', '\"nisala\", akuressa, Matara', 'buthsara@gmail.com', '412259876', '756982646', '972564844v', '', '0000-00-00', 5, 6, 8, '2020-11-10', 'L_003 ', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2004, 'Thenuka', 'Ovin', 'Millennium city, Athurugiriya, Malabe.', 'thenukaovin@gmail.com', '114875695', '789564213', '2000764902', '', '0000-00-00', 4, 6, 4, '2020-11-10', 'L_004', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2005, 'asindu', 'chamika', 'hbfweiyfhwei', 'tdwithanage97@gmail.com', '412259874', '711565984', '5621265456', '', '0000-00-00', 6, 8, 12, '2020-11-11', 'L_001', 'd41d8cd98f00b204e9800998ecf8427e'),
+(2006, 'Tharindu', 'Madushanka', 'shanika, Akurugoda, Tellijjawila.', 'tdwithanage97@gmail.com', '412241190', '711565953', '971400757v', 'Male', '2020-11-21', 0, 0, 0, '2020-11-21', '', '25d55ad283aa400af464c76d713c07ad'),
+(2011, 'Minuri', 'Wickramanayaka', 'Kalutara', 'yasarawickramanayaka@gmail.com', '342287472', '769226787', '966180056v', 'Female', '1996-04-27', 1, 2, 0, '2021-01-06', '', '85b77a2d069048802e427113acf327f6972603e5');
 
 -- --------------------------------------------------------
 
@@ -306,7 +308,8 @@ INSERT INTO `service_type` (`type_id`, `type_name`, `vehicle_category`, `no_of_e
 (3, 'Body Wash', 'Car', 2, 1.5, 'L_04', 2000),
 (4, 'Full Service', 'Van', 4, 2.5, 'L_02', 15000),
 (5, 'Normal Service', 'Van', 3, 2, 'L_02', 8000),
-(6, 'Body Wash', 'Van', 2, 1.5, 'L_05', 3000);
+(6, 'Body Wash', 'Van', 2, 1.5, 'L_05', 3000),
+(7, 'body wash', 'car', 2, 1, '1', 4000);
 
 -- --------------------------------------------------------
 
@@ -316,10 +319,26 @@ INSERT INTO `service_type` (`type_id`, `type_name`, `vehicle_category`, `no_of_e
 
 CREATE TABLE `time_slot` (
   `timeslot_no` int(11) NOT NULL,
-  `lift_no` int(11) NOT NULL,
+  `lift_no` varchar(11) NOT NULL,
   `start_time` time NOT NULL,
   `end_time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `time_slot`
+--
+
+INSERT INTO `time_slot` (`timeslot_no`, `lift_no`, `start_time`, `end_time`) VALUES
+(6, 'L_01', '11:00:00', '11:30:00'),
+(7, 'L_01', '11:00:00', '11:30:00'),
+(8, 'L_01', '11:00:00', '11:30:00'),
+(9, 'L_02', '11:30:00', '12:00:00'),
+(10, 'L_01', '12:00:00', '12:30:00'),
+(11, 'L_01', '13:00:00', '13:30:00'),
+(12, 'L_01', '08:00:00', '08:30:00'),
+(13, 'L_01', '15:00:00', '15:30:00'),
+(16, 'L_01', '20:00:00', '00:00:00'),
+(17, 'L_03', '10:00:00', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -344,7 +363,13 @@ INSERT INTO `vehicle` (`cust_id`, `vehicle_num`, `vehicle_category`) VALUES
 (1038, 'r1', 'light vehi'),
 (1039, '812', 'light vehi'),
 (1040, '6969', 'light vehi'),
-(1043, 'KB-1024', 'Car');
+(1043, 'KB-1024', 'Car'),
+(1076, 'GT-9944', 'Car'),
+(1077, 'GT-1234', 'Car'),
+(1078, 'GT-9944', 'Car'),
+(1079, 'ab-2399', 'Car'),
+(1080, 'ab-2399', ''),
+(1082, 'CCB-2253', 'Motor Car');
 
 --
 -- Indexes for dumped tables
@@ -442,32 +467,38 @@ ALTER TABLE `vehicle`
 -- AUTO_INCREMENT for table `customer`
 --
 ALTER TABLE `customer`
-  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1044;
+  MODIFY `cust_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1086;
+
 --
 -- AUTO_INCREMENT for table `invoice`
 --
 ALTER TABLE `invoice`
   MODIFY `invoice_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
 --
 -- AUTO_INCREMENT for table `reservation`
 --
 ALTER TABLE `reservation`
   MODIFY `reservation_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10002;
+
 --
 -- AUTO_INCREMENT for table `service_employee`
 --
 ALTER TABLE `service_employee`
-  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2007;
+  MODIFY `emp_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2012;
+
 --
 -- AUTO_INCREMENT for table `service_type`
 --
 ALTER TABLE `service_type`
-  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
 --
 -- AUTO_INCREMENT for table `time_slot`
 --
 ALTER TABLE `time_slot`
-  MODIFY `timeslot_no` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `timeslot_no` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
 --
 -- Constraints for dumped tables
 --
@@ -476,7 +507,7 @@ ALTER TABLE `time_slot`
 -- Constraints for table `emergency_contact`
 --
 ALTER TABLE `emergency_contact`
-  ADD CONSTRAINT `t1` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`);
+  ADD CONSTRAINT `t1` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `employee_per_service`
@@ -489,7 +520,7 @@ ALTER TABLE `employee_per_service`
 -- Constraints for table `emp_leave`
 --
 ALTER TABLE `emp_leave`
-  ADD CONSTRAINT `t10` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`);
+  ADD CONSTRAINT `t10` FOREIGN KEY (`emp_id`) REFERENCES `service_employee` (`emp_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `reservation`
@@ -502,14 +533,15 @@ ALTER TABLE `reservation`
 -- Constraints for table `reservation_time_slot`
 --
 ALTER TABLE `reservation_time_slot`
-  ADD CONSTRAINT `t8` FOREIGN KEY (`reservation_id`) REFERENCES `reservation` (`reservation_id`),
+  ADD CONSTRAINT `t8` FOREIGN KEY (`reservation_id`) REFERENCES `reservation` (`reservation_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `t9` FOREIGN KEY (`timeslot_no`) REFERENCES `time_slot` (`timeslot_no`);
 
 --
 -- Constraints for table `vehicle`
 --
 ALTER TABLE `vehicle`
-  ADD CONSTRAINT `t5` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`);
+  ADD CONSTRAINT `t5` FOREIGN KEY (`cust_id`) REFERENCES `customer` (`cust_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
