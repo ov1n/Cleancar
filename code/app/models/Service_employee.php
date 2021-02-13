@@ -181,4 +181,14 @@ class Service_employee extends Model
 
         $this->delete('service_employee', $condition);
     }
+
+    function change_password($curr_pwd, $con_pwd)
+    {
+        $query = "UPDATE service_employee SET password='$con_pwd' WHERE password='$curr_pwd';";
+        $result = mysqli_query($this->conn, $query);
+        if (!$result) {
+            printf("Error :%s\n", mysqli_error($this->conn));
+            exit();
+        }
+    }
 }

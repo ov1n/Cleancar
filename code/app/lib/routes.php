@@ -24,6 +24,11 @@
         Session::init();
         Login::authenticate();
     });
+
+    Route::set('change_password_auth', function () {
+    Session::init();
+    ChangePassword::authenticate();
+});
     
     //home page
     Route::set('home',function(){

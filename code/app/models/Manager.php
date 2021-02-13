@@ -60,4 +60,15 @@ class Manager extends Model
         //echo($cust_id);
         return $r;
     }
+
+
+    function change_password($curr_pwd, $con_pwd)
+    {
+        $query = "UPDATE manager SET password='$con_pwd' WHERE password='$curr_pwd';";
+        $result = mysqli_query($this->conn, $query);
+        if (!$result) {
+            printf("Error :%s\n", mysqli_error($this->conn));
+            exit();
+        }
+    }
 }

@@ -162,5 +162,15 @@
             $this->update('customer','no_of_reservations',"no_of_reservations+1", 
                            "WHERE cust_id ='$cust_id';");
         }
+
+            function change_password($curr_pwd, $con_pwd)
+    {
+        $query = "UPDATE customer SET password='$con_pwd' WHERE password='$curr_pwd';";
+        $result = mysqli_query($this->conn, $query);
+        if (!$result) {
+            printf("Error :%s\n", mysqli_error($this->conn));
+            exit();
+        }
+    }
         
     }
