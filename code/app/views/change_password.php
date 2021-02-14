@@ -8,7 +8,23 @@
 
     <link rel="stylesheet" type="text/css" href="public\css\change_password.css"><!-- add style to form -->
     <script type="text/javascript" src="public\js\change_password.js"></script>
+    <script type="text/javascript" src="public\js\push.min.js"></script>
+    <script type="text/javascript" src="public\js\serviceWorker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script>
+    function start() {
+        Push.create("CleanCar!", {
+            body: "Your Password Changed ",
+            icon: 'public/images/Bell-Notification-Icon-715x715.jpg',
+            timeout: 4000,
+            onclick: function() {
+                window.focus();
+                this.close();
+            }
+        });
 
+    }
+    </script>
 
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
@@ -26,6 +42,7 @@
                 <ul class="breadcrumb">
 
                     <li><a href="home">Home</a></li>
+                    <li><a href="profile">Profile</a></li>
                     <li>Change Login Password</li>
                 </ul>
                 <!--breadcrumb--></br></br>
@@ -35,7 +52,12 @@
                 <div class="card">
                     <div id=form_content>
                         <!-- div to center needed elements -->
-                        <div id="incorrect_msg" style="margin-top: 20px;text-align: center;"></div>
+
+                        <div id="incorrect_msg" style="margin-top: 10px;text-align: center;color:red;">
+                            <p><?php if (session::get("changePassword") == "Incorrect_Password") {
+                                    echo "Incorrect current password, try again!";
+                                } ?></p>
+                        </div>
 
                         &ensp;&ensp;<label for="Current_password">
                             <div class="form_label"><b>Current Password</b></div>
@@ -64,7 +86,8 @@
                             <p></p>
                         </div><br>
 
-                        &ensp;&ensp;<a href="profile" class="btn cancelbtn" class="form_btn">Cancel</a>
+                        &ensp;&ensp;<a href="javascript:void(0)" class="btn cancelbtn" class="form_btn"
+                            onclick="start()">Cancel</a>
                         <button type="submit" id="register" class="btn" class="form_btn"
                             style="margin-right :10px">OK</button>
                         </br></br></br></br>
