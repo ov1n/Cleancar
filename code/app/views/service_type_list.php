@@ -62,7 +62,7 @@
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
-
+                        <?php if ($array) { ?>
                         <?php foreach ($array as $s_type) { ?>
                         <tr>
                             <td>
@@ -97,6 +97,13 @@
                                     class="btn deletebtn">Delete</a>
                             </td>
                         </tr>
+                        <?php } ?>
+                        <?php } ?>
+                        <?php if (!$array) { ?>
+                        <p style="color: red;font-size:large;padding:10px;font-weight:100;">
+                            <b> <?php echo "Record Not Found !"; ?>
+                            </b>
+                        </p>
                         <?php } ?>
                     </table>
                 </div>
