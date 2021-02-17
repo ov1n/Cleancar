@@ -206,6 +206,12 @@
         AddServiceType::update();
     });
 
+    Route::set('search_data', function () {
+
+    Session::init();
+    ServiceType::search('service_type_list', 'manager');
+    });
+
     Route::set('change_password',function(){
         Session::init();
         Controller::create_view('change_password','loggedin');
