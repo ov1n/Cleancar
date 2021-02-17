@@ -82,7 +82,7 @@
 
         function view_no_of_leave($id){
            
-            $condition = "WHERE emp_id = $id;";
+            $condition = "WHERE emp_id = '$id' OR email= '$id'";
             
             $result= $this->select("*",'service_employee',$condition);
             
