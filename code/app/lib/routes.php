@@ -447,6 +447,11 @@
         Session::init();
         Controller::create_view('delay_timetable_manager','manager');
     });
+    Route::set('search_emp_data', function () {
+
+    Session::init();
+    EmployeeList::search('employee_list', 'manager');
+});
 
     Route::set('add_leave_manager',function(){
         Session::init();

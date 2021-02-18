@@ -49,5 +49,18 @@
             require_once("./views/$view_name.php");
             
         }
+
+         public static function search($view_name, $role)
+    {
+        $search_emp_key = $_POST['search'];
+        $employee = new Service_employee();
+        $array = $employee->get_search_emp_data($search_emp_key);
+        if ($array) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/$view_name.php");
+            Session::set("serh_error", "search_error");
+        }
+    }
         
     }
