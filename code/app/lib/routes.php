@@ -231,6 +231,12 @@
         Session::init();
         Controller::create_view('receptionist_home','receptionist');
     });
+    
+    Route::set('search_invoice_data', function () {
+
+    Session::init();
+    Invoice_bill::search('invoice_report_manager', 'manager');
+    });
 
     Route::set('manager',function(){
 

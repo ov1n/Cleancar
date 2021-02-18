@@ -107,6 +107,19 @@
 
         }
 
+        public static function search($view_name, $role)
+    {
+        $search_key = $_POST['search'];
+        $bill = new Invoice();
+        $array = $bill->get_search_data($search_key);
+        if ($array) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/$view_name.php");
+            Session::set("serh_error", "search_error");
+        }
+    }
+
     }
 
 ?>
