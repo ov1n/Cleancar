@@ -28,10 +28,13 @@
             
             //get each field from form
             $reservation_id=$_POST['reservation_id'];
-            $vehicle_no=$_POST['veh_Number'];
-            $vehicle_model=$_POST['veh_Model'];
             $customer_name=$_POST['name'];
             $contact_no=$_POST['contact_number'];
+            $vehicle_no=$_POST['veh_Number'];
+            $vehicle_model=$_POST['veh_Model'];
+            $emp_id=$_POST['emp_id'];
+            $service_charge=$_POST['service_charge'];
+            $aditional_charges=$_POST['aditional_charges'];
             $net_amount=$_POST['net_amount'];
 
             //get date of today for registered date
@@ -62,7 +65,7 @@
 
             $pdf -> SetFont('Times','','14');
             $pdf -> cell(28, 10, "Invoice No :-", 0 ,0,'L');
-            $pdf -> cell(60, 10, $invoice_no , 0 ,0,'L');
+            $pdf -> cell(48, 10, $invoice_no , 0 ,0,'L');
             $pdf -> cell(20, 10, "Date :-", 0 ,0,'R');
             $pdf -> cell(30, 10, $today , 0 ,1,'L');
 
@@ -98,14 +101,37 @@
 
 
             $pdf ->Ln(20);
-
+            $pdf -> SetFont('Times','','14');
+            $pdf -> cell(78, 10, "Service Charge", 1 ,0,'L');
+            $pdf -> cell(50, 10, $service_charge, 1 ,1,'R');
+            $pdf -> cell(78, 10, "Aditional Charges", 1 ,0,'L');
+            $pdf -> cell(50, 10, $aditional_charges, 1 ,1,'R');
             $pdf -> SetFont('Times','B','14');
-            $pdf -> cell(60, 10, "Net Amount", 1 ,0,'C');
-            $pdf -> cell(60, 10, $net_amount, 1 ,1,'L');
+            $pdf -> cell(78, 10, "Total Amount", 1 ,0,'L');
+            $pdf -> cell(50, 10, $net_amount, 1 ,1,'R');
+
+            $pdf ->Ln(30);
+            $x = $pdf -> GetX();
+            $y = $pdf -> GetY();
+            $pdf ->Line( $x, $y, $x+128, $y );
+            $pdf ->Line( $x, $y+1, $x+128, $y+1 );
 
             $pdf -> OutPut();
 
         }
+
+        public static function search($view_name, $role)
+    {
+        $search_key = $_POST['search'];
+        $bill = new Invoice();
+        $array = $bill->get_search_data($search_key);
+        if ($array) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/$view_name.php");
+            Session::set("serh_error", "search_error");
+        }
+    }
 
     }
 

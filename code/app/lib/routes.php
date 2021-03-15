@@ -206,6 +206,12 @@
         AddServiceType::update();
     });
 
+    Route::set('search_data', function () {
+
+    Session::init();
+    ServiceType::search('service_type_list', 'manager');
+    });
+
     Route::set('change_password',function(){
         Session::init();
         Controller::create_view('change_password','loggedin');
@@ -224,6 +230,12 @@
         //start session
         Session::init();
         Controller::create_view('receptionist_home','receptionist');
+    });
+    
+    Route::set('search_invoice_data', function () {
+
+    Session::init();
+    Invoice_bill::search('invoice_report_manager', 'manager');
     });
 
     Route::set('manager',function(){
@@ -441,6 +453,11 @@
         Session::init();
         Controller::create_view('delay_timetable_manager','manager');
     });
+    Route::set('search_emp_data', function () {
+
+    Session::init();
+    EmployeeList::search('employee_list', 'manager');
+});
 
     Route::set('add_leave_manager',function(){
         Session::init();
