@@ -49,20 +49,29 @@
                 &ensp;&ensp;<label for="reservation_id"><div class="form_label"><b>Reservation Id</b></div></label>
                 <input type="text" placeholder="Enter the Reservation Id" name="reservation_id" id="reservation_id" required ></br>
 
-                &ensp;&ensp;<label for="veh_Number"><div class="form_label"><b>Vehicle Number</b></div></label>
-                <input type="text" placeholder="Enter the Vehicle Number" name="veh_Number" id="veh_Number" required ></br>
-
-                &ensp;&ensp;<label for="veh_Model"><div class="form_label"><b>Vehicle Model</b></div></label>
-                <input type="text" placeholder="Enter the Vehicle Model" name="veh_Model" id="veh_Model" required ></br>
-
                 &ensp;&ensp;<label for="name"><div class="form_label"><b>Customer Name</b></div></label>
                 <input type="text" placeholder="Enter the Customer Name" name="name" id="name" required ></br>
 
                 &ensp;&ensp;<label for="contact_number"><div class="form_label"><b>Contact Number</b></div></label>
                 <input type="text" placeholder="Enter the Contact Number" name="contact_number" id="contact_number" required ></br>
 
-                &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Net Amount</b></div></label>
-                <input type="text" placeholder="Enter the Net Amount" name="net_amount" id="net_amount" required ></br>
+                &ensp;&ensp;<label for="veh_Number"><div class="form_label"><b>Vehicle Number</b></div></label>
+                <input type="text" placeholder="Enter the Vehicle Number" name="veh_Number" id="veh_Number" required ></br>
+
+                &ensp;&ensp;<label for="veh_Model"><div class="form_label"><b>Vehicle Model</b></div></label>
+                <input type="text" placeholder="Enter the Vehicle Model" name="veh_Model" id="veh_Model" required ></br>
+
+                &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Handled By</b></div></label>
+                <input type="text" placeholder="Enter the Employee id" name="emp_id" id="emp_id" required ></br>
+
+                &ensp;&ensp;<label for="service_charge"><div class="form_label"><b>Service Charge</b></div></label>
+                <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required ></br>
+
+                &ensp;&ensp;<label for="aditional_charges"><div class="form_label"><b>Aditional Charges</b></div></label>
+                <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" ></br>
+
+                &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Total Amount</b></div></label>
+                <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>
 
                 <a href="receptionist" class="btn cancelbtn" class="form_btn" > Cancel </a>
                 <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button> </br></br></br></br>
