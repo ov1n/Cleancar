@@ -14,20 +14,12 @@ class Service_type extends Model
     {
 
         //assign connectivity to a variable
-        $conn = Database::conn();
 
         //ONLY GETS CAR FOR NOW
-        $query = "SELECT type_id,duration,price FROM service_type 
-                    WHERE type_name='$type_name'
-                    AND vehicle_category='car';";
-        $result = mysqli_query($conn, $query);
-
-        //debugging
-        if (!$result) {
-            printf("Error: %s\n", mysqli_error($conn));
-            exit();
-        }
-
+        $condition="WHERE type_name='$type_name'
+                    AND vehicle_category='Motor Car';";
+        
+        $result= $this->select(array('type_id','duration','price'),'service_type',$condition);
         //get necessary elements in an array
         $r = mysqli_fetch_array($result);
 

@@ -255,7 +255,21 @@
                 <a href="view_reservation">View Reservation</a>
             </div>
         </div>
-        <a href="home">Home</a>
+        <?php 
+        //function to redirect home button according to role logged in
+        if(Session::get('role')=='customer'){
+            $redirect='home';
+        }else if(Session::get('role')=='receptionist'){
+            $redirect='receptionist';
+        }else if(Session::get('role')=='manager'){
+            $redirect='manager';
+        }else if(Session::get('role')=='employee'){
+            $redirect='employee';
+        }else{
+            $redirect='home';
+        }
+        ?>
+        <a href=<?php echo($redirect) ?>>Home</a>
         <img src="public\images\2222.png">
     </div>
 

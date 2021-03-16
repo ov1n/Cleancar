@@ -129,13 +129,15 @@
             $result= mysqli_query($this->conn,$sql);
 
             if (mysqli_errno($this->conn) == 1062) {
-                print 'no way!';
+                print 'duplicate entry';
                 exit();
             }
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($this->conn));
+                printf("Error: insert wrong%s\n", mysqli_error($this->conn));
                 exit();
+            }else{
+                echo("no error");
             }
 
             return $result;
