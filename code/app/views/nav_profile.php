@@ -243,9 +243,7 @@
         </div>
 
         <!--loged user name display-->
-        <p style="width: 150px;float: right;text-align: center;color: white">
-            <?php echo session::get('log_name') ?>
-        </p>
+        <a href="#"><?php echo session::get('log_name') ?></a>
         <a href="contact_us">Contact Us</a>
         <a href="about_us">About Us</a>
         <div class="dropdown">
