@@ -394,7 +394,7 @@
 
     Route::set('employee_leave_list',function(){
         Session::init();
-        EmployeeLeaveList::create_view('employee_leave_list','receptionist');
+        EmployeeLeaveList::create_view('employee_leave_list','manager');
     });
 
     Route::set('add_bill',function(){
