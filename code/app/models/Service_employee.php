@@ -147,6 +147,23 @@ class Service_employee extends Model
         $this->insert('service_employee', $columns, $values);
     }
 
+    function get_search_emp_data($search_key)
+    {
+        $conn = Database::conn();
+        $condition = "WHERE (emp_id='$search_key' OR email='$search_key' OR NIC_no='$search_key');";
+        $result = $this->select("*", 'service_employee', $condition);
+
+        //get details into an associative array
+        $details = $result->fetch_all(MYSQLI_ASSOC);
+        //print_r($details);
+
+        //Return array to be fetched and displayed
+        if ($details) {
+            //echo("go to view");
+            return ($details);
+        }
+    }
+
     function update_record($emp_id, $first_name, $last_name, $address, $email, $home_tel_no, $mobile_tel_no, $nic_no, $gender, $dob)
     {
 
@@ -180,5 +197,15 @@ class Service_employee extends Model
         $condition = "WHERE (emp_id='$employeeid')";
 
         $this->delete('service_employee', $condition);
+    }
+
+    function change_password($curr_pwd, $con_pwd)
+    {
+        $query = "UPDATE service_employee SET password='$con_pwd' WHERE password='$curr_pwd';";
+        $result = mysqli_query($this->conn, $query);
+        if (!$result) {
+            printf("Error :%s\n", mysqli_error($this->conn));
+            exit();
+        }
     }
 }

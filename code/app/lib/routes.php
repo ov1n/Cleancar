@@ -24,6 +24,11 @@
         Session::init();
         Login::authenticate();
     });
+
+    Route::set('change_password_auth', function () {
+    Session::init();
+    ChangePassword::authenticate();
+});
     
     //home page
     Route::set('home',function(){
@@ -152,6 +157,7 @@
         $tdate = strtotime($tempdate);
         //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
         Make_reservation::insert();
+        //var_dump($_SESSION);
         header("Location:confirm_reservation");
     });
 
@@ -201,6 +207,12 @@
         AddServiceType::update();
     });
 
+    Route::set('search_data', function () {
+
+    Session::init();
+    ServiceType::search('service_type_list', 'manager');
+    });
+
     Route::set('change_password',function(){
         Session::init();
         Controller::create_view('change_password','loggedin');
@@ -219,6 +231,12 @@
         //start session
         Session::init();
         Controller::create_view('receptionist_home','receptionist');
+    });
+    
+    Route::set('search_invoice_data', function () {
+
+    Session::init();
+    Invoice_bill::search('invoice_report_manager', 'manager');
     });
 
     Route::set('manager',function(){
@@ -318,6 +336,11 @@
         Session::init();
         EmployeeList::view('employee_update','manager');
     });
+    
+    Route::set('leave_status', function () {
+    Session::init();
+    EmployeeLeaveList::update_leave_status('employee_leave_list', 'manager');
+    });
 
     Route::set('employee_update_recep',function(){ 
         Session::init();
@@ -376,7 +399,7 @@
 
     Route::set('employee_leave_list',function(){
         Session::init();
-        EmployeeLeaveList::create_view('employee_leave_list','receptionist');
+        EmployeeLeaveList::create_view('employee_leave_list','manager');
     });
 
     Route::set('add_bill',function(){
@@ -387,7 +410,7 @@
 
     Route::set('calendar',function(){
         Session::init();
-        Controller::create_view('customer_calendar','customer');
+        Calendar::create_view('customer_calendar','customer');
     });
 
     Route::set('add_leave_',function(){
@@ -436,6 +459,11 @@
         Session::init();
         Controller::create_view('delay_timetable_manager','manager');
     });
+    Route::set('search_emp_data', function () {
+
+    Session::init();
+    EmployeeList::search('employee_list', 'manager');
+});
 
     Route::set('add_leave_manager',function(){
         Session::init();

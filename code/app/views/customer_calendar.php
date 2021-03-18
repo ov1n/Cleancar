@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="public/css/calendar/jquery-pseudo-ripple.css"> <!-- SHADOW ANIMATION -->
         <link rel="stylesheet" href="public/css/calendar/calendar_construct.css">
 
+        <!-- style needed for calendar tables -->
+        <link rel="stylesheet" href="public/css/calendar_table.css">
 
 
         <!-- get imported jquery -->
@@ -30,6 +32,7 @@
     <body>
       <?php
         //echo($_SESSION["uname"]);
+        //var_dump(Session::get('full_service_slots'));
         
         //details test
         //echo(($_SESSION["details"])["first_name"]);
@@ -82,6 +85,35 @@
 
                 <div >
                   <h3>Date</h3>
+
+                  <table>
+                    <thead>
+                      <tr>
+                        <th>timeslots</th>
+                        <th>Monday</th>
+                        <th>header3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>text1.1</td>
+                        <td>text1.2</td>
+                        <td>text1.3</td>
+                      </tr>
+                      <tr>
+                        <td>text2.1</td>
+                        <td>text2.2</td>
+                        <td>text2.3</td>
+                      </tr>
+                      <tr>
+                        <td>text3.1</td>
+                        <td>text3.2</td>
+                        <td>text3.3</td>
+                      </tr>
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
                   <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
                 </div>
 

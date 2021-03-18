@@ -3,42 +3,28 @@
 
     class Reservation extends Model{
 
-        //automatically create db object
-        public function __construct(){
-                //$db=new Database();
-        }
-
         //insert into table
         function insert_reservation($is_advance_paid,$cust_id,$added_date,$service_id){
 
             //assign connectivity to a variable
-            $conn=Database::conn();
             //echo($added_date);
-            //FIX BY ADDING DURATION
-            $query="INSERT INTO reservation (`is_advance_paid`, `cust_id`, `added_date`, `service_id`) VALUES ('0', $cust_id,'$added_date',$service_id);";
-            $result= mysqli_query($conn,$query);
-
+            //FIX BY ADDING 
+            $this->insert('reservation',array("is_advance_paid", "cust_id", "added_date", "service_id"),array('0', $cust_id,$added_date,$service_id));
+            //$query="INSERT INTO reservation (`is_advance_paid`, `cust_id`, `added_date`, `service_id`) VALUES ('0', $cust_id,'$added_date',$service_id);";
+            //$result= mysqli_query($conn,$query);
             //debugging
-            if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
-                exit();
-            }
+            
 
             //if no error get the reservation id from that table
-            $query2="SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'cleancar' AND TABLE_NAME = 'reservation'";
-
-            $result2= mysqli_query($conn,$query2);
-
-            //debugging
-            if (!$result2) {
-                printf("Error: %s\n", mysqli_error($conn));
-                exit();
-            }
+            $fields=array('first_name','last_name','email','mobile_tel_no');
+            $condition="WHERE TABLE_SCHEMA = 'cleancar' AND TABLE_NAME = 'reservation';";
+            $result2= $this->select('AUTO_INCREMENT','INFORMATION_SCHEMA.TABLES',$condition);
+            //$query2="SELECT `AUTO_INCREMENT` FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = 'cleancar' AND TABLE_NAME = 'reservation'";
 
             //get the sole element reservation id and return it 
             $r = mysqli_fetch_array($result2);
             $res_id=array_shift( $r );
-
+            echo($res_id);
             return $res_id;
         }
 

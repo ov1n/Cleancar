@@ -6,15 +6,13 @@
         //getting all details of Invoice
         function get_bill_details(){
 
-            //assign connectivity to a variable
-            $conn=Database::conn();
                
             $query="SELECT* FROM invoice";
-            $result= mysqli_query($conn,$query);
+            $result= mysqli_query($this->conn,$query);
             
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }
 
@@ -29,28 +27,42 @@
             }
 
         }
-        // function insert($bill_no,$reservation_id,$vehicle_no,$vehicle_model,$customer_name,$contact_no,$net_amount){
-            
-        //     //assign connectivity to a variable
-        //     $conn=Database::conn();
 
-        //     //get date of today for registered date
-        //     $today=date('Y-m-d');
-        //     // echo($today);
-            
-        //     $query_bill="INSERT INTO invoice(bill_no,reservation_id,vehicle_no,vehicle_model,customer_name,contact_no,net_amount,bill_date) 
-        //     VALUES('$bill_no','$reservation_id','$vehicle_no','$vehicle_model','$customer_name','$contact_no','$net_amount','$today');";
-            
-        //     //echo($query);
+        function get_invoice_number(){
+            $query="SELECT MAX(invoice_no) FROM invoice;";
+            $result= mysqli_query($this->conn,$query);
 
-        //     $result= mysqli_query($conn,$query_bill);
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
 
-        //     //debugging
-        //     if (!$result) {
-        //         printf("Error: %s\n", mysqli_error($conn));
-        //         exit();
-        //     }
-        // }
+            $r = mysqli_fetch_array($result);
+            $invoice_no=array_shift( $r );
+
+            if($invoice_no){
+                //echo("go to view");
+                return($invoice_no);
+            }
+        }
+
+        function get_search_data($search_key)
+        {
+        $conn = Database::conn();
+        $condition = "WHERE (invoice_no='$search_key' OR bill_no='$search_key' OR vehicle_no='$search_key' OR customer_name='$search_key');";
+        $result = $this->select("*", 'invoice', $condition);
+
+        //get details into an associative array
+        $details = $result->fetch_all(MYSQLI_ASSOC);
+        //print_r($details);
+
+        //Return array to be fetched and displayed
+        if ($details) {
+            //echo("go to view");
+            return ($details);
+        }
+        }
 
     }
 
