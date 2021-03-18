@@ -14,7 +14,7 @@
             //assign today date to a variable
             $today=date('Y-m-d');
                
-            $condition = "WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > $today;";
+            $condition = "WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > $todaSy;";
             
             $result= $this->select("*",'emp_leave',$condition);
             
@@ -49,7 +49,7 @@
 
             $today=date('Y-m-d');
             //assign connectivity to a variable
-            $query="SELECT emp_leave.emp_id,first_name,last_name,leave_date,type,leave_time,reason, is_accepted FROM emp_leave INNER JOIN service_employee ON emp_leave.emp_id = service_employee.emp_id WHERE NOT emp_leave.is_accepted ='accepted' AND NOT emp_leave.is_accepted ='rejected'";
+            $query="SELECT emp_leave.emp_id,first_name,last_name,leave_date,type,leave_time,reason, is_accepted FROM emp_leave INNER JOIN service_employee ON emp_leave.emp_id = service_employee.emp_id WHERE NOT emp_leave.is_accepted ='accepted' AND NOT emp_leave.is_accepted ='rejected' AND leave_date > '$today';";
             $result= mysqli_query($this->conn,$query);
             
             //debugging

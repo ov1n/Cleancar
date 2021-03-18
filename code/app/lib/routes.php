@@ -381,7 +381,7 @@
  
         Session::init();
         ServiceType::delete('service_type_list','manager');
-   });
+    });
 
 
    Route::set('employee_list_recep',function(){
@@ -441,8 +441,8 @@
 
     Route::set('timeslot_list',function(){
 
-    Session::init();
-    Timeslot::create_view('timeslot_list','manager');
+        Session::init();
+        Timeslot::create_view('timeslot_list','manager');
     });
 
     Route::set('employee_calendar',function(){
@@ -485,6 +485,12 @@
      Route::set('leave_delete',function(){
         Session::init();
         EmployeeLeave::cancel_leave('emp_leave');
+    });
+
+    Route::set('delete_timeslot',function(){
+ 
+        Session::init();
+        Timeslot::delete('timeslot_list');
     });
 
     
