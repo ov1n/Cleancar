@@ -51,6 +51,15 @@
 
         }
 
+        public static function delete($view_name){
+        
+        $timeslot = $_GET['timeslot_no'];
+
+        $delete_timeslot = new time_slot();
+        $delete_timeslot->delete_timeslot($timeslot);
+        
+        }
+
     }
 
 ?>
