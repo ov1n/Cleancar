@@ -27,6 +27,7 @@
              
               <li><a href="home">Home</a></li>
               <li><a href="manager">Manager</a></li>
+              <li><a href="timeslot_list">Timeslot List</a></li>
               <li>Add Timeslot</li>
             </ul><!-- breadcrumb -->
            <h1>Add Time Slots <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></h1> <hr>
@@ -35,7 +36,7 @@
               <div id=form_content> <!-- div to center needed elements -->
 
                 &ensp;&ensp;<label for="start_time"><div class="form_label"><b>Start Time</b></div></label>
-                <input type="text" placeholder="Enter starting time" name="start_time" id="end_time" required size="50"></br>
+                <input type="text" placeholder="Enter starting time" name="start_time" id="start_time" required size="50"></br>
 
                 &ensp;&ensp;<label for="end_time"><div class="form_label"><b>End Time</b></div></label>
                 <input type="text" placeholder="Enter ending time" name="end_time" id="end_time" required size="50"></br>
@@ -43,9 +44,9 @@
                 &ensp;&ensp;<label for="lift_no"><div class="form_label"><b>Lift No</b></div></label>
                 <select name="lift_no" id="lift_no">
                   <option value="" selected disabled hidden style="color:gray">Select Lift</option>
-                  <option value="L_01">L_01</option>
-                  <option value="L_02">L_02</option>
-                  <option value="L_03">L_03</option>
+                  <option value="1">L_01</option>
+                  <option value="2">L_02</option>
+                  <option value="3">L_03</option>
                 </select><br>
 
                 <button type="submit" class="btn" class="form_btn" style="margin-right :10px">Add</button></br></br> </br></br>
@@ -58,7 +59,7 @@
         </div><!-- container -->
       </form>
 
-      <?php 
+      <?php
           //include nav bar externally 
           include("nav_profile.php");
       ?>
