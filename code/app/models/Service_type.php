@@ -27,6 +27,19 @@ class Service_type extends Model
         return $r;
     }
 
+    function get_duration_from_name($name){
+
+        $condition="WHERE type_name='$name';";
+
+        $result= $this->select('DISTINCT duration','service_type',$condition);
+
+        $r = mysqli_fetch_array($result);
+        $dur=array_shift( $r );
+        
+        //echo($dur);
+        return $dur;
+    }
+
     //get details from service_id
     function get_details_id($type_id)
     {

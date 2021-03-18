@@ -32,6 +32,7 @@
     <body>
       <?php
         //echo($_SESSION["uname"]);
+        //var_dump(Session::get('full_service_slots'));
         
         //details test
         //echo(($_SESSION["details"])["first_name"]);

@@ -405,7 +405,7 @@
 
     Route::set('calendar',function(){
         Session::init();
-        Controller::create_view('customer_calendar','customer');
+        Calendar::create_view('customer_calendar','customer');
     });
 
     Route::set('add_leave_',function(){

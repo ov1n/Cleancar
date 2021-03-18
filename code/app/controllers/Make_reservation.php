@@ -14,11 +14,6 @@
 
     class Make_reservation extends Controller{
 
-        public function __construct(){
-            //
-           
-        }
-
         //overloading create view
         public static function create_view($view_name,$role){
 
