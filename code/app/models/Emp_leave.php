@@ -79,6 +79,21 @@
             $this->delete('emp_leave',$condition);
         }
 
+        function update_leaves_status($employeeid, $leave_date, $leave_status)
+        {
+
+
+        //$condition = "WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
+        $rec_update = "UPDATE emp_leave SET is_accepted='$leave_status' WHERE (emp_id='$employeeid') AND (leave_date='$leave_date');";
+        $result = mysqli_query($this->conn, $rec_update);
+
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+        }
+        // $this->update('emp_leave', 'is_accepted', 'Accepted', $condition);
+        }
+
         function view_no_of_leave($id){
            
             $condition = "WHERE emp_id = '$id' OR email= '$id'";

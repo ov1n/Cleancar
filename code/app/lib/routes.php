@@ -336,6 +336,11 @@
         Session::init();
         EmployeeList::view('employee_update','manager');
     });
+    
+    Route::set('leave_status', function () {
+    Session::init();
+    EmployeeLeaveList::update_leave_status('employee_leave_list', 'manager');
+    });
 
     Route::set('employee_update_recep',function(){ 
         Session::init();
