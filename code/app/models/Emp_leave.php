@@ -106,11 +106,7 @@
             }
         }
 
-        if (!$up_result) {
-            printf("Error: %s\n", mysqli_error($this->conn));
-            exit();
-        }
-        
+      
         if (!$result) {
             printf("Error: %s\n", mysqli_error($this->conn));
             exit();
