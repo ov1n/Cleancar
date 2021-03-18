@@ -70,11 +70,10 @@
                             </td>
 
                             <td style=" text-align: center;">
-                                <a href="update_emp?emp_id=" name="update" class="btn updatelbtn">Update</a>
+                                <a href="update_timeslot?timeslot_no=<?php echo "$timeslot[timeslot_no]"; ?>" name="update" class="btn updatelbtn">Update</a>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="employee_delete?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete"
-                                    class="btn deletebtn">Delete</a>
+                                <a href="delete_timeslot?timeslot_no=<?php echo "$timeslot[timeslot_no]"; ?>" name="delete" class="btn deletebtn">Delete</a>
                             </td>
                         </tr>
                         <?php } ?>

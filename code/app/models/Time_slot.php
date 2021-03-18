@@ -136,6 +136,15 @@
             
             
         }
+        function delete_timeslot($timeslot_no)
+    {
+
+        //$query="DELETE FROM service_type WHERE (type_id='$type_id')";
+
+        $condition = "WHERE (timeslot_no='$timeslot_no')";
+
+        $this->delete('time_slot', $condition);
+    }
 
 
     }
