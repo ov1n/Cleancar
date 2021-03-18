@@ -16,7 +16,8 @@
     <body>
     
       <!-- onsubmit="send_leave_data() -->
-      <form name="add_leave_form" id="add_leave_form" method = "post" action="add_leave_">   <!-- call function in js file -->  
+      <!-- action="add_leave_" -->
+      <form name="add_leave_form" id="add_leave_form" method = "post" onsubmit="send_leave_data()">   <!-- call function in js file -->  
       <div class="container">  
          
           <div class="background">
@@ -50,6 +51,7 @@
 
                 &ensp;&ensp;<label for="leave_time"><div class="form_label"><b>Select Time</b></div></label>
                 <select name="leave_time" id="leave_time">
+                  if 
                   <option value="08:00:00">full day</option>
                   <option value="08:00:00">08:00 am - 12:00am</option>
                   <option value="12:00:00">12:00 pm - 05:00pm</option>
