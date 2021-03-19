@@ -433,7 +433,6 @@
         EmployeeLeave::no_of_leave('leave_static');
     });
 
-    
     Route::set('time_table',function(){
         Session::init();
         Controller::create_view('time_table','manager');
