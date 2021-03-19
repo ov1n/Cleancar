@@ -157,7 +157,8 @@
         $tdate = strtotime($tempdate);
         //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
         Make_reservation::insert();
-        //header("Location:confirm_reservation");
+        //var_dump($_SESSION);
+        header("Location:confirm_reservation");
     });
 
     //final view of reservation
@@ -335,6 +336,11 @@
         Session::init();
         EmployeeList::view('employee_update','manager');
     });
+    
+    Route::set('leave_status', function () {
+    Session::init();
+    EmployeeLeaveList::update_leave_status('employee_leave_list', 'manager');
+    });
 
     Route::set('employee_update_recep',function(){ 
         Session::init();
@@ -375,7 +381,7 @@
  
         Session::init();
         ServiceType::delete('service_type_list','manager');
-   });
+    });
 
 
    Route::set('employee_list_recep',function(){
@@ -393,7 +399,7 @@
 
     Route::set('employee_leave_list',function(){
         Session::init();
-        EmployeeLeaveList::create_view('employee_leave_list','receptionist');
+        EmployeeLeaveList::create_view('employee_leave_list','manager');
     });
 
     Route::set('add_bill',function(){
@@ -404,7 +410,7 @@
 
     Route::set('calendar',function(){
         Session::init();
-        Controller::create_view('customer_calendar','customer');
+        Calendar::create_view('customer_calendar','customer');
     });
 
     Route::set('add_leave_',function(){
@@ -435,8 +441,8 @@
 
     Route::set('timeslot_list',function(){
 
-    Session::init();
-    Timeslot::create_view('timeslot_list','manager');
+        Session::init();
+        Timeslot::create_view('timeslot_list','manager');
     });
 
     Route::set('employee_calendar',function(){
@@ -479,6 +485,12 @@
      Route::set('leave_delete',function(){
         Session::init();
         EmployeeLeave::cancel_leave('emp_leave');
+    });
+
+    Route::set('delete_timeslot',function(){
+ 
+        Session::init();
+        Timeslot::delete('timeslot_list');
     });
 
     

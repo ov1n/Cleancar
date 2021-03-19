@@ -14,7 +14,7 @@
             //assign today date to a variable
             $today=date('Y-m-d');
                
-            $condition = "WHERE emp_id = $id AND is_accepted = 'accepted' AND leave_date > $today;";
+            $condition = "WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > $todaSy;";
             
             $result= $this->select("*",'emp_leave',$condition);
             
@@ -49,13 +49,12 @@
 
             $today=date('Y-m-d');
             //assign connectivity to a variable
-               
-            $query="SELECT emp_leave.emp_id,first_name,last_name,leave_date,type,leave_time,reason, is_accepted FROM emp_leave INNER JOIN service_employee ON emp_leave.emp_id = service_employee.emp_id WHERE NOT emp_leave.is_accepted ='accepted'";
-            $result= mysqli_query($conn,$query);
+            $query="SELECT emp_leave.emp_id,first_name,last_name,leave_date,type,leave_time,reason, is_accepted FROM emp_leave INNER JOIN service_employee ON emp_leave.emp_id = service_employee.emp_id WHERE NOT emp_leave.is_accepted ='accepted' AND NOT emp_leave.is_accepted ='rejected' AND leave_date > '$today';";
+            $result= mysqli_query($this->conn,$query);
             
             //debugging
             if (!$result) {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }
 
@@ -78,6 +77,40 @@
             $condition="WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
 
             $this->delete('emp_leave',$condition);
+        }
+
+        function update_leaves_status($employeeid, $leave_date, $leave_status, $leave_type)
+         {
+
+
+        //$condition = "WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
+        $rec_update = "UPDATE emp_leave SET is_accepted='$leave_status' WHERE (emp_id='$employeeid') AND (leave_date='$leave_date');";
+        $result = mysqli_query($this->conn, $rec_update);
+
+        if ($leave_status == 'Accepted') {
+
+            if ($leave_type == 'Full_leave') {
+
+                $rec_update = "UPDATE service_employee SET no_of_leaves_fullday = no_of_leaves_fullday + 1 WHERE emp_id='$employeeid';";
+                $up_result = mysqli_query($this->conn, $rec_update);
+            
+            } elseif ($leave_type == 'half_day') {
+
+                $rec_update = "UPDATE service_employee SET no_of_leaves_halfday = no_of_leaves_halfday + 1 WHERE emp_id='$employeeid';";
+                $up_result = mysqli_query($this->conn, $rec_update);
+            
+            } else {
+
+                $rec_update = "UPDATE service_employee SET no_of_leaves_short = no_of_leaves_short + 1 WHERE emp_id='$employeeid';";
+                $up_result = mysqli_query($this->conn, $rec_update);
+            }
+        }
+
+      
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+        }
         }
 
         function view_no_of_leave($id){

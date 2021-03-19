@@ -16,6 +16,8 @@
         <link rel="stylesheet" href="public/css/calendar/jquery-pseudo-ripple.css"> <!-- SHADOW ANIMATION -->
         <link rel="stylesheet" href="public/css/calendar/calendar_construct.css">
 
+        <!-- style needed for calendar tables -->
+        <link rel="stylesheet" href="public/css/calendar_table.css">
 
 
         <!-- get imported jquery -->
@@ -23,13 +25,17 @@
         <!-- get external js file -->
         <script type="text/javascript" src="public\js\reservation.js"></script>
         <script src="public/js/jquery/jquery.alertable.min.js"></script>
-        
+
+        <!-- link calendar table js file -->
+        <script type="text/javascript" src="public\js\calendar\calendar_table.js"></script>\
+
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
       <?php
         //echo($_SESSION["uname"]);
+        //var_dump(Session::get('full_service_slots'));
         
         //details test
         //echo(($_SESSION["details"])["first_name"]);
@@ -82,6 +88,36 @@
 
                 <div >
                   <h3>Date</h3>
+
+                  <table id="full_Service_table" hidden>
+                    <thead>
+                      <tr>
+                        <th>timeslots</th>
+                        <th>Monday</th>
+                        <th>header3</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    
+                      <tr>
+                        <td><?php echo($_SESSION["full_service_slots"][0]); ?></td>
+                        <td>text1.2</td>
+                        <td>text1.3</td>
+                      </tr>
+                      <tr>
+                        <td>text2.1</td>
+                        <td>text2.2</td>
+                        <td>text2.3</td>
+                      </tr>
+                      <tr>
+                        <td>text3.1</td>
+                        <td>text3.2</td>
+                        <td>text3.3</td>
+                      </tr>
+                      <tr>
+                      </tr>
+                    </tbody>
+                  </table>
                   <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
                 </div>
 
@@ -90,8 +126,7 @@
 
                 <!-- link local js file -->
                 <script src="public/js/customer_calendar.js"></script>
-                <div id="calendar_message"><p></p></div>
-                
+                <div id="calendar_message"><p></p></div>               
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
                 <button type="submit" class="btn" class="form_btn" id="reserve" disabled>Submit</button></br></br>

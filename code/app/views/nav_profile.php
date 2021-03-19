@@ -243,9 +243,7 @@
         </div>
 
         <!--loged user name display-->
-        <p style="width: 150px;float: right;text-align: center;color: white">
-            <?php echo session::get('log_name') ?>
-        </p>
+        <a href="#"><?php echo session::get('log_name') ?></a>
         <a href="contact_us">Contact Us</a>
         <a href="about_us">About Us</a>
         <div class="dropdown">
@@ -255,7 +253,21 @@
                 <a href="view_reservation">View Reservation</a>
             </div>
         </div>
-        <a href="home">Home</a>
+        <?php 
+        //function to redirect home button according to role logged in
+        if(Session::get('role')=='customer'){
+            $redirect='home';
+        }else if(Session::get('role')=='receptionist'){
+            $redirect='receptionist';
+        }else if(Session::get('role')=='manager'){
+            $redirect='manager';
+        }else if(Session::get('role')=='employee'){
+            $redirect='employee';
+        }else{
+            $redirect='home';
+        }
+        ?>
+        <a href=<?php echo($redirect) ?>>Home</a>
         <img src="public\images\2222.png">
     </div>
 

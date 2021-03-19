@@ -14,11 +14,6 @@
 
     class Make_reservation extends Controller{
 
-        public function __construct(){
-            //
-           
-        }
-
         //overloading create view
         public static function create_view($view_name,$role){
 
@@ -95,23 +90,26 @@
 
             //get the customer id to create tables
             $cid=$cust->get_custid(Session::get("uname"));
+            echo("got cust id\n");
 
             //get current date in db format
             $curr_date=date("Y-m-d");
-            //echo($curr_date);
+            echo($curr_date);
             
             //insert into reservation table , 0 for adv_paid because function hasnt been implemented yet
             //get other necessary arguments from sessions and get reservation id returned for next query
-            $next_res_id=$res->insert_reservation('0',$cid,$curr_date,Session::get("service_id"));
+            //echo("before next res");
+            //var_dump($_SESSION);
+            $next_res_id=$res->insert_reservation('0',"$cid",$curr_date,Session::get("service_id"));
 
             //above function returns next res_id but we need the current one, so decrement
             $curr_res_id=$next_res_id-1;
-            //echo($curr_res_id);
+            echo($curr_res_id);
             Session::set("res_id",$curr_res_id);
 
             //get timeslots
             $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
-            print_r($timeslots);
+            //print_r($timeslots);
             
             echo('before timeslot');//get each timeslot and insert into reservation-timeslot table
 

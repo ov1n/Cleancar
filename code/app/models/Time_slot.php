@@ -2,7 +2,45 @@
     include_once 'Model.php';
 
     class Time_slot extends Model{
-                
+        
+        function get_min(){
+
+            $result= $this->select('MIN(start_time)','time_slot','time_slot','');
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            $start_time=array_shift( $r );
+            
+            //echo($start_time);
+            return $start_time;
+        }
+
+        function get_max(){
+
+            $result= $this->select('MAX(start_time)','time_slot','time_slot','');
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            $end_time=array_shift( $r );
+            
+            //echo($end_time);
+            return $end_time;
+        }
+
+        function add_slots($curr,$inc){
+            
+            $sql="SELECT ADDTIME('$curr','$inc');";
+
+            $result=mysqli_query($this->conn,$sql);
+
+            //get necessary elements in an array
+            $r = mysqli_fetch_array($result);
+            $new_time=array_shift( $r );
+
+            //echo($new_time);
+            return $new_time;
+        }
+        
         //get timeslots for required time slot
         function get_range($start_time,$duration){
 
@@ -98,6 +136,15 @@
             
             
         }
+        function delete_timeslot($timeslot_no)
+    {
+
+        //$query="DELETE FROM service_type WHERE (type_id='$type_id')";
+
+        $condition = "WHERE (timeslot_no='$timeslot_no')";
+
+        $this->delete('time_slot', $condition);
+    }
 
 
     }
