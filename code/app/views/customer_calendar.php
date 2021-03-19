@@ -65,7 +65,7 @@
                 
                 <!-- Each div has php echo function to autofill the form from user account details -->
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type:</b></div></label>
-                <select name="service_type" id="service_type">
+                <select name="service_type" id="service_type" onmousedown="this.value='';" onchange="display_table(this.value);">
                   <option value="Normal Service">Normal Service</option>
                   <option value="Full Service">Full Service</option>
                   <option value="Body Wash">Body wash</option>
@@ -87,35 +87,95 @@
                 <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
 
                 <div >
-                  <h3>Date</h3>
+                  <h3>Date<<?php var_dump($_SESSION); ?> </h3>
 
-                  <table id="full_Service_table" hidden>
+                  <table id="full_service_table" >
                     <thead>
                       <tr>
                         <th>timeslots</th>
-                        <th>Monday</th>
-                        <th>header3</th>
+                        <th>20/3</th>
+                        <th>21/3</th>
+                        <th>22/3</th>
+                        <th>23/3</th>
+                        <th>24/3</th>
+                        <th>25/3</th>
+                        <th>26/3</th>
                       </tr>
                     </thead>
                     <tbody>
-                    
+                      
+                      <?php for ($i = 0; $i <sizeof($_SESSION["full_service_slots"]); $i++) { ?>
                       <tr>
-                        <td><?php echo($_SESSION["full_service_slots"][0]); ?></td>
-                        <td>text1.2</td>
-                        <td>text1.3</td>
+                        <td><?php echo($_SESSION["full_service_slots"][$i]); ?></td>
+                        <td>available</td>
+                        <td>blocked</td>
+                        <td>available</td>
+                        <td>available</td>
+                        <td>available</td>
+                        <td>booked</td>
+                        <td>available</td>
                       </tr>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+
+                  <table id="normal_service_table"  >
+                    <thead>
                       <tr>
-                        <td>text2.1</td>
-                        <td>text2.2</td>
-                        <td>text2.3</td>
+                        <th>timeslots</th>
+                        <th>20/3</th>
+                        <th>21/3</th>
+                        <th>22/3</th>
+                        <th>23/3</th>
+                        <th>24/3</th>
+                        <th>25/3</th>
+                        <th>26/3</th>
                       </tr>
+                    </thead>
+                    <tbody>
+                      
+                      <?php for ($i = 0; $i <sizeof($_SESSION["normal_service_slots"]); $i++) { ?>
                       <tr>
-                        <td>text3.1</td>
-                        <td>text3.2</td>
-                        <td>text3.3</td>
+                        <td><?php echo($_SESSION["normal_service_slots"][$i]); ?></td>
+                        <td>available</td>
+                        <td>blocked</td>
+                        <td>available</td>
+                        <td>available</td>
+                        <td>available</td>
+                        <td>booked</td>
+                        <td>available</td>
                       </tr>
+                      <?php } ?>
+                    </tbody>
+                  </table>
+
+                  <table id="body_wash_table" >
+                    <thead>
                       <tr>
+                        <th>timeslots</th>
+                        <th>20/3</th>
+                        <th>21/3</th>
+                        <th>22/3</th>
+                        <th>23/3</th>
+                        <th>24/3</th>
+                        <th>25/3</th>
+                        <th>26/3</th>
                       </tr>
+                    </thead>
+                    <tbody>
+                      <?php //echo sizeof($_SESSION["body_wash_slots"]); ?>
+                      <?php for ($i = 0; $i <sizeof($_SESSION["body_wash_slots"]); $i++) { ?>
+                      <tr>
+                        <td><?php echo($_SESSION["body_wash_slots"][$i]); ?></td>
+                        <td>available</td>
+                        <td>blocked</td>
+                        <td>available</td>
+                        <td>available</td>
+                        <td>available</td>
+                        <td>booked</td>
+                        <td>available</td>
+                      </tr>
+                      <?php } ?>
                     </tbody>
                   </table>
                   <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>

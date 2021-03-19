@@ -11,9 +11,7 @@
         public static function create_view($view_name,$role){
 
             //get variables from session
-            $timeslots=Calendar::get_time_slots('02:00:00');
-        
-            Session::set('timeslots',$timeslots);
+            Calendar::get_time_slots('02:00:00');
 
             if(Session::get("role")==$role){
                 require_once("./views/customer_calendar.php");
@@ -43,26 +41,26 @@
             //full service
             $curr=$min;
             while(strtotime($curr)<strtotime($max)){
-                array_push($full_service_slots,Time_func::sqlto12hour($curr));
+                array_push($full_service_slots,$curr);
                 $curr=$timeslot->add_slots($curr,$full_service_duration);
             }
             
             //normal service
             $curr=$min;
             while(strtotime($curr)<strtotime($max)){
-                array_push($normal_service_slots,Time_func::sqlto12hour($curr));
+                array_push($normal_service_slots,$curr);
                 $curr=$timeslot->add_slots($curr,$normal_service_duration);
             }
 
             //body wash
             $curr=$min;
             while(strtotime($curr)<strtotime($max)){
-                array_push($body_wash_slots,Time_func::sqlto12hour($curr));
+                array_push($body_wash_slots,$curr);
                 $curr=$timeslot->add_slots($curr,$body_wash_duration);
             }
             //echo($normal_service_duration);
             //echo($body_wash_duration);
-            var_dump($full_service_slots);
+            //var_dump($full_service_slots);
             //array_push($a,"blue","yellow");
             //set variables
             Session::set('full_service_slots',$full_service_slots);
