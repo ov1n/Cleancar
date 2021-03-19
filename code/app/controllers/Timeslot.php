@@ -62,6 +62,20 @@
              //update data
              $updated_timeslot->update_timeslot($start_time,$end_time,$timeslot_no);
 
+             $timeslot=new time_slot();
+
+            $array=$timeslot->get_detail();
+            //var_dump($array);
+
+            if(Session::get("role")=='manager'){
+                require_once("./views/timeslot_list.php");
+            }
+
+            else{
+                require_once("./views/error_403.php");
+            }
+
+
          }
 
 
@@ -71,8 +85,21 @@
 
         $delete_timeslot = new time_slot();
         $delete_timeslot->delete_timeslot($timeslot);
-        
+
+        $timeslot=new time_slot();
+
+        $array=$timeslot->get_detail();
+            //var_dump($array);
+
+        if(Session::get("role")=='manager'){
+            require_once("./views/timeslot_list.php");
         }
+
+        else{
+            require_once("./views/error_403.php");
+        }
+        
+    }
 
     }
 
