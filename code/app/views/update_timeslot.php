@@ -26,7 +26,9 @@
       <ul class="breadcrumb">
       
         <li><a href="home">Home</a></li>
-        <li><a href="home">Manager</a></li>
+        <li><a href="manager">Manager</a></li>
+        <li><a href="timeslot_list">timeslot list</a></li>
+
         <li>Update Timeslot</li>
       </ul><!-- breadcrumb -->
            <h1>Update Time Slots <i class="fa fa-clock-o fa-lg" aria-hidden="true"></i></h1> <hr style="width: 60%;"></br> </br>
