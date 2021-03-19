@@ -49,7 +49,7 @@
             $bill->insert('invoice',$key_array,$values_array);
 
             $invoice_no = $bill->get_invoice_number();
-
+            ob_start();
             require("Library/fpdf.php");
 
             $pdf = new FPDF('p', 'mm', 'A5');
@@ -117,7 +117,7 @@
             $pdf ->Line( $x, $y+1, $x+128, $y+1 );
 
             $pdf -> OutPut();
-
+            ob_end_flush();
         }
 
         public static function search($view_name, $role)
