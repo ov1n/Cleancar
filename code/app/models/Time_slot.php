@@ -124,27 +124,49 @@
             
         }
 
-        function update_timeslot($start_time,$end_time){
-
-            //get date of today for registered date
-
-            $columns=array('start_time','end_time');
-            $values=array("$start_time","$end_time");
-
-            $this->update('time_slot',$columns,$values);
-            
-            
-            
-        }
-        function delete_timeslot($timeslot_no)
-    {
+        function delete_timeslot($timeslot_no){
 
         //$query="DELETE FROM service_type WHERE (type_id='$type_id')";
 
-        $condition = "WHERE (timeslot_no='$timeslot_no')";
+        $condition = "WHERE timeslot_no='$timeslot_no'";
 
         $this->delete('time_slot', $condition);
-    }
+        }
+
+
+        function get_timeslot($timeslot_no){
+
+        $condition = "WHERE timeslot_no='$timeslot_no';";
+        $result = $this->select("*", 'time_slot', $condition);
+
+        //get details into an associative array
+        $details = mysqli_fetch_array($result);
+        //print_r($details);
+
+        //Return array to be fetched and displayed
+        if ($details) {
+            //echo("go to view");
+            return ($details);
+        }
+        }
+
+
+
+        function update_timeslot($start_time,$end_time,$timeslot_no){
+
+        $u_time_slot = "UPDATE time_slot SET start_time='$start_time',end_time='$end_time' WHERE timeslot_no='$timeslot_no';";
+        $result = mysqli_query($this->conn, $u_time_slot);
+
+        //debugging
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+        }
+            // $columns=array('start_time','end_time');
+            // $values=array("$start_time","$end_time");
+
+            // $this->update('time_slot',$columns,$values);            
+        }
 
 
     }

@@ -37,19 +37,33 @@
 
         }
 
-        static function update(){
+        public function view($view_name){
 
-            $updated_timeslot=new time_slot();
-            
-            //get each field from form
-            $start_time=$_POST['start_time'];
-            $end_time=$_POST['end_time'];
-           
-            //update data
-            $updated_timeslot->update_timeslot($start_time,$end_time);
+            $timeslot = $_GET['timeslot_no'];
 
+            $selected_timeslot = new time_slot();
 
+            $array=$selected_timeslot->get_timeslot($timeslot);
+            //var_dump($array);
+            require_once("./views/$view_name.php");
         }
+
+        static function update(){
+            
+             $updated_timeslot=new time_slot();
+
+             //$timeslot_no=$_GET['timeslot_no'];
+
+             //get each field from form
+             $start_time=$_POST['new_start_time'];
+             $end_time=$_POST['new_end_time'];
+             $timeslot_no=$_POST['timeslot_no'];
+           
+             //update data
+             $updated_timeslot->update_timeslot($start_time,$end_time,$timeslot_no);
+
+         }
+
 
         public static function delete($view_name){
         

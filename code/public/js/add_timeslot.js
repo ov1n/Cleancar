@@ -26,9 +26,9 @@ function send_timeslot_data() {
       dataType: 'json',
       //the data array
       data: {
-        start_time: document.timeslot_update_form.start_time.value,
-        end_time: document.timeslot_update_form.end_time.value,
-        lift_no: document.timeslot_update_form.lift_no.value,
+        new_start_time: document.timeslot_update_form.new_start_time.value,
+        new_end_time: document.timeslot_update_form.new_end_time.value,
+        timeslot_no: document.timeslot_update_form.timeslot_no.value,
       }
       ,
       //debugging
