@@ -22,6 +22,26 @@
             }
         }
 
+        
+        public static function create_new_view($view_name, $role)
+        {
+        $emp_id = Session::get("uname");
+        //create employee object
+        $employee = new Service_employee();
+
+        $array = $employee->get_emp_data($emp_id);
+        //var_dump($array['no_of_leaves_fullday']);
+
+
+        if (
+            Session::get("role") == $role
+        ) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/error_403.php");
+        }
+        }
+
         function load_employees(){
 
             

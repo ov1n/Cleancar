@@ -37,19 +37,47 @@
 
         }
 
-        static function update(){
+        public function view($view_name){
 
-            $updated_timeslot=new time_slot();
-            
-            //get each field from form
-            $start_time=$_POST['start_time'];
-            $end_time=$_POST['end_time'];
-           
-            //update data
-            $updated_timeslot->update_timeslot($start_time,$end_time);
+            $timeslot = $_GET['timeslot_no'];
 
+            $selected_timeslot = new time_slot();
 
+            $array=$selected_timeslot->get_timeslot($timeslot);
+            //var_dump($array);
+            require_once("./views/$view_name.php");
         }
+
+        static function update(){
+            
+             $updated_timeslot=new time_slot();
+
+             //$timeslot_no=$_GET['timeslot_no'];
+
+             //get each field from form
+             $start_time=$_POST['new_start_time'];
+             $end_time=$_POST['new_end_time'];
+             $timeslot_no=$_POST['timeslot_no'];
+           
+             //update data
+             $updated_timeslot->update_timeslot($start_time,$end_time,$timeslot_no);
+
+             $timeslot=new time_slot();
+
+            $array=$timeslot->get_detail();
+            //var_dump($array);
+
+            if(Session::get("role")=='manager'){
+                require_once("./views/timeslot_list.php");
+            }
+
+            else{
+                require_once("./views/error_403.php");
+            }
+
+
+         }
+
 
         public static function delete($view_name){
         
@@ -57,8 +85,21 @@
 
         $delete_timeslot = new time_slot();
         $delete_timeslot->delete_timeslot($timeslot);
-        
+
+        $timeslot=new time_slot();
+
+        $array=$timeslot->get_detail();
+            //var_dump($array);
+
+        if(Session::get("role")=='manager'){
+            require_once("./views/timeslot_list.php");
         }
+
+        else{
+            require_once("./views/error_403.php");
+        }
+        
+    }
 
     }
 
