@@ -68,7 +68,7 @@
                 <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required ></br>
 
                 &ensp;&ensp;<label for="aditional_charges"><div class="form_label"><b>Aditional Charges</b></div></label>
-                <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" ></br>
+                <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" onkeyup="calculate()"></br>
 
                 &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Total Amount</b></div></label>
                 <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>

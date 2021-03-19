@@ -253,11 +253,7 @@
         Controller::create_view('employee_home','employee');
     });
 
-    Route::set('request_leave',function(){
-        //start session
-        Session::init();
-        Controller::create_view('request_leave','employee');
-    });
+
 
     Route::set('register_emp',function(){
         //start session
@@ -299,7 +295,7 @@
     Route::set('update_timeslot',function(){
         //start session
         Session::init();
-        Controller::create_view('update_timeslot','manager');
+        Timeslot::view('update_timeslot','manager');
     });
 
     Route::set('employee_list',function(){
@@ -402,6 +398,12 @@
         EmployeeLeaveList::create_view('employee_leave_list','manager');
     });
 
+    Route::set('request_leave', function () {
+
+    Session::init();
+    EmployeeList::create_new_view('request_leave', 'employee');
+});
+
     Route::set('add_bill',function(){
         //start session
         Session::init();
@@ -491,6 +493,12 @@
         Session::init();
         Timeslot::delete('timeslot_list');
     });
+
+    // Route::set('update_timeslot',function(){
+    //     //start session
+    //     Session::init();
+    //     Timeslot::view('update_timeslot');
+    // });
 
     
 
