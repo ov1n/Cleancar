@@ -25,7 +25,10 @@
         <!-- get external js file -->
         <script type="text/javascript" src="public\js\reservation.js"></script>
         <script src="public/js/jquery/jquery.alertable.min.js"></script>
-        
+
+        <!-- link calendar table js file -->
+        <script type="text/javascript" src="public\js\calendar\calendar_table.js"></script>\
+
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
 
@@ -86,7 +89,7 @@
                 <div >
                   <h3>Date</h3>
 
-                  <table>
+                  <table id="full_Service_table" hidden>
                     <thead>
                       <tr>
                         <th>timeslots</th>
@@ -95,8 +98,9 @@
                       </tr>
                     </thead>
                     <tbody>
+                    
                       <tr>
-                        <td>text1.1</td>
+                        <td><?php echo($_SESSION["full_service_slots"][0]); ?></td>
                         <td>text1.2</td>
                         <td>text1.3</td>
                       </tr>
@@ -122,8 +126,7 @@
 
                 <!-- link local js file -->
                 <script src="public/js/customer_calendar.js"></script>
-                <div id="calendar_message"><p></p></div>
-                
+                <div id="calendar_message"><p></p></div>               
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
                 <button type="submit" class="btn" class="form_btn" id="reserve" disabled>Submit</button></br></br>

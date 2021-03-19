@@ -68,11 +68,11 @@
                                 <?php echo "$emp[reason]"; ?>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="leave_status?emp_id=<?php echo "$emp[emp_id]"; ?>&leave_date=<?php echo "$emp[leave_date]"; ?>&leave_status=Accepted"
+                                <a href="leave_status?emp_id=<?php echo "$emp[emp_id]"; ?>&leave_type=<?php echo "$emp[type]"; ?>&leave_date=<?php echo "$emp[leave_date]"; ?>&leave_status=Accepted"
                                     name="accept" class="btn acceptbtn">Accept</a>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="leave_status?emp_id=<?php echo "$emp[emp_id]"; ?>&leave_date=<?php echo "$emp[leave_date]"; ?>&leave_status=Rejected"
+                                <a href="leave_status?emp_id=<?php echo "$emp[emp_id]"; ?>&leave_type=<?php echo "$emp[type]"; ?>&leave_date=<?php echo "$emp[leave_date]"; ?>&leave_status=Rejected"
                                     name="delete" class="btn rejectbtn">Reject</a>
                             </td>
                         </tr>

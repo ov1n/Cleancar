@@ -3,6 +3,7 @@
     //include database class
     include_once './models/Service_type.php';
     include_once './models/Time_slot.php';
+    include_once 'lib/classes/util/time_func.php';
 
     class Calendar extends Controller{
 
@@ -42,21 +43,21 @@
             //full service
             $curr=$min;
             while(strtotime($curr)<strtotime($max)){
-                array_push($full_service_slots,$curr);
+                array_push($full_service_slots,Time_func::sqlto12hour($curr));
                 $curr=$timeslot->add_slots($curr,$full_service_duration);
             }
             
             //normal service
             $curr=$min;
             while(strtotime($curr)<strtotime($max)){
-                array_push($normal_service_slots,$curr);
+                array_push($normal_service_slots,Time_func::sqlto12hour($curr));
                 $curr=$timeslot->add_slots($curr,$normal_service_duration);
             }
 
             //body wash
             $curr=$min;
             while(strtotime($curr)<strtotime($max)){
-                array_push($body_wash_slots,$curr);
+                array_push($body_wash_slots,Time_func::sqlto12hour($curr));
                 $curr=$timeslot->add_slots($curr,$body_wash_duration);
             }
             //echo($normal_service_duration);
