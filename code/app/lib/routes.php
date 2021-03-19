@@ -253,11 +253,7 @@
         Controller::create_view('employee_home','employee');
     });
 
-    Route::set('request_leave',function(){
-        //start session
-        Session::init();
-        Controller::create_view('request_leave','employee');
-    });
+
 
     Route::set('register_emp',function(){
         //start session
@@ -401,6 +397,12 @@
         Session::init();
         EmployeeLeaveList::create_view('employee_leave_list','manager');
     });
+
+    Route::set('request_leave', function () {
+
+    Session::init();
+    EmployeeList::create_new_view('request_leave', 'employee');
+});
 
     Route::set('add_bill',function(){
         //start session
