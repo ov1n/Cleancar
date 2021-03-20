@@ -50,7 +50,7 @@
         function get_search_data($search_key)
         {
         $conn = Database::conn();
-        $condition = "WHERE (invoice_no='$search_key' OR bill_no='$search_key' OR vehicle_no='$search_key' OR customer_name='$search_key');";
+        $condition = "WHERE (invoice_no='$search_key' OR vehicle_model='$search_key' OR bill_date='$search_key' OR vehicle_no='$search_key' OR customer_name='$search_key');";
         $result = $this->select("*", 'invoice', $condition);
 
         //get details into an associative array
