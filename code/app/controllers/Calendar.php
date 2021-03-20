@@ -66,6 +66,10 @@
             Session::set('full_service_slots',$full_service_slots);
             Session::set('normal_service_slots',$normal_service_slots);
             Session::set('body_wash_slots',$body_wash_slots);
+
+            //get dates for the comming week
+            $tomorrow = date("Y-m-d", strtotime('tomorrow'));
+            Session::set('coming_week',Time_func::week_generate($tomorrow));
             
         }
 

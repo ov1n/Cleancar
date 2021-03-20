@@ -44,8 +44,15 @@
         //echo(($_SESSION["details"])["first_name"]);
       ?>
 
-     
+      <script  type="text/javascript">
+        //assign each variables
+        var full_service_slots= <?php echo json_encode($_SESSION["full_service_slots"]); ?>;
+        var normal_service_slots= <?php echo json_encode($_SESSION["normal_service_slots"]); ?>; 
+        var body_wash_slots= <?php echo json_encode($_SESSION["body_wash_slots"]); ?>;  
 
+      //code to create dynamic table
+      </script>
+      
       <form id="reservation_time" name="reservation_time" method="POST" action="make_reservation">
         <div class="container">  
           
@@ -86,106 +93,20 @@
                 <script src="public/js/jquery/calendar/jquery-pseudo-ripple.js"></script>
                 <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
 
-                <div >
-                  <h3>Date<<?php var_dump($_SESSION); ?> </h3>
+                </div>
+                  <h3> Timeslots </h3>
 
-                  <table id="full_service_table" >
-                    <thead>
-                      <tr>
-                        <th>timeslots</th>
-                        <th>20/3</th>
-                        <th>21/3</th>
-                        <th>22/3</th>
-                        <th>23/3</th>
-                        <th>24/3</th>
-                        <th>25/3</th>
-                        <th>26/3</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                      <?php for ($i = 0; $i <sizeof($_SESSION["full_service_slots"]); $i++) { ?>
-                      <tr>
-                        <td><?php echo($_SESSION["full_service_slots"][$i]); ?></td>
-                        <td>available</td>
-                        <td>blocked</td>
-                        <td>available</td>
-                        <td>available</td>
-                        <td>available</td>
-                        <td>booked</td>
-                        <td>available</td>
-                      </tr>
-                      <?php } ?>
-                    </tbody>
-                  </table>
+                <div id="table_create">
+                </div>
 
-                  <table id="normal_service_table"  >
-                    <thead>
-                      <tr>
-                        <th>timeslots</th>
-                        <th>20/3</th>
-                        <th>21/3</th>
-                        <th>22/3</th>
-                        <th>23/3</th>
-                        <th>24/3</th>
-                        <th>25/3</th>
-                        <th>26/3</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      
-                      <?php for ($i = 0; $i <sizeof($_SESSION["normal_service_slots"]); $i++) { ?>
-                      <tr>
-                        <td><?php echo($_SESSION["normal_service_slots"][$i]); ?></td>
-                        <td>available</td>
-                        <td>blocked</td>
-                        <td>available</td>
-                        <td>available</td>
-                        <td>available</td>
-                        <td>booked</td>
-                        <td>available</td>
-                      </tr>
-                      <?php } ?>
-                    </tbody>
-                  </table>
-
-                  <table id="body_wash_table" >
-                    <thead>
-                      <tr>
-                        <th>timeslots</th>
-                        <th>20/3</th>
-                        <th>21/3</th>
-                        <th>22/3</th>
-                        <th>23/3</th>
-                        <th>24/3</th>
-                        <th>25/3</th>
-                        <th>26/3</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <?php //echo sizeof($_SESSION["body_wash_slots"]); ?>
-                      <?php for ($i = 0; $i <sizeof($_SESSION["body_wash_slots"]); $i++) { ?>
-                      <tr>
-                        <td><?php echo($_SESSION["body_wash_slots"][$i]); ?></td>
-                        <td>available</td>
-                        <td>blocked</td>
-                        <td>available</td>
-                        <td>available</td>
-                        <td>available</td>
-                        <td>booked</td>
-                        <td>available</td>
-                      </tr>
-                      <?php } ?>
-                    </tbody>
-                  </table>
-                  <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
+                <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
                 </div>
 
                 </br>
                 <div id="date_display"></div>
 
                 <!-- link local js file -->
-                <script src="public/js/customer_calendar.js"></script>
+                <!--<script src="public/js/customer_calendar.js"></script> -->
                 <div id="calendar_message"><p></p></div>               
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
@@ -200,7 +121,7 @@
         </div><!-- container -->
       </form>
 
-      <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
+      <!-- <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script> -->
 
       <?php 
           //get header in seperate file
