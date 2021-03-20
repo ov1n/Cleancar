@@ -11,7 +11,8 @@
         public static function create_view($view_name,$role){
 
             //get variables from session
-            Calendar::get_time_slots('02:00:00');
+            Calendar::get_time_slots();
+            Calendar::make_service_arrays();
 
             if(Session::get("role")==$role){
                 require_once("./views/customer_calendar.php");
@@ -22,7 +23,7 @@
             }
         }
 
-        static function get_time_slots($time){
+        static function get_time_slots(){
 
             $timeslot=new Time_slot();
             $service_type=new Service_type();
@@ -67,10 +68,41 @@
             Session::set('normal_service_slots',$normal_service_slots);
             Session::set('body_wash_slots',$body_wash_slots);
 
-            //get dates for the comming week
+            //get dates for the coming week
             $tomorrow = date("Y-m-d", strtotime('tomorrow'));
             Session::set('coming_week',Time_func::week_generate($tomorrow));
+
             
+
+            
+        }
+
+        static function make_service_arrays(){
+
+            $service_type=new Service_type();
+
+            //declaring 3 arrays
+            $full_service_list=array();
+            $normal_service_list=array();
+            $body_wash_list=array();
+
+            for($i=0;$i<sizeof(Session::get('coming_week'));$i++){
+
+                $x=$_SESSION["coming_week"][$i]; //2021-10-27 sort
+
+                for($j=0;$j<sizeof(Session::get('full_service_slots'));$j++){
+
+                    $y=$_SESSION["full_service_slots"][$j]; //08:00 sort
+                    $full_service_list[$x]=array(
+                        $y=>array(1,2,3)
+                    );
+                }
+                
+            }
+            
+            Session::set('full_service_list',$full_service_list);
+            
+            print_r($full_service_list);
         }
 
     }

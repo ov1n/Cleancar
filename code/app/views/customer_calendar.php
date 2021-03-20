@@ -48,7 +48,10 @@
         //assign each variables
         var full_service_slots= <?php echo json_encode($_SESSION["full_service_slots"]); ?>;
         var normal_service_slots= <?php echo json_encode($_SESSION["normal_service_slots"]); ?>; 
-        var body_wash_slots= <?php echo json_encode($_SESSION["body_wash_slots"]); ?>;  
+        var body_wash_slots= <?php echo json_encode($_SESSION["body_wash_slots"]); ?>;
+        
+        var full_service_list= <?php echo json_encode($_SESSION["full_service_list"]); ?>;
+        console.log(full_service_list);
 
       //code to create dynamic table
       </script>

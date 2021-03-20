@@ -26,7 +26,7 @@
 
             $week_dates=array();
 
-            for ($x = 0; $x <= 7; $x++) {
+            for ($x = 0; $x <7; $x++) {
                 $currdate = new DateTime($date);
                 $currdate->add(new DateInterval("P".strval($x)."D")); // P1D means a period of 1 day
                 $date2 = $currdate->format('Y-m-d');
