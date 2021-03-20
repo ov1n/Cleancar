@@ -12,7 +12,28 @@
     <!-- get external js file -->
     <!-- <script type="text/javascript" src="public\js\employee.js"></script> -->
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
+    <style type="text/css">
+
+    </style>
 </head>
+
+<style type="text/css">
+.body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+
+}
+
+.progress {
+    background-color: #d8d8d8;
+    height: 30px;
+    width: 200px;
+    border-radius: 20px;
+
+}
+</style>
 
 <body>
     <div class="container">
@@ -42,6 +63,7 @@
                             <th>FullDay Leaves</th>
                             <th>HalfDay Leaves</th>
                             <th>Short Leaves</th>
+                            <th>Leave Percentage</th>
 
                         </tr>
 
@@ -76,10 +98,20 @@
                                             echo "$emp[no_of_leaves_halfday]";
                                         } ?>
                             </td>
+                            <td>
+                                <div class="progress" style="text-align:center;padding:3px;">
+                                    <?php echo (floor((($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short']) / 60) * 100)) . "%"; ?>
+                                    <div class="progress-done"
+                                        style="  background-color: orange;border-radius: 20px;height: 100%;width: <?php echo ((($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short']) / 60) * 100) . "%"; ?>;margin-top:-20px;display: flex;align-items: center;justify-content: center;text-align:center;opacity:1;transition: 1s ease 0.8s;">
 
+                                    </div>
+
+                                </div>
+                            </td>
                         </tr>
                         <?php } ?>
                     </table>
+
                 </div>
             </div>
             <?php } ?>
@@ -96,6 +128,9 @@
     //get footer in seperate file
     include("footer.php");
     ?>
+
+
+
 </body>
 
 </html>
