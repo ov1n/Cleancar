@@ -21,4 +21,22 @@
             //echo($final);
             return $final;
         }
+
+        static function week_generate($date){
+
+            $week_dates=array();
+
+            for ($x = 0; $x <= 7; $x++) {
+                $currdate = new DateTime($date);
+                $currdate->add(new DateInterval("P".strval($x)."D")); // P1D means a period of 1 day
+                $date2 = $currdate->format('Y-m-d');
+
+                array_push($week_dates,$date2);
+            }
+
+            var_dump($week_dates);
+
+            return($week_dates);     
+        }
+
     }

@@ -1,3 +1,8 @@
+let today = new Date();
+console.log(today);
+
+var nextDay = new Date(day);
+
 
 function dasd(){
     console.log(full_service_slots);
@@ -11,15 +16,19 @@ function time_format(value){
 }
 
 function display_table(e){
-    
-    var days=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+
+    var days=[];
+
+    var tomorrow = new Date(today);
+    for(var i = 0; i < 7; i++){
+        tomorrow.setDate(today.getDate() +i);
+        days.push(tomorrow.toISOString().substring(0,10));
+    }
+
     //var selectedType = e.value;
     console.log(e);
+    console.log(today);
 
-    x=document.getElementById("normal_service_table");
-    y=document.getElementById("full_service_table");
-    z=document.getElementById("body_wash_table");
-    
     if(e=="Normal Service"){
 
         create_table(normal_service_slots,days);
