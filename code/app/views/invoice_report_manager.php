@@ -44,8 +44,8 @@
 
                     <table id="table_">
                         <tr>
-                            <th>Invoice no</th>
-                            <th>Bill no</th>
+                            <th>Invoice No</th>
+                            <th>Bill Date</th>
                             <th>Reservation Id</th>
                             <th>Vehicle No</th>
                             <th>Vehicle Model</th>
@@ -63,7 +63,7 @@
                                 <?php echo "$invoice1[invoice_no]"; ?>
                             </td>
                             <td>
-                                <?php echo "$invoice1[bill_no]"; ?>
+                                <?php echo "$invoice1[bill_date]"; ?>
                             </td>
                             <td>
                                 <?php echo "$invoice1[reservation_id]"; ?>
