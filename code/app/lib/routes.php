@@ -304,6 +304,11 @@
         EmployeeList::create_view('employee_list','manager');
     });
 
+    Route::set('leave_report_manager', function () {
+    Session::init();
+    EmployeeList::create_view('leave_report_manager', 'manager');
+    });
+
     Route::set('invoice_report',function(){
 
         Session::init();

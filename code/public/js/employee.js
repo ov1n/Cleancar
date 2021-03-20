@@ -24,5 +24,5 @@ function confirmDelete(){
     }
 
     function button4(){
-      window.location.href = "#";
+      window.location.href = "leave_report_manager";
     }
