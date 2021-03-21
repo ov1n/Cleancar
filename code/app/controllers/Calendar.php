@@ -90,19 +90,24 @@
 
                 $x=$_SESSION["coming_week"][$i]; //2021-10-27 sort
 
-                for($j=0;$j<sizeof(Session::get('full_service_slots'));$j++){
-
-                    $y=$_SESSION["full_service_slots"][$j]; //08:00 sort
-                    $full_service_list[$x]=array(
-                        $y=>array(1,2,3)
-                    );
-                }
                 
+                for($j=0;$j<sizeof(Session::get('full_service_slots'));$j++){
+                    $y=$_SESSION["full_service_slots"][$j]; //08:00 sort
+                    $newdata[$y]=array(1,2,3);
+                }
+                //print_r('\n');
+                $full_service_list[$x]=$newdata;
+                //array_push($full_service_list[$x],$newdata);
+                //$full_service_list[$x]=array(
+                //   $y=>array(1,2,3)
+                //);
+                             
             }
             
             Session::set('full_service_list',$full_service_list);
-            
-            print_r($full_service_list);
+
+            //print_r("\n");
+            //print_r($full_service_list);
         }
 
     }
