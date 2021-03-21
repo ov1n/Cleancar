@@ -24,5 +24,15 @@ function confirmDelete(){
     }
 
     function button4(){
-      window.location.href = "#";
+      window.location.href = "leave_report_manager";
+    }
+
+
+    function deleteme(empId){   
+      //alert("Make reservation on the below entered details?");  
+      $.alertable.confirm('Do you want to remove the Employee?').then(function() {
+        window.location.href="employee_delete_recep?emp_id="+empId;
+      }, function() {
+        console.log('Confirmation canceled');
+      });  
     }

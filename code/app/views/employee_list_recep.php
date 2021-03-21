@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\employee_list.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
@@ -63,7 +64,8 @@
                   <a href="employee_update_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="update" class="btn updatelbtn">Update</a>
               </td>
               <td style = " text-align: center;">
-                  <a href="employee_delete_recep?emp_id=<?php echo "$emp[emp_id]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+                  <a onClick="deleteme(<?php echo $emp['emp_id']; ?>)" name="delete" class="btn deletebtn">Delete</a>
+                  <!-- "employee_delete_recep?emp_id=1004" -->
               </td>
           </tr>
       <?php } ?>

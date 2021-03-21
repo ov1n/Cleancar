@@ -44,8 +44,18 @@
         //echo(($_SESSION["details"])["first_name"]);
       ?>
 
-     
+      <script  type="text/javascript">
+        //assign each variables
+        var full_service_slots= <?php echo json_encode($_SESSION["full_service_slots"]); ?>;
+        var normal_service_slots= <?php echo json_encode($_SESSION["normal_service_slots"]); ?>; 
+        var body_wash_slots= <?php echo json_encode($_SESSION["body_wash_slots"]); ?>;
+        
+        var full_service_list= <?php echo json_encode($_SESSION["full_service_list"]); ?>;
+        console.log(full_service_list);
 
+      //code to create dynamic table
+      </script>
+      
       <form id="reservation_time" name="reservation_time" method="POST" action="make_reservation">
         <div class="container">  
           
@@ -65,7 +75,7 @@
                 
                 <!-- Each div has php echo function to autofill the form from user account details -->
                 &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service Type:</b></div></label>
-                <select name="service_type" id="service_type">
+                <select name="service_type" id="service_type" onmousedown="this.value='';" onchange="display_table(this.value);">
                   <option value="Normal Service">Normal Service</option>
                   <option value="Full Service">Full Service</option>
                   <option value="Body Wash">Body wash</option>
@@ -86,46 +96,20 @@
                 <script src="public/js/jquery/calendar/jquery-pseudo-ripple.js"></script>
                 <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
 
-                <div >
-                  <h3>Date</h3>
+                </div>
+                  <h3> Timeslots </h3>
 
-                  <table id="full_Service_table" hidden>
-                    <thead>
-                      <tr>
-                        <th>timeslots</th>
-                        <th>Monday</th>
-                        <th>header3</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                    
-                      <tr>
-                        <td><?php echo($_SESSION["full_service_slots"][0]); ?></td>
-                        <td>text1.2</td>
-                        <td>text1.3</td>
-                      </tr>
-                      <tr>
-                        <td>text2.1</td>
-                        <td>text2.2</td>
-                        <td>text2.3</td>
-                      </tr>
-                      <tr>
-                        <td>text3.1</td>
-                        <td>text3.2</td>
-                        <td>text3.3</td>
-                      </tr>
-                      <tr>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
+                <div id="table_create">
+                </div>
+
+                <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
                 </div>
 
                 </br>
                 <div id="date_display"></div>
 
                 <!-- link local js file -->
-                <script src="public/js/customer_calendar.js"></script>
+                <!--<script src="public/js/customer_calendar.js"></script> -->
                 <div id="calendar_message"><p></p></div>               
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
@@ -140,7 +124,7 @@
         </div><!-- container -->
       </form>
 
-      <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
+      <!-- <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script> -->
 
       <?php 
           //get header in seperate file
