@@ -16,7 +16,7 @@ function confirmDelete(){
     }
 
     function button2(){
-      window.location.href = "#";
+      window.location.href = "cancel_leave_manager";
     }
 
     function button3(){
@@ -24,5 +24,5 @@ function confirmDelete(){
     }
 
     function button4(){
-      window.location.href = "#";
+      window.location.href = "leave_report_manager";
     }
