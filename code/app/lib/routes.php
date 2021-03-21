@@ -92,10 +92,10 @@
         Controller::create_view('update_profile','loggedin');
     });
 
-    Route::set('delay_timetable_manager',function(){
-        Session::init();
-        Controller::create_view('delay_time_table','manager');
-    });
+    // Route::set('delay_timetable_manager',function(){
+    //     Session::init();
+    //     Controller::create_view('delay_time_table','manager');
+    // });
 
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
@@ -207,6 +207,12 @@
         AddServiceType::update();
     });
 
+    Route::set('cancel_leave_manager', function () {
+
+    Session::init();
+    EmployeeLeaveList::leave_cancel('cancel_leave_manager', 'manager');
+    });
+
     Route::set('search_data', function () {
 
     Session::init();
@@ -216,6 +222,11 @@
     Route::set('change_password',function(){
         Session::init();
         Controller::create_view('change_password','loggedin');
+    });
+
+    Route::set('leave_delete_manager', function () {
+    Session::init();
+    EmployeeLeaveList::delete_leaves('cancel_leave_manager', 'manager');
     });
 
     Route::set('forgot_password',function(){
