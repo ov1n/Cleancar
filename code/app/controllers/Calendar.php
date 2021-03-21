@@ -15,7 +15,7 @@
             Calendar::make_service_arrays();
 
             if(Session::get("role")==$role){
-                require_once("./views/customer_calendar.php");
+                //require_once("./views/customer_calendar.php");
             }
 
             else{
@@ -86,6 +86,13 @@
             $normal_service_list=array();
             $body_wash_list=array();
 
+            //getting the 3 types of slots for lifts
+            $full_service_lifts=$service_type->get_lifts_per_type('Full Service');
+            $normal_service_lifts=$service_type->get_lifts_per_type('Normal Service');
+            $body_wash_lifts=$service_type->get_lifts_per_type('Body Wash');
+
+            //var_dump($full_service_lifts);
+
             for($i=0;$i<sizeof(Session::get('coming_week'));$i++){
 
                 $x=$_SESSION["coming_week"][$i]; //2021-10-27 sort
@@ -93,6 +100,8 @@
                 
                 for($j=0;$j<sizeof(Session::get('full_service_slots'));$j++){
                     $y=$_SESSION["full_service_slots"][$j]; //08:00 sort
+                    //HAVE TON SET AS ($SLOTS-$AVAILABLE)
+                    //SO IF NULL YOU CANT BOOK
                     $newdata[$y]=array(1,2,3);
                 }
                 //print_r('\n');

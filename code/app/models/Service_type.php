@@ -201,6 +201,28 @@ class Service_type extends Model
             return ($details);
         }
     }
+
+    //ges diasitnct types per lift
+    function get_lifts_per_type($type_name){
+
+        $condition = "WHERE type_name='$type_name';";
+        $result = $this->select('lift_no', 'service_type', $condition);
+
+        //get details into an associative array
+        $details =$result -> fetch_all(MYSQLI_ASSOC);
+        
+        $slots=array();
+
+        for($i=0;$i<sizeof($details);$i++){
+            array_push($slots,$details[$i]['lift_no']);
+        }
+        //print_r($slots);
+        //Return array with justt numbers of the slots available
+        if ($slots) {
+            return ($slots);
+        }
+
+    }
 }
 
 
@@ -232,3 +254,4 @@ function get_types($category)
         return ($types);
     }
 }
+

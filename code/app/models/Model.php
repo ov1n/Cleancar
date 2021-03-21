@@ -65,7 +65,7 @@
                 $sql.=" FROM ".$tableName." ".$condition;
             }
 
-            //echo($sql);
+            //echo($sql."\n");
             $result= mysqli_query($this->conn,$sql);
 
             //debugging

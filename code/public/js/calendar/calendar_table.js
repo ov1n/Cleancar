@@ -1,7 +1,7 @@
 let today = new Date();
 console.log(today);
 
-var nextDay = new Date(day);
+var nextDay = new Date(today);
 
 
 function dasd(){
@@ -20,7 +20,7 @@ function display_table(e){
     var days=[];
 
     var tomorrow = new Date(today);
-    for(var i = 0; i < 7; i++){
+    for(var i = 1; i < 7; i++){
         tomorrow.setDate(today.getDate() +i);
         days.push(tomorrow.toISOString().substring(0,10));
     }
@@ -31,21 +31,21 @@ function display_table(e){
 
     if(e=="Normal Service"){
 
-        create_table(normal_service_slots,days);
+        create_table(normal_service_slots,days,full_service_list);
     }
     else if(e=="Full Service"){
 
-        create_table(full_service_slots,days);
+        create_table(full_service_slots,days,full_service_list);
 
     }else if(e=="Body Wash"){
 
-        create_table(body_wash_slots,days);
+        create_table(body_wash_slots,days,full_service_list);
     }
     
 }
 
 //days is an array containing dates 
-function create_table(service_type,days){
+function create_table(service_type,days,service_list){
 
     document.getElementById("table_create").innerHTML = "";
 
@@ -75,10 +75,14 @@ function create_table(service_type,days){
         td1.appendChild(text1);
         tr.appendChild(td1);
 
+        //console.log(days);
+
         for (var j = 0; j <  days.length; j++){
+            console.log(service_list);
 
             var td2 = document.createElement('td');       
-            var text2 = document.createTextNode('Text2');    
+            var text2 = document.createTextNode(service_list[days[j]]);
+            //console.log(j);    
             td2.appendChild(text2);  
             tr.appendChild(td2);
         }
