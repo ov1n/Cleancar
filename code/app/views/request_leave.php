@@ -17,8 +17,9 @@
 
 <body>
 
-    <!-- onsubmit="send_leave_data() -->
-    <form name="add_leave_form" id="add_leave_form" method="post" action="add_leave_">
+    <!-- onsubmit="send_leave_data()" -->
+    <!-- action="add_leave_" -->
+    <form name="add_leave_form" id="add_leave_form" method="post" onsubmit="send_leave_data()">
         <!-- call function in js file -->
         <div class="container">
 
