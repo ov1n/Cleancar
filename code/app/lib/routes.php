@@ -92,10 +92,10 @@
         Controller::create_view('update_profile','loggedin');
     });
 
-    Route::set('delay_timetable_manager',function(){
-        Session::init();
-        Controller::create_view('delay_time_table','manager');
-    });
+    // Route::set('delay_timetable_manager',function(){
+    //     Session::init();
+    //     Controller::create_view('delay_time_table','manager');
+    // });
 
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
