@@ -295,7 +295,7 @@
     Route::set('update_timeslot',function(){
         //start session
         Session::init();
-        Timeslot::view('update_timeslot','manager');
+        Timeslot::Fview('update_timeslot','manager');
     });
 
     Route::set('employee_list',function(){
