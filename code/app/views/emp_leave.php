@@ -22,7 +22,7 @@
         <li><a href="employee">Employee</a></li>
         <li>Employee leave</li>
     </ul><!-- breadcrumb -->
-    <h1>Upcoming Accepted Leave Details</h1><br><hr style="width: 60%;"><br>
+    <h1>Upcoming Leave Details</h1><br><hr style="width: 60%;"><br>
 
 <?php if($array) {  ?> <!-- check condition are there upcoming accepted leaves in the array which loaded from database -->
 <div class = "list_table">
@@ -35,6 +35,7 @@
             <th>Leave Type</th>
             <th>Reason</th>
             <th>Leave Time</th>
+            <th>Accepted/Rejected</th>
             <th>Cancel</th>
 
 
@@ -53,6 +54,9 @@
               </td>
               <td>
                   <?php echo "$emp_leave[leave_time]"; ?>
+              </td>
+              <td>
+                  <?php echo "$emp_leave[is_accepted]"; ?>
               </td>
 
               <td style = " text-align: center;">

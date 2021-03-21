@@ -22,6 +22,19 @@
             }
         }
 
+        public static function load_bill_data($view_name, $role)
+        {
+        $bill = new Invoice();
+        $invoice_no = $_GET['invoice_no'];
+        $array = $bill->invoice_details($invoice_no);
+        //var_dump($array);
+        if (Session::get("role") == $role) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/error_403.php");
+        }
+        }
+
         static function add_new(){
 
             $bill=new Invoice();

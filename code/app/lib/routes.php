@@ -219,6 +219,12 @@
     ServiceType::search('service_type_list', 'manager');
     });
 
+    Route::set('edit_bill_manager', function () {
+
+    Session::init();
+    Invoice_bill::load_bill_data('edit_bill_manager', 'manager');
+    });
+
     Route::set('change_password',function(){
         Session::init();
         Controller::create_view('change_password','loggedin');

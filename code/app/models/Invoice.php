@@ -28,6 +28,26 @@
 
         }
 
+        function invoice_details($invoice_no)
+        {
+        $condition = "WHERE invoice_no=$invoice_no;";
+        $result = $this->select("*", 'invoice', $condition);
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+        }
+
+        //get employees in an array
+        //$bill_details = $result->fetch_all(MYSQLI_ASSOC);
+        //var_dump($employees);
+        $res = mysqli_fetch_array($result);
+        //if array is not empty that means employees are returning
+        if ($res) {
+            //echo("go to view");
+            return ($res);
+        }
+        }
+
         function get_invoice_number(){
             $query="SELECT MAX(invoice_no) FROM invoice;";
             $result= mysqli_query($this->conn,$query);
