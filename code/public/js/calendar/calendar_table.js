@@ -67,21 +67,22 @@ function create_table(service_type,days,service_list){
     table.appendChild(trh);
 
     for (var i = 0; i <  service_type.length; i++){
-        //console.log(i);
+        console.log(service_type[i]);
         var tr = document.createElement('tr');   
 
         var td1 = document.createElement('td');
         var text1 = document.createTextNode(service_type[i]);
+        //console.log(service_type[i]);
         td1.appendChild(text1);
         tr.appendChild(td1);
 
         //console.log(days);
 
         for (var j = 0; j <  days.length; j++){
-            console.log(service_list);
+            //console.log(service_list[days[j]]);
 
             var td2 = document.createElement('td');       
-            var text2 = document.createTextNode(service_list[days[j]]);
+            var text2 = document.createTextNode(service_list[days[j]][service_type[i]]);
             //console.log(j);    
             td2.appendChild(text2);  
             tr.appendChild(td2);

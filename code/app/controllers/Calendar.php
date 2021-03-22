@@ -3,6 +3,7 @@
     //include database class
     include_once './models/Service_type.php';
     include_once './models/Time_slot.php';
+    include_once './models/Reservation.php';
     include_once 'lib/classes/util/time_func.php';
 
     class Calendar extends Controller{
@@ -15,7 +16,7 @@
             Calendar::make_service_arrays();
 
             if(Session::get("role")==$role){
-                //require_once("./views/customer_calendar.php");
+                require_once("./views/customer_calendar.php");
             }
 
             else{
@@ -71,15 +72,12 @@
             //get dates for the coming week
             $tomorrow = date("Y-m-d", strtotime('tomorrow'));
             Session::set('coming_week',Time_func::week_generate($tomorrow));
-
-            
-
-            
         }
 
         static function make_service_arrays(){
 
             $service_type=new Service_type();
+            $reservation=new Reservation();
 
             //declaring 3 arrays
             $full_service_list=array();
@@ -91,7 +89,7 @@
             $normal_service_lifts=$service_type->get_lifts_per_type('Normal Service');
             $body_wash_lifts=$service_type->get_lifts_per_type('Body Wash');
 
-            //var_dump($full_service_lifts);
+            //var_dump($normal_service_lifts);
 
             for($i=0;$i<sizeof(Session::get('coming_week'));$i++){
 
@@ -101,8 +99,15 @@
                 for($j=0;$j<sizeof(Session::get('full_service_slots'));$j++){
                     $y=$_SESSION["full_service_slots"][$j]; //08:00 sort
                     //HAVE TON SET AS ($SLOTS-$AVAILABLE)
-                    //SO IF NULL YOU CANT BOOK
-                    $newdata[$y]=array(1,2,3);
+                    //get currently reserved slots for the respective time slot
+                    $reserved_full=$reservation->get_reserved_slots($x,'Full Service',$y);
+                    //get left out slots if 0 that means you cant reserve
+                    //$l1=count($full_service_lifts);
+                    //$l2=count($reserved_full);
+                    $left_full=count($full_service_lifts)-$reserved_full;
+                    $newdata[$y]=$left_full;
+                    //print_r($left_full);
+                    //print_r('nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn');
                 }
                 //print_r('\n');
                 $full_service_list[$x]=$newdata;

@@ -34,7 +34,7 @@
                 array_push($week_dates,$date2);
             }
 
-            var_dump($week_dates);
+            //var_dump($week_dates);
 
             return($week_dates);     
         }
