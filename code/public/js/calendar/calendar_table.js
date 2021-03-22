@@ -3,6 +3,11 @@ console.log(today);
 
 var nextDay = new Date(today);
 
+function table_beautify(){
+    var x=document.getElementsByClassName('slots');
+    console.log(x);
+}
+
 
 function dasd(){
     console.log(full_service_slots);
@@ -31,7 +36,7 @@ function display_table(e){
 
     if(e=="Normal Service"){
 
-        create_table(normal_service_slots,days,full_service_list);
+        create_table(normal_service_slots,days,normal_service_list);
     }
     else if(e=="Full Service"){
 
@@ -39,7 +44,7 @@ function display_table(e){
 
     }else if(e=="Body Wash"){
 
-        create_table(body_wash_slots,days,full_service_list);
+        create_table(body_wash_slots,days,body_wash_list);
     }
     
 }
@@ -53,6 +58,7 @@ function create_table(service_type,days,service_list){
 
     //Add heading rows
     var trh = document.createElement('tr');
+    trh.className = 'headings';
 
     var time_slots = document.createElement('th');
     time_slots.appendChild(document.createTextNode('Time'));
@@ -71,6 +77,7 @@ function create_table(service_type,days,service_list){
         var tr = document.createElement('tr');   
 
         var td1 = document.createElement('td');
+        td1.className = 'times';
         var text1 = document.createTextNode(service_type[i]);
         //console.log(service_type[i]);
         td1.appendChild(text1);
@@ -81,7 +88,8 @@ function create_table(service_type,days,service_list){
         for (var j = 0; j <  days.length; j++){
             //console.log(service_list[days[j]]);
 
-            var td2 = document.createElement('td');       
+            var td2 = document.createElement('td');
+            td2.className = 'slots';      
             var text2 = document.createTextNode(service_list[days[j]][service_type[i]]);
             //console.log(j);    
             td2.appendChild(text2);  
@@ -91,4 +99,5 @@ function create_table(service_type,days,service_list){
         table.appendChild(tr);
     }
     table_create.appendChild(table);
+    table_beautify();
 }

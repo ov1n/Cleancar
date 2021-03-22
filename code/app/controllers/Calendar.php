@@ -80,9 +80,9 @@
             $reservation=new Reservation();
 
             //declaring 3 arrays
-            $full_service_list=array();
-            $normal_service_list=array();
-            $body_wash_list=array();
+            //$full_service_list=array();
+            //$normal_service_list=array();
+            //$body_wash_list=array();
 
             //getting the 3 types of slots for lifts
             $full_service_lifts=$service_type->get_lifts_per_type('Full Service');
@@ -91,37 +91,51 @@
 
             //var_dump($normal_service_lifts);
 
+            $full_service_list=Calendar::generate_list('Full Service',$full_service_lifts,"full_service_slots");
+            $normal_service_list=Calendar::generate_list('Normal Service',$normal_service_lifts,"normal_service_slots");
+            $body_wash_list=Calendar::generate_list('Body Wash',$body_wash_lifts,"body_wash_slots");
+            
+            Session::set('full_service_list',$full_service_list);
+            Session::set('normal_service_list',$normal_service_list);
+            Session::set('body_wash_list',$body_wash_list);
+
+            //print_r("\n");
+            //print_r($full_service_list);
+        }
+
+        static function generate_list($type_name,$service_lifts,$slot_type){
+
+            $reservation=new Reservation();
+            $type_lifts=array();
+
             for($i=0;$i<sizeof(Session::get('coming_week'));$i++){
 
                 $x=$_SESSION["coming_week"][$i]; //2021-10-27 sort
 
                 
-                for($j=0;$j<sizeof(Session::get('full_service_slots'));$j++){
-                    $y=$_SESSION["full_service_slots"][$j]; //08:00 sort
+                for($j=0;$j<sizeof(Session::get($slot_type));$j++){
+                    $y=$_SESSION[$slot_type][$j]; //08:00 sort
                     //HAVE TON SET AS ($SLOTS-$AVAILABLE)
                     //get currently reserved slots for the respective time slot
-                    $reserved_full=$reservation->get_reserved_slots($x,'Full Service',$y);
+                    $reserved_full=$reservation->get_reserved_slots($x,"$type_name",$y);
                     //get left out slots if 0 that means you cant reserve
-                    //$l1=count($full_service_lifts);
+                    //$l1=count($type_lifts);
                     //$l2=count($reserved_full);
-                    $left_full=count($full_service_lifts)-$reserved_full;
+                    $left_full=count($service_lifts)-$reserved_full;
                     $newdata[$y]=$left_full;
                     //print_r($left_full);
                     //print_r('nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn');
                 }
                 //print_r('\n');
-                $full_service_list[$x]=$newdata;
+                $type_lifts[$x]=$newdata;
                 //array_push($full_service_list[$x],$newdata);
                 //$full_service_list[$x]=array(
                 //   $y=>array(1,2,3)
                 //);
                              
             }
-            
-            Session::set('full_service_list',$full_service_list);
+            return $type_lifts;
 
-            //print_r("\n");
-            //print_r($full_service_list);
         }
 
     }
