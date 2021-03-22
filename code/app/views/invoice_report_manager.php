@@ -84,7 +84,7 @@
                                 <?php echo "$invoice1[net_amount]"; ?>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="#" name="view" class="btn viewbtn">Edit</a>
+                                <a href="edit_bill_manager?invoice_no= <?php echo "$invoice1[invoice_no]"; ?>" name="view" class="btn viewbtn">Edit</a>
                             </td>
                             <td style=" text-align: center;">
                                 <a href="#" name="view" class="btn viewbtn">Print</a>
