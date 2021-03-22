@@ -23,7 +23,7 @@
 
 
 
-    <form name="add_bill" id="add_bill" method="post" action="add_bill">
+    <form name="add_bill" id="add_bill" method="post" action="update_bill_manager">
 
 
         <div class="background">
@@ -42,39 +42,42 @@
                 <h1 style="text-align:center;"><i class="fa fa-money" aria-hidden="true"></i> Billing</h1>
                 <hr style="width: 60%;">
 
-                </br></br>
+
                 <div class="card">
                     <div id=form_content>
                         <!-- div to center needed elements -->
 
-                        &ensp;&ensp;<label for="reservation_id">
-                            <div class="form_label"><b>Reservation Id</b></div>
+                        &ensp;&ensp;<label for="invoice_no">
+                            <div class="form_label"><b>Invoice No</b></div>
                         </label>
-                        <input type="text" placeholder="Enter the Reservation Id" name="reservation_id"
-                            value='<?php echo $array['reservation_id']; ?>' id="reservation_id" required></br>
+                        <input type="text" placeholder="Enter the Invoice no" name="invoice_no"
+                            value='<?php echo $array['invoice_no']; ?>' id="invoice_no" required disabled></br>
 
-                        &ensp;&ensp;<label for="name">
+                        <input type="hidden" name="invoice_no" id="invoice_no"
+                            value="<?php echo $array['invoice_no'] ?>">
+
+                        &ensp;&ensp;<label for="customer_name">
                             <div class="form_label"><b>Customer Name</b></div>
                         </label>
-                        <input type="text" placeholder="Enter the Customer Name" name="name" id="name"
+                        <input type="text" placeholder="Enter the Customer Name" name="customer_name" id="customer_name"
                             value="<?php echo $array['customer_name']; ?>" required></br>
 
-                        &ensp;&ensp;<label for="contact_number">
+                        &ensp;&ensp;<label for="contact_no">
                             <div class="form_label"><b>Contact Number</b></div>
                         </label>
-                        <input type="text" placeholder="Enter the Contact Number" name="contact_number"
-                            id="contact_number" value="<?php echo "$array[contact_no]"; ?>" required></br>
+                        <input type="text" placeholder="Enter the Contact Number" name="contact_no" id="contact_no"
+                            value="<?php echo "$array[contact_no]"; ?>" required></br>
 
-                        &ensp;&ensp;<label for="veh_Number">
+                        &ensp;&ensp;<label for="vehicle_no">
                             <div class="form_label"><b>Vehicle Number</b></div>
                         </label>
-                        <input type="text" placeholder="Enter the Vehicle Number" name="veh_Number" id="veh_Number"
+                        <input type="text" placeholder="Enter the Vehicle Number" name="vehicle_no" id="vehicle_no"
                             value="<?php echo "$array[vehicle_no]"; ?>" required></br>
 
-                        &ensp;&ensp;<label for="veh_Model">
+                        &ensp;&ensp;<label for="vehicle_model">
                             <div class="form_label"><b>Vehicle Model</b></div>
                         </label>
-                        <input type="text" placeholder="Enter the Vehicle Model" name="veh_Model" id="veh_Model"
+                        <input type="text" placeholder="Enter the Vehicle Model" name="vehicle_model" id="vehicle_model"
                             value="<?php echo "$array[vehicle_model]"; ?>" required></br>
 
                         &ensp;&ensp;<label for="emp_id">

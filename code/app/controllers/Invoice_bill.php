@@ -35,6 +35,33 @@
         }
         }
 
+        public static  function update_bill($view_name, $role)
+        {
+        $bill = new Invoice();
+        if (isset($_POST)) {
+
+
+            $invoice_no = $_POST['invoice_no'];
+            $cus_name = $_POST['customer_name'];
+            $contact_no = $_POST['contact_no'];
+            $vehicle_no = $_POST['vehicle_no'];
+            $vehicle_model = $_POST['vehicle_model'];
+            $handled_by = $_POST['emp_id'];
+            $service_charge = $_POST['service_charge'];
+            $aditional_charges = $_POST['aditional_charges'];
+            $net_amount = $_POST['net_amount'];
+
+
+            $bill->update_bill_records($invoice_no, $cus_name, $contact_no, $vehicle_no, $vehicle_model, $handled_by, $service_charge, $aditional_charges, $net_amount);
+            $array = $bill->invoice_details($invoice_no);
+        }
+        if (Session::get("role") == $role) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/error_403.php");
+        }
+        }
+
         static function add_new(){
 
             $bill=new Invoice();
