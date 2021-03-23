@@ -17,7 +17,7 @@ class Service_type extends Model
 
         //ONLY GETS CAR FOR NOW
         $condition="WHERE type_name='$type_name'
-                    AND vehicle_category='Motor Car';";
+                    AND vehicle_category='Motor Car' LIMIT 1;";
         
         $result= $this->select(array('type_id','duration','price'),'service_type',$condition);
         //get necessary elements in an array

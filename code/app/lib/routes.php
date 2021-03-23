@@ -158,7 +158,7 @@
         //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
         Make_reservation::insert();
         //var_dump($_SESSION);
-        header("Location:confirm_reservation");
+        //header("Location:confirm_reservation");
     });
 
     //final view of reservation
