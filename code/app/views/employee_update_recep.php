@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="public\css\employee_update.css"><!-- add style to form -->
         <!-- get external js file -->
         <script type="text/javascript" src="public\js\add_emp.js"></script>
+        <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script> 
     </head>
@@ -17,7 +18,7 @@
 
 
     <!-- action="emp_update_auth" -->
-      <form name="emp_update_form" id="emp_update_form" method="post" onsubmit="send_update_data()">
+      <form name="emp_update_form" id="emp_update_form" method="post" onsubmit="updateme(); return false;" >
         <div class="container">  
          
           <div class="background">

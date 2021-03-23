@@ -188,7 +188,7 @@
         }
 
         //get details from form and return to the Model to update data
-        static function update(){
+        static function update($view_name){
 
             //create new Service_employee object
             $emp=new Service_employee();
@@ -209,12 +209,19 @@
             //to get the gender from nic number
             $gender = $test->find_gend($nic_no);
 
-            
-            
             //Call the update_record function to insert the data to database
             $emp->update_record($emp_id,$first_name,$last_name,$address,$email,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob);
 
             
+        }
+
+        public function view($view_name){
+
+            $empid=$_GET['emp_id'];
+            $emp=new Service_employee();
+            $array=$emp->get_employee($empid);
+            //var_dump($array);
+            require_once("./views/$view_name.php");
         }
         
     }
