@@ -60,7 +60,7 @@
               </td>
 
               <td style = " text-align: center;">
-                  <a href="leave_delete?leave_date=<?php echo "$emp_leave[leave_date]"; ?>" name="delete" class="btn deletebtn">Cancel</a>
+              <a href="leave_delete?leave_date=<?php echo "$emp_leave[leave_date]"; ?>&leave_type=<?php echo "$emp_leave[type]"; ?>&leave_status=<?php echo "$emp_leave[is_accepted]"; ?>" name="delete" class="btn deletebtn">Cancel</a>
               </td>
           </tr>
       <?php } ?>
