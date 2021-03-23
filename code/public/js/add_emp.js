@@ -27,7 +27,9 @@ function send_data() {
     //console.log('Registration Successful');
   }
 
+
   function send_update_data() {
+      
     $.ajax({
       url: "emp_update_auth",    //the page containing php script
       type: "post",    //request type,
@@ -53,6 +55,15 @@ function send_data() {
       }
     });
     //console.log('Registration Successful');
+  }
+
+  function updateme(){   
+    //alert("update Employee?");  
+    $.alertable.confirm('Do you want to remove the Employee?').then(function() {
+      send_update_data();
+    }, function() {
+      console.log('Confirmation canceled');
+    });  
   }
 
 
