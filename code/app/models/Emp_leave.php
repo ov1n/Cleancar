@@ -70,19 +70,34 @@
 
         }
 
-        function delete_leave($employeeid,$leave_date){
-            
-            //$query="DELETE FROM service_employee WHERE (emp_id='$employeeid')";
-            
-            $condition="WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
-
+        function delete_leave($id,$leave_date,$leave_status,$leave_type){
+                        
+            $condition="WHERE emp_id='$id' AND leave_date='$leave_date'";
             $this->delete('emp_leave',$condition);
+
+            if ($leave_status == 'accepted') {
+
+                if ($leave_type == 'Full_leave') {
+    
+                    $update_count = "UPDATE service_employee SET no_of_leaves_fullday = no_of_leaves_fullday - 1 WHERE emp_id='$id';";
+                    $result = mysqli_query($this->conn, $update_count);
+                
+                } elseif ($leave_type == 'half_day') {
+    
+                    $update_count = "UPDATE service_employee SET no_of_leaves_halfday = no_of_leaves_halfday - 1 WHERE emp_id='$id';";
+                    $result = mysqli_query($this->conn, $update_count);
+                
+                } else {
+    
+                    $update_count = "UPDATE service_employee SET no_of_leaves_short = no_of_leaves_short - 1 WHERE emp_id='$id';";
+                    $result = mysqli_query($this->conn, $update_count);
+                }
+            }
+
         }
 
         function update_leaves_status($employeeid, $leave_date, $leave_status, $leave_type)
          {
-
-
         //$condition = "WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
         $rec_update = "UPDATE emp_leave SET is_accepted='$leave_status' WHERE (emp_id='$employeeid') AND (leave_date='$leave_date');";
         $result = mysqli_query($this->conn, $rec_update);

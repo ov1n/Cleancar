@@ -44,17 +44,23 @@
 
         static function cancel_leave($view_name){
 
-            $leave=new Emp_Leave();
 
-            $employeeid = $_SESSION["uname"];
+            $name = $_SESSION["uname"];
+
+            $leave=new Emp_leave();
+            $employee=new Service_employee();
             
+            $id=$employee->get_empid($name);
+            $leave_date = $_GET['leave_date'];
+            $leave_status = $_GET['leave_status'];
+            $leave_type = $_GET['leave_type'];
+                        
              // echo($_GET['emp_id']);
              //echo ($employeeid);
-             $leave_date = $_GET['leave_date'];
              //echo ($leave_date);
 
-             $leave->delete_leave($employeeid,$leave_date);
-             $array=$leave->get_detail($employeeid);
+             $leave->delete_leave($id,$leave_date,$leave_status,$leave_type);
+             $array=$leave->get_detail($id);
              //var_dump($array);
              require_once("./views/$view_name.php");
 
