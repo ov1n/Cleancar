@@ -28,6 +28,39 @@
 
         }
 
+        function invoice_details($invoice_no)
+        {
+        $condition = "WHERE invoice_no=$invoice_no;";
+        $result = $this->select("*", 'invoice', $condition);
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+        }
+
+        //get employees in an array
+        //$bill_details = $result->fetch_all(MYSQLI_ASSOC);
+        //var_dump($employees);
+        $res = mysqli_fetch_array($result);
+        //if array is not empty that means employees are returning
+        if ($res) {
+            //echo("go to view");
+            return ($res);
+        }
+        }
+
+
+         function update_bill_records($invoice_no, $cus_name, $contact_no, $vehicle_no, $vehicle_model, $handled_by, $service_charge, $aditional_charges, $net_amount)
+        {
+
+        $query = "UPDATE invoice SET customer_name='$cus_name',contact_no='$contact_no',vehicle_no='$vehicle_no',vehicle_model='$vehicle_model',emp_id='$handled_by',service_charge=' $service_charge',aditional_charges='$aditional_charges',net_amount='$net_amount' WHERE invoice_no=$invoice_no ; ";
+        $result = mysqli_query($this->conn, $query);
+        if (!$result) {
+
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+        }
+        }
+
         function get_invoice_number(){
             $query="SELECT MAX(invoice_no) FROM invoice;";
             $result= mysqli_query($this->conn,$query);

@@ -14,7 +14,7 @@
             //assign today date to a variable
             $today=date('Y-m-d');
                
-            $condition = "WHERE emp_id = '$id' AND is_accepted = 'accepted' AND leave_date > $today;";
+            $condition = "WHERE emp_id = '$id' AND  NOT is_accepted = 'rejected' AND leave_date > $today;";
             
             $result= $this->select("*",'emp_leave',$condition);
             
@@ -130,6 +130,55 @@
             }
 
 
+        }
+
+    function get_accepted_leaves()
+        {
+        $tomorrow = date("Y-m-d", strtotime('+1 day'));
+        $condition = "WHERE is_accepted='Accepted' AND leave_date >='$tomorrow' ;";
+
+        $columns = array('leave_date', 'emp_id', 'type', 'leave_time', 'reason');
+        $result = $this->select($columns, 'emp_leave', $condition);
+
+        //get leaves in an array
+        $data = $result->fetch_all(MYSQLI_ASSOC);
+
+        if ($data) {
+            return ($data);
+        }
+        }
+
+
+    function update_cancel_leaves_status($employeeid, $leave_date, $leave_status, $leave_type)
+        {
+
+
+        //$condition = "WHERE (emp_id='$employeeid') AND (leave_date='$leave_date')";
+        $rec_update = "UPDATE emp_leave SET is_accepted='$leave_status' WHERE (emp_id='$employeeid') AND (leave_date='$leave_date') AND (type='$leave_type');";
+        $result = mysqli_query($this->conn, $rec_update);
+
+        if ($leave_status == 'Rejected') {
+
+            if ($leave_type == 'Full_leave') {
+
+                $rec_update = "UPDATE service_employee SET no_of_leaves_fullday = no_of_leaves_fullday - 1 WHERE emp_id='$employeeid';";
+                $up_result = mysqli_query($this->conn, $rec_update);
+            } elseif ($leave_type == 'half_day') {
+
+                $rec_update = "UPDATE service_employee SET no_of_leaves_halfday = no_of_leaves_halfday - 1 WHERE emp_id='$employeeid';";
+                $up_result = mysqli_query($this->conn, $rec_update);
+            } else {
+
+                $rec_update = "UPDATE service_employee SET no_of_leaves_short = no_of_leaves_short - 1 WHERE emp_id='$employeeid';";
+                $up_result = mysqli_query($this->conn, $rec_update);
+            }
+        }
+
+
+        if (!$result) {
+            printf("Error: %s\n", mysqli_error($this->conn));
+            exit();
+        }
         }
 
         

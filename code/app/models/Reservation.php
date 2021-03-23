@@ -66,4 +66,35 @@
             }
         }
 
+        //function to get availabel slots in reservation
+        function get_reserved_slots($date,$service_name,$start_time){
+
+            $query="SELECT reservation_time_slot.reservation_id,time_slot.timeslot_no
+            FROM reservation,reservation_time_slot,time_slot,service_type
+            WHERE reservation_time_slot.date='$date' AND
+            service_type.type_id=reservation.service_id AND
+            service_type.type_name='$service_name' AND
+            time_slot.start_time='$start_time' AND
+            time_slot.timeslot_no=reservation_time_slot.timeslot_no AND
+            reservation.reservation_id=reservation_time_slot.reservation_id";
+
+            //echo($query);
+            $result = mysqli_query($this->conn, $query);
+            $details =$result -> fetch_all(MYSQLI_ASSOC);
+                    
+            $slots=array();
+            if($details){
+
+                for($i=0;$i<sizeof($details);$i++){
+                    array_push($slots,$details[$i]['reservation_id']);
+                }
+                //print_r($slots);
+                //Return count of array
+                return(count($slots));
+            }else{
+                return 0;
+            }
+            
+        }
+
     }
