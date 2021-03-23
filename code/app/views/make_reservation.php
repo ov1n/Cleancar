@@ -20,7 +20,7 @@
     <body>
      <?php
         //echo($_SESSION["uname"]);
-        echo($_SESSION["timeslots"]);
+        //echo($_SESSION["timeslots"]);
         //details test
         //echo(($_SESSION["details"])["first_name"]);
         //echo(($_SESSION["details"])["last_name"]);
