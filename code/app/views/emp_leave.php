@@ -35,7 +35,7 @@
             <th>Leave Type</th>
             <th>Reason</th>
             <th>Leave Time</th>
-            <th>Accepted/Rejected</th>
+            <th>Accepted/Pending</th>
             <th>Cancel</th>
 
 
