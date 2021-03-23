@@ -348,17 +348,17 @@
     //view
     Route::set('employee_view',function(){ 
         Session::init();
-        EmployeeList::view('view_employee','manager');
+        Employee::view('view_employee','manager');
     });
 
     Route::set('employee_view_recep',function(){ 
         Session::init();
-        EmployeeList::view('view_employee_recep','receptionist');
+        Employee::view('view_employee_recep','receptionist');
     });
 
     Route::set('employee_update',function(){ 
         Session::init();
-        EmployeeList::view('employee_update','manager');
+        Employee::view('employee_update','manager');
     });
     
     Route::set('leave_status', function () {
@@ -368,7 +368,7 @@
 
     Route::set('employee_update_recep',function(){ 
         Session::init();
-        EmployeeList::view('employee_update_recep','receptionist');
+        Employee::view('employee_update_recep','receptionist');
     });
 
 
