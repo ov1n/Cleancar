@@ -42,7 +42,7 @@
 
 
 
-                            <?php if ($array['no_of_leaves_fullday'] >= 20 & $array['no_of_leaves_halfday'] >= 20 & $array['no_of_leaves_short'] >= 20) {
+                        <?php if ($array['no_of_leaves_fullday'] >= 20 & $array['no_of_leaves_halfday'] >= 20 & $array['no_of_leaves_short'] >= 20) {
                 echo " You Reached Max Leave Limit";
               } elseif ($array['no_of_leaves_fullday'] >= 20 & $array['no_of_leaves_halfday'] >= 20) {
                 echo " You Reached Max Full & Half Day Leave Limit";
@@ -65,7 +65,7 @@
                             <div class="form_label"><b>Select Date</b></div>
                         </label>
                         <input type="date" placeholder="Enter the date" name="leave_date" id="leave_date"
-                            onchange="check_date(); button_enable();" required></br>
+                            onchange="check_date(); button_enable();" required <?php if ($array['no_of_leaves_fullday'] >= 20 & $array['no_of_leaves_halfday'] >= 20 & $array['no_of_leaves_short'] >= 20) { echo "disabled";} ?>></br>
                         <div id="date_validate_msg">
                             <p></p>
                         </div><br> <!-- functions for date validity -->
@@ -73,7 +73,7 @@
                         &ensp;&ensp;<label for="emp_id">
                             <div class="form_label"><b>Employee Id</b></div>
                         </label>
-                        <input type="text" placeholder="Enter employee id" name="emp_id" id="emp_id"
+                        <input type="text" name="emp_id" id="emp_id"
                             value="<?php echo ($_SESSION['uname']); ?>"
                             style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"></br>
                         <!-- auto fill employee id when employee logged -->
