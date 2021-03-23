@@ -50,10 +50,23 @@
                             <div class="form_label"><b>Number Of Leave Available upto Today</b></div>
                         </label>
                         <div class="form_label" style="margin:35px;color: black">Full Day&ensp;&ensp;
-                            <?php echo (20 - $array[0]['no_of_leaves_fullday']); ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half
-                            Day&ensp;&ensp; <?php echo (20 - $array[0]['no_of_leaves_halfday']); ?>
+                            <?php if ($array[0]['no_of_leaves_fullday'] > 20) {
+                                echo "0";
+                            } else {
+                                echo (20 - $array[0]['no_of_leaves_fullday']);
+                            } ?>
+                            &ensp;&ensp;&ensp;&ensp;&ensp;Half Day
+                            &ensp;&ensp; <?php if ($array[0]['no_of_leaves_halfday'] > 20) {
+                                                echo "0";
+                                            } else {
+                                                echo (20 - $array[0]['no_of_leaves_halfday']);
+                                            } ?>
                             &ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;
-                            <?php echo (20 - $array[0]['no_of_leaves_short']); ?> </div>
+                            <?php if ($array[0]['no_of_leaves_short'] > 20) {
+                                echo "0";
+                            } else {
+                                echo (20 - $array[0]['no_of_leaves_short']);
+                            } ?> </div>
                     </div><!-- form_content -->
 
 
@@ -61,12 +74,20 @@
                 </div><!-- card -->
 
                 </br>
+                <div class="row" style="display: flex;">
+                    <div id="chartContainer1"
+                        style="height: 300px; width: 30%; border-style: solid;  margin-left:2.5%; box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6); ">
 
-                <div id="chartContainer1"
-                    style="height: 310px; width: 32%; border-style: solid;  margin-left:34%; box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);display: inline-block; ">
+                    </div>
+                    <div id="chartContainer2"
+                        style="height: 300px; width:30%; border-style: solid;  margin-left:2%; box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6); ">
 
+                    </div>
+                    <div id="chartContainer3"
+                        style="height: 300px; width:30%; border-style: solid;  margin-left:2%; box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6); ">
+
+                    </div>
                 </div>
-
 
                 </br></br></br>
             </div><!-- background -->
@@ -109,17 +130,86 @@
                         label: "FullDay Leaves"
                     },
                     {
+                        y: <?php if ($array[0]['no_of_leaves_fullday'] > 20) {
+                                    echo "0";
+                                } else {
+                                    echo (20 - $array[0]['no_of_leaves_fullday']);
+                                } ?>,
+                        label: "Available FullDay Leaves"
+                    },
+
+                ]
+            }]
+
+
+        });
+        chart.render();
+        // console.log('x');
+        var chart1 = new CanvasJS.Chart("chartContainer2", {
+            animationEnabled: true,
+            title: {
+
+                horizontalAlign: "center"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                //innerRadius: 60,
+                indexLabelFontSize: 16,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [{
                         y: half,
                         label: "HalfDay Leaves"
                     },
                     {
+                        y: <?php if ($array[0]['no_of_leaves_halfday'] > 20) {
+                                    echo "0";
+                                } else {
+                                    echo (20 - $array[0]['no_of_leaves_halfday']);
+                                } ?>,
+                        label: " Available HalfDay Leaves"
+                    },
+
+                ]
+            }]
+
+
+        });
+        chart1.render();
+
+        var chart2 = new CanvasJS.Chart("chartContainer3", {
+            animationEnabled: true,
+            title: {
+
+                horizontalAlign: "center"
+            },
+            data: [{
+                type: "doughnut",
+                startAngle: 60,
+                //innerRadius: 60,
+                indexLabelFontSize: 16,
+                indexLabel: "{label} - #percent%",
+                toolTipContent: "<b>{label}:</b> {y} (#percent%)",
+                dataPoints: [{
                         y: short,
                         label: "Short Leaves"
                     },
+                    {
+                        y: <?php if ($array[0]['no_of_leaves_short'] > 20) {
+                                    echo "0";
+                                } else {
+                                    echo (20 - $array[0]['no_of_leaves_short']);
+                                } ?>,
+                        label: " Available Short Leaves"
+                    },
+
                 ]
             }]
+
+
         });
-        chart.render();
+        chart2.render();
 
     }
     </script>
