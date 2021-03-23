@@ -107,12 +107,12 @@
             
              }
             ob_start();
-            require("Library/fpdf.php");
+            require("./lib/fpdfLibrary/fpdf.php");
 
             $pdf = new FPDF('p', 'mm', 'A5');
             $pdf -> AddPage();
 
-            $pdf->Image('public/images/4444.png',10,10,40,20,'png');
+            $pdf->Image('../public/images/4444.png',10,10,40,20,'png');
             $pdf -> SetFont('Times','BU','24');
             $pdf -> cell(120, 10, "CleanCar", 0 ,1,'R');
             $pdf -> SetFont('Helvetica','UI','14');
