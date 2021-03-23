@@ -87,7 +87,7 @@
                                 <a href="edit_bill_manager?invoice_no= <?php echo "$invoice1[invoice_no]"; ?>" name="view" class="btn viewbtn">Edit</a>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="#" name="view" class="btn viewbtn">Print</a>
+                                <a href="print_bill?invoice_no=<?php echo "$invoice1[invoice_no]"; ?>" name="view" class="btn viewbtn">Print</a>
                             </td>
 
                         </tr>
