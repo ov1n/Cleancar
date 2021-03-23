@@ -430,12 +430,18 @@
 
     Session::init();
     EmployeeList::create_new_view('request_leave', 'employee');
-});
+    });
 
     Route::set('add_bill',function(){
         //start session
         Session::init();
         Invoice_bill::add_new();
+    });
+
+    Route::set('print_bill', function () {
+    //start session
+    Session::init();
+    Invoice_bill::add_new();
     });
 
     Route::set('calendar',function(){
