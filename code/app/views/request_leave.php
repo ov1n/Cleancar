@@ -75,7 +75,7 @@
                         </label>
                         <input type="text" name="emp_id" id="emp_id"
                             value="<?php echo ($_SESSION['uname']); ?>"
-                            style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"></br>
+                            style="background-color: transparent; border: 0px solid;color: #000; font-weight:550" disabled></br>
                         <!-- auto fill employee id when employee logged -->
 
 
