@@ -12,6 +12,7 @@
     <!-- get external js file -->
     <script type="text/javascript" src="public\js\add_service_type.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">
 </head>
 
 <body>
@@ -93,7 +94,7 @@
                                     class="btn updatelbtn">Update</a>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="delete_service?type_id=<?php echo "$s_type[type_id]"; ?>" name="delete"
+                                <a onClick="deleteme(<?php echo $s_type['type_id']; ?>)" name="delete"
                                     class="btn deletebtn">Delete</a>
                             </td>
                         </tr>

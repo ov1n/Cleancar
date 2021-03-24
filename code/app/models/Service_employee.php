@@ -150,7 +150,7 @@ class Service_employee extends Model
     function get_search_emp_data($search_key)
     {
         $conn = Database::conn();
-        $condition = "WHERE (emp_id='$search_key' OR email='$search_key' OR NIC_no='$search_key');";
+        $condition = "WHERE (emp_id='$search_key' OR email='$search_key' OR NIC_no='$search_key' OR first_name='$search_key' OR last_name='$search_key');";
         $result = $this->select("*", 'service_employee', $condition);
 
         //get details into an associative array
