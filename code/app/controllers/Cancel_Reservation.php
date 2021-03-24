@@ -13,7 +13,7 @@
         $reservation_slot=new Reservation_time_slot();
 
         function foo(){
-
+            //$reservation->
         }
     }
 
