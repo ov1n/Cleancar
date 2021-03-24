@@ -211,6 +211,19 @@
 
             //Call the update_record function to insert the data to database
             $emp->update_record($emp_id,$first_name,$last_name,$address,$email,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob);
+            // $emp=new Service_employee();
+            // $array=$emp->get_employee($empid);
+            // var_dump(Session::get("role"));
+            // if (Session::get("role") == "receptionist"){
+                
+            //     //require_once("./views/view_employee_recep.php");
+            //     //$test->view("view_employee_recep");
+            // }
+            // else{
+            //     //var_dump($array);
+            //     //require_once("./views/view_employee.php");
+            //     //$test->view('view_employee');
+            // }
 
             
         }
