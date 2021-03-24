@@ -5,13 +5,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\emp_leave.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">
+
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script type="text/javascript" src="public\js\add_emp_leave.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body>
+<!-- <script>
+              console.log("deleteme('acvs','sdf')");
+              </script> -->
+
 <div class="container">  
           
 <div class="background">
@@ -60,7 +66,9 @@
               </td>
 
               <td style = " text-align: center;">
-              <a href="leave_delete?leave_date=<?php echo "$emp_leave[leave_date]"; ?>&leave_type=<?php echo "$emp_leave[type]"; ?>&leave_status=<?php echo "$emp_leave[is_accepted]"; ?>" name="delete" class="btn deletebtn">Cancel</a>
+              
+              <a onClick="deleteme('<?php echo $emp_leave['leave_date']; ?>',' <?php echo $emp_leave['type']; ?>', '<?php echo $emp_leave['is_accepted']; ?>')" name="delete" class="btn deletebtn">Cancel</a>
+             
               </td>
           </tr>
       <?php } ?>
