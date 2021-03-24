@@ -14,6 +14,7 @@
 
     <script type="text/javascript" src="public\js\add_service_type.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">
 </head>
 
 <body>
@@ -82,7 +83,7 @@
                         &ensp;&ensp;<label for="prize">
                             <div class="form_label"><b>Normal Prize</b></div>
                         </label>
-                        <input type="text" placeholder="Enter normal prize" name="price" id="price" required
+                        <input type="text" placeholder="Enter normal price" name="price" id="price" required
                             size="50"></br>
 
                         <a href="service_type_list" class="btn cancelbtn" class="form_btn"> Cancel </a>
@@ -98,14 +99,14 @@
     </form>
 
     <?php
-  //include nav bar externally 
-  include("nav_profile.php");
-  ?>
+    //include nav bar externally 
+    include("nav_profile.php");
+    ?>
 
     <?php
-  //get footer in seperate file
-  include("footer.php");
-  ?>
+    //get footer in seperate file
+    include("footer.php");
+    ?>
 
 </body>
 

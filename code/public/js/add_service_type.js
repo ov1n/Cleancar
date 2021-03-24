@@ -53,3 +53,21 @@ function send_data() {
     });
     //console.log('Registration Successful');
   }
+
+  function updateme(){   
+    //alert("update Employee?");  
+    $.alertable.confirm('Do you want to update the service?').then(function() {
+      send_update_data();
+    }, function() {
+      console.log('Confirmation canceled');
+    });  
+  }
+
+    function deleteme(type_id){   
+      //alert("Delete Employee?");  
+      $.alertable.confirm('Do you want to remove the service type?').then(function() {
+        window.location.href="delete_service?type_id="+type_id;
+      }, function() {
+        console.log('Confirmation canceled');
+      });  
+    }
