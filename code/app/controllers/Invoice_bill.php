@@ -22,40 +22,97 @@
             }
         }
 
+        public static function load_bill_data($view_name, $role)
+        {
+        $bill = new Invoice();
+        $invoice_no = $_GET['invoice_no'];
+        $array = $bill->invoice_details($invoice_no);
+        //var_dump($array);
+        if (Session::get("role") == $role) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/error_403.php");
+        }
+        }
+
+        public static  function update_bill($view_name, $role)
+        {
+        $bill = new Invoice();
+        if (isset($_POST)) {
+
+
+            $invoice_no = $_POST['invoice_no'];
+            $cus_name = $_POST['customer_name'];
+            $contact_no = $_POST['contact_no'];
+            $vehicle_no = $_POST['vehicle_no'];
+            $vehicle_model = $_POST['vehicle_model'];
+            $handled_by = $_POST['emp_id'];
+            $service_charge = $_POST['service_charge'];
+            $aditional_charges = $_POST['aditional_charges'];
+            $net_amount = $_POST['net_amount'];
+
+
+            $bill->update_bill_records($invoice_no, $cus_name, $contact_no, $vehicle_no, $vehicle_model, $handled_by, $service_charge, $aditional_charges, $net_amount);
+            $array = $bill->invoice_details($invoice_no);
+        }
+        if (Session::get("role") == $role) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/error_403.php");
+        }
+        }
+
         static function add_new(){
 
             $bill=new Invoice();
             
+           if (Session::get("role") == "receptionist") {
             //get each field from form
-            $reservation_id=$_POST['reservation_id'];
-            $customer_name=$_POST['name'];
-            $contact_no=$_POST['contact_number'];
-            $vehicle_no=$_POST['veh_Number'];
-            $vehicle_model=$_POST['veh_Model'];
-            $emp_id=$_POST['emp_id'];
-            $service_charge=$_POST['service_charge'];
-            $aditional_charges=$_POST['aditional_charges'];
-            $net_amount=$_POST['net_amount'];
+            $reservation_id = $_POST['reservation_id'];
+            $customer_name = $_POST['name'];
+            $contact_no = $_POST['contact_number'];
+            $vehicle_no = $_POST['veh_Number'];
+            $vehicle_model = $_POST['veh_Model'];
+            $emp_id = $_POST['emp_id'];
+            $service_charge = $_POST['service_charge'];
+            $aditional_charges = $_POST['aditional_charges'];
+            $net_amount = $_POST['net_amount'];
 
             //get date of today for registered date
-            $today=date('Y-m-d');
+            $today = date('Y-m-d');
 
 
             //the built in insert function of model is called here
-            $key_array=array("reservation_id","vehicle_no","vehicle_model","customer_name","contact_no","service_charge","aditional_charges","net_amount","bill_date");
-            $values_array=array("$reservation_id","$vehicle_no","$vehicle_model","$customer_name","$contact_no","$service_charge","$aditional_charges","$net_amount",$today);
+            $key_array = array("reservation_id", "vehicle_no", "vehicle_model", "customer_name", "contact_no", "service_charge", "aditional_charges", "net_amount", "bill_date");
+            $values_array = array("$reservation_id", "$vehicle_no", "$vehicle_model", "$customer_name", "$contact_no", "$service_charge", "$aditional_charges", "$net_amount", $today);
 
             //insert data using the base model function
-            $bill->insert('invoice',$key_array,$values_array);
+            $bill->insert('invoice', $key_array, $values_array);
 
             $invoice_no = $bill->get_invoice_number();
+       
+             } else {
+
+            $invoice_no = $_GET['invoice_no'];
+            $array = $bill->invoice_details($invoice_no);
+            $today = date('Y-m-d');
+
+            $customer_name = $array['customer_name'];
+            $contact_no = $array['contact_no'];
+            $vehicle_model = $array['vehicle_model'];
+            $vehicle_no = $array['vehicle_no'];
+            $service_charge = $array['service_charge'];
+            $aditional_charges = $array['aditional_charges'];
+            $net_amount = $array['net_amount'];
+            
+             }
             ob_start();
-            require("Library/fpdf.php");
+            require("./lib/fpdfLibrary/fpdf.php");
 
             $pdf = new FPDF('p', 'mm', 'A5');
             $pdf -> AddPage();
 
-            $pdf->Image('public/images/4444.png',10,10,40,20,'png');
+            $pdf->Image('../public/images/4444.png',10,10,40,20,'png');
             $pdf -> SetFont('Times','BU','24');
             $pdf -> cell(120, 10, "CleanCar", 0 ,1,'R');
             $pdf -> SetFont('Helvetica','UI','14');

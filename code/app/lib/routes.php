@@ -158,7 +158,7 @@
         //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
         Make_reservation::insert();
         //var_dump($_SESSION);
-        header("Location:confirm_reservation");
+        //header("Location:confirm_reservation");
     });
 
     //final view of reservation
@@ -217,6 +217,18 @@
 
     Session::init();
     ServiceType::search('service_type_list', 'manager');
+    });
+
+    Route::set('edit_bill_manager', function () {
+
+    Session::init();
+    Invoice_bill::load_bill_data('edit_bill_manager', 'manager');
+    });
+
+    Route::set('update_bill_manager', function () {
+    //start session
+    Session::init();
+    Invoice_bill::update_bill('edit_bill_manager', 'manager');
     });
 
     Route::set('change_password',function(){
@@ -336,17 +348,17 @@
     //view
     Route::set('employee_view',function(){ 
         Session::init();
-        EmployeeList::view('view_employee','manager');
+        Employee::view('view_employee','manager');
     });
 
     Route::set('employee_view_recep',function(){ 
         Session::init();
-        EmployeeList::view('view_employee_recep','receptionist');
+        Employee::view('view_employee_recep','receptionist');
     });
 
     Route::set('employee_update',function(){ 
         Session::init();
-        EmployeeList::view('employee_update','manager');
+        Employee::view('employee_update','manager');
     });
     
     Route::set('leave_status', function () {
@@ -356,7 +368,7 @@
 
     Route::set('employee_update_recep',function(){ 
         Session::init();
-        EmployeeList::view('employee_update_recep','receptionist');
+        Employee::view('employee_update_recep','receptionist');
     });
 
 
@@ -418,12 +430,18 @@
 
     Session::init();
     EmployeeList::create_new_view('request_leave', 'employee');
-});
+    });
 
     Route::set('add_bill',function(){
         //start session
         Session::init();
         Invoice_bill::add_new();
+    });
+
+    Route::set('print_bill', function () {
+    //start session
+    Session::init();
+    Invoice_bill::add_new();
     });
 
     Route::set('calendar',function(){

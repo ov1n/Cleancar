@@ -48,14 +48,14 @@
         }
 
         //function to view employee
-        public function view($view_name){
+        // public function view($view_name){
 
-            $empid=$_GET['emp_id'];
-            $emp=new Service_employee();
-            $array=$emp->get_employee($empid);
-            //var_dump($array);
-            require_once("./views/$view_name.php");
-        }
+        //     $empid=$_GET['emp_id'];
+        //     $emp=new Service_employee();
+        //     $array=$emp->get_employee($empid);
+        //     //var_dump($array);
+        //     require_once("./views/$view_name.php");
+        // }
 
         //function to delete employee
         public static function delete($view_name){

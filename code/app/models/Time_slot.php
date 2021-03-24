@@ -50,7 +50,7 @@
                     WHERE ADDTIME('$start_time', '$duration')=end_time
                     ";
             
-            //echo($query1);
+            echo($query1);
 
             $result1= mysqli_query($this->conn,$query1);
 
@@ -69,6 +69,8 @@
             $query2="SELECT timeslot_no FROM time_slot
                     WHERE time_slot.start_time>='$start_time' AND
                     time_slot.end_time<='$end_time';";
+            
+            echo($query2);
 
             $result2= mysqli_query($this->conn,$query2);
 

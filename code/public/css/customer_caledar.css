@@ -282,3 +282,24 @@ h1 {
   color: #e67e22;
   background-color: black;
 }
+
+.headings{
+  font-weight: bold;
+}
+
+.times{
+  color:red;
+}
+
+.slots{
+  background-color: #1cd10f;
+}
+
+.slots:hover{
+  border: 2px solid rgb(226, 95, 95);
+  cursor: pointer;
+}
+
+.slots:active{
+  border: 2px solid rgb(22, 224, 197);
+}
