@@ -57,15 +57,25 @@ function send_data() {
     //console.log('Registration Successful');
   }
 
-  function updateme(){   
+  function updateme_recep(){   
     //alert("update Employee?");  
-    $.alertable.confirm('Do you want to remove the Employee?').then(function() {
+    $.alertable.confirm('Do you want to Update the Employee Details?').then(function() {
       send_update_data();
+      window.location.href="employee_list_recep";
     }, function() {
       console.log('Confirmation canceled');
     });  
   }
 
+  function updateme(){   
+    //alert("update Employee?");  
+    $.alertable.confirm('Do you want to Update the Employee Details?').then(function() {
+      send_update_data();
+      window.location.href="employee_list";
+    }, function() {
+      console.log('Confirmation canceled');
+    });  
+  }
 
 
 //function which takes confirm password
