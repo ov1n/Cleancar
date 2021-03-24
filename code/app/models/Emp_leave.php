@@ -32,9 +32,10 @@
 
 
         function insert_leave($leave_date,$emp_id,$type,$leave_time,$reason){            
-        
-            $columns=array('leave_date','emp_id','type','leave_time','reason');
-            $values=array("$leave_date","$emp_id","$type","$leave_time","$reason");
+            $leave_status="Pending";
+
+            $columns=array('leave_date','emp_id','type','leave_time','reason','is_accepted');
+            $values=array("$leave_date","$emp_id","$type","$leave_time","$reason","$leave_status");
 
             $this->insert('emp_leave',$columns,$values);
             
