@@ -8,8 +8,26 @@
 
     class View_Reservation extends Controller{
 
-        public function __construct(){
-            //
+
+        public static function create_view($view_name,$role){
+            //require_once("./views/$view_name.php");
+            if($role==""){
+                //no permission needed
+                require_once("./views/$view_name.php");
+            }
+            else if($role=="loggedin"){
+
+                if(Session::get("role")){
+                    require_once("./views/$view_name.php");
+                }
+                
+            }else if(Session::get("role")==$role){
+                require_once("./views/customer/$view_name.php");
+            }
+
+            else{
+                require_once("./views/error_403.php");
+            }
         }
 
         //function to get reservation details of the current employee
@@ -31,7 +49,7 @@
             //get the customers reservation details
             $reservation_details=$res->select_reservation($cust_id);
             //echo '<pre>';
-            //var_dump($reservation_details);
+            //var_dump($_SESSION);
             //echo '</pre>';
 
             //set reservation details to session

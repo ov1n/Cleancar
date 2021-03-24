@@ -84,6 +84,24 @@
                 <h3>For any clarifications please contact CleanCar at our hotline </h3>
                 <h3><i class="fas fa-phone-alt"></i> 011-2773411 </h3>
                 </br>
+                <!-- clear session -->
+                <?php Session::unset("full_service_slots"); ?>
+                <?php Session::unset("normal_service_slots"); ?>
+                <?php Session::unset("body_wash_slots"); ?>
+                <?php Session::unset("coming_week"); ?>
+                <?php Session::unset("full_service_list"); ?>
+                <?php Session::unset("normal_service_list"); ?>
+                <?php Session::unset("body_wash_list"); ?>
+                <?php Session::unset("vehicle_num"); ?>
+                <?php Session::unset("price"); ?>
+                <?php Session::unset("res_date"); ?>
+                <?php Session::unset("service_id"); ?>
+                <?php Session::unset("time"); ?>
+                <?php Session::unset("service_name"); ?>
+                <?php Session::unset("details"); ?>
+                <?php Session::unset("duration"); ?>
+                <?php Session::unset("vehicle_category"); ?>
+                <?php //var_dump($_SESSION); ?>
                 <a class="backbtn" href="home">Back</a>
                 <a class="advbtn" href="pay_advanced">Pay Advanced</a>
                 </br></br>

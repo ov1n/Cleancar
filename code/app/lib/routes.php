@@ -117,7 +117,7 @@
         //start session
         Session::init();
         View_reservation::get_reservations();
-        View_reservation::create_view('view_reservation','customer');
+        //View_reservation::create_view('view_reservation','customer');
     });
 
     //route to make reservation from receptionist
@@ -159,6 +159,7 @@
         Make_reservation::insert();
         //var_dump($_SESSION);
         header("Location:confirm_reservation");
+        //var_dump($_SESSION);
     });
 
     //final view of reservation

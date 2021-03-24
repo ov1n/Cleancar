@@ -149,18 +149,18 @@ function create_table(service_type,days,service_list,out_list,service_name){
 function pass_date_and_time(x,service_name){
     console.log(service_name);
     if(service_name=='Full Service'){
-        document.getElementById("date").value = normal_array[x][0];
-        document.getElementById("time").value = normal_array[x][1];
-        console.log(full_array[x][0]);
-        console.log(full_array[x][1]);
+        document.getElementById("date").value = full_array[x][0];
+        document.getElementById("time").value = full_array[x][1];
+        //console.log(full_array[x][0]);
+        //console.log(full_array[x][1]);
     }else if(service_name=='Normal Service'){
         document.getElementById("date").value = normal_array[x][0];
         document.getElementById("time").value = normal_array[x][1];
-        console.log(normal_array[x][1]);
+        //console.log(normal_array[x][1]);
     }else if(service_name=='Body Wash'){
-        document.getElementById("date").value = normal_array[x][0];
-        document.getElementById("time").value = normal_array[x][1];
-        console.log(body_array[x][0]);
-        console.log(body_array[x][1]);
+        document.getElementById("date").value = body_array[x][0];
+        document.getElementById("time").value = body_array[x][1];
+        //console.log(body_array[x][0]);
+        //console.log(body_array[x][1]);
     }
 } 
