@@ -18,7 +18,7 @@
 
 
     <!-- action="emp_update_auth" -->
-      <form name="emp_update_form" id="emp_update_form" method="post" onsubmit="updateme(); return false;" >
+      <form name="emp_update_form" id="emp_update_form" method="post" onsubmit="updateme_recep(); return false;" >
         <div class="container">  
          
           <div class="background">
