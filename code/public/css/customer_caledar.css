@@ -296,5 +296,10 @@ h1 {
 }
 
 .slots:hover{
-  border: 1px solid rgb(226, 95, 95);
+  border: 2px solid rgb(226, 95, 95);
+  cursor: pointer;
+}
+
+.slots:active{
+  border: 2px solid rgb(22, 224, 197);
 }

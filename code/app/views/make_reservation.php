@@ -20,7 +20,7 @@
     <body>
      <?php
         //echo($_SESSION["uname"]);
-        echo($_SESSION["timeslots"]);
+        //echo($_SESSION["timeslots"]);
         //details test
         //echo(($_SESSION["details"])["first_name"]);
         //echo(($_SESSION["details"])["last_name"]);
@@ -37,7 +37,8 @@
                   
                   <li><a href="home">Home</a></li>
                   <li><a href="home">Customer</a></li>
-                  <li>Make Reservation</li>    
+                  
+                  <li>Make Reservation<?php echo($_SESSION["res_date"]); ?> </li>    
                 </ul><!-- breadcrumb --> 
                 <h1>Make Reservation&ensp;<i class="fas fa-edit fa-lg"></i></h1><hr style="width: 60%;">
               <div class="card" >

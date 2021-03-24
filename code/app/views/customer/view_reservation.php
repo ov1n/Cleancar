@@ -45,7 +45,7 @@
                 <!--ADD CONCAT FUNCTION -->
                 <label for="date"><div class="form_label"><b>Date</b></div></label>
                 <input type="date"  name="date" class="output_detail" value = <?php echo "$row[date]"; ?>
-                 id="date" disabled></br>
+                 id="date" disabled maxlength="30" size="30"></br>
 
                 <label for="time"><div class="form_label"><b>Time</b></div></label>
                 <input type="text"  name="time" value = 
@@ -61,17 +61,19 @@
 
                 <label for="advance_paid"><div class="form_label"><b>Payment</b></div></label>
                 <input type="text"  name="advance_paid" class="is_paid" value =
-                 "<?php echo($row["is_advance_paid"])?>" disabled></br>
-                
+                 "<?php echo($row["is_advance_paid"])?>" disabled></br> 
+                 </div><!-- form_content -->  
                  <?php if(!($row["is_advance_paid"])){
                             echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
-                 }
-                }
+                 } ?>
+                 <a href='cancel_reservation' name='cancel' class='btn updatelbtn'>Cancel Reservation</a>
+                 </br>----------------------------------------------------------------
+                <?php }
               }else{
               echo( " <h2 style='text-align:center;color: white;'> No reservations </h2>");
             } ?>
 
-              </div><!-- form_content -->   
+               
             
             </br></br>
           </div><!-- card -->

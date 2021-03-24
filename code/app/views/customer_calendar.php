@@ -83,16 +83,9 @@
                   <option value="Body Wash">Body wash</option>
                 </select><br>
 
-                <!--ADD DATE SELECTOR IF CALENDAR DOESNT WORK -->
-                &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
-                <select name="time" id="time">
-                    <option value="08:00:00">08.00 a.m</option>
-                    <option value="10:00:00">10.00 a.m</option>
-                    <option value="12:00:00">12.00 p.m</option>
-                </select><br>
-
                 <!--set DATE to  hidden field -->
-                <input type="hidden" id="date" name="date" value="2020-11-26">
+                <input type="hidden" id="date" name="date" value="">
+                <input type="hidden" id="time" name="time" value="">
 
                 <!-- get external components -->
                 <script src="public/js/jquery/calendar/jquery-pseudo-ripple.js"></script>
@@ -115,7 +108,7 @@
                 <div id="calendar_message"><p></p></div>               
 
                 <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" class="btn" class="form_btn" id="reserve" disabled>Submit</button></br></br>
+                <button type="submit" class="btn" class="form_btn" id="reserve">Submit</button></br></br>
             </br></br>
 
               </div><!-- form_content -->              

@@ -42,7 +42,7 @@
         }
         
         //get timeslots for required time slot
-        function get_range($start_time,$duration){
+        function get_range($start_time,$duration,$res_date){
 
             //calculate the end time
             $query1="SELECT end_time
@@ -50,7 +50,7 @@
                     WHERE ADDTIME('$start_time', '$duration')=end_time
                     ";
             
-            //echo($query1);
+            echo($query1);
 
             $result1= mysqli_query($this->conn,$query1);
 
@@ -66,9 +66,18 @@
 
 
             //2nd query to get range of timeslots from the endtime
-            $query2="SELECT timeslot_no FROM time_slot
+            $query2="SELECT timeslot_no
+                    FROM time_slot
+                    WHERE timeslot_no NOT IN (SELECT DISTINCT time_slot.timeslot_no
+                    FROM time_slot,reservation_time_slot
                     WHERE time_slot.start_time>='$start_time' AND
+                    time_slot.end_time<='$end_time' AND
+                    time_slot.timeslot_no=reservation_time_slot.timeslot_no AND 
+                    reservation_time_slot.date='$res_date') AND 
+                    time_slot.start_time>='$start_time' AND
                     time_slot.end_time<='$end_time';";
+            
+            //echo($query2);
 
             $result2= mysqli_query($this->conn,$query2);
 

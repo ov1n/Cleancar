@@ -29,10 +29,15 @@
               <hr style="width: 60%;">
               <br><br>
 <div class = "list_table">
-<!-- <h2>Employee Details</h2> -->
+<form class="example" method="post" action="search_employee_data"
+                    style="margin:auto;max-width:300px;float:right;padding:20px;">
+                    <input type="text" placeholder="Search.." name="search" id="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
   <table id="table_">
+  <?php if ($array) { ?>
   <tr>
             <th>Employee ID</th>
             <th>First Name</th>
@@ -46,7 +51,7 @@
         <?php foreach($array as $emp){ ?>
           <tr>
               <td style="text-align: center; font-weight: 700;">
-                  E <?php echo "$emp[emp_id]"; ?>
+                  <?php echo "$emp[emp_id]"; ?>
               </td>
               <td>
                   <?php echo "$emp[first_name]"; ?>
@@ -69,6 +74,13 @@
               </td>
           </tr>
       <?php } ?>
+      <?php } ?>
+    <?php if (!$array) { ?>
+    <p style="color: red;font-size:large;padding:10px;font-weight:100;">
+    <b> <?php echo "Record Not Found !"; ?>
+    </b>
+    </p>
+    <?php } ?>
   </table>
   </div>
 </div><br><br>

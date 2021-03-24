@@ -90,11 +90,11 @@
 
             //get the customer id to create tables
             $cid=$cust->get_custid(Session::get("uname"));
-            echo("got cust id\n");
+            //echo("got cust id\n");
 
             //get current date in db format
             $curr_date=date("Y-m-d");
-            echo($curr_date);
+            //echo($curr_date);
             
             //insert into reservation table , 0 for adv_paid because function hasnt been implemented yet
             //get other necessary arguments from sessions and get reservation id returned for next query
@@ -104,18 +104,20 @@
 
             //above function returns next res_id but we need the current one, so decrement
             $curr_res_id=$next_res_id-1;
-            echo($curr_res_id);
+            //echo($curr_res_id);
             Session::set("res_id",$curr_res_id);
 
             //get timeslots
-            $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
-            //print_r($timeslots);
+            $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"),Session::get("res_date"));
+            echo('cat');
+            print_r($timeslots);
+            echo('cat');
             
-            echo('before timeslot');//get each timeslot and insert into reservation-timeslot table
+            //('before timeslot');//get each timeslot and insert into reservation-timeslot table
 
             foreach ($timeslots as $key ) {
                 
-                echo("1\n");
+                //echo("1\n");
                 $res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
             }
 
