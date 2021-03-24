@@ -188,7 +188,7 @@
         }
 
         //get details from form and return to the Model to update data
-        static function update($view_name){
+        static function update(){
 
             //create new Service_employee object
             $emp=new Service_employee();
