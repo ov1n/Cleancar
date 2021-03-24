@@ -108,7 +108,7 @@
             Session::set("res_id",$curr_res_id);
 
             //get timeslots
-            $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"));
+            $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"),Session::get("res_date"));
             echo('cat');
             print_r($timeslots);
             echo('cat');
@@ -118,11 +118,11 @@
             foreach ($timeslots as $key ) {
                 
                 //echo("1\n");
-                //$res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
+                $res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
             }
 
             //once confirmed increment the current customer reservation count by 1
-            //$cust->increment_count($cid);
+            $cust->increment_count($cid);
 
             //get vehicle number and vehicle category
             $vehicle_array=$vehicle->get_details($cid);
@@ -149,7 +149,7 @@
                     For any clarifications please contact CleanCar at our hotline :011-2773411";
 
             //call function in class
-            //$mail->mailto($subject,$_SESSION['details']['email'],$body);
+            $mail->mailto($subject,$_SESSION['details']['email'],$body);
 
         }
         //function which gets 
