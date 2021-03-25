@@ -34,7 +34,7 @@ function table_beautify(service_name){
 
         else{
             //x[i].innerHTML="";
-            x[i].style.backgroundColor = '#1cd10f';
+            x[i].style.backgroundColor = '#fff';
         }
     }
     

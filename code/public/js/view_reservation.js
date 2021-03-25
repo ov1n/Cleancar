@@ -2,6 +2,24 @@
 //window.onload = advance_paid;
 window.onload = advance_paid;
 
+function send_canceled_reservation(val) {
+      
+  $.ajax({
+    url: "cancel_res_",    //the page containing php script
+    type: "post",    //request type,
+    dataType: 'json',
+    //the data array
+    data: {
+      res_id: val
+    }
+    ,
+    //debugging
+    success: function () {
+      console.log("succesfully sent data;");
+    }
+  });
+}
+
 function advance_paid(){
 
     //get all elements of class
@@ -54,21 +72,12 @@ function set_time(){
   }, 1000);
 }
 
-function cancelConfirm(cat){   
+function cancelConfirm(res_id){   
   //alert("Make reservation on the below entered details?");  
   $.alertable.confirm('Are you sure you want to cancel this reservation?').then(function() {
-    console.log(cat);
+    console.log(res_id);
+    send_canceled_reservation(res_id)
   }, function() {
-    console.log(cat);
+    console.log('Did nott cancel reservation');
   });  
-}
-
-function getInputsByValue(value)
-{
-    var allInputs = document.getElementsByTagName("input");
-    var results = [];
-    for(var x=0;x<allInputs.length;x++)
-        if(allInputs[x].value == value)
-            results.push(allInputs[x]);
-    return results;
 }

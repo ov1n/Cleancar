@@ -9,13 +9,6 @@
        
         <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
 
-        <!-- style needed for calendar -->
-        <link rel="stylesheet" href="public/css/calendar_card.css">  <!--LIGHT BLUE BG CARD -->
-        <link rel="stylesheet" href="public/css/calendar/aicon/style.css"> <!--CHANGE MONTH BUTTON -->
-        <!--<link rel="stylesheet" href="public/css/calendar/4grid.css"> --> <!--DONT REMOVE -->
-        <link rel="stylesheet" href="public/css/calendar/jquery-pseudo-ripple.css"> <!-- SHADOW ANIMATION -->
-        <link rel="stylesheet" href="public/css/calendar/calendar_construct.css">
-
         <!-- style needed for calendar tables -->
         <link rel="stylesheet" href="public/css/calendar_table.css">
 
@@ -25,9 +18,10 @@
         <!-- get external js file -->
         <script type="text/javascript" src="public\js\reservation.js"></script>
         <script src="public/js/jquery/jquery.alertable.min.js"></script>
+        <script src="public/js/util/time.js"></script>
 
         <!-- link calendar table js file -->
-        <script type="text/javascript" src="public\js\calendar\calendar_table.js"></script>\
+        <script type="text/javascript" src="public\js\calendar\calendar_table.js"></script>
 
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
     </head>
