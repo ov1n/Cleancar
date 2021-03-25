@@ -104,10 +104,10 @@ class ChangePassword extends Controller
 
             header("Location:employee");
         } else {
-            //redirect to home with message
-            header("Location:profile");
-            //set
-            Session::set("login", "Incorrect_Password");
+            
+            header("Location:change_password");
+            //set session
+            Session::set("changePassword", "Incorrect_Password");
         }
     }
 }
