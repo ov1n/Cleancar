@@ -164,6 +164,7 @@ th, td {
   color: #01447e;
   background-color:#fca147 ;
   box-shadow: 0 3px 5px rgba(228, 112, 17, 0.884);
+  cursor: pointer;
 }
 
 .deletebtn{
@@ -171,6 +172,7 @@ th, td {
   color: #01447e;
   background-color: #f87070;
   box-shadow: 0 3px 5px rgba(236, 14, 14, 0.6);
+  cursor: pointer;
 }
 
 

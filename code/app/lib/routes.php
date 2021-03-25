@@ -117,7 +117,7 @@
         //start session
         Session::init();
         View_reservation::get_reservations();
-        View_reservation::create_view('view_reservation','customer');
+        //View_reservation::create_view('view_reservation','customer');
     });
 
     //route to make reservation from receptionist
@@ -159,6 +159,7 @@
         Make_reservation::insert();
         //var_dump($_SESSION);
         header("Location:confirm_reservation");
+        //var_dump($_SESSION);
     });
 
     //final view of reservation
@@ -194,6 +195,7 @@
         Session::init();
         Employee::update();
     });
+    
     Route::set('update_user_auth', function () {
     //start session
     Session::init();
@@ -494,11 +496,18 @@
         Session::init();
         Controller::create_view('delay_timetable_manager','manager');
     });
+
     Route::set('search_emp_data', function () {
 
     Session::init();
     EmployeeList::search('employee_list', 'manager');
-});
+    });
+
+    Route::set('search_employee_data', function () {
+
+        Session::init();
+        EmployeeList::search('employee_list_recep', 'receptionist');
+    });
 
     Route::set('add_leave_manager',function(){
         Session::init();
