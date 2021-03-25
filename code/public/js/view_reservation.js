@@ -53,3 +53,22 @@ function set_time(){
     }
   }, 1000);
 }
+
+function cancelConfirm(cat){   
+  //alert("Make reservation on the below entered details?");  
+  $.alertable.confirm('Are you sure you want to cancel this reservation?').then(function() {
+    console.log(cat);
+  }, function() {
+    console.log(cat);
+  });  
+}
+
+function getInputsByValue(value)
+{
+    var allInputs = document.getElementsByTagName("input");
+    var results = [];
+    for(var x=0;x<allInputs.length;x++)
+        if(allInputs[x].value == value)
+            results.push(allInputs[x]);
+    return results;
+}
