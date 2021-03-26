@@ -57,6 +57,7 @@ function time_format(value){
 function display_table(e){
 
     var days=[];
+    document.getElementById("date_showw").innerHTML ="";
 
     var tomorrow = new Date(today);
     for(var i = 1; i < 7; i++){
