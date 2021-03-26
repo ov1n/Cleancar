@@ -243,10 +243,29 @@ input[type=text], input[type=password], input[type=email], input[type=date],inpu
 
 /* button for advance payment */
 .updatelbtn{
-  width: 80px;
-  color: #01447e;
-  background-color:#fca147 ;
-  box-shadow: 0 3px 5px rgba(228, 112, 17, 0.884);
+  
+  background-color: #e67e22;
+  width: 120px;
+  height: 60px;
+  text-align: center;
+  padding: 10px;
+  border-color: #e67e22;
+  border-style: solid;
+  border-width: 2px;
+  color: white;
+  font-weight: 500;
+  font-size: large;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+  box-shadow: 0px 3px 5px 0px #572b00;
+  transition: background-color .3s;
+}
+
+.updatelbtn:hover{
+  cursor: pointer;
+  background-color: #d35400;
+  border-color: #d35400;
 }
 
 /* Styles, not important */

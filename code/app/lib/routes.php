@@ -57,6 +57,11 @@
         Controller::create_view('contact_us','');
     });
 
+    Route::set('terms_conditions', function () {
+       Session::init();
+       Controller::create_view('terms_conditions', '');
+	});
+
     Route::set('add_service',function(){
         //start session
         Session::init();

@@ -2,6 +2,24 @@
 //window.onload = advance_paid;
 window.onload = advance_paid;
 
+function send_canceled_reservation(val) {
+      
+  $.ajax({
+    url: "cancel_res_",    //the page containing php script
+    type: "post",    //request type,
+    dataType: 'json',
+    //the data array
+    data: {
+      res_id: val
+    }
+    ,
+    //debugging
+    success: function () {
+      console.log("succesfully sent data;");
+    }
+  });
+}
+
 function advance_paid(){
 
     //get all elements of class
@@ -52,4 +70,14 @@ function set_time(){
       document.getElementsByClassName("countdown").value = "EXPIRED";
     }
   }, 1000);
+}
+
+function cancelConfirm(res_id){   
+  //alert("Make reservation on the below entered details?");  
+  $.alertable.confirm('Are you sure you want to cancel this reservation?').then(function() {
+    console.log(res_id);
+    send_canceled_reservation(res_id)
+  }, function() {
+    console.log('Did nott cancel reservation');
+  });  
 }

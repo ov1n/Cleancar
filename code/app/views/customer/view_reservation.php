@@ -5,6 +5,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\view_reservation.css"><!-- add style to form -->
+    <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
@@ -64,9 +65,9 @@
                  "<?php echo($row["is_advance_paid"])?>" disabled></br> 
                  </div><!-- form_content -->  
                  <?php if(!($row["is_advance_paid"])){
-                            echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn'>Pay Online</a>");
+                            echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn' style=width:90px;>Pay Online</a>");
                  } ?>
-                 <a href='cancel_reservation' name='cancel' class='btn updatelbtn'>Cancel Reservation</a>
+                 <?php echo '<a onclick="cancelConfirm('.$row['reservation_id'].')" name="cancel" class="btn updatelbtn" id="'.$row['reservation_id'].'">Cancel Reservation</a>' ?>
                  </br>----------------------------------------------------------------
                 <?php }
               }else{
