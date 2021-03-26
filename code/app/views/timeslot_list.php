@@ -6,10 +6,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\service_type_list.css"><!-- add style to employee_list -->
+    <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">
+
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
+    <script type="text/javascript" src="public\js\add_timeslot.js"></script>
+
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 
 </head>
@@ -71,10 +75,12 @@
                             </td>
 
                             <td style=" text-align: center;">
-                                <a href="update_timeslot?timeslot_no=<?php echo "$timeslot[timeslot_no]"; ?>" name="update" class="btn updatelbtn">Update</a>
+                                <a onClick="updateme('<?php echo $timeslot['timeslot_no']; ?>')" name="update" class="btn updatelbtn">Update</a>
+
                             </td>
                             <td style=" text-align: center;">
-                                <a href="delete_timeslot?timeslot_no=<?php echo "$timeslot[timeslot_no]"; ?>" name="delete" class="btn deletebtn">Delete</a>
+                                <a onClick="deleteme('<?php echo $timeslot['timeslot_no']; ?>')" name="delete" class="btn deletebtn">Delete</a>
+
                             </td>
                         </tr>
                         <?php } ?>
