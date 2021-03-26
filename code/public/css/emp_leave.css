@@ -85,6 +85,10 @@ th, td {
   font-weight: bold;
 } 
 
+.status{
+  text-align: center;
+}
+
 /* Set a style for the submit/register button */
 .btn {
   position: relative;
