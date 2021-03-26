@@ -28,12 +28,14 @@ function table_beautify(service_name){
         
         console.log(i);
         if(x[i].innerHTML<="0"){
-            //x[i].innerHTML="";
-            x[i].style.backgroundColor = "red";
+            x[i].innerHTML="";
+            x[i].style.backgroundColor = "#ff8c8c";
+            x[i].classList.add("blocked");
+            //x[i].className = 'blocked';
         }
 
         else{
-            //x[i].innerHTML="";
+            x[i].innerHTML="";
             x[i].style.backgroundColor = '#fff';
         }
     }
@@ -85,6 +87,11 @@ function display_table(e){
 function create_table(service_type,days,service_list,out_list,service_name){
 
     document.getElementById("table_create").innerHTML = "";
+
+    var legend_text= "= Free timeslot \n = Unavailable \n=Booked by you";
+    legend=document.createElement('p');
+    legend.appendChild(document.createTextNode(legend_text));
+    
 
     var table = document.createElement('table');
 
@@ -138,29 +145,34 @@ function create_table(service_type,days,service_list,out_list,service_name){
             td2.appendChild(text2);  
             tr.appendChild(td2);
         }
-
+        
         table.appendChild(tr);
     }
+    table_create.appendChild(legend);
     table_create.appendChild(table);
     table_beautify(service_name);
     //console.log(out_list);
 }
 
 function pass_date_and_time(x,service_name){
-    console.log(service_name);
+    //console.log(service_name);
     if(service_name=='Full Service'){
         document.getElementById("date").value = full_array[x][0];
         document.getElementById("time").value = full_array[x][1];
+        document.getElementById("date_showw").innerHTML = full_array[x][0]+full_array[x][1];
         //console.log(full_array[x][0]);
         //console.log(full_array[x][1]);
     }else if(service_name=='Normal Service'){
         document.getElementById("date").value = normal_array[x][0];
         document.getElementById("time").value = normal_array[x][1];
+        document.getElementById("date_showw").innerHTML = normal_array[x][0]+normal_array[x][1];
         //console.log(normal_array[x][1]);
     }else if(service_name=='Body Wash'){
         document.getElementById("date").value = body_array[x][0];
         document.getElementById("time").value = body_array[x][1];
+        document.getElementById("date_showw").innerHTML = body_array[x][0]+body_array[x][1];
         //console.log(body_array[x][0]);
         //console.log(body_array[x][1]);
     }
+
 } 

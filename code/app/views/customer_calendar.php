@@ -91,11 +91,8 @@
                 <div id="table_create">
                 </div>
 
-                <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
-                </div>
-
                 </br>
-                <div id="date_display"></div>
+                <div id="date_showw"></div>
 
                 <!-- link local js file -->
                 <!--<script src="public/js/customer_calendar.js"></script> -->

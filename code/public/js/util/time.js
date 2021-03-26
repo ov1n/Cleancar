@@ -1,20 +1,21 @@
 function convert_to_12hour(time) {
- 
-    if(intval(substr($value, 0,2)>=13)){
-      $final=intval(substr($value, 0,2)-12);
-      $final ='0'.$final .substr($value,2,3) ." PM";
+  
+    var final;
+    if(time.substr(0,2)>=13) {
+      final=time.substr(0,2)-12;
+      final ='0'+final+time.substr(2,3)+" PM";
 
-  }else if(intval(substr($value, 0,2)>=12)){
-      $final=substr($value, 0,5);
-      $final =$final . " PM";
+  }else if(time.substr(0,2)>=12){
+      final=time.substr(0,5);
+      final =final + " PM";
       
   }else{
-      $final=substr($value, 0,5);
-      $final =$final . " AM";
+      final=time.substr(0,5);
+      final =final + " AM";
   }
 
-  //echo($final);
-  return $final;
+  console.log(final);
+  return final;
 
 }
 
