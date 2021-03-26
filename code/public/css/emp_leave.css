@@ -273,7 +273,7 @@ ul.breadcrumb {
 /* add the background image for form */
 .background{
   margin-top: 65px;
-width: 100%;
+  width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/beps-image1.jpg");
 
@@ -282,3 +282,14 @@ width: 100%;
 .container {
   height: 100%;
 }
+
+.label {
+  color: white;
+  padding: 8px;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */
+.other {background-color: #e7e7e7; color: black;} /* Gray */
