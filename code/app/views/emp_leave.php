@@ -62,7 +62,7 @@
               <td>
                   <?php echo "$emp_leave[leave_time]"; ?>
               </td>
-              <td>
+              <td class = "status">
                   <?php
                     if ("$emp_leave[is_accepted]" == "accepted") {
                         echo '<span class="label success">'."Accepted".'</span>';
