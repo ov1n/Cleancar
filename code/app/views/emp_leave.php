@@ -12,6 +12,7 @@
     <!-- get external js file -->
     <script type="text/javascript" src="public\js\add_emp_leave.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
+
 </head>
 <body>
 <!-- <script>
@@ -28,7 +29,7 @@
         <li><a href="employee">Employee</a></li>
         <li>Employee leave</li>
     </ul><!-- breadcrumb -->
-    <h1>Upcoming Leave Details</h1><br><hr style="width: 60%;"><br>
+    <h1>Upcoming Leave Details </h1><br><hr style="width: 60%;"><br>
 
 <?php if($array) {  ?> <!-- check condition are there upcoming accepted leaves in the array which loaded from database -->
 <div class = "list_table">
@@ -61,8 +62,15 @@
               <td>
                   <?php echo "$emp_leave[leave_time]"; ?>
               </td>
-              <td>
-                  <?php echo "$emp_leave[is_accepted]"; ?>
+              <td class = "status">
+                  <?php
+                    if ("$emp_leave[is_accepted]" == "accepted") {
+                        echo '<span class="label success">'."Accepted".'</span>';
+                    } else {
+                        echo '<span class="label warning">'."Pending".'</span>';
+                    }
+                    ?>
+
               </td>
 
               <td style = " text-align: center;">
