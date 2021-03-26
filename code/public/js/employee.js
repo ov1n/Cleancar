@@ -36,3 +36,12 @@ function confirmDelete(){
         console.log('Confirmation canceled');
       });  
     }
+
+      function deleteme_man(empId){   
+      //alert("Delete Employee?");  
+      $.alertable.confirm('Do you want to remove the Employee?').then(function() {
+        window.location.href="employee_delete?emp_id="+empId;
+      }, function() {
+        console.log('Confirmation canceled');
+      });  
+    }
