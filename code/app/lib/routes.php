@@ -78,6 +78,7 @@
 
     Route::set('profile',function(){
         Session::init();
+        Login::timeout(Session::get("curr_time"));
         UserProfile::create_view('profile','');
     });
       Route::set('error-403',function(){
@@ -547,6 +548,12 @@
     //     Session::init();
     //     Timeslot::view('update_timeslot');
     // });
+
+    Route::set('advance_payment',function(){
+ 
+        Session::init();
+        Advance_payment::create_view('advance_payment','customer');
+    });
 
     
 

@@ -62,3 +62,45 @@ function date_display(){
   //console.log(document.getElementById("date").value);
 
 }
+
+function addDays(date, days) {
+
+  var result = new Date(date);
+  result.setDate(result.getDate() + days);
+  return result;
+}
+
+function generate_week(days=7){
+
+  var date = new Date(today);
+  var days=[];
+  //since week
+  for(let i=1;i<7;i++){
+    var curr=addDays(date,i);
+    //console.log(i);
+    //console.log(curr);
+    var month = '' + (curr.getMonth() + 1),
+    day = '' +curr.getDate(),
+    year = curr.getFullYear();
+
+    if (month.length < 2){
+      month = '0' + month;
+      //console.log(month);
+    } 
+      
+    if (day.length < 2){
+      day = '0' + day;
+      //console.log(day);
+    }
+
+    temp=[year,month,day].join('-');
+    //console.log(temp);
+    //console.log('cat');
+    days.push(temp);
+  }
+
+  //console.log(days);
+
+  return days;
+
+}

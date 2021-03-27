@@ -56,18 +56,16 @@ function time_format(value){
 
 function display_table(e){
 
-    var days=[];
     document.getElementById("date_showw").innerHTML ="";
 
-    var tomorrow = new Date(today);
-    for(var i = 1; i < 7; i++){
-        tomorrow.setDate(today.getDate() +i);
-        days.push(tomorrow.toISOString().substring(0,10));
-    }
+    //var tomorrow = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    //var dateTime = date+' '+time;
+    var days=generate_week();
 
     //var selectedType = e.value;
     console.log(e);
-    console.log(today);
+    //console.log(tomorrow);
 
     if(e=="Normal Service"){
 
@@ -89,8 +87,8 @@ function create_table(service_type,days,service_list,out_list,service_name){
 
     document.getElementById("table_create").innerHTML = "";
 
-    var legend_text= "= Free timeslot \n = Unavailable \n=Booked by you";
-    legend=document.createElement('p');
+    var legend_text= "<p>= Free timeslot </p>\n = Unavailable \n=Booked by you";
+    legend=document.createElement('div');
     legend.appendChild(document.createTextNode(legend_text));
     
 
@@ -113,10 +111,7 @@ function create_table(service_type,days,service_list,out_list,service_name){
     table.appendChild(trh);
 
     //get list of days and times into an array
-    console.log([days]);
-    $.each(days, function(key, value) {
-        //alert( "The key is '" + key);
-    });
+    console.log(days);
 
     for (var i = 0; i <  service_type.length; i++){
         //console.log(full_array);
@@ -139,6 +134,8 @@ function create_table(service_type,days,service_list,out_list,service_name){
             //full_array.push(service_list);
             out_list.push(tempArray);
             //console.log(tempArray);
+            console.log(service_list);
+            console.log(days);
             td2.className = 'slots';      
             var text2 = document.createTextNode(service_list[days[j]][service_type[i]]);
             
