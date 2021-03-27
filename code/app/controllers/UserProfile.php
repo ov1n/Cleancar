@@ -1,10 +1,10 @@
 <?php
 
 //include employee class
-include './models/Customer.php';
-include './models/Manager.php';
-include './models/Receptionist.php';
-include './models/Service_employee.php';
+include_once './models/Customer.php';
+include_once './models/Manager.php';
+include_once './models/Receptionist.php';
+include_once './models/Service_employee.php';
 
 class UserProfile extends Controller
 {

@@ -38,7 +38,7 @@
                   <li><a href="home">Home</a></li>
                   <li><a href="home">Customer</a></li>
                   
-                  <li>Make Reservation<?php echo($_SESSION["res_date"]); ?> </li>    
+                  <li>Make Reservation</li>    
                 </ul><!-- breadcrumb --> 
                 <h1>Make Reservation&ensp;<i class="fas fa-edit fa-lg"></i></h1><hr style="width: 60%;">
               <div class="card" >
@@ -62,6 +62,10 @@
                 &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
                 <input type="text" name="time" id="time" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"
                 value=<?php echo(substr($_SESSION["time"], 0, -3)."a.m"); ?> disabled ></br></br>
+
+                <!-- &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service</b></div></label>
+                <input type="text" name="service_type" id="service_type" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"
+                value=<?php ($_SESSION); ?> disabled ></br></br> -->
 
                 &ensp;&ensp;<label for="vehicle_category"><div class="form_label"><b>Vehicle Category</b></div></label>
                 <select name="vehicle_category" id="vehicle_category">

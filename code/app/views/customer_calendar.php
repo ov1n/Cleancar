@@ -98,8 +98,8 @@
                 <!--<script src="public/js/customer_calendar.js"></script> -->
                 <div id="calendar_message"><p></p></div>               
 
-                <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" class="btn" class="form_btn" id="reserve">Submit</button></br></br>
+                <button type="cancel" name="submitted" class="btn cancelbtn" class="form_btn">Cancel</button>
+                <button type="submit" name="submitted" class="btn" class="form_btn" id="reserve">Submit</button></br></br>
             </br></br>
 
               </div><!-- form_content -->              

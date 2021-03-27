@@ -18,3 +18,5 @@
                 require_once("./views/error_403.php");
             }
         }
+    }
+?>

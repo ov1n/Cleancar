@@ -9,12 +9,13 @@
 
     class Cancel_reservation extends Controller{
 
-        $reservation=new Reservation();
-        $reservation_slot=new Reservation_time_slot();
+        function cancel($res_id){
 
-        function foo(){
-            //$reservation->cancel_reservation($res_id);
-            //$reservation_slot->delete_slots($res_id);
+            $reservation=new Reservation();
+            $reservation_slot=new Reservation_time_slot();
+
+            $reservation->cancel_reservation($res_id);
+            $reservation_slot->delete_slots($res_id);
 
             //ON SUCCESS, send an email to customer address //
             $mail=new Mailer();

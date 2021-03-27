@@ -59,6 +59,7 @@
 
     Route::set('terms_conditions', function () {
        Session::init();
+       Login::timeout(Session::get("curr_time"));
        Controller::create_view('terms_conditions', '');
 	});
 
@@ -189,6 +190,16 @@
         $reg=New Register();
         $reg->register();
     });
+
+    Route::set('cancel_reservation', function () {
+        Session::init();
+        Login::timeout(Session::get("curr_time"));
+        $res_id = $_POST['cancel_id'];
+        //var_dump($_SESSION);
+        Cancel_Reservation::cancel($res_id);
+        //Login::timeout(Session::get("curr_time"));
+        //Controller::create_view('terms_conditions', '');
+     });
 
     Route::set('emp_reg_auth',function(){
         //start session

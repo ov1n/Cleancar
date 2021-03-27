@@ -12,7 +12,7 @@
     <script type="text/javascript" src="public\js\view_reservation.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
-<body>
+<body >
 <div class="cover">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
@@ -28,7 +28,7 @@
 </h3>
   <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
     
-  <form >
+  <form action="cancel_reservation" method="post" id="cancel_form" name="cancel_form">
         <div class="container">  
         <div class="background">
         <div class="card" > 
@@ -67,15 +67,19 @@
                  <?php if(!($row["is_advance_paid"])){
                             echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn' style=width:90px;>Pay Online</a>");
                  } ?>
-                 <?php echo '<a onclick="cancelConfirm('.$row['reservation_id'].')" name="cancel" class="btn updatelbtn" id="'.$row['reservation_id'].'">Cancel Reservation</a>' ?>
-                 </br>----------------------------------------------------------------
+                 <?php $date=date_create(date("Y-m-d"))->modify('+1 days')->format('Y-m-d'); ?>
+                 <?php if($row['date']>=$date){
+                   
+                   echo '<a onclick="cancelConfirm('.$row['reservation_id'].')" name="cancel" class="btn deletebtn" id="'.$row['reservation_id'].'">Cancel Reservation</a>';
+                 }?>
+                 </br>------------------------------------------------
                 <?php }
+                
               }else{
               echo( " <h2 style='text-align:center;color: white;'> No reservations </h2>");
             } ?>
-
-               
-            
+              <input type="hidden"  name="cancel_id" value = 
+                "" id="cancel_id" ></br>
             </br></br>
           </div><!-- card -->
           </div><!-- background -->
