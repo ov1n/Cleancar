@@ -22,7 +22,8 @@
             $date=Session::get("date");
 
             if(Session::get("role")==$role){
-                require_once("./views/make_reservation.php");
+                require_once("./views/$view_name.php");
+               // var_dump($_SESSION);
             }
 
             else{
@@ -109,9 +110,9 @@
 
             //get timeslots
             $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"),Session::get("res_date"));
-            echo('cat');
+            //echo('cat');
             print_r($timeslots);
-            echo('cat');
+            //echo('cat');
             
             //('before timeslot');//get each timeslot and insert into reservation-timeslot table
 
@@ -130,7 +131,7 @@
             Session::set("vehicle_num",$vehicle_array["vehicle_num"]);
             Session::set("vehicle_category",$vehicle_array["vehicle_category"]);
 
-            //ON SUCCESS, send an email to customer address
+            //ON SUCCESS, send an email to customer address //
             $mail=new Mailer();
             $subject="Successful reservation Placement";
             //Email body
@@ -152,6 +153,6 @@
             $mail->mailto($subject,$_SESSION['details']['email'],$body);
 
         }
-        //function which gets 
+        //SMS here
     }
 ?>

@@ -1,13 +1,55 @@
    
-table, th, td {
-
-    border: 1px solid black;
-  
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
 }
+
+th{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #0275d8;
+    color: white;
+
+}
+
+table{
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 85%;
+    margin-left:auto;
+    margin-right:auto;
+    
+  }
 
 td{
     text-align: left;
 	padding: 8px 1px;
-	width: 60px;
+	width: 90px;
+    text-align: center;
+    background-color: #0275d8;
+    color: white;
 }
-   
+
+.times{
+    background-color: #68E58A;
+    color: black;
+}
+
+.slots{
+    border: 1px solid #ddd;
+}
+
+.slots:hover{
+    border: 2px solid rgb(255,244,102);
+    cursor: pointer;
+}
+
+.slots:active{
+    border: 2px solid rgb(22, 224, 197);
+}
+
+.blocked:hover{
+    cursor: default;
+}

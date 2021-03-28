@@ -75,7 +75,8 @@
                     time_slot.timeslot_no=reservation_time_slot.timeslot_no AND 
                     reservation_time_slot.date='$res_date') AND 
                     time_slot.start_time>='$start_time' AND
-                    time_slot.end_time<='$end_time';";
+                    time_slot.end_time<='$end_time'
+                    GROUP BY start_time;";
             
             //echo($query2);
 

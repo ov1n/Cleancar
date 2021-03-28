@@ -73,12 +73,11 @@ width: 100%;
   text-align: left;
   margin-top: 10px;
   height: 100%;
-  margin-left: 32%;
+  margin-left: 22%;
   background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8));
-  width: 580px;
   box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.6);
-   padding-left: 1px;
-  margin-right: 27%;
+  padding-left: 1px;
+  margin-right: 17%;
  
 }
 
@@ -287,19 +286,3 @@ h1 {
   font-weight: bold;
 }
 
-.times{
-  color:red;
-}
-
-.slots{
-  background-color: #1cd10f;
-}
-
-.slots:hover{
-  border: 2px solid rgb(226, 95, 95);
-  cursor: pointer;
-}
-
-.slots:active{
-  border: 2px solid rgb(22, 224, 197);
-}

@@ -73,4 +73,3 @@ function deleteme(leaveDate,leaveType,leaveStatus){
     console.log('Confirmation canceled');
   });  
 }
-

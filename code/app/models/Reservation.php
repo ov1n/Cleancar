@@ -97,4 +97,14 @@
             
         }
 
+        //function to cancel reservation
+        function cancel_reservation($res_id){
+
+            $condition="WHERE reservation_id='$res_id';";
+            $result=$this->delete('reservation',$condition);
+
+            return $result;
+
+        }
+
     }

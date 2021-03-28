@@ -57,6 +57,12 @@
         Controller::create_view('contact_us','');
     });
 
+    Route::set('terms_conditions', function () {
+       Session::init();
+       Login::timeout(Session::get("curr_time"));
+       Controller::create_view('terms_conditions', '');
+	});
+
     Route::set('add_service',function(){
         //start session
         Session::init();
@@ -73,6 +79,7 @@
 
     Route::set('profile',function(){
         Session::init();
+        Login::timeout(Session::get("curr_time"));
         UserProfile::create_view('profile','');
     });
       Route::set('error-403',function(){
@@ -111,6 +118,19 @@
         Make_reservation::create_view('make_reservation','customer');
     });
 
+    Route::set('make_guest_reservation',function(){
+        
+        //start session
+        Session::init();
+        //initialize array for autofill function
+        //Session::set("details",Make_reservation::autofill(Session::get("uname")));
+        //set timeslot and date to session
+        Make_reservation::get_time();
+        //Session::set("date",$date);
+        //Session::set("timeslot",$timeslot);
+        Make_reservation::create_view('make_guest_reservation','receptionist');
+    });
+
     //route set to view reservation
     Route::set('view_reservation',function(){
         
@@ -130,7 +150,7 @@
         //echo '<pre>';
         //var_dump($_SESSION);
         //echo '</pre>';
-        Controller::create_view('emergency_reservation','receptionist');
+        Calendar::create_view('emergency_reservation','receptionist');
     });
 
       //route to make reservation from receptionist
@@ -183,6 +203,16 @@
         $reg=New Register();
         $reg->register();
     });
+
+    Route::set('cancel_reservation', function () {
+        Session::init();
+        Login::timeout(Session::get("curr_time"));
+        $res_id = $_POST['cancel_id'];
+        //var_dump($_SESSION);
+        Cancel_Reservation::cancel($res_id);
+        //Login::timeout(Session::get("curr_time"));
+        //Controller::create_view('terms_conditions', '');
+     });
 
     Route::set('emp_reg_auth',function(){
         //start session
@@ -542,6 +572,12 @@
     //     Session::init();
     //     Timeslot::view('update_timeslot');
     // });
+
+    Route::set('advance_payment',function(){
+ 
+        Session::init();
+        Advance_payment::create_view('advance_payment','customer');
+    });
 
     
 

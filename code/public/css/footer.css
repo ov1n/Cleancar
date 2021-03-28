@@ -33,6 +33,11 @@ body {
       color: #fff;
       font-size: 12px;
     }
+
+    .single-footer a:hover {
+      color: black;
+      height: 100%;
+}
     .single-footer p{
       width: 90%;
        font-size: 15px;
