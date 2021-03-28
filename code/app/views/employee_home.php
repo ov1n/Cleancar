@@ -4,9 +4,6 @@
 	<title>employee_home</title>
 
 	<link rel="stylesheet" type="text/css" href="public/css/employee_home.css">
-	 
-
-
 	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
 
