@@ -1,93 +1,219 @@
 <!DOCTYPE html>
 <html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <head>
-        <title>CleanCar - Make Reservation form</title>
-        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+<head>
+	<title>Leave Summary</title>
 
-        <link rel="stylesheet" type="text/css" href="public\css\employee_calendar.css">                  <!-- add style to form -->
-        <link rel="stylesheet" type="text/css" href="public\css\footer.css">                <!-- add style to footer -->
-        <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
+  <link rel="stylesheet" type="text/css" href="public/css/employee_calendar.css">
 
-        <!-- style needed for calendar -->
-        <link rel="stylesheet" href="public/css/calendar_card.css">
-        <link rel="stylesheet" href="public/css/calendar/aicon/style.css">
-        <link rel="stylesheet" href="public/css/calendar/4grid.css">
-        <link rel="stylesheet" href="public/css/calendar/jquery-pseudo-ripple.css">
-        <link rel="stylesheet" href="public/css/calendar/calendar_construct.css">
+	<script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
+</head>
 
+<body>
+<div class="container"> 
 
+<div class="background">
 
-        <!-- get imported jquery -->
-        <script src="public/js/jquery/jquery-3.5.1.js"></script>
-        <!-- get external js file -->
-        <script type="text/javascript" src="public\js\reservation.js"></script>
-        <script src="public/js/jquery/jquery.alertable.min.js"></script>
-        
-        <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
-    </head>
-
-    <body>
-      <?php
-        //echo($_SESSION["uname"]);
-        
-        //details test
-        //echo(($_SESSION["details"])["first_name"]);
-        //echo(($_SESSION["details"])["last_name"]);
-        //echo(($_SESSION["details"])["email"]);
-        //echo(($_SESSION["details"])["first_name"]);
-      ?>
-
+     <!-- create breadcrumb-->
+      <ul class="breadcrumb">
+          <li><a href="home">Home</a></li>
+          <li><a href="employee">Employee</a></li>
+          <li>Leave Summary</li>
+      </ul>  <!-- breadcrumb-->
       
-        <div class="container">  
-            <div class="background">
-                        <!-- add breadcrumb for find the path easily to users -->
-                <ul class="breadcrumb">
-                  
-                  <li><a href="home">Home</a></li>
-                  <li><a href="employee">Employee</a></li>
-                  <li>Calendar</li>    
-                </ul><!-- breadcrumb --></br></br></br>
+      <h1>Leave Summary</h1><br><hr style="width: 60%;"><br>
 
-                <h1>Leave Calendar</h1>
+      <div class="row">
+  <div class="column">
+    <div class="card1"><h2>JAN</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-01-'){
+                      echo ($array[$x]['leave_date']);
+                    }
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+ <div class="column">
+    <div class="card2" ><h2>FEB</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-02-'){
+                      echo ($array[$x]['leave_date']);
+                    }
+                    echo "<br>";
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+     <div class="column">
+    <div class="card3" ><h2>MAR</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-03-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+     <div class="column">
+    <div class="card4" ><h2>APR</h2><div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-04-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+  
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card1"><h2>MAY</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-05-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+ <div class="column">
+    <div class="card2" ><h2>JUNE</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-06-'){
+                      echo ($array[$x]['leave_date']);
+                    }
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+     <div class="column">
+    <div class="card3" ><h2>JULY</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-07-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+     <div class="column">
+    <div class="card4" ><h2>AUG</h2><div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-08-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+  
+</div>
+
+<div class="row">
+  <div class="column">
+    <div class="card1"><h2>SEP</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-09-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+ <div class="column">
+    <div class="card2" ><h2>OCT</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-10-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+     <div class="column">
+    <div class="card3" ><h2>NOV</h2> <div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-11-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+
+     <div class="column">
+    <div class="card4" ><h2>DEC</h2><div class="overlay1"><div class="contents"><p><?php 
+                for ($x = 0; $x < count($array); $x++)
+                {
+                    // echo ($array[$x]['leave_date']); 
+                    // echo "<br>";
+                    if((substr(($array[$x]['leave_date']), 0, -2))== '2021-12-'){
+                      echo ($array[$x]['leave_date']);
+                    } 
+                    echo "<br>";
+                } 
+                ?></p></div></div></div>
+    </div>
+  
+</div>
+</div> <!-- background -->
+	    
+</div> <!-- container -->
 
 
-              <div class="card" >
-                <div id=form_content> <!-- div to center needed elements -->
-                <!--set DATE to  hidden field -->
-                <input type="hidden" id="date" name="date" value="2020-11-26">
 
-                <!-- get external components -->
-                <script src="public/js/jquery/calendar/jquery-pseudo-ripple.js"></script>
-                <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
+  <!-- add footer -->
+  <?php include("nav_profile.php"); ?> <!-- add navigation bar -->
+  <?php include("footer.php"); ?>
 
-                <div >
-                  <div class="cust_calendar calendar_card" onclick="date_display()"></div>
-                </div>
-
-                </br>
-                <!-- link local js file -->
-                <script src="public/js/customer_calendar.js"></script>
-                
-              </div><!-- form_content -->              
-            </div><!-- card -->
-            </br></br></br></br></br></br>
-          </div><!-- background -->
-          
-        </div><!-- container -->
-      
-
-      <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script>
-
-      <?php 
-          //get header in seperate file
-          include("nav_profile.php");
-      ?>
-
-      <?php 
-        //get footer in seperate file
-        include("footer.php");
-      ?>      
-          
-    </body>
+</body>
 </html>
