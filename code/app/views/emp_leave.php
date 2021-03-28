@@ -64,7 +64,7 @@
               </td>
               <td class = "status">
                   <?php
-                    if ("$emp_leave[is_accepted]" == "accepted") {
+                    if ("$emp_leave[is_accepted]" == "Accepted") {
                         echo '<span class="label success">'."Accepted".'</span>';
                     } else {
                         echo '<span class="label warning">'."Pending".'</span>';
