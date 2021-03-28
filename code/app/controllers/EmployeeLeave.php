@@ -79,6 +79,21 @@
 
         }
 
+        public static function view_leaves($view_name){
+
+            $name = $_SESSION["uname"];
+
+            //create employee object
+            $leave=new Emp_leave();
+            $employee=new Service_employee();
+            
+            $id=$employee->get_empid($name);
+            $array=$leave->get_all_leaves($id);
+            //var_dump($array);
+
+            require_once("./views/$view_name.php");
+        }
+
 
 
 
