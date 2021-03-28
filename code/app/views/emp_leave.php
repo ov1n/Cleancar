@@ -81,10 +81,10 @@
           </tr>
       <?php } ?>
   </table>
-  </div>
-</div><br><br><br>
-  </div>
-</div>
+  </div>  <!--end style-->
+</div><br><br><br> <!--end class-->
+  </div> <!--end background-->
+</div> <!--end container-->
 <?php } else {?> <!-- if there are no upcoming leaves, display message -->
     <div class="card_"> 
       <br><h2> No upcoming accepted leaves </h2>
