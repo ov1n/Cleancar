@@ -28,12 +28,14 @@ function table_beautify(service_name){
         
         console.log(i);
         if(x[i].innerHTML<="0"){
-            //x[i].innerHTML="";
-            x[i].style.backgroundColor = "red";
+            x[i].innerHTML="";
+            x[i].style.backgroundColor = "#ff8c8c";
+            x[i].classList.add("blocked");
+            //x[i].className = 'blocked';
         }
 
         else{
-            //x[i].innerHTML="";
+            x[i].innerHTML="";
             x[i].style.backgroundColor = '#fff';
         }
     }
@@ -54,17 +56,16 @@ function time_format(value){
 
 function display_table(e){
 
-    var days=[];
+    document.getElementById("date_showw").innerHTML ="";
 
-    var tomorrow = new Date(today);
-    for(var i = 1; i < 7; i++){
-        tomorrow.setDate(today.getDate() +i);
-        days.push(tomorrow.toISOString().substring(0,10));
-    }
+    //var tomorrow = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+    //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+    //var dateTime = date+' '+time;
+    var days=generate_week();
 
     //var selectedType = e.value;
     console.log(e);
-    console.log(today);
+    //console.log(tomorrow);
 
     if(e=="Normal Service"){
 
@@ -86,6 +87,11 @@ function create_table(service_type,days,service_list,out_list,service_name){
 
     document.getElementById("table_create").innerHTML = "";
 
+    var legend_text= "<p>= Free timeslot </p>\n = Unavailable \n=Booked by you";
+    legend=document.createElement('div');
+    legend.appendChild(document.createTextNode(legend_text));
+    
+
     var table = document.createElement('table');
 
     //Add heading rows
@@ -105,10 +111,7 @@ function create_table(service_type,days,service_list,out_list,service_name){
     table.appendChild(trh);
 
     //get list of days and times into an array
-    console.log([days]);
-    $.each(days, function(key, value) {
-        //alert( "The key is '" + key);
-    });
+    console.log(days);
 
     for (var i = 0; i <  service_type.length; i++){
         //console.log(full_array);
@@ -131,6 +134,8 @@ function create_table(service_type,days,service_list,out_list,service_name){
             //full_array.push(service_list);
             out_list.push(tempArray);
             //console.log(tempArray);
+            console.log(service_list);
+            console.log(days);
             td2.className = 'slots';      
             var text2 = document.createTextNode(service_list[days[j]][service_type[i]]);
             
@@ -138,29 +143,34 @@ function create_table(service_type,days,service_list,out_list,service_name){
             td2.appendChild(text2);  
             tr.appendChild(td2);
         }
-
+        
         table.appendChild(tr);
     }
+    table_create.appendChild(legend);
     table_create.appendChild(table);
     table_beautify(service_name);
     //console.log(out_list);
 }
 
 function pass_date_and_time(x,service_name){
-    console.log(service_name);
+    //console.log(service_name);
     if(service_name=='Full Service'){
         document.getElementById("date").value = full_array[x][0];
         document.getElementById("time").value = full_array[x][1];
+        document.getElementById("date_showw").innerHTML = full_array[x][0]+full_array[x][1];
         //console.log(full_array[x][0]);
         //console.log(full_array[x][1]);
     }else if(service_name=='Normal Service'){
         document.getElementById("date").value = normal_array[x][0];
         document.getElementById("time").value = normal_array[x][1];
+        document.getElementById("date_showw").innerHTML = normal_array[x][0]+normal_array[x][1];
         //console.log(normal_array[x][1]);
     }else if(service_name=='Body Wash'){
         document.getElementById("date").value = body_array[x][0];
         document.getElementById("time").value = body_array[x][1];
+        document.getElementById("date_showw").innerHTML = body_array[x][0]+body_array[x][1];
         //console.log(body_array[x][0]);
         //console.log(body_array[x][1]);
     }
+
 } 

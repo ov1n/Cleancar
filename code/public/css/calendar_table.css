@@ -17,7 +17,10 @@ th{
 table{
     font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-    width: 100%;
+    width: 85%;
+    margin-left:auto;
+    margin-right:auto;
+    
   }
 
 td{
@@ -39,10 +42,14 @@ td{
 }
 
 .slots:hover{
-    border: 2px solid rgb(226, 95, 95);
+    border: 2px solid rgb(255,244,102);
     cursor: pointer;
 }
 
 .slots:active{
     border: 2px solid rgb(22, 224, 197);
+}
+
+.blocked:hover{
+    cursor: default;
 }

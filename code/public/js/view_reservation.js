@@ -1,11 +1,23 @@
 //launch error message function when window loads
 //window.onload = advance_paid;
-window.onload = advance_paid;
+window.onload = function_order;
 
+function function_order(){
+  load_warning();
+  advance_paid();
+}
+
+function test(val){
+
+  var form = document.getElementById("cancel_form");
+  document.getElementById("cancel_id").value=val;
+  console.log(document.getElementById("cancel_id").value);
+  document.cancel_form.submit();
+}
 function send_canceled_reservation(val) {
       
   $.ajax({
-    url: "cancel_res_",    //the page containing php script
+    url: "cancel_reservation",    //the page containing php script
     type: "post",    //request type,
     dataType: 'json',
     //the data array
@@ -75,9 +87,16 @@ function set_time(){
 function cancelConfirm(res_id){   
   //alert("Make reservation on the below entered details?");  
   $.alertable.confirm('Are you sure you want to cancel this reservation?').then(function() {
-    console.log(res_id);
-    send_canceled_reservation(res_id)
+    //console.log(res_id);
+    test(res_id);
   }, function() {
     console.log('Did nott cancel reservation');
   });  
+}
+
+function load_warning(){
+  console.log("cat");
+  $.alertable.alert("Please note that some reservations may become unavailable due to terms and conditions</br></br><a href='terms_conditions'>View Terms and Conditions</a>", {
+    html:true
+  });
 }

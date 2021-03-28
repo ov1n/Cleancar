@@ -91,18 +91,15 @@
                 <div id="table_create">
                 </div>
 
-                <div class="cust_calendar calendar_card" onclick="date_display();date_validate();"></div>
-                </div>
-
                 </br>
-                <div id="date_display"></div>
+                <div id="date_showw"></div>
 
                 <!-- link local js file -->
                 <!--<script src="public/js/customer_calendar.js"></script> -->
                 <div id="calendar_message"><p></p></div>               
 
-                <button type="cancel" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" class="btn" class="form_btn" id="reserve">Submit</button></br></br>
+                <button type="cancel" name="submitted" class="btn cancelbtn" class="form_btn">Cancel</button>
+                <button type="submit" name="submitted" class="btn" class="form_btn" id="reserve">Submit</button></br></br>
             </br></br>
 
               </div><!-- form_content -->              

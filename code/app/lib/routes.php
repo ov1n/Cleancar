@@ -59,6 +59,7 @@
 
     Route::set('terms_conditions', function () {
        Session::init();
+       Login::timeout(Session::get("curr_time"));
        Controller::create_view('terms_conditions', '');
 	});
 
@@ -78,6 +79,7 @@
 
     Route::set('profile',function(){
         Session::init();
+        Login::timeout(Session::get("curr_time"));
         UserProfile::create_view('profile','');
     });
       Route::set('error-403',function(){
@@ -188,6 +190,16 @@
         $reg=New Register();
         $reg->register();
     });
+
+    Route::set('cancel_reservation', function () {
+        Session::init();
+        Login::timeout(Session::get("curr_time"));
+        $res_id = $_POST['cancel_id'];
+        //var_dump($_SESSION);
+        Cancel_Reservation::cancel($res_id);
+        //Login::timeout(Session::get("curr_time"));
+        //Controller::create_view('terms_conditions', '');
+     });
 
     Route::set('emp_reg_auth',function(){
         //start session
@@ -547,6 +559,12 @@
     //     Session::init();
     //     Timeslot::view('update_timeslot');
     // });
+
+    Route::set('advance_payment',function(){
+ 
+        Session::init();
+        Advance_payment::create_view('advance_payment','customer');
+    });
 
     
 
