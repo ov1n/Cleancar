@@ -20,20 +20,22 @@
           <li>Leave Summary</li>
       </ul>  <!-- breadcrumb-->
       
-      <h1>Leave Summary</h1><br><hr style="width: 60%;"><br>
+      <h1>Leave Summary - (<?php echo substr(($array[0]['leave_date']),0,4)?> )</h1><br><hr style="width: 60%;"><br> 
 
       <div class="row">
   <div class="column">
     <div class="card1"><h2>JAN</h2> <div class="overlay1"><div class="contents"><p><?php 
+                
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-01-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     }
                     echo "<br>";
                 } 
+                
                 ?></p></div></div></div>
     </div>
 
@@ -44,7 +46,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-02-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     }
                     echo "<br>";
                     echo "<br>";
@@ -59,7 +61,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-03-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                 } 
@@ -73,7 +75,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-04-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                 } 
@@ -90,7 +92,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-05-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                     echo "<br>";
@@ -105,7 +107,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-06-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     }
                     echo "<br>";
                 } 
@@ -119,7 +121,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-07-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                     echo "<br>";
@@ -134,7 +136,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-08-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                     echo "<br>";
@@ -152,7 +154,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-09-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                     echo "<br>";
@@ -167,7 +169,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-10-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                     echo "<br>";
@@ -182,7 +184,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-11-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                     echo "<br>";
@@ -197,7 +199,7 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-12-'){
-                      echo ($array[$x]['leave_date']);
+                      echo substr(($array[$x]['leave_date']),-2);
                     } 
                     echo "<br>";
                 } 

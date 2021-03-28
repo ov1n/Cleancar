@@ -41,7 +41,7 @@
                         <div class="form_label" style="margin:35px;color: black">Full Day&ensp;&ensp;
                             <?php echo ($array[0]['no_of_leaves_fullday']); ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half
                             Day&ensp;&ensp; <?php echo ($array[0]['no_of_leaves_halfday']); ?>
-                            &ensp;&ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;
+                            &ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;
                             <?php echo ($array[0]['no_of_leaves_short']); ?> </div>
 
 
@@ -61,7 +61,7 @@
                                             } else {
                                                 echo (20 - $array[0]['no_of_leaves_halfday']);
                                             } ?>
-                            &ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;
+                            &ensp;&ensp;&ensp;Short Leave&ensp;&ensp;
                             <?php if ($array[0]['no_of_leaves_short'] > 20) {
                                 echo "0";
                             } else {
