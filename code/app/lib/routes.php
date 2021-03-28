@@ -499,11 +499,6 @@
         Timeslot::create_view('timeslot_list','manager');
     });
 
-    Route::set('employee_calendar',function(){
-        Session::init();
-        Controller::create_view('employee_calendar','employee');
-    });
-
     Route::set('add_reserve_manager',function(){
         Session::init();
         Controller::create_view('add_reserve_manager','manager');
@@ -564,6 +559,11 @@
  
         Session::init();
         Advance_payment::create_view('advance_payment','customer');
+    });
+
+    Route::set('employee_calendar',function(){
+        Session::init();
+        EmployeeLeave::view_leaves('employee_calendar');
     });
 
     
