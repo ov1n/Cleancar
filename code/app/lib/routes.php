@@ -118,6 +118,19 @@
         Make_reservation::create_view('make_reservation','customer');
     });
 
+    Route::set('make_guest_reservation',function(){
+        
+        //start session
+        Session::init();
+        //initialize array for autofill function
+        //Session::set("details",Make_reservation::autofill(Session::get("uname")));
+        //set timeslot and date to session
+        Make_reservation::get_time();
+        //Session::set("date",$date);
+        //Session::set("timeslot",$timeslot);
+        Make_reservation::create_view('make_guest_reservation','receptionist');
+    });
+
     //route set to view reservation
     Route::set('view_reservation',function(){
         
@@ -137,7 +150,7 @@
         //echo '<pre>';
         //var_dump($_SESSION);
         //echo '</pre>';
-        Controller::create_view('emergency_reservation','receptionist');
+        Calendar::create_view('emergency_reservation','receptionist');
     });
 
       //route to make reservation from receptionist

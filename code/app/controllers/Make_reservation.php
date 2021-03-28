@@ -22,7 +22,8 @@
             $date=Session::get("date");
 
             if(Session::get("role")==$role){
-                require_once("./views/make_reservation.php");
+                require_once("./views/$view_name.php");
+               // var_dump($_SESSION);
             }
 
             else{
