@@ -71,3 +71,18 @@ function password_length() {
     }
   });
 }
+
+  function updateme(){
+
+  //var form = document.getElementById("cancel_form");
+  //document.getElementById("cancel_id").value=val;
+  //console.log(document.getElementById("cancel_id").value);
+ $.alertable.confirm('Do you want to Change the Password?').then(function() {
+    document.change_login_password.submit();
+      //window.location.href="change_password";
+    }, function() {
+      console.log('Confirmation canceled');
+    });  
+
+  
+}

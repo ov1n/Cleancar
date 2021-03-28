@@ -5,15 +5,17 @@ include_once './models/Receptionist.php';
 include_once './models/Manager.php';
 include_once './models/Service_employee.php';
 
+//require_once './lib/classes/nexmo.php';
+require './lib/classes/Mailer.php';
 class ChangePassword extends Controller
 {
 
 
-    public static  function sms()
-    {
-        require_once './lib/sms/vendor/autoload.php';
-    }
-    public static function authenticate()
+    // public static  function sms()
+    // {
+    //     require_once './lib/sms/vendor/autoload.php';
+    // }
+    static function authenticate()
     {
 
         //session_start();
@@ -24,12 +26,12 @@ class ChangePassword extends Controller
         $man = new Manager();
         $emp = new Service_employee();
 
-        echo ($_POST['crrpassword']);
+        // echo ($_POST['crrpassword']);
 
         //get post data 
         $unhashed_curr_pwd = $_POST['crrpassword'];
         $unhashed_con_pwd = $_POST['confirm_password'];
-        echo ($unhashed_curr_pwd);
+        //echo ($unhashed_curr_pwd);
         //hash the password
         // Original PHP code by Chirp Internet: www.chirp.com.au
         // Please acknowledge use of this code by including this header.
@@ -42,102 +44,93 @@ class ChangePassword extends Controller
         //echo ($curr_pwd);
         //echo ($con_pwd);
 
-        //$pwd = password_hash($unhashed,PASSWORD_BCRYPT);
+
         $uname = session::get("uname");
 
 
-        // require_once './lib/sms/vendor/autoload.php';
+        // require_once './lib/classes/sms/vendor/autoload.php';
         // $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
         // $client = new \Nexmo\Client($basic);
 
 
         //var_dump($man);
-        //Session::set("pwd", $pwd);
-        //set logged in time
-        // Session::set("in_time", time());
 
+        $body = 'Your Password has been changed!!';
+
+        //customer
         if ($cust->check_credentials($uname, $curr_pwd)) {
             $cust->change_password($curr_pwd, $con_pwd);
-
-            //set session variables to it through 
-            // Session::set("uname", $uname);
-
-            //set loggedin to session
-            //Session::set("login", "loggedin");
-
-            //set role which is logged in
-            // Session::set("role", "customer");
+            $cust_id = $cust->get_custid($uname);
+            $res =  $cust->get_cust_data($cust_id);
+            $mobile = $res['mobile_tel_no'];
 
             // $message = $client->message()->send([
-            //     'to' => '94711755793',
+            //     'to' => '94783441665',
             //     'from' => 'CleanCar',
-            //     'text' => 'Your Password has been changed!'
+            //     'text' => "$body"
             // ]);
-            //load customer view
+
+            //$mesg = new SMS();
+            // $body = 'Your Password has been changed!';
+            // $mesg->nexmo_sms($body);
+
             header("Location:login");
+
+            //manager
         } else if ($man->check_credentials($uname, $curr_pwd)) {
+
             $man->change_password($curr_pwd, $con_pwd);
-            //set session variables to it through 
-            //Session::set("uname", $uname);
 
-            //load manager view
-            //echo("in man view");
-
-            //set loggedin to session
-            //Session::set("login", "loggedin");
-
-            //set role which is logged in
-            //Session::set("role", "manager");
+            $res = $man->get_man_data();
+            $mobile = $res['mobile_tel_no'];
 
             //send sms to user
             // $message = $client->message()->send([
             //     'to' => '94783441665',
             //     'from' => 'CleanCar',
-            //     'text' => 'Your Password has been changed!'
+            //     'text' => "$body"
             // ]);
+
+
+            // $mesg = new SMS();
+            // $body = 'Your Password has been changed!!';
+            // $mesg->nexmo_sms($mobile, $body);
+
             header("Location:login");
+
+            //receptinist
         } else if ($rec->check_credentials($uname, $curr_pwd)) {
+
             $rec->change_password($curr_pwd, $con_pwd);
-            //set session variables to it through 
-            // Session::set("uname", $uname);
+            $result = $rec->get_recep_data();
+            $mobile = $result['mobile_tel_no'];
 
-            //load receptionist view
-            //echo("in rec view");
-
-            //set loggedin to session
-            //Session::set("login", "loggedin");
-
-            //set role which is logged in
-            //Session::set("role", "receptionist");
 
             //send sms to user
             // $message = $client->message()->send([
             //     'to' => '94783441665',
             //     'from' => 'CleanCar',
-            //     'text' => 'Your Password has been changed!'
+            //     'text' => "$body"
             // ]);
 
+
             header("Location:login");
+
+            //employee
         } else if ($emp->check_credentials($uname, $curr_pwd)) {
             $emp->change_password($curr_pwd, $con_pwd);
-            //set session variables to it through 
-            //Session::set("uname", $uname);
+            $employeeid = $emp->get_empid($uname);
+            $res = $emp->get_employee($employeeid);
+            $mobile = $res['mobile_tel_no'];
 
-            //load employee view
-            //echo("in emp view");
-
-            //set loggedin to session
-            //Session::set("login", "loggedin");
-
-            //set role which is logged in
-            // Session::set("role", "employee");
 
             //send sms to user
             // $message = $client->message()->send([
             //     'to' => '94783441665',
             //     'from' => 'CleanCar',
-            //     'text' => 'Your Password has been changed!'
+            //     'text' => "$body"
             // ]);
+
 
             header("Location:login");
         } else {
@@ -148,5 +141,3 @@ class ChangePassword extends Controller
         }
     }
 }
-
-?>

@@ -16,7 +16,7 @@
             Calendar::make_service_arrays();
 
             if(Session::get("role")==$role){
-                require_once("./views/customer_calendar.php");
+                require_once("./views/$view_name.php");
             }
 
             else{
