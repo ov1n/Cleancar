@@ -194,9 +194,9 @@
     Route::set('cancel_reservation', function () {
         Session::init();
         Login::timeout(Session::get("curr_time"));
-        $res_id = $_POST['cancel_id'];
+        
         //var_dump($_SESSION);
-        Cancel_Reservation::cancel($res_id);
+        Cancel_Reservation::cancel();
         //Login::timeout(Session::get("curr_time"));
         //Controller::create_view('terms_conditions', '');
      });
