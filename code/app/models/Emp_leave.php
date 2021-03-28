@@ -30,6 +30,26 @@
 
         }
 
+        function get_all_leaves($id){
+
+            //assign today date to a variable
+            // $today=date('Y-m-d');
+               
+            $condition = "WHERE emp_id = '$id' AND is_accepted = 'accepted';";
+            
+            $result= $this->select("leave_date",'emp_leave',$condition);
+            
+            
+            //get leaves in an array
+            $leaves = $result->fetch_all(MYSQLI_ASSOC);
+            //var_dump($leaves);
+
+            //if array is not empty, leave details are returning
+            if($leaves){
+                return($leaves); 
+            }
+
+        }
 
         function insert_leave($leave_date,$emp_id,$type,$leave_time,$reason){            
             $leave_status="Pending";
