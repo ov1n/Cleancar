@@ -1,24 +1,25 @@
+
 * {box-sizing: border-box}
 
 
 /*set default base font */
-body {
-  margin: 0;
-  
-  font-family: 'raleway' !important;
+html *
+{  
+  font-family: 'Raleway', sans-serif;
 }
+
 
 h1{
-  color: white;
+  color:white;
   text-align: center;
-  margin-top: -10px;
-  padding-bottom: 10px;
+}
+/*make h2s align center */
+
+h2{
+  color: #01447e;
+  text-align: center;
 }
 
-
-a {
-  color: black;
-}
 
 /* Style the list */
 ul.breadcrumb {
@@ -60,225 +61,158 @@ ul.breadcrumb {
 /* add the background image for form */
 .background{
   margin-top: 65px;
-width: 100%;
+  width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/employee-office-desk-work-career-growth.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/beps-image1.jpg");
 
  }
-  /* style the card in form */
-.card {
-  justify-content:center;
-  padding-bottom: 20px;
-  padding-top: 25px;
-  text-align: left;
-  margin-top: 10px;
-  height: 100%;
-  margin-left: 32%;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
-  width: 580px;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
-   padding-left: 1px;
-  margin-right: 27%;
- 
-}
-
-@media screen and (max-width: 900px){
-  .card{
-    margin-left: 10%;
-    width:80%;
-  }
-}
-
-/* Add padding to containers */
+ /* Add padding to containers */
 .container {
   height: 100%;
 }
 
-/* align label */
-
-label {
-  display: inline-block;
-  clear: left;
-  width: 150px;
-  margin-left: 5%;
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px 10px;
+  height: 240px;
+ 
 }
 
-
-/* Full-width input fields */
-input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,input[type=time],select {
-   width: 210px;
-  padding: 15px;
-  margin: 5px 10px 22px 0px;
-  display: inline-block;
-  border-color: #1a66ff;
-  border-width: 1px;
-  background: #f1f1f1;
+/* Remove extra left and right margins, due to padding in columns */
+.row {
+  width: 60%;
+  margin-left: 25%;
+  margin-top: 0%;
 }
 
-@media screen and (max-width: 800px){
-  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,input[type=time],select{
-    margin-left: 2%;
-  }
-}
-
-@media screen and (max-width: 750px){
-  input[type=text], input[type=password], input[type=email], input[type=date],input[type=tel] ,input[type=time],select{
-    width: 200px;
-    
-  }
-}
-
-
-  /* add the background color to the input field */
-input[type=text]:focus, input[type=password]:focus,input[type=email]:focus,input[type=date]:focus, input[type=tel]:focus ,input[type=time]:focus, select:focus {
-  background-color: #ccddff;
-}
-
-
-/* Set a style for the submit/register button */
-.btn {
-  position: relative;
-  float: right;
-  display: block;
-  margin: 30px auto;
-  /*padding: 0; */
-  padding: 12px 12px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-
-  overflow: hidden;
-
-  border-width: 0;
-  outline: none;
-  border-radius: 2px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
-  
-  background-color: #1ABAFA;
-  color: #ecf0f1;
-  
-  transition: background-color .3s;
-}
-  /* style the button when the mouse point move on */
-.btn:hover, .btn:focus {
-  background-color: #008CBA;
-}
-
-.btn > * {
-  position: relative;
-}
-
-.btn span {
-  display: block;
-  padding: 12px 24px;
-}
-
-.btn:before {
+/* Clear floats after the columns */
+.row:after {
   content: "";
-  
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  
-  display: block;
-  width: 0;
-  padding-top: 0;
-    
-  border-radius: 100%;
-  
-  background-color: rgba(236, 240, 241, .3);
-  
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  display: table;
+  clear: both;
 }
 
-.btn:active:before {
-  width: 120%;
-  padding-top: 120%;
-  
-  transition: width .2s ease-out, padding-top .2s ease-out;
-}
-
-.btn:disabled {
-  background-color: #696969;
-  color: #ecf0f1;
-}
-
-/* Special round button */
-.btn_round {
-  padding: 5px 5px !important;
-  border-radius: 50%;
-  position: absolute;
-  font-size: 150%;;
-}
-
-/* Styles, not important */
-*, *:before, *:after {
-  box-sizing: border-box;
-}
-
-
-/* Add a blue text color to links */
-a {
-  color: dodgerblue;
-}
-
-/* Set a grey background color and center the text of the "sign in" section */
-.signin {
-  background-color: #f1f1f1;
+/* Style the counter cards */
+.card1 {
+  padding: 10px 10px;
   text-align: center;
-}
-/* style the heading */
-h1 {
-  text-align:center;
-}
-
-#form_content{
-  margin: auto;
-  width: 90%;
-  padding: 10px;
-  line-height: 60%;
-  
+  height: 180px;
+  background-color: rgb(58, 118, 255, 0.2);
+  border-radius: 3px;
 }
 
-.form_label{
+.card2 {
+
+  padding: 10px 10px;
+  text-align: center;
+  height: 180px;
+  background-color: rgb(58, 118, 255, 0.2);
+  border-radius: 3px;
+}
+
+.card3 {
+
+  padding: 10px 10px;
+  height: 180px;
+  background-color: rgb(58, 118, 255, 0.2);
+  border-radius: 3px;
+}
+
+.card4 {
+
+  padding: 10px 10px;
+  height: 180px;
+  background-color: rgb(58, 118, 255, 0.2);
+  border-radius: 3px;
+}
+
+
+.card1 h2 {
   color: #008CBA;
- ;
 }
 
-
-.form_btn{
-  position: absolute;
-  right: 10px;
-  top: 5px;
+.card2 h2 {
+  color: #008CBA;
 }
+.card3 h2 {
+  color: #008CBA;
+}
+.card4 h2 {
+  color: #008CBA;
+}
+
+/*responsive card and column*/
+@media screen and (max-width: 1200px) {
+.column {
+  width: 400px;
+
+  height: 250px;
+  margin-bottom: 20px;
+
+   padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+@media screen and (max-width: 1200px) {
+.card1,
+.card2,
+.card3,
+.card4 {
+  width: 200px;
+   
+  height: 250px;
+  margin-bottom: 20px;
   
-.registerbtn {
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+}
+
+.overlay1 {
+  position: relative;
+  bottom: 0%;
+  left: 0;
+  right: 0;
   background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height:0;
+  transition: .5s ease;
+}
+/*mouse hover overlay*/
+.card1:hover .overlay1 {
+  bottom: 0;
+  height: 80%;
+}
+.card2:hover .overlay1 {
+  bottom: 0;
+  height: 80%;
+}
+.card3:hover .overlay1 {
+  bottom: 0;
+  height: 80%;
+}
+.card4:hover .overlay1 {
+  bottom: 0;
+  height: 80%;
+}
+
+.contents {
   color: white;
-  right: 10px;
-  top: 5px;
-    
-  border: 2px solid #008CBA;
-}
-.registerbtn:hover {
-  background-color: white; 
-  color: black;
-}
-.btn.cancelbtn {
-  background-color: #e67e22;
-}
-
-.btn.cancelbtn:hover, .btn.orange:focus {
-  background-color: #d35400;
-}
-
-.vehicle_category{
-  color: #e67e22;
-  background-color: black;
+  font-size: 16px;
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
