@@ -6,14 +6,14 @@ include_once './models/Manager.php';
 include_once './models/Service_employee.php';
 
 //require_once './lib/classes/nexmo.php';
-require './lib/classes/Mailer.php';
+//require './lib/classes/Mailer.php';
 class ChangePassword extends Controller
 {
 
 
     // public static  function sms()
     // {
-    //     require_once './lib/sms/vendor/autoload.php';
+    //     
     // }
     static function authenticate()
     {
@@ -43,19 +43,18 @@ class ChangePassword extends Controller
         $con_pwd = sha1($unhashed_con_pwd);
         //echo ($curr_pwd);
         //echo ($con_pwd);
-
+        require_once './lib/sms/vendor/autoload.php';
+        $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
+        $client = new \Nexmo\Client($basic);
 
         $uname = session::get("uname");
 
 
-        // require_once './lib/classes/sms/vendor/autoload.php';
-        // $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
-        // $client = new \Nexmo\Client($basic);
-
 
         //var_dump($man);
 
-        $body = 'Your Password has been changed!!';
+        $name = session::get('log_name');
+        $body = 'Dear Mr/Mrs ' . $name . ' Your Password has been changed!!';
 
         //customer
         if ($cust->check_credentials($uname, $curr_pwd)) {
@@ -64,15 +63,15 @@ class ChangePassword extends Controller
             $res =  $cust->get_cust_data($cust_id);
             $mobile = $res['mobile_tel_no'];
 
-            // $message = $client->message()->send([
-            //     'to' => '94783441665',
-            //     'from' => 'CleanCar',
-            //     'text' => "$body"
-            // ]);
+        //     $message = $client->message()->send([
+        //     'to' => '94783441665',
+        //     'from' => 'CleanCar',
+        //     'text' => "$body"
+        // ]);
 
-            //$mesg = new SMS();
-            // $body = 'Your Password has been changed!';
-            // $mesg->nexmo_sms($body);
+            // $mesg = new Nexmo();
+            // $body = 'Your Password has been changed!!';
+            // $mesg->nexmo_sms($mobile, $body);
 
             header("Location:login");
 
@@ -85,16 +84,14 @@ class ChangePassword extends Controller
             $mobile = $res['mobile_tel_no'];
 
             //send sms to user
-            // $message = $client->message()->send([
-            //     'to' => '94783441665',
-            //     'from' => 'CleanCar',
-            //     'text' => "$body"
-            // ]);
 
 
-            // $mesg = new SMS();
-            // $body = 'Your Password has been changed!!';
-            // $mesg->nexmo_sms($mobile, $body);
+
+         //    $message = $client->message()->send([
+         //    'to' => '94783441665',
+         //    'from' => 'CleanCar',
+         //    'text' => "$body"
+         // ]);
 
             header("Location:login");
 
@@ -106,11 +103,10 @@ class ChangePassword extends Controller
             $mobile = $result['mobile_tel_no'];
 
 
-            //send sms to user
             // $message = $client->message()->send([
-            //     'to' => '94783441665',
-            //     'from' => 'CleanCar',
-            //     'text' => "$body"
+            // 'to' => '94783441665',
+            // 'from' => 'CleanCar',
+            // 'text' => "$body"
             // ]);
 
 
@@ -123,13 +119,14 @@ class ChangePassword extends Controller
             $res = $emp->get_employee($employeeid);
             $mobile = $res['mobile_tel_no'];
 
-
-            //send sms to user
             // $message = $client->message()->send([
-            //     'to' => '94783441665',
-            //     'from' => 'CleanCar',
-            //     'text' => "$body"
+            // 'to' => '94783441665',
+            // 'from' => 'CleanCar',
+            // 'text' => "$body"
             // ]);
+            // $mesg = new Nexmo();
+            // $body = 'Your Password has been changed!!';
+            // $mesg->nexmo_sms($mobile, $body);
 
 
             header("Location:login");
