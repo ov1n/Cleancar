@@ -294,6 +294,12 @@
     Invoice_bill::search('invoice_report_manager', 'manager');
     });
 
+    Route::set('search_timeslot_data', function () {
+
+    Session::init();
+    Timeslot::search('timeslot_list', 'manager');
+    });
+
     Route::set('manager',function(){
 
         //start session

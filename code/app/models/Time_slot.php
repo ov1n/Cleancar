@@ -160,6 +160,23 @@
         }
         }
 
+        function get_search_data($search_key)
+        {
+        //$conn = Database::conn();
+        $condition = "WHERE (timeslot_no ='$search_key' OR start_time='$search_key' OR lift_no='$search_key' OR end_time='$search_key');";
+        $result = $this->select("*", 'time_slot', $condition);
+
+        //get details into an associative array
+        $details = $result->fetch_all(MYSQLI_ASSOC);
+        //print_r($details);
+
+        //Return array to be fetched and displayed
+        if ($details) {
+            //echo("go to view");
+            return ($details);
+        }
+        }
+
 
 
         function update_timeslot($start_time,$end_time,$timeslot_no){

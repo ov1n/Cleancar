@@ -90,10 +90,10 @@
                                             echo "disabled";
                                           } ?>>Full Leave</option>
 
-                            <option value="half_day" <?php if ($array['no_of_leaves_halfday'] >= 20) {
+                            <option value="Half_day" <?php if ($array['no_of_leaves_halfday'] >= 20) {
                                           echo "disabled";
-                                        } ?>>half Day</option>
-                            <option value="short_leave" <?php if ($array['no_of_leaves_short'] >= 20) {
+                                        } ?>>Half Day</option>
+                            <option value="Short_leave" <?php if ($array['no_of_leaves_short'] >= 20) {
                                             echo "disabled";
                                           } ?>>Short Leave</option>
                         </select><br>

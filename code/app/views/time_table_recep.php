@@ -8,7 +8,7 @@
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script type="text/javascript" src="public\js\reservation_timetable.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
     <!-- get external icons -->
@@ -38,8 +38,9 @@
       <th>Service Type</th>
       <th>Lift No</th>
       <th>Start Time</th>
-      <th>Delay</th>
       <th>View Details</th>
+      <th>Delay</th>
+  
     </tr>
     <?php if ($array) { ?>
       <?php foreach ($array as $timeslot) { ?>
@@ -47,8 +48,8 @@
         <td>
           <b><?php echo "$timeslot[reservation_id]"; ?></b>
         </td>
-        <td>
-          <?php echo "$timeslot[is_advance_paid]"; ?>
+        <td class= "advanced_convert">
+          <?php echo "$timeslot[is_advance_paid]";?>
         </td>
         <td>
           <?php echo "$timeslot[cust_id]"; ?>
@@ -62,13 +63,13 @@
         <td>
           <?php echo "$timeslot[start_time]"; ?>
         </td>
-
         <td style=" text-align: center;">
-          <a  href="#" name="update" class="btn updatelbtn">Delay</a>
+          <a href="#" name="View" class="btn viewbtn">View</a>
         </td>
         <td style=" text-align: center;">
-          <a href="#" name="delete" class="btn deletebtn">View</a>
+          <a  href="delay_time_table" name="delay" class="btn delaybtn">Delay</a>
         </td>
+        
       </tr>
       <?php } ?>
       <?php } ?>
