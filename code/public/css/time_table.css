@@ -210,6 +210,19 @@ width: 100%;
   cursor: pointer;
 }
 
+.billbtn {
+  width: 80px;
+  color: #01447e;
+  background-color: #4fda33;
+  box-shadow: 0 3px 5px rgba(75, 156, 8, 0.884);
+  cursor: pointer;
+}
+
+.billbtn:hover,
+.billbtn:focus {
+  background-color: #0a971d;
+  color: #ffffff;
+}
 
 .viewbtn:hover,
 .viewbtn:focus {
