@@ -91,7 +91,12 @@
 
     Route::set('delay_time_table',function(){
         Session::init();
-        Controller::create_view('delay_time_table','receptionist');
+        Time_table::get_customer('delay_time_table','receptionist');
+    });
+
+    Route::set('view_cust_reservation',function(){
+        Session::init();
+        Time_table::get_cust_and_vehi('view_cust_reservation','receptionist');
     });
 
      Route::set('update_profile',function(){
