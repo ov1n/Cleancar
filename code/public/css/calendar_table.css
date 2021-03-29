@@ -48,8 +48,18 @@ td{
 
 .slots:active{
     border: 2px solid rgb(22, 224, 197);
+    background-color: skyblue;
 }
 
 .blocked:hover{
     cursor: default;
+    border: 1px solid #ddd;
 }
+
+.label {
+    color: white;
+    padding: 8px;
+}
+.bookedlabel {background-color: #ff8c8c;} /* Red */
+.vacantlabel {background-color: #ffffff;} /* Red */
+.selectedlabel {background-color: rgb(40, 206, 206);} /* Red */

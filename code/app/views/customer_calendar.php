@@ -28,7 +28,7 @@
 
     <body >
       <?php
-        //echo($_SESSION["uname"]);
+        //var_dump($_SESSION);
         //var_dump(Session::get('full_service_slots'));
         
         //details test
@@ -53,6 +53,7 @@
       </script>
       
       <form id="reservation_time" name="reservation_time" method="POST" action="make_reservation">
+      
         <div class="container">  
           
             <div class="background">
@@ -98,8 +99,8 @@
                 <!--<script src="public/js/customer_calendar.js"></script> -->
                 <div id="calendar_message"><p></p></div>               
 
-                <button type="cancel" name="submitted" class="btn cancelbtn" class="form_btn">Cancel</button>
-                <button type="submit" name="submitted" class="btn" class="form_btn" id="reserve">Submit</button></br></br>
+                <button type="reset" name="submitted" class="btn cancelbtn" class="form_btn">Cancel</button>
+                <button type="submit" name="reserve" class="btn" class="form_btn" id="reserve" disabled>Submit</button></br></br>
             </br></br>
 
               </div><!-- form_content -->              
@@ -109,8 +110,6 @@
       
         </div><!-- container -->
       </form>
-
-      <!-- <script src="public/js/jquery/calendar/jquery-nao-calendar.js"></script> -->
 
       <?php 
           //get header in seperate file

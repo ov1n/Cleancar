@@ -25,12 +25,8 @@ function date_display(){
     console.log(formatted_date);
 
     //split the time part
-    formatted_month =formatted_date.substring(0,8)
-    formatted_day= formatted_date.substring(8,10)
-    //month=formatted_date.substring(8,9)
-    //day=formatted_date.toISOString()
-    //console.log(formatted_month);
-    //console.log(parseInt(formatted_day)+1);
+    formatted_month =formatted_date.substring(0,8);
+    formatted_day= formatted_date.substring(8,10);
 
     selected_date=formatted_month+( parseInt(formatted_day)+1)
 

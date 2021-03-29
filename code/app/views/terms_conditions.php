@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>terms & Conditions</title>
+    <title>Terms & Conditions</title>
     <link type="text/css" rel="stylesheet" href="public/css/terms_conditions.css">
 
 </head>
@@ -15,7 +15,7 @@
             <ul class="breadcrumb">
 
                 <li><a href="home">Home</a></li>
-                <li>terms & Conditions</li>
+                <li>Terms & Conditions</li>
             </ul><!-- breadcrumb -->
             <h1>Terms & Conditions&ensp;<i class="far fa-edit fa-lg"></i></h1>
             <hr style="width: 60%;"> </br>
