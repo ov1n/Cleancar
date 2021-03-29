@@ -20,7 +20,7 @@
           <li>Leave Summary</li>
       </ul>  <!-- breadcrumb-->
       
-      <h1>Leave Summary - (<?php echo substr(($array[0]['leave_date']),0,4)?> )</h1><br><hr style="width: 60%;"><br> 
+      <h1>Leave Calendar - (<?php echo substr(($array[0]['leave_date']),0,4)?> )</h1><br><hr style="width: 60%;"><br> 
 
       <div class="row">
   <div class="column">

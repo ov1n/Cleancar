@@ -63,7 +63,6 @@ function check_date(){
 }
 
 function deleteme(leaveDate,leaveType,leaveStatus){  
-  console.log('kukula');
  
   //alert("Delete Employee?");  
   $.alertable.confirm('Do you want to cancel the Leave?').then(function() {
