@@ -41,7 +41,6 @@
             <th>Customer Name</th>
             <th>Contact No</th>
             <th>Net Amount</th>
-            <th>Print</th>
 
         </tr>
         
@@ -67,9 +66,6 @@
               </td>
               <td>
                   <?php echo "$invoice1[net_amount]"; ?>
-              </td>
-              <td style = " text-align: center;">
-                  <a href="#" name="view" class="btn viewbtn">Print</a>
               </td>
           </tr>
       <?php } ?>
