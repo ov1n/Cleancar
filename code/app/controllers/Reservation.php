@@ -75,5 +75,6 @@
             echo($_SESSION["uname"]);
         }
         //function which gets 
+
     }
 ?>
