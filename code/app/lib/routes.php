@@ -547,7 +547,7 @@
 
     Route::set('time_table_recep',function(){
         Session::init();
-        Controller::create_view('time_table_recep','receptionist');
+        Time_table::create_view('time_table_recep','receptionist');
     });
 
      //delete
