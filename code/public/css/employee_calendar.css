@@ -84,7 +84,7 @@ ul.breadcrumb {
 
 /* Remove extra left and right margins, due to padding in columns */
 .row {
-  width: 60%;
+  width: 65%;
   margin-left: 20%;
   margin-top: 0%;
 }
@@ -179,9 +179,6 @@ ul.breadcrumb {
 
 .overlay1 {
   position: relative;
-  bottom: 0%;
-  left: 0;
-  right: 0;
   background-color: #008CBA;
   overflow: hidden;
   width: 100%;
@@ -191,29 +188,42 @@ ul.breadcrumb {
 /*mouse hover overlay*/
 .card1:hover .overlay1 {
   bottom: 0;
-  height: 80%;
+  height: 60%;
 }
 .card2:hover .overlay1 {
   bottom: 0;
-  height: 80%;
+  height: 60%;
 }
 .card3:hover .overlay1 {
   bottom: 0;
-  height: 80%;
+  height: 60%;
 }
 .card4:hover .overlay1 {
   bottom: 0;
-  height: 80%;
+  height: 60%;
 }
 
 .contents {
   color: white;
   font-size: 16px;
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
   text-align: center;
+  margin-top: 15%;
+
+/* 
+  margin-left: auto;
+  margin-right: right; */
+  /* -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); */
 }
+
+.label {
+  color: white;
+  padding: 8px;
+}
+
+.success {background-color: #4CAF50;} /* Green */
+.info {background-color: #2196F3;} /* Blue */
+.warning {background-color: #ff9800;} /* Orange */
+.danger {background-color: #f44336;} /* Red */
+.other {background-color: #e7e7e7; color: black;} /* Gray */

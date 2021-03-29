@@ -20,65 +20,85 @@
           <li>Leave Summary</li>
       </ul>  <!-- breadcrumb-->
       
-      <h1>Leave Calendar - (<?php echo substr(($array[0]['leave_date']),0,4)?> )</h1><br><hr style="width: 60%;"><br> 
+      <h1>Leave Calendar - (<?php echo substr(($array[0]['leave_date']),0,4)?> )</h1><hr style="width: 60%;"><br> 
 
       <div class="row">
   <div class="column">
     <div class="card1"><h2>JAN</h2> <div class="overlay1"><div class="contents"><p><?php 
-                
+                $y = 0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-01-'){
-                      echo substr(($array[$x]['leave_date']),-2);
+                      echo '<span class="label success">'.substr(($array[$x]['leave_date']),-2).'</span>'; 
+                      echo ' ';
+                      $y=+1;
                     }
-                    echo "<br>";
-                } 
+                    
+                }
+                if($y==0){
+                  echo "No Leaves";
+                }
                 
                 ?></p></div></div></div>
     </div>
 
  <div class="column">
     <div class="card2" ><h2>FEB</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y = 0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-02-'){
-                      echo substr(($array[$x]['leave_date']),-2);
+                      echo '<span class="label success">'.substr(($array[$x]['leave_date']),-2).'</span>'; ;
+                      echo ' ';
+                      $y=+1;
                     }
-                    echo "<br>";
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
 
      <div class="column">
     <div class="card3" ><h2>MAR</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y = 0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-03-'){
-                      echo substr(($array[$x]['leave_date']),-2);
+                      echo  '<span class="label success">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
+                
                 ?></p></div></div></div>
     </div>
 
      <div class="column">
     <div class="card4" ><h2>APR</h2><div class="overlay1"><div class="contents"><p><?php 
+                $y = 0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-04-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
   
@@ -87,60 +107,77 @@
 <div class="row">
   <div class="column">
     <div class="card1"><h2>MAY</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y = 0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-05-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo '<span class="label warning"> No Leaves </span>';
+                }
                 ?></p></div></div></div>
     </div>
 
  <div class="column">
     <div class="card2" ><h2>JUNE</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y = 0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-06-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     }
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
 
      <div class="column">
     <div class="card3" ><h2>JULY</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y=0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-07-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
-                    echo "<br>";
+                }
+                if($y==0){
+                  echo "No Leaves";
                 } 
                 ?></p></div></div></div>
     </div>
 
      <div class="column">
-    <div class="card4" ><h2>AUG</h2><div class="overlay1"><div class="contents"><p><?php 
+    <div class="card4" ><h2>AUG</h2><div class="overlay1"><div class="contents"><p><?php
+                $y=0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-08-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
   
@@ -149,60 +186,77 @@
 <div class="row">
   <div class="column">
     <div class="card1"><h2>SEP</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y=0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-09-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
 
  <div class="column">
     <div class="card2" ><h2>OCT</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y=0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-10-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
 
      <div class="column">
     <div class="card3" ><h2>NOV</h2> <div class="overlay1"><div class="contents"><p><?php 
+                $y=0;
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-11-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
 
      <div class="column">
-    <div class="card4" ><h2>DEC</h2><div class="overlay1"><div class="contents"><p><?php 
+    <div class="card4" ><h2>DEC</h2><div class="overlay1"><div class="contents"><p><?php
+                $y=0; 
                 for ($x = 0; $x < count($array); $x++)
                 {
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-12-'){
                       echo substr(($array[$x]['leave_date']),-2);
+                      echo '&emsp;';
+                      $y=+1;
                     } 
-                    echo "<br>";
                 } 
+                if($y==0){
+                  echo "No Leaves";
+                }
                 ?></p></div></div></div>
     </div>
   
