@@ -300,11 +300,11 @@
     Timeslot::search('timeslot_list', 'manager');
     });
 
-    Route::set('manager',function(){
+     Route::set('manager',function(){
 
         //start session
         Session::init();
-        Controller::create_view('manager_home','manager');
+        Manager::create_view('manager_home','manager');
     });
 
     Route::set('employee',function(){
