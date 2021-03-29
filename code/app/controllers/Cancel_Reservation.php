@@ -9,36 +9,36 @@
 
     class Cancel_reservation extends Controller{
 
-        function cancel($res_id){
+        function cancel(){
 
             $reservation=new Reservation();
             $reservation_slot=new Reservation_time_slot();
 
+            $res_id = $_POST['cancel_id'];
+            
             $reservation->cancel_reservation($res_id);
             $reservation_slot->delete_slots($res_id);
+            
+            //$res_date = $_POST['cancel_date'];
+
+            echo($res_id);
+            //echo($res_date);
+            print_r($_SESSION);
 
             //ON SUCCESS, send an email to customer address //
             $mail=new Mailer();
-            $subject="Successful cancellation of reservation on ".$res_date.".";
+            //$subject="Successful cancellation of reservation on ".$res_date.".";
             //Email body
-            $body="<strong>Dear Mr./Mrs.".$_SESSION["details"]["last_name"].",</strong></br>
-                    Your reservation for the above date has been cancelled successfully.</br>
-                    The reservation details were as follows: </br>
-                    Reservation ID:".$_SESSION["details"]["last_name"]."</br>
-                    Vehicle No    :".$_SESSION["vehicle_num"]."</br>
-                    Category      :".$_SESSION["vehicle_category"]."</br>
-                    Service Type  :".$_SESSION["service_name"]."</br>
-                    Date          :".$_SESSION["res_date"]."</br>
-                    Time          :".$_SESSION["time"]."</br>
-                    Duration      :".substr($_SESSION["duration"],1,1)." hours </br>
-                    Price         : Rs.".$_SESSION["price"]."</br>
-                    </br>
-                    If this was not you please contact CleanCar at our hotline :011-2773411";
-
+           
             //call function in class
             //$mail->mailto($subject,$_SESSION['details']['email'],$body);
 
             //SMS HERE
+
+            Session::set("cancel", "cancel");
+
+            //load customer view
+            header("Location:view_reservation");
         }
     }
 

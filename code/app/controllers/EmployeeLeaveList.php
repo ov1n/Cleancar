@@ -2,6 +2,7 @@
 
     //include Emp_Leave class
     include './models/Emp_leave.php';
+    include './models/Service_employee.php';
 
     class EmployeeLeaveList extends Controller{
 
@@ -21,15 +22,42 @@
             }
         }
 
-        public static function update_leave_status($view_name, $role)
-        {
-        $emp_id = $_GET['emp_id'];
-        $leave_date = $_GET['leave_date'];
+      public static function update_leave_status($view_name, $role)
+    {
+
+        require_once './lib/sms/vendor/autoload.php';
+        $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
+        $client = new \Nexmo\Client($basic);
+
+        $emp_id = base64_decode($_GET['emp_id']);
+        $leave_date = base64_decode($_GET['leave_date']);
         $leave_status = $_GET['leave_status'];
-        $leave_type = $_GET['leave_type'];
+        $leave_type = base64_decode($_GET['leave_type']);
+
         //create employee leave object
         $leave = new Emp_leave();
         $leave->update_leaves_status($emp_id, $leave_date, $leave_status, $leave_type);
+
+        $emp = new Service_employee();
+        // $uname = session::get("uname");
+        $details = $emp->get_emp_data($emp_id);
+        $first_name = $details['first_name'];
+        $intial = $first_name[0];
+
+        $employee_name = strtoupper($intial . "." . $details['last_name']);
+
+
+        if ($leave_status == 'Accepted') {
+            $body = 'Dear Mr/Mrs ' . $employee_name . ' your leave on ' . $leave_date . ' has been Accepted.';
+        } else {
+            $body = 'Dear Mr/Mrs ' . $employee_name . ' your leave on ' . $leave_date . ' has been Rejected.';
+        }
+
+        // $message = $client->message()->send([
+        //     'to' => '94783441665',
+        //     'from' => 'CleanCar',
+        //     'text' => "$body"
+        // ]);
 
         //var_dump($array);
         $array = $leave->get_pending();

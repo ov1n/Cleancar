@@ -11,20 +11,7 @@
     <script type="text/javascript" src="public\js\push.min.js"></script>
     <script type="text/javascript" src="public\js\serviceWorker.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script>
-    function start() {
-        Push.create("CleanCar!", {
-            body: "Your Password Changed ",
-            icon: 'public/images/Bell-Notification-Icon-715x715.jpg',
-            timeout: 4000,
-            onclick: function() {
-                window.focus();
-                this.close();
-            }
-        });
-
-    }
-    </script>
+    <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">
 
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
@@ -86,10 +73,9 @@
                             <p></p>
                         </div><br>
 
-                        &ensp;&ensp;<a href="javascript:void(0)" class="btn cancelbtn" class="form_btn"
-                            onclick="start()">Cancel</a>
-                        <button type="submit" id="register" class="btn" class="form_btn"
-                            style="margin-right :10px">OK</button>
+                        &ensp;&ensp;<a href="profile" class="btn cancelbtn" class="form_btn">Cancel</a>
+                        <a onclick="updateme()" id="register" class="btn" class="acceptbtn" style="margin-right :10px"
+                            disabled>OK</a>
                         </br></br></br></br>
 
 
