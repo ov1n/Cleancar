@@ -47,20 +47,17 @@
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
-                &ensp;&ensp;<label for="reservation_id"><div class="form_label"><b>Reservation Id</b></div></label>
-                <input type="text" placeholder="Enter the Reservation Id" name="reservation_id" id="reservation_id" ></br>
-
                 &ensp;&ensp;<label for="name"><div class="form_label"><b>Customer Name</b></div></label>
-                <input type="text" placeholder="Enter the Customer Name" name="name" id="name" required ></br>
+                <input type="text" placeholder="Enter the Customer Name"  name="name" id="name" required ></br>
 
                 &ensp;&ensp;<label for="contact_number"><div class="form_label"><b>Contact Number</b></div></label>
-                <input type="text" placeholder="Enter the Contact Number" name="contact_number" id="contact_number" required ></br>
+                <input type="text" placeholder="Enter the Contact Number"  name="contact_number" id="contact_number" required ></br>
 
                 &ensp;&ensp;<label for="veh_Number"><div class="form_label"><b>Vehicle Number</b></div></label>
-                <input type="text" placeholder="Enter the Vehicle Number" name="veh_Number" id="veh_Number" required ></br>
+                <input type="text" placeholder="Enter the Vehicle Number"  name="veh_Number" id="veh_Number" required ></br>
 
                 &ensp;&ensp;<label for="veh_Model"><div class="form_label"><b>Vehicle Model</b></div></label>
-                <input type="text" placeholder="Enter the Vehicle Model" name="veh_Model" id="veh_Model" required ></br>
+                <input type="text" placeholder="Enter the Vehicle Model"  name="veh_Model" id="veh_Model" required ></br>
 
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Handled By</b></div></label>
                 <input type="text" placeholder="Enter the Employee id" name="emp_id" id="emp_id"></br>
@@ -70,9 +67,6 @@
 
                 &ensp;&ensp;<label for="aditional_charges"><div class="form_label"><b>Aditional Charges</b></div></label>
                 <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" onkeyup="calculate()" ></br>
-
-                &ensp;&ensp;<label for="advanced_fee"><div class="form_label"><b>Advanced Fee </b></div></label>
-                <input type="text" placeholder="Enter the aditional charges" name="advanced_fee" id="advanced_fee" onkeyup="calculate()"></br>
 
                 &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Total Amount</b></div></label>
                 <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>

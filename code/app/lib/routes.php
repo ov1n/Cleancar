@@ -480,6 +480,7 @@
         Session::init();
         Invoice_bill::add_new();
     });
+    
 
     Route::set('print_bill', function () {
     //start session
@@ -559,6 +560,11 @@
     Route::set('time_table_recep',function(){
         Session::init();
         Time_table::create_view('time_table_recep','receptionist');
+    });
+
+    Route::set('make_bill',function(){
+        Session::init();
+        Time_table::get_bill_data('billing_inside','receptionist');
     });
 
      //delete

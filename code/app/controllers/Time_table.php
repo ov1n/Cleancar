@@ -57,8 +57,24 @@
                 require_once("./views/error_403.php");
             }
         }
-
         
+        //overloading create view
+        public static function get_bill_data($view_name,$role){
+
+            //create employee object
+            $timetable=new Timetable();
+            $reservation_id = $_GET['reservation_id'];
+            $array=$timetable->get_bill_details($reservation_id);
+            //var_dump($array);
+
+            if(Session::get("role")==$role){
+                require_once("./views/$view_name.php");
+            }
+
+            else{
+                require_once("./views/error_403.php");
+            }
+        }
 
     }
 
