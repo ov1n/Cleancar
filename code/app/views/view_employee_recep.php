@@ -21,7 +21,7 @@
         </br>
         <li><a href="home">Home</a></li>
         <li><a href="receptionist">Receptionist</a></li>
-        <li><a href="employee_list_recep">Employee section</a></li>
+        <li><a href="employee_list_recep">Employee</a></li>
         <li>View Employee</li>          
       </ul><!-- breadcrumb -->
 
