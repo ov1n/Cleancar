@@ -65,7 +65,7 @@
                             </td>
 
                             <td style=" text-align: center;">
-                                <a href="leave_delete_manager?leave_date=<?php echo "$emp_leave[leave_date]"; ?>&emp_id= <?php echo "$emp_leave[emp_id]"; ?>&type=<?php echo "$emp_leave[type]"; ?>"
+                                <a href="leave_delete_manager?leave_date=<?php echo base64_encode($emp_leave['leave_date']); ?>&emp_id= <?php echo base64_encode($emp_leave['emp_id']); ?>&type=<?php echo base64_encode($emp_leave['type']); ?>"
                                     name="delete" class="btn deletebtn">Cancel</a>
                             </td>
                         </tr>
