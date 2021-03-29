@@ -47,14 +47,17 @@
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
+                &ensp;&ensp;<label for="reservation_id"><div class="form_label"><b>Reservation Id</b></div></label>
+                <input type="text" placeholder="Enter the Reservation Id" value = '<?php echo "$array[reservation_id]"; ?>' name="reservation_id" id="reservation_id" ></br>
+
                 &ensp;&ensp;<label for="name"><div class="form_label"><b>Customer Name</b></div></label>
-                <input type="text" placeholder="Enter the Customer Name"  name="name" id="name" required ></br>
+                <input type="text" placeholder="Enter the Customer Name" value = '<?php echo "$array[name]"; ?>' name="name" id="name" required ></br>
 
                 &ensp;&ensp;<label for="contact_number"><div class="form_label"><b>Contact Number</b></div></label>
-                <input type="text" placeholder="Enter the Contact Number"  name="contact_number" id="contact_number" required ></br>
+                <input type="text" placeholder="Enter the Contact Number" value = '<?php echo "$array[tp_no]"; ?>' name="contact_number" id="contact_number" required ></br>
 
                 &ensp;&ensp;<label for="veh_Number"><div class="form_label"><b>Vehicle Number</b></div></label>
-                <input type="text" placeholder="Enter the Vehicle Number"  name="veh_Number" id="veh_Number" required ></br>
+                <input type="text" placeholder="Enter the Vehicle Number" value = '<?php echo "$array[vehicle_num]"; ?>' name="veh_Number" id="veh_Number" required ></br>
 
                 &ensp;&ensp;<label for="veh_Model"><div class="form_label"><b>Vehicle Model</b></div></label>
                 <input type="text" placeholder="Enter the Vehicle Model"  name="veh_Model" id="veh_Model" required ></br>
@@ -63,10 +66,13 @@
                 <input type="text" placeholder="Enter the Employee id" name="emp_id" id="emp_id"></br>
 
                 &ensp;&ensp;<label for="service_charge"><div class="form_label"><b>Service Charge</b></div></label>
-                <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required onkeyup="calculate()" ></br>
+                <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required onkeyup="calculate_insidebill()" ></br>
 
                 &ensp;&ensp;<label for="aditional_charges"><div class="form_label"><b>Aditional Charges</b></div></label>
-                <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" onkeyup="calculate()" ></br>
+                <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" onkeyup="calculate_insidebill()" ></br>
+
+                &ensp;&ensp;<label for="advanced_fee"><div class="form_label"><b>Advanced</b></div></label>
+                <input type="text" placeholder="Enter the aditional charges" value = '<?php echo "$array[is_advance_paid]"; ?>' name="advanced_fee" id="advanced_fee" class="advanced_convert"></br>
 
                 &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Total Amount</b></div></label>
                 <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>

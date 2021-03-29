@@ -22,8 +22,7 @@ function convert_to_12hour(time) {
 function date_validate(){
 
   var today = new Date();
-  //console.log(datee);
-  //console.log(today);
+
   if(datee>today){
       console.log("date greater");
       document.getElementById('calendar_message').style.color = 'green';
@@ -41,25 +40,16 @@ function date_validate(){
 //function to display date in needed format
 function date_display(){
 
-  //console.log(datee);
   formatted_date = datee.toISOString();
   console.log(formatted_date);
 
   //split the time part
   formatted_month =formatted_date.substring(0,8)
   formatted_day= formatted_date.substring(8,10)
-  //month=formatted_date.substring(8,9)
-  //day=formatted_date.toISOString()
-  //console.log(formatted_month);
-  //console.log(parseInt(formatted_day)+1);
-
   selected_date=formatted_month+( parseInt(formatted_day)+1)
 
-  //get data accurately
-  //console.log(selected_date);
-  //document.getElementById("date_display").innerHTML=(selected_date);
   document.getElementById("date").value=selected_date;
-  //console.log(document.getElementById("date").value);
+
 
 }
 
@@ -77,30 +67,22 @@ function generate_week(days=7){
   //since week
   for(let i=1;i<7;i++){
     var curr=addDays(date,i);
-    //console.log(i);
-    //console.log(curr);
     var month = '' + (curr.getMonth() + 1),
     day = '' +curr.getDate(),
     year = curr.getFullYear();
 
     if (month.length < 2){
       month = '0' + month;
-      //console.log(month);
     } 
       
     if (day.length < 2){
       day = '0' + day;
-      //console.log(day);
     }
 
     temp=[year,month,day].join('-');
-    //console.log(temp);
-    //console.log('cat');
     days.push(temp);
   }
-
-  //console.log(days);
-
+  
   return days;
 
 }
