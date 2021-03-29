@@ -45,6 +45,10 @@
             <br><br><br>
             <div class="list_table">
                 <h2>Timeslot Details</h2>
+                 <form class="example" method="post" action="search_timeslot_data" style="margin:auto;max-width:300px;float:right;padding:20px;">
+                    <input type="text" placeholder="Search.." name="search" id="search">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </form>
                 <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
                     <table id="table_">

@@ -8,7 +8,7 @@
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script type="text/javascript" src="public\js\reservation_timetable.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
     <!-- get external icons -->
@@ -32,107 +32,55 @@
 
   <table id="table_">
     <tr>
-      <th class='time_col'>Time</th>
-      <th>Lift 1</th>
-      <th>Lift 2</th>
-      <th>Lift 3</th>
-      <th>Lift 4</th>
+      <th class='time_col'>Reservation ID</th>
+      <th>Is Advanced paid</th>
+      <th>customer ID</th>
+      <th>Service Type</th>
+      <th>Lift No</th>
+      <th>Start Time</th>
+      <th>View Details</th>
+      <th>Delay</th>
+  
     </tr>
-    <tr>
-      <td class='time_col'>8.00 - 8.30</td>
-      <td class='present' rowspan=3>58-3987</td>
-      <td class='present' rowspan=5>CAB-4675</td>
-      <td> </td>
-      <td class='present' rowspan=4>PA-4782</td>
-    </tr>
-    <tr>
-      <td class='time_col'>8.30 - 9.00</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>9.00 - 9.30</td>
-      <td class='present' rowspan=4>CAS-2354</td>
-    </tr>
-    <tr>
-      <td class='time_col'>9.30 - 10.00</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>10.00 - 10.30 </td>
-      <td class='present'rowspan=4>16-8937</td>
-      <td class='present' rowspan=4>255-4782</td>
-    </tr>
-    <tr>
-      <td class='time_col'>10.30 - 11.00</td>
-      <td class='present' rowspan=3>CAR-3875</td>
-    </tr>
-    <tr>
-      <td class='time_col'>11.00 - 11.30</td>
-      <td class='present' rowspan=2>CAD-2984</td>
-    </tr>
-    <tr>
-      <td class='time_col'>11.30 - 12.00</td>
-    </tr>
-    <tr>
-      <td class='time_col'>12.00 - 12.30</td>
-      <td class='present' rowspan=2>300-0977</td>
-      <td class='present' rowspan=2>CBB-3891</td>
-      <td ></td>
-      <td ></td>
-    </tr>
-    <tr>
-      <td class='time_col'>12.30 - 13.00</td>
-      <td></td>
-      <td ></td>
-    </tr>
-    <tr>
-      <td class='time_col'>13.00 - 13.30</td>
-      <td class='unavailable'> </td>
-      <td class='unavailable'> </td>
-      <td class='unavailable' ></td>
-      <td class='unavailable' ></td>
-    </tr>
-    <tr>
-      <td class='time_col'>13.30 - 14.00</td>
-      <td class='unavailable'> </td>
-      <td class='unavailable'> </td>
-      <td class='unavailable'></td>
-      <td class='unavailable'> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>14.00 - 14.30</td>
-      <td></td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>14.30 - 15.00</td>
-      <td class='present' rowspan=4>19-8937</td>
-      <td class='present' rowspan=4>CAB-9815</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>15.00 - 15.30</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>15.30 - 16.00</td>
-      <td class='present' rowspan=2>CAA-1025</td>
-      <td class='present' rowspan=2>253-4891</td>
-    </tr>
-    <tr>
-      <td class='time_col'>16.00 - 16.30</td>
-    </tr>
+    <?php if ($array) { ?>
+      <?php foreach ($array as $timeslot) { ?>
+      <tr>
+        <td>
+          <b><?php echo "$timeslot[reservation_id]"; ?></b>
+        </td>
+        <td class= "advanced_convert">
+          <?php echo "$timeslot[is_advance_paid]";?>
+        </td>
+        <td>
+          <?php echo "$timeslot[cust_id]"; ?>
+        </td>
+        <td>
+          <?php echo "$timeslot[servise_type]"; ?>
+        </td>
+        <td>
+          <?php echo "$timeslot[lift_no]"; ?>
+        </td>
+        <td>
+          <?php echo "$timeslot[start_time]"; ?>
+        </td>
+        <td style=" text-align: center;">
+          <a href="#" name="View" class="btn viewbtn">View</a>
+        </td>
+        <td style=" text-align: center;">
+          <a  href="delay_time_table" name="delay" class="btn delaybtn">Delay</a>
+        </td>
+        
+      </tr>
+      <?php } ?>
+      <?php } ?>
+      <?php if (!$array) { ?>
+        <p style="color: red;font-size:large;padding:10px;font-weight:100;">
+        <b> <?php echo "Record Not Found !"; ?> </b>
+        </p>
+      <?php } ?>
     </table>
   </div>
-  <div class = "select_buttons">
-        <a class="delaybtn btn" class="form_btn" href="delay_time_table">Delay Timetable</a>
-        <a class="exitbtn btn" class="form_btn" href="receptionist">Exit</a><br>
-  </div>
-</div><br><br><br>
+</div><br><br>
  </div>
 </div>
 </div>

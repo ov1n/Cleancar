@@ -96,7 +96,7 @@
             $condition="WHERE emp_id='$id' AND leave_date='$leave_date'";
             $this->delete('emp_leave',$condition);
 
-            if ($leave_status == 'accepted') {
+            if ($leave_status == 'Accepted') {
 
                 if ($leave_type == 'Full_leave') {
     

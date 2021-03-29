@@ -7,12 +7,19 @@
     <link rel="stylesheet" type="text/css" href="public\css\view_reservation.css"><!-- add style to form -->
     <link rel="stylesheet" type="text/css" href="public\css\libraries\jquery.alertable.css">  <!-- add style to alert box -->
     <!-- get imported jquery -->
+
+    <script  type="text/javascript">
+        //assign each variables
+        var notif= <?php echo json_encode($_SESSION["cancel"]); ?>;
+
+    </script>
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
     <script type="text/javascript" src="public\js\view_reservation.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 </head>
 <body >
+
 <div class="cover">
 <!-- add breadcrumb for find the path easily to users -->
     <ul class="breadcrumb">
@@ -80,6 +87,9 @@
             } ?>
               <input type="hidden"  name="cancel_id" value = 
                 "" id="cancel_id" ></br>
+              
+              <input type="hidden"  name="cancel_date" value = 
+                "" id="cancel_date" ></br>
             </br></br>
           </div><!-- card -->
           </div><!-- background -->
@@ -92,6 +102,8 @@
     <?php 
           //include nav bar externally 
           include("nav_profile.php");
+          Session::unset("cancel");
+          //echo ($_SESSION["cancel"]);
     ?>
  <?php 
         //get footer in seperate file

@@ -60,22 +60,22 @@
                         <tr>
                             <th>Employee ID</th>
                             <th>Name</th>
-                            <th>FullDay Leaves</th>
-                            <th>HalfDay Leaves</th>
-                            <th>Short Leaves</th>
+                            <th>Full Day Leaves (20)</th>
+                            <th>Half Day Leaves (20)</th>
+                            <th>Short Leaves (20)</th>
                             <th>Leave Percentage</th>
 
                         </tr>
 
                         <?php foreach ($array as $emp) { ?>
                         <tr>
-                            <td>
-                                <?php echo "$emp[emp_id]"; ?>
+                            <td style="text-align: center;">
+                                <b>&ensp;&ensp; <?php echo "$emp[emp_id]"; ?></b>
                             </td>
                             <td>
                                 <?php echo "$emp[first_name]" . " " . "$emp[last_name]"; ?>
                             </td>
-                            <td>
+                            <td style="text-align: center;">
                                 <?php if ($emp['no_of_leaves_fullday'] >= 20) { ?>
                                 <p style=color:red;font-size:16px;> <?php echo "$emp[no_of_leaves_fullday]"; ?></p>
                                 <?php     } else {
@@ -83,7 +83,7 @@
                                         } ?>
                             </td>
 
-                            <td>
+                            <td style="text-align: center;">
                                 <?php if ($emp['no_of_leaves_short'] >= 20) { ?>
                                 <p style=color:red;font-size:16px;> <?php echo "$emp[no_of_leaves_short]"; ?></p>
                                 <?php     } else {
@@ -91,7 +91,7 @@
                                         } ?>
                             </td>
 
-                            <td>
+                            <td style="text-align: center;">
                                 <?php if ($emp['no_of_leaves_halfday'] >= 20) { ?>
                                 <p style=color:red;font-size:16px;> <?php echo "$emp[no_of_leaves_halfday]"; ?></p>
                                 <?php     } else {
@@ -100,9 +100,13 @@
                             </td>
                             <td>
                                 <div class="progress" style="text-align:center;padding:3px;">
-                                    <?php echo (floor((($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short']) / 60) * 100)) . "%"; ?>
+                                    <?php if(($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short'])>=60){echo "100%";} 
+                                    else{echo (floor((($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short']) / 60) * 100)) . "%"; }
+                                    ?>
+
                                     <div class="progress-done"
-                                        style="  background-color: orange;border-radius: 20px;height: 100%;width: <?php echo ((($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short']) / 60) * 100) . "%"; ?>;margin-top:-20px;display: flex;align-items: center;justify-content: center;text-align:center;opacity:1;transition: 1s ease 0.8s;">
+                                        style="  background-color: orange;border-radius: 20px;height: 100%;width: <?php if(($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short'])>=60){echo "100%";}
+                                        else{echo ((($emp['no_of_leaves_fullday'] + $emp['no_of_leaves_halfday'] + $emp['no_of_leaves_short']) / 60) * 100) . "%";} ?>;margin-top:-20px;display: flex;align-items: center;justify-content: center;text-align:center;opacity:1;transition: 1s ease 0.8s;">
 
                                     </div>
 

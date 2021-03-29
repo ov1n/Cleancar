@@ -42,29 +42,50 @@
 
         }
 
-        static function cancel_leave($view_name){
+       static function cancel_leave($view_name)
+      {
+
+        require_once './lib/sms/vendor/autoload.php';
+        $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
+        $client = new \Nexmo\Client($basic);
+
+        $name = $_SESSION["uname"];
+
+        $leave = new Emp_leave();
+        $employee = new Service_employee();
+
+        $id = $employee->get_empid($name);
+        $leave_date = $_GET['leave_date'];
+        $leave_status = $_GET['leave_status'];
+        $leave_type = $_GET['leave_type'];
+
+        // echo($_GET['emp_id']);
+        //echo ($employeeid);
+        //echo ($leave_date);
+
+        $details = $employee->get_emp_data($id);
+        //employee mobile number
+        $mobile = $details['mobile_tel_no'];
+
+        //get employee name from session
+        $employee_name = session::get('log_name');
+        //body of the SMS
+        $body = 'Dear Mr/Mrs ' . $employee_name . ' your leave on ' . $leave_date . ' has been Canceled.';
 
 
-            $name = $_SESSION["uname"];
 
-            $leave=new Emp_leave();
-            $employee=new Service_employee();
-            
-            $id=$employee->get_empid($name);
-            $leave_date = $_GET['leave_date'];
-            $leave_status = $_GET['leave_status'];
-            $leave_type = $_GET['leave_type'];
-                        
-             // echo($_GET['emp_id']);
-             //echo ($employeeid);
-             //echo ($leave_date);
 
-             $leave->delete_leave($id,$leave_date,$leave_status,$leave_type);
-             $array=$leave->get_detail($id);
-             //var_dump($array);
-             require_once("./views/$view_name.php");
+        // $message = $client->message()->send([
+        //     'to' => '94783441665',
+        //     'from' => 'CleanCar',
+        //     'text' => "$body"
+        // ]);
 
-        }
+        $leave->delete_leave($id, $leave_date, $leave_status, $leave_type);
+        $array = $leave->get_detail($id);
+        //var_dump($array);
+        require_once("./views/$view_name.php");
+       }
 
         //function to view no of employee leave
         public function no_of_leave($view_name){
