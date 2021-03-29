@@ -132,45 +132,6 @@ th, td {
   position: absolute;
   font-size: 150%;;
 }
-.delaybtn{
-  text-align: center;
-  margin-top: 40px;
-  margin: 10px;
-  width: 180px;
-  float: left;
-  /* font-weight: bold; */
-  font-size: large;
-  color: #ffffff;
-  height: 50px;
-  padding-top: 15px;
-  text-align: center;
-  background-color: #4db8ff;
-  box-shadow: 0 5px 5px rgba(60, 30, 230, 0.6);
-}
-.delaybtn:hover{
-  background-color: #008CBA;
-  color: #ffffff;
-}
-
-.exitbtn{
-  text-align: center;
-  margin-top: 40px;
-  margin: 10px;
-  width: 100px;
-  float: right;
-  /* font-weight: bold; */
-  font-size: large;
-  color: #ffffff;
-  padding-top: 15px;
-  height: 50px;
-  text-align: center;
-  background-color: #dd6127;
-  box-shadow: 0 5px 5px rgba(240, 56, 10, 0.6);
-}
-.exitbtn:hover{
-  background-color: #f33201;
-  color: #ffffff;
-}
 
 .select_buttons{
   display: flex;
@@ -231,4 +192,33 @@ width: 100%;
  /* Add padding to containers */
 .container {
   height: 100%;
+}
+
+.viewbtn {
+  width: 80px;
+  color: #01447e;
+  background-color: #5bd6ff;
+  box-shadow: 0 3px 5px rgba(60, 30, 230, 0.6);
+  cursor: pointer;
+}
+
+.delaybtn {
+  width: 80px;
+  color: #01447e;
+  background-color: #fca147;
+  box-shadow: 0 3px 5px rgba(228, 112, 17, 0.884);
+  cursor: pointer;
+}
+
+
+.viewbtn:hover,
+.viewbtn:focus {
+  background-color: #008cba;
+  color: #ffffff;
+}
+
+.delaybtn:hover,
+.delaybtn:focus {
+  background-color: #ff8c1a;
+  color: #ffffff;
 }
