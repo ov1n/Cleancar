@@ -34,19 +34,15 @@
           <div id=form_content> <!-- div to center needed elements -->
 
               &ensp;&ensp;<label for="cust_id"><div class="form_label"><b>Customer Id</b></div></label>
-              <input type="text" name="cust_id" id="cust_id"></br>
+              <input type="text" name="cust_id" id="cust_id" value = '<?php echo $array[0]["cust_id"]; ?>' required ></br>
 
               &ensp;&ensp;<label for="reservation_id"><div class="form_label"><b>Reservation Id</b></div></label>
-              <input type="text" name="reservation_id" id="reservation_id"></br>
+              <input type="text" name="reservation_id" id="reservation_id" value = '<?php echo $array[0]["reservation_id"]; ?>'></br>
+
+              <input type="hidden" name="tp_no" value = "<?php echo $array[0]['tp_no']; ?>" id="tp_no"></br>
 
               &ensp;&ensp;<label for="delay_time"><div class="form_label"><b>Delay (Minutes)</b></div></label>
-                <select name="delay_time" id="delay_time">
-                    <option value="a">10</option>
-                    <option value="b">15</option>
-                    <option value="c">20</option>
-                    <option value="c">25</option>
-                    <option value="d">30</option>
-                </select><br>
+              <input type="text" name="delay_time" id="delay_time" placeholder="Enter delay time in minutes" required></br>
                 
                 <a href="time_table_recep" class="cancelbtn btn" class="form_btn" > Cancel </a>
                 <button type="submit" class="okbtn btn" class="form_btn" style="margin-right :10px">Send notification</button>
