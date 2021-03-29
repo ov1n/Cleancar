@@ -327,6 +327,11 @@
         Controller::create_view('register_emp','manager');
     });
 
+    Route::set('delay_time', function () {
+    Session::init();
+    Time_table::send_delay_sms('delay_time_table', 'receptionist');
+    });
+
     Route::set('add_employee',function(){
         //start session
         Session::init();
