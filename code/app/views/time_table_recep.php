@@ -68,7 +68,7 @@
           <a  href="view_cust_reservation?cust_id=<?php echo "$reservation[cust_id]"; ?>" name="View" class="btn viewbtn">View</a>
         </td>
         <td style=" text-align: center;">
-          <a  href="delay_time_table?reservation_id=<?php echo "$reservation[reservation_id]"; ?>" name="Bill" class="btn billbtn">Bill</a>
+          <a  href="make_bill?reservation_id=<?php echo "$reservation[reservation_id]"; ?>" name="Bill" class="btn billbtn">Bill</a>
         </td>
         <td style=" text-align: center;">
           <a  href="delay_time_table?reservation_id=<?php echo "$reservation[reservation_id]"; ?>" name="delay" class="btn delaybtn">Delay</a>
