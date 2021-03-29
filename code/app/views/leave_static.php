@@ -38,34 +38,32 @@
                         <label for="Number Of Leave You Got" style="width: 280px">
                             <div class="form_label"><b>Number Of Leave You Got upto Today</b></div>
                         </label>
-                        <div class="form_label" style="margin:35px;color: black">Full Day&ensp;&ensp;
-                            <?php echo ($array[0]['no_of_leaves_fullday']); ?> &ensp;&ensp;&ensp;&ensp;&ensp;Half
-                            Day&ensp;&ensp; <?php echo ($array[0]['no_of_leaves_halfday']); ?>
-                            &ensp;&ensp;&ensp;&ensp;Short Leave&ensp;&ensp;
-                            <?php echo ($array[0]['no_of_leaves_short']); ?> </div>
-
-
+                        <div class="form_label" style="margin:35px;color: black"><b>Full Day</b>&ensp;
+                            <?php echo '<span class="label success">'.($array[0]['no_of_leaves_fullday']).'</span>'; ?> &ensp;&ensp;&ensp;<b>Half
+                            Day</b>&ensp; <?php echo '<span class="label success">'.($array[0]['no_of_leaves_halfday']).'</span>'; ?>
+                            &ensp;&ensp;&ensp;<b>Short Leave</b>&ensp;
+                            <?php echo '<span class="label success">'.($array[0]['no_of_leaves_short']).'</span>'; ?> </div>
 
                         <label for="Number Of Leave Available" style="width: 300px">
                             <div class="form_label"><b>Number Of Leave Available upto Today</b></div>
                         </label>
-                        <div class="form_label" style="margin:35px;color: black">Full Day&ensp;&ensp;
+                        <div class="form_label" style="margin:35px;color: black"><b>Full Day</b>&ensp;
                             <?php if ($array[0]['no_of_leaves_fullday'] > 20) {
-                                echo "0";
+                                echo '<span class="label success"> 0 </span>';
                             } else {
-                                echo (20 - $array[0]['no_of_leaves_fullday']);
+                                echo '<span class="label success">'.(20 - $array[0]['no_of_leaves_fullday']).'</span>';
                             } ?>
-                            &ensp;&ensp;&ensp;&ensp;&ensp;Half Day
-                            &ensp;&ensp; <?php if ($array[0]['no_of_leaves_halfday'] > 20) {
-                                                echo "0";
+                            &ensp;&ensp;&ensp;&ensp;<b>Half Day</b>
+                            &ensp; <?php if ($array[0]['no_of_leaves_halfday'] > 20) {
+                                                echo '<span class="label success"> 0 </span>';
                                             } else {
-                                                echo (20 - $array[0]['no_of_leaves_halfday']);
+                                                echo '<span class="label success">'.(20 - $array[0]['no_of_leaves_halfday']).'</span>';
                                             } ?>
-                            &ensp;&ensp;&ensp;Short Leave&ensp;&ensp;
+                            &ensp;&ensp;&ensp;&ensp;<b>Short Leave</b>&ensp;
                             <?php if ($array[0]['no_of_leaves_short'] > 20) {
-                                echo "0";
+                                echo '<span class="label success"> 0 </span>';
                             } else {
-                                echo (20 - $array[0]['no_of_leaves_short']);
+                                echo '<span class="label success">'.(20 - $array[0]['no_of_leaves_short']).'</span>';
                             } ?> </div>
                     </div><!-- form_content -->
 
