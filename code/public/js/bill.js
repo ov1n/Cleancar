@@ -29,7 +29,8 @@ function send_bill_data() {
   function calculate(){
     let service_charge = document.getElementById("service_charge").value;
     let aditional_charges = document.getElementById("aditional_charges").value;
-    let net_amount = parseFloat(service_charge) + parseFloat(aditional_charges);
+    let advanced_fee = document.getElementById("advanced_fee").value;
+    let net_amount = parseFloat(service_charge) + parseFloat(aditional_charges) - parseFloat(advanced_fee);
     document.getElementById("net_amount").value = net_amount;
   }
 
