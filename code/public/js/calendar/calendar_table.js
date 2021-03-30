@@ -155,17 +155,17 @@ function pass_date_and_time(x,service_name){
     if(service_name=='Full Service'){
         document.getElementById("date").value = full_array[x][0];
         document.getElementById("time").value = full_array[x][1];
-        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+full_array[x][0]+full_array[x][1];
+        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+"<p>Date: </p><b>"+full_array[x][0]+"</b></br><p>Time:</p><b>"+full_array[x][1]+"<b>";
 
     }else if(service_name=='Normal Service'){
         document.getElementById("date").value = normal_array[x][0];
         document.getElementById("time").value = normal_array[x][1];
-        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+normal_array[x][0]+normal_array[x][1];
+        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+"<p>Date: </p><b>"+normal_array[x][0]+"</b></br><p>Time:</p><b>"+normal_array[x][1]+"<b>";
 
     }else if(service_name=='Body Wash'){
         document.getElementById("date").value = body_array[x][0];
         document.getElementById("time").value = body_array[x][1];
-        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+body_array[x][0]+body_array[x][1];
+        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+"<p>Date: </p><b>"+body_array[x][0]+"</b></br><p>Time:</p><b>"+body_array[x][1]+"<b>";
     }
     document.getElementById('reserve').disabled=false;
 
