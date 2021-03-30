@@ -41,7 +41,7 @@
         }
 
         public static function send_delay_sms($view_name, $role)
-        {
+       {
         $cust_id = $_POST['cust_id'];
         $reservation_id = $_POST['reservation_id'];
         $tel_no = $_POST['tp_no'];
@@ -66,7 +66,16 @@
         //     'from' => 'CleanCar',
         //     'text' => "$body"
         // ]);
+
+        $timetable = new Timetable();
+        $array = $timetable->get_timetable();
+
+        if (Session::get("role") == $role) {
+            require_once("./views/$view_name.php");
+        } else {
+            require_once("./views/error_403.php");
         }
+       }
 
         //overloading create view
         public static function get_cust_and_vehi($view_name,$role){

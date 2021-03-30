@@ -329,7 +329,7 @@
 
     Route::set('delay_time', function () {
     Session::init();
-    Time_table::send_delay_sms('delay_time_table', 'receptionist');
+    Time_table::send_delay_sms('time_table_recep', 'receptionist');
     });
 
     Route::set('add_employee',function(){
