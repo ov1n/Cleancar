@@ -6,14 +6,19 @@
         function get_timetable(){
             //assign connectivity to a variable
             $conn=Database::conn();
-            
+            $today=date('Y-m-d');
 
             //get each record
-            $query="SELECT reservation.reservation_id AS reservation_id, is_advance_paid, reservation.cust_id AS cust_id,
-            service_type.type_name AS servise_type, service_type.lift_no AS lift_no, time_slot.start_time As start_time 
+            $query="SELECT reservation.reservation_id AS reservation_id, is_advance_paid, reservation.cust_id AS cust_id, 
+            reservation_time_slot.date AS date, service_type.type_name AS servise_type, service_type.lift_no AS lift_no, 
+            time_slot.start_time As start_time 
             FROM reservation, service_type, time_slot , reservation_time_slot 
-            WHERE service_type.lift_no = time_slot.lift_no AND reservation.service_id = service_type.type_id 
-            GROUP BY reservation.reservation_id";
+            WHERE reservation.reservation_id=reservation_time_slot.reservation_id 
+            AND reservation.service_id = service_type.type_id 
+            AND reservation_time_slot.timeslot_no = time_slot.timeslot_no 
+            AND date >= $today
+            GROUP BY reservation.reservation_id
+            ORDER BY date ";
 
             $result= mysqli_query($conn,$query);
 

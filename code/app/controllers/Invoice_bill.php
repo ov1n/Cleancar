@@ -76,6 +76,7 @@
             $emp_id = $_POST['emp_id'];
             $service_charge = $_POST['service_charge'];
             $aditional_charges = $_POST['aditional_charges'];
+            $advance_payment = "- ".$_POST['advanced_fee'];
             $net_amount = $_POST['net_amount'];
 
             //get date of today for registered date
@@ -163,6 +164,8 @@
             $pdf -> cell(50, 10, $service_charge, 1 ,1,'R');
             $pdf -> cell(78, 10, "Aditional Charges", 1 ,0,'L');
             $pdf -> cell(50, 10, $aditional_charges, 1 ,1,'R');
+            $pdf -> cell(78, 10, "Advance Payment", 1 ,0,'L');
+            $pdf -> cell(50, 10, $advance_payment, 1 ,1,'R');
             $pdf -> SetFont('Times','B','14');
             $pdf -> cell(78, 10, "Total Amount", 1 ,0,'L');
             $pdf -> cell(50, 10, $net_amount, 1 ,1,'R');
