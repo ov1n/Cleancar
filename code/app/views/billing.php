@@ -64,6 +64,15 @@
 
                 <input type="hidden" name="advanced_fee" value="0" id="advanced_fee"></br>
 
+                &ensp;&ensp;<label for="servise_type">
+                            <div class="form_label"><b>Service Type</b></div>
+                        </label>
+                        <select name="servise_type" id="servise_type">
+                            <option value="Full Service">Full Service</option>
+                            <option value="Normal Service">Normal Service</option>
+                            <option value="Body Wash">Body Wash</option>
+                        </select><br>
+
                 &ensp;&ensp;<label for="service_charge"><div class="form_label"><b>Service Charge</b></div></label>
                 <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required onkeyup="calculate()" ></br>
 
