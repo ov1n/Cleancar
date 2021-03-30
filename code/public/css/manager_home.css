@@ -235,12 +235,13 @@ div .square1 button,
 
   div.square div.square1 {
     margin-right: 1%;
-    margin-left: 13%;
+    margin-left: 16%;
     width: 35%;
     height: 35%;
     float: left;
     background-color: #99bbff;
     opacity: 0.8;
+    margin-top: 1%;
   }
   div.square div.square2 {
     margin-right: none;
@@ -254,7 +255,7 @@ div .square1 button,
   div.square div.square3 {
     margin-top: 1%;
     margin-right: 1%;
-    margin-left: 13%;
+
     width: 35%;
     height: 35%;
     float: left;
@@ -264,18 +265,19 @@ div .square1 button,
 
   div.square div.square4 {
     margin-right: none;
-    margin-top: 1%;
+    margin-top: 2%;
     width: 35%;
     height: 35%;
     float: left;
+    margin-left: 8%;
     background-color: #3377ff;
     opacity: 0.8;
   }
 
   div.square div.square5 {
-    margin-top: 1%;
+    margin-top: 2%;
     margin-right: 1%;
-    margin-left: 13%;
+
     width: 35%;
     height: 35%;
     float: left;
@@ -288,6 +290,7 @@ div .square1 button,
     width: 35%;
     height: 35%;
     float: left;
+    margin-left: 23%;
     background-color: #3377ff;
     opacity: 0.8;
   }
