@@ -8,8 +8,8 @@
 	<h1 style="font-size: 45px">Stop !</h1>
 
 	<?php
-		echo("cat");
-		var_dump($_SESSION);
+		//echo("cat");
+		//var_dump($_SESSION);
 	?>
 	<h3>403 - This is forbiddenadasdas area</h3>
 	<p style="font-size: 16px">You do not have permission to view this resource</p>
