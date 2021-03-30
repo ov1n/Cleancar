@@ -83,7 +83,7 @@
                 <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>
 
                 <a href="receptionist" class="btn cancelbtn" class="form_btn" > Cancel </a>
-                <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button> </br><br><br>
+                <button type="submit" id="okbtn" class="okbtn btn"  style="margin-right :10px">OK</button> </br><br><br>
               </div><!-- form_content --> 
             </div><!-- card -->
             </br>
