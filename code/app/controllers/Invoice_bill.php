@@ -77,6 +77,8 @@
             $service_charge = $_POST['service_charge'];
             $aditional_charges = $_POST['aditional_charges'];
             $advance_payment = "- ".$_POST['advanced_fee'];
+            $advance_payment_db = $_POST['advanced_fee'];
+            $servise_type = $_POST['servise_type'];
             $net_amount = $_POST['net_amount'];
 
             //get date of today for registered date
@@ -84,8 +86,8 @@
 
 
             //the built in insert function of model is called here
-            $key_array = array("reservation_id", "vehicle_no", "vehicle_model", "customer_name", "contact_no", "emp_id", "service_charge", "aditional_charges", "net_amount", "bill_date");
-            $values_array = array("$reservation_id", "$vehicle_no", "$vehicle_model", "$customer_name", "$contact_no", "$emp_id", "$service_charge", "$aditional_charges", "$net_amount", $today);
+            $key_array = array("reservation_id", "vehicle_no", "vehicle_model","servise_type", "customer_name", "contact_no", "emp_id", "service_charge", "aditional_charges","advance_payment", "net_amount", "bill_date");
+            $values_array = array("$reservation_id", "$vehicle_no", "$vehicle_model", "$servise_type", "$customer_name", "$contact_no", "$emp_id", "$service_charge", "$aditional_charges","$advance_payment_db", "$net_amount", "$today");
 
             //insert data using the base model function
             $bill->insert('invoice', $key_array, $values_array);
@@ -104,7 +106,9 @@
             $vehicle_no = $array['vehicle_no'];
             $service_charge = $array['service_charge'];
             $aditional_charges = $array['aditional_charges'];
+            $servise_type = $array['servise_type'];
             $net_amount = $array['net_amount'];
+            $advance_payment = "- ".$array['advanced_fee'];
             
              }
             ob_start();
@@ -151,6 +155,10 @@
             $pdf -> cell(30, 10, "Vehicle Number", 0 ,0,'L');
             $pdf -> cell(5, 10, ":-", 0 ,0,'L');
             $pdf -> cell(40, 10, $vehicle_no, 0 ,1,'L');
+
+            $pdf -> cell(30, 10, "Service Type", 0 ,0,'L');
+            $pdf -> cell(5, 10, ":-", 0 ,0,'L');
+            $pdf -> cell(40, 10, $servise_type, 0 ,1,'L');
 
             $pdf ->Ln(3);
             $x = $pdf -> GetX();

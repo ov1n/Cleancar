@@ -18,7 +18,7 @@
             AND reservation_time_slot.timeslot_no = time_slot.timeslot_no 
             AND date >= $today
             GROUP BY reservation.reservation_id
-            ORDER BY date ";
+            ORDER BY date ASC, start_time ASC";
 
             $result= mysqli_query($conn,$query);
 
