@@ -94,6 +94,11 @@
         Time_table::get_customer('delay_time_table','receptionist');
     });
 
+    Route::set('delay_timetable_manager', function () {
+    Session::init();
+    Time_table::get_customer('delay_timetable_manager', 'manager');
+    });
+
     Route::set('view_cust_reservation',function(){
         Session::init();
         Time_table::get_cust_and_vehi('view_cust_reservation','receptionist');
@@ -327,6 +332,11 @@
         Controller::create_view('register_emp','manager');
     });
 
+    Route::set('delay_time', function () {
+    Session::init();
+    Time_table::send_delay_sms('time_table_recep', 'receptionist');
+    });
+
     Route::set('add_employee',function(){
         //start session
         Session::init();
@@ -480,6 +490,7 @@
         Session::init();
         Invoice_bill::add_new();
     });
+    
 
     Route::set('print_bill', function () {
     //start session
@@ -512,9 +523,14 @@
         EmployeeLeave::no_of_leave('leave_static');
     });
 
-    Route::set('time_table',function(){
-        Session::init();
-        Controller::create_view('time_table','manager');
+    // Route::set('time_table',function(){
+    //     Session::init();
+    //     Controller::create_view('time_table','manager');
+    // });
+
+    Route::set('time_table', function () {
+    Session::init();
+    Time_table::create_view('time_table', 'manager');
     });
 
     Route::set('timeslot_list',function(){
@@ -561,6 +577,11 @@
         Time_table::create_view('time_table_recep','receptionist');
     });
 
+    Route::set('make_bill',function(){
+        Session::init();
+        Time_table::get_bill_data('billing_inside','receptionist');
+    });
+
      //delete
      Route::set('leave_delete',function(){
         Session::init();
@@ -589,6 +610,16 @@
         Session::init();
         EmployeeLeave::view_leaves('employee_calendar');
     });
+
+    Route::set('delay_time_manager', function () {
+    Session::init();
+    Time_table::send_delay_sms('time_table', 'manager');
+    });
+
+    Route::set('view_cust_reservation_manager', function () {
+    Session::init();
+    Time_table::get_cust_and_vehi('view_cust_reservation_manager', 'manager');
+});
 
     
 

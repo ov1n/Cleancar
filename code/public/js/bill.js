@@ -26,7 +26,15 @@ function send_bill_data() {
     //console.log('Registration Successful');
   }
 
+
   function calculate(){
+    let service_charge = document.getElementById("service_charge").value;
+    let aditional_charges = document.getElementById("aditional_charges").value;
+    let net_amount = parseFloat(service_charge) + parseFloat(aditional_charges);
+    document.getElementById("net_amount").value = net_amount;
+  }
+
+  function calculate_insidebill(){
     let service_charge = document.getElementById("service_charge").value;
     let aditional_charges = document.getElementById("aditional_charges").value;
     let advanced_fee = document.getElementById("advanced_fee").value;

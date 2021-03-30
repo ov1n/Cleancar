@@ -1,151 +1,107 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>Timetable</title>
-  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <title>Timetable</title>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\time_table.css"><!-- add style to employee_list -->
     <!-- get imported jquery -->
     <script src="public/js/jquery/jquery-3.5.1.js"></script>
     <!-- get external js file -->
-    <script type="text/javascript" src="public\js\employee.js"></script>
+    <script type="text/javascript" src="public\js\reservation_timetable.js"></script>
     <script src="public/js/jquery/jquery.alertable.min.js"></script>
 
     <!-- get external icons -->
     <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
- <div class="container">  
-          
-            <div class="background">
-<!-- add breadcrumb for find the path easily to users -->
-<ul class="breadcrumb">
-       
-        <li><a href="home">Home</a></li>
-        <li><a href="manager">Manager</a></li>
-        <li>Timetable</li>
-    </ul><!-- breadcrumb -->
-<h1>Time Table&ensp;<i class="fa fa-table" aria-hidden="true"></i></h1><hr style="width: 60%;"><br>
+    <div class="container">
 
-<div class = "list_table">
-  <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
+        <div class="background">
+            <!-- add breadcrumb for find the path easily to users -->
+            <ul class="breadcrumb">
 
-  <table id="table_">
-    <tr>
-      <th class='time_col'>Time</th>
-      <th>Lift 1</th>
-      <th>Lift 2</th>
-      <th>Lift 3</th>
-      <th>Lift 4</th>
-    </tr>
-    <tr>
-      <td class='time_col'>8.00 - 8.30</td>
-      <td class='present' rowspan=3>58-3987</td>
-      <td class='present' rowspan=5>CAB-4675</td>
-      <td> </td>
-      <td class='present' rowspan=4>PA-4782</td>
-    </tr>
-    <tr>
-      <td class='time_col'>8.30 - 9.00</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>9.00 - 9.30</td>
-      <td class='present' rowspan=4>CAS-2354</td>
-    </tr>
-    <tr>
-      <td class='time_col'>9.30 - 10.00</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>10.00 - 10.30 </td>
-      <td class='present'rowspan=4>16-8937</td>
-      <td class='present' rowspan=4>255-4782</td>
-    </tr>
-    <tr>
-      <td class='time_col'>10.30 - 11.00</td>
-      <td class='present' rowspan=3>CAR-3875</td>
-    </tr>
-    <tr>
-      <td class='time_col'>11.00 - 11.30</td>
-      <td class='present' rowspan=2>CAD-2984</td>
-    </tr>
-    <tr>
-      <td class='time_col'>11.30 - 12.00</td>
-    </tr>
-    <tr>
-      <td class='time_col'>12.00 - 12.30</td>
-      <td class='present' rowspan=2>300-0977</td>
-      <td class='present' rowspan=2>CBB-3891</td>
-      <td ></td>
-      <td ></td>
-    </tr>
-    <tr>
-      <td class='time_col'>12.30 - 13.00</td>
-      <td></td>
-      <td ></td>
-    </tr>
-    <tr>
-      <td class='time_col'>13.00 - 13.30</td>
-      <td class='unavailable'> </td>
-      <td class='unavailable'> </td>
-      <td class='unavailable' ></td>
-      <td class='unavailable' ></td>
-    </tr>
-    <tr>
-      <td class='time_col'>13.30 - 14.00</td>
-      <td class='unavailable'> </td>
-      <td class='unavailable'> </td>
-      <td class='unavailable'></td>
-      <td class='unavailable'> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>14.00 - 14.30</td>
-      <td></td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>14.30 - 15.00</td>
-      <td class='present' rowspan=4>19-8937</td>
-      <td class='present' rowspan=4>CAB-9815</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>15.00 - 15.30</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td class='time_col'>15.30 - 16.00</td>
-      <td class='present' rowspan=2>CAA-1025</td>
-      <td class='present' rowspan=2>253-4891</td>
-    </tr>
-    <tr>
-      <td class='time_col'>16.00 - 16.30</td>
-    </tr>
-    </table>
-  </div>
-  <div class = "select_buttons">
-        <a class="delaybtn btn" class="form_btn" href="delay_timetable_manager">Delay Timetable</a>
-        <a class="exitbtn btn" class="form_btn" href="manager">Exit</a><br>
-  </div>
-</div><br><br><br>
- </div>
-</div>
-</div>
+                <li><a href="home">Home</a></li>
+                <li><a href="manager">Manager</a></li>
+                <li>View Reservation</li>
+            </ul><!-- breadcrumb -->
+            <h1>View Reservation&ensp;<i class="fa fa-table" aria-hidden="true"></i></h1>
+            <hr style="width: 60%;"><br>
 
-    <?php 
-          //include nav bar externally 
-          include("nav_profile.php");
-    ?>
+            <div class="list_table">
+                <div style="overflow-x:auto; width:94%;   margin-left: 3%; border-radius: 6px;">
 
-    <?php 
-        //get footer in seperate file
-        include("footer.php");
-    ?>
+                    <table id="table_">
+                        <tr>
+                            <th class='time_col'>Reservation ID</th>
+                            <th>Is Advanced paid</th>
+                            <th>customer ID</th>
+                            <th>Service Type</th>
+                            <th>Lift No</th>
+                            <th>Start Time</th>
+                            <th>View Details</th>
+                            <th>Delay</th>
+
+
+                        </tr>
+                        <?php if ($array) { ?>
+                        <?php foreach ($array as $reservation) { ?>
+                        <tr>
+                            <td>
+                                <b><?php echo "$reservation[reservation_id]"; ?></b>
+                            </td>
+                            <td class="advanced_convert">
+                                <?php echo "$reservation[is_advance_paid]"; ?>
+                            </td>
+                            <td>
+                                <?php echo "$reservation[cust_id]"; ?>
+                            </td>
+                            <td>
+                                <?php echo "$reservation[servise_type]"; ?>
+                            </td>
+                            <td>
+                                <?php echo "$reservation[lift_no]"; ?>
+                            </td>
+                            <td>
+                                <?php echo "$reservation[start_time]"; ?>
+                            </td>
+                            <td style=" text-align: center;">
+                                <a href="view_cust_reservation_manager?cust_id=<?php echo "$reservation[cust_id]"; ?>"
+                                    name="View" class="btn viewbtn">View</a>
+                            </td>
+
+                            <td style=" text-align: center;">
+                                <a href="delay_timetable_manager?reservation_id=<?php echo "$reservation[reservation_id]"; ?>"
+                                    name="delay" class="btn delaybtn">Delay</a>
+                            </td>
+
+                        </tr>
+                        <?php } ?>
+                        <?php } ?>
+                        <?php if (!$array) { ?>
+                        <p style="color: red;font-size:large;padding:10px;font-weight:100;">
+                            <b> <?php echo "Record Not Found !"; ?> </b>
+                        </p>
+                        <?php } ?>
+                    </table>
+                </div>
+            </div><br><br>
+        </div>
+    </div>
+    </div>
+
+    <?php
+  //include nav bar externally 
+  include("nav_profile.php");
+  ?>
+
+    <?php
+  //get footer in seperate file
+  include("footer.php");
+  ?>
 
 </body>
+
 </html>
