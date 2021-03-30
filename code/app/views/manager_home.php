@@ -97,12 +97,17 @@
         <hr style="width: 60%;"><br>
 
         <div class="square"> <br>
-            <div class="square1" style="float: left;margin-left:8%;">
+            <div class="square1" style="float: left;">
                 <i class="fa fa-address-card-o fa-3x" aria-hidden="true"></i>
                 <br>
                 <a href="employee_list"><button><b>Employee</b></button></a>
             </div>
 
+            <div class="square2">
+                <i class="fa fa-list-alt fa-3x" aria-hidden="true"></i>
+                <br>
+                <a href="emergency_reservation_manager"><button><b>Reservation</b></button></a>
+            </div>
 
             <div class="square3">
                 <i class="fa fa-plus-circle fa-3x" aria-hidden="true"></i>

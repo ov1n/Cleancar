@@ -85,7 +85,6 @@
                             <div class="form_label"><b>Leave Type</b></div>
                         </label>
                         <select name="leave_type" id="leave_type">
-                            <!-- onchange="type_enable();" -->
 
                             <option value="Full_leave" <?php if ($array['no_of_leaves_fullday'] >= 20) {
                                             echo "disabled";
