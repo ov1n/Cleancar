@@ -26,21 +26,6 @@ function send_bill_data() {
     //console.log('Registration Successful');
   }
 
-window.onload = advanced_convert;
-
-function advanced_convert(){
-
-    //get all elements of class
-    var x = document.getElementsByClassName("advanced_convert");
-        console.log(x.innerHTML);
-
-        if(x.innerHTML== 1){
-            x.innerHTML=500;
-        }else{
-            x.innerHTML=0;
-        }  
-    
-}
 
   function calculate(){
     let service_charge = document.getElementById("service_charge").value;
