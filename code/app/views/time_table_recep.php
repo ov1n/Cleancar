@@ -40,34 +40,38 @@
       <th>Start Time</th>
       <th>View Details</th>
       <th>Delay</th>
+      <th>Make Bill</th>
   
     </tr>
     <?php if ($array) { ?>
-      <?php foreach ($array as $timeslot) { ?>
+      <?php foreach ($array as $reservation) { ?>
       <tr>
         <td>
-          <b><?php echo "$timeslot[reservation_id]"; ?></b>
+          <b><?php echo "$reservation[reservation_id]"; ?></b>
         </td>
         <td class= "advanced_convert">
-          <?php echo "$timeslot[is_advance_paid]";?>
+          <?php echo "$reservation[is_advance_paid]";?>
         </td>
         <td>
-          <?php echo "$timeslot[cust_id]"; ?>
+          <?php echo "$reservation[cust_id]"; ?>
         </td>
         <td>
-          <?php echo "$timeslot[servise_type]"; ?>
+          <?php echo "$reservation[servise_type]"; ?>
         </td>
         <td>
-          <?php echo "$timeslot[lift_no]"; ?>
+          <?php echo "$reservation[lift_no]"; ?>
         </td>
         <td>
-          <?php echo "$timeslot[start_time]"; ?>
+          <?php echo "$reservation[start_time]"; ?>
         </td>
         <td style=" text-align: center;">
-          <a href="#" name="View" class="btn viewbtn">View</a>
+          <a  href="view_cust_reservation?cust_id=<?php echo "$reservation[cust_id]"; ?>" name="View" class="btn viewbtn">View</a>
         </td>
         <td style=" text-align: center;">
-          <a  href="delay_time_table" name="delay" class="btn delaybtn">Delay</a>
+          <a  href="delay_time_table?reservation_id=<?php echo "$reservation[reservation_id]"; ?>" name="Bill" class="btn billbtn">Bill</a>
+        </td>
+        <td style=" text-align: center;">
+          <a  href="delay_time_table?reservation_id=<?php echo "$reservation[reservation_id]"; ?>" name="delay" class="btn delaybtn">Delay</a>
         </td>
         
       </tr>

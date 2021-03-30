@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Business Report</title>
+    <title>Invoice Reports</title>
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="public\css\invoice_report.css"><!-- add style to employee_list -->
@@ -24,14 +24,14 @@
             </br>
             <li><a href="home">Home</a></li>
             <li><a href="manager">Manager</a></li>
-            <li>Business Report</li>
+            <li>Invoice Reports</li>
         </ul><!-- breadcrumb -->
         <?php
         //   echo($_SESSION["uname"]);
         //var_dump($array);
         ?>
         <div class="container">
-            <h1 style="text-align:center;"><i class="fas fa-file-invoice"></i> Business Report</h1>
+            <h1 style="text-align:center;"><i class="fas fa-file-invoice"></i> Invoice Reports</h1>
             <hr style="width: 60%;">
             <br><br>
             <div class="list_table">

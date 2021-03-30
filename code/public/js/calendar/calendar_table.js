@@ -8,11 +8,10 @@ var body_array=[];
 var final_date;
 var final_time;
 
-//console.log(today);
-
+var selected=[];
 var nextDay = new Date(today);
 
-function table_beautify(service_name){
+function table_beautify(service_name,z){
     var x=document.getElementsByClassName('slots');
 
     //console.log(x.length);
@@ -31,22 +30,32 @@ function table_beautify(service_name){
             x[i].innerHTML="";
             x[i].style.backgroundColor = "#ff8c8c";
             x[i].classList.add("blocked");
+            x[i].removeAttribute('onclick');
             //x[i].className = 'blocked';
-        }
-
-        else{
+        }else {
             x[i].innerHTML="";
             x[i].style.backgroundColor = '#fff';
+            x[i].classList.add("vacant");
         }
+        
+        //selected highlight effect
+        document.querySelectorAll('.vacant').forEach(item => {
+            if(item.classList.contains("blocked")){
+                console.log("blocked eka");
+            }else{
+                item.addEventListener('click', event => {
+                    //console.log(x);
+                    for(let i=0;i<z.length;i++){
+                        z[i].style.backgroundColor='white';
+                    }
+                    item.style.backgroundColor='#40cece';
+                    z.push(item);
+                })
+            }
+            
+        })
     }
     
-}
-
-
-function dasd(){
-    console.log(full_service_slots);
-    console.log(normal_service_slots);
-    console.log(body_wash_slots);
 }
 
 //function to convert data to readable format
@@ -87,9 +96,10 @@ function create_table(service_type,days,service_list,out_list,service_name){
 
     document.getElementById("table_create").innerHTML = "";
 
-    var legend_text= "<p>= Free timeslot </p>\n = Unavailable \n=Booked by you";
+    //var legend_text= "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>";
     legend=document.createElement('div');
-    legend.appendChild(document.createTextNode(legend_text));
+    legend.innerHTML += "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>";
+    //.appendChild(document.createTextNode(legend_text));
     
 
     var table = document.createElement('table');
@@ -111,7 +121,6 @@ function create_table(service_type,days,service_list,out_list,service_name){
     table.appendChild(trh);
 
     //get list of days and times into an array
-    console.log(days);
 
     for (var i = 0; i <  service_type.length; i++){
         //console.log(full_array);
@@ -120,26 +129,16 @@ function create_table(service_type,days,service_list,out_list,service_name){
         var td1 = document.createElement('td');
         td1.className = 'times';
         var text1 = document.createTextNode(service_type[i]);
-        //console.log(service_type[i]);
         td1.appendChild(text1);
         tr.appendChild(td1);
 
-        //console.log(days);
-
         for (var j = 0; j <  days.length; j++){
-            //console.log(service_list[days[j]]);
 
             var td2 = document.createElement('td');
             var tempArray=[days[j],service_type[i]];
-            //full_array.push(service_list);
             out_list.push(tempArray);
-            //console.log(tempArray);
-            console.log(service_list);
-            console.log(days);
             td2.className = 'slots';      
-            var text2 = document.createTextNode(service_list[days[j]][service_type[i]]);
-            
-            //console.log(j);    
+            var text2 = document.createTextNode(service_list[days[j]][service_type[i]]);  
             td2.appendChild(text2);  
             tr.appendChild(td2);
         }
@@ -148,8 +147,7 @@ function create_table(service_type,days,service_list,out_list,service_name){
     }
     table_create.appendChild(legend);
     table_create.appendChild(table);
-    table_beautify(service_name);
-    //console.log(out_list);
+    table_beautify(service_name,selected);
 }
 
 function pass_date_and_time(x,service_name){
@@ -157,20 +155,18 @@ function pass_date_and_time(x,service_name){
     if(service_name=='Full Service'){
         document.getElementById("date").value = full_array[x][0];
         document.getElementById("time").value = full_array[x][1];
-        document.getElementById("date_showw").innerHTML = full_array[x][0]+full_array[x][1];
-        //console.log(full_array[x][0]);
-        //console.log(full_array[x][1]);
+        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+full_array[x][0]+full_array[x][1];
+
     }else if(service_name=='Normal Service'){
         document.getElementById("date").value = normal_array[x][0];
         document.getElementById("time").value = normal_array[x][1];
-        document.getElementById("date_showw").innerHTML = normal_array[x][0]+normal_array[x][1];
-        //console.log(normal_array[x][1]);
+        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+normal_array[x][0]+normal_array[x][1];
+
     }else if(service_name=='Body Wash'){
         document.getElementById("date").value = body_array[x][0];
         document.getElementById("time").value = body_array[x][1];
-        document.getElementById("date_showw").innerHTML = body_array[x][0]+body_array[x][1];
-        //console.log(body_array[x][0]);
-        //console.log(body_array[x][1]);
+        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+body_array[x][0]+body_array[x][1];
     }
+    document.getElementById('reserve').disabled=false;
 
 } 

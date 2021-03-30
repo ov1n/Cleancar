@@ -28,6 +28,18 @@
 
         }
 
+
+         function revenue()
+        {
+        $query = "SELECT SUM(net_amount) AS net_amount,bill_date AS bill_date FROM invoice GROUP BY bill_date DESC LIMIT 7;";
+        $result = mysqli_query($this->conn, $query);
+        $res = $result->fetch_all(MYSQLI_ASSOC);
+        if ($res) {
+            //echo("go to view");
+            return ($res);
+        }
+        }
+
         function invoice_details($invoice_no)
         {
         $condition = "WHERE invoice_no=$invoice_no;";

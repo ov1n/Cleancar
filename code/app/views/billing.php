@@ -34,15 +34,16 @@
                 <li>Billing</li>   
               </ul><!-- breadcrumb -->
 
+              <div class = "select_buttons" style="float:left; margin-left: 10px;">
+                    <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
+                    <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
+                </div>
+
                
               <div class="container">  
               <h1 style="text-align:center;"><i class="fa fa-money" aria-hidden="true"></i> Billing</h1>
               <hr style="width: 60%;">
-               <div class = "select_buttons" style="margin-right: 46%;">
-                    <a class="optionbtn btn" class="form_btn" href="invoice_report"> View Report</a>
-                    <!-- <button type="submit" class="optionbtn btn" class="form_btn">View Report</button> -->
-                </div>
-                  </br></br></br></br>
+               
             <div class="card" >
               <div id=form_content> <!-- div to center needed elements -->
 
@@ -65,19 +66,22 @@
                 <input type="text" placeholder="Enter the Employee id" name="emp_id" id="emp_id"></br>
 
                 &ensp;&ensp;<label for="service_charge"><div class="form_label"><b>Service Charge</b></div></label>
-                <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required ></br>
+                <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required onkeyup="calculate()" ></br>
 
                 &ensp;&ensp;<label for="aditional_charges"><div class="form_label"><b>Aditional Charges</b></div></label>
-                <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" onkeyup="calculate()"></br>
+                <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" onkeyup="calculate()" ></br>
+
+                &ensp;&ensp;<label for="advanced_fee"><div class="form_label"><b>Advanced Fee </b></div></label>
+                <input type="text" placeholder="Enter the aditional charges" name="advanced_fee" id="advanced_fee" onkeyup="calculate()"></br>
 
                 &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Total Amount</b></div></label>
                 <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>
 
                 <a href="receptionist" class="btn cancelbtn" class="form_btn" > Cancel </a>
-                <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button> </br></br></br></br>
+                <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button> </br><br><br>
               </div><!-- form_content --> 
             </div><!-- card -->
-            </br></br></br></br>
+            </br>
           </div><!-- background -->
       
         </div><!-- container -->

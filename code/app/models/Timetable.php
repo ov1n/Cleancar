@@ -34,4 +34,62 @@
             }
         }
 
+        function get_cust($reservation_id){
+            //assign connectivity to a variable
+            $conn=Database::conn();
+            
+
+            //get each record
+            $query=" SELECT reservation.reservation_id AS reservation_id , reservation.cust_id AS cust_id, customer.mobile_tel_no AS tp_no
+                     FROM customer, reservation 
+                     WHERE reservation.reservation_id = $reservation_id AND customer.cust_id = reservation.cust_id ";
+
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+            
+            
+            //get leaves in an array
+            $reservation = $result->fetch_all(MYSQLI_ASSOC);
+            //var_dump($leaves);
+
+            //if array is not empty that means leave details are returning
+            if($reservation){
+                return($reservation); 
+            }
+        }
+
+        function get_reservation_details($cust_id){
+            //assign connectivity to a variable
+            $conn=Database::conn();
+            
+
+            //get each record
+            $query="SELECT customer.cust_id AS cust_id, CONCAT(customer.first_name, ' ', customer.last_name) AS name , customer.address , customer.home_tel_no AS home_tp, customer.mobile_tel_no AS mobile_tp, vehicle.vehicle_num AS vehicle_num, vehicle.vehicle_category AS vehicle_category
+                    FROM customer, vehicle
+                    WHERE customer.cust_id = $cust_id AND customer.cust_id = vehicle.cust_id ";
+
+            $result= mysqli_query($conn,$query);
+
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($conn));
+                exit();
+            }
+            
+            
+            //get leaves in an array
+            $array = mysqli_fetch_array($result);
+            //var_dump($leaves);
+
+            //if array is not empty that means leave details are returning
+            if($array){
+                return($array); 
+            }
+        }
+
     }
