@@ -51,12 +51,6 @@
 				<a href="billing"><button><b>Make Billing</b></button></a>
 			</div>
 
-			<div class="square4">
-				<i class="fa fa-clock-o fa-3x" aria-hidden="true"></i>
-				<br>
-				<a href="delay_time_table"><button><b>Delay Timetable</b></button></a>
-			</div>
-
 			<div class="square5">
 				<i class="fa fa-list-alt fa-3x" aria-hidden="true"></i>
 				<br>
