@@ -33,7 +33,7 @@
 
                 <li><a href="home">Home</a></li>
                 <li><a href="manager">Manager</a></li>
-                <li><a href="invoice_report_manager">Business Report</a></li>
+                <li><a href="invoice_report_manager">Invoice Report</a></li>
                 <li>Edit Bill</li>
             </ul><!-- breadcrumb -->
 
@@ -98,6 +98,27 @@
                         <input type="text" placeholder="Enter the aditional charges" name="aditional_charges"
                             id="aditional_charges" value='<?php echo "$array[aditional_charges]"; ?>'
                             onkeyup="calculate()"></br>
+                        &ensp;&ensp;<label for="advanced_fee">
+                            <div class="form_label"><b>Advanced</b></div>
+                        </label>
+                        <input type="text" placeholder="Enter the aditional charges"
+                            value='<?php echo "$array[advance_payment]"; ?>' name="advanced_fee" id="advanced_fee"
+                            disabled></br>
+                        <input type="hidden" placeholder="Enter the aditional charges"
+                            value='<?php echo "$array[advance_payment]"; ?>' name="advanced_fee" id="advanced_fee"
+                            disabled></br>
+
+                        &ensp;&ensp;<label for="servise_type">
+                            <div class="form_label"><b>Service Type</b></div>
+                        </label>
+                        <select name="servise_type" id="servise_type">
+                            <option value="<?php echo "$array[service_type]"; ?>">
+                                <?php echo "$array[service_type]"; ?></option>
+                            <option value="Full Service">Full Service</option>
+                            <option value="Normal Service">Normal Service</option>
+                            <option value="Body Wash">Body Wash</option>
+                        </select><br>
+
 
                         &ensp;&ensp;<label for="net_amount">
                             <div class="form_label"><b>Total Amount</b></div>
@@ -110,7 +131,7 @@
                         </br></br></br></br>
                     </div><!-- form_content -->
                 </div><!-- card -->
-                </br></br></br></br>
+                </br>
             </div><!-- background -->
 
         </div><!-- container -->
