@@ -62,16 +62,6 @@ function check_date(){
   }
 }
 
-// var type_enable = function () {
-//   if (document.getElementById('leave_type').value == 'Full_leave')  {
-//     console.log("AAA");
-//     $("#leave_time option[value='12:00:00']").attr('disabled','disabled');
-//   } 
-  
-// }
-
-
-
 function deleteme(leaveDate,leaveType,leaveStatus){  
  
   //alert("Delete Employee?");  

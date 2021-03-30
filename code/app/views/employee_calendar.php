@@ -22,7 +22,7 @@
       
       <h1>Leave Calendar - (<?php echo substr(($array[0]['leave_date']),0,4)?> )</h1><hr style="width: 60%;"><br> 
       <p><b>All the leaves you got during this year</b></p>
-      <p>Number of Leaves You got up to today - <?php echo count($array)."/60"; ?> </p>
+      <p>No of Leaves You got up to today - <?php echo count($array)."/60"; ?> </p>
 
 
       <div class="row">
