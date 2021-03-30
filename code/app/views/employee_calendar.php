@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leave Summary</title>
+	<title>Leave Calendar</title>
 
   <link rel="stylesheet" type="text/css" href="public/css/employee_calendar.css">
 
@@ -17,10 +17,13 @@
       <ul class="breadcrumb">
           <li><a href="home">Home</a></li>
           <li><a href="employee">Employee</a></li>
-          <li>Leave Summary</li>
+          <li>Leave Calendar</li>
       </ul>  <!-- breadcrumb-->
       
       <h1>Leave Calendar - (<?php echo substr(($array[0]['leave_date']),0,4)?> )</h1><hr style="width: 60%;"><br> 
+      <p><b>All the leaves you got during this year</b></p>
+      <p>No of Leaves You got up to today - <?php echo count($array)."/60"; ?> </p>
+
 
       <div class="row">
   <div class="column">
@@ -31,14 +34,14 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-01-'){
-                      echo '<span class="label success">'.substr(($array[$x]['leave_date']),-2).'</span>'; 
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>'; 
                       echo ' ';
                       $y=+1;
                     }
                     
                 }
                 if($y==0){
-                  echo "No Leaves";
+                  '<span class="label success"> No Leaves </span>';
                 }
                 
                 ?></p></div></div></div>
@@ -52,13 +55,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-02-'){
-                      echo '<span class="label success">'.substr(($array[$x]['leave_date']),-2).'</span>'; ;
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>'; ;
                       echo ' ';
                       $y=+1;
                     }
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -71,13 +74,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-03-'){
-                      echo  '<span class="label success">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo  '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
                       echo '&emsp;';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  '<span class="label success"> No Leaves </span>';
                 }
                 
                 ?></p></div></div></div>
@@ -91,13 +94,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-04-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -113,13 +116,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-05-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo '<span class="label warning"> No Leaves </span>';
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -132,13 +135,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-06-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     }
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -151,13 +154,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-07-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 }
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 } 
                 ?></p></div></div></div>
     </div>
@@ -170,13 +173,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-08-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -192,13 +195,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-09-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -211,13 +214,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-10-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -230,13 +233,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-11-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>
@@ -249,13 +252,13 @@
                     // echo ($array[$x]['leave_date']); 
                     // echo "<br>";
                     if((substr(($array[$x]['leave_date']), 0, -2))== '2021-12-'){
-                      echo substr(($array[$x]['leave_date']),-2);
-                      echo '&emsp;';
+                      echo '<span class="label warning">'.substr(($array[$x]['leave_date']),-2).'</span>';
+                      echo ' ';
                       $y=+1;
                     } 
                 } 
                 if($y==0){
-                  echo "No Leaves";
+                  echo '<span class="label success"> No Leaves </span>';
                 }
                 ?></p></div></div></div>
     </div>

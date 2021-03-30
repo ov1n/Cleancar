@@ -72,7 +72,7 @@
                  "<?php echo($row["is_advance_paid"])?>" disabled></br> 
                  </div><!-- form_content -->  
                  <?php if(!($row["is_advance_paid"])){
-                            echo("<a href='pay_advance?emp_id=' name='update' class='btn updatelbtn' style=width:90px;>Pay Online</a>");
+                            echo("<a href='https://sandbox.payhere.lk/pay/o9e7eec74' name='update' class='btn updatelbtn' style=width:90px;>Pay Online</a>");
                  } ?>
                  <?php $date=date_create(date("Y-m-d"))->modify('+1 days')->format('Y-m-d'); ?>
                  <?php if($row['date']>=$date){
