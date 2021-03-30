@@ -8,7 +8,7 @@
 	<h1 style="font-size: 45px">Oops !</h1>
 	<h3>404 - Page Not Found</h3>
 	<p><?php
-	var_dump($_SESSION);
+	//var_dump($_SESSION);
 	?>
 	The page your are looking for might have been removed,had its name changed or temporarily unavailable</p>
 	<div class="img" >
