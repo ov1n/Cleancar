@@ -16,7 +16,6 @@
                 printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }else{
-                //echo("result returns");
                 return $result;
             }
         }
