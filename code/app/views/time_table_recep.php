@@ -39,8 +39,9 @@
       <th>Lift No</th>
       <th>Start Time</th>
       <th>View Details</th>
-      <th>Delay</th>
       <th>Make Bill</th>
+      <th>Delay</th>
+      
   
     </tr>
     <?php if ($array) { ?>

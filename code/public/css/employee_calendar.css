@@ -22,6 +22,10 @@ h2{
   text-align: center;
 }
 
+p{
+  text-align: center;
+  color: white;
+}
 
 /* Style the list */
 ul.breadcrumb {
@@ -85,7 +89,7 @@ ul.breadcrumb {
 /* Remove extra left and right margins, due to padding in columns */
 .row {
   width: 65%;
-  margin-left: 20%;
+  margin-left: 18%;
   margin-top: 0%;
 }
 

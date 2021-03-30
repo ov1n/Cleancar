@@ -98,7 +98,7 @@ function create_table(service_type,days,service_list,out_list,service_name){
 
     //var legend_text= "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>";
     legend=document.createElement('div');
-    legend.innerHTML += "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>";
+    legend.innerHTML += "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label vacantlabel' style=color:black;>Available</span>&nbsp;&nbsp;<span class='label selectedlabel'>Selected</span></br></br></br>";
     //.appendChild(document.createTextNode(legend_text));
     
 

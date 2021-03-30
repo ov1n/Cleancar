@@ -76,8 +76,8 @@
                 <input type="tel" placeholder="Enter Your Home number" name="home_tel_no" id="home_tel_no" onkeyup = 'check_phone_no();button_enable();' required><br>
                 <div id="phone_validation"><p></p></div><br>
 
-
-                <button type="reset" class="btn cancelbtn" class="form_btn" >Cancel</button>
+                <a href="receptionist" class="btn cancelbtn" class="form_btn" > Cancel </a>
+                <!-- <button href="receptionist" class="btn cancelbtn" class="form_btn" >Cancel</button> -->
                 <button type="submit" id="register" class="btn" class="form_btn" style="margin-right :10px">Register</button>
                 </br></br></br></br>
 
