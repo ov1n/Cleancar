@@ -35,7 +35,7 @@
             //assign today date to a variable
             // $today=date('Y-m-d');
                
-            $condition = "WHERE emp_id = '$id' AND is_accepted = 'accepted';";
+            $condition = "WHERE emp_id = '$id' AND is_accepted = 'Accepted';";
             
             $result= $this->select("leave_date",'emp_leave',$condition);
             
