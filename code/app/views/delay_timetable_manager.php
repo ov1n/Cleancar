@@ -25,11 +25,11 @@
                     <li><a href="home">Home</a></li>
                     <li><a href="manager">Manager</a></li>
                     <li><a href="time_table">View Reservation</a></li>
-                    <li>Delay Timetable</li>
+                    <li>Delay Notification</li>
                 </ul><!-- breadcrumb -->
 
 
-                <h1 style="text-align:center;"><i class="fas fa-hourglass-half"></i> Delay Timetable</h1>
+                <h1 style="text-align:center;"><i class="fas fa-hourglass-half"></i> Delay Notification</h1>
                 <hr style="width: 60%;">
                 <div class="card">
                     <div id=form_content>
