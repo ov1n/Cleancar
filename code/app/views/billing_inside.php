@@ -31,6 +31,7 @@
                
                 <li><a href="home">Home</a></li>
                 <li><a href="receptionist">Receptionist</a></li>
+                <li><a href="time_table_recep">View Reservation</a></li>
                 <li>Billing</li>   
               </ul><!-- breadcrumb -->
 
@@ -70,9 +71,16 @@
 
                 &ensp;&ensp;<label for="aditional_charges"><div class="form_label"><b>Aditional Charges</b></div></label>
                 <input type="text" placeholder="Enter the aditional charges" name="aditional_charges" id="aditional_charges" onkeyup="calculate_insidebill()" ></br>
+                <?php 
+                  if($array['is_advance_paid'] == 1){
+                    $advance = 500;
+                  }else{
+                    $advance = 0;
+                  }
 
+                ?>
                 &ensp;&ensp;<label for="advanced_fee"><div class="form_label"><b>Advanced</b></div></label>
-                <input type="text" placeholder="Enter the aditional charges" value = '<?php echo "$array[is_advance_paid]"; ?>' name="advanced_fee" id="advanced_fee" class="advanced_convert"></br>
+                <input type="text" placeholder="Enter the aditional charges" value = '<?php echo $advance; ?>' name="advanced_fee" id="advanced_fee"></br>
 
                 &ensp;&ensp;<label for="net_amount"><div class="form_label"><b>Total Amount</b></div></label>
                 <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>
