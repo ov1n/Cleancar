@@ -104,7 +104,7 @@
 
             //get each record
             $query="SELECT reservation.reservation_id AS reservation_id, 
-            is_advance_paid, service_type.type_name AS servise_type, 
+            is_advance_paid, service_type.type_name AS service_type, 
             CONCAT(customer.first_name, ' ', customer.last_name) AS name, customer.mobile_tel_no AS tp_no, 
             vehicle.vehicle_num, vehicle.vehicle_category 
             FROM reservation, vehicle, customer, service_type 
