@@ -42,6 +42,7 @@
                             <?php echo '<span class="label success">'.($array[0]['no_of_leaves_fullday']).'</span>'; ?> &ensp;&ensp;&ensp;<b>Half
                             Day</b>&ensp; <?php echo '<span class="label success">'.($array[0]['no_of_leaves_halfday']).'</span>'; ?>
                             &ensp;&ensp;&ensp;<b>Short Leave</b>&ensp;
+
                             <?php echo '<span class="label success">'.($array[0]['no_of_leaves_short']).'</span>'; ?> </div>
 
                         <label for="Number Of Leave Available" style="width: 300px">

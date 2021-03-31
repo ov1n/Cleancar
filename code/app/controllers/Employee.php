@@ -167,10 +167,7 @@
             $gender = $test->find_gend($nic_no);
 
             //hash password
-            //$password=md5($unhashed);
             $password = sha1($unhashed);
-
-            //$password = password_hash($unhashed,PASSWORD_BCRYPT);
 
             //Call the insert_record function to insert the data to database
             $emp->insert_record($first_name,$last_name,$address,$e_mail,$home_tel_no,$mobile_tel_no,$nic_no,$gender,$dob,$password);
@@ -179,7 +176,7 @@
             $mail=new Mailer();
 
             $subject="Welcome to the Cleancar Family!";
-            $body="<strong>Dear Mr./Mrs./Ms. $last_name,</strong></br>අපි ඔබව සාදරයෙන් CleanCar පවුලට පිලිගනිමු!
+            $body="<strong>Dear Mr./Mrs./Ms. $last_name,</strong></br> Welcome Cleancar Family!
                     Please change your password as soon as you login to the System which is </br>
                     $unhashed at the moment.";
 
