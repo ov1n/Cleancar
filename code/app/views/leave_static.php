@@ -53,13 +53,13 @@
                             } else {
                                 echo '<span class="label success">'.(20 - $array[0]['no_of_leaves_fullday']).'</span>';
                             } ?>
-                            &ensp;&ensp;&ensp;&ensp;<b>Half Day</b>
+                            &ensp;&ensp;&ensp;<b>Half Day</b>
                             &ensp; <?php if ($array[0]['no_of_leaves_halfday'] > 20) {
                                                 echo '<span class="label success"> 0 </span>';
                                             } else {
                                                 echo '<span class="label success">'.(20 - $array[0]['no_of_leaves_halfday']).'</span>';
                                             } ?>
-                            &ensp;&ensp;&ensp;&ensp;<b>Short Leave</b>&ensp;
+                            &ensp;&ensp;&ensp;<b>Short Leave</b>&ensp;
                             <?php if ($array[0]['no_of_leaves_short'] > 20) {
                                 echo '<span class="label success"> 0 </span>';
                             } else {
