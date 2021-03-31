@@ -27,16 +27,6 @@
     </head>
 
     <body >
-      <?php
-        //echo($_SESSION["uname"]);
-        //var_dump(Session::get('full_service_slots'));
-        
-        //details test
-        //echo(($_SESSION["details"])["first_name"]);
-        //echo(($_SESSION["details"])["last_name"]);
-        //echo(($_SESSION["details"])["email"]);
-        //echo(($_SESSION["details"])["first_name"]);
-      ?>
 
       <script  type="text/javascript">
         //assign each variables
@@ -47,7 +37,6 @@
         var full_service_list= <?php echo json_encode($_SESSION["full_service_list"]); ?>;
         var normal_service_list= <?php echo json_encode($_SESSION["normal_service_list"]); ?>;
         var body_wash_list= <?php echo json_encode($_SESSION["body_wash_list"]); ?>;
-        //console.log(full_service_list);
 
       //code to create dynamic table
       </script>
