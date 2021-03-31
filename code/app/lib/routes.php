@@ -192,6 +192,21 @@
         //var_dump($_SESSION);
     });
 
+    //route to confirm reservation with database
+    Route::set('set_emergency_reservation',function(){ 
+        session_start();
+        //echo '<pre>';
+        //var_dump($_SESSION);
+        //echo '</pre>';
+        $tempdate=Session::get("duration");
+        $tdate = strtotime($tempdate);
+        //echo("cat");//$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
+        Emergency_reservation::insert();
+        //var_dump($_SESSION);
+        header("Location:time_table_recep");
+        //var_dump($_SESSION);
+    });
+
     //final view of reservation
     Route::set('confirm_reservation',function(){ 
         session_start();
