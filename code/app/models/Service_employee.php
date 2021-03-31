@@ -8,13 +8,9 @@ class Service_employee extends Model
     //getting all details of employees
     function get_all()
     {
-
-        //echo session var
         //echo "uname is " . $_SESSION["uname"] . ".<br>";
         //echo "pwd is " . $_SESSION["pwd"] . ".";
 
-        //$query="SELECT* FROM service_employee";
-        //$result= mysqli_query($this->conn,$query);
         $condition = ";";
         $result = $this->select("*", 'service_employee', $condition);
 
@@ -26,7 +22,6 @@ class Service_employee extends Model
 
         //get employees in an array
         $employees = $result->fetch_all(MYSQLI_ASSOC);
-        //var_dump($employees);
 
         //if array is not empty that means employees are returning
         if ($employees) {
@@ -88,12 +83,9 @@ class Service_employee extends Model
     function check_credentials($uname, $pwd)
     {
 
-        //echo session var
         //echo "uname is " . $_SESSION["uname"] . ".<br>";
         //echo "pwd is " . $_SESSION["pwd"] . ".";
 
-        // $query="SELECT emp_id FROM service_employee WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd'";
-        // $result= mysqli_query($this->conn,$query);
         $condition = "WHERE (emp_id='$uname' OR email='$uname') AND password='$pwd';";
         $result = $this->select("emp_id", 'service_employee', $condition);
 
@@ -122,9 +114,7 @@ class Service_employee extends Model
         $result = $this->select('email', 'service_employee', $condition);
 
         $count = mysqli_fetch_array($result);
-        //print_r($count);
-        //print_r($uname);
-        //if array is not empty that means credentials are correct
+        
         if ($count) {
             return True;
         }
@@ -137,10 +127,6 @@ class Service_employee extends Model
         $today = date('Y-m-d');
         // echo($today);
 
-        //$query_emp="INSERT INTO service_employee(first_name,last_name,address,email,home_tel_no,mobile_tel_no,NIC_no,gender,dob,password,enrollment_date) 
-        //VALUES('$first_name','$last_name','$address','$e_mail','$home_tel_no','$mobile_tel_no','$nic_no','$gender','$dob','$password','$today');";
-
-        //echo($query);
         $columns = array('first_name', 'last_name', 'address', 'email', 'home_tel_no', 'mobile_tel_no', 'NIC_no', 'gender', 'dob', 'password', 'enrollment_date');
         $values = array("$first_name", "$last_name", "$address", "$e_mail", "$home_tel_no", "$mobile_tel_no", "$nic_no", "$gender", "$dob", "$password", "$today");
 
@@ -159,7 +145,6 @@ class Service_employee extends Model
 
         //Return array to be fetched and displayed
         if ($details) {
-            //echo("go to view");
             return ($details);
         }
     }
@@ -178,12 +163,6 @@ class Service_employee extends Model
             printf("Error: %s\n", mysqli_error($this->conn));
             exit();
         }
-
-        //$condition = 'WHERE emp_id= $emp_id;';
-        //$columns=array("first_name","last_name","address","email","home_tel_no","mobile_tel_no","NIC_no","gender","dob");
-        //$values=array("$first_name","$last_name","$address","$email","$home_tel_no","$mobile_tel_no","$nic_no","$gender","$dob");
-        //$result= $this->update('service_employee',$columns,$values,$condition);
-
 
     }
 

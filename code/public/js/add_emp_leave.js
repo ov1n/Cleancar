@@ -66,7 +66,6 @@ function deleteme(leaveDate,leaveType,leaveStatus){
  
   //alert("Delete Employee?");  
   $.alertable.confirm('Do you want to cancel the Leave?').then(function() {
-    // window.location.href="employee_delete_recep?emp_id="+empId;
     window.location.href="leave_delete?leave_date="+leaveDate+"&leave_type="+leaveType+"&leave_status="+leaveStatus;
   }, function() {
     console.log('Confirmation canceled');
