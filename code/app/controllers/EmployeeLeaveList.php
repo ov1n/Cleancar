@@ -25,9 +25,9 @@
       public static function update_leave_status($view_name, $role)
     {
 
-        require_once './lib/sms/vendor/autoload.php';
-        $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
-        $client = new \Nexmo\Client($basic);
+        // require_once './lib/sms/vendor/autoload.php';
+        // $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
+        // $client = new \Nexmo\Client($basic);
 
         $emp_id = base64_decode($_GET['emp_id']);
         $leave_date = base64_decode($_GET['leave_date']);
@@ -86,9 +86,9 @@
 
     public static function delete_leaves($view_name, $role)
     {
-        require_once './lib/sms/vendor/autoload.php';
-        $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
-        $client = new \Nexmo\Client($basic);
+        // require_once './lib/sms/vendor/autoload.php';
+        // $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
+        // $client = new \Nexmo\Client($basic);
 
 
         $leave = new Emp_leave();

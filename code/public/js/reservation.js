@@ -18,7 +18,7 @@ function confirmSubmit(){
       }, function() {
         console.log('Dont make advance Payment what');
         //insert code here
-        window.location = 'set_emergency_reservation';
+        window.location = 'set_reservation';
       });
     console.log('Confirmation submitted');
   }, function() {

@@ -57,9 +57,9 @@
 
         $body = 'Dear Mr/Mrs ' . $name . ' Your Reservation will be Delay ' . $delay_time . 'Minutes due to unavoidable reason';
 
-        require_once './lib/sms/vendor/autoload.php';
-        $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
-        $client = new \Nexmo\Client($basic);
+        // require_once './lib/sms/vendor/autoload.php';
+        // $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
+        // $client = new \Nexmo\Client($basic);
 
         // $message = $client->message()->send([
         //     'to' => '94783441665',

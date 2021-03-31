@@ -45,9 +45,9 @@
        static function cancel_leave($view_name)
       {
 
-        require_once './lib/sms/vendor/autoload.php';
-        $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
-        $client = new \Nexmo\Client($basic);
+        // require_once './lib/sms/vendor/autoload.php';
+        // $basic  = new \Nexmo\Client\Credentials\Basic('0353f110', 'JF8NYtMksA6wFs5H');
+        // $client = new \Nexmo\Client($basic);
 
         $name = $_SESSION["uname"];
 

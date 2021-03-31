@@ -11,7 +11,7 @@
         <!-- get imported jquery -->
         <script src="public/js/jquery/jquery-3.5.1.js"></script>
         <!-- get external js file -->
-        <script type="text/javascript" src="public\js\reservation.js"></script>
+        <script type="text/javascript" src="public\js\receptionist_reservation.js"></script>
         <script src="public/js/jquery/jquery.alertable.min.js"></script>
         
         <script src="https://kit.fontawesome.com/45c8933d3d.js" crossorigin="anonymous"></script>
