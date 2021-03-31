@@ -87,23 +87,14 @@
                 printf("Error: %s\n", mysqli_error($this->conn));
                 exit();
             }
-
-            //get necessary elements in an array
-            //$r = mysqli_fetch_array($result2);
             $r = $result2->fetch_all(MYSQLI_ASSOC);
-            //$r = mysqli_fetch_array($result2);
-            
-            //print_r($r);
             return $r;
         }
 
         //getting all details of leaves
         function get_detail(){
-               
-            //$query="SELECT * FROM time_slot";
 
             $result= $this->select('*','time_slot','');
-            //$result= mysqli_query($this->conn,$query);
             
             //debugging
             if (!$result) {
@@ -114,7 +105,6 @@
             
             //get leaves in an array
             $timeslot = $result->fetch_all(MYSQLI_ASSOC);
-            //var_dump($leaves);
 
             //if array is not empty that means leave details are returning
             if($timeslot){
@@ -128,19 +118,14 @@
             $columns=array('start_time','end_time','lift_no');
             $values=array("$start_time","$end_time","$lift_no");
 
-            $this->insert('time_slot',$columns,$values);
-            
-            //echo($query);
-            
+            $this->insert('time_slot',$columns,$values);    
         }
 
         function delete_timeslot($timeslot_no){
 
-        //$query="DELETE FROM service_type WHERE (type_id='$type_id')";
+            $condition = "WHERE timeslot_no='$timeslot_no'";
 
-        $condition = "WHERE timeslot_no='$timeslot_no'";
-
-        $this->delete('time_slot', $condition);
+            $this->delete('time_slot', $condition);
         }
 
 
@@ -151,48 +136,37 @@
 
         //get details into an associative array
         $details = mysqli_fetch_array($result);
-        //print_r($details);
 
-        //Return array to be fetched and displayed
         if ($details) {
-            //echo("go to view");
             return ($details);
         }
         }
 
         function get_search_data($search_key)
         {
-        //$conn = Database::conn();
-        $condition = "WHERE (timeslot_no ='$search_key' OR start_time='$search_key' OR lift_no='$search_key' OR end_time='$search_key');";
-        $result = $this->select("*", 'time_slot', $condition);
+            $condition = "WHERE (timeslot_no ='$search_key' OR start_time='$search_key' OR lift_no='$search_key' OR end_time='$search_key');";
+            $result = $this->select("*", 'time_slot', $condition);
 
-        //get details into an associative array
-        $details = $result->fetch_all(MYSQLI_ASSOC);
-        //print_r($details);
+            //get details into an associative array
+            $details = $result->fetch_all(MYSQLI_ASSOC);
 
-        //Return array to be fetched and displayed
-        if ($details) {
-            //echo("go to view");
-            return ($details);
+            //Return array to be fetched and displayed
+            if ($details) {
+                return ($details);
+            }
         }
-        }
-
-
 
         function update_timeslot($start_time,$end_time,$timeslot_no){
 
-        $u_time_slot = "UPDATE time_slot SET start_time='$start_time',end_time='$end_time' WHERE timeslot_no='$timeslot_no';";
-        $result = mysqli_query($this->conn, $u_time_slot);
+            $u_time_slot = "UPDATE time_slot SET start_time='$start_time',end_time='$end_time' WHERE timeslot_no='$timeslot_no';";
+            $result = mysqli_query($this->conn, $u_time_slot);
 
-        //debugging
-        if (!$result) {
-            printf("Error: %s\n", mysqli_error($this->conn));
-            exit();
-        }
-            // $columns=array('start_time','end_time');
-            // $values=array("$start_time","$end_time");
-
-            // $this->update('time_slot',$columns,$values);            
+            //debugging
+            if (!$result) {
+                printf("Error: %s\n", mysqli_error($this->conn));
+                exit();
+            }
+          
         }
 
 

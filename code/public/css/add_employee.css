@@ -273,6 +273,8 @@ h1 {
 }
 .btn.cancelbtn {
   background-color: #e67e22;
+  height: 42px;
+  margin-top: 4px;
 }
 
 .btn.cancelbtn:hover, .btn.orange:focus {

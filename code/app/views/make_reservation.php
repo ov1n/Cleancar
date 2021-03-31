@@ -18,15 +18,6 @@
     </head>
 
     <body>
-     <?php
-        //echo($_SESSION["uname"]);
-        //echo($_SESSION["timeslots"]);
-        //details test
-        //echo(($_SESSION["details"])["first_name"]);
-        //echo(($_SESSION["details"])["last_name"]);
-        //echo(($_SESSION["details"])["email"]);
-        //echo(($_SESSION["details"])["first_name"]);
-      ?>
       <form id="reservation" name="reservation" onsubmit="confirmSubmit(); return false;">
         <div class="container">  
           
@@ -62,10 +53,6 @@
                 &ensp;&ensp;<label for="time"><div class="form_label"><b>Time</b></div></label>
                 <input type="text" name="time" id="time" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"
                 value=<?php echo(substr($_SESSION["time"], 0, -3)."a.m"); ?> disabled ></br></br>
-
-                <!-- &ensp;&ensp;<label for="service_type"><div class="form_label"><b>Service</b></div></label>
-                <input type="text" name="service_type" id="service_type" style="background-color: transparent; border: 0px solid;color: #000; font-weight:550"
-                value=<?php ($_SESSION); ?> disabled ></br></br> -->
 
                 &ensp;&ensp;<label for="vehicle_category"><div class="form_label"><b>Vehicle Category</b></div></label>
                 <select name="vehicle_category" id="vehicle_category">

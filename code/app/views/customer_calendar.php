@@ -27,16 +27,6 @@
     </head>
 
     <body >
-      <?php
-        //var_dump($_SESSION);
-        //var_dump(Session::get('full_service_slots'));
-        
-        //details test
-        //echo(($_SESSION["details"])["first_name"]);
-        //echo(($_SESSION["details"])["last_name"]);
-        //echo(($_SESSION["details"])["email"]);
-        //echo(($_SESSION["details"])["first_name"]);
-      ?>
 
       <script  type="text/javascript">
         //assign each variables

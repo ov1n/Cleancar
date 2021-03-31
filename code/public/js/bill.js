@@ -31,14 +31,27 @@ function send_bill_data() {
     let service_charge = document.getElementById("service_charge").value;
     let aditional_charges = document.getElementById("aditional_charges").value;
     let net_amount = parseFloat(service_charge) + parseFloat(aditional_charges);
-    document.getElementById("net_amount").value = net_amount;
+    if(isNaN(net_amount)){
+      document.getElementById("net_amount").value = "";
+      document.getElementById("okbtn").disabled = true;
+    }else{
+      document.getElementById("net_amount").value = net_amount;
+      document.getElementById("okbtn").disabled = false;
+    }
   }
 
   function calculate_insidebill(){
     let service_charge = document.getElementById("service_charge").value;
     let aditional_charges = document.getElementById("aditional_charges").value;
     let advanced_fee = document.getElementById("advanced_fee").value;
-    let net_amount = parseFloat(service_charge) + parseFloat(aditional_charges) - parseFloat(advanced_fee);
-    document.getElementById("net_amount").value = net_amount;
+    var net_amount = parseFloat(service_charge) + parseFloat(aditional_charges) - parseFloat(advanced_fee);
+    if(isNaN(net_amount)){
+      document.getElementById("net_amount").value = "";
+      document.getElementById("okbtn").disabled = true;
+    }else{
+      document.getElementById("net_amount").value = net_amount;
+      document.getElementById("okbtn").disabled = false;
+    }
+    
   }
 

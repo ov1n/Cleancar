@@ -62,6 +62,17 @@
                 &ensp;&ensp;<label for="emp_id"><div class="form_label"><b>Handled By</b></div></label>
                 <input type="text" placeholder="Enter the Employee id" name="emp_id" id="emp_id"></br>
 
+                <input type="hidden" name="advanced_fee" value="0" id="advanced_fee"></br>
+
+                &ensp;&ensp;<label for="service_type">
+                            <div class="form_label"><b>Service Type</b></div>
+                        </label>
+                        <select name="service_type" id="service_type">
+                            <option value="Full Service">Full Service</option>
+                            <option value="Normal Service">Normal Service</option>
+                            <option value="Body Wash">Body Wash</option>
+                        </select><br>
+
                 &ensp;&ensp;<label for="service_charge"><div class="form_label"><b>Service Charge</b></div></label>
                 <input type="text" placeholder="Enter the Service Charge" name="service_charge" id="service_charge" required onkeyup="calculate()" ></br>
 
@@ -72,7 +83,7 @@
                 <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount" required ></br>
 
                 <a href="receptionist" class="btn cancelbtn" class="form_btn" > Cancel </a>
-                <button type="submit" class="okbtn btn"  style="margin-right :10px">OK</button> </br><br><br>
+                <button type="submit" id="okbtn" class="okbtn btn"  style="margin-right :10px">OK</button> </br><br><br>
               </div><!-- form_content --> 
             </div><!-- card -->
             </br>

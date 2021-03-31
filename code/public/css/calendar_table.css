@@ -60,6 +60,12 @@ td{
     color: white;
     padding: 8px;
 }
+
 .bookedlabel {background-color: #ff8c8c;} /* Red */
 .vacantlabel {background-color: #ffffff;} /* Red */
 .selectedlabel {background-color: rgb(40, 206, 206);} /* Red */
+
+.date_time_display{
+    padding-left: 60px;
+    margin-left:auto;
+}

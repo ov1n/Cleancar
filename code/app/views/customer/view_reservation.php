@@ -75,7 +75,7 @@
                             echo("<a href='https://sandbox.payhere.lk/pay/o9e7eec74' name='update' class='btn updatelbtn' style=width:90px;>Pay Online</a>");
                  } ?>
                  <?php $date=date_create(date("Y-m-d"))->modify('+1 days')->format('Y-m-d'); ?>
-                 <?php if($row['date']>=$date){
+                 <?php if($row['date']>$date){
                    
                    echo '<a onclick="cancelConfirm('.$row['reservation_id'].')" name="cancel" class="btn deletebtn" id="'.$row['reservation_id'].'">Cancel Reservation</a>';
                  }?>

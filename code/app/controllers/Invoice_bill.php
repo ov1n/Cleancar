@@ -76,6 +76,9 @@
             $emp_id = $_POST['emp_id'];
             $service_charge = $_POST['service_charge'];
             $aditional_charges = $_POST['aditional_charges'];
+            $advance_payment = "- ".$_POST['advanced_fee'];
+            $advance_payment_db = $_POST['advanced_fee'];
+            $service_type = $_POST['service_type'];
             $net_amount = $_POST['net_amount'];
 
             //get date of today for registered date
@@ -83,8 +86,8 @@
 
 
             //the built in insert function of model is called here
-            $key_array = array("reservation_id", "vehicle_no", "vehicle_model", "customer_name", "contact_no", "emp_id", "service_charge", "aditional_charges", "net_amount", "bill_date");
-            $values_array = array("$reservation_id", "$vehicle_no", "$vehicle_model", "$customer_name", "$contact_no", "$emp_id", "$service_charge", "$aditional_charges", "$net_amount", $today);
+            $key_array = array("reservation_id", "vehicle_no", "vehicle_model","service_type", "customer_name", "contact_no", "emp_id", "service_charge", "aditional_charges","advance_payment", "net_amount", "bill_date");
+            $values_array = array("$reservation_id", "$vehicle_no", "$vehicle_model", "$service_type", "$customer_name", "$contact_no", "$emp_id", "$service_charge", "$aditional_charges","$advance_payment_db", "$net_amount", "$today");
 
             //insert data using the base model function
             $bill->insert('invoice', $key_array, $values_array);
@@ -103,7 +106,9 @@
             $vehicle_no = $array['vehicle_no'];
             $service_charge = $array['service_charge'];
             $aditional_charges = $array['aditional_charges'];
+            $service_type = $array['service_type'];
             $net_amount = $array['net_amount'];
+            $advance_payment = "- ".$array['advance_payment'];
             
              }
             ob_start();
@@ -151,6 +156,10 @@
             $pdf -> cell(5, 10, ":-", 0 ,0,'L');
             $pdf -> cell(40, 10, $vehicle_no, 0 ,1,'L');
 
+            $pdf -> cell(30, 10, "Service Type", 0 ,0,'L');
+            $pdf -> cell(5, 10, ":-", 0 ,0,'L');
+            $pdf -> cell(40, 10, $service_type, 0 ,1,'L');
+
             $pdf ->Ln(3);
             $x = $pdf -> GetX();
             $y = $pdf -> GetY();
@@ -163,6 +172,8 @@
             $pdf -> cell(50, 10, $service_charge, 1 ,1,'R');
             $pdf -> cell(78, 10, "Aditional Charges", 1 ,0,'L');
             $pdf -> cell(50, 10, $aditional_charges, 1 ,1,'R');
+            $pdf -> cell(78, 10, "Advance Payment", 1 ,0,'L');
+            $pdf -> cell(50, 10, $advance_payment, 1 ,1,'R');
             $pdf -> SetFont('Times','B','14');
             $pdf -> cell(78, 10, "Total Amount", 1 ,0,'L');
             $pdf -> cell(50, 10, $net_amount, 1 ,1,'R');

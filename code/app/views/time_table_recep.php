@@ -36,11 +36,13 @@
       <th>Is Advanced paid</th>
       <th>customer ID</th>
       <th>Service Type</th>
+      <th>Date</th>
       <th>Lift No</th>
       <th>Start Time</th>
       <th>View Details</th>
-      <th>Delay</th>
       <th>Make Bill</th>
+      <th>Delay</th>
+      
   
     </tr>
     <?php if ($array) { ?>
@@ -57,6 +59,9 @@
         </td>
         <td>
           <?php echo "$reservation[servise_type]"; ?>
+        </td>
+        <td>
+          <?php echo "$reservation[date]"; ?>
         </td>
         <td>
           <?php echo "$reservation[lift_no]"; ?>

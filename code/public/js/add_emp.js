@@ -138,25 +138,6 @@ function check_nic(){
   }
 }
 
-//JS function which checks if contact number is valid
-// function check_phone_no() {  
-//   console.log(document.getElementById("mobile_tel_no").value.length);
-//   if (document.getElementById("mobile_tel_no").value.length==10 && document.getElementById("home_tel_no").value.length==10){
-//     //console.log("not working");
-//     document.getElementById('phone_validation').innerHTML = '';
-//     document.getElementById('phone_validation').style.color = 'green';
-//   }
-//   else{
-//     document.getElementById('phone_validation').style.color = 'red';
-//     document.getElementById('phone_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
-//     if (document.getElementById("mobile_tel_no").value.length!=10){
-//       document.getElementById("mobile_tel_no").focus(); // focuses the current field.
-//     }else{
-//       document.getElementById("home_tel_no").focus(); // focuses the current field.
-//     }
-//   }
-// }
-
 //JS REGEX function which checks if contact number is valid
 function check_phone_no() {
 

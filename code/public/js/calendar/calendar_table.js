@@ -98,7 +98,7 @@ function create_table(service_type,days,service_list,out_list,service_name){
 
     //var legend_text= "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>";
     legend=document.createElement('div');
-    legend.innerHTML += "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label vacantlabel' style=color:black;>Available</span>&nbsp;&nbsp;<span class='label selectedlabel'>Selected</span></br></br></br>";
+    legend.innerHTML += "<div style='padding-left: 60px;'><span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label vacantlabel' style=color:black;>Available</span>&nbsp;&nbsp;<span class='label selectedlabel'>Selected</span></br></br></br></div>";
     //.appendChild(document.createTextNode(legend_text));
     
 
@@ -155,17 +155,17 @@ function pass_date_and_time(x,service_name){
     if(service_name=='Full Service'){
         document.getElementById("date").value = full_array[x][0];
         document.getElementById("time").value = full_array[x][1];
-        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+full_array[x][0]+full_array[x][1];
+        document.getElementById("date_showw").innerHTML = "<div class='date_time_display'><h3>You have selected: </h3>"+"Date: <b>"+full_array[x][0]+"</b></br></br>Time: <b>"+full_array[x][1]+"<b></div>";
 
     }else if(service_name=='Normal Service'){
         document.getElementById("date").value = normal_array[x][0];
         document.getElementById("time").value = normal_array[x][1];
-        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+normal_array[x][0]+normal_array[x][1];
+        document.getElementById("date_showw").innerHTML = "<div class='date_time_display'><h3>You have selected: </h3>"+"Date: <b>"+normal_array[x][0]+"</b></br></br>Time: <b>"+normal_array[x][1]+"<b></div>";
 
     }else if(service_name=='Body Wash'){
         document.getElementById("date").value = body_array[x][0];
         document.getElementById("time").value = body_array[x][1];
-        document.getElementById("date_showw").innerHTML = "<h3>You have selected: </h3>"+body_array[x][0]+body_array[x][1];
+        document.getElementById("date_showw").innerHTML = "<div class='date_time_display'><h3>You have selected: </h3>"+"Date: <b>"+body_array[x][0]+"</b></br></br>Time: <b>"+body_array[x][1]+"<b></div>";
     }
     document.getElementById('reserve').disabled=false;
 

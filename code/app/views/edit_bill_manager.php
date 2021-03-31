@@ -33,7 +33,7 @@
 
                 <li><a href="home">Home</a></li>
                 <li><a href="manager">Manager</a></li>
-                <li><a href="invoice_report_manager">Business Report</a></li>
+                <li><a href="invoice_report_manager">Invoice Report</a></li>
                 <li>Edit Bill</li>
             </ul><!-- breadcrumb -->
 
@@ -85,32 +85,53 @@
                         </label>
                         <input type="text" placeholder="Enter the Employee id" name="emp_id" id="emp_id"
                             value="<?php echo "$array[emp_id]"; ?>" required></br>
+                            &ensp;&ensp;<label for="servise_type">
+
+                            <div class="form_label"><b>Service Type</b></div>
+                        </label>
+                        <select name="servise_type" id="servise_type">
+                            <option value="<?php echo "$array[service_type]"; ?>">
+                                <?php echo "$array[service_type]"; ?></option>
+                            <option value="Full Service">Full Service</option>
+                            <option value="Normal Service">Normal Service</option>
+                            <option value="Body Wash">Body Wash</option>
+                        </select><br>
 
                         &ensp;&ensp;<label for="service_charge">
                             <div class="form_label"><b>Service Charge</b></div>
                         </label>
                         <input type="text" placeholder="Enter the Service Charge" name="service_charge"
-                            id="service_charge" value="<?php echo "$array[service_charge]"; ?>" required></br>
-
+                            id="service_charge" value="<?php echo "$array[service_charge]"; ?>" onkeyup="calculate_insidebill()" required></br>
+                        
                         &ensp;&ensp;<label for="aditional_charges">
                             <div class="form_label"><b>Aditional Charges</b></div>
                         </label>
                         <input type="text" placeholder="Enter the aditional charges" name="aditional_charges"
                             id="aditional_charges" value='<?php echo "$array[aditional_charges]"; ?>'
-                            onkeyup="calculate()"></br>
+                            onkeyup="calculate_insidebill()"></br>
+                        &ensp;&ensp;<label for="advanced_fee">
+                            <div class="form_label"><b>Advanced</b></div>
+                        </label>
+                        <input type="text" placeholder="Enter the aditional charges"
+                            value='<?php echo "$array[advance_payment]"; ?>' name="advanced_fee" id="advanced_fee"
+                            disabled></br>
+                        <input type="hidden" placeholder="Enter the aditional charges"
+                            value='<?php echo "$array[advance_payment]"; ?>' name="advanced_fee" id="advanced_fee"
+                            disabled></br>
+
 
                         &ensp;&ensp;<label for="net_amount">
-                            <div class="form_label"><b>Total Amount</b></div>
+                            <div class="form_label" ><b>Total Amount</b></div>
                         </label>
                         <input type="text" placeholder="Enter the Total Amount" name="net_amount" id="net_amount"
-                            value="<?php echo "$array[net_amount]"; ?>" required></br>
+                            value="<?php echo "$array[net_amount]"; ?>" onkeyup="calculate_insidebill()" required></br>
 
                         <a href="invoice_report_manager" class="btn cancelbtn" class="form_btn"> Cancel </a>
-                        <button type="submit" class="okbtn btn" style="margin-right :10px">Update</button>
+                        <button type="submit" id="okbtn" class="okbtn btn" style="margin-right :10px">Update</button>
                         </br></br></br></br>
                     </div><!-- form_content -->
                 </div><!-- card -->
-                </br></br></br></br>
+                </br>
             </div><!-- background -->
 
         </div><!-- container -->

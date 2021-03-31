@@ -49,6 +49,7 @@
                             <th>Reservation Id</th>
                             <th>Vehicle No</th>
                             <th>Vehicle Model</th>
+                            <th>Service Type</th>
                             <th>Customer Name</th>
                             <th>Contact No</th>
                             <th>Net Amount</th>
@@ -62,7 +63,7 @@
                         <?php foreach ($array as $invoice1) { ?>
                         <tr>
                             <td style="text-align: center;">
-                               <b> <?php echo "$invoice1[invoice_no]"; ?></b>
+                                <b> <?php echo "$invoice1[invoice_no]"; ?></b>
                             </td>
                             <td style="text-align: center;">
                                 <?php echo "$invoice1[bill_date]"; ?>
@@ -71,10 +72,13 @@
                                 <?php echo "$invoice1[reservation_id]"; ?>
                             </td>
                             <td style="text-align: center;">
-                               <b> <?php echo "$invoice1[vehicle_no]"; ?></b>
+                                <b> <?php echo "$invoice1[vehicle_no]"; ?></b>
                             </td>
                             <td style="text-align: center;">
                                 <?php echo "$invoice1[vehicle_model]"; ?>
+                            </td>
+                            <td style="text-align: center;">
+                                <?php echo "$invoice1[service_type]"; ?>
                             </td>
                             <td style="text-align: center;">
                                 <b><?php echo "$invoice1[customer_name]"; ?></b>
@@ -86,10 +90,12 @@
                                 <b><?php echo "$invoice1[net_amount]"; ?></b>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="edit_bill_manager?invoice_no= <?php echo "$invoice1[invoice_no]"; ?>" name="view" class="btn viewbtn">Edit</a>
+                                <a href="edit_bill_manager?invoice_no= <?php echo "$invoice1[invoice_no]"; ?>"
+                                    name="view" class="btn viewbtn">Edit</a>
                             </td>
                             <td style=" text-align: center;">
-                                <a href="print_bill?invoice_no=<?php echo "$invoice1[invoice_no]"; ?>" name="view" class="btn viewbtn">Print</a>
+                                <a href="print_bill?invoice_no=<?php echo "$invoice1[invoice_no]"; ?>" name="view"
+                                    class="btn viewbtn">Print</a>
                             </td>
 
                         </tr>
