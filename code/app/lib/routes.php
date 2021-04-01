@@ -1,10 +1,4 @@
-<?php
-
-    //Index page
-    //Route::set('',function(){
-   //     View::make('Root');
-    //});
-    
+<?php   
     //routing done according to base function of controller
     Route::set('login',function(){
         //start session
@@ -36,7 +30,6 @@
         Session::init();
         //logout if time is exceeded in session
         Login::timeout(Session::get("curr_time"));
-        //TEMP SOLUTION BY ADDING SPACE 
         Home::create_view('main_home_page','');
     });
 
@@ -109,22 +102,13 @@
         Controller::create_view('update_profile','loggedin');
     });
 
-    // Route::set('delay_timetable_manager',function(){
-    //     Session::init();
-    //     Controller::create_view('delay_time_table','manager');
-    // });
-
     //route to make reservation with sessions
     Route::set('make_reservation',function(){
         
-        //start session
         Session::init();
         //initialize array for autofill function
         Session::set("details",Make_reservation::autofill(Session::get("uname")));
-        //set timeslot and date to session
         Make_reservation::get_time();
-        //Session::set("date",$date);
-        //Session::set("timeslot",$timeslot);
         Make_reservation::create_view('make_reservation','customer');
     });
 
@@ -132,12 +116,8 @@
         
         //start session
         Session::init();
-        //initialize array for autofill function
-        //Session::set("details",Make_reservation::autofill(Session::get("uname")));
         //set timeslot and date to session
         Make_reservation::get_time();
-        //Session::set("date",$date);
-        //Session::set("timeslot",$timeslot);
         Make_reservation::create_view('make_guest_reservation','receptionist');
     });
 
@@ -147,19 +127,12 @@
         //start session
         Session::init();
         View_reservation::get_reservations();
-        //View_reservation::create_view('view_reservation','customer');
     });
 
     //route to make reservation from receptionist
     Route::set('emergency_reservation',function(){
         
         Session::init();
-        //echo(Session::get("uname"));
-        
-        //$_SESSION["details"]=Make_reservation::autofill($_SESSION["uname"]);
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
         Calendar::create_view('emergency_reservation','receptionist');
     });
 
@@ -167,12 +140,6 @@
     Route::set('emergency_reservation_manager',function(){
         
         Session::init();
-        //echo(Session::get("uname"));
-        
-        //$_SESSION["details"]=Make_reservation::autofill($_SESSION["uname"]);
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
         Controller::create_view('emergency_reservation_manager','manager');
     });
 
@@ -180,46 +147,32 @@
     //route to confirm reservation with database
     Route::set('set_reservation',function(){ 
         session_start();
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
+        
         $tempdate=Session::get("duration");
         $tdate = strtotime($tempdate);
-        //$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
+        
         Make_reservation::insert();
-        //var_dump($_SESSION);
         header("Location:confirm_reservation");
-        //var_dump($_SESSION);
+
     });
 
     //route to confirm reservation with database
     Route::set('set_emergency_reservation',function(){ 
         session_start();
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
         $tempdate=Session::get("duration");
         $tdate = strtotime($tempdate);
-        //echo("cat");//$tdate=DateTime::createFromFormat("H:i:s", $tempdate);
         Emergency_reservation::insert();
-        //var_dump($_SESSION);
         header("Location:time_table_recep");
-        //var_dump($_SESSION);
     });
 
     //final view of reservation
     Route::set('confirm_reservation',function(){ 
         session_start();
-        //echo '<pre>';
-        //var_dump($_SESSION);
-        //echo '</pre>';
         Controller::create_view('confirm_reservation','customer');
     });
 
     //experimental route to develop confirm reservation page
     Route::set('conres',function(){ 
-        //session_start();
-        //echo($_SESSION["uname"]);
         Controller::create_view('confirm_reservation','loggedin');
     });
 
@@ -232,11 +185,7 @@
     Route::set('cancel_reservation', function () {
         Session::init();
         Login::timeout(Session::get("curr_time"));
-        
-        //var_dump($_SESSION);
         Cancel_Reservation::cancel();
-        //Login::timeout(Session::get("curr_time"));
-        //Controller::create_view('terms_conditions', '');
      });
 
     Route::set('emp_reg_auth',function(){
@@ -259,7 +208,6 @@
 
     //sevice update
     Route::set('update_service_auth',function(){
-        //start session
         Session::init();
         AddServiceType::update();
     });
@@ -411,9 +359,6 @@
         Session::init();
         Invoice_bill::create_view('invoice_report_manager','manager');
     });
-    
-    //Employee functions
-    //view
     Route::set('employee_view',function(){ 
         Session::init();
         Employee::view('view_employee','manager');
@@ -521,27 +466,12 @@
     Route::set('add_leave_',function(){
         //start session
         Session::init();
-        //logout if time is exceeded in session
-       // Login::timeout(Session::get("curr_time"));
         EmployeeLeave::add_leave();
     });
-
-    //Route::set('leave_static',function(){
-        //start session
-        //Session::init();
-        //Controller::create_view('leave_static');
-    //});
-
-    //*******************************************
     Route::set('leave_static',function(){ 
         Session::init();
         EmployeeLeave::no_of_leave('leave_static');
     });
-
-    // Route::set('time_table',function(){
-    //     Session::init();
-    //     Controller::create_view('time_table','manager');
-    // });
 
     Route::set('time_table', function () {
     Session::init();
@@ -609,12 +539,6 @@
         Timeslot::delete('timeslot_list');
     });
 
-    // Route::set('update_timeslot',function(){
-    //     //start session
-    //     Session::init();
-    //     Timeslot::view('update_timeslot');
-    // });
-
     Route::set('advance_payment',function(){
  
         Session::init();
@@ -636,6 +560,5 @@
     Time_table::get_cust_and_vehi('view_cust_reservation_manager', 'manager');
 });
 
-    
 
 ?>

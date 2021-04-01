@@ -13,12 +13,11 @@
             reservation_time_slot.date AS date, service_type.type_name AS servise_type, service_type.lift_no AS lift_no, 
             time_slot.start_time As start_time 
             FROM reservation, service_type, time_slot , reservation_time_slot 
-            WHERE reservation.reservation_id=reservation_time_slot.reservation_id 
-            AND reservation.service_id = service_type.type_id 
+            WHERE reservation.service_id = service_type.type_id 
             AND reservation_time_slot.timeslot_no = time_slot.timeslot_no 
             AND date >= $today
             GROUP BY reservation.reservation_id
-            ORDER BY date ASC, start_time ASC";
+            ";
 
             $result= mysqli_query($conn,$query);
 

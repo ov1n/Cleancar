@@ -8,9 +8,7 @@ class Manager extends Controller
 
         //create employee object
         $bill = new Invoice();
-        // $array = $bill->get_bill_details();
         $ar = $bill->revenue();
-        //var_dump($ar);
 
         if (Session::get("role") == $role) {
             require_once("./views/$view_name.php");

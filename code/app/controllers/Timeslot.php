@@ -11,7 +11,6 @@
             //create employee object
             $timeslot=new time_slot();
             $array=$timeslot->get_detail();
-            //var_dump($array);
 
             if(Session::get("role")==$role){
                 require_once("./views/$view_name.php");
@@ -44,16 +43,12 @@
             $selected_timeslot = new time_slot();
 
             $array=$selected_timeslot->get_timeslot($timeslot);
-            //var_dump($array);
             require_once("./views/$view_name.php");
         }
 
         static function update(){
             
              $updated_timeslot=new time_slot();
-
-             //$timeslot_no=$_GET['timeslot_no'];
-
              //get each field from form
              $start_time=$_POST['new_start_time'];
              $end_time=$_POST['new_end_time'];
@@ -65,7 +60,6 @@
              $timeslot=new time_slot();
 
             $array=$timeslot->get_detail();
-            //var_dump($array);
 
             if(Session::get("role")=='manager'){
                 require_once("./views/timeslot_list.php");
@@ -89,7 +83,6 @@
         $timeslot=new time_slot();
 
         $array=$timeslot->get_detail();
-            //var_dump($array);
 
         if(Session::get("role")=='manager'){
             require_once("./views/timeslot_list.php");

@@ -54,11 +54,11 @@ function send_data() {
         console.log("succesfully sent data;");
       }
     });
-    //console.log('Registration Successful');
+    
   }
 
   function updateme_recep(){   
-    //alert("update Employee?");  
+     
     $.alertable.confirm('Do you want to Update the Employee Details?').then(function() {
       send_update_data();
       window.location.href="employee_list_recep";
@@ -68,7 +68,7 @@ function send_data() {
   }
 
   function updateme(){   
-    //alert("update Employee?");  
+    
     $.alertable.confirm('Do you want to Update the Employee Details?').then(function() {
       send_update_data();
       window.location.href="employee_list";
@@ -80,7 +80,7 @@ function send_data() {
 
 //function which takes confirm password
 function check_match_psw() {  //function which matches password values
-  // console.log("It's working");
+  
   if (document.getElementById('password').value == document.getElementById('confirm_password').value && document.getElementById('confirm_password')) {
     document.getElementById('psw_validation').style.color = 'green';
     document.getElementById('psw_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;matching';
@@ -152,7 +152,6 @@ function check_phone_no() {
     home_tel_valid= false;
     document.getElementById('phone_validation').style.color = 'red';
     document.getElementById('phone_validation').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Enter valid phone number';
-    //return false;
   }
   else{
     mobile_tel_valid= true;

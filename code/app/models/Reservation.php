@@ -100,8 +100,9 @@
         //function to cancel reservation
         function cancel_reservation($res_id){
 
-            $condition="WHERE reservation_id='$res_id';";
-            $result=$this->delete('reservation',$condition);
+            $query="UPDATE reservation SET is_advance_paid=2 WHERE reservation_id='$res_id'";
+
+            $result = mysqli_query($this->conn, $query);
 
             return $result;
 

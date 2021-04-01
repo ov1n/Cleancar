@@ -19,7 +19,7 @@ function send_leave_data() {
       console.log("succesfully sent data;");
     }
   });
-  //console.log('Registration Successful');
+
 }
 
 //enable button only if request date is grater than today's date
@@ -51,20 +51,20 @@ function check_date(){
 
 
   if(today > req_date){
-    //console.log(req_date);
+    
     document.getElementById('date_validate_msg').style.color = 'red';
     document.getElementById('date_validate_msg').innerHTML = '&ensp;&ensp;&ensp;&ensp;&#9432;&emsp;Date is not valid';
   }
   else{
     document.getElementById('date_validate_msg').style.color = 'green';
     document.getElementById('date_validate_msg').innerHTML = '';
-    //console.log('cannot request leave');
+    
   }
 }
 
 function deleteme(leaveDate,leaveType,leaveStatus){  
  
-  //alert("Delete Employee?");  
+    
   $.alertable.confirm('Do you want to cancel the Leave?').then(function() {
     window.location.href="leave_delete?leave_date="+leaveDate+"&leave_type="+leaveType+"&leave_status="+leaveStatus;
   }, function() {

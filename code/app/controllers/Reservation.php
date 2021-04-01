@@ -53,16 +53,9 @@
             $date=$_POST["date"];
             $service_name=$_POST["service_type"];
             $time=$_POST["time"];
-            echo($time);
 
             //get the service typeid,no of timeslots to a single array
             $service_details=$service_type->get_details($service_name);
-
-            //PASS THIS TO OTHER VIEW USING REQUIRE ONCE
-            //Session::set("details",Reservation::$this->autofill(Session::get("uname")));
-
-            //Reservation::create_view('make_reservation');
-            //echo($_SESSION["uname"]);
 
         }
 
@@ -72,9 +65,7 @@
             //create seperate db objects
             $cust=new Customer();       //find a way to not repeat this variable
             $timeslot=new Time_slot();
-            echo($_SESSION["uname"]);
         }
-        //function which gets 
 
     }
 ?>

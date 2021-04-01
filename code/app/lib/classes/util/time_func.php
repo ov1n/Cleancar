@@ -17,8 +17,6 @@
                 $final=substr($value, 0,5);
                 $final =$final . " AM";
             }
-
-            //echo($final);
             return $final;
         }
 
@@ -33,8 +31,6 @@
 
                 array_push($week_dates,$date2);
             }
-
-            //var_dump($week_dates);
 
             return($week_dates);     
         }

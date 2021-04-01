@@ -11,7 +11,10 @@ function advanced_convert(){
         if(x[i].innerHTML== 1){
             x[i].innerHTML="Yes";
             x[i].style.color="green";
-        }else{
+        }else if(x[i].innerHTML== 2){
+            x[i].innerHTML="Cancelled";
+            x[i].style.color="yellow";
+        }else {
             x[i].style.color="red";
             x[i].innerHTML="No"
         }

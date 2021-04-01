@@ -23,7 +23,6 @@
 
             if(Session::get("role")==$role){
                 require_once("./views/$view_name.php");
-               // var_dump($_SESSION);
             }
 
             else{
@@ -55,7 +54,7 @@
         static function get_time(){
 
             //create seperate db objects
-            $cust=new Customer();       //find a way to not repeat this variable
+            $cust=new Customer();       
             $service_type=new Service_type();
             $timeslot=new Time_slot();
 
@@ -63,7 +62,6 @@
             $date=$_POST["date"];
             $service_name=$_POST["service_type"];
             $time=$_POST["time"];
-            //echo($time);
 
             //get the service typeid,duration to a single array
             $service_details=$service_type->get_details($service_name);
@@ -83,7 +81,7 @@
         static function insert(){
 
             //create seperate db objects
-            $cust=new Customer();       //find a way to not repeat this variable
+            $cust=new Customer();      
             $timeslot=new Time_slot();
             $res=new Reservation();
             $res_timeslot=new Reservation_time_slot();
@@ -91,16 +89,11 @@
 
             //get the customer id to create tables
             $cid=$cust->get_custid(Session::get("uname"));
-            //echo("got cust id\n");
 
             //get current date in db format
             $curr_date=date("Y-m-d");
-            //echo($curr_date);
             
-            //insert into reservation table , 0 for adv_paid because function hasnt been implemented yet
-            //get other necessary arguments from sessions and get reservation id returned for next query
-            //echo("before next res");
-            //var_dump($_SESSION);
+            //insert into reservation table
             $next_res_id=$res->insert_reservation('0',"$cid",$curr_date,Session::get("service_id"));
 
             //above function returns next res_id but we need the current one, so decrement
@@ -109,16 +102,9 @@
             Session::set("res_id",$curr_res_id);
 
             //get timeslots
-            $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"),Session::get("res_date"));
-            //echo('cat');
-            print_r($timeslots);
-            //echo('cat');
-            
-            //('before timeslot');//get each timeslot and insert into reservation-timeslot table
+            $timeslots=$timeslot->get_range(Session::get("time"),Session::get("duration"),Session::get("res_date"));         
 
             foreach ($timeslots as $key ) {
-                
-                //echo("1\n");
                 $res_timeslot->insert($curr_res_id,"$key[timeslot_no]",Session::get("res_date"));
             }
 
@@ -153,6 +139,6 @@
             $mail->mailto($subject,$_SESSION['details']['email'],$body);
 
         }
-        //SMS here
+        
     }
 ?>

@@ -21,7 +21,6 @@ function send_data() {
         console.log("succesfully sent data;");
       }
     });
-    //console.log('Registration Successful');
   }
 
 
@@ -39,10 +38,6 @@ function send_data() {
         no_of_time_slot: document.service_update_form.no_of_time_slot.value,
         lift_no: document.service_update_form.lift_no.value,
         prize: document.service_update_form.prize.value,
-       // mobile_tel_no: document.emp_update_form.mobile_tel_no.value,
-       // home_tel_no: document.emp_update_form.home_tel_no.value
-        
-        
 
       }
       ,
@@ -51,11 +46,9 @@ function send_data() {
         console.log("succesfully sent data;");
       }
     });
-    //console.log('Registration Successful');
   }
 
-  function updateme(){   
-    //alert("update Employee?");  
+  function updateme(){
     $.alertable.confirm('Do you want to update the service?').then(function() {
       send_update_data();
     }, function() {
@@ -63,8 +56,7 @@ function send_data() {
     });  
   }
 
-    function deleteme(type_id){   
-      //alert("Delete Employee?");  
+    function deleteme(type_id){    
       $.alertable.confirm('Do you want to remove the service type?').then(function() {
         window.location.href="delete_service?type_id="+type_id;
       }, function() {

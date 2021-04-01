@@ -66,15 +66,7 @@ function time_format(value){
 function display_table(e){
 
     document.getElementById("date_showw").innerHTML ="";
-
-    //var tomorrow = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
-    //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-    //var dateTime = date+' '+time;
     var days=generate_week();
-
-    //var selectedType = e.value;
-    console.log(e);
-    //console.log(tomorrow);
 
     if(e=="Normal Service"){
 
@@ -96,12 +88,9 @@ function create_table(service_type,days,service_list,out_list,service_name){
 
     document.getElementById("table_create").innerHTML = "";
 
-    //var legend_text= "<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label bookedlabel'>Reserved</span>";
     legend=document.createElement('div');
     legend.innerHTML += "<div style='padding-left: 60px;'><span class='label bookedlabel'>Reserved</span>&nbsp;&nbsp;<span class='label vacantlabel' style=color:black;>Available</span>&nbsp;&nbsp;<span class='label selectedlabel'>Selected</span></br></br></br></div>";
-    //.appendChild(document.createTextNode(legend_text));
     
-
     var table = document.createElement('table');
 
     //Add heading rows
@@ -123,7 +112,6 @@ function create_table(service_type,days,service_list,out_list,service_name){
     //get list of days and times into an array
 
     for (var i = 0; i <  service_type.length; i++){
-        //console.log(full_array);
         var tr = document.createElement('tr');   
 
         var td1 = document.createElement('td');
@@ -151,7 +139,6 @@ function create_table(service_type,days,service_list,out_list,service_name){
 }
 
 function pass_date_and_time(x,service_name){
-    //console.log(service_name);
     if(service_name=='Full Service'){
         document.getElementById("date").value = full_array[x][0];
         document.getElementById("time").value = full_array[x][1];

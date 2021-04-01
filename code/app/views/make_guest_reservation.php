@@ -18,15 +18,7 @@
     </head>
 
     <body>
-     <?php
-        //echo($_SESSION["uname"]);
-        //echo($_SESSION["timeslots"]);
-        //details test
-        //echo(($_SESSION["details"])["first_name"]);
-        //echo(($_SESSION["details"])["last_name"]);
-        //echo(($_SESSION["details"])["email"]);
-        //echo(($_SESSION["details"])["first_name"]);
-      ?>
+
       <form id="reservation" name="reservation" onsubmit="confirmSubmit(); return false;">
         <div class="container">  
           

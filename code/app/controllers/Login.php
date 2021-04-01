@@ -13,8 +13,6 @@ class Login extends Controller
     //overloaded view creation to get session variables to regular variables
     public static function create_view($view_name, $role)
     {
-
-        //echo(Session::get("login"));
         $notification = Session::get("login");
         require_once("./views/$view_name.php");
         Session::unset("login");
@@ -22,10 +20,6 @@ class Login extends Controller
 
     function authenticate()
     {
-
-        //session_start();
-        //echo($_SESSION["test"]);
-        //set database objects to variables
         $cust = new Customer();
         $rec = new Receptionist();
         $man = new Manager();
@@ -35,23 +29,7 @@ class Login extends Controller
         //get post data 
         $uname = $_POST['user_name'];
         $unhashed = $_POST['password'];
-
-        //hash the password
-        // Original PHP code by Chirp Internet: www.chirp.com.au
-        // Please acknowledge use of this code by including this header.
-
-        //hash the password
-
-        //$pwd=md5($unhashed);
         $pwd = sha1($unhashed);
-        echo ($pwd);
-
-        //$pwd = password_hash($unhashed,PASSWORD_BCRYPT);
-
-
-        //var_dump($man);
-        //Session::set("pwd", $pwd);
-        //set logged in time
         Session::set("in_time", time());
 
         if ($cust->check_credentials($uname, $pwd)) {
@@ -81,10 +59,6 @@ class Login extends Controller
             session::set("log_name", $log_name);
             //set session variables to it through 
             Session::set("uname", $uname);
-
-            //load manager view
-            //echo("in man view");
-
             //set loggedin to session
             Session::set("login", "loggedin");
 
@@ -101,9 +75,6 @@ class Login extends Controller
             session::set("log_name", $log_name);
             //set session variables to it through 
             Session::set("uname", $uname);
-
-            //load receptionist view
-            //echo("in rec view");
 
             //set loggedin to session
             Session::set("login", "loggedin");
@@ -122,9 +93,6 @@ class Login extends Controller
             //set session variables to it through 
             Session::set("uname", $uname);
 
-            //load employee view
-            //echo("in emp view");
-
             //set loggedin to session
             Session::set("login", "loggedin");
 
@@ -135,7 +103,6 @@ class Login extends Controller
         } else {
             //redirect to home with message
             header("Location:login");
-            //set
             Session::set("login", "incorrect_login");
         }
     }
@@ -148,13 +115,10 @@ class Login extends Controller
         Session::destroy();
         //set logout message maybe?
         Session::set("notification", "logout");
-        //CHANGE
         Session::unset("login");
         Session::unset("role");
 
         header("Location:home");
-        //echo($_SESSION["username"]);
-        //echo("wheres the output");
     }
 
     //function to automatically logout if timeout

@@ -16,7 +16,6 @@ function send_timeslot_data() {
         console.log("succesfully sent data;");
       }
     });
-    //console.log('Registration Successful');
   }
 
   function send_update_data() {
@@ -36,14 +35,11 @@ function send_timeslot_data() {
         console.log("succesfully sent data;");
       }
     });
-    //console.log('Registration Successful');
   }
 
-  function deleteme(timeslot_no){  
-   
-    //alert("Delete Employee?");  
+  function deleteme(timeslot_no){   
     $.alertable.confirm('Do you want to delete the timeslot?').then(function() {
-      // window.location.href="employee_delete_recep?emp_id="+empId;
+      
       window.location.href="delete_timeslot?timeslot_no="+timeslot_no;
     }, function() {
       console.log('Confirmation canceled');
@@ -51,10 +47,7 @@ function send_timeslot_data() {
   }
 
   function updateme(timeslot_no){  
-   
-    //alert("Delete Employee?");  
     $.alertable.confirm('Do you want to update the timeslot?').then(function() {
-      // window.location.href="employee_delete_recep?emp_id="+empId;
       window.location.href="update_timeslot?timeslot_no="+timeslot_no;
     }, function() {
       console.log('Confirmation canceled');
