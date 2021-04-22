@@ -1,10 +1,11 @@
-## Badges  
 
 ### Stats
-[![LAst Commits](https://img.shields.io/github/last-commit/ov1n/Cleancar)
+![LAst Commits](https://img.shields.io/github/last-commit/ov1n/Cleancar)
 
+<img src="code/public/images/4444.png" alt="CleanCar" width="220" align="right" />
 
 # Clean-Car
+
 A Repository made for 2nd year group project:
 All is in code folder
 
@@ -25,5 +26,5 @@ $db='cleancar';
 
 ## Feedback:
 
-This was a project done with 0 experience on development :stuck_out_tongue: feedback and issue pointing is more than welcome !
+This was a project done with 0 experience on development :stuck_out_tongue: feedback and issue pointing is more than welcome :pray: !
 
